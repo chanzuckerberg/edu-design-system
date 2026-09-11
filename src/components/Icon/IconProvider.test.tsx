@@ -1,7 +1,7 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render } from '@testing-library/react';
 import React from 'react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { Icon } from './Icon';
 import type { IconName } from './Icon';
@@ -139,6 +139,25 @@ describe('<IconProvider />', () => {
     // falling back to the EDS default.
     expect(hasGlyph(container, 'add')).toBe(true);
     expect(hasGlyph(container, 'close')).toBe(false);
+  });
+
+  it('warns and draws nothing for a name that is not an EDS icon', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    // Not reachable from typed code in spirit, but it type-checks: `IconOrContent` unions
+    // `IconName` with `ReactNode`, and `ReactNode`'s `Iterable<ReactNode>` member admits any
+    // string. This used to throw on the spritemap lookup and take the whole tree with it,
+    // which one bad entry in an app-wide map would do to every component drawing that role.
+    const { container } = render(
+      <IconProvider icons={{ expand: '\u00d7' }}>
+        {expandableMenu}
+      </IconProvider>,
+    );
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('is not an EDS icon'),
+    );
+    expect(container.querySelector('svg')).toBeNull();
   });
 
   it('ships a default for every semantic role', () => {

@@ -29,15 +29,14 @@ export type SemanticIconName =
 /**
  * A full set of semantic icons. Each role takes an EDS icon name or a node, on the same
  * terms as any other content slot.
+ *
+ * A string here cannot be narrowed to `IconName` by the type system: `IconOrContent` unions
+ * it with `ReactNode`, and even excluding `ReactNode`'s own `string` member leaves
+ * `Iterable<ReactNode>`, which a string satisfies structurally. So a name that is not in the
+ * spritemap type-checks, and `Icon` warns and renders nothing when it reaches one.
  */
 export type SemanticIconMap = Record<SemanticIconName, IconOrContent>;
 
-/**
- * The icons EDS draws each semantic role with when no provider supplies its own.
- *
- * Exported so a consumer can build a partial override on top of the set EDS ships, and
- * so they can point at a single role's default without hard-coding the glyph.
- */
 /**
  * The glyph each status is drawn with, kept as its own map because `Status` is a union
  * these four have to cover exactly. Spread into the defaults below rather than written out
@@ -51,6 +50,12 @@ const statusIcons: Record<Status, IconName> = {
   favorable: 'checkmark-encircled-filled',
 };
 
+/**
+ * The icons EDS draws each semantic role with when no provider supplies its own.
+ *
+ * Exported so a consumer can build a partial override on top of the set EDS ships, and
+ * so they can point at a single role's default without hard-coding the glyph.
+ */
 export const defaultSemanticIcons: SemanticIconMap = {
   back: 'chevron-left',
   close: 'close',

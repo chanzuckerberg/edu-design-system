@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import type { ReactNode, CSSProperties } from 'react';
 import React from 'react';
 import icons, { type IconName } from '../../icons/spritemap';
+import { assertEdsUsage } from '../../util/logging';
 import styles from './Icon.module.css';
 
 export type { IconName } from '../../icons/spritemap';
@@ -127,6 +128,22 @@ export const Icon = (props: IconProps) => {
   const style: SvgStyle = {
     '--icon-size': size,
   };
+
+  // A name off the spritemap used to throw on the lookup below, taking the page with it.
+  // The type system cannot prevent one: every icon slot takes `IconOrContent`, which
+  // collapses to `ReactNode` and so admits any string, and `IconProvider` raises the stakes
+  // by letting one bad entry reach every component drawing that role at once. Warn and draw
+  // nothing instead, so a typo costs an icon rather than the render.
+  const isKnownName = !name || name in icons;
+
+  assertEdsUsage(
+    [!isKnownName],
+    `Icon: "${name}" is not an EDS icon. Nothing is rendered in its place.`,
+  );
+
+  if (!isKnownName) {
+    return null;
+  }
 
   const svgCommonProps = {
     className: componentClassName,
