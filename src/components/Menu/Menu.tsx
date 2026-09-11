@@ -24,7 +24,7 @@ import type { ExtractProps } from '../../util/utility-types';
 
 import Button from '../Button';
 
-import { hasSlotContent, useSemanticIcon } from '../Icon';
+import { useSemanticIcon, willRenderSlotContent } from '../Icon';
 
 import PopoverContainer from '../PopoverContainer';
 
@@ -155,10 +155,10 @@ const MenuButton = (props: MenuButtonProps) => {
         {...other}
         className={buttonClassNames}
         icon={expandIcon}
-        // A provider can turn the role off with `null`. The icon then renders nothing, but
-        // the right-hand layout would still reserve its padding and leave a gap, so the
-        // layout follows whether there is anything to lay out.
-        iconLayout={hasSlotContent(expandIcon) ? 'right' : 'none'}
+        // A provider can turn the role off with `null`, or name an icon that does not
+        // exist. Either way the slot draws nothing while the right-hand layout would still
+        // reserve its padding, so the layout follows what will actually render.
+        iconLayout={willRenderSlotContent(expandIcon) ? 'right' : 'none'}
         rank="primary"
       >
         {children}

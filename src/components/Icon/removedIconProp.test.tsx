@@ -2,9 +2,11 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { IconProvider } from './IconProvider';
 import Accordion from '../Accordion';
 import Breadcrumbs from '../Breadcrumbs';
 import Combobox from '../Combobox';
+import Link from '../Link';
 import Menu from '../Menu';
 import Select from '../Select';
 
@@ -123,6 +125,45 @@ describe('the removed icon props', () => {
     // what to look for rather than the prop's own spelling.
     /* eslint-disable-next-line testing-library/no-container */
     expect(container.querySelector(`[${propName.toLowerCase()}]`)).toBeNull();
+  });
+
+  describe("Link's removed icon value", () => {
+    // A removed *value* rather than a removed prop: `icon` still exists, but took the glyph
+    // name `chevron-right` before v19 named the role `forward`. Untyped code can still pass
+    // the old one, where it matches no role.
+    const legacyValue = { icon: 'chevron-right' } as Record<string, unknown>;
+
+    it('warns, and still draws the icon', () => {
+      const { container } = render(
+        <Link context="standalone" emphasis="low" href="/" {...legacyValue}>
+          Next
+        </Link>,
+      );
+
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('Link no longer takes `icon="chevron-right"`'),
+      );
+      // Treated as `forward` rather than dropped, so the link keeps its affordance.
+      /* eslint-disable-next-line testing-library/no-container */
+      expect(container.querySelector('svg')).not.toBeNull();
+    });
+
+    it('keeps the spacing and the icon together when a role is turned off', () => {
+      const { container } = render(
+        <IconProvider icons={{ forward: null }}>
+          <Link context="standalone" emphasis="low" href="/" icon="forward">
+            Next
+          </Link>
+        </IconProvider>,
+      );
+
+      /* eslint-disable-next-line testing-library/no-container */
+      expect(container.querySelector('svg')).toBeNull();
+      /* eslint-disable-next-line testing-library/no-container */
+      expect(container.querySelector('a')?.className).not.toContain(
+        'has-right-icon',
+      );
+    });
   });
 
   it('stays quiet when none is passed', () => {

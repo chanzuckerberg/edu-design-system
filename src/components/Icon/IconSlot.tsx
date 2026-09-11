@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from './Icon';
 import type { IconName } from './Icon';
+import icons from '../../icons/spritemap';
 import type { IconOrContent } from '../../util/utility-types';
 
 /**
@@ -17,6 +18,27 @@ export function hasSlotContent(content: IconOrContent) {
     typeof content !== 'boolean' &&
     content !== ''
   );
+}
+
+/**
+ * Whether a slot will actually put something on screen.
+ *
+ * Stricter than `hasSlotContent`, which only asks whether a value is renderable in
+ * principle. A string that is not an EDS icon name passes that and then draws nothing,
+ * because `Icon` reports it and renders `null`. Use this wherever layout depends on the icon
+ * being visible — reserving space for an icon that never arrives leaves a gap.
+ *
+ * `hasSlotContent` stays the right question for "did the consumer give me something", which
+ * is what the content slots ask when deciding precedence.
+ */
+export function willRenderSlotContent(content: IconOrContent) {
+  if (!hasSlotContent(content)) {
+    return false;
+  }
+
+  return typeof content === 'string'
+    ? Object.prototype.hasOwnProperty.call(icons, content)
+    : true;
 }
 
 type IconSlotPropsBase = {

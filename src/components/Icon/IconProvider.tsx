@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import type { ReactNode } from 'react';
+import { hasSlotContent, willRenderSlotContent } from './IconSlot';
 import type { IconName } from '../../icons/spritemap';
+import { assertEdsUsage } from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 
@@ -190,6 +192,23 @@ export function useSemanticIcon(
   name: SemanticIconName | undefined,
 ): IconOrContent {
   const icons = useContext(IconProviderContext);
+  const icon = name ? icons[name] : undefined;
 
-  return name ? icons[name] : undefined;
+  // Reported here rather than left to `Icon`, because a component may reasonably decide not
+  // to render a role that resolves to nothing — `Menu.Button` drops its icon layout so the
+  // padding does not outlive the icon — and then `Icon` never runs to complain. This sees
+  // the value whatever the component does with it.
+  //
+  // A non-empty string only: an empty one, like `null` or `false`, is how a provider turns a
+  // role off deliberately.
+  assertEdsUsage(
+    [
+      typeof icon === 'string' &&
+        hasSlotContent(icon) &&
+        !willRenderSlotContent(icon),
+    ],
+    `IconProvider: the \`${name}\` role is set to "${String(icon)}", which is not an EDS icon name, so nothing renders for it. Pass an icon name or a node.`,
+  );
+
+  return icon;
 }

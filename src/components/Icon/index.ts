@@ -10,5 +10,5 @@ export type {
   SemanticIconMap,
   SemanticIconName,
 } from './IconProvider';
-export { hasSlotContent, IconSlot } from './IconSlot';
+export { hasSlotContent, IconSlot, willRenderSlotContent } from './IconSlot';
 export type { IconSlotProps } from './IconSlot';

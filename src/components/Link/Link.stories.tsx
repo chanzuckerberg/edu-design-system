@@ -34,12 +34,14 @@ type Story = StoryObj<typeof Link>;
 export const Default: Story = {};
 
 /**
- * When using standalone context, you can specify a trailing icon for the link.
+ * When using standalone context, you can specify which role the trailing icon fills.
+ * `"forward"` carries the reader onward; the glyph it draws comes from `IconProvider`, so the
+ * name here does not assume a chevron.
  *
  * **NOTE**: support for applying the `forward` icon only works when `emphasis` is set to
  * "low".
  */
-export const LinkWithChevron: Story = {
+export const LinkWithForwardIcon: Story = {
   args: {
     children: 'Default',
     context: 'standalone',

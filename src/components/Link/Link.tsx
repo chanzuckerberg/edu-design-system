@@ -2,7 +2,12 @@ import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import { assertEdsUsage } from '../../util/logging';
 import type { Emphasis, Size } from '../../util/variant-types';
-import { IconSlot, useSemanticIcon, type SemanticIconName } from '../Icon';
+import {
+  IconSlot,
+  useSemanticIcon,
+  willRenderSlotContent,
+  type SemanticIconName,
+} from '../Icon';
 
 import styles from './Link.module.css';
 
@@ -117,21 +122,37 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     },
     ref,
   ) => {
+    const iconSize = size && (['xl', 'lg'].includes(size) ? '24px' : '16px');
+
+    // TODO(next-major): remove, with the assert below. Before v19 this prop took the glyph
+    // name `'chevron-right'`; it now names the `forward` role. The codemod rewrites the
+    // value, but untyped code can still pass the old one, where it matches no role, resolves
+    // to nothing, and leaves the link with its spacing and no icon. Treated as `forward`
+    // until then, so the affordance survives.
+    const isLegacyChevron = (icon as string) === 'chevron-right';
+
+    // TODO(next-major): remove.
+    assertEdsUsage(
+      [isLegacyChevron],
+      'Link no longer takes `icon="chevron-right"`. That glyph is now the `forward` role, so pass `icon="forward"` and set `forward` on an `IconProvider` to change it. Run `npx eds-migrate 18-to-19` to update the value.',
+    );
+
+    const iconToUse = useSemanticIcon(isLegacyChevron ? 'forward' : icon);
+
+    // One condition for the icon and the space it sits in, so a role a provider turned off
+    // or named wrongly cannot leave the padding behind with nothing in it.
+    const showsIcon =
+      context === 'standalone' && willRenderSlotContent(iconToUse);
+
     const componentClassName = clsx(
       className,
       styles['link'],
       context && styles[`link--context-${context}`],
       emphasis && styles[`link--emphasis-${emphasis}`],
-      icon && styles['link--has-right-icon'],
+      showsIcon && styles['link--has-right-icon'],
       size && styles[`link--size-${size}`],
       variant === 'inverse' && styles[`link--variant-${variant}`],
     );
-
-    const iconSize = size && (['xl', 'lg'].includes(size) ? '24px' : '16px');
-
-    // `icon` already names a role rather than a glyph, so it doubles as the key to look
-    // the glyph up under.
-    const iconToUse = useSemanticIcon(icon);
 
     assertEdsUsage(
       [context === 'inline' && emphasis === 'low'],
@@ -161,7 +182,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     return (
       <Component className={componentClassName} ref={ref} {...other}>
         {children}
-        {icon && context === 'standalone' && (
+        {showsIcon && (
           <IconSlot
             className={styles['link__icon']}
             content={iconToUse}

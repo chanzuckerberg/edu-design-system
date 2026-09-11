@@ -156,10 +156,30 @@ describe('<IconProvider />', () => {
       </IconProvider>,
     );
 
+    // Reported by the provider, which names the role at fault, not only by `Icon`: a
+    // component may decline to render a role that resolves to nothing, and then `Icon` never
+    // runs to complain.
     expect(warn).toHaveBeenCalledWith(
-      expect.stringContaining('is not an EDS icon'),
+      expect.stringContaining('the `expand` role is set to'),
     );
     expect(container.querySelector('svg')).toBeNull();
+  });
+
+  it('drops the icon layout for a role naming no real icon', () => {
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    const { container } = render(
+      <IconProvider icons={{ expand: 'not-an-icon' }}>
+        {expandableMenu}
+      </IconProvider>,
+    );
+
+    // `hasSlotContent` would call this a filled slot, being a non-empty string, and the
+    // button would have kept its trailing padding around an icon that never arrives.
+    expect(container.querySelector('svg')).toBeNull();
+    expect(container.querySelector('button')?.className).not.toContain(
+      'layout-right',
+    );
   });
 
   it('warns for names the spritemap does not own', () => {
