@@ -24,8 +24,14 @@ When you add or change an EDS component that draws one of these icons, read it w
 ```tsx
 const closeIcon = useSemanticIcon('close');
 
-return <IconSlot content={closeIcon} purpose="informative" title="close" />;
+return (
+  <button aria-label="close" onClick={onClose}>
+    <IconSlot content={closeIcon} purpose="decorative" />
+  </button>
+);
 ```
+
+Note where the accessible name sits. A provider can set any role to a node, and `IconSlot` leaves custom content's accessible treatment to whoever passed it, so a name carried by the icon disappears the moment an app overrides that role. Put the name on the control and render the icon decoratively.
 
 `useSemanticIcon` is deliberately not exported from the package root. It is how EDS components resolve a role internally, and giving consumers a second way to read the map would invite reading it in one place and setting it in another.
 

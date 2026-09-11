@@ -311,7 +311,9 @@ export const BreadcrumbsItem = ({
         // reason as `InputChip`'s action button: a provider can set `back` to a node, whose
         // accessible treatment is its author's, which would leave this link unnamed.
         <a
-          aria-label={text}
+          // `text` is optional, and this variant renders an icon rather than a label, so
+          // without a fallback the link reaches assistive tech unnamed.
+          aria-label={text || 'Back'}
           className={styles['breadcrumbs__link']}
           href={href as string}
         >

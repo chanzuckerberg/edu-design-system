@@ -106,9 +106,15 @@ export type IconProviderProps = {
  * `Menu.Button`, the close button in a `Modal`, the status icon on a `ToastNotification`,
  * and so on. Wrap the app once and every component below it picks the new glyph up.
  *
- * This is the only way to change those icons. The components that draw them do not take a
- * per-instance override, because a role that renders one glyph in one place and a
- * different one two screens over stops reading as that role at all.
+ * This is how those icons are set. The components that draw them do not take a per-instance
+ * override, because a role that renders one glyph in one place and a different one two
+ * screens over stops reading as that role at all.
+ *
+ * One exception: `FieldNote.icon` still wins over the `warning` and `critical` defaults for
+ * a single note. That slot predates these roles and stays a content slot, so a note can
+ * carry the status treatment and its own content at once. It warns when used without a
+ * status, since an icon on a note with nothing to report reads as a status the note does
+ * not have.
  *
  * Nesting merges: an inner provider only has to name the roles it changes, and inherits
  * the rest from the provider around it.
