@@ -297,6 +297,19 @@ describe('<IconProvider />', () => {
     );
   });
 
+  it('does not let the shipped defaults be reassigned', () => {
+    // The same object backs the context's default value, so a write here used to change
+    // what every tree without an override rendered — from anywhere in an app.
+    expect(Object.isFrozen(defaultSemanticIcons)).toBe(true);
+    expect(() => {
+      (defaultSemanticIcons as Record<string, unknown>).close = null;
+    }).toThrow();
+
+    const { container } = render(<InputChip label="Tag" />);
+
+    expect(hasGlyph(container, 'close')).toBe(true);
+  });
+
   it('ships a default for every semantic role', () => {
     expect(Object.values(defaultSemanticIcons).every(Boolean)).toBe(true);
   });

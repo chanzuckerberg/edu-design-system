@@ -56,9 +56,13 @@ const statusIcons: Record<Status, IconName> = {
  * The icons EDS draws each semantic role with when no provider supplies its own.
  *
  * Exported so a consumer can build a partial override on top of the set EDS ships, and
- * so they can point at a single role's default without hard-coding the glyph.
+ * so they can point at a single role's default without hard-coding the glyph. Read it,
+ * spread it, index it — but it is frozen, because it is also the context's default value:
+ * assigning to it would change what every tree without an override renders, from anywhere
+ * in an app, which is the opposite of the consistency the provider is for. Build a new
+ * object and hand it to an `IconProvider` instead.
  */
-export const defaultSemanticIcons: SemanticIconMap = {
+export const defaultSemanticIcons: Readonly<SemanticIconMap> = Object.freeze({
   back: 'chevron-left',
   close: 'close',
   collapse: 'chevron-up',
@@ -68,7 +72,7 @@ export const defaultSemanticIcons: SemanticIconMap = {
   menu: 'menu',
   'open-in-new': 'open-in-new',
   ...statusIcons,
-};
+});
 
 /**
  * Holds the semantic icon set in effect for the tree below it.
@@ -77,7 +81,7 @@ export const defaultSemanticIcons: SemanticIconMap = {
  * not the app wrapped anything in an `IconProvider`.
  */
 const IconProviderContext =
-  createContext<SemanticIconMap>(defaultSemanticIcons);
+  createContext<Readonly<SemanticIconMap>>(defaultSemanticIcons);
 
 export type IconProviderProps = {
   /**
