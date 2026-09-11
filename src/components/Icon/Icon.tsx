@@ -134,7 +134,10 @@ export const Icon = (props: IconProps) => {
   // collapses to `ReactNode` and so admits any string, and `IconProvider` raises the stakes
   // by letting one bad entry reach every component drawing that role at once. Warn and draw
   // nothing instead, so a typo costs an icon rather than the render.
-  const isKnownName = !name || name in icons;
+  // `Object.hasOwn` rather than `in`: the spritemap inherits from `Object.prototype`, so
+  // `'toString' in icons` is true and the lookups below would read a function's missing
+  // `viewBox` and `content`, rendering an empty `<svg>` instead of warning.
+  const isKnownName = !name || Object.hasOwn(icons, name);
 
   assertEdsUsage(
     [!isKnownName],

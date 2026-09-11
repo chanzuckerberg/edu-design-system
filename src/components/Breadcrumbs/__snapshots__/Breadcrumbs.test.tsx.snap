@@ -15,19 +15,17 @@ exports[`<Breadcrumbs /> > Default story renders snapshot 1`] = `
         class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
+          aria-label="Child"
           class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
+            aria-hidden="true"
             class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
-            role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Child
-            </title>
             <path
               d="M13.9999 17.6542L8.34619 12.0004L13.9999 6.34668L15.0537 7.40043L10.4537 12.0004L15.0537 16.6004L13.9999 17.6542Z"
             />
@@ -108,19 +106,17 @@ exports[`<Breadcrumbs /> > LongList story renders snapshot 1`] = `
         class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
+          aria-label="Breadcrumb 9"
           class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
+            aria-hidden="true"
             class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
-            role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Breadcrumb 9
-            </title>
             <path
               d="M13.9999 17.6542L8.34619 12.0004L13.9999 6.34668L15.0537 7.40043L10.4537 12.0004L15.0537 16.6004L13.9999 17.6542Z"
             />
@@ -329,19 +325,17 @@ exports[`<Breadcrumbs /> > LongText story renders snapshot 1`] = `
         class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
+          aria-label="Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px"
           class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
+            aria-hidden="true"
             class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
-            role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
-            </title>
             <path
               d="M13.9999 17.6542L8.34619 12.0004L13.9999 6.34668L15.0537 7.40043L10.4537 12.0004L15.0537 16.6004L13.9999 17.6542Z"
             />
@@ -438,19 +432,17 @@ exports[`<Breadcrumbs /> > LongTextCustomSeparator story renders snapshot 1`] = 
         class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
+          aria-label="Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px"
           class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
+            aria-hidden="true"
             class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
-            role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Breadcrumb 2 Lorem ipsum dolor sit amet, no overflow is two lines at 320px
-            </title>
             <path
               d="M13.9999 17.6542L8.34619 12.0004L13.9999 6.34668L15.0537 7.40043L10.4537 12.0004L15.0537 16.6004L13.9999 17.6542Z"
             />
@@ -579,19 +571,17 @@ exports[`<Breadcrumbs /> > TwoCrumbs story renders snapshot 1`] = `
         class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
+          aria-label="Breadcrumb 1"
           class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
+            aria-hidden="true"
             class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
-            role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Breadcrumb 1
-            </title>
             <path
               d="M13.9999 17.6542L8.34619 12.0004L13.9999 6.34668L15.0537 7.40043L10.4537 12.0004L15.0537 16.6004L13.9999 17.6542Z"
             />
@@ -656,19 +646,17 @@ exports[`<Breadcrumbs /> > WithProvidedIcons story renders snapshot 1`] = `
         class="_breadcrumbs__item_325516 _breadcrumbs__item-back_325516"
       >
         <a
+          aria-label="Child"
           class="_breadcrumbs__link_325516"
           href="#"
         >
           <svg
+            aria-hidden="true"
             class="_icon_779da8 _breadcrumbs__back-icon_325516"
             fill="currentColor"
-            role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Child
-            </title>
             <path
               d="M9.95197 17.6542L4.29797 12.0004L9.95197 6.34668L11.0057 7.43118L7.18647 11.2504H19.702V12.7504H7.18647L11.0057 16.5697L9.95197 17.6542Z"
             />

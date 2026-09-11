@@ -127,11 +127,10 @@ const iconToLeadingContent = [
  * are now set app-wide through `IconProvider` and no longer taken per instance, so the
  * prop is dropped rather than renamed.
  *
- * Dropping it is safe for every value it could hold. Each was typed to a single icon
- * name (`'chevron-left'` on `Breadcrumbs.Item`, `'chevron-down'` on the `Select` and
- * `Combobox` indicators) or only did anything when given a chevron, so every one of them
- * rendered what the default `IconProvider` renders now. Consumers who set one to something
- * else get the default back, and move the override into an `IconProvider`.
+ * Most were typed to a single icon name (`'chevron-left'` on `Breadcrumbs.Item`,
+ * `'chevron-down'` on the `Select` and `Combobox` indicators and on v18's
+ * `Menu.Button.icon`), so dropping them is lossless: each rendered exactly what the default
+ * `IconProvider` renders now.
  *
  * Each removal covers both the v18 name and the name it briefly carried during v19
  * prereleases, so a consumer who already ran an earlier copy of this migration lands in
@@ -141,6 +140,26 @@ const removeSemanticIconProps = (propNames: string[]) =>
   propNames.map((propName) => ({
     type: 'remove' as const,
     propName,
+  }));
+
+/**
+ * Two of these were not name-only. `Accordion.Button.indicatorContent` and
+ * `Menu.Button.trailingContent` were widened to `IconOrContent` in v19 prereleases, so a
+ * consumer on one of those could be passing a node, and deleting it would throw away
+ * content this migration cannot put anywhere else.
+ *
+ * So these only drop the value when it is a chevron, which is what the default provider
+ * renders anyway. Anything else is left in place, where it becomes a type error on upgrade
+ * and the consumer decides: move it into an `IconProvider` if the indicator should look
+ * that way everywhere, or drop it. Better a compile error they resolve than content that
+ * vanishes silently.
+ */
+const removeSemanticIconPropsWhenDefault = (propNames: string[]) =>
+  propNames.map((propName) => ({
+    type: 'remove' as const,
+    propName,
+    callback: ({ currentPropValue }: { currentPropValue: string }) =>
+      currentPropValue.startsWith('chevron-'),
   }));
 
 export const PropChanges: EditJsxPropChange[] = [
@@ -156,7 +175,10 @@ export const PropChanges: EditJsxPropChange[] = [
     componentName: 'Accordion.Button',
     edits: [
       ...leadingIconToContent,
-      ...removeSemanticIconProps(['trailingIcon', 'indicatorContent']),
+      ...removeSemanticIconPropsWhenDefault([
+        'trailingIcon',
+        'indicatorContent',
+      ]),
     ],
   },
   {
@@ -195,7 +217,10 @@ export const PropChanges: EditJsxPropChange[] = [
   },
   {
     componentName: 'Menu.Button',
-    edits: removeSemanticIconProps(['icon', 'trailingContent']),
+    edits: [
+      ...removeSemanticIconProps(['icon']),
+      ...removeSemanticIconPropsWhenDefault(['trailingContent']),
+    ],
   },
   {
     componentName: 'Breadcrumbs.Item',

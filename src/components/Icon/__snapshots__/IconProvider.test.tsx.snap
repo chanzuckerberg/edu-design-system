@@ -91,18 +91,16 @@ exports[`<IconProvider /> > Default story renders snapshot 1`] = `
       </span>
     </div>
     <button
+      aria-label="remove A chip"
       class="_input-chip__action-button_f95fba"
     >
       <svg
+        aria-hidden="true"
         class="_icon_779da8"
         fill="currentColor"
-        role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          remove A chip
-        </title>
         <path
           d="M6.39994 18.6542L5.34619 17.6004L10.9462 12.0004L5.34619 6.40043L6.39994 5.34668L11.9999 10.9467L17.5999 5.34668L18.6537 6.40043L13.0537 12.0004L18.6537 17.6004L17.5999 18.6542L11.9999 13.0542L6.39994 18.6542Z"
         />
@@ -231,18 +229,16 @@ exports[`<IconProvider /> > WithCustomContent story renders snapshot 1`] = `
       </span>
     </div>
     <button
+      aria-label="remove A chip"
       class="_input-chip__action-button_f95fba"
     >
       <svg
+        aria-hidden="true"
         class="_icon_779da8"
         fill="currentColor"
-        role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          remove A chip
-        </title>
         <path
           d="M6.39994 18.6542L5.34619 17.6004L10.9462 12.0004L5.34619 6.40043L6.39994 5.34668L11.9999 10.9467L17.5999 5.34668L18.6537 6.40043L13.0537 12.0004L18.6537 17.6004L17.5999 18.6542L11.9999 13.0542L6.39994 18.6542Z"
         />
@@ -370,18 +366,16 @@ exports[`<IconProvider /> > WithOverriddenIcons story renders snapshot 1`] = `
       </span>
     </div>
     <button
+      aria-label="remove A chip"
       class="_input-chip__action-button_f95fba"
     >
       <svg
+        aria-hidden="true"
         class="_icon_779da8"
         fill="currentColor"
-        role="img"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          remove A chip
-        </title>
         <path
           d="M5.5 12.75V11.25H18.5V12.75H5.5Z"
         />

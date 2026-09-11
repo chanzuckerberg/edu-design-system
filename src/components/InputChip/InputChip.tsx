@@ -94,15 +94,16 @@ export const InputChip = ({
         </Text>
       </div>
       <button
+        // The name belongs on the button rather than on the icon inside it. An
+        // `IconProvider` can set `close` to a node, and `IconSlot` leaves custom content's
+        // accessible treatment to whoever passed it, so a name carried by the icon would
+        // disappear the moment an app overrode the role and leave this button unnamed.
+        aria-label={`remove ${label}`}
         className={styles['input-chip__action-button']}
         disabled={isDisabled}
         onClick={onClick}
       >
-        <IconSlot
-          content={closeIcon}
-          purpose="informative"
-          title={`remove ${label}`}
-        />
+        <IconSlot content={closeIcon} purpose="decorative" />
       </button>
     </div>
   );

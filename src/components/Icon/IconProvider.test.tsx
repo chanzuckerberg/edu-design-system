@@ -1,5 +1,5 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
 
@@ -9,6 +9,7 @@ import { defaultSemanticIcons, IconProvider } from './IconProvider';
 import * as stories from './IconProvider.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 import Accordion from '../Accordion';
+import Breadcrumbs from '../Breadcrumbs';
 import InlineNotification from '../InlineNotification';
 import InputChip from '../InputChip';
 import Menu from '../Menu';
@@ -158,6 +159,45 @@ describe('<IconProvider />', () => {
       expect.stringContaining('is not an EDS icon'),
     );
     expect(container.querySelector('svg')).toBeNull();
+  });
+
+  it('warns for a name that only exists on the spritemap prototype', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    // `'toString' in icons` is true, so an `in` check let this through and then read a
+    // function's missing `viewBox` and `content`, rendering an empty `<svg>` rather than
+    // warning.
+    const { container } = render(
+      <IconProvider icons={{ expand: 'toString' }}>
+        {expandableMenu}
+      </IconProvider>,
+    );
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('is not an EDS icon'),
+    );
+    expect(container.querySelector('svg')).toBeNull();
+  });
+
+  it('keeps controls named when a role is overridden with a node', () => {
+    render(
+      <IconProvider icons={{ close: <span />, back: <span /> }}>
+        <InputChip label="Tag" />
+        <Breadcrumbs>
+          <Breadcrumbs.Item href="#" text="Home" />
+          <Breadcrumbs.Item href="#" text="Child" />
+        </Breadcrumbs>
+      </IconProvider>,
+    );
+
+    // `IconSlot` leaves custom content's accessible treatment to its author, so a name
+    // carried by the icon would vanish under an override. Both controls name themselves.
+    expect(
+      screen.getByRole('button', { name: 'remove Tag' }),
+    ).toBeInTheDocument();
+    // Two, because the back crumb is a clone of the second-to-last item, shown only at
+    // narrow widths. Before, that clone was the one link with no accessible name at all.
+    expect(screen.getAllByRole('link', { name: 'Home' })).toHaveLength(2);
   });
 
   it('ships a default for every semantic role', () => {

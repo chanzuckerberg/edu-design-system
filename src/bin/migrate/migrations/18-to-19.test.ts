@@ -189,6 +189,47 @@ describe('18-to-19', () => {
     `);
   });
 
+  it('leaves a custom Accordion indicator in place rather than deleting it', () => {
+    // Widened to `IconOrContent` in a v19 prerelease, so this could be real content. The
+    // migration cannot rehome it, and dropping it silently would lose it, so it stays and
+    // becomes a type error the consumer resolves.
+    const sourceFileText = dedent`
+      import {Accordion} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Accordion.Button title="Row" indicatorContent={<Tag>3 new</Tag>} />
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
+  it('leaves custom Menu.Button trailing content in place rather than deleting it', () => {
+    const sourceFileText = dedent`
+      import {Menu} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Menu>
+            <Menu.Button trailingContent={<Counter value={3} />}>Actions</Menu.Button>
+          </Menu>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
   it('drops the Breadcrumbs back icon override', () => {
     const sourceFile = createTestSourceFile(dedent`
       import {Breadcrumbs} from '@chanzuckerberg/eds';

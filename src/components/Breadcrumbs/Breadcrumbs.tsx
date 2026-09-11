@@ -307,12 +307,18 @@ export const BreadcrumbsItem = ({
     } else if (variant === 'back') {
       /* The back variant is a left pointing icon that usually links to the second last breadcrumb href. */
       return (
-        <a className={styles['breadcrumbs__link']} href={href as string}>
+        // The name belongs on the link rather than on the icon inside it, for the same
+        // reason as `InputChip`'s action button: a provider can set `back` to a node, whose
+        // accessible treatment is its author's, which would leave this link unnamed.
+        <a
+          aria-label={text}
+          className={styles['breadcrumbs__link']}
+          href={href as string}
+        >
           <IconSlot
             className={styles['breadcrumbs__back-icon']}
             content={backIcon}
-            purpose="informative"
-            title={text as string}
+            purpose="decorative"
           />
         </a>
       );
