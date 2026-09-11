@@ -2567,7 +2567,7 @@ __metadata:
     lodash: "npm:^4.18.1"
     ora: "npm:5.4.1"
     plop: "npm:^4.0.5"
-    postcss: "npm:^8.5.27"
+    postcss: "npm:^8.5.28"
     postcss-cli: "npm:^11.0.1"
     postcss-import: "npm:^16.2.0"
     postcss-loader: "npm:^8.2.1"
@@ -16986,7 +16986,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.5.27":
+"postcss@npm:^8.5.28":
   version: 8.5.28
   resolution: "postcss@npm:8.5.28"
   dependencies:
