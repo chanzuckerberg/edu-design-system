@@ -52,6 +52,18 @@ This matters most on long-lived release branches (for example a `v19` branch col
 - When a new or existing CSS custom property (CSS Variable) is added to a component's CSS module code (src/**/*.module.css), make sure that this is also defined as part of that component's root node API. This should include the following: Extending the React.CSSProperties interface to include a list of any properties defined for this component, adding `style` to the props type of the component using this new interface, and at least one story demonstrating the use of each defined CSS custom property
 - The documentation for the `style` prop should include a list of the CSS custom properties defined in the CSS module for the component.
 
+#### Properties held back from the documented API
+
+A component may keep a custom property working while deliberately not advertising it, when documenting it would invite a change that breaks something the component is supposed to guarantee. Recoloring a status icon away from its status is the standing example: `ToastNotification` still honors `--toast__bg`, `--toast__fg`, and `--toast__icon`, but none are listed on its `style` prop and none has a story, because a favorable toast recolored critical misreports itself.
+
+This is a narrow exception, not a way out of the rules above. To take it, all of the following have to hold, and a reviewer should ask for whichever is missing rather than asking for the property to be documented:
+
+- The property is still declared on the component's `CSSProperties` interface, so existing usage keeps type-checking.
+- That interface carries a doc comment saying which properties are held back and what goes wrong if they are used, so the omission reads as a decision rather than an oversight.
+- Tests cover the property still taking effect, since there is no story to catch a regression.
+
+Two things follow for review. A component in this state will fail a literal reading of the two rules above — no story, no entry in the `style` prop docs — and that is the intended state, so do not ask for either. And treat a request to document such a property as a product decision for the component's owner, not a documentation gap to close in review.
+
 ## Naming conventions
 
 ### Matching BEM-style class name to prop names
