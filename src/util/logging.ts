@@ -60,6 +60,6 @@ export function assertNoRemovedIconProp(
 ): void {
   assertEdsUsage(
     [typeof value !== 'undefined'],
-    `${componentName} no longer takes \`${propName}\`, and the one passed is ignored. It draws the \`${role}\` icon from \`IconProvider\` instead, so every component filling that role matches. Run \`npx eds-migrate 18-to-19\` to remove the prop, and set \`${role}\` on an \`IconProvider\` to change the icon.`,
+    `${componentName} no longer takes \`${propName}\`, and the one passed is ignored. It draws the \`${role}\` icon from \`IconProvider\` instead, so every component filling that role matches. Run \`npx eds-migrate 18-to-19\`, which drops the prop where it held the role's default glyph and leaves any other value for you to decide on: remove it, or set \`${role}\` on an \`IconProvider\` so the icon looks that way everywhere.`,
   );
 }

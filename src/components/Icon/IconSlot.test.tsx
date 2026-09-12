@@ -3,6 +3,7 @@ import React from 'react';
 import { describe, expect, it } from 'vitest';
 
 import { hasSlotContent, IconSlot } from './IconSlot';
+import type { IconOrContent } from '../../util/utility-types';
 
 describe('<IconSlot />', () => {
   it('renders a string as a decorative icon', () => {
@@ -90,6 +91,18 @@ describe('<IconSlot />', () => {
         expect(hasSlotContent(content)).toBe(false);
       },
     );
+
+    it('reports an empty non-array iterable as empty', () => {
+      // React renders any iterable of children, not only arrays, so a `Set` is judged the
+      // same way — by what it yields.
+      expect(hasSlotContent(new Set() as unknown as IconOrContent)).toBe(false);
+      expect(
+        hasSlotContent(new Set([null, false]) as unknown as IconOrContent),
+      ).toBe(false);
+      expect(
+        hasSlotContent(new Set(['search']) as unknown as IconOrContent),
+      ).toBe(true);
+    });
 
     it.each([[[0]], [[<span key="a">Hi</span>]], [[null, 'search']]])(
       'reports the array %p as present',

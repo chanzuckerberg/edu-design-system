@@ -13,6 +13,7 @@ import AppHeader from '../AppHeader';
 import Breadcrumbs from '../Breadcrumbs';
 import InlineNotification from '../InlineNotification';
 import InputChip from '../InputChip';
+import Link from '../Link';
 import Menu from '../Menu';
 import { Select } from '../Select/Select';
 
@@ -188,6 +189,26 @@ describe('<IconProvider />', () => {
     // far as rendering it, so the count depended on which component drew the role.
     expect(warn).toHaveBeenCalledTimes(1);
     expect(warn).toHaveBeenCalledWith(expect.stringContaining('IconProvider:'));
+  });
+
+  it('renders nothing for a role name the map does not own', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const error = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    // `Link.icon` names a role, and untyped code can pass one that is not. The map inherits
+    // from `Object.prototype`, so `'toString'` used to resolve to the inherited function,
+    // travel through `IconSlot` as content, and reach React as a child it cannot render.
+    const { container } = render(
+      <Link context="standalone" href="/" {...({ icon: 'toString' } as object)}>
+        Go
+      </Link>,
+    );
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('is not a semantic icon role'),
+    );
+    expect(error).not.toHaveBeenCalled();
+    expect(container.querySelector('svg')).toBeNull();
   });
 
   it('drops the icon layout for a role naming no real icon', () => {

@@ -196,7 +196,20 @@ export function useSemanticIcon(
   name: SemanticIconName | undefined,
 ): IconOrContent {
   const icons = useContext(IconProviderContext);
-  const icon = name ? icons[name] : undefined;
+
+  // An own-property check, because the map inherits from `Object.prototype`: a role name
+  // that is not one — reachable from untyped code, e.g. `Link icon="toString"` — used to
+  // resolve to the inherited function, get handed to `IconSlot` as content, and reach React
+  // as a child it cannot render.
+  const isRole =
+    name !== undefined && Object.prototype.hasOwnProperty.call(icons, name);
+
+  assertEdsUsage(
+    [name !== undefined && !isRole],
+    `IconProvider: "${String(name)}" is not a semantic icon role, so nothing renders for it.`,
+  );
+
+  const icon = isRole ? icons[name] : undefined;
 
   // Reported here rather than left to `Icon`, because a component may reasonably decide not
   // to render a role that resolves to nothing — `Menu.Button` drops its icon layout so the
