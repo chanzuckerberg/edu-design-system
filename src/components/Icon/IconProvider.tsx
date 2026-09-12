@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import type { ReactNode } from 'react';
-import { willRenderSlotContent } from './IconSlot';
+import { hasSlotContent, willRenderSlotContent } from './IconSlot';
 import type { IconName } from '../../icons/spritemap';
 import { assertEdsUsage } from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
@@ -151,17 +151,20 @@ export const IconProvider = ({ children, icons }: IconProviderProps) => {
   const value = useMemo(() => {
     const merged = { ...inherited };
 
-    // Only a value that names an icon or is content overrides. `undefined`, `null`, and
-    // `false` mean the same as leaving the role out, so they inherit: spreading `icons`
-    // wholesale would write them over the inherited value instead, and a conditional map
-    // like `{ close: isDismissible ? <X /> : null }` would empty every close affordance in
-    // the tree rather than falling back.
+    // Only a value that will draw something overrides. Anything that would not — `null`,
+    // `false`, `undefined`, an empty array — reads the same as leaving the role out, so it
+    // inherits. Spreading `icons` wholesale would write those over the inherited value
+    // instead, and a conditional map like `{ close: isDismissible ? <X /> : null }` would
+    // empty every close affordance in the tree rather than falling back. No value here
+    // empties a role, because nothing here can; see the note on `icons`.
     //
-    // None of the three empties a role, because nothing here can. See the note on `icons`.
+    // Strings are the exception, the empty one included: they are icon names, and they are
+    // kept so the hook below can report one the spritemap does not have rather than
+    // silently inheriting over a typo.
     for (const role of Object.keys(icons ?? {}) as SemanticIconName[]) {
       const icon = icons?.[role];
 
-      if (icon !== undefined && icon !== null && icon !== false) {
+      if (typeof icon === 'string' || hasSlotContent(icon)) {
         merged[role] = icon;
       }
     }

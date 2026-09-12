@@ -92,16 +92,19 @@ describe('<IconSlot />', () => {
       },
     );
 
-    it('reports an empty non-array iterable as empty', () => {
-      // React renders any iterable of children, not only arrays, so a `Set` is judged the
-      // same way — by what it yields.
-      expect(hasSlotContent(new Set() as unknown as IconOrContent)).toBe(false);
-      expect(
-        hasSlotContent(new Set([null, false]) as unknown as IconOrContent),
-      ).toBe(false);
-      expect(
-        hasSlotContent(new Set(['search']) as unknown as IconOrContent),
-      ).toBe(true);
+    it('takes a non-array iterable on trust rather than consuming it', () => {
+      // React renders any iterable of children, so judging one by its contents would be
+      // more accurate — but inspecting it means iterating it, and that exhausts a generator
+      // and leaves nothing for the caller to render. Losing valid content is worse than
+      // reserving space for an empty collection, so only arrays are looked into.
+      function* nothing() {}
+      const generator = nothing() as unknown as IconOrContent;
+
+      expect(hasSlotContent(generator)).toBe(true);
+      // Still intact for whoever renders it, which is the point.
+      expect(Array.from(generator as Iterable<unknown>)).toEqual([]);
+
+      expect(hasSlotContent(new Set() as unknown as IconOrContent)).toBe(true);
     });
 
     it.each([[[0]], [[<span key="a">Hi</span>]], [[null, 'search']]])(

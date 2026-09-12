@@ -155,9 +155,9 @@ const MenuButton = (props: MenuButtonProps) => {
         {...other}
         className={buttonClassNames}
         icon={expandIcon}
-        // A provider can turn the role off with `null`, or name an icon that does not
-        // exist. Either way the slot draws nothing while the right-hand layout would still
-        // reserve its padding, so the layout follows what will actually render.
+        // A provider cannot empty this role, but it can name an icon the spritemap does
+        // not have, which draws nothing while the right-hand layout would still reserve its
+        // padding. The layout follows what will actually render.
         iconLayout={willRenderSlotContent(expandIcon) ? 'right' : 'none'}
         rank="primary"
       >

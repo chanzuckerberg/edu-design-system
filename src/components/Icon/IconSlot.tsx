@@ -5,46 +5,28 @@ import icons from '../../icons/spritemap';
 import type { IconOrContent } from '../../util/utility-types';
 
 /**
- * Whether a value is a collection of children rather than a single one.
- *
- * Strings are iterable and are not: React renders one as text, and a non-empty one is
- * content. Objects are checked for the iterator rather than listed, so a `Set` or a custom
- * iterable is treated the way React treats it.
- */
-function isIterable(content: IconOrContent): boolean {
-  // The `: boolean` is load-bearing. Without it TypeScript infers a type predicate from the
-  // narrowing below, and since a string satisfies `Iterable` structurally, that predicate
-  // takes `string` out of the other branch in `hasSlotContent` — leaving the empty-string
-  // check there unreachable as far as the compiler is concerned.
-  return (
-    typeof content === 'object' &&
-    content !== null &&
-    Symbol.iterator in content
-  );
-}
-
-/**
  * Whether a slot value will render anything.
  *
  * These slots take any `ReactNode`, so a plain truthiness check is wrong twice over: it
  * treats `0` as absent, and `{0 && <El />}` leaks a stray "0" into the markup. Only the
  * values React itself renders as nothing count as empty here.
  *
- * A collection is judged by what is in it, because that is what React does with one. `[]`,
- * `new Set()`, and `[null, false]` render nothing, so they are empty; `[0]` renders "0", so
- * it is not. This matters for the collections a caller does not write on purpose — an
- * `items.map(...)` over an empty list, or a fragment's children arriving together — where
- * counting the collection itself as content reserves a wrapper and lays out space around
- * nothing.
+ * An array is judged by what is in it, because that is what React does with one. `[]` and
+ * `[null, false]` render nothing, so they are empty; `[0]` renders "0", so it is not. This
+ * matters for the arrays a caller does not write on purpose — an `items.map(...)` over an
+ * empty list, or a fragment's children arriving together — where counting the array itself
+ * as content reserves a wrapper and lays out space around nothing. Recursive, because React
+ * flattens nested arrays before rendering them.
  *
- * Any iterable, not only arrays, since React renders those too. Recursive, because React
- * flattens nested ones before rendering them.
+ * Arrays only, though React renders any iterable. Inspecting one means iterating it, which
+ * exhausts a generator and leaves nothing for the caller to render afterwards — losing valid
+ * content, which is worse than the alternative this gives up: a non-array iterable counts as
+ * content even when it would yield none, so an empty `Set` reserves the space an icon would
+ * have taken. Pass an array if the collection might be empty.
  */
 export function hasSlotContent(content: IconOrContent): boolean {
-  if (isIterable(content)) {
-    return Array.from(content as Iterable<IconOrContent>).some((item) =>
-      hasSlotContent(item),
-    );
+  if (Array.isArray(content)) {
+    return content.some((item) => hasSlotContent(item));
   }
 
   return (

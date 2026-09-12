@@ -144,8 +144,9 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
     const iconToUse = useSemanticIcon(role);
 
-    // One condition for the icon and the space it sits in, so a role a provider turned off
-    // or named wrongly cannot leave the padding behind with nothing in it.
+    // One condition for the icon and the space it sits in, so a role that resolves to
+    // nothing — no `icon` given, or one naming an icon the spritemap does not have — cannot
+    // leave the padding behind with nothing in it.
     const showsIcon =
       context === 'standalone' && willRenderSlotContent(iconToUse);
 

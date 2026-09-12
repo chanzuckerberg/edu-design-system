@@ -299,9 +299,9 @@ describe('<IconProvider />', () => {
   it('warns for a role set to the empty string', () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
-    // `null` and `false` are the ways to turn a role off, so an empty string is far more
-    // likely a value that did not resolve than an intent to draw nothing. It used to be the
-    // one invalid string that passed without comment.
+    // No value here empties a role, so an empty string is a value that failed to resolve
+    // rather than an intent to draw nothing. It is kept through the merge, unlike the other
+    // empty values, precisely so this reports it instead of inheriting over a typo.
     render(
       <IconProvider icons={{ expand: '' }}>{expandableMenu}</IconProvider>,
     );
@@ -311,17 +311,21 @@ describe('<IconProvider />', () => {
     );
   });
 
-  it.each([[null], [false]])('inherits a role set to %p', (value) => {
-    const { container } = render(
-      <IconProvider icons={{ close: value }}>
-        <InputChip label="Tag" />
-      </IconProvider>,
-    );
+  it.each([[null], [false], [[]], [[null, false]]])(
+    'inherits a role set to %p',
+    (value) => {
+      const { container } = render(
+        <IconProvider icons={{ close: value }}>
+          <InputChip label="Tag" />
+        </IconProvider>,
+      );
 
-    // Nothing here can empty a role. These read the same as leaving it out, so a conditional
-    // map falls back rather than leaving the chip's only control blank but still clickable.
-    expect(hasGlyph(container, 'close')).toBe(true);
-  });
+      // Nothing here can empty a role. Anything that would draw nothing reads the same as
+      // leaving it out, so a conditional map falls back rather than leaving the chip's only
+      // control blank but still clickable. An empty array was the last way around that.
+      expect(hasGlyph(container, 'close')).toBe(true);
+    },
+  );
 
   it('reaches the close button AppHeader renders through a portal', () => {
     render(
