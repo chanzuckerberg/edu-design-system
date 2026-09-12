@@ -296,6 +296,51 @@ describe('<IconProvider />', () => {
     expect(hasGlyph(container, 'close')).toBe(true);
   });
 
+  it('reports a key that is not a role, and ignores it', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    // A misspelling used to do nothing in silence: the key was merged, no component ever
+    // asked for it, and the icon the consumer meant to change kept its default.
+    const { container } = render(
+      <IconProvider icons={{ expnd: 'chevron-up' } as object}>
+        {expandableMenu}
+      </IconProvider>,
+    );
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('"expnd" is not a semantic icon role'),
+    );
+    expect(hasGlyph(container, 'chevron-down')).toBe(true);
+  });
+
+  it('does not let a non-role key be read back as one', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    // `{ toString: 'custom' }` would otherwise put `toString` on the merged map as an own
+    // property, so an unmigrated `Link icon="toString"` found it there and was reported as
+    // a role set to a bad icon rather than as no role at all.
+    render(
+      <IconProvider icons={{ toString: 'custom' } as object}>
+        <Link
+          context="standalone"
+          href="/"
+          {...({ icon: 'toString' } as object)}
+        >
+          Go
+        </Link>
+      </IconProvider>,
+    );
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('"toString" is not a semantic icon role'),
+    );
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining(
+        'is not a semantic icon role, so nothing renders',
+      ),
+    );
+  });
+
   it('warns for a role set to the empty string', () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 

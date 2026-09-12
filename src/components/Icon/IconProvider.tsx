@@ -145,8 +145,41 @@ export type IconProviderProps = {
  *   every render re-renders every component reading from it; hoist it to a module
  *   constant instead.
  */
+/**
+ * Whether a key in a consumer's map names a role this provider knows.
+ *
+ * An own-property check against the shipped defaults, which is the list of roles. Both
+ * halves matter: a key that is not a role has to be dropped rather than merged, or an
+ * untyped `{ toString: 'custom' }` would put `toString` on the map as an own property and
+ * let it be read back as though it were a role.
+ */
+function isSemanticIconName(key: string): key is SemanticIconName {
+  return Object.prototype.hasOwnProperty.call(defaultSemanticIcons, key);
+}
+
 export const IconProvider = ({ children, icons }: IconProviderProps) => {
   const inherited = useContext(IconProviderContext);
+
+  const unknownRoles = Object.keys(icons ?? {}).filter(
+    (key) => !isSemanticIconName(key),
+  );
+
+  // A misspelled role used to do nothing at all, in silence: the key was merged, no
+  // component ever asked for it, and the icon the consumer meant to change kept its
+  // default. Asserted out here rather than in the merge below, so it is not a side effect
+  // inside a `useMemo` that React may run more than once.
+  assertEdsUsage(
+    [unknownRoles.length > 0],
+    `IconProvider: ${unknownRoles
+      .map((role) => `"${role}"`)
+      .join(
+        ', ',
+      )} ${unknownRoles.length === 1 ? 'is not a semantic icon role' : 'are not semantic icon roles'}, so ${unknownRoles.length === 1 ? 'it does' : 'they do'} nothing. The roles are: ${Object.keys(
+      defaultSemanticIcons,
+    )
+      .sort()
+      .join(', ')}.`,
+  );
 
   const value = useMemo(() => {
     const merged = { ...inherited };
@@ -161,11 +194,15 @@ export const IconProvider = ({ children, icons }: IconProviderProps) => {
     // Strings are the exception, the empty one included: they are icon names, and they are
     // kept so the hook below can report one the spritemap does not have rather than
     // silently inheriting over a typo.
-    for (const role of Object.keys(icons ?? {}) as SemanticIconName[]) {
-      const icon = icons?.[role];
+    for (const key of Object.keys(icons ?? {})) {
+      if (!isSemanticIconName(key)) {
+        continue;
+      }
+
+      const icon = icons?.[key];
 
       if (typeof icon === 'string' || hasSlotContent(icon)) {
-        merged[role] = icon;
+        merged[key] = icon;
       }
     }
 
