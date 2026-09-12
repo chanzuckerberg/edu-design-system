@@ -7,13 +7,12 @@ import React, {
   type ReactNode,
 } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { IconOrContent } from '../../util/utility-types';
 import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
 
 import Button, { type ButtonProps } from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import { Icon } from '../Icon/Icon';
+import { useSemanticIcon } from '../Icon/IconProvider';
 import { IconSlot } from '../Icon/IconSlot';
 import InputField from '../InputField';
 import Text from '../Text';
@@ -564,11 +563,15 @@ export const DataTableStatusCell = ({
 
   const { size } = useContext(DataTableContext);
 
+  // The status icon is semantic, and the same glyph a notification shows for that status,
+  // so it comes from `IconProvider` rather than from a map of its own.
+  const statusIcon = useSemanticIcon(status);
+
   return (
     <div className={statusCellClassName} {...rest}>
       {status && (
-        <Icon
-          name={getIconNameFromStatus(status)}
+        <IconSlot
+          content={statusIcon}
           purpose="decorative"
           size={size === 'sm' ? '16px' : '24px'}
         />

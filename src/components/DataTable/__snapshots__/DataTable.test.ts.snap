@@ -12611,6 +12611,1113 @@ exports[`<DataTable /> > WithOnlyActions story renders snapshot 1`] = `
 </div>
 `;
 
+exports[`<DataTable /> > WithProvidedIcons story renders snapshot 1`] = `
+<div
+  class="_data-table_a06dc5"
+>
+  <div
+    class="_data-table__caption-container_a06dc5 _data-table--size-sm_a06dc5 _data-table--status-eligible_a06dc5"
+  >
+    <div
+      class="_data-table__caption-text_a06dc5"
+    >
+      <div
+        aria-hidden="true"
+        class="_text_b3eba3 _text--title-md_b3eba3 _data-table__caption_a06dc5"
+      >
+        Test table
+      </div>
+      <div
+        aria-hidden="true"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _data-table__subCaption_a06dc5"
+      >
+        Additional Subcaption
+      </div>
+    </div>
+  </div>
+  <table
+    class="_data-table__table_a06dc5 _data-table--tableStyle-border_a06dc5 _data-table--rowStyle-lined_a06dc5 _data-table--size-sm_a06dc5"
+  >
+    <caption
+      class="_data-table__aria-caption_a06dc5"
+    >
+      Test table: Additional Subcaption
+    </caption>
+    <thead
+      class="_data-table__header-row_a06dc5"
+    >
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <th
+          class="_data-table__header-cell-container_a06dc5"
+          colspan="1"
+          style="width: 32px;"
+        >
+          <div
+            class="_data-table__status-header-cell_a06dc5"
+          >
+            Status Column
+          </div>
+        </th>
+        <th
+          class="_data-table__header-cell-container_a06dc5"
+          colspan="1"
+        >
+          <div
+            class="_text_b3eba3 _text--body-md_b3eba3 _data-table__header-cell_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              <div
+                class="_text_b3eba3 _text--title-xs_b3eba3"
+              >
+                First Name
+              </div>
+            </div>
+          </div>
+        </th>
+        <th
+          class="_data-table__header-cell-container_a06dc5"
+          colspan="1"
+        >
+          <div
+            class="_text_b3eba3 _text--body-md_b3eba3 _data-table__header-cell_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              <div
+                class="_text_b3eba3 _text--title-xs_b3eba3"
+              >
+                Last Name
+              </div>
+            </div>
+          </div>
+        </th>
+        <th
+          class="_data-table__header-cell-container_a06dc5"
+          colspan="1"
+        >
+          <div
+            class="_text_b3eba3 _text--body-md_b3eba3 _data-table__header-cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              <div
+                class="_text_b3eba3 _text--title-xs_b3eba3"
+              >
+                Age
+              </div>
+            </div>
+          </div>
+        </th>
+        <th
+          class="_data-table__header-cell-container_a06dc5"
+          colspan="1"
+        >
+          <div
+            class="_text_b3eba3 _text--body-md_b3eba3 _data-table__header-cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              <div
+                class="_text_b3eba3 _text--title-xs_b3eba3"
+              >
+                Visits
+              </div>
+            </div>
+          </div>
+        </th>
+        <th
+          class="_data-table__header-cell-container_a06dc5"
+          colspan="1"
+        >
+          <div
+            class="_text_b3eba3 _text--body-md_b3eba3 _data-table__header-cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              <div
+                class="_text_b3eba3 _text--title-xs_b3eba3"
+              >
+                Profile Progress
+              </div>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5"
+          />
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              45
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              20
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              10
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-label="This table row has a warning status"
+        class="_data-table__row_a06dc5 _data-table--status-warning_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5 _data-table--status-warning_a06dc5"
+          >
+            <svg
+              aria-hidden="true"
+              class="_icon_779da8"
+              fill="currentColor"
+              height="16px"
+              style="--icon-size: 16px;"
+              viewBox="0 0 24 24"
+              width="16px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.86548 20.5L12 3L22.1345 20.5H1.86548ZM12.573 17.573C12.7295 17.4167 12.8077 17.2257 12.8077 17C12.8077 16.7743 12.7295 16.5833 12.573 16.427C12.4166 16.2705 12.2256 16.1923 12 16.1923C11.7743 16.1923 11.5833 16.2705 11.427 16.427C11.2705 16.5833 11.1922 16.7743 11.1922 17C11.1922 17.2257 11.2705 17.4167 11.427 17.573C11.5833 17.7295 11.7743 17.8078 12 17.8078C12.2256 17.8078 12.4166 17.7295 12.573 17.573ZM11.25 15.1923H12.75V10.1923H11.25V15.1923Z"
+              />
+            </svg>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              80
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5"
+          />
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              24
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              100
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              50
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-label="This table row has a critical status"
+        class="_data-table__row_a06dc5 _data-table--status-critical_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5 _data-table--status-critical_a06dc5"
+          >
+            <svg
+              aria-hidden="true"
+              class="_icon_779da8"
+              fill="currentColor"
+              height="16px"
+              style="--icon-size: 16px;"
+              viewBox="0 0 24 24"
+              width="16px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 16.4615C12.1743 16.4615 12.3205 16.4025 12.4385 16.2845C12.5565 16.1667 12.6155 16.0206 12.6155 15.8462C12.6155 15.6717 12.5565 15.5256 12.4385 15.4078C12.3205 15.2898 12.1743 15.2308 12 15.2308C11.8257 15.2308 11.6795 15.2898 11.5615 15.4078C11.4435 15.5256 11.3845 15.6717 11.3845 15.8462C11.3845 16.0206 11.4435 16.1667 11.5615 16.2845C11.6795 16.4025 11.8257 16.4615 12 16.4615ZM12.0008 13.1537C12.1426 13.1537 12.2612 13.1058 12.3567 13.01C12.4522 12.9142 12.5 12.7954 12.5 12.6537V7.65375C12.5 7.51208 12.452 7.39333 12.356 7.2975C12.26 7.20167 12.1411 7.15375 11.9993 7.15375C11.8574 7.15375 11.7388 7.20167 11.6433 7.2975C11.5478 7.39333 11.5 7.51208 11.5 7.65375V12.6537C11.5 12.7954 11.548 12.9142 11.644 13.01C11.74 13.1058 11.8589 13.1537 12.0008 13.1537ZM12.0033 21C10.7588 21 9.58867 20.7638 8.493 20.2915C7.3975 19.8192 6.4445 19.1782 5.634 18.3685C4.8235 17.5588 4.18192 16.6067 3.70925 15.512C3.23642 14.4175 3 13.2479 3 12.0033C3 10.7588 3.23617 9.58867 3.7085 8.493C4.18083 7.3975 4.82183 6.4445 5.6315 5.634C6.44117 4.8235 7.39333 4.18192 8.488 3.70925C9.5825 3.23642 10.7521 3 11.9968 3C13.2413 3 14.4113 3.23617 15.507 3.7085C16.6025 4.18083 17.5555 4.82183 18.366 5.6315C19.1765 6.44117 19.8181 7.39333 20.2908 8.488C20.7636 9.5825 21 10.7521 21 11.9968C21 13.2413 20.7638 14.4113 20.2915 15.507C19.8192 16.6025 19.1782 17.5555 18.3685 18.366C17.5588 19.1765 16.6067 19.8181 15.512 20.2908C14.4175 20.7636 13.2479 21 12.0033 21Z"
+              />
+            </svg>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              45
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              20
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              10
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5"
+          />
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              80
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5"
+          />
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              24
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              100
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              50
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        aria-label="This table row has a favorable status"
+        class="_data-table__row_a06dc5 _data-table--status-favorable_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5 _data-table--status-favorable_a06dc5"
+          >
+            <svg
+              aria-hidden="true"
+              class="_icon_779da8"
+              fill="currentColor"
+              height="16px"
+              style="--icon-size: 16px;"
+              viewBox="0 0 24 24"
+              width="16px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.54995 17.6534L4.21545 12.3189L5.28445 11.2496L9.54995 15.5151L18.7155 6.34961L19.7845 7.41886L9.54995 17.6534Z"
+              />
+            </svg>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              45
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              20
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              10
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5"
+          />
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              80
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5"
+          />
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              24
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              100
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              50
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5"
+          />
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Joe
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Dirte
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              45
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              20
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              10
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5"
+          />
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tandy
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Miller
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              40
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              80
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr
+        class="_data-table__row_a06dc5"
+      >
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__status-cell_a06dc5"
+          />
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Tanner
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-leading_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              Lindsey
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              24
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              100
+            </div>
+          </div>
+        </td>
+        <td
+          class="_data-table__cell-container_a06dc5"
+        >
+          <div
+            class="_data-table__cell_a06dc5 _data-table__cell--alignment-trailing_a06dc5"
+          >
+            <div
+              class="_data-table__cell-text_a06dc5"
+            >
+              50
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`<DataTable /> > WithSearch story renders snapshot 1`] = `
 <div
   class="_data-table_a06dc5"

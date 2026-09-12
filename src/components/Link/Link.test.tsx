@@ -101,11 +101,11 @@ describe('<Link />', () => {
       expect(consoleMock).toHaveBeenCalledTimes(1);
     });
 
-    it('warns when chevron-right is not used in low emphasis mode', () => {
+    it('warns when the forward icon is not used in low emphasis mode', () => {
       const consoleMock = vi.spyOn(console, 'warn');
       consoleMock.mockImplementation(() => {});
       render(
-        <Link emphasis="high" icon="chevron-right">
+        <Link emphasis="high" icon="forward">
           Click
         </Link>,
       );

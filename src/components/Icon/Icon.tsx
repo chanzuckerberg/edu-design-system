@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import type { ReactNode, CSSProperties } from 'react';
 import React from 'react';
 import icons, { type IconName } from '../../icons/spritemap';
+import { assertEdsUsage } from '../../util/logging';
 import styles from './Icon.module.css';
 
 export type { IconName } from '../../icons/spritemap';
@@ -127,6 +128,35 @@ export const Icon = (props: IconProps) => {
   const style: SvgStyle = {
     '--icon-size': size,
   };
+
+  // A name off the spritemap used to throw on the lookup below, taking the page with it.
+  // The type system cannot prevent one: every icon slot takes `IconOrContent`, which
+  // collapses to `ReactNode` and so admits any string, and `IconProvider` raises the stakes
+  // by letting one bad entry reach every component drawing that role at once. Warn and draw
+  // nothing instead, so a typo costs an icon rather than the render.
+  // An own-property check, not `in`: the spritemap inherits from `Object.prototype`, so
+  // `'toString' in icons` is true and the lookups below would read a function's missing
+  // `viewBox` and `content`, rendering an empty `<svg>` instead of warning.
+  //
+  // Spelled the long way rather than with `Object.hasOwn`, which is ES2022. This package
+  // compiles to ES2018 and ships no polyfill, and `hasOwn` only type-checks here because
+  // `@types/node` declares it, so it would pass the build and then throw in any environment
+  // the target says is supported.
+  //
+  // `name === undefined` rather than `!name`: an absent name is the custom-SVG case, which
+  // renders `children` against the given `viewBox`, but `''` is just an invalid name and
+  // should be reported like any other.
+  const isKnownName =
+    name === undefined || Object.prototype.hasOwnProperty.call(icons, name);
+
+  assertEdsUsage(
+    [!isKnownName],
+    `Icon: "${name}" is not an EDS icon. Nothing is rendered in its place.`,
+  );
+
+  if (!isKnownName) {
+    return null;
+  }
 
   const svgCommonProps = {
     className: componentClassName,

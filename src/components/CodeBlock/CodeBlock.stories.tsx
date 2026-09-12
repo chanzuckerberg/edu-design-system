@@ -1,10 +1,12 @@
 import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
-import type React from 'react';
+import React from 'react';
 import { userEvent } from 'storybook/test';
 
 import { CodeBlock } from './CodeBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/CodeBlock',
@@ -151,4 +153,22 @@ def bubble_sort(arr):
 return arr 
 `,
   },
+};
+
+/**
+ * The copy affordance comes from `IconProvider`, so a block's copy button carries the same
+ * mark as every other copy button in the app.
+ *
+ * The checkmark shown for three seconds after a copy is not part of that. It is a transient
+ * confirmation rather than a role, so it stays a checkmark whatever the provider says.
+ */
+export const WithProvidedIcons: StoryObj<Args> = {
+  args: {
+    ...TypeScriptWithCopyIcon.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

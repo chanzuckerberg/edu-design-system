@@ -316,3 +316,51 @@ exports[`<AppNotification /> > WithLinkInSubtitle story renders snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`<AppNotification /> > WithProvidedIcons story renders snapshot 1`] = `
+<div
+  class="_app-notification_d1763b _app-notification--variant-default_d1763b"
+  role="status"
+>
+  <div
+    class="_app-notification__content_d1763b"
+  >
+    <section>
+      <div
+        class="_text_b3eba3 _text--headline-sm_b3eba3 _app-notification__title_d1763b"
+      >
+        This is an AppNotification title
+      </div>
+      <span
+        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
+      >
+        Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
+      </span>
+    </section>
+    <button
+      aria-label="close"
+      class="_button_0829c1 _button--context-default_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-inverse_0829c1 _app-notification__close-btn_d1763b"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.5 12.75V11.25H18.5V12.75H5.5Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+`;

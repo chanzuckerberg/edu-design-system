@@ -25,13 +25,17 @@ import React, {
   type ReactNode,
 } from 'react';
 
+import {
+  assertNoRemovedIconProp,
+  type WithRemovedIconProps,
+} from '../../util/logging';
 import type { ExtractProps, IconOrContent } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 
 import Checkbox from '../Checkbox';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
-import Icon, { type IconName } from '../Icon';
+import { IconSlot, useSemanticIcon } from '../Icon';
 import InputChip from '../InputChip';
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
@@ -164,10 +168,6 @@ type ComboboxButtonProps = HeadlessComboboxButtonProps<'button'> & {
    */
   'aria-label'?: string;
   // Design API
-  /**
-   * Icon to use for combobox button, which is only allowed to be 'chevron-down'
-   */
-  icon?: Extract<IconName, 'chevron-down'>;
 };
 
 type ComboboxInputProps = Omit<
@@ -219,10 +219,6 @@ type ComboboxInputProps = Omit<
    */
   chipLeadingComponent?: (item: ComboboxValue) => IconOrContent;
   /**
-   * Icon to use for combobox button, which is only allowed to be 'chevron-down'
-   */
-  icon?: Extract<IconName, 'chevron-down'>;
-  /**
    * Whether we should truncate the text displayed in the combobox field
    */
   shouldTruncate?: boolean;
@@ -252,10 +248,6 @@ type ComboboxInputWrapperProps = {
    * than one line.
    */
   hasChips?: boolean;
-  /**
-   * Icon to use for combobox button, which is only allowed to be 'chevron-down'
-   */
-  icon?: Extract<IconName, 'chevron-down'>;
   /**
    * Status for the field state
    *
@@ -590,11 +582,20 @@ const ComboboxButtonComponent = function (props: ComboboxButtonProps) {
     'aria-label': ariaLabel = 'Show options',
     children,
     className,
-    icon = 'chevron-down',
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
     ...other
-  } = props;
+  } = props as WithRemovedIconProps<ComboboxButtonProps, 'icon'>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp('Combobox.Button', 'icon', 'expand', removedIcon);
 
   const componentClassName = clsx(styles['combobox-input__button'], className);
+
+  // The indicator marks the button as the thing that reveals the options, so it is the
+  // same semantic `expand` icon a `Menu.Button` or a `Select` carries. The CSS flips it
+  // when the list is open rather than swapping to `collapse`.
+  const expandIcon = useSemanticIcon('expand');
 
   return (
     <ComboboxButton
@@ -614,12 +615,12 @@ const ComboboxButtonComponent = function (props: ComboboxButtonProps) {
         return children ? (
           <>{children}</>
         ) : (
-          <Icon
+          <IconSlot
             className={clsx(
               styles['combobox-input__icon'],
               renderProps.open && styles['combobox-input__icon--reversed'],
             )}
-            name={icon}
+            content={expandIcon}
             purpose="decorative"
             size="24px"
           />
@@ -643,13 +644,17 @@ const ComboboxInputComponent = function (props: ComboboxInputProps) {
     chipLabel = defaultChipLabel,
     chipLeadingComponent,
     className,
-    icon = 'chevron-down',
     inputClassName,
     onKeyDown: theirOnKeyDown,
     shouldTruncate = false,
     showChips = true,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
     ...other
-  } = props;
+  } = props as WithRemovedIconProps<ComboboxInputProps, 'icon'>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp('Combobox.Input', 'icon', 'expand', removedIcon);
   const {
     ariaLabel: contextAriaLabel,
     disabled,
@@ -723,7 +728,6 @@ const ComboboxInputComponent = function (props: ComboboxInputProps) {
     <ComboboxInputWrapper
       className={className}
       hasChips={hasChips}
-      icon={icon}
       status={status}
     >
       {hasChips && (
@@ -870,37 +874,43 @@ const ComboboxOptionComponent = function (props: ComboboxOptionProps) {
 export const ComboboxInputWrapper = React.forwardRef<
   HTMLDivElement,
   ComboboxInputWrapperProps
->(
-  (
-    {
-      children,
-      className,
-      hasChips,
-      icon = 'chevron-down',
-      status: theirStatus,
-      ...other
-    },
-    ref,
-  ) => {
-    const { status: contextStatus } = useContext(ComboboxContext);
-    const status = theirStatus ?? contextStatus;
+>((props, ref) => {
+  const {
+    children,
+    className,
+    hasChips,
+    status: theirStatus,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
+    ...other
+  } = props as WithRemovedIconProps<typeof props, 'icon'>;
 
-    const componentClassName = clsx(
-      styles['combobox-input'],
-      hasChips && styles['combobox-input--has-chips'],
-      status === 'warning' && styles['combobox-input--warning'],
-      status === 'critical' && styles['combobox-input--error'],
-      className,
-    );
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp(
+    'Combobox.InputWrapper',
+    'icon',
+    'expand',
+    removedIcon,
+  );
 
-    return (
-      <div className={componentClassName} ref={ref} {...other}>
-        {children}
-        <ComboboxButtonComponent icon={icon} />
-      </div>
-    );
-  },
-);
+  const { status: contextStatus } = useContext(ComboboxContext);
+  const status = theirStatus ?? contextStatus;
+
+  const componentClassName = clsx(
+    styles['combobox-input'],
+    hasChips && styles['combobox-input--has-chips'],
+    status === 'warning' && styles['combobox-input--warning'],
+    status === 'critical' && styles['combobox-input--error'],
+    className,
+  );
+
+  return (
+    <div className={componentClassName} ref={ref} {...other}>
+      {children}
+      <ComboboxButtonComponent />
+    </div>
+  );
+});
 
 Combobox.displayName = 'Combobox';
 ComboboxButtonComponent.displayName = 'Combobox.Button';

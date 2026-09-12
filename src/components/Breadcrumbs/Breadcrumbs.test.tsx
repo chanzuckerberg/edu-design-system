@@ -5,11 +5,39 @@ import React from 'react';
 import { describe, expect, it } from 'vitest';
 import * as stories from './Breadcrumbs.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
+import Breadcrumbs from './index';
 
 const { LongList } = composeStories(stories);
 
 describe('<Breadcrumbs />', () => {
   generateSnapshots(stories as StoryFile);
+
+  describe('the back crumb', () => {
+    it('names itself from the item text', () => {
+      render(
+        <Breadcrumbs>
+          <Breadcrumbs.Item href="/a" text="Parent" />
+          <Breadcrumbs.Item href="/b" text="Here" />
+        </Breadcrumbs>,
+      );
+
+      // The back crumb is a clone of the second-to-last item, so it borrows that text.
+      expect(screen.getAllByRole('link', { name: 'Parent' })).toHaveLength(2);
+    });
+
+    it('falls back to a label when the item has no text', () => {
+      render(
+        <Breadcrumbs>
+          <Breadcrumbs.Item href="/a" />
+          <Breadcrumbs.Item href="/b" />
+        </Breadcrumbs>,
+      );
+
+      // `text` is optional and this variant renders an icon rather than a label, so without
+      // a fallback the link would reach assistive tech with no accessible name at all.
+      expect(screen.getByRole('link', { name: 'Back' })).toBeInTheDocument();
+    });
+  });
 
   describe('truncation', () => {
     it('truncates when its content overflows', async () => {

@@ -16,13 +16,17 @@ import React, {
   type ElementType,
 } from 'react';
 
+import {
+  assertNoRemovedIconProp,
+  type WithRemovedIconProps,
+} from '../../util/logging';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 
 import Checkbox from '../Checkbox';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
-import Icon, { type IconName } from '../Icon';
+import { IconSlot, useSemanticIcon } from '../Icon';
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
 import type { PopoverListItemProps } from '../PopoverListItem/PopoverListItem';
@@ -120,10 +124,6 @@ type SelectOptionProps = ExtractProps<typeof ListboxOption> &
 type SelectButtonProps = ExtractProps<typeof ListboxButton> & {
   // Design API
   /**
-   * Icon override for component. Default is 'chevron-down'
-   */
-  icon?: Extract<IconName, 'chevron-down'>;
-  /**
    * Indicates state of the select, used to style the button.
    */
   isOpen?: boolean;
@@ -140,10 +140,6 @@ type SelectButtonWrapperProps = {
    */
   className?: string;
   // Design API
-  /**
-   * Icon override for component. Default is 'chevron-down'
-   */
-  icon?: Extract<IconName, 'chevron-down'>;
   /**
    * Indicates state of the select, used to style the button.
    */
@@ -403,7 +399,18 @@ const SelectLabel = ({
  * The trigger for the select component, which is usually a form of `Button` or some targetable/clickable component
  */
 const SelectButton = function (props: SelectButtonProps) {
-  const { children, className, onClick: theirOnClick, ...other } = props;
+  const {
+    children,
+    className,
+    onClick: theirOnClick,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
+    ...other
+  } = props as WithRemovedIconProps<SelectButtonProps, 'icon'>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp('Select.Button', 'icon', 'expand', removedIcon);
+
   const { status } = useContext(SelectContext);
   return (
     <ListboxButton
@@ -531,60 +538,71 @@ const SelectOption = function (props: SelectOptionProps) {
 export const SelectButtonWrapper = React.forwardRef<
   HTMLButtonElement,
   SelectButtonWrapperProps
->(
-  (
-    {
-      children,
-      className,
-      icon = 'chevron-down',
-      isOpen,
-      onClick: theirOnClick,
-      shouldTruncate = false,
-      ...other
-    },
-    ref,
-  ) => {
-    const { status } = useContext(SelectContext);
+>((props, ref) => {
+  const {
+    children,
+    className,
+    isOpen,
+    onClick: theirOnClick,
+    shouldTruncate = false,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
+    ...other
+  } = props as WithRemovedIconProps<typeof props, 'icon'>;
 
-    const componentClassName = clsx(
-      styles['select-button'],
-      status === 'warning' && styles['select-button--warning'],
-      status === 'critical' && styles['select-button--error'],
-      className,
-    );
-    const iconClassName = clsx(
-      styles['select-button__icon'],
-      isOpen && styles['select-button__icon--reversed'],
-    );
-    const textClassName = clsx(
-      shouldTruncate && styles['select-button__text--truncated'],
-    );
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp(
+    'Select.ButtonWrapper',
+    'icon',
+    'expand',
+    removedIcon,
+  );
 
-    return (
-      <button
-        className={componentClassName}
-        onClick={(ev) => {
-          theirOnClick && theirOnClick(ev);
-        }}
-        ref={ref}
-        type="button"
-        {...other}
-      >
-        {/* Wrapping span ensures that `children` and icon will be correctly pushed to
+  const { status } = useContext(SelectContext);
+
+  // The indicator marks the button as the thing that opens the options, so it is the
+  // same semantic `expand` icon a `Menu.Button` or an `Accordion` row carries. The CSS
+  // flips it when the listbox is open rather than swapping to `collapse`.
+  const expandIcon = useSemanticIcon('expand');
+
+  const componentClassName = clsx(
+    styles['select-button'],
+    status === 'warning' && styles['select-button--warning'],
+    status === 'critical' && styles['select-button--error'],
+    className,
+  );
+  const iconClassName = clsx(
+    styles['select-button__icon'],
+    isOpen && styles['select-button__icon--reversed'],
+  );
+  const textClassName = clsx(
+    shouldTruncate && styles['select-button__text--truncated'],
+  );
+
+  return (
+    <button
+      className={componentClassName}
+      onClick={(ev) => {
+        theirOnClick && theirOnClick(ev);
+      }}
+      ref={ref}
+      type="button"
+      {...other}
+    >
+      {/* Wrapping span ensures that `children` and icon will be correctly pushed to
             either side of the button even if `children` contains more than one element. */}
-        <InternalText as="span" className={textClassName} preset="input">
-          {children}
-        </InternalText>
-        <Icon
-          className={iconClassName}
-          name={icon}
-          purpose="decorative"
-          size="24px"
-        />
-      </button>
-    );
-  },
-);
+      <InternalText as="span" className={textClassName} preset="input">
+        {children}
+      </InternalText>
+      <IconSlot
+        className={iconClassName}
+        content={expandIcon}
+        purpose="decorative"
+        size="24px"
+      />
+    </button>
+  );
+});
 
 Select.displayName = 'Select';
 SelectButton.displayName = 'Select.Button';

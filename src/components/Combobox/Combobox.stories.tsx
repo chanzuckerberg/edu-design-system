@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import { expect } from 'storybook/test';
 import { Combobox } from './Combobox';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 
 const meta: Meta<typeof Combobox> = {
   title: 'Components/Combobox',
@@ -52,7 +54,7 @@ const meta: Meta<typeof Combobox> = {
         'Optional handler that fires when the option list closes, useful for resetting the query',
     },
   },
-  tags: ['autodocs', 'beta', 'version:1.0.0'],
+  tags: ['autodocs', 'beta', 'version:2.0.0'],
 };
 
 export default meta;
@@ -971,4 +973,18 @@ export const MultipleWithFpoChipContent: StoryObj<DemoProps> = {
       chipLeadingComponent: () => <FpoBlock size={14} />,
     },
   },
+};
+
+/**
+ * The indicator resolves the same `expand` role as `Select` and `Menu.Button`, so all three
+ * change together from one `IconProvider`. The chip's leading slot is the consumer's to
+ * fill, and is left alone.
+ */
+export const WithProvidedIcons: StoryObj<DemoProps> = {
+  ...Default,
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

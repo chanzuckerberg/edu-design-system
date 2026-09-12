@@ -1,7 +1,11 @@
 import clsx from 'clsx';
 import debounce from 'lodash/debounce';
 import React, { createContext, useContext, type ReactNode } from 'react';
-import Icon, { type IconName } from '../Icon';
+import {
+  assertNoRemovedIconProp,
+  type WithRemovedIconProps,
+} from '../../util/logging';
+import { IconSlot, useSemanticIcon } from '../Icon';
 import Menu from '../Menu';
 import Text from '../Text';
 
@@ -242,10 +246,6 @@ type BreadcrumbItemProps = {
    */
   href: string | null;
   /**
-   * Icon override for component. Default is 'chevron-left'
-   */
-  icon?: Extract<IconName, 'chevron-left'>;
-  /**
    * URLs for the collapsed breadcrumbs variant.
    * Should be <Menu.Item href={href}>{text}</Menu.Item>.
    */
@@ -270,16 +270,26 @@ type BreadcrumbItemProps = {
 /**
  * A single breadcrumb subcomponent, to be used in the Breadcrumbs component.
  */
-export const BreadcrumbsItem = ({
-  className,
-  href,
-  icon = 'chevron-left',
-  menuItems,
-  separator = '/',
-  text,
-  variant,
-  ...other
-}: BreadcrumbItemProps) => {
+export const BreadcrumbsItem = (props: BreadcrumbItemProps) => {
+  const {
+    className,
+    href,
+    menuItems,
+    separator = '/',
+    text,
+    variant,
+    // TODO(next-major): remove, with the assert below.
+    icon: removedIcon,
+    ...other
+  } = props as WithRemovedIconProps<BreadcrumbItemProps, 'icon'>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp('Breadcrumbs.Item', 'icon', 'back', removedIcon);
+
+  // The back arrow is semantic: it is the same "up one level" mark used elsewhere in the
+  // app, so it comes from `IconProvider` rather than from a prop on this item.
+  const backIcon = useSemanticIcon('back');
+
   const componentClassName = clsx(
     styles['breadcrumbs__item'],
     variant === 'back' && styles['breadcrumbs__item-back'],
@@ -308,12 +318,20 @@ export const BreadcrumbsItem = ({
     } else if (variant === 'back') {
       /* The back variant is a left pointing icon that usually links to the second last breadcrumb href. */
       return (
-        <a className={styles['breadcrumbs__link']} href={href as string}>
-          <Icon
+        // The name belongs on the link rather than on the icon inside it, for the same
+        // reason as `InputChip`'s action button: a provider can set `back` to a node, whose
+        // accessible treatment is its author's, which would leave this link unnamed.
+        <a
+          // `text` is optional, and this variant renders an icon rather than a label, so
+          // without a fallback the link reaches assistive tech unnamed.
+          aria-label={text || 'Back'}
+          className={styles['breadcrumbs__link']}
+          href={href as string}
+        >
+          <IconSlot
             className={styles['breadcrumbs__back-icon']}
-            name={icon}
-            purpose="informative"
-            title={text as string}
+            content={backIcon}
+            purpose="decorative"
           />
         </a>
       );
