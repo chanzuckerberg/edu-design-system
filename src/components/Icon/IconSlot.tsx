@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import type { ReactNode } from 'react';
 import { Icon } from './Icon';
 import type { IconName } from './Icon';
 import icons from '../../icons/spritemap';
@@ -23,10 +24,20 @@ import type { IconOrContent } from '../../util/utility-types';
  * content, which is worse than the alternative this gives up: a non-array iterable counts as
  * content even when it would yield none, so an empty `Set` reserves the space an icon would
  * have taken. Pass an array if the collection might be empty.
+ *
+ * A fragment is judged by its children too, since it contributes no element of its own:
+ * `<></>` renders nothing at all, so counting it as content would leave an icon-only control
+ * blank but still clickable. Every other element counts, including one that happens to
+ * render nothing — `<span>{null}</span>` still produces a node, and what a component returns
+ * cannot be known without rendering it.
  */
 export function hasSlotContent(content: IconOrContent): boolean {
   if (Array.isArray(content)) {
     return content.some((item) => hasSlotContent(item));
+  }
+
+  if (React.isValidElement(content) && content.type === Fragment) {
+    return hasSlotContent((content.props as { children?: ReactNode }).children);
   }
 
   return (

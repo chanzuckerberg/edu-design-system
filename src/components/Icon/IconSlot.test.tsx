@@ -92,6 +92,25 @@ describe('<IconSlot />', () => {
       },
     );
 
+    /* eslint-disable react/jsx-no-useless-fragment -- a fragment with nothing useful in it
+       is exactly the shape under test here */
+    it('judges a fragment by its children', () => {
+      // A fragment contributes no element of its own, so `<></>` renders nothing at all.
+      // Counting it as content was the last way to empty a semantic role, which left an
+      // icon-only control blank but still clickable.
+      expect(hasSlotContent(<></>)).toBe(false);
+      expect(hasSlotContent(<>{null}</>)).toBe(false);
+      expect(hasSlotContent(<>{[]}</>)).toBe(false);
+      expect(hasSlotContent(<>{'search'}</>)).toBe(true);
+    });
+    /* eslint-enable react/jsx-no-useless-fragment */
+
+    it('counts an element that happens to render nothing', () => {
+      // Unlike a fragment, this produces a node, and what a component returns cannot be
+      // known without rendering it.
+      expect(hasSlotContent(<span>{null}</span>)).toBe(true);
+    });
+
     it('takes a non-array iterable on trust rather than consuming it', () => {
       // React renders any iterable of children, so judging one by its contents would be
       // more accurate — but inspecting it means iterating it, and that exhausts a generator

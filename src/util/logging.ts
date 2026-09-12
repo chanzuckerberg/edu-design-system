@@ -43,6 +43,12 @@ export type WithRemovedIconProps<T, PropName extends string> = T &
  * than about EDS — nothing in either case saying the prop was removed, or what to do now.
  * Reading the prop here also keeps it off the DOM.
  *
+ * The remediation stays general on purpose. This serves both kinds of removal: the migration
+ * drops most of these props whatever their value, but leaves a non-default
+ * `indicatorContent` or `trailingContent` in place for a person to decide on. Naming either
+ * behaviour here would be wrong for the other half of the callers, so it points at the
+ * action that is right for all of them — move the value to an `IconProvider` if it mattered.
+ *
  * TODO(next-major): remove. By then `eds-migrate 18-to-19` is far enough back that code
  * still passing these is not worth carrying a runtime check for, and the destructures that
  * call this should go with it.
@@ -60,6 +66,6 @@ export function assertNoRemovedIconProp(
 ): void {
   assertEdsUsage(
     [typeof value !== 'undefined'],
-    `${componentName} no longer takes \`${propName}\`, and the one passed is ignored. It draws the \`${role}\` icon from \`IconProvider\` instead, so every component filling that role matches. Run \`npx eds-migrate 18-to-19\`, which drops the prop where it held the role's default glyph and leaves any other value for you to decide on: remove it, or set \`${role}\` on an \`IconProvider\` so the icon looks that way everywhere.`,
+    `${componentName} no longer takes \`${propName}\`, and the one passed is ignored. It draws the \`${role}\` icon from \`IconProvider\` instead, so every component filling that role matches. Run \`npx eds-migrate 18-to-19\` to clean the prop up, and if its value mattered, set \`${role}\` on an \`IconProvider\` so the icon looks that way everywhere.`,
   );
 }

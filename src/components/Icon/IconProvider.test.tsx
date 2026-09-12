@@ -311,7 +311,9 @@ describe('<IconProvider />', () => {
     );
   });
 
-  it.each([[null], [false], [[]], [[null, false]]])(
+  // An empty fragment is one of the values under test, hence the suppression.
+  // eslint-disable-next-line react/jsx-no-useless-fragment
+  it.each([[null], [false], [[]], [[null, false]], [<></>]])(
     'inherits a role set to %p',
     (value) => {
       const { container } = render(
@@ -322,7 +324,8 @@ describe('<IconProvider />', () => {
 
       // Nothing here can empty a role. Anything that would draw nothing reads the same as
       // leaving it out, so a conditional map falls back rather than leaving the chip's only
-      // control blank but still clickable. An empty array was the last way around that.
+      // control blank but still clickable. An empty array and an empty fragment were the
+      // last two ways around that.
       expect(hasGlyph(container, 'close')).toBe(true);
     },
   );
