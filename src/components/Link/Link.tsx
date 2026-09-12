@@ -3,9 +3,9 @@ import React, { forwardRef } from 'react';
 import { assertEdsUsage } from '../../util/logging';
 import type { Emphasis, Size } from '../../util/variant-types';
 import {
+  hasSlotContent,
   IconSlot,
   useSemanticIcon,
-  willRenderSlotContent,
   type SemanticIconName,
 } from '../Icon';
 
@@ -144,11 +144,11 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
     const iconToUse = useSemanticIcon(role);
 
-    // One condition for the icon and the space it sits in, so a role that resolves to
-    // nothing — no `icon` given, or one naming an icon the spritemap does not have — cannot
-    // leave the padding behind with nothing in it.
-    const showsIcon =
-      context === 'standalone' && willRenderSlotContent(iconToUse);
+    // One condition for the icon and the space it sits in, so neither can outlive the other.
+    // `iconToUse` is empty when no `icon` was given, and when one names something that is
+    // not a role at all — which untyped code can still pass. A role that is real always
+    // draws something, since `IconProvider` rejects an entry that would not.
+    const showsIcon = context === 'standalone' && hasSlotContent(iconToUse);
 
     const componentClassName = clsx(
       className,

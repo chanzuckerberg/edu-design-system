@@ -144,51 +144,41 @@ describe('<IconProvider />', () => {
     expect(hasGlyph(container, 'close')).toBe(false);
   });
 
-  it('warns and draws nothing for a name that is not an EDS icon', () => {
-    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
-
-    // Not reachable from typed code in spirit, but it type-checks: `IconOrContent` unions
-    // `IconName` with `ReactNode`, and `ReactNode`'s `Iterable<ReactNode>` member admits any
-    // string. This used to throw on the spritemap lookup and take the whole tree with it,
-    // which one bad entry in an app-wide map would do to every component drawing that role.
-    const { container } = render(
-      <IconProvider icons={{ expand: '\u00d7' }}>
-        {expandableMenu}
-      </IconProvider>,
-    );
-
-    // Reported by the provider, which names the role at fault, not only by `Icon`: a
-    // component may decline to render a role that resolves to nothing, and then `Icon` never
-    // runs to complain.
-    expect(warn).toHaveBeenCalledWith(
-      expect.stringContaining('the `expand` role is set to'),
-    );
-    expect(container.querySelector('svg')).toBeNull();
+  // Every entry has to draw something. A role resolving to nothing leaves whatever draws it
+  // in a state no component can make sense of, so it is a configuration error rather than
+  // something to fall back from.
+  it.each([
+    ['undefined', undefined],
+    ['null', null],
+    ['false', false],
+    ['an empty array', []],
+    ['an array of empties', [null, false]],
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    ['an empty fragment', <></>],
+    ['the empty string', ''],
+    ['a name the spritemap does not have', 'not-an-icon'],
+  ])('throws for a role set to %s', (_label, value) => {
+    expect(() =>
+      render(
+        <IconProvider icons={{ close: value }}>
+          <InputChip label="Tag" />
+        </IconProvider>,
+      ),
+    ).toThrow(/Every entry has to be an EDS icon name or content that renders/);
   });
 
-  it.each([
-    [
-      'InputChip',
-      <IconProvider icons={{ close: 'not-an-icon' }} key="chip">
-        <InputChip label="Tag" />
-      </IconProvider>,
-    ],
-    [
-      'Menu.Button',
-      <IconProvider icons={{ expand: 'not-an-icon' }} key="menu">
-        {expandableMenu}
-      </IconProvider>,
-    ],
-  ])('reports a bad role once, from %s', (_name, element) => {
-    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+  it('says how to write a conditional override in the error', () => {
+    // The shape that used to be supported: a conditional that resolves to nothing. The
+    // error has to point at the alternative, since the type system allows this.
+    const isCustom = [false][0];
 
-    render(element);
-
-    // The provider names the role at fault, so passing the value on to `Icon` only earned a
-    // second, vaguer warning for the same mistake — and only from the components that got as
-    // far as rendering it, so the count depended on which component drew the role.
-    expect(warn).toHaveBeenCalledTimes(1);
-    expect(warn).toHaveBeenCalledWith(expect.stringContaining('IconProvider:'));
+    expect(() =>
+      render(
+        <IconProvider icons={{ close: isCustom ? <span /> : null }}>
+          <InputChip label="Tag" />
+        </IconProvider>,
+      ),
+    ).toThrow(/omit it rather than passing an empty value/);
   });
 
   it('renders nothing for a role name the map does not own', () => {
@@ -211,53 +201,20 @@ describe('<IconProvider />', () => {
     expect(container.querySelector('svg')).toBeNull();
   });
 
-  it('drops the icon layout for a role naming no real icon', () => {
-    vi.spyOn(console, 'warn').mockImplementation(() => {});
-
-    const { container } = render(
-      <IconProvider icons={{ expand: 'not-an-icon' }}>
-        {expandableMenu}
-      </IconProvider>,
-    );
-
-    // `hasSlotContent` would call this a filled slot, being a non-empty string, and the
-    // button would have kept its trailing padding around an icon that never arrives.
-    expect(container.querySelector('svg')).toBeNull();
-    expect(container.querySelector('button')?.className).not.toContain(
-      'layout-right',
-    );
-  });
-
-  it('warns for names the spritemap does not own', () => {
+  it('leaves Icon to report a bad name given to it directly', () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
 
-    // `'toString' in icons` is true, so an `in` check let this through and then read a
-    // function's missing `viewBox` and `content`, rendering an empty `<svg>` rather than
-    // warning.
+    // The provider can no longer hand one down, but a content slot a consumer fills goes
+    // straight to `Icon`, so its own guard still earns its place. `''` cannot arrive through
+    // a slot, since `hasSlotContent` reads it as no content, so it is driven directly.
     const { container } = render(
-      <IconProvider icons={{ expand: 'toString' }}>
-        {expandableMenu}
-      </IconProvider>,
-    );
-
-    expect(warn).toHaveBeenCalledWith(
-      expect.stringContaining('is not an EDS icon'),
-    );
-    expect(container.querySelector('svg')).toBeNull();
-
-    // The empty string is the other shape an invalid name takes. It cannot arrive through a
-    // slot, since `hasSlotContent` treats it as no content at all, so it is checked against
-    // `Icon` directly. It matters because an absent name is meaningful — that is the
-    // custom-SVG case — and a check for falsiness would wave this through as one.
-    warn.mockClear();
-    const { container: direct } = render(
       <Icon name={'' as IconName} purpose="decorative" />,
     );
 
     expect(warn).toHaveBeenCalledWith(
       expect.stringContaining('is not an EDS icon'),
     );
-    expect(direct.querySelector('svg')).toBeNull();
+    expect(container.querySelector('svg')).toBeNull();
   });
 
   it('keeps controls named when a role is overridden with a node', () => {
@@ -279,21 +236,6 @@ describe('<IconProvider />', () => {
     // Two, because the back crumb is a clone of the second-to-last item, shown only at
     // narrow widths. Before, that clone was the one link with no accessible name at all.
     expect(screen.getAllByRole('link', { name: 'Home' })).toHaveLength(2);
-  });
-
-  it('inherits a role set to undefined rather than blanking it', () => {
-    const maybeClose = undefined;
-
-    const { container } = render(
-      // The shape a conditional override takes: `{ close: cond ? <X /> : undefined }`.
-      // Spreading that over the defaults used to write the `undefined` through and leave
-      // every close affordance in the tree with no icon at all.
-      <IconProvider icons={{ close: maybeClose }}>
-        <InputChip label="Tag" />
-      </IconProvider>,
-    );
-
-    expect(hasGlyph(container, 'close')).toBe(true);
   });
 
   it('reports a key that is not a role, and ignores it', () => {
@@ -341,40 +283,6 @@ describe('<IconProvider />', () => {
     );
   });
 
-  it('warns for a role set to the empty string', () => {
-    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
-
-    // No value here empties a role, so an empty string is a value that failed to resolve
-    // rather than an intent to draw nothing. It is kept through the merge, unlike the other
-    // empty values, precisely so this reports it instead of inheriting over a typo.
-    render(
-      <IconProvider icons={{ expand: '' }}>{expandableMenu}</IconProvider>,
-    );
-
-    expect(warn).toHaveBeenCalledWith(
-      expect.stringContaining('the `expand` role is set to'),
-    );
-  });
-
-  // An empty fragment is one of the values under test, hence the suppression.
-  // eslint-disable-next-line react/jsx-no-useless-fragment
-  it.each([[null], [false], [[]], [[null, false]], [<></>]])(
-    'inherits a role set to %p',
-    (value) => {
-      const { container } = render(
-        <IconProvider icons={{ close: value }}>
-          <InputChip label="Tag" />
-        </IconProvider>,
-      );
-
-      // Nothing here can empty a role. Anything that would draw nothing reads the same as
-      // leaving it out, so a conditional map falls back rather than leaving the chip's only
-      // control blank but still clickable. An empty array and an empty fragment were the
-      // last two ways around that.
-      expect(hasGlyph(container, 'close')).toBe(true);
-    },
-  );
-
   it('reaches the close button AppHeader renders through a portal', () => {
     render(
       <IconProvider icons={{ close: 'remove' }}>
@@ -412,19 +320,6 @@ describe('<IconProvider />', () => {
 
     expect(hasGlyph(container, 'chevron-down')).toBe(true);
     expect(hasGlyph(container, 'add')).toBe(false);
-  });
-
-  it('keeps the icon layout for a role it inherits', () => {
-    const { container } = render(
-      <IconProvider icons={{ expand: null }}>{expandableMenu}</IconProvider>,
-    );
-
-    // The inherited chevron renders, so the space for it stays. Only a role that resolves to
-    // nothing renderable drops the layout, which the invalid-name case above covers.
-    expect(hasGlyph(container, 'chevron-down')).toBe(true);
-    expect(container.querySelector('button')?.className).toContain(
-      'layout-right',
-    );
   });
 
   it('does not let the shipped defaults be reassigned', () => {

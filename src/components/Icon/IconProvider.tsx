@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import type { ReactNode } from 'react';
-import { hasSlotContent, willRenderSlotContent } from './IconSlot';
+import { willRenderSlotContent } from './IconSlot';
 import type { IconName } from '../../icons/spritemap';
 import { assertEdsUsage } from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
@@ -97,10 +97,18 @@ export type IconProviderProps = {
    * Each value takes an EDS icon name or a node, matching the content slots elsewhere in
    * the system.
    *
-   * `undefined`, `null`, and `false` all read the same as leaving the role out, so it
-   * inherits. That is what lets a map be built conditionally: an entry like
-   * `{ close: isDismissible ? <Custom /> : null }` falls back to the icon from above rather
-   * than emptying the role.
+   * Every entry has to draw something. An icon name the spritemap does not have, or a value
+   * that renders nothing — `null`, `false`, `undefined`, `[]`, `<></>` — throws rather than
+   * quietly falling back, because a role resolving to nothing leaves whatever draws it in a
+   * state no component can make sense of, and inheriting instead would hide the mistake
+   * behind an icon nobody chose.
+   *
+   * So to leave a role alone, leave it out. Build a conditional override by adding the key
+   * only when it applies:
+   *
+   * ```tsx
+   * <IconProvider icons={{ ...(isCustom && { close: <Custom /> }) }}>
+   * ```
    *
    * There is deliberately no way to turn a role off here. A role says which glyph draws it,
    * not whether the thing drawing it exists — and most of these sit in controls whose only
@@ -157,6 +165,22 @@ function isSemanticIconName(key: string): key is SemanticIconName {
   return Object.prototype.hasOwnProperty.call(defaultSemanticIcons, key);
 }
 
+/**
+ * Names an empty value in an error, since `String(value)` alone reads poorly for the ones
+ * that turn up here: an array or a fragment both stringify to something unhelpful.
+ */
+function describeEmpty(icon: unknown): string {
+  if (Array.isArray(icon)) {
+    return 'an array with nothing in it';
+  }
+
+  if (React.isValidElement(icon)) {
+    return 'an element with no children';
+  }
+
+  return `\`${String(icon)}\``;
+}
+
 export const IconProvider = ({ children, icons }: IconProviderProps) => {
   const inherited = useContext(IconProviderContext);
 
@@ -181,28 +205,37 @@ export const IconProvider = ({ children, icons }: IconProviderProps) => {
       .join(', ')}.`,
   );
 
+  // Every entry has to draw something. A role that resolves to nothing leaves whatever
+  // draws it in a state no component can make sense of — most of these sit in controls
+  // whose only content is the icon, so an empty one is a button still clickable and no
+  // longer visible — and inheriting instead would hide the mistake behind an icon the
+  // consumer did not choose. Thrown rather than warned because it is a configuration error
+  // with one fix, and because a provider is set up once at a root: it surfaces on the first
+  // render in development long before it could reach anyone.
+  const emptyRole = Object.keys(icons ?? {}).find(
+    (key) => isSemanticIconName(key) && !willRenderSlotContent(icons?.[key]),
+  );
+
+  if (emptyRole !== undefined) {
+    const icon = icons?.[emptyRole as SemanticIconName];
+    const fault =
+      typeof icon === 'string'
+        ? `is set to "${icon}", which is not an EDS icon name`
+        : `is set to ${describeEmpty(icon)}, which renders nothing`;
+
+    throw new Error(
+      `IconProvider: the \`${emptyRole}\` role ${fault}. Every entry has to be an EDS icon name or content that renders; a role cannot be emptied here. To leave a role as it is, omit it rather than passing an empty value: \`{...(isCustom && { ${emptyRole}: <Custom /> })}\` rather than \`{ ${emptyRole}: isCustom ? <Custom /> : null }\`.`,
+    );
+  }
+
   const value = useMemo(() => {
     const merged = { ...inherited };
 
-    // Only a value that will draw something overrides. Anything that would not — `null`,
-    // `false`, `undefined`, an empty array — reads the same as leaving the role out, so it
-    // inherits. Spreading `icons` wholesale would write those over the inherited value
-    // instead, and a conditional map like `{ close: isDismissible ? <X /> : null }` would
-    // empty every close affordance in the tree rather than falling back. No value here
-    // empties a role, because nothing here can; see the note on `icons`.
-    //
-    // Strings are the exception, the empty one included: they are icon names, and they are
-    // kept so the hook below can report one the spritemap does not have rather than
-    // silently inheriting over a typo.
+    // Safe to take as given: anything that would not render threw above, and a key that is
+    // not a role was reported and is skipped here.
     for (const key of Object.keys(icons ?? {})) {
-      if (!isSemanticIconName(key)) {
-        continue;
-      }
-
-      const icon = icons?.[key];
-
-      if (typeof icon === 'string' || hasSlotContent(icon)) {
-        merged[key] = icon;
+      if (isSemanticIconName(key)) {
+        merged[key] = icons?.[key];
       }
     }
 
@@ -252,27 +285,8 @@ export function useSemanticIcon(
     `IconProvider: "${String(name)}" is not a semantic icon role, so nothing renders for it.`,
   );
 
-  const icon = isRole ? icons[name] : undefined;
-
-  // Reported here rather than left to `Icon`, because a component may reasonably decide not
-  // to render a role that resolves to nothing — `Menu.Button` drops its icon layout so the
-  // padding does not outlive the icon — and then `Icon` never runs to complain. This sees
-  // the value whatever the component does with it.
-  //
-  // Every string is read as an icon name, the empty one included. A role cannot be emptied
-  // from here, so `''` is a value that failed to resolve rather than an intent to draw
-  // nothing, and it used to be the one invalid string that passed without comment.
-  const namesNoIcon = typeof icon === 'string' && !willRenderSlotContent(icon);
-
-  assertEdsUsage(
-    [namesNoIcon],
-    `IconProvider: the \`${name}\` role is set to "${String(icon)}", which is not an EDS icon name, so nothing renders for it. Pass an icon name or a node.`,
-  );
-
-  // Handed back as nothing rather than passed along, so the bad name stops here. Returned
-  // unchanged it reached `Icon` through whichever slot drew it, which reported the same
-  // value again in weaker terms — and only from the components that got as far as rendering
-  // it, so one bad override produced one warning or two depending on which component drew
-  // it. `Icon` keeps its own check for callers that name an icon directly.
-  return namesNoIcon ? undefined : icon;
+  // No check on the value: `IconProvider` throws for an entry that would not render, and
+  // the defaults are all real icons, so anything reaching here draws something. Only the
+  // role name can be wrong at this point, which is what the assert above covers.
+  return isRole ? icons[name] : undefined;
 }

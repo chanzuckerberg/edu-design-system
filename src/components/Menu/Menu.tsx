@@ -24,7 +24,7 @@ import type { ExtractProps } from '../../util/utility-types';
 
 import Button from '../Button';
 
-import { useSemanticIcon, willRenderSlotContent } from '../Icon';
+import { useSemanticIcon } from '../Icon';
 
 import PopoverContainer from '../PopoverContainer';
 
@@ -143,6 +143,10 @@ const MenuButton = (props: MenuButtonProps) => {
   // The chevron is semantic: it marks the button as the thing that expands the menu, and
   // reads as that role only if it looks the same on every menu in the app. It comes from
   // `IconProvider` for that reason, and not from a prop on this button.
+  //
+  // No check on what comes back before reserving the layout for it: `expand` is always a
+  // role, and `IconProvider` rejects an entry that would not render, so this always draws
+  // something.
   const expandIcon = useSemanticIcon('expand');
 
   return (
@@ -155,10 +159,7 @@ const MenuButton = (props: MenuButtonProps) => {
         {...other}
         className={buttonClassNames}
         icon={expandIcon}
-        // A provider cannot empty this role, but it can name an icon the spritemap does
-        // not have, which draws nothing while the right-hand layout would still reserve its
-        // padding. The layout follows what will actually render.
-        iconLayout={willRenderSlotContent(expandIcon) ? 'right' : 'none'}
+        iconLayout="right"
         rank="primary"
       >
         {children}
