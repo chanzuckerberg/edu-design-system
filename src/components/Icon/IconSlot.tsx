@@ -10,8 +10,20 @@ import type { IconOrContent } from '../../util/utility-types';
  * These slots take any `ReactNode`, so a plain truthiness check is wrong twice over: it
  * treats `0` as absent, and `{0 && <El />}` leaks a stray "0" into the markup. Only the
  * values React itself renders as nothing count as empty here.
+ *
+ * An array is judged by what is in it, because that is what React does with one. `[]` and
+ * `[null, false]` render nothing, so they are empty; `[0]` renders "0", so it is not. This
+ * matters for the arrays a caller does not write on purpose — `items.map(...)` over an empty
+ * list, or a fragment's children arriving as a collection — where counting the array itself
+ * as content reserves a wrapper and lays out space around nothing.
+ *
+ * Recursive because React flattens nested arrays before rendering them.
  */
-export function hasSlotContent(content: IconOrContent) {
+export function hasSlotContent(content: IconOrContent): boolean {
+  if (Array.isArray(content)) {
+    return content.some((item) => hasSlotContent(item));
+  }
+
   return (
     content !== null &&
     content !== undefined &&

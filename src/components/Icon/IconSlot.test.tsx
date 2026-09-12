@@ -81,5 +81,31 @@ describe('<IconSlot />', () => {
         expect(hasSlotContent(content)).toBe(true);
       },
     );
+
+    // An array is judged by its contents, the way React renders one. Wrapping each case in
+    // an extra array because `it.each` spreads the outer one.
+    it.each([[[]], [[null, false]], [[[], [null]]]])(
+      'reports the array %p as empty',
+      (content) => {
+        expect(hasSlotContent(content)).toBe(false);
+      },
+    );
+
+    it.each([[[0]], [[<span key="a">Hi</span>]], [[null, 'search']]])(
+      'reports the array %p as present',
+      (content) => {
+        expect(hasSlotContent(content)).toBe(true);
+      },
+    );
+
+    it('renders no wrapper for an array with nothing in it', () => {
+      const { container } = render(
+        <IconSlot className="wrapper" content={[]} />,
+      );
+
+      // Before, the array itself counted as content and left `<span class="wrapper">`
+      // behind, laying out space around nothing.
+      expect(container).toBeEmptyDOMElement();
+    });
   });
 });
