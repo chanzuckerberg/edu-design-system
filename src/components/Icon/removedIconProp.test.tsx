@@ -2,7 +2,6 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { IconProvider } from './IconProvider';
 import Accordion from '../Accordion';
 import Breadcrumbs from '../Breadcrumbs';
 import Combobox from '../Combobox';
@@ -160,23 +159,6 @@ describe('the removed icon props', () => {
       // that disallows it, with no warning.
       expect(warn).toHaveBeenCalledWith(
         expect.stringContaining('only allowed when lowEmphasis is used'),
-      );
-    });
-
-    it('keeps the spacing and the icon together when a role is turned off', () => {
-      const { container } = render(
-        <IconProvider icons={{ forward: null }}>
-          <Link context="standalone" emphasis="low" href="/" icon="forward">
-            Next
-          </Link>
-        </IconProvider>,
-      );
-
-      /* eslint-disable-next-line testing-library/no-container */
-      expect(container.querySelector('svg')).toBeNull();
-      /* eslint-disable-next-line testing-library/no-container */
-      expect(container.querySelector('a')?.className).not.toContain(
-        'has-right-icon',
       );
     });
   });

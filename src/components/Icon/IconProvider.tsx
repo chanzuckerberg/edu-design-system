@@ -97,13 +97,16 @@ export type IconProviderProps = {
    * Each value takes an EDS icon name or a node, matching the content slots elsewhere in
    * the system.
    *
-   * Two values mean something particular, which is what lets a map be built conditionally:
+   * `undefined`, `null`, and `false` all read the same as leaving the role out, so it
+   * inherits. That is what lets a map be built conditionally: an entry like
+   * `{ close: isDismissible ? <Custom /> : null }` falls back to the icon from above rather
+   * than emptying the role.
    *
-   * - `undefined` reads the same as leaving the role out, so it inherits. A conditional
-   *   entry like `{ close: isDismissible ? <Custom /> : undefined }` falls back to the icon
-   *   from above rather than blanking the role.
-   * - `null` and `false` draw nothing, matching how the content slots read them. Use one to
-   *   turn a role off deliberately.
+   * There is deliberately no way to turn a role off here. A role says which glyph draws it,
+   * not whether the thing drawing it exists — and most of these sit in controls whose only
+   * content is the icon, so an empty one is a button a person can still click and no longer
+   * see. Whether such a control exists belongs to the component that owns it:
+   * `Modal`'s `hideCloseButton`, a notification's `onDismiss`, `CodeBlock`'s `copyStyle`.
    *
    * @example
    * ```tsx
@@ -148,17 +151,17 @@ export const IconProvider = ({ children, icons }: IconProviderProps) => {
   const value = useMemo(() => {
     const merged = { ...inherited };
 
-    // A role set to `undefined` means the same as a role left out: inherit it. Spreading
-    // `icons` wholesale would instead write the `undefined` over the inherited value, so a
-    // conditional map like `{ close: isDismissible ? <X /> : undefined }` would blank every
-    // close affordance in the tree rather than falling back.
+    // Only a value that names an icon or is content overrides. `undefined`, `null`, and
+    // `false` mean the same as leaving the role out, so they inherit: spreading `icons`
+    // wholesale would write them over the inherited value instead, and a conditional map
+    // like `{ close: isDismissible ? <X /> : null }` would empty every close affordance in
+    // the tree rather than falling back.
     //
-    // `null` and `false` are left alone. Those are how `IconSlot` spells "render nothing",
-    // so an app can still use them to turn a role off deliberately.
+    // None of the three empties a role, because nothing here can. See the note on `icons`.
     for (const role of Object.keys(icons ?? {}) as SemanticIconName[]) {
       const icon = icons?.[role];
 
-      if (icon !== undefined) {
+      if (icon !== undefined && icon !== null && icon !== false) {
         merged[role] = icon;
       }
     }
@@ -216,10 +219,9 @@ export function useSemanticIcon(
   // padding does not outlive the icon — and then `Icon` never runs to complain. This sees
   // the value whatever the component does with it.
   //
-  // Every string is read as an icon name, the empty one included. `null` and `false` are
-  // how a role gets turned off deliberately, so `''` is far more likely a value that did not
-  // resolve than an intent to draw nothing, and it used to be the one invalid string that
-  // passed without comment.
+  // Every string is read as an icon name, the empty one included. A role cannot be emptied
+  // from here, so `''` is a value that failed to resolve rather than an intent to draw
+  // nothing, and it used to be the one invalid string that passed without comment.
   const namesNoIcon = typeof icon === 'string' && !willRenderSlotContent(icon);
 
   assertEdsUsage(

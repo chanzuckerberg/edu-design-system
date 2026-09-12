@@ -311,16 +311,16 @@ describe('<IconProvider />', () => {
     );
   });
 
-  it('honors a role turned off with null', () => {
+  it.each([[null], [false]])('inherits a role set to %p', (value) => {
     const { container } = render(
-      <IconProvider icons={{ close: null }}>
+      <IconProvider icons={{ close: value }}>
         <InputChip label="Tag" />
       </IconProvider>,
     );
 
-    // `null` is how `IconSlot` spells "render nothing", so unlike `undefined` it is a
-    // deliberate choice and is kept.
-    expect(container.querySelector('svg')).toBeNull();
+    // Nothing here can empty a role. These read the same as leaving it out, so a conditional
+    // map falls back rather than leaving the chip's only control blank but still clickable.
+    expect(hasGlyph(container, 'close')).toBe(true);
   });
 
   it('reaches the close button AppHeader renders through a portal', () => {
@@ -362,18 +362,15 @@ describe('<IconProvider />', () => {
     expect(hasGlyph(container, 'add')).toBe(false);
   });
 
-  it('drops the icon layout when a role is turned off', () => {
+  it('keeps the icon layout for a role it inherits', () => {
     const { container } = render(
-      <IconProvider icons={{ expand: null }}>
-        <Menu>
-          <Menu.Button>Actions</Menu.Button>
-        </Menu>
-      </IconProvider>,
+      <IconProvider icons={{ expand: null }}>{expandableMenu}</IconProvider>,
     );
 
-    // Nothing renders in the slot, so the button should not keep reserving space for it.
-    expect(container.querySelector('svg')).toBeNull();
-    expect(container.querySelector('button')?.className).not.toContain(
+    // The inherited chevron renders, so the space for it stays. Only a role that resolves to
+    // nothing renderable drops the layout, which the invalid-name case above covers.
+    expect(hasGlyph(container, 'chevron-down')).toBe(true);
+    expect(container.querySelector('button')?.className).toContain(
       'layout-right',
     );
   });
