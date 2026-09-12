@@ -137,7 +137,12 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       'Link no longer takes `icon="chevron-right"`. That glyph is now the `forward` role, so pass `icon="forward"` and set `forward` on an `IconProvider` to change it. Run `npx eds-migrate 18-to-19` to update the value.',
     );
 
-    const iconToUse = useSemanticIcon(isLegacyChevron ? 'forward' : icon);
+    // The role the link is actually filling, which is what the rules below are about. The
+    // raw prop is not: a legacy `chevron-right` fills `forward`, and checking the prop let
+    // that slip past the low-emphasis rule while still drawing the affordance.
+    const role = isLegacyChevron ? 'forward' : icon;
+
+    const iconToUse = useSemanticIcon(role);
 
     // One condition for the icon and the space it sits in, so a role a provider turned off
     // or named wrongly cannot leave the padding behind with nothing in it.
@@ -175,7 +180,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
     );
 
     assertEdsUsage(
-      [icon === 'forward' && emphasis !== 'low'],
+      [role === 'forward' && emphasis !== 'low'],
       'Icon "forward" only allowed when lowEmphasis is used',
     );
 

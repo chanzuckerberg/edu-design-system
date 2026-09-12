@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo } from 'react';
 import type { ReactNode } from 'react';
-import { hasSlotContent, willRenderSlotContent } from './IconSlot';
+import { willRenderSlotContent } from './IconSlot';
 import type { IconName } from '../../icons/spritemap';
 import { assertEdsUsage } from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
@@ -199,14 +199,12 @@ export function useSemanticIcon(
   // padding does not outlive the icon — and then `Icon` never runs to complain. This sees
   // the value whatever the component does with it.
   //
-  // A non-empty string only: an empty one, like `null` or `false`, is how a provider turns a
-  // role off deliberately.
+  // Every string is read as an icon name, the empty one included. `null` and `false` are
+  // how a role gets turned off deliberately, so `''` is far more likely a value that did not
+  // resolve than an intent to draw nothing, and it used to be the one invalid string that
+  // passed without comment.
   assertEdsUsage(
-    [
-      typeof icon === 'string' &&
-        hasSlotContent(icon) &&
-        !willRenderSlotContent(icon),
-    ],
+    [typeof icon === 'string' && !willRenderSlotContent(icon)],
     `IconProvider: the \`${name}\` role is set to "${String(icon)}", which is not an EDS icon name, so nothing renders for it. Pass an icon name or a node.`,
   );
 

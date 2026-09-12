@@ -148,6 +148,21 @@ describe('the removed icon props', () => {
       expect(container.querySelector('svg')).not.toBeNull();
     });
 
+    it('still applies the low-emphasis rule to the legacy value', () => {
+      render(
+        <Link context="standalone" emphasis="high" href="/" {...legacyValue}>
+          Next
+        </Link>,
+      );
+
+      // The rule is about the role the link fills, not the prop it was given. Checking the
+      // raw prop let a legacy `chevron-right` draw the forward affordance in an emphasis
+      // that disallows it, with no warning.
+      expect(warn).toHaveBeenCalledWith(
+        expect.stringContaining('only allowed when lowEmphasis is used'),
+      );
+    });
+
     it('keeps the spacing and the icon together when a role is turned off', () => {
       const { container } = render(
         <IconProvider icons={{ forward: null }}>

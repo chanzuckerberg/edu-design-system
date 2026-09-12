@@ -250,6 +250,21 @@ describe('<IconProvider />', () => {
     expect(hasGlyph(container, 'close')).toBe(true);
   });
 
+  it('warns for a role set to the empty string', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    // `null` and `false` are the ways to turn a role off, so an empty string is far more
+    // likely a value that did not resolve than an intent to draw nothing. It used to be the
+    // one invalid string that passed without comment.
+    render(
+      <IconProvider icons={{ expand: '' }}>{expandableMenu}</IconProvider>,
+    );
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.stringContaining('the `expand` role is set to'),
+    );
+  });
+
   it('honors a role turned off with null', () => {
     const { container } = render(
       <IconProvider icons={{ close: null }}>
