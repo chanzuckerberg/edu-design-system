@@ -185,8 +185,12 @@ IconProvider.displayName = 'IconProvider';
  * sometimes no role at all, so they can resolve the icon in one unconditional call
  * instead of reading a role they will not render.
  *
+ * Returns something renderable or nothing: a role set to a name the spritemap does not have
+ * comes back as `undefined`, after being reported here.
+ *
  * @param name the semantic role being drawn, or `undefined` to draw nothing
- * @returns the icon name or node to hand to `IconSlot`
+ * @returns the icon name or node to hand to `IconSlot`, or `undefined` if the role resolves
+ * to nothing renderable
  */
 export function useSemanticIcon(
   name: SemanticIconName | undefined,
@@ -203,10 +207,17 @@ export function useSemanticIcon(
   // how a role gets turned off deliberately, so `''` is far more likely a value that did not
   // resolve than an intent to draw nothing, and it used to be the one invalid string that
   // passed without comment.
+  const namesNoIcon = typeof icon === 'string' && !willRenderSlotContent(icon);
+
   assertEdsUsage(
-    [typeof icon === 'string' && !willRenderSlotContent(icon)],
+    [namesNoIcon],
     `IconProvider: the \`${name}\` role is set to "${String(icon)}", which is not an EDS icon name, so nothing renders for it. Pass an icon name or a node.`,
   );
 
-  return icon;
+  // Handed back as nothing rather than passed along, so the bad name stops here. Returned
+  // unchanged it reached `Icon` through whichever slot drew it, which reported the same
+  // value again in weaker terms — and only from the components that got as far as rendering
+  // it, so one bad override produced one warning or two depending on which component drew
+  // it. `Icon` keeps its own check for callers that name an icon directly.
+  return namesNoIcon ? undefined : icon;
 }

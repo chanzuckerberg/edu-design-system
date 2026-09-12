@@ -165,6 +165,31 @@ describe('<IconProvider />', () => {
     expect(container.querySelector('svg')).toBeNull();
   });
 
+  it.each([
+    [
+      'InputChip',
+      <IconProvider icons={{ close: 'not-an-icon' }} key="chip">
+        <InputChip label="Tag" />
+      </IconProvider>,
+    ],
+    [
+      'Menu.Button',
+      <IconProvider icons={{ expand: 'not-an-icon' }} key="menu">
+        {expandableMenu}
+      </IconProvider>,
+    ],
+  ])('reports a bad role once, from %s', (_name, element) => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    render(element);
+
+    // The provider names the role at fault, so passing the value on to `Icon` only earned a
+    // second, vaguer warning for the same mistake — and only from the components that got as
+    // far as rendering it, so the count depended on which component drew the role.
+    expect(warn).toHaveBeenCalledTimes(1);
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('IconProvider:'));
+  });
+
   it('drops the icon layout for a role naming no real icon', () => {
     vi.spyOn(console, 'warn').mockImplementation(() => {});
 
