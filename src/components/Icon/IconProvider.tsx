@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useMemo } from 'react';
+import React, { createContext, Fragment, useContext, useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { willRenderSlotContent } from './IconSlot';
 import type { IconName } from '../../icons/spritemap';
@@ -139,19 +139,27 @@ function isSemanticIconName(key: string): key is SemanticIconName {
 }
 
 /**
- * Names an empty value in an error, since `String(value)` alone reads poorly for the ones
- * that turn up here: an array or a fragment both stringify to something unhelpful.
+ * Describes a value that draws nothing, for an error a reader has to act on.
+ *
+ * By shape rather than by contents, and deliberately: an array holding `[null, false]` and a
+ * fragment wrapping `{null}` both render nothing while plainly having children, so saying
+ * either is empty would be wrong. What is true of all of them is that nothing comes out.
+ *
+ * `String(value)` will not do on its own either — an array and an element each stringify to
+ * something a reader cannot act on.
  */
-function describeEmpty(icon: unknown): string {
+function describeEmptyValue(icon: unknown): string {
   if (Array.isArray(icon)) {
-    return 'an array with nothing in it';
+    return 'an array that renders nothing';
   }
 
   if (React.isValidElement(icon)) {
-    return 'an element with no children';
+    return icon.type === Fragment
+      ? 'a fragment that renders nothing'
+      : 'an element that renders nothing';
   }
 
-  return `\`${String(icon)}\``;
+  return `\`${String(icon)}\`, which renders nothing`;
 }
 
 /**
@@ -250,7 +258,7 @@ export const IconProvider = ({ children, icons }: IconProviderProps) => {
       const fault =
         typeof icon === 'string'
           ? `is set to "${icon}", which is not an EDS icon name`
-          : `is set to ${describeEmpty(icon)}, which renders nothing`;
+          : `is set to ${describeEmptyValue(icon)}`;
 
       throw new Error(
         `IconProvider: the \`${key}\` role ${fault}. ${rule} To leave a role as it is, omit it rather than passing an empty value: \`{...(isCustom && { ${key}: <Custom /> })}\` rather than \`{ ${key}: isCustom ? <Custom /> : null }\`.`,

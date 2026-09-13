@@ -168,6 +168,32 @@ describe('<IconProvider />', () => {
     ).toThrow(/Every entry has to be an EDS icon name or content that renders/);
   });
 
+  it.each([
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    ['a fragment', <></>, /a fragment that renders nothing/],
+    [
+      'a fragment with children that render nothing',
+      <>{false}</>,
+      /a fragment that renders nothing/,
+    ],
+    [
+      'an array with children that render nothing',
+      [null, false],
+      /an array that renders nothing/,
+    ],
+    ['a literal', null, /`null`, which renders nothing/],
+  ])('describes %s accurately in the error', (_label, value, expected) => {
+    // The shape, not its contents: `<>{false}</>` and `[null, false]` both render nothing
+    // while plainly having children, so calling either empty would be wrong.
+    expect(() =>
+      render(
+        <IconProvider icons={{ close: value }}>
+          <InputChip label="Tag" />
+        </IconProvider>,
+      ),
+    ).toThrow(expected);
+  });
+
   it('throws for a collection it cannot check', () => {
     // React renders any iterable, but checking what one holds means consuming it, and that
     // exhausts a generator. The provider promises every role draws something, so it refuses

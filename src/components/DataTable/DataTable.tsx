@@ -12,8 +12,7 @@ import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
 
 import Button, { type ButtonProps } from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import { useSemanticIcon } from '../Icon/IconProvider';
-import { IconSlot } from '../Icon/IconSlot';
+import { IconSlot, useSemanticIcon } from '../Icon';
 import InputField from '../InputField';
 import Text from '../Text';
 
