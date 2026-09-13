@@ -8,6 +8,7 @@ import type { IconName } from './Icon';
 import { defaultSemanticIcons, IconProvider } from './IconProvider';
 import * as stories from './IconProvider.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
+import type { IconOrContent } from '../../util/utility-types';
 import Accordion from '../Accordion';
 import AppHeader from '../AppHeader';
 import Breadcrumbs from '../Breadcrumbs';
@@ -165,6 +166,29 @@ describe('<IconProvider />', () => {
         </IconProvider>,
       ),
     ).toThrow(/Every entry has to be an EDS icon name or content that renders/);
+  });
+
+  it('throws for a collection it cannot check', () => {
+    // React renders any iterable, but checking what one holds means consuming it, and that
+    // exhausts a generator. The provider promises every role draws something, so it refuses
+    // the shape rather than making a promise it cannot keep — an empty `Set` used to be
+    // accepted here and left the chip's action button blank.
+    expect(() =>
+      render(
+        <IconProvider icons={{ close: new Set() as unknown as IconOrContent }}>
+          <InputChip label="Tag" />
+        </IconProvider>,
+      ),
+    ).toThrow(/iterable that is not an array/);
+
+    // An array can be looked in as often as needed, so it is accepted and checked.
+    expect(() =>
+      render(
+        <IconProvider icons={{ close: [<span key="a">x</span>] }}>
+          <InputChip label="Tag" />
+        </IconProvider>,
+      ),
+    ).not.toThrow();
   });
 
   it('says how to write a conditional override in the error', () => {

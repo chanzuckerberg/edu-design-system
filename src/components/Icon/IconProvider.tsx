@@ -127,33 +127,6 @@ export type IconProviderProps = {
 };
 
 /**
- * ## Usage
- *
- * Swaps the icons EDS uses for the roles it fills on its own behalf: the chevron on a
- * `Menu.Button`, the close button in a `Modal`, the status icon on a `ToastNotification`,
- * and so on. Wrap the app once and every component below it picks the new glyph up.
- *
- * This is how those icons are set. The components that draw them do not take a per-instance
- * override, because a role that renders one glyph in one place and a different one two
- * screens over stops reading as that role at all.
- *
- * One exception: `FieldNote.icon` still wins over the `warning` and `critical` defaults for
- * a single note. That slot predates these roles and stays a content slot, so a note can
- * carry the status treatment and its own content at once. It warns when used without a
- * status, since an icon on a note with nothing to report reads as a status the note does
- * not have.
- *
- * Nesting merges: an inner provider only has to name the roles it changes, and inherits
- * the rest from the provider around it.
- *
- * ### Don'ts
- *
- * * Don't give a role a glyph that reads as a different role (a checkmark for `close`).
- * * Don't define the map inline in render if the tree below it is large. A new object
- *   every render re-renders every component reading from it; hoist it to a module
- *   constant instead.
- */
-/**
  * Whether a key in a consumer's map names a role this provider knows.
  *
  * An own-property check against the shipped defaults, which is the list of roles. Both
@@ -181,6 +154,51 @@ function describeEmpty(icon: unknown): string {
   return `\`${String(icon)}\``;
 }
 
+/**
+ * Whether a value is a collection this provider cannot vouch for.
+ *
+ * React renders any iterable of children, but checking what one holds means iterating it,
+ * and that exhausts a generator — the check would consume the very content it was meant to
+ * confirm. So the provider does not accept the shape at all: it promises every role draws
+ * something, and it cannot promise that about a collection it is not allowed to look in.
+ * An array can be looked in as often as you like.
+ */
+function isUnverifiableCollection(icon: unknown): boolean {
+  return (
+    typeof icon === 'object' &&
+    icon !== null &&
+    Symbol.iterator in icon &&
+    !Array.isArray(icon)
+  );
+}
+
+/**
+ * ## Usage
+ *
+ * Swaps the icons EDS uses for the roles it fills on its own behalf: the chevron on a
+ * `Menu.Button`, the close button in a `Modal`, the status icon on a `ToastNotification`,
+ * and so on. Wrap the app once and every component below it picks the new glyph up.
+ *
+ * This is how those icons are set. The components that draw them do not take a per-instance
+ * override, because a role that renders one glyph in one place and a different one two
+ * screens over stops reading as that role at all.
+ *
+ * One exception: `FieldNote.icon` still wins over the `warning` and `critical` defaults for
+ * a single note. That slot predates these roles and stays a content slot, so a note can
+ * carry the status treatment and its own content at once. It warns when used without a
+ * status, since an icon on a note with nothing to report reads as a status the note does
+ * not have.
+ *
+ * Nesting merges: an inner provider only has to name the roles it changes, and inherits
+ * the rest from the provider around it.
+ *
+ * ### Don'ts
+ *
+ * * Don't give a role a glyph that reads as a different role (a checkmark for `close`).
+ * * Don't define the map inline in render if the tree below it is large. A new object
+ *   every render re-renders every component reading from it; hoist it to a module
+ *   constant instead.
+ */
 export const IconProvider = ({ children, icons }: IconProviderProps) => {
   const inherited = useContext(IconProviderContext);
 
@@ -212,20 +230,32 @@ export const IconProvider = ({ children, icons }: IconProviderProps) => {
   // consumer did not choose. Thrown rather than warned because it is a configuration error
   // with one fix, and because a provider is set up once at a root: it surfaces on the first
   // render in development long before it could reach anyone.
-  const emptyRole = Object.keys(icons ?? {}).find(
-    (key) => isSemanticIconName(key) && !willRenderSlotContent(icons?.[key]),
-  );
+  const rule =
+    'Every entry has to be an EDS icon name or content that renders; a role cannot be emptied here.';
 
-  if (emptyRole !== undefined) {
-    const icon = icons?.[emptyRole as SemanticIconName];
-    const fault =
-      typeof icon === 'string'
-        ? `is set to "${icon}", which is not an EDS icon name`
-        : `is set to ${describeEmpty(icon)}, which renders nothing`;
+  for (const key of Object.keys(icons ?? {})) {
+    if (!isSemanticIconName(key)) {
+      continue;
+    }
 
-    throw new Error(
-      `IconProvider: the \`${emptyRole}\` role ${fault}. Every entry has to be an EDS icon name or content that renders; a role cannot be emptied here. To leave a role as it is, omit it rather than passing an empty value: \`{...(isCustom && { ${emptyRole}: <Custom /> })}\` rather than \`{ ${emptyRole}: isCustom ? <Custom /> : null }\`.`,
-    );
+    const icon = icons?.[key];
+
+    if (isUnverifiableCollection(icon)) {
+      throw new Error(
+        `IconProvider: the \`${key}\` role is set to an iterable that is not an array. ${rule} Checking one means consuming it, which would leave nothing to render, so pass an array instead.`,
+      );
+    }
+
+    if (!willRenderSlotContent(icon)) {
+      const fault =
+        typeof icon === 'string'
+          ? `is set to "${icon}", which is not an EDS icon name`
+          : `is set to ${describeEmpty(icon)}, which renders nothing`;
+
+      throw new Error(
+        `IconProvider: the \`${key}\` role ${fault}. ${rule} To leave a role as it is, omit it rather than passing an empty value: \`{...(isCustom && { ${key}: <Custom /> })}\` rather than \`{ ${key}: isCustom ? <Custom /> : null }\`.`,
+      );
+    }
   }
 
   const value = useMemo(() => {
