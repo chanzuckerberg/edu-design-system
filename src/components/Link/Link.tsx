@@ -162,7 +162,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
     assertEdsUsage(
       [context === 'inline' && emphasis === 'low'],
-      'Inline links cannot be lowEmphasis',
+      'Inline links cannot have "low" emphasis',
     );
 
     assertEdsUsage(
@@ -182,7 +182,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
 
     assertEdsUsage(
       [role === 'forward' && emphasis !== 'low'],
-      'Icon "forward" only allowed when lowEmphasis is used',
+      'Icon "forward" only allowed when emphasis is "low"',
     );
 
     return (

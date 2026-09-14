@@ -158,7 +158,7 @@ describe('the removed icon props', () => {
       // raw prop let a legacy `chevron-right` draw the forward affordance in an emphasis
       // that disallows it, with no warning.
       expect(warn).toHaveBeenCalledWith(
-        expect.stringContaining('only allowed when lowEmphasis is used'),
+        expect.stringContaining('only allowed when emphasis is "low"'),
       );
     });
   });
