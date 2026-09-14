@@ -581,6 +581,79 @@ exports[`<PageNotification /> > WithHorizontalLayout story renders snapshot 1`] 
 </aside>
 `;
 
+exports[`<PageNotification /> > WithProvidedIcons story renders snapshot 1`] = `
+<aside
+  aria-label="Critical title which communicates info to the user"
+  class="_page-notification_e69030 _page-notification--status-critical_e69030 _page-notification--dismissable_e69030 w-[627px]"
+>
+  <svg
+    aria-hidden="true"
+    class="_icon_779da8 _page-notification__icon_e69030"
+    fill="currentColor"
+    height="24px"
+    style="--icon-size: 24px;"
+    viewBox="0 0 24 24"
+    width="24px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 16.4615C12.1743 16.4615 12.3205 16.4025 12.4385 16.2845C12.5565 16.1667 12.6155 16.0206 12.6155 15.8462C12.6155 15.6717 12.5565 15.5256 12.4385 15.4078C12.3205 15.2898 12.1743 15.2308 12 15.2308C11.8257 15.2308 11.6795 15.2898 11.5615 15.4078C11.4435 15.5256 11.3845 15.6717 11.3845 15.8462C11.3845 16.0206 11.4435 16.1667 11.5615 16.2845C11.6795 16.4025 11.8257 16.4615 12 16.4615ZM12.0008 13.1537C12.1426 13.1537 12.2612 13.1058 12.3567 13.01C12.4522 12.9142 12.5 12.7954 12.5 12.6537V7.65375C12.5 7.51208 12.452 7.39333 12.356 7.2975C12.26 7.20167 12.1411 7.15375 11.9993 7.15375C11.8574 7.15375 11.7388 7.20167 11.6433 7.2975C11.5478 7.39333 11.5 7.51208 11.5 7.65375V12.6537C11.5 12.7954 11.548 12.9142 11.644 13.01C11.74 13.1058 11.8589 13.1537 12.0008 13.1537ZM12.0033 21C10.7588 21 9.58867 20.7638 8.493 20.2915C7.3975 19.8192 6.4445 19.1782 5.634 18.3685C4.8235 17.5588 4.18192 16.6067 3.70925 15.512C3.23642 14.4175 3 13.2479 3 12.0033C3 10.7588 3.23617 9.58867 3.7085 8.493C4.18083 7.3975 4.82183 6.4445 5.6315 5.634C6.44117 4.8235 7.39333 4.18192 8.488 3.70925C9.5825 3.23642 10.7521 3 11.9968 3C13.2413 3 14.4113 3.23617 15.507 3.7085C16.6025 4.18083 17.5555 4.82183 18.366 5.6315C19.1765 6.44117 19.8181 7.39333 20.2908 8.488C20.7636 9.5825 21 10.7521 21 11.9968C21 13.2413 20.7638 14.4113 20.2915 15.507C19.8192 16.6025 19.1782 17.5555 18.3685 18.366C17.5588 19.1765 16.6067 19.8181 15.512 20.2908C14.4175 20.7636 13.2479 21 12.0033 21Z"
+    />
+  </svg>
+  <div
+    class="_page-notification__body_e69030 _page-notification--has-vertical-cta_e69030"
+  >
+    <div
+      class="_page-notification__text_e69030"
+    >
+      <h3
+        class="_text_b3eba3 _text--title-md_b3eba3"
+      >
+        Alert title which communicates info to the user
+      </h3>
+    </div>
+    <div
+      class="_page-notification__call-to-action_e69030"
+    >
+      <button
+        class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-neutral_0829c1"
+        type="button"
+      >
+        <span
+          class="_text_b3eba3 _text--label-sm_b3eba3 _button__text_0829c1"
+        >
+          Call to Action
+        </span>
+      </button>
+    </div>
+  </div>
+  <button
+    aria-label="Dismiss the notification"
+    class="_button_0829c1 _button--layout-icon-only_0829c1 _button--tertiary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-neutral_0829c1 _page-notification__close-button_e69030"
+    type="button"
+  >
+    <span
+      class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+    >
+      <svg
+        aria-hidden="true"
+        class="_icon_779da8"
+        fill="currentColor"
+        height="24px"
+        style="--icon-size: 24px;"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.5 12.75V11.25H18.5V12.75H5.5Z"
+        />
+      </svg>
+    </span>
+  </button>
+</aside>
+`;
+
 exports[`<PageNotification /> > WithTitleWrapping story renders snapshot 1`] = `
 <aside
   aria-label="Default alert title"

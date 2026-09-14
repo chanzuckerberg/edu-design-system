@@ -20,7 +20,7 @@ import {
 } from '../../util/keycodes';
 import type { IconOrContent, RenderProps } from '../../util/utility-types';
 import type { Align } from '../../util/variant-types';
-import { IconSlot } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 
 import styles from './TabGroup.module.css';
 
@@ -382,12 +382,14 @@ export const TabGroup = ({
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
                 >
-                  <IconSlot
-                    className={styles['tab__icon']}
-                    content={tab.props.icon}
-                    purpose="decorative"
-                    size="16px"
-                  />
+                  {hasSlotContent(tab.props.icon) && (
+                    <IconSlot
+                      className={styles['tab__icon']}
+                      content={tab.props.icon}
+                      purpose="decorative"
+                      size="16px"
+                    />
+                  )}
                   {typeof tabButton?.props.children === 'function'
                     ? tabButton.props.children({
                         isActive,

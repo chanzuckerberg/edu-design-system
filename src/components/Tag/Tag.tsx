@@ -4,7 +4,7 @@ import { assertEdsUsage } from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
 import type { Emphasis, Status } from '../../util/variant-types';
 
-import { IconSlot } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import { InternalText } from '../Text/Text';
 
 import styles from './Tag.module.css';
@@ -120,7 +120,9 @@ export const Tag = ({
       preset="tag"
       style={style}
     >
-      <IconSlot content={icon} purpose="decorative" size="16px" />
+      {hasSlotContent(icon) && (
+        <IconSlot content={icon} purpose="decorative" size="16px" />
+      )}
       {label && <span className={styles['tag__body']}>{label}</span>}
     </InternalText>
   );

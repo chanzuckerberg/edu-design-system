@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 import Button from '../Button';
+import { useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './AppNotification.module.css';
@@ -84,6 +85,10 @@ export const AppNotification = ({
     className,
   );
 
+  // The dismiss button is semantic: it is the same close affordance as every other one in
+  // the app, so it comes from `IconProvider`.
+  const closeIcon = useSemanticIcon('close');
+
   return (
     <div className={componentClassName} role="status" {...other}>
       <div className={styles['app-notification__content']}>
@@ -113,7 +118,7 @@ export const AppNotification = ({
             aria-label="close"
             className={styles['app-notification__close-btn']}
             context="default"
-            icon="close"
+            icon={closeIcon}
             iconLayout="icon-only"
             onClick={onDismiss}
             rank="tertiary"

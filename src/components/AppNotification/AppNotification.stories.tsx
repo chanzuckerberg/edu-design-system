@@ -6,8 +6,10 @@ import React from 'react';
 
 import { AppNotification } from './AppNotification';
 
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
+import { IconProvider } from '../Icon';
 import Link from '../Link';
 import Text from '../Text';
 
@@ -133,4 +135,20 @@ export const InverseWithDismissAndControls: Story = {
     },
   },
   render: InverseVariant.render,
+};
+
+/**
+ * The dismiss button comes from `IconProvider`, so it carries the same mark as the close
+ * button on a `Modal`, an `InputChip`, or any other notification.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    ...Default.args,
+    onDismiss: () => {},
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

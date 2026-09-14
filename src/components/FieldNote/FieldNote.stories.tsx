@@ -4,7 +4,8 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { FieldNote } from './FieldNote';
-import FpoBlock from '../../storyUtils/FpoBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 import Link from '../Link';
 import Text from '../Text';
 
@@ -72,25 +73,18 @@ export const WithText: Story = {
 };
 
 /**
- * The leading slot takes arbitrary content, not only an EDS icon name. The block below
- * stands in for whatever you supply, so the slot itself is the subject rather than the icon
- * that happened to be picked.
+ * A note's icon reports its status, so which glyph each status draws comes from
+ * `IconProvider` and matches what the notification components show for the same status.
+ *
+ * Here `critical` becomes the outline version of the icon.
  */
-export const WithFpoIconContent: Story = {
+export const WithProvidedIcons: Story = {
   args: {
-    ...Default.args,
-    icon: <FpoBlock size={16} />,
+    ...WithErrorIcon.args,
   },
-};
-
-/**
- * `status` supplies this slot's default rather than overriding it, so a note can carry the
- * critical treatment and still show your own content. The status is announced from the
- * note's own treatment; content you pass carries its own accessible treatment.
- */
-export const WithFpoIconContentAndStatus: Story = {
-  args: {
-    ...WithFpoIconContent.args,
-    status: 'critical',
-  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

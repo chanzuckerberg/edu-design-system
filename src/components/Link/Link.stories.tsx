@@ -3,6 +3,8 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 };
 import React from 'react';
 import { Link, type LinkProps } from './Link';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/Link',
@@ -24,7 +26,7 @@ export default {
   decorators: [
     (Story) => <div className="text-utility-default-primary">{Story()}</div>,
   ],
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<typeof Link>;
 
 type Story = StoryObj<typeof Link>;
@@ -32,16 +34,19 @@ type Story = StoryObj<typeof Link>;
 export const Default: Story = {};
 
 /**
- * When using standalone context, you can specify a trailing icon for the link.
+ * When using standalone context, you can specify which role the trailing icon fills.
+ * `"forward"` carries the reader onward; the glyph it draws comes from `IconProvider`, so the
+ * name here does not assume a chevron.
  *
- * **NOTE**: support for applying the chevron only works when `emphasis` is set to "low".
+ * **NOTE**: support for applying the `forward` icon only works when `emphasis` is set to
+ * "low".
  */
-export const LinkWithChevron: Story = {
+export const LinkWithForwardIcon: Story = {
   args: {
     children: 'Default',
     context: 'standalone',
     emphasis: 'low',
-    icon: 'chevron-right',
+    icon: 'forward',
   },
 };
 
@@ -242,4 +247,34 @@ export const UsingExtendedLink: StoryObj<ExtendArgs> = {
       Nullam sit amet iaculis erat. Nulla id tellus ante.{' '}
     </div>
   ),
+};
+
+/**
+ * `icon` names which role the link is filling rather than picking a glyph, and both roles
+ * come from `IconProvider`. So a link marked as leaving the site matches the one `AppHeader`
+ * renders for the same thing, and the two icons a standalone link can carry are set from one
+ * place rather than per link.
+ *
+ * Below, `open-in-new` becomes a chain and `forward` a full arrow.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    context: 'standalone',
+  },
+  render: (args) => (
+    <div>
+      <Link {...args} icon="open-in-new">
+        Leaves the site
+      </Link>
+      <br />
+      <Link {...args} emphasis="low" icon="forward">
+        Carries the reader onward
+      </Link>
+    </div>
+  ),
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

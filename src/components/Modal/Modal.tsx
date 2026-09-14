@@ -14,6 +14,7 @@ import type { Size } from '../../util/variant-types';
 
 import Button from '../Button';
 import Heading from '../Heading';
+import { useSemanticIcon } from '../Icon';
 import ScrollWrapper from '../ScrollWrapper';
 import Text from '../Text';
 
@@ -273,6 +274,10 @@ const ModalContent = (props: ModalContentProps) => {
     className,
   );
 
+  // The close button is semantic: it is the same affordance as every other close in the
+  // app, so it is set once through `IconProvider` rather than per modal.
+  const closeIcon = useSemanticIcon('close');
+
   return (
     <ModalContext.Provider value={{ height }}>
       <div className={componentClassName} {...other}>
@@ -281,7 +286,7 @@ const ModalContent = (props: ModalContentProps) => {
             aria-label="close"
             className={styles['modal__close-button']}
             context="default"
-            icon="close"
+            icon={closeIcon}
             iconLayout="icon-only"
             onClick={onClose}
             rank="tertiary"

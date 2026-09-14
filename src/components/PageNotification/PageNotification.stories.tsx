@@ -4,7 +4,9 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { PageNotification } from './PageNotification';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import Button from '../Button';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/PageNotification',
@@ -128,4 +130,21 @@ export const MultipleNotifications: StoryObj<Args> = {
       />
     </div>
   ),
+};
+
+/**
+ * Both icons here come from `IconProvider`: the status icon carrying the notification's
+ * severity, and the dismiss button, which is the same close affordance used everywhere else.
+ *
+ * Here `critical` becomes the outline version of the icon, and the close button a minus.
+ */
+export const WithProvidedIcons: StoryObj<Args> = {
+  args: {
+    ...Critical.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

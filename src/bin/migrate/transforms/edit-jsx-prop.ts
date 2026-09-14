@@ -1,5 +1,6 @@
 import { SyntaxKind } from 'ts-morph';
 import type {
+  JsxAttribute,
   JsxOpeningElement,
   JsxSelfClosingElement,
   SourceFile,
@@ -40,19 +41,41 @@ type Edit =
       newPropValue: string;
     };
 
+/**
+ * The string a prop was given, for the callbacks that decide an edit by value.
+ *
+ * Reads both `prop="value"` and `prop={'value'}`, which mean the same thing and which
+ * consumers write interchangeably. Only those two: the expression has to *be* a string
+ * literal, not merely contain one, so `prop={cond ? 'a' : 'b'}` reports nothing rather than
+ * matching on a branch. Callbacks gate destructive edits, and reporting a value out of a
+ * larger expression would let one remove the whole attribute.
+ *
+ * Anything else — an identifier, a call, JSX — reports the empty string, so a callback
+ * matching on a value leaves it alone.
+ */
+function getStringLiteralValue(
+  initializer: ReturnType<JsxAttribute['getInitializer']>,
+) {
+  const literal =
+    initializer?.asKind(SyntaxKind.StringLiteral) ??
+    initializer
+      ?.asKind(SyntaxKind.JsxExpression)
+      ?.getExpression()
+      ?.asKind(SyntaxKind.StringLiteral);
+
+  return literal?.getLiteralValue() ?? '';
+}
+
 function removeProp(
   element: JsxOpeningElement | JsxSelfClosingElement,
   edit: Extract<Edit, { type: 'remove' }>,
 ) {
   const attribute = element.getAttribute(edit.propName);
   if (attribute && 'getNameNode' in attribute) {
-    const initializer = attribute.getInitializer();
     const performEdit =
       !edit.callback ||
       edit.callback({
-        currentPropValue:
-          initializer?.asKind(SyntaxKind.StringLiteral)?.getLiteralValue() ||
-          '',
+        currentPropValue: getStringLiteralValue(attribute.getInitializer()),
       });
 
     if (performEdit) {
@@ -67,13 +90,10 @@ function updatePropName(
 ) {
   const attribute = element.getAttribute(edit.oldPropName);
   if (attribute && 'getNameNode' in attribute) {
-    const initializer = attribute.getInitializer();
     const performEdit =
       !edit.callback ||
       edit.callback({
-        currentPropValue:
-          initializer?.asKind(SyntaxKind.StringLiteral)?.getLiteralValue() ||
-          '',
+        currentPropValue: getStringLiteralValue(attribute.getInitializer()),
       });
 
     if (performEdit) {

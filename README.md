@@ -69,6 +69,27 @@ Lastly, add `<link>` or other files to load fonts into your project. EDS provide
 
 For more information and configuration options, read the [Theming Overview][theming-docs].
 
+### Semantic Icon Setup
+
+A few icons are EDS's own rather than yours to pass in: the close button on a `Modal`, the chevron marking a `Menu.Button` as expandable, the icon carrying a notification's status. Each marks one role, and a role only reads as itself if it looks the same everywhere it appears, so they come from `IconProvider` instead of from props on each component.
+
+Every role ships with a default, so skip this if those suit you. To change one, wrap your app once and name only the roles you want to differ:
+
+```jsx
+import { IconProvider } from '@chanzuckerberg/eds';
+
+// Defined outside render: a new object on every render re-renders everything below it.
+const icons = { back: 'arrow-left', expand: 'unfold-more' };
+
+<IconProvider icons={icons}>
+  <App />
+</IconProvider>;
+```
+
+Each role takes an EDS icon name or a node, and anything left out keeps the icon it had. For the full list of roles and their defaults, read the [IconProvider docs][icon-provider-docs].
+
+[icon-provider-docs]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/components-iconprovider--summary-docs
+
 ## EDS Component Usage
 
 Import any of the components from the top-level package:
@@ -95,19 +116,14 @@ Instead, if you want to report an issue, you can [open an issue][gh-issue].
 This project is governed under the [Contributor Covenant][contribution-covenant] code of conduct.
 
 [contributing]: ./docs/CONTRIBUTING.md
-[guidelines]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-guidelines-code-guidelines--docs
+[guidelines]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-contributor-guidelines-code-guidelines--summary-docs
 [gh-issue]: https://github.com/chanzuckerberg/edu-design-system/issues
 [contribution-covenant]: https://www.contributor-covenant.org/
+[theming-docs]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-theming-using-eds-theming--summary-docs
 
 ## Reporting Security Issues
 
 See our [Security Readme](https://github.com/chanzuckerberg/edu-design-system/blob/main/SECURITY.md).
-
-## FAQ, More Information, and Support
-
-Please review our Education Design System Site (SSO Required) [here](https://eds.czi.design/0843bc428/p/581284-education-design-system).
-
-[theming-docs]: https://chanzuckerberg.github.io/edu-design-system/?path=/docs/documentation-theming--docs
 
 ## Code of Conduct
 

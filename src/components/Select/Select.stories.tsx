@@ -6,6 +6,8 @@ import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
 import { expect } from 'storybook/test';
 import { Select } from './Select';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 
 const meta: Meta<typeof Select> = {
   title: 'Components/Select',
@@ -56,7 +58,7 @@ const meta: Meta<typeof Select> = {
         'Optional change handler. Fires when a value is selected (and passes in list of selected values)',
     },
   },
-  tags: ['autodocs', 'version:3.2.1'],
+  tags: ['autodocs', 'version:4.0.0'],
 };
 
 export default meta;
@@ -861,4 +863,18 @@ export const OpenByDefault: StoryObj = {
     },
   },
   play: selectCat,
+};
+
+/**
+ * The indicator marks the button as the thing that opens the options, which is the same
+ * `expand` role a `Menu.Button` or an `Accordion` row carries, so it comes from
+ * `IconProvider`. The CSS still flips it when the listbox opens.
+ */
+export const WithProvidedIcons: StoryObj = {
+  ...Default,
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

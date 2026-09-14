@@ -1,0 +1,413 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<IconProvider /> > Default story renders snapshot 1`] = `
+<div
+  class="gap-spacing-size-4 flex flex-col"
+>
+  <div
+    class="_menu_33ee5b"
+    data-headlessui-state=""
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="menu"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      data-headlessui-state=""
+      id="headlessui-menu-button-_r_2_"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Actions
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  <div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_3_"
+        type="button"
+      >
+        <h3
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            An expandable row
+          </span>
+        </h3>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div
+    class="_input-chip_f95fba"
+  >
+    <div
+      class="_input-chip__label_f95fba"
+    >
+      <span
+        class="_text_b3eba3 _text--body-xs_b3eba3"
+      >
+        A chip
+      </span>
+    </div>
+    <button
+      aria-label="remove A chip"
+      class="_input-chip__action-button_f95fba"
+    >
+      <svg
+        aria-hidden="true"
+        class="_icon_779da8"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.39994 18.6542L5.34619 17.6004L10.9462 12.0004L5.34619 6.40043L6.39994 5.34668L11.9999 10.9467L17.5999 5.34668L18.6537 6.40043L13.0537 12.0004L18.6537 17.6004L17.5999 18.6542L11.9999 13.0542L6.39994 18.6542Z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    class="_inline-notification_785732 _inline-notification--status-critical_785732"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8 _inline-notification__icon_785732"
+      fill="currentColor"
+      height="16px"
+      style="--icon-size: 16px;"
+      viewBox="0 0 24 24"
+      width="16px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.573 16.4962C12.7295 16.3397 12.8078 16.1487 12.8078 15.923C12.8078 15.6973 12.7295 15.5063 12.573 15.35C12.4167 15.1937 12.2257 15.1155 12 15.1155C11.7743 15.1155 11.5833 15.1937 11.427 15.35C11.2705 15.5063 11.1923 15.6973 11.1923 15.923C11.1923 16.1487 11.2705 16.3397 11.427 16.4962C11.5833 16.6526 11.7743 16.7307 12 16.7307C12.2257 16.7307 12.4167 16.6526 12.573 16.4962ZM11.25 13.077H12.75V7.077H11.25V13.077ZM12.0018 21.5C10.6878 21.5 9.45267 21.2507 8.2965 20.752C7.14033 20.2533 6.13467 19.5766 5.2795 18.7218C4.42433 17.8669 3.74725 16.8617 3.24825 15.706C2.74942 14.5503 2.5 13.3156 2.5 12.0018C2.5 10.6878 2.74933 9.45267 3.248 8.2965C3.74667 7.14033 4.42342 6.13467 5.27825 5.2795C6.13308 4.42433 7.13833 3.74725 8.294 3.24825C9.44967 2.74942 10.6844 2.5 11.9982 2.5C13.3123 2.5 14.5473 2.74933 15.7035 3.248C16.8597 3.74667 17.8653 4.42342 18.7205 5.27825C19.5757 6.13308 20.2528 7.13833 20.7518 8.294C21.2506 9.44967 21.5 10.6844 21.5 11.9982C21.5 13.3123 21.2507 14.5473 20.752 15.7035C20.2533 16.8597 19.5766 17.8653 18.7218 18.7205C17.8669 19.5757 16.8617 20.2528 15.706 20.7518C14.5503 21.2506 13.3156 21.5 12.0018 21.5Z"
+      />
+    </svg>
+    <div
+      class="_inline-notication__body_785732"
+    >
+      <div
+        class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      >
+        Something went wrong
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<IconProvider /> > WithCustomContent story renders snapshot 1`] = `
+<div
+  class="gap-spacing-size-4 flex flex-col"
+>
+  <div
+    class="_menu_33ee5b"
+    data-headlessui-state=""
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="menu"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      data-headlessui-state=""
+      id="headlessui-menu-button-_r_c_"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Actions
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="var(--eds-theme-color-icon-utility-interactive-primary)"
+          height="20px"
+          style="--icon-size: 20px;"
+          viewBox="0 0 24 24"
+          width="20px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 20.6343L7.82703 16.4613L8.91153 15.3768L12 18.4653L15.0885 15.3768L16.173 16.4613L12 20.6343ZM8.91153 8.68426L7.82703 7.59976L12 3.42676L16.173 7.59976L15.0885 8.68426L12 5.59576L8.91153 8.68426Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  <div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_d_"
+        type="button"
+      >
+        <h3
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            An expandable row
+          </span>
+        </h3>
+        <span
+          class="_accordion-button__indicator_86d7df"
+        >
+          <svg
+            aria-hidden="true"
+            class="_icon_779da8"
+            fill="var(--eds-theme-color-icon-utility-interactive-primary)"
+            height="20px"
+            style="--icon-size: 20px;"
+            viewBox="0 0 24 24"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 20.6343L7.82703 16.4613L8.91153 15.3768L12 18.4653L15.0885 15.3768L16.173 16.4613L12 20.6343ZM8.91153 8.68426L7.82703 7.59976L12 3.42676L16.173 7.59976L15.0885 8.68426L12 5.59576L8.91153 8.68426Z"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div
+    class="_input-chip_f95fba"
+  >
+    <div
+      class="_input-chip__label_f95fba"
+    >
+      <span
+        class="_text_b3eba3 _text--body-xs_b3eba3"
+      >
+        A chip
+      </span>
+    </div>
+    <button
+      aria-label="remove A chip"
+      class="_input-chip__action-button_f95fba"
+    >
+      <svg
+        aria-hidden="true"
+        class="_icon_779da8"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.39994 18.6542L5.34619 17.6004L10.9462 12.0004L5.34619 6.40043L6.39994 5.34668L11.9999 10.9467L17.5999 5.34668L18.6537 6.40043L13.0537 12.0004L18.6537 17.6004L17.5999 18.6542L11.9999 13.0542L6.39994 18.6542Z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    class="_inline-notification_785732 _inline-notification--status-critical_785732"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8 _inline-notification__icon_785732"
+      fill="currentColor"
+      height="16px"
+      style="--icon-size: 16px;"
+      viewBox="0 0 24 24"
+      width="16px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.573 16.4962C12.7295 16.3397 12.8078 16.1487 12.8078 15.923C12.8078 15.6973 12.7295 15.5063 12.573 15.35C12.4167 15.1937 12.2257 15.1155 12 15.1155C11.7743 15.1155 11.5833 15.1937 11.427 15.35C11.2705 15.5063 11.1923 15.6973 11.1923 15.923C11.1923 16.1487 11.2705 16.3397 11.427 16.4962C11.5833 16.6526 11.7743 16.7307 12 16.7307C12.2257 16.7307 12.4167 16.6526 12.573 16.4962ZM11.25 13.077H12.75V7.077H11.25V13.077ZM12.0018 21.5C10.6878 21.5 9.45267 21.2507 8.2965 20.752C7.14033 20.2533 6.13467 19.5766 5.2795 18.7218C4.42433 17.8669 3.74725 16.8617 3.24825 15.706C2.74942 14.5503 2.5 13.3156 2.5 12.0018C2.5 10.6878 2.74933 9.45267 3.248 8.2965C3.74667 7.14033 4.42342 6.13467 5.27825 5.2795C6.13308 4.42433 7.13833 3.74725 8.294 3.24825C9.44967 2.74942 10.6844 2.5 11.9982 2.5C13.3123 2.5 14.5473 2.74933 15.7035 3.248C16.8597 3.74667 17.8653 4.42342 18.7205 5.27825C19.5757 6.13308 20.2528 7.13833 20.7518 8.294C21.2506 9.44967 21.5 10.6844 21.5 11.9982C21.5 13.3123 21.2507 14.5473 20.752 15.7035C20.2533 16.8597 19.5766 17.8653 18.7218 18.7205C17.8669 19.5757 16.8617 20.2528 15.706 20.7518C14.5503 21.2506 13.3156 21.5 12.0018 21.5Z"
+      />
+    </svg>
+    <div
+      class="_inline-notication__body_785732"
+    >
+      <div
+        class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      >
+        Something went wrong
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<IconProvider /> > WithOverriddenIcons story renders snapshot 1`] = `
+<div
+  class="gap-spacing-size-4 flex flex-col"
+>
+  <div
+    class="_menu_33ee5b"
+    data-headlessui-state=""
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="menu"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      data-headlessui-state=""
+      id="headlessui-menu-button-_r_7_"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        Actions
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 20.6343L7.82703 16.4613L8.91153 15.3768L12 18.4653L15.0885 15.3768L16.173 16.4613L12 20.6343ZM8.91153 8.68426L7.82703 7.59976L12 3.42676L16.173 7.59976L15.0885 8.68426L12 5.59576L8.91153 8.68426Z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>
+  <div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_8_"
+        type="button"
+      >
+        <h3
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            An expandable row
+          </span>
+        </h3>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M12 20.6343L7.82703 16.4613L8.91153 15.3768L12 18.4653L15.0885 15.3768L16.173 16.4613L12 20.6343ZM8.91153 8.68426L7.82703 7.59976L12 3.42676L16.173 7.59976L15.0885 8.68426L12 5.59576L8.91153 8.68426Z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div
+    class="_input-chip_f95fba"
+  >
+    <div
+      class="_input-chip__label_f95fba"
+    >
+      <span
+        class="_text_b3eba3 _text--body-xs_b3eba3"
+      >
+        A chip
+      </span>
+    </div>
+    <button
+      aria-label="remove A chip"
+      class="_input-chip__action-button_f95fba"
+    >
+      <svg
+        aria-hidden="true"
+        class="_icon_779da8"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.5 12.75V11.25H18.5V12.75H5.5Z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    class="_inline-notification_785732 _inline-notification--status-critical_785732"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8 _inline-notification__icon_785732"
+      fill="currentColor"
+      height="16px"
+      style="--icon-size: 16px;"
+      viewBox="0 0 24 24"
+      width="16px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 16.4615C12.1743 16.4615 12.3205 16.4025 12.4385 16.2845C12.5565 16.1667 12.6155 16.0206 12.6155 15.8462C12.6155 15.6717 12.5565 15.5256 12.4385 15.4078C12.3205 15.2898 12.1743 15.2308 12 15.2308C11.8257 15.2308 11.6795 15.2898 11.5615 15.4078C11.4435 15.5256 11.3845 15.6717 11.3845 15.8462C11.3845 16.0206 11.4435 16.1667 11.5615 16.2845C11.6795 16.4025 11.8257 16.4615 12 16.4615ZM12.0008 13.1537C12.1426 13.1537 12.2612 13.1058 12.3567 13.01C12.4522 12.9142 12.5 12.7954 12.5 12.6537V7.65375C12.5 7.51208 12.452 7.39333 12.356 7.2975C12.26 7.20167 12.1411 7.15375 11.9993 7.15375C11.8574 7.15375 11.7388 7.20167 11.6433 7.2975C11.5478 7.39333 11.5 7.51208 11.5 7.65375V12.6537C11.5 12.7954 11.548 12.9142 11.644 13.01C11.74 13.1058 11.8589 13.1537 12.0008 13.1537ZM12.0033 21C10.7588 21 9.58867 20.7638 8.493 20.2915C7.3975 19.8192 6.4445 19.1782 5.634 18.3685C4.8235 17.5588 4.18192 16.6067 3.70925 15.512C3.23642 14.4175 3 13.2479 3 12.0033C3 10.7588 3.23617 9.58867 3.7085 8.493C4.18083 7.3975 4.82183 6.4445 5.6315 5.634C6.44117 4.8235 7.39333 4.18192 8.488 3.70925C9.5825 3.23642 10.7521 3 11.9968 3C13.2413 3 14.4113 3.23617 15.507 3.7085C16.6025 4.18083 17.5555 4.82183 18.366 5.6315C19.1765 6.44117 19.8181 7.39333 20.2908 8.488C20.7636 9.5825 21 10.7521 21 11.9968C21 13.2413 20.7638 14.4113 20.2915 15.507C19.8192 16.6025 19.1782 17.5555 18.3685 18.366C17.5588 19.1765 16.6067 19.8181 15.512 20.2908C14.4175 20.7636 13.2479 21 12.0033 21Z"
+      />
+    </svg>
+    <div
+      class="_inline-notication__body_785732"
+    >
+      <div
+        class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      >
+        Something went wrong
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -5,8 +5,9 @@ import React from 'react';
 
 import { Accordion } from './Accordion';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports } from '../../util/viewports';
-import Icon from '../Icon';
+import Icon, { IconProvider } from '../Icon';
 import NumberIcon from '../NumberIcon';
 import Tag from '../Tag';
 import Text from '../Text';
@@ -284,57 +285,11 @@ export const WithLargeHeader: Story = {
 };
 
 /**
- * The expand/collapse indicator can be overridden with another EDS icon, or with custom
- * content. Either way it rotates when the row opens, so pick something that reads well
- * upside down.
- */
-export const WithCustomIndicator: Story = {
-  args: {
-    children: (
-      <>
-        <Accordion.Row>
-          <Accordion.Button
-            indicatorContent="chevron-down"
-            title="Chevron down (the default)"
-          />
-          <Accordion.Panel>
-            <Text preset="body-md">
-              Passing an icon name renders it through `Icon`, announced as
-              show/hide content.
-            </Text>
-          </Accordion.Panel>
-        </Accordion.Row>
-        <Accordion.Row>
-          <Accordion.Button indicatorContent="chevron-up" title="Chevron up" />
-          <Accordion.Panel>
-            <Text preset="body-md">
-              Starting from the other orientation flips which way the indicator
-              rotates.
-            </Text>
-          </Accordion.Panel>
-        </Accordion.Row>
-        <Accordion.Row>
-          <Accordion.Button
-            indicatorContent={<Tag label="3 new" status="favorable" />}
-            title="Custom content"
-          />
-          <Accordion.Panel>
-            <Text preset="body-md">
-              Passing a node renders it as-is. The node carries its own
-              accessible treatment.
-            </Text>
-          </Accordion.Panel>
-        </Accordion.Row>
-      </>
-    ),
-  },
-};
-
-/**
- * All three content slots on `Accordion.Button` take arbitrary content, not only an icon
- * name. The blocks below stand in for whatever you supply: `leadingContent` and
- * `trailingContent` flank the title, and `indicatorContent` replaces the expand/collapse
- * caret, so it rotates with the row.
+ * Both content slots on `Accordion.Button` take arbitrary content, not only an icon name.
+ * The blocks below stand in for whatever you supply, flanking the title.
+ *
+ * The expand/collapse indicator is not one of them. It marks the row as expandable, which
+ * is a semantic role, so it is set app-wide through `IconProvider` rather than per row.
  */
 export const WithFpoContentSlots: Story = {
   args: {
@@ -363,23 +318,10 @@ export const WithFpoContentSlots: Story = {
             </Text>
           </Accordion.Panel>
         </Accordion.Row>
-        <Accordion.Row>
-          <Accordion.Button
-            indicatorContent={<FpoBlock size={24} />}
-            title="Indicator content"
-          />
-          <Accordion.Panel>
-            <Text preset="body-md">
-              `indicatorContent` replaces the caret and rotates when the row
-              opens, so pick something that reads well upside down.
-            </Text>
-          </Accordion.Panel>
-        </Accordion.Row>
         <Accordion.Row defaultOpen hasLeadingContent>
           <Accordion.Button
-            indicatorContent={<FpoBlock size={24} />}
             leadingContent={<FpoBlock size={24} />}
-            title="All three at once"
+            title="Both at once"
             trailingContent={<FpoBlock size={24} />}
           />
           <Accordion.Panel>
@@ -392,4 +334,19 @@ export const WithFpoContentSlots: Story = {
       </>
     ),
   },
+};
+
+/**
+ * The expand indicator is not a prop on the row. It marks the row as expandable, which is a
+ * role rather than a decoration, so it is set once for the whole app through `IconProvider`
+ * and every expandable thing changes with it.
+ *
+ * Here it becomes a doubled chevron. It still rotates when the row opens.
+ */
+export const WithProvidedIcons: Story = {
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

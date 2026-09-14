@@ -8,7 +8,9 @@ import type { ComponentProps } from 'react';
 
 import { ToastNotification } from './ToastNotification';
 
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import Button from '../Button';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/ToastNotification',
@@ -94,32 +96,6 @@ export const AutoDismiss: Story = {
   },
 };
 
-const STATUSES = ['informational', 'favorable', 'warning', 'critical'] as const;
-
-/**
- * Each status sets its own icon color, and `--toast__icon` overrides that for any of them. Pass it
- * through the `style` prop, alongside `--toast__bg` and `--toast__fg`.
- *
- * Reach for a theme token in real usage. The literal color here is only to make the point
- * unmistakable: none of the four statuses use it, so every icon below is coming from the override
- * rather than from its status.
- */
-export const CustomIconColor: Story = {
-  render: (args) => (
-    <div className="gap-spacing-size-2 flex flex-col">
-      {STATUSES.map((status) => (
-        <ToastNotification
-          {...args}
-          key={status}
-          status={status}
-          style={{ '--toast__icon': 'rebeccapurple' }}
-          title={`The ${status} icon, recolored by --toast__icon.`}
-        />
-      ))}
-    </div>
-  ),
-};
-
 let toastId = 0;
 const ToastNotificationManager = (args: Args) => {
   const [toasts, setToasts] = React.useState<
@@ -201,4 +177,25 @@ export const ExampleDismissingToasts: Story = {
     chromatic: { disableSnapshot: true },
     snapshot: { skip: true },
   },
+};
+
+/**
+ * Both icons here come from `IconProvider`: the status icon carrying the toast's severity,
+ * and the dismiss button, which is the same close affordance used everywhere else.
+ *
+ * Here `critical` becomes the outline version of the icon, and the close button a minus.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    ...Critical.args,
+    // Set here rather than left to the `onDismiss` action, which is applied in the browser
+    // but not when the stories are rendered for snapshots, so the dismiss button this story
+    // is partly about would be missing there.
+    onDismiss: () => {},
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

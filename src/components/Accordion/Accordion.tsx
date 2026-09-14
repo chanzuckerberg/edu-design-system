@@ -7,11 +7,15 @@ import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
-import { assertEdsUsage } from '../../util/logging';
+import {
+  assertEdsUsage,
+  assertNoRemovedIconProp,
+  type WithRemovedIconProps,
+} from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
 
 import Heading, { type HeadingElement } from '../Heading';
-import { hasSlotContent, IconSlot } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './Accordion.module.css';
@@ -60,9 +64,10 @@ type AccordionButtonProps = {
    */
   headingAs?: HeadingElement;
   /**
-   * Slot which precedes the text in an accordion header
+   * Content that precedes the text in an accordion header. Pass an EDS icon name to render
+   * a decorative icon, or a node to render it as-is.
    */
-  leadingContent?: ReactNode;
+  leadingContent?: IconOrContent;
   /**
    * Secondary text used to describe the content in more detail
    */
@@ -75,17 +80,6 @@ type AccordionButtonProps = {
    * Slot which follows the text in an accordion header
    */
   trailingContent?: ReactNode;
-  /**
-   * Override for the component's expand/collapse indicator. Pass an EDS icon name to
-   * render an icon, or a node to render it as-is.
-   *
-   * The indicator rotates when the row opens, and an icon name is announced as
-   * "show content"/"hide content". Custom content carries its own accessible
-   * treatment.
-   *
-   * **Default is `"chevron-down"`**.
-   */
-  indicatorContent?: IconOrContent;
 };
 
 type AccordionPanelProps = {
@@ -203,22 +197,50 @@ export const Accordion = ({
   );
 };
 
-const AccordionButton = ({
-  children,
-  className,
-  headingAs,
-  leadingContent,
-  title,
-  indicatorContent = 'chevron-down',
-  trailingContent,
-  subTitle,
-  onClose,
-  onOpen,
-  ...other
-}: AccordionButtonProps) => {
+const AccordionButton = (props: AccordionButtonProps) => {
+  const {
+    children,
+    className,
+    headingAs,
+    leadingContent,
+    title,
+    trailingContent,
+    subTitle,
+    onClose,
+    onOpen,
+    // TODO(next-major): remove these two, with the asserts below.
+    indicatorContent: removedIndicatorContent,
+    trailingIcon: removedTrailingIcon,
+    ...other
+  } = props as WithRemovedIconProps<
+    AccordionButtonProps,
+    'indicatorContent' | 'trailingIcon'
+  >;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp(
+    'Accordion.Button',
+    'indicatorContent',
+    'expand',
+    removedIndicatorContent,
+  );
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp(
+    'Accordion.Button',
+    'trailingIcon',
+    'expand',
+    removedTrailingIcon,
+  );
+
   const { headingAs: contextHeadingAs } = useContext(AccordionContext);
 
   const { isExpandable } = useContext(AccordionRowContext);
+
+  // The indicator is semantic: it marks the row as the thing that expands, and reads as
+  // that only if every expandable thing in the app carries the same mark. It comes from
+  // `IconProvider` for that reason, and not from a prop on this row. The leading and
+  // trailing slots above are the consumer's to fill, and are left alone.
+  const expandIcon = useSemanticIcon('expand');
 
   const componentClassName = clsx(
     styles['accordion-button'],
@@ -261,7 +283,7 @@ const AccordionButton = ({
         >
           {hasSlotContent(leadingContent) && (
             <span className={styles['accordion-button__leading-content']}>
-              {leadingContent}
+              <IconSlot content={leadingContent} size="24px" />
             </span>
           )}
           <Heading
@@ -290,13 +312,13 @@ const AccordionButton = ({
             )}
           </Heading>
           {trailingContent}
-          {isExpandable && (
+          {isExpandable && hasSlotContent(expandIcon) && (
             <IconSlot
               className={clsx(
                 styles['accordion-button__indicator'],
                 open && styles['accordion-button__indicator--open'],
               )}
-              content={indicatorContent}
+              content={expandIcon}
               purpose="informative"
               size="24px"
               title={open ? 'hide content' : 'show content'}

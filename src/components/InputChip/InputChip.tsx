@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { type MouseEventHandler } from 'react';
 import type { IconOrContent } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
-import Icon, { IconSlot } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './InputChip.module.css';
@@ -76,24 +76,38 @@ export const InputChip = ({
     className,
   );
 
+  // The chip's action button is semantic: it is the same close affordance as every other
+  // one in the app, so it is set once through `IconProvider` rather than per chip. The
+  // leading slot above is the consumer's to fill, and is left alone.
+  const closeIcon = useSemanticIcon('close');
+
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['input-chip__label']}>
-        <IconSlot
-          className={styles['input-chip__leading-component']}
-          content={leadingComponent}
-          purpose="decorative"
-        />
+        {hasSlotContent(leadingComponent) && (
+          <IconSlot
+            className={styles['input-chip__leading-component']}
+            content={leadingComponent}
+            purpose="decorative"
+          />
+        )}
         <Text as="span" preset="body-xs">
           {label}
         </Text>
       </div>
       <button
+        // The name belongs on the button rather than on the icon inside it. An
+        // `IconProvider` can set `close` to a node, and `IconSlot` leaves custom content's
+        // accessible treatment to whoever passed it, so a name carried by the icon would
+        // disappear the moment an app overrode the role and leave this button unnamed.
+        aria-label={`remove ${label}`}
         className={styles['input-chip__action-button']}
         disabled={isDisabled}
         onClick={onClick}
       >
-        <Icon name="close" purpose="informative" title={`remove ${label}`} />
+        {hasSlotContent(closeIcon) && (
+          <IconSlot content={closeIcon} purpose="decorative" />
+        )}
       </button>
     </div>
   );

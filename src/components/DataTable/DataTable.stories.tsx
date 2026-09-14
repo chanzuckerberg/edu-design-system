@@ -14,9 +14,11 @@ import {
 import { utils as DataTableUtils } from '../../components/DataTable';
 
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports } from '../../util/viewports';
 import Button from '../Button';
 import Checkbox from '../Checkbox';
+import { IconProvider } from '../Icon';
 import Menu from '../Menu';
 
 export default {
@@ -1036,4 +1038,18 @@ export const WithFpoLeadingContent: StoryObj<Args> = {
 
     return <DataTable {...args} table={table} />;
   },
+};
+
+/**
+ * A status cell's icon is the same glyph a notification shows for that status, so it comes
+ * from `IconProvider` rather than from a map of `DataTable`'s own. The leading and trailing
+ * cell slots are the consumer's to fill, and the provider says nothing about them.
+ */
+export const WithProvidedIcons: StoryObj<Args> = {
+  ...StatusRows,
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

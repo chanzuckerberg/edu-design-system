@@ -9,9 +9,10 @@ import type { MenuProps } from './Menu';
 import icons from '../../icons/spritemap';
 
 import type { IconName } from '../../icons/spritemap';
-import FpoBlock from '../../storyUtils/FpoBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { Avatar } from '../Avatar/Avatar';
 import Button from '../Button';
+import { IconProvider } from '../Icon';
 import { Icon } from '../Icon/Icon';
 
 export default {
@@ -47,7 +48,7 @@ export default {
       </div>
     ),
   ],
-  tags: ['autodocs', 'version:3.3.0'],
+  tags: ['autodocs', 'version:4.0.0'],
 } as Meta<MenuProps>;
 
 type Story = StoryObj<MenuProps>;
@@ -109,9 +110,8 @@ const menuItems = (
 
 /**
  * The Default `Menu` allows for clickable menu items, and provides a default trigger
- * button that applies `Button` with `rank` as `"primary"`, `iconLayout` as `"right"`,
- * `trailingContent` either missing, or set to `"chevron-down"`, and a configurable text
- * label.
+ * button that applies `Button` with `rank` as `"primary"`, `iconLayout` as `"right"`, the
+ * `expand` semantic icon, and a configurable text label.
  */
 export const Default: Story = {
   args: {
@@ -311,21 +311,20 @@ export const MenuWithIconButton: StoryObj<MenuProps & { iconName: IconName }> =
   };
 
 /**
- * `Menu.Button`'s trailing slot takes arbitrary content, not only an EDS icon name. The
- * block below stands in for whatever you supply, so the slot itself is the subject rather
- * than the chevron that would otherwise fill it.
+ * The chevron on `Menu.Button` marks it as the thing that opens the menu, which is a role
+ * rather than a decoration, so it comes from `IconProvider` and not from a prop on the
+ * button. An `Accordion` row expanding carries the same mark.
  *
- * The slot renders through `Button` at its default `size="lg"`, so the block is 24px.
+ * A trigger built with `Menu.PlainButton` renders whatever you put in it, so it is yours to
+ * set and the provider leaves it alone.
  */
-export const WithFpoButtonTrailingContent: Story = {
+export const WithProvidedIcons: Story = {
   args: {
-    children: (
-      <>
-        <Menu.Button trailingContent={<FpoBlock size={24} />}>
-          Actions
-        </Menu.Button>
-        {menuItems}
-      </>
-    ),
+    ...Default.args,
   },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

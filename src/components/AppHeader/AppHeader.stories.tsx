@@ -7,7 +7,9 @@ import React from 'react';
 import { userEvent } from 'storybook/test';
 
 import { AppHeader } from './AppHeader';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports } from '../../util/viewports';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/AppHeader',
@@ -462,4 +464,42 @@ export const CanHandleFallbackNavMenus: Story = {
       await userEvent.keyboard(' ', { delay: 300 });
     }
   },
+};
+
+/**
+ * `AppHeader` draws four semantic icons: the chevron marking a nav item as a menu, the
+ * hamburger that opens the drawer at narrow widths, that drawer's close button, and the mark
+ * on a link that leaves the site. All four come from `IconProvider`.
+ *
+ * Icons that arrive as nav data stay the consumer's to choose, so `NavItem.icon` is
+ * untouched by the provider.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    ...Default.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
+};
+
+/**
+ * The mark on a link that leaves the site only renders in the vertical orientation, so it
+ * needs a story of its own. Here it becomes a chain rather than the usual box-and-arrow.
+ *
+ * The fourth icon `AppHeader` resolves, the close button on the drawer, cannot be shown in a
+ * story at all: it renders through a portal, outside the tree a story snapshots. It is
+ * covered in `IconProvider`'s own tests instead.
+ */
+export const WithProvidedIconsVertical: Story = {
+  args: {
+    ...VerticalOrientation.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

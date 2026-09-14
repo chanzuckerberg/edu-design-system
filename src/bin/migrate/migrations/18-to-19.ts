@@ -67,10 +67,6 @@ const presetEdits = presetReplacements.map(
  * icon name, and also takes a node. Only the prop name changed, so passing the same
  * icon name under the new name renders exactly what it did before.
  *
- * `Accordion.Button`'s `trailingIcon` overrides the expand/collapse chevron rather than
- * filling a trailing slot, and the component already has a separate `trailingContent`
- * slot. It becomes `indicatorContent`, which names what it actually controls.
- *
  * `Accordion.Row`'s `hasLeadingIcon` is the boolean companion to the renamed slot, and
  * sits beside an existing `hasTrailingContent`, so it follows to `hasLeadingContent`.
  */
@@ -125,6 +121,60 @@ const iconToLeadingContent = [
   },
 ];
 
+/**
+ * The icons these props set are semantic: each marks one well-defined role (expand,
+ * back), and a role only reads as itself if it looks the same everywhere it appears. They
+ * are now set app-wide through `IconProvider` and no longer taken per instance, so the
+ * prop is dropped rather than renamed.
+ *
+ * Most were typed to a single icon name (`'chevron-left'` on `Breadcrumbs.Item`,
+ * `'chevron-down'` on the `Select` and `Combobox` indicators and on v18's
+ * `Menu.Button.icon`), so dropping them is lossless: each rendered exactly what the default
+ * `IconProvider` renders now.
+ *
+ * Each removal covers both the v18 name and the name it briefly carried during v19
+ * prereleases, so a consumer who already ran an earlier copy of this migration lands in
+ * the same place.
+ */
+const removeSemanticIconProps = (propNames: string[]) =>
+  propNames.map((propName) => ({
+    type: 'remove' as const,
+    propName,
+  }));
+
+/**
+ * The glyph the `expand` role draws by default. Keep in step with
+ * `defaultSemanticIcons.expand`; this file cannot import it, since that module pulls in
+ * React and the CLI does not.
+ */
+const EXPAND_DEFAULT_ICON = 'chevron-down';
+
+/**
+ * Two of these were not name-only. `Accordion.Button.indicatorContent` and
+ * `Menu.Button.trailingContent` were widened to `IconOrContent` in v19 prereleases, so a
+ * consumer on one of those could be passing a node, or an icon name other than the default,
+ * and deleting it would throw away a choice this migration cannot put anywhere else.
+ *
+ * So these drop the value only when it already equals the role's default, where removing it
+ * changes nothing. Anything else stays put and becomes a type error on upgrade, which the
+ * consumer answers: move it into an `IconProvider` if the indicator should look that way
+ * everywhere, or drop it. Better a compile error than a glyph that quietly changes.
+ *
+ * The comparison is exact for that reason. Matching every `chevron-*` would have swept up
+ * `indicatorContent="chevron-up"` — a deliberate override, and the value the removed
+ * `WithCustomIndicator` story used — and silently re-rendered it pointing down.
+ */
+const removeSemanticIconPropsWhenDefault = (
+  propNames: string[],
+  defaultValue: string,
+) =>
+  propNames.map((propName) => ({
+    type: 'remove' as const,
+    propName,
+    callback: ({ currentPropValue }: { currentPropValue: string }) =>
+      currentPropValue === defaultValue,
+  }));
+
 export const PropChanges: EditJsxPropChange[] = [
   {
     componentName: 'Text',
@@ -138,11 +188,10 @@ export const PropChanges: EditJsxPropChange[] = [
     componentName: 'Accordion.Button',
     edits: [
       ...leadingIconToContent,
-      {
-        type: 'update_name',
-        oldPropName: 'trailingIcon',
-        newPropName: 'indicatorContent',
-      },
+      ...removeSemanticIconPropsWhenDefault(
+        ['trailingIcon', 'indicatorContent'],
+        EXPAND_DEFAULT_ICON,
+      ),
     ],
   },
   {
@@ -180,17 +229,53 @@ export const PropChanges: EditJsxPropChange[] = [
     edits: iconToLeadingContent,
   },
   {
-    /**
-     * `Menu.Button`'s icon renders through `Button` with `iconLayout="right"`, so it fills
-     * the trailing slot. The prop carried a `TODO(next-major)` naming it `leadingContent`,
-     * which describes the wrong side.
-     */
     componentName: 'Menu.Button',
     edits: [
+      ...removeSemanticIconProps(['icon']),
+      ...removeSemanticIconPropsWhenDefault(
+        ['trailingContent'],
+        EXPAND_DEFAULT_ICON,
+      ),
+    ],
+  },
+  {
+    componentName: 'Breadcrumbs.Item',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Select.Button',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Select.ButtonWrapper',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Combobox.Button',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Combobox.Input',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Combobox.InputWrapper',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    /**
+     * `Link.icon` never took an arbitrary icon: it picked one of two roles, or none. Both
+     * are now named as roles and resolved through `IconProvider`, so the value that was
+     * already a role name (`open-in-new`) is unchanged, and the one that named a glyph
+     * becomes `forward`.
+     */
+    componentName: 'Link',
+    edits: [
       {
-        type: 'update_name',
-        oldPropName: 'icon',
-        newPropName: 'trailingContent',
+        type: 'update_value',
+        propName: 'icon',
+        oldPropValue: 'chevron-right',
+        newPropValue: 'forward',
       },
     ],
   },

@@ -25,6 +25,7 @@ export { default as Fieldset } from './components/Fieldset';
 export { default as Heading } from './components/Heading';
 export { default as Hr } from './components/Hr';
 export { default as Icon } from './components/Icon';
+export { defaultSemanticIcons, IconProvider } from './components/Icon';
 export { default as InlineNotification } from './components/InlineNotification';
 export { default as InputChip } from './components/InputChip';
 export { default as InputField } from './components/InputField';
@@ -80,7 +81,12 @@ export type {
   DataTableWithStatus,
   DataTableSortDirection,
 } from './components/DataTable';
-export type { IconName } from './components/Icon';
+export type {
+  IconName,
+  IconProviderProps,
+  SemanticIconMap,
+  SemanticIconName,
+} from './components/Icon';
 export type { LinkProps } from './components/Link';
 export type { PageNotificationProps } from './components/PageNotification';
 

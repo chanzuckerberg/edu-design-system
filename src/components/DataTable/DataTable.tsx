@@ -7,14 +7,12 @@ import React, {
   type ReactNode,
 } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { IconOrContent } from '../../util/utility-types';
 import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
 
 import Button, { type ButtonProps } from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import { Icon } from '../Icon/Icon';
-import { IconSlot } from '../Icon/IconSlot';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import InputField from '../InputField';
 import Text from '../Text';
 
@@ -470,12 +468,14 @@ export const DataTableHeaderCell = ({
     )}
     {...rest}
   >
-    <IconSlot
-      as="div"
-      className={styles['data-cell__cell--leading-content']}
-      content={leadingContent}
-      size="16px"
-    />
+    {hasSlotContent(leadingContent) && (
+      <IconSlot
+        as="div"
+        className={styles['data-cell__cell--leading-content']}
+        content={leadingContent}
+        size="16px"
+      />
+    )}
     {(children || subLabel) && (
       <div className={clsx(className, styles['data-table__cell-text'])}>
         <Text as="div" preset="title-xs">
@@ -520,12 +520,14 @@ export const DataTableDataCell = ({
   );
   return (
     <div className={dataCellClassName} {...rest}>
-      <IconSlot
-        as="div"
-        className={styles['data-cell__cell--leading-content']}
-        content={leadingContent}
-        size="16px"
-      />
+      {hasSlotContent(leadingContent) && (
+        <IconSlot
+          as="div"
+          className={styles['data-cell__cell--leading-content']}
+          content={leadingContent}
+          size="16px"
+        />
+      )}
       {(children || subLabel) && (
         <div className={clsx(className, styles['data-table__cell-text'])}>
           {children}
@@ -564,11 +566,15 @@ export const DataTableStatusCell = ({
 
   const { size } = useContext(DataTableContext);
 
+  // The status icon is semantic, and the same glyph a notification shows for that status,
+  // so it comes from `IconProvider` rather than from a map of its own.
+  const statusIcon = useSemanticIcon(status);
+
   return (
     <div className={statusCellClassName} {...rest}>
-      {status && (
-        <Icon
-          name={getIconNameFromStatus(status)}
+      {status && hasSlotContent(statusIcon) && (
+        <IconSlot
+          content={statusIcon}
           purpose="decorative"
           size={size === 'sm' ? '16px' : '24px'}
         />

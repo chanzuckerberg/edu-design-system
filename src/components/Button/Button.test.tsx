@@ -96,5 +96,45 @@ describe('<Button />', () => {
       expect(consoleWarnMock).toHaveBeenCalledTimes(1);
       expect(consoleErrorMock).toHaveBeenCalledTimes(0);
     });
+
+    it.each(['left', 'right', 'icon-only'] as const)(
+      'warns when iconLayout is %s with no icon',
+      (iconLayout) => {
+        render(<Button aria-label="Click" iconLayout={iconLayout} />);
+
+        expect(consoleWarnMock).toHaveBeenCalledWith(
+          expect.stringContaining('no "icon" to put in it'),
+        );
+      },
+    );
+
+    it('stays quiet when an icon accompanies the layout', () => {
+      render(
+        <Button icon="add" iconLayout="left">
+          Click
+        </Button>,
+      );
+
+      expect(consoleWarnMock).toHaveBeenCalledTimes(0);
+    });
+
+    it('stays quiet for a button with neither', () => {
+      render(<Button>Click</Button>);
+
+      expect(consoleWarnMock).toHaveBeenCalledTimes(0);
+    });
+  });
+
+  describe('the icon slot', () => {
+    it('renders no icon of its own when none is given', () => {
+      const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      const { container } = render(<Button iconLayout="left">Click</Button>);
+      warn.mockRestore();
+
+      // The slot had defaulted to `add-encircled`, so a button that asked for a layout and
+      // named no icon quietly grew a plus sign it never requested.
+      /* eslint-disable-next-line testing-library/no-container */
+      expect(container.querySelector('svg')).toBeNull();
+    });
   });
 });
