@@ -12,6 +12,7 @@ import {
   assertNoRemovedIconProp,
   type WithRemovedIconProps,
 } from '../../util/logging';
+import type { IconOrContent } from '../../util/utility-types';
 
 import Heading, { type HeadingElement } from '../Heading';
 import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
@@ -63,9 +64,10 @@ type AccordionButtonProps = {
    */
   headingAs?: HeadingElement;
   /**
-   * Slot which precedes the text in an accordion header
+   * Content that precedes the text in an accordion header. Pass an EDS icon name to render
+   * a decorative icon, or a node to render it as-is.
    */
-  leadingContent?: ReactNode;
+  leadingContent?: IconOrContent;
   /**
    * Secondary text used to describe the content in more detail
    */
@@ -281,7 +283,7 @@ const AccordionButton = (props: AccordionButtonProps) => {
         >
           {hasSlotContent(leadingContent) && (
             <span className={styles['accordion-button__leading-content']}>
-              {leadingContent}
+              <IconSlot content={leadingContent} size="24px" />
             </span>
           )}
           <Heading

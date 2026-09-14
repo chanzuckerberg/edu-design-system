@@ -120,6 +120,46 @@ describe('<Accordion />', () => {
     expect(onClose).not.toHaveBeenCalled();
   });
 
+  it('renders an icon name in the leading slot as an icon', () => {
+    // The slot is a content slot, the same as the leading slots on `DataTable`,
+    // `InputField`, and `SelectionChip`, and `eds-migrate 18-to-19` renames `leadingIcon`
+    // onto all four. This one rendered its value straight into the wrapper, so an icon name
+    // arriving from that rename came out as the text "person-add".
+    /* eslint-disable testing-library/no-container */
+    const { container } = render(
+      <Accordion headingAs="h2">
+        <Accordion.Row hasLeadingContent>
+          <Accordion.Button leadingContent="person-add" title="Title" />
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </Accordion.Row>
+      </Accordion>,
+    );
+
+    const leadingSlot = container.querySelector(
+      'button [class*="leading-content"]',
+    );
+
+    expect(leadingSlot?.querySelector('svg')).toBeInTheDocument();
+    /* eslint-enable testing-library/no-container */
+    expect(screen.queryByText('person-add')).not.toBeInTheDocument();
+  });
+
+  it('renders a node in the leading slot as-is', () => {
+    render(
+      <Accordion headingAs="h2">
+        <Accordion.Row hasLeadingContent>
+          <Accordion.Button
+            leadingContent={<span data-testid="custom">1</span>}
+            title="Title"
+          />
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </Accordion.Row>
+      </Accordion>,
+    );
+
+    expect(screen.getByTestId('custom')).toBeInTheDocument();
+  });
+
   describe('emits warnings when misused', () => {
     it('warns when title and children are used together', () => {
       const consoleMock = vi.spyOn(console, 'warn');
