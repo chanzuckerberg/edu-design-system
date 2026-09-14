@@ -3,7 +3,7 @@ import React, { type ReactNode } from 'react';
 
 import type { Status } from '../../util/variant-types';
 
-import { IconSlot, useSemanticIcon } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './InlineNotification.module.css';
@@ -103,12 +103,14 @@ export const InlineNotification = ({
 
   return (
     <div className={componentClassName} {...other}>
-      <IconSlot
-        className={styles['inline-notification__icon']}
-        content={statusIcon}
-        purpose="decorative"
-        size="16px"
-      />
+      {hasSlotContent(statusIcon) && (
+        <IconSlot
+          className={styles['inline-notification__icon']}
+          content={statusIcon}
+          purpose="decorative"
+          size="16px"
+        />
+      )}
       <div className={styles['inline-notication__body']}>
         <Text
           as="div"

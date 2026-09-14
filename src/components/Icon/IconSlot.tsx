@@ -123,13 +123,25 @@ export type IconSlotProps = IconSlotPropsBase &
  * `purpose` and `title` describe the icon branch only. When a consumer supplies their
  * own content, they own its accessible treatment.
  *
+ * Only render one that has something to draw. Returning `null` for a value that renders
+ * nothing reads as harmless and is not: everything around the slot stays as it was, so a
+ * row lays out space for an icon that never arrives, and an icon-only control comes out
+ * blank while staying clickable. Throwing puts that in front of whoever wrote the call,
+ * from render, where the nearest error boundary catches it like any other render error.
+ *
+ * The check belongs to the caller because only the caller knows what to do instead — drop
+ * the wrapper around it, fall back to an avatar, leave the row as it is. So ask
+ * `hasSlotContent(content)` and leave the slot out when it says no.
+ *
  * Not exported from the package. Consumers use the slot props on each component.
  */
 export const IconSlot = (props: IconSlotProps) => {
   const { as: Wrapper = 'span', className, content, size } = props;
 
   if (!hasSlotContent(content)) {
-    return null;
+    throw new Error(
+      "IconSlot: rendered with content that draws nothing, which leaves the layout around it holding space for an icon that never arrives. Whether there is something to draw is the caller's to decide: guard the slot with `hasSlotContent(content)` and leave it out when there is none.",
+    );
   }
 
   if (typeof content === 'string') {

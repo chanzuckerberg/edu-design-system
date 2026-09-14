@@ -120,13 +120,15 @@ export const FieldNote = ({
       id={id}
       {...other}
     >
-      <IconSlot
-        className={styles['field-note__icon']}
-        content={iconToUse}
-        purpose="informative"
-        size="16px"
-        title={title}
-      />
+      {hasSlotContent(iconToUse) && (
+        <IconSlot
+          className={styles['field-note__icon']}
+          content={iconToUse}
+          purpose="informative"
+          size="16px"
+          title={title}
+        />
+      )}
       <Text as="span" preset="body-sm">
         {children}
       </Text>

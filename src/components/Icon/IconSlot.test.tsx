@@ -52,11 +52,15 @@ describe('<IconSlot />', () => {
   });
 
   it.each([[null], [undefined], [false], [true], ['']])(
-    'renders nothing for %p',
+    'throws for %p',
     (content) => {
-      const { container } = render(<IconSlot content={content} />);
-
-      expect(container).toBeEmptyDOMElement();
+      // Returning `null` here read as harmless and was not: the slot kept its place in the
+      // layout, so a row laid out space around nothing and an icon-only control came out
+      // blank and still clickable. The caller is the one that can decide what to do
+      // instead, so the mistake goes back to it.
+      expect(() => render(<IconSlot content={content} />)).toThrow(
+        /rendered with content that draws nothing/,
+      );
     },
   );
 
@@ -133,14 +137,13 @@ describe('<IconSlot />', () => {
       },
     );
 
-    it('renders no wrapper for an array with nothing in it', () => {
-      const { container } = render(
-        <IconSlot className="wrapper" content={[]} />,
-      );
-
-      // Before, the array itself counted as content and left `<span class="wrapper">`
-      // behind, laying out space around nothing.
-      expect(container).toBeEmptyDOMElement();
+    it('throws for an array with nothing in it rather than leaving a wrapper', () => {
+      // The array itself used to count as content and leave `<span class="wrapper">`
+      // behind, laying out space around nothing. Judging it by its contents made the slot
+      // empty instead, and an empty slot is now the caller's to avoid.
+      expect(() =>
+        render(<IconSlot className="wrapper" content={[]} />),
+      ).toThrow(/rendered with content that draws nothing/);
     });
   });
 });

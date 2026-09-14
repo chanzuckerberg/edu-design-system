@@ -35,7 +35,7 @@ import type { Status } from '../../util/variant-types';
 import Checkbox from '../Checkbox';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
-import { IconSlot, useSemanticIcon } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import InputChip from '../InputChip';
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
@@ -611,19 +611,24 @@ const ComboboxButtonComponent = function (props: ComboboxButtonProps) {
         }
 
         // HeadlessUI's render prop has to hand back a single element, so arbitrary children
-        // get wrapped rather than returned as-is.
+        // get wrapped rather than returned as-is. The icon branch is wrapped for the same
+        // reason: its guard can leave it with nothing to hand back.
         return children ? (
           <>{children}</>
         ) : (
-          <IconSlot
-            className={clsx(
-              styles['combobox-input__icon'],
-              renderProps.open && styles['combobox-input__icon--reversed'],
+          <>
+            {hasSlotContent(expandIcon) && (
+              <IconSlot
+                className={clsx(
+                  styles['combobox-input__icon'],
+                  renderProps.open && styles['combobox-input__icon--reversed'],
+                )}
+                content={expandIcon}
+                purpose="decorative"
+                size="24px"
+              />
             )}
-            content={expandIcon}
-            purpose="decorative"
-            size="24px"
-          />
+          </>
         );
       }}
     </ComboboxButton>

@@ -5,7 +5,7 @@ import type { Status } from '../../util/variant-types';
 
 import Button from '../Button';
 import Heading from '../Heading';
-import { IconSlot, useSemanticIcon } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './PageNotification.module.css';
@@ -120,12 +120,14 @@ export const PageNotification = ({
 
   return (
     <aside className={componentClassName} {...other}>
-      <IconSlot
-        className={styles['page-notification__icon']}
-        content={statusIcon}
-        purpose="decorative"
-        size="24px"
-      />
+      {hasSlotContent(statusIcon) && (
+        <IconSlot
+          className={styles['page-notification__icon']}
+          content={statusIcon}
+          purpose="decorative"
+          size="24px"
+        />
+      )}
 
       <div
         className={clsx(

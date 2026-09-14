@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { assertEdsUsage } from '../../util/logging';
 import type { Status } from '../../util/variant-types';
 import Button from '../Button';
-import { IconSlot, useSemanticIcon } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './ToastNotification.module.css';
@@ -138,12 +138,14 @@ export const ToastNotification = ({
 
   return (
     <div className={componentClassName} {...other}>
-      <IconSlot
-        className={styles['toast__icon']}
-        content={statusIcon}
-        purpose="decorative"
-        size="24px"
-      />
+      {hasSlotContent(statusIcon) && (
+        <IconSlot
+          className={styles['toast__icon']}
+          content={statusIcon}
+          purpose="decorative"
+          size="24px"
+        />
+      )}
       <div className={styles['toast__body']}>
         <Text as="span" className={styles['toast__text']} preset="body-md">
           {title}

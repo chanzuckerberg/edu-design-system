@@ -26,7 +26,7 @@ import type { Status } from '../../util/variant-types';
 import Checkbox from '../Checkbox';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
-import { IconSlot, useSemanticIcon } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import PopoverContainer from '../PopoverContainer';
 import PopoverListItem from '../PopoverListItem';
 import type { PopoverListItemProps } from '../PopoverListItem/PopoverListItem';
@@ -594,12 +594,14 @@ export const SelectButtonWrapper = React.forwardRef<
       <InternalText as="span" className={textClassName} preset="input">
         {children}
       </InternalText>
-      <IconSlot
-        className={iconClassName}
-        content={expandIcon}
-        purpose="decorative"
-        size="24px"
-      />
+      {hasSlotContent(expandIcon) && (
+        <IconSlot
+          className={iconClassName}
+          content={expandIcon}
+          purpose="decorative"
+          size="24px"
+        />
+      )}
     </button>
   );
 });

@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React, { type MouseEventHandler } from 'react';
 import type { IconOrContent } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
-import { IconSlot, useSemanticIcon } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './InputChip.module.css';
@@ -84,11 +84,13 @@ export const InputChip = ({
   return (
     <div className={componentClassName} {...other}>
       <div className={styles['input-chip__label']}>
-        <IconSlot
-          className={styles['input-chip__leading-component']}
-          content={leadingComponent}
-          purpose="decorative"
-        />
+        {hasSlotContent(leadingComponent) && (
+          <IconSlot
+            className={styles['input-chip__leading-component']}
+            content={leadingComponent}
+            purpose="decorative"
+          />
+        )}
         <Text as="span" preset="body-xs">
           {label}
         </Text>
@@ -103,7 +105,9 @@ export const InputChip = ({
         disabled={isDisabled}
         onClick={onClick}
       >
-        <IconSlot content={closeIcon} purpose="decorative" />
+        {hasSlotContent(closeIcon) && (
+          <IconSlot content={closeIcon} purpose="decorative" />
+        )}
       </button>
     </div>
   );

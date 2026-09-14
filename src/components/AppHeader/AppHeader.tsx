@@ -713,7 +713,7 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
             <Icon name={icon} purpose="decorative" size="24px" />
           )}
         </span>
-        {isExternal && isVertical && (
+        {isExternal && isVertical && hasSlotContent(openInNewIcon) && (
           <IconSlot content={openInNewIcon} purpose="decorative" size="24px" />
         )}
       </a>
@@ -760,7 +760,7 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
     // TODO(next-major): remove handling of icon, or simplify to composable subcomponents
     return (
       <button className={componentClassName} ref={ref} {...other}>
-        {isVertical && (
+        {isVertical && hasSlotContent(expandIcon) && (
           <IconSlot content={expandIcon} purpose="decorative" size="24px" />
         )}
         <span

@@ -227,14 +227,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className={buttonContentClassName}
           preset={`label-${size}`}
         >
-          {iconLayout === 'icon-only' && (
+          {iconLayout === 'icon-only' && hasSlotContent(icon) && (
             <IconSlot
               content={icon}
               purpose="decorative"
               size={size === 'lg' ? '24px' : '16px'}
             />
           )}
-          {iconLayout === 'left' && (
+          {iconLayout === 'left' && hasSlotContent(icon) && (
             <IconSlot
               content={icon}
               purpose="decorative"
@@ -242,7 +242,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             />
           )}
           {iconLayout !== 'icon-only' && children}
-          {iconLayout === 'right' && (
+          {iconLayout === 'right' && hasSlotContent(icon) && (
             <IconSlot
               content={icon}
               purpose="decorative"

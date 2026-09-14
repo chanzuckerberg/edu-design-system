@@ -4,7 +4,7 @@ import Graphemer from 'graphemer';
 import React from 'react';
 import { type IconOrContent, type UserData } from '../../util/utility-types';
 import type { Preset, Size } from '../../util/variant-types';
-import { IconSlot } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 import styles from './Avatar.module.css';
 
@@ -249,7 +249,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
             {avatarDisplayName}
           </Text>
         )}
-        {variant === 'icon' && (
+        {variant === 'icon' && hasSlotContent(icon) && (
           <IconSlot
             content={icon}
             purpose="decorative"

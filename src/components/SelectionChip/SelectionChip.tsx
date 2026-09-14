@@ -139,7 +139,9 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
           type={type}
         />
         <div className={styles['selection-chip__body']}>
-          <IconSlot content={leadingContent} />
+          {hasSlotContent(leadingContent) && (
+            <IconSlot content={leadingContent} />
+          )}
           <Text
             as="span"
             className={styles['selection-chip__label']}

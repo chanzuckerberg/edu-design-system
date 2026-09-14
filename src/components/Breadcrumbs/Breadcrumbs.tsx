@@ -5,7 +5,7 @@ import {
   assertNoRemovedIconProp,
   type WithRemovedIconProps,
 } from '../../util/logging';
-import { IconSlot, useSemanticIcon } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Menu from '../Menu';
 import Text from '../Text';
 
@@ -328,11 +328,13 @@ export const BreadcrumbsItem = (props: BreadcrumbItemProps) => {
           className={styles['breadcrumbs__link']}
           href={href as string}
         >
-          <IconSlot
-            className={styles['breadcrumbs__back-icon']}
-            content={backIcon}
-            purpose="decorative"
-          />
+          {hasSlotContent(backIcon) && (
+            <IconSlot
+              className={styles['breadcrumbs__back-icon']}
+              content={backIcon}
+              purpose="decorative"
+            />
+          )}
         </a>
       );
     } else {

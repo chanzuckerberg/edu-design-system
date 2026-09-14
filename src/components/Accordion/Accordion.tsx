@@ -310,7 +310,7 @@ const AccordionButton = (props: AccordionButtonProps) => {
             )}
           </Heading>
           {trailingContent}
-          {isExpandable && (
+          {isExpandable && hasSlotContent(expandIcon) && (
             <IconSlot
               className={clsx(
                 styles['accordion-button__indicator'],

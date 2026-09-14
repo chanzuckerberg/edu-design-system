@@ -12,7 +12,7 @@ import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
 
 import Button, { type ButtonProps } from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import { IconSlot, useSemanticIcon } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import InputField from '../InputField';
 import Text from '../Text';
 
@@ -468,12 +468,14 @@ export const DataTableHeaderCell = ({
     )}
     {...rest}
   >
-    <IconSlot
-      as="div"
-      className={styles['data-cell__cell--leading-content']}
-      content={leadingContent}
-      size="16px"
-    />
+    {hasSlotContent(leadingContent) && (
+      <IconSlot
+        as="div"
+        className={styles['data-cell__cell--leading-content']}
+        content={leadingContent}
+        size="16px"
+      />
+    )}
     {(children || subLabel) && (
       <div className={clsx(className, styles['data-table__cell-text'])}>
         <Text as="div" preset="title-xs">
@@ -518,12 +520,14 @@ export const DataTableDataCell = ({
   );
   return (
     <div className={dataCellClassName} {...rest}>
-      <IconSlot
-        as="div"
-        className={styles['data-cell__cell--leading-content']}
-        content={leadingContent}
-        size="16px"
-      />
+      {hasSlotContent(leadingContent) && (
+        <IconSlot
+          as="div"
+          className={styles['data-cell__cell--leading-content']}
+          content={leadingContent}
+          size="16px"
+        />
+      )}
       {(children || subLabel) && (
         <div className={clsx(className, styles['data-table__cell-text'])}>
           {children}
@@ -568,7 +572,7 @@ export const DataTableStatusCell = ({
 
   return (
     <div className={statusCellClassName} {...rest}>
-      {status && (
+      {status && hasSlotContent(statusIcon) && (
         <IconSlot
           content={statusIcon}
           purpose="decorative"
