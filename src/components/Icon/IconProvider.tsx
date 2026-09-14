@@ -181,6 +181,33 @@ function isUnverifiableCollection(icon: unknown): boolean {
 }
 
 /**
+ * Whether a value is, or holds, a collection this provider cannot vouch for.
+ *
+ * Nesting one changes nothing about the problem. An array and a fragment are both judged by
+ * what they hold, so a `Set` inside either is the thing that decides whether the role draws
+ * anything — and it is exactly the thing that cannot be checked. `[new Set()]` and
+ * `<>{items()}</>` used to pass, the array having a member and the fragment having children,
+ * and then left an icon-only control blank and still clickable, which is what refusing the
+ * shape at the top level was for.
+ *
+ * Walks the way `hasSlotContent` does, into arrays and through fragments, and stops at every
+ * other element: what a component renders is its own business and cannot be known from here.
+ */
+function holdsUnverifiableCollection(icon: unknown): boolean {
+  if (Array.isArray(icon)) {
+    return icon.some(holdsUnverifiableCollection);
+  }
+
+  if (React.isValidElement(icon) && icon.type === Fragment) {
+    return holdsUnverifiableCollection(
+      (icon.props as { children?: ReactNode }).children,
+    );
+  }
+
+  return isUnverifiableCollection(icon);
+}
+
+/**
  * ## Usage
  *
  * Swaps the icons EDS uses for the roles it fills on its own behalf: the chevron on a
@@ -248,9 +275,13 @@ export const IconProvider = ({ children, icons }: IconProviderProps) => {
 
     const icon = icons?.[key];
 
-    if (isUnverifiableCollection(icon)) {
+    if (holdsUnverifiableCollection(icon)) {
+      const where = isUnverifiableCollection(icon)
+        ? 'is set to an iterable that is not an array'
+        : 'holds an iterable that is not an array';
+
       throw new Error(
-        `IconProvider: the \`${key}\` role is set to an iterable that is not an array. ${rule} Checking one means consuming it, which would leave nothing to render, so pass an array instead.`,
+        `IconProvider: the \`${key}\` role ${where}. ${rule} Checking one means consuming it, which would leave nothing to render, so pass an array instead.`,
       );
     }
 

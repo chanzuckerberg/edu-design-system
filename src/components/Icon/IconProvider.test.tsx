@@ -217,6 +217,45 @@ describe('<IconProvider />', () => {
     ).not.toThrow();
   });
 
+  it('throws for a collection it cannot check inside an array or fragment', () => {
+    // Wrapping the collection does not make it checkable. An array and a fragment are
+    // judged by what they hold, so the `Set` decides whether the role draws anything, and
+    // both of these used to pass on the strength of the wrapper alone — the array had a
+    // member, the fragment had children — and then left the chip's action button blank.
+    expect(() =>
+      render(
+        <IconProvider
+          icons={{ close: [new Set()] as unknown as IconOrContent }}
+        >
+          <InputChip label="Tag" />
+        </IconProvider>,
+      ),
+    ).toThrow(/holds an iterable that is not an array/);
+
+    function* nothing() {}
+
+    expect(() =>
+      render(
+        <IconProvider
+          icons={{
+            close: (<>{nothing()}</>) as unknown as IconOrContent,
+          }}
+        >
+          <InputChip label="Tag" />
+        </IconProvider>,
+      ),
+    ).toThrow(/holds an iterable that is not an array/);
+
+    // Nested arrays are still fine, since each one can be looked in again.
+    expect(() =>
+      render(
+        <IconProvider icons={{ close: [[<span key="a">x</span>]] }}>
+          <InputChip label="Tag" />
+        </IconProvider>,
+      ),
+    ).not.toThrow();
+  });
+
   it('says how to write a conditional override in the error', () => {
     // The shape that used to be supported: a conditional that resolves to nothing. The
     // error has to point at the alternative, since the type system allows this.
