@@ -330,12 +330,15 @@ IconProvider.displayName = 'IconProvider';
  * sometimes no role at all, so they can resolve the icon in one unconditional call
  * instead of reading a role they will not render.
  *
- * Returns something renderable or nothing: a role set to a name the spritemap does not have
- * comes back as `undefined`, after being reported here.
+ * Anything it returns draws something. A value that would not render cannot be in the map:
+ * `IconProvider` throws for one, and the shipped defaults are all real icons. So the two
+ * ways to get `undefined` back are both about the role asked for, not the value found — no
+ * role was asked for, or the name is not a role at all, which untyped code can reach and
+ * which is reported here as a usage error.
  *
  * @param name the semantic role being drawn, or `undefined` to draw nothing
- * @returns the icon name or node to hand to `IconSlot`, or `undefined` if the role resolves
- * to nothing renderable
+ * @returns the icon name or node to hand to `IconSlot`, or `undefined` when `name` is
+ * `undefined` or names no role
  */
 export function useSemanticIcon(
   name: SemanticIconName | undefined,
