@@ -2536,14 +2536,14 @@ __metadata:
     "@types/jest": "npm:^29.5.14"
     "@types/jsonfile": "npm:^6.1.4"
     "@types/lodash": "npm:^4.17.25"
-    "@types/node": "npm:^25.9.5"
+    "@types/node": "npm:^25.9.6"
     "@types/react": "npm:^18.3.31"
     "@types/react-dom": "npm:^18.3.7"
     "@types/react-syntax-highlighter": "npm:^15.5.13"
     "@types/yargs": "npm:^17.0.35"
     axe-core: "npm:4.13.0"
     chalk: "npm:^4.1.2"
-    chromatic: "npm:^18.7.2"
+    chromatic: "npm:^18.7.4"
     clsx: "npm:^2.1.1"
     codecov: "npm:^3.8.3"
     commit-and-tag-version: "npm:^12.7.3"
@@ -5686,12 +5686,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^25.9.5":
-  version: 25.9.5
-  resolution: "@types/node@npm:25.9.5"
+"@types/node@npm:^25.9.6":
+  version: 25.9.6
+  resolution: "@types/node@npm:25.9.6"
   dependencies:
     undici-types: "npm:>=7.24.0 <7.24.7"
-  checksum: 10/105f00756e152b06da0b0c122ae9a9d60cce9aa0af7b372b925cf53c5e24ba7eb0acdc97334ef6938ae35fb05b5697849fa1c1b81129148d2ac0cda3223ad141
+  checksum: 10/ba65fdac66cc5b205790bee8a4b3f6c02f70da62dff63254c69d1dd3a53c2fb3c6128da2fe5e93c820129cdaf798c69b9742f0b9fc83534cdbcbc2b5519b1b23
   languageName: node
   linkType: hard
 
@@ -7941,9 +7941,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^18.7.2":
-  version: 18.7.2
-  resolution: "chromatic@npm:18.7.2"
+"chromatic@npm:^18.7.4":
+  version: 18.8.1
+  resolution: "chromatic@npm:18.8.1"
   dependencies:
     semver: "npm:^7.3.5"
   peerDependencies:
@@ -7966,7 +7966,7 @@ __metadata:
     chroma: dist/bin.cjs
     chromatic: dist/bin.cjs
     chromatic-cli: dist/bin.cjs
-  checksum: 10/12651bbab1ab68fb97ae31d8b55ca046241e9d2d37b9020dfca980912a24830067f0d215964fcde57f7035867d6336fb312b564b8fa7ea1270cfcd160c56557b
+  checksum: 10/91f11b4b0505cc603f4e198e2d66078d99e4dba3af41af25f72f2c0cb0b5734a3a708da36fcc60015c15414688f6778e3ef9588c810be68619462fba5c381da4
   languageName: node
   linkType: hard
 
