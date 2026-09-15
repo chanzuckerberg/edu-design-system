@@ -8,7 +8,6 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
 import camelCase from 'lodash/camelCase';
-import upperFirst from 'lodash/upperFirst';
 import React from 'react';
 
 import {
@@ -68,37 +67,18 @@ export const IconUtility: Story = {
   },
 };
 
-export const BackgroundTable: Story = {
-  args: {
-    caption: 'Background Table Tokens',
-    listItems: getTokenListItems(
-      'eds-theme-color-background-table',
-      'color',
-      (name, column, filterTerm) => {
-        if (column === 'figma') {
-          return (
-            '→ background/table' + upperFirst(getSpecifier(name, filterTerm))
-          );
-        } else {
-          return 'bg-table-' + getSpecifier(name, filterTerm);
-        }
-      },
-    ),
-  },
-};
-
 export const BackgroundDataTable: Story = {
   args: {
     caption: 'Background DataTable Tokens',
     listItems: getTokenListItems(
-      'eds-theme-color-background-data-table',
+      'eds-theme-color-background-datatable',
       'color',
       (name, column, filterTerm) => {
         const varName = camelCase(getSpecifier(name, filterTerm));
         if (column === 'figma') {
-          return '→ background/dataTable-' + varName;
+          return '→ background/datatable-' + varName;
         } else {
-          return 'bg-dataTable-' + varName;
+          return 'bg-datatable-' + varName;
         }
       },
     ),
