@@ -3,6 +3,8 @@ import editJsxProp from '../transforms/edit-jsx-prop';
 import type { Change as EditJsxPropChange } from '../transforms/edit-jsx-prop';
 import renameJsxImport from '../transforms/rename-jsx-import';
 import type { Change as RenameJsxImportChange } from '../transforms/rename-jsx-import';
+import renameStyleCustomProperty from '../transforms/rename-style-custom-property';
+import type { Change as RenameStyleCustomPropertyChange } from '../transforms/rename-style-custom-property';
 
 /**
  * Import paths that changed from EDS v18 to v19
@@ -282,6 +284,46 @@ export const PropChanges: EditJsxPropChange[] = [
 ];
 
 /**
+ * CSS custom property names that changed from EDS v18 to v19
+ *
+ * Given a custom property, list out the change to its name.
+ *
+ * Take the following transform:
+ * [
+ *   {
+ *     oldCustomPropertyName: '--component__bg-color',
+ *     newCustomPropertyName: '--component__bg',
+ *   },
+ * ]
+ *
+ * Make the following transform:
+ *
+ * @example
+ * ```
+ * // Before:
+ * <Component style={{ '--component__bg-color': 'red' }} />
+ *
+ * // After:
+ * <Component style={{ '--component__bg': 'red' }} />
+ * ```
+ *
+ * `AppFooter`'s two color custom properties are here because they dropped their `-color`
+ * suffix, to match how every other component names its own. Only the name changed: each still
+ * takes the same color and applies it to the same thing, so renaming the key is the whole
+ * migration.
+ */
+export const CustomPropertyChanges: RenameStyleCustomPropertyChange[] = [
+  {
+    oldCustomPropertyName: '--app-footer__bg-color',
+    newCustomPropertyName: '--app-footer__bg',
+  },
+  {
+    oldCustomPropertyName: '--app-footer__fg-color',
+    newCustomPropertyName: '--app-footer__fg',
+  },
+];
+
+/**
  * Runs the migration to upgrade EDS from v18 to v19
  */
 export default function migration(project: Project) {
@@ -293,5 +335,9 @@ export default function migration(project: Project) {
   sourceFiles.forEach((sourceFile) => {
     renameJsxImport({ file: sourceFile, changes: ImportChanges });
     editJsxProp({ file: sourceFile, changes: PropChanges });
+    renameStyleCustomProperty({
+      file: sourceFile,
+      changes: CustomPropertyChanges,
+    });
   });
 }

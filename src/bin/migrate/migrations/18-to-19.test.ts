@@ -514,6 +514,65 @@ describe('18-to-19', () => {
     expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 
+  it('renames the AppFooter color custom properties', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {AppFooter} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <AppFooter
+            navItems={[]}
+            style={{
+              '--app-footer__bg-color': 'rebeccapurple',
+              '--app-footer__fg-color': 'white',
+            }}
+            title="App"
+          />
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {AppFooter} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <AppFooter
+            navItems={[]}
+            style={{
+              '--app-footer__bg': 'rebeccapurple',
+              '--app-footer__fg': 'white',
+            }}
+            title="App"
+          />
+        )
+      }
+    `);
+  });
+
+  it('leaves custom properties that kept their name alone', () => {
+    const sourceFileText = dedent`
+      import {AppFooter, Avatar} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Avatar name="Ada Lovelace" style={{ '--avatar__bg': 'red' }} />
+            <AppFooter navItems={[]} style={{ '--app-footer__bg': 'red' }} title="App" />
+          </>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
   it('leaves a same-named component from another package alone', () => {
     const sourceFileText = dedent`
       import {Text} from 'some-other-library';
