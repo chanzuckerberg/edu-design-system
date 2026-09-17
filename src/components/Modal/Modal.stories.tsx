@@ -406,12 +406,29 @@ export const ContentLargeMax: Story = {
 
 /**
  * `Modal` also allows for `small`.
+ *
+ * Unlike `lg`, `size="sm"` never goes full-bleed and has a different width at each
+ * breakpoint (480px max at the smallest, 480px through `md`, 560px at `lg` and up), so this
+ * snapshots at every available viewport rather than the single default width.
  */
 export const ContentSmall: Story = {
   ...ContentDefault,
   args: {
     ...ContentDefault.args,
     size: 'sm',
+  },
+  parameters: {
+    ...ContentDefault.parameters,
+    chromatic: {
+      disableSnapshot: false,
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.ipadMini,
+        chromaticViewports.ipadPro,
+        chromaticViewports.chromebook,
+        chromaticViewports.macbookPro,
+      ],
+    },
   },
 };
 
