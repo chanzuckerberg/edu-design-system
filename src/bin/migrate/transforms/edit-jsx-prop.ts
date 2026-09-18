@@ -136,6 +136,16 @@ function getRootName(componentName: string) {
   return componentName.split('.')[0];
 }
 
+/**
+ * The tag a component is written as in one file, which is not always the name EDS exports it
+ * under. An import can be aliased, and a subcomponent hangs off whatever its root was renamed
+ * to, so `DataTable.DataCell` imported as `DT` is written `<DT.DataCell>`.
+ */
+function getLocalTagName(componentName: string, localRootName: string) {
+  const [, ...subcomponent] = componentName.split('.');
+  return [localRootName, ...subcomponent].join('.');
+}
+
 export type Change = {
   componentName: string;
   edits: Edit[];
@@ -161,16 +171,31 @@ export default function transform({ file, changes }: TransformOptions) {
   // A change can name a subcomponent, as in `DataTable.DataCell`. Only the root of
   // that name is imported, so match on the root and let the tag name check below
   // pick the specific subcomponent.
-  const changesToApply: Change[] = [];
+  //
+  // The import carries both names: `getName()` is always what EDS exports, which is what a
+  // change names, while the alias is what this file writes its tags as. Match the change on
+  // the former and remember the latter, so `import { Modal as EdsModal }` still edits
+  // `<EdsModal>`.
+  const changesToApply: { change: Change; localTagName: string }[] = [];
   importDeclarations.forEach((importDeclaration) => {
     const namedImports = importDeclaration.getNamedImports();
     namedImports.forEach((namedImport) => {
-      const matches = changes.filter(
-        (change) =>
-          getRootName(change.componentName).toLowerCase() ===
-          namedImport.getName().toLowerCase(),
-      );
-      changesToApply.push(...matches);
+      const localRootName = (
+        namedImport.getAliasNode() ?? namedImport.getNameNode()
+      ).getText();
+
+      changes
+        .filter(
+          (change) =>
+            getRootName(change.componentName).toLowerCase() ===
+            namedImport.getName().toLowerCase(),
+        )
+        .forEach((change) => {
+          changesToApply.push({
+            change,
+            localTagName: getLocalTagName(change.componentName, localRootName),
+          });
+        });
     });
   });
 
@@ -181,9 +206,8 @@ export default function transform({ file, changes }: TransformOptions) {
 
   [...jsxElements, ...jsxSelfClosingElements].forEach((element) => {
     const tagName = element.getTagNameNode().getText();
-    for (const change of changesToApply) {
-      const isChangeable =
-        change.componentName.toLowerCase() === tagName.toLowerCase();
+    for (const { change, localTagName } of changesToApply) {
+      const isChangeable = localTagName.toLowerCase() === tagName.toLowerCase();
       if (!isChangeable) {
         continue;
       }
