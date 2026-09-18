@@ -146,7 +146,7 @@ describe('Modal', () => {
       );
 
       expect(warn).toHaveBeenCalledWith(
-        expect.stringContaining(`Modal no longer takes \`${prop}\``),
+        expect.stringContaining(`Modal/.Content no longer takes \`${prop}\``),
       );
 
       const content = screen

@@ -254,7 +254,7 @@ const ModalContent = (props: ModalContentProps) => {
 
   // TODO(next-major): remove.
   assertNoRemovedProp(
-    'Modal',
+    'Modal/.Content',
     'height',
     'It manages its own height now: the body scrolls once the content outgrows the space the header and footer leave over.',
     removedHeight,
@@ -262,7 +262,7 @@ const ModalContent = (props: ModalContentProps) => {
 
   // TODO(next-major): remove.
   assertNoRemovedProp(
-    'Modal',
+    'Modal/.Content',
     'overlayEmphasis',
     'Every modal draws the low-emphasis overlay now.',
     removedOverlayEmphasis,
