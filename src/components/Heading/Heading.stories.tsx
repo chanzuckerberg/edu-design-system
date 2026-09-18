@@ -22,6 +22,10 @@ type Story = StoryObj<Args>;
 
 /**
  * The default `Heading` sets a level-one header tag `<h1>` with the prescribed default preset.
+ *
+ * `as` comes from document structure and `preset` comes from design: set `as` to the level
+ * the page outline calls for, and `preset` only when the design asks for a treatment other
+ * than that level's default.
  */
 export const Default: Story = {
   args: {
@@ -60,7 +64,7 @@ export const Heading3: Story = {
 };
 
 /**
- * When using `h4`, the default preset maps to `title-md`
+ * When using `h4`, the default preset maps to `title-lg`
  */
 export const Heading4: Story = {
   args: {
@@ -70,7 +74,7 @@ export const Heading4: Story = {
 };
 
 /**
- * When using `h5`, the default preset maps to `title-sm`
+ * When using `h5`, the default preset maps to `title-md`
  */
 export const Heading5: Story = {
   args: {
@@ -80,13 +84,37 @@ export const Heading5: Story = {
 };
 
 /**
- * When using `h6`, the default preset maps to `title-xs`
+ * When using `h6`, the default preset maps to `title-sm`
  */
 export const Heading6: Story = {
   args: {
     as: 'h6',
     children: 'Heading 6',
   },
+};
+
+/**
+ * `as` and `preset` answer different questions, so they can be set independently.
+ *
+ * Here the outline is a page title followed by two sections, so the tags are `h1`, `h2`,
+ * `h2`. The second section is drawn smaller in the design, so it takes a `preset` of
+ * `title-md` while staying an `h2`. Screen readers still read three headings at the levels
+ * the outline calls for.
+ */
+export const StructureAndTreatment: Story = {
+  render: (args) => (
+    <div>
+      <Heading {...args} as="h1">
+        Page title, default <code>headline-lg</code>
+      </Heading>
+      <Heading {...args} as="h2">
+        Section, default <code>headline-md</code>
+      </Heading>
+      <Heading {...args} as="h2" preset="title-md">
+        Section, still an <code>h2</code>, drawn as <code>title-md</code>
+      </Heading>
+    </div>
+  ),
 };
 
 /**
