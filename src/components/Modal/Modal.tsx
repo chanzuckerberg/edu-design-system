@@ -85,8 +85,15 @@ type ModalContentProps = {
   // Design API
   open?: boolean;
   /**
-   * The modal's width at each breakpoint. Height is managed for you at every size: the modal
-   * fits its content, and its body scrolls once the content outgrows the space available.
+   * The modal's footprint at each breakpoint:
+   * - `"sm"` is a compact floating surface that sizes to its content, up to 480px tall
+   * - `"lg"` fills the viewport at the smallest breakpoint, and above it takes the viewport
+   *   height less a margin
+   * - `"full"` takes the whole viewport at every breakpoint
+   *
+   * Height is managed for you at all three. The body takes whatever space the header and
+   * footer leave over and scrolls once the content outgrows it, so the actions stay on screen
+   * however long the content runs.
    *
    * **Default is `"lg"`**.
    */

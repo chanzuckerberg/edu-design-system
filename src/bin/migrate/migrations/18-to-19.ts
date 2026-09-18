@@ -177,6 +177,52 @@ const removeSemanticIconPropsWhenDefault = (
       currentPropValue === defaultValue,
   }));
 
+/**
+ * `Modal` no longer takes `height` or `overlayEmphasis`, and neither has a replacement to move
+ * a value onto, so both are dropped whatever they were set to. A type error would have only
+ * one answer here — delete it — which is the edit itself.
+ *
+ * Both props were declared on `ModalContentProps`, so `Modal.Content` accepted them as well as
+ * `Modal` did, and `Modal.Body` took `height` too. All three are covered: a consumer who wrote
+ * the prop anywhere it typechecked in v18 gets it removed, rather than half a migration and a
+ * compile error in whichever spot the codemod skipped.
+ *
+ * `height="dynamic"` and `overlayEmphasis="low"` are lossless: each named what the modal now
+ * does by default. `Modal.Body`'s `height` is lossless whatever it said, since the body only
+ * ever read the value the parent `Modal` put on context and ignored its own. The remaining
+ * height values on `Modal` and `Modal.Content` do change how a modal looks, and the codemod
+ * cannot decide that for anyone, so re-check any modal it edits here:
+ *
+ * - `"fixed"` capped the modal at 640px tall. It now fills the viewport height, less a margin,
+ *   and scrolls its body instead of capping.
+ * - `"auto"` sized the modal to its content. Short modals were short; they are now the same
+ *   height as any other.
+ * - `"max"` is the closest: its geometry is what every large modal has now. The body gains
+ *   scroll truncation on top of it.
+ *
+ * `overlayEmphasis="high"` drew a darker backdrop. Every modal now uses the low-emphasis one.
+ */
+const removedModalProps: EditJsxPropChange[] = [
+  {
+    componentName: 'Modal',
+    edits: [
+      { type: 'remove', propName: 'height' },
+      { type: 'remove', propName: 'overlayEmphasis' },
+    ],
+  },
+  {
+    componentName: 'Modal.Content',
+    edits: [
+      { type: 'remove', propName: 'height' },
+      { type: 'remove', propName: 'overlayEmphasis' },
+    ],
+  },
+  {
+    componentName: 'Modal.Body',
+    edits: [{ type: 'remove', propName: 'height' }],
+  },
+];
+
 export const PropChanges: EditJsxPropChange[] = [
   {
     componentName: 'Text',
@@ -264,40 +310,7 @@ export const PropChanges: EditJsxPropChange[] = [
     componentName: 'Combobox.InputWrapper',
     edits: removeSemanticIconProps(['icon']),
   },
-  {
-    /**
-     * `Modal` no longer takes `height` or `overlayEmphasis`, and neither has a replacement to
-     * move a value onto, so both are dropped whatever they were set to. A type error would
-     * have only one answer here — delete it — which is the edit itself.
-     *
-     * `height="dynamic"` and `overlayEmphasis="low"` are lossless: each named what the modal
-     * now does by default. The other height values do change how a modal looks, and the
-     * codemod cannot decide that for anyone, so re-check any modal it edits here:
-     *
-     * - `"fixed"` capped the modal at 640px tall. It now fills the viewport height, less a
-     *   margin, and scrolls its body instead of capping.
-     * - `"auto"` sized the modal to its content. Short modals were short; they are now the
-     *   same height as any other.
-     * - `"max"` is the closest: its geometry is what every large modal has now. The body
-     *   gains scroll truncation on top of it.
-     *
-     * `overlayEmphasis="high"` drew a darker backdrop. Every modal now uses the low-emphasis
-     * one.
-     */
-    componentName: 'Modal',
-    edits: [
-      { type: 'remove', propName: 'height' },
-      { type: 'remove', propName: 'overlayEmphasis' },
-    ],
-  },
-  {
-    /**
-     * `Modal.Body` accepted `height` too, though it only ever read the value the parent
-     * `Modal` put on context, so removing it changes nothing on its own.
-     */
-    componentName: 'Modal.Body',
-    edits: [{ type: 'remove', propName: 'height' }],
-  },
+  ...removedModalProps,
   {
     /**
      * `Link.icon` never took an arbitrary icon: it picked one of two roles, or none. Both

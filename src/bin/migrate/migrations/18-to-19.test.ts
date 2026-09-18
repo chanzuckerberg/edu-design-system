@@ -542,6 +542,34 @@ describe('18-to-19', () => {
     `);
   });
 
+  it('drops the same props from Modal.Content, which also accepted them', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Modal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Modal.Content height="max" onClose={onClose} open overlayEmphasis="high" size="lg">
+            Body
+          </Modal.Content>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Modal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Modal.Content onClose={onClose} open size="lg">
+            Body
+          </Modal.Content>
+        )
+      }
+    `);
+  });
+
   it('drops the Modal height values that named the new default', () => {
     const sourceFile = createTestSourceFile(dedent`
       import {Modal} from '@chanzuckerberg/eds';
