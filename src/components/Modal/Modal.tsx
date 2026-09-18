@@ -8,7 +8,11 @@ import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
 
-import { assertEdsUsage } from '../../util/logging';
+import {
+  assertEdsUsage,
+  assertNoRemovedProp,
+  type WithRemovedProps,
+} from '../../util/logging';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 
@@ -83,25 +87,19 @@ type ModalContentProps = {
    */
   style?: ModalContentCSSProperties;
   // Design API
-  /**
-   * Determine how the height of the modal container is calculated when `size` is `"lg"`:
-   * - `"fixed"` applies the fixed dimensions, which will not adjust
-   * - `"auto"` applies a floating height dimension, that will fit to the content (can be smaller or larger than `"default"`)
-   * - `"max"` applies the maximum height within the viewport, leaving space along the top and bottom edges
-   * - `"dynamic"` manages the height for you, with intelligent presets and scroll truncation as needed
-   *
-   * **Default is `"fixed"`**.
-   */
-  height?: 'fixed' | 'auto' | 'max' | 'dynamic';
   open?: boolean;
   /**
-   * Emphasis used on the backgound overlay (behind the modal)
+   * The modal's footprint at each breakpoint:
+   * - `"sm"` is a compact floating surface that sizes to its content, up to 480px tall
+   * - `"lg"` fills the viewport at the smallest breakpoint, and above it takes the viewport
+   *   height less a margin
+   * - `"full"` takes the whole viewport at every breakpoint
    *
-   * **Default is `"low"`**.
-   */
-  overlayEmphasis?: 'low' | 'high';
-  /**
-   * Fixed sizes for the modal's height and width. Used in conjunction with `height` when using size `lg`.
+   * Height is managed for you at all three. The body takes whatever space the header and
+   * footer leave over and scrolls once the content outgrows it, so the actions stay on screen
+   * however long the content runs. The exception is a viewport under 320px tall, too short to
+   * seat the header and footer and still leave a body worth scrolling, where the modal scrolls
+   * as a whole instead and the footer does go off screen.
    *
    * **Default is `"lg"`**.
    */
@@ -172,17 +170,6 @@ type ModalBodyProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  // Design API
-  /**
-   * Determine how the height of the modal container is calculated when `size` is `"lg"`:
-   * - `"fixed"` applies the fixed dimensions, which will not adjust
-   * - `"auto"` applies a floating height dimension, that will fit to the content (can be smaller or larger than `"default"`)
-   * - `"max"` applies the maximum height within the viewport, leaving space along the top and bottom edges
-   * - `"dynamic"` manages the height for you, with intelligent presets and scroll truncation as needed
-   *
-   * **Default is `"fixed"`**.
-   */
-  height?: ModalContentProps['height'];
 };
 
 type ModalHeaderProps = {
@@ -211,12 +198,6 @@ type ModalFooterProps = {
   className?: string;
   // Design API
 };
-
-type Context = {
-  height?: ModalContentProps['height'];
-};
-
-const ModalContext = React.createContext<Context>({});
 
 /**
  * Helper function to determine whether a set of children contain a `ModalTitle` or `Modal.Title` child
@@ -258,17 +239,37 @@ const ModalContent = (props: ModalContentProps) => {
   const {
     children,
     className,
-    height = 'fixed',
     hideCloseButton = false,
     open,
     onClose,
     size = 'lg',
+    // TODO(next-major): remove, with the asserts below.
+    height: removedHeight,
+    overlayEmphasis: removedOverlayEmphasis,
     ...other
-  } = props;
+  } = props as WithRemovedProps<
+    ModalContentProps,
+    'height' | 'overlayEmphasis'
+  >;
+
+  // TODO(next-major): remove.
+  assertNoRemovedProp(
+    'Modal/.Content',
+    'height',
+    'It manages its own height now: the body scrolls once the content outgrows the space the header and footer leave over.',
+    removedHeight,
+  );
+
+  // TODO(next-major): remove.
+  assertNoRemovedProp(
+    'Modal/.Content',
+    'overlayEmphasis',
+    'Every modal draws the low-emphasis overlay now.',
+    removedOverlayEmphasis,
+  );
 
   const componentClassName = clsx(
     styles['modal__content'],
-    height && styles[`modal__content--height-${height}`],
     size && styles[`modal__content--${size}`],
     open && styles[`modal__content--is-open`],
     className,
@@ -279,23 +280,21 @@ const ModalContent = (props: ModalContentProps) => {
   const closeIcon = useSemanticIcon('close');
 
   return (
-    <ModalContext.Provider value={{ height }}>
-      <div className={componentClassName} {...other}>
-        {!hideCloseButton && (
-          <Button
-            aria-label="close"
-            className={styles['modal__close-button']}
-            context="default"
-            icon={closeIcon}
-            iconLayout="icon-only"
-            onClick={onClose}
-            rank="tertiary"
-            variant="neutral"
-          ></Button>
-        )}
-        {children}
-      </div>
-    </ModalContext.Provider>
+    <div className={componentClassName} {...other}>
+      {!hideCloseButton && (
+        <Button
+          aria-label="close"
+          className={styles['modal__close-button']}
+          context="default"
+          icon={closeIcon}
+          iconLayout="icon-only"
+          onClick={onClose}
+          rank="tertiary"
+          variant="neutral"
+        ></Button>
+      )}
+      {children}
+    </div>
   );
 };
 
@@ -348,7 +347,6 @@ export const Modal = (props: ModalProps) => {
     modalContainerClassName,
     onClose,
     open,
-    overlayEmphasis = 'low',
     ...rest
   } = props;
 
@@ -356,18 +354,6 @@ export const Modal = (props: ModalProps) => {
     [!childrenHaveModalTitle(rest.children) && !ariaLabel],
     "You must use the Modal.Title helper component or pass in an aria-label when using the Modal. The Modal uses the Modal.Title to describe the modal to screen readers using aria-labelledby. If you're not using the Modal.Title component, you can pass in an aria-label instead.",
     'error',
-  );
-
-  // check to make sure folks aren't using size="lg" with "height"
-  assertEdsUsage(
-    [rest.size !== 'lg' && typeof rest.height !== 'undefined'],
-    'Height is only supported when size is set to "lg"',
-  );
-
-  // check to make sure we only use height=dynamic from now on
-  assertEdsUsage(
-    [rest.height !== 'dynamic' && typeof rest.height !== 'undefined'],
-    `Height value ${rest.height} is deprecated and will be removed in a future version of EDS`,
   );
 
   const componentClassName = clsx(styles['modal'], modalContainerClassName);
@@ -390,13 +376,7 @@ export const Modal = (props: ModalProps) => {
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
         onClose={onClose}
       >
-        <div
-          className={clsx(
-            styles['modal__overlay'],
-            overlayEmphasis &&
-              styles[`modal__overlay--emphasis-${overlayEmphasis}`],
-          )}
-        />
+        <div className={styles['modal__overlay']} />
         <DialogPanel className={styles['modal__panel']}>
           <ModalContent onClose={onClose} open={open} {...rest} />
         </DialogPanel>
@@ -407,26 +387,39 @@ export const Modal = (props: ModalProps) => {
 
 /**
  * Component defines the body of the modal.
+ *
+ * The body scrolls its content, so however long that content is, it does not push the header
+ * and footer off the viewport. Below 320px of viewport height there is no room to scroll the
+ * body within and the modal scrolls as a whole, which is the one case where the footer does
+ * move off screen.
+ *
+ * `ScrollWrapper` leaves the region it scrolls in the tab order, which is how a keyboard user
+ * reaches the rest of it; this element only sizes that region, so it stays out of the tab
+ * order itself.
  */
-const ModalBody = ({
-  children,
-  className,
-  height,
-  ...other
-}: ModalBodyProps) => (
-  <div
-    className={clsx(styles['modal-body'], className)}
-    // This element is tabbable to allow keyboard users to scroll long content.
-    tabIndex={height === 'dynamic' ? 0 : undefined}
-    {...other}
-  >
-    {height === 'dynamic' ? (
+const ModalBody = (props: ModalBodyProps) => {
+  const {
+    children,
+    className,
+    // TODO(next-major): remove, with the assert below.
+    height: removedHeight,
+    ...other
+  } = props as WithRemovedProps<ModalBodyProps, 'height'>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedProp(
+    'Modal.Body',
+    'height',
+    'The body scrolls its own content, at every modal size.',
+    removedHeight,
+  );
+
+  return (
+    <div className={clsx(styles['modal-body'], className)} {...other}>
       <ScrollWrapper shadowType="contain">{children}</ScrollWrapper>
-    ) : (
-      children
-    )}
-  </div>
-);
+    </div>
+  );
+};
 
 /**
  * Component defines the Footer section of the modal.
@@ -489,20 +482,15 @@ const ModalSubTitle = ({
   );
 };
 
-const FocusableModalBody = (props: ModalBodyProps) => {
-  const { height } = React.useContext(ModalContext);
-  return <ModalBody height={height} {...props} />;
-};
-
 Modal.displayName = 'Modal';
 ModalTitle.displayName = 'Modal.Title';
 ModalSubTitle.displayName = 'Modal.SubTitle';
-FocusableModalBody.displayName = 'Modal.Body';
+ModalBody.displayName = 'Modal.Body';
 ModalFooter.displayName = 'Modal.Footer';
 
 Modal.Header = ModalHeader;
 Modal.Content = ModalContent;
 Modal.Title = ModalTitle;
 Modal.SubTitle = ModalSubTitle;
-Modal.Body = FocusableModalBody;
+Modal.Body = ModalBody;
 Modal.Footer = ModalFooter;

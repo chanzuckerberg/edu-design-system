@@ -22,14 +22,54 @@ export function assertEdsUsage(
 }
 
 /**
+ * Props that a major version removed, so an implementation can read one that arrives anyway
+ * without putting it back into a public API.
+ *
+ * TODO(next-major): remove, with `assertNoRemovedProp` and every destructure that feeds it.
+ */
+export type WithRemovedProps<T, PropName extends string> = T &
+  Partial<Record<PropName, unknown>>;
+
+/**
  * Props that v19 removed in favor of `IconProvider`, so an implementation can read one
  * that arrives anyway without putting it back into a public API.
  *
  * TODO(next-major): remove, with `assertNoRemovedIconProp` and every destructure that
  * feeds it.
  */
-export type WithRemovedIconProps<T, PropName extends string> = T &
-  Partial<Record<PropName, unknown>>;
+export type WithRemovedIconProps<T, PropName extends string> = WithRemovedProps<
+  T,
+  PropName
+>;
+
+/**
+ * Warns a consumer still passing a prop a major version removed outright, where nothing took
+ * over its job and the component decides for itself instead.
+ *
+ * Worth a check of our own for the same reason `assertNoRemovedIconProp` is: neither route
+ * reaches untyped code. A typed consumer gets TS2322 at the call site, but JavaScript never
+ * sees that, and React's own reporting is uneven — it names an unknown camelCase prop but
+ * forwards an unknown lowercase one to the DOM in silence. Neither says the prop was removed
+ * or what happens now. Reading the prop here also keeps it off the DOM.
+ *
+ * TODO(next-major): remove, with every destructure that calls it.
+ *
+ * @param componentName the component as a consumer writes it, e.g. `Modal.Body`
+ * @param propName the prop that was removed, e.g. `height`
+ * @param behavior what the component does in its place, as a full sentence
+ * @param value whatever arrived under that prop
+ */
+export function assertNoRemovedProp(
+  componentName: string,
+  propName: string,
+  behavior: string,
+  value: unknown,
+): void {
+  assertEdsUsage(
+    [typeof value !== 'undefined'],
+    `${componentName} no longer takes \`${propName}\`, and the one passed is ignored. ${behavior} Run \`npx eds-migrate 18-to-19\` to clean the prop up.`,
+  );
+}
 
 /**
  * Warns a consumer still passing one of the icon props that v19 removed in favor of

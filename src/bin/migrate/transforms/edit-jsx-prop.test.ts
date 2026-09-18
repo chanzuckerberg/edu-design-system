@@ -531,6 +531,113 @@ describe('transform', () => {
     `);
   });
 
+  it('edits a component imported under an alias', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Modal as EdsModal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <EdsModal height="auto">Body</EdsModal>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Modal',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'height',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Modal as EdsModal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <EdsModal>Body</EdsModal>
+        )
+      }
+    `);
+  });
+
+  it('edits a subcomponent hanging off an aliased root import', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {DataTable as DT} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DT.DataCell leadingIcon="person-add">Ada</DT.DataCell>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'DataTable.DataCell',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'leadingIcon',
+              newPropName: 'leadingContent',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {DataTable as DT} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DT.DataCell leadingContent="person-add">Ada</DT.DataCell>
+        )
+      }
+    `);
+  });
+
+  it('leaves the name an alias displaced alone', () => {
+    const sourceFileText = dedent`
+      import {Modal as EdsModal} from '@chanzuckerberg/eds';
+      import Modal from '~/components/Modal';
+
+      export default function Component() {
+        return (
+          <Modal height="auto">Body</Modal>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Modal',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'height',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
   it('applies every change that shares one root import', () => {
     const sourceFile = createTestSourceFile(dedent`
       import {DataTable} from '@chanzuckerberg/eds';
