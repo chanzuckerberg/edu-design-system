@@ -8,7 +8,11 @@ import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
 
-import { assertEdsUsage } from '../../util/logging';
+import {
+  assertEdsUsage,
+  assertNoRemovedProp,
+  type WithRemovedProps,
+} from '../../util/logging';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 
@@ -239,8 +243,30 @@ const ModalContent = (props: ModalContentProps) => {
     open,
     onClose,
     size = 'lg',
+    // TODO(next-major): remove, with the asserts below.
+    height: removedHeight,
+    overlayEmphasis: removedOverlayEmphasis,
     ...other
-  } = props;
+  } = props as WithRemovedProps<
+    ModalContentProps,
+    'height' | 'overlayEmphasis'
+  >;
+
+  // TODO(next-major): remove.
+  assertNoRemovedProp(
+    'Modal',
+    'height',
+    'It manages its own height now: the body scrolls once the content outgrows the space the header and footer leave over.',
+    removedHeight,
+  );
+
+  // TODO(next-major): remove.
+  assertNoRemovedProp(
+    'Modal',
+    'overlayEmphasis',
+    'Every modal draws the low-emphasis overlay now.',
+    removedOverlayEmphasis,
+  );
 
   const componentClassName = clsx(
     styles['modal__content'],
@@ -371,11 +397,29 @@ export const Modal = (props: ModalProps) => {
  * reaches the rest of it; this element only sizes that region, so it stays out of the tab
  * order itself.
  */
-const ModalBody = ({ children, className, ...other }: ModalBodyProps) => (
-  <div className={clsx(styles['modal-body'], className)} {...other}>
-    <ScrollWrapper shadowType="contain">{children}</ScrollWrapper>
-  </div>
-);
+const ModalBody = (props: ModalBodyProps) => {
+  const {
+    children,
+    className,
+    // TODO(next-major): remove, with the assert below.
+    height: removedHeight,
+    ...other
+  } = props as WithRemovedProps<ModalBodyProps, 'height'>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedProp(
+    'Modal.Body',
+    'height',
+    'The body scrolls its own content, at every modal size.',
+    removedHeight,
+  );
+
+  return (
+    <div className={clsx(styles['modal-body'], className)} {...other}>
+      <ScrollWrapper shadowType="contain">{children}</ScrollWrapper>
+    </div>
+  );
+};
 
 /**
  * Component defines the Footer section of the modal.
