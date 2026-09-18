@@ -56,6 +56,39 @@ exports[`<Heading /> > Heading6 story renders snapshot 1`] = `
 </h6>
 `;
 
+exports[`<Heading /> > StructureAndTreatment story renders snapshot 1`] = `
+<div>
+  <h1
+    class="_text_b3eba3 _text--headline-lg_b3eba3"
+  >
+    Page title, default 
+    <code>
+      headline-lg
+    </code>
+  </h1>
+  <h2
+    class="_text_b3eba3 _text--headline-md_b3eba3"
+  >
+    Section, default 
+    <code>
+      headline-md
+    </code>
+  </h2>
+  <h2
+    class="_text_b3eba3 _text--title-md_b3eba3"
+  >
+    Section, still an 
+    <code>
+      h2
+    </code>
+    , drawn as 
+    <code>
+      title-md
+    </code>
+  </h2>
+</div>
+`;
+
 exports[`<Heading /> > UsingColorTokens story renders snapshot 1`] = `
 <div>
   <h1
