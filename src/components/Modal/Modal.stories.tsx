@@ -136,8 +136,11 @@ export const Full: Story = {
 
 /**
  * `Modal` manages its own height. Content taller than the space available scrolls inside the
- * body, and the header and footer stay on screen while it does, so a long modal never runs
+ * body, and the header and footer stay on screen while it does, so a long modal does not run
  * its actions off the bottom of the viewport.
+ *
+ * Below 320px of viewport height there is no room to scroll the body within, and the modal
+ * scrolls as a whole instead, which is the one case where the footer goes off screen.
  */
 export const LargeScrolling: Story = {
   args: {

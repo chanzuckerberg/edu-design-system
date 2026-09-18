@@ -93,7 +93,9 @@ type ModalContentProps = {
    *
    * Height is managed for you at all three. The body takes whatever space the header and
    * footer leave over and scrolls once the content outgrows it, so the actions stay on screen
-   * however long the content runs.
+   * however long the content runs. The exception is a viewport under 320px tall, too short to
+   * seat the header and footer and still leave a body worth scrolling, where the modal scrolls
+   * as a whole instead and the footer does go off screen.
    *
    * **Default is `"lg"`**.
    */
@@ -360,10 +362,14 @@ export const Modal = (props: ModalProps) => {
 /**
  * Component defines the body of the modal.
  *
- * The body always scrolls its content, so a modal never runs its header and footer off the
- * viewport however long the content is. `ScrollWrapper` leaves the region it scrolls in the
- * tab order, which is how a keyboard user reaches the rest of it; this element only sizes
- * that region, so it stays out of the tab order itself.
+ * The body scrolls its content, so however long that content is, it does not push the header
+ * and footer off the viewport. Below 320px of viewport height there is no room to scroll the
+ * body within and the modal scrolls as a whole, which is the one case where the footer does
+ * move off screen.
+ *
+ * `ScrollWrapper` leaves the region it scrolls in the tab order, which is how a keyboard user
+ * reaches the rest of it; this element only sizes that region, so it stays out of the tab
+ * order itself.
  */
 const ModalBody = ({ children, className, ...other }: ModalBodyProps) => (
   <div className={clsx(styles['modal-body'], className)} {...other}>
