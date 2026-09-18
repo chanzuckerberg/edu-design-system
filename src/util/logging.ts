@@ -22,7 +22,7 @@ export function assertEdsUsage(
 }
 
 /**
- * Props a major version removed, so an implementation can read one that arrives anyway
+ * Props that a major version removed, so an implementation can read one that arrives anyway
  * without putting it back into a public API.
  *
  * TODO(next-major): remove, with `assertNoRemovedProp` and every destructure that feeds it.
