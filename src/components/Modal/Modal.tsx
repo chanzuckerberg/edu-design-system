@@ -335,6 +335,7 @@ const ModalContent = (props: ModalContentProps) => {
  *
  * * Include long headings or body text. The more words, the less likely people are to read any of it.
  * * Include long passages of informative text in a modal. Use a short summary and then link to a help article, FAQ etc.
+ * * Avoid applying inline stylistic modifications to the Modal.Title sub-component. Use the defaults or preset props where present.
  *
  * ## Resources
  *
