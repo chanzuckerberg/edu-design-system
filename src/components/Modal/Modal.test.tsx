@@ -112,21 +112,23 @@ describe('Modal', () => {
     consoleErrorMock.mockRestore();
   });
 
-  it('prints a warning when height is used with size="sm"', () => {
-    const consoleWarningMock = vi.spyOn(console, 'warn');
-    consoleWarningMock.mockImplementation(() => {});
+  it.each(['sm', 'lg', 'full'] as const)(
+    'gives the body a scrollable region at size="%s"',
+    (size) => {
+      render(
+        <Modal aria-label="aria label" onClose={() => {}} open size={size}>
+          <Modal.Header>Modal Title</Modal.Header>
+          <Modal.Body>Modal body content.</Modal.Body>
+          <Modal.Footer>Modal footer content.</Modal.Footer>
+        </Modal>,
+      );
 
-    render(
-      <Modal height="dynamic" onClose={() => {}} open size="sm">
-        <Modal.Header>
-          <Modal.Title>Modal Title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Modal body content.</Modal.Body>
-        <Modal.Footer>Modal footer content.</Modal.Footer>
-      </Modal>,
-    );
-
-    expect(consoleWarningMock).toHaveBeenCalledTimes(1);
-    consoleWarningMock.mockRestore();
-  });
+      // `ScrollWrapper` leaves the region it scrolls in the tab order, which is how a
+      // keyboard user reaches content taller than the modal. Every size gets one now.
+      const scrollableRegion = screen
+        .getByText('Modal body content.')
+        .closest('[tabindex="0"]');
+      expect(scrollableRegion).toBeTruthy();
+    },
+  );
 });

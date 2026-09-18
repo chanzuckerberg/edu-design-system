@@ -27,7 +27,7 @@ export default {
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:3.2.0'],
+  tags: ['autodocs', 'version:4.0.0'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -135,73 +135,13 @@ export const Full: Story = {
 };
 
 /**
- * Modals can also have a more emphasized backdrop overlay
+ * `Modal` manages its own height. Content taller than the space available scrolls inside the
+ * body, and the header and footer stay on screen while it does, so a long modal never runs
+ * its actions off the bottom of the viewport.
  */
-export const HighEmphasis: Story = {
-  args: {
-    overlayEmphasis: 'high',
-  },
-  parameters: Default.parameters,
-  render: Default.render,
-  play: Default.play,
-};
-
-/**
- * Large modals allow for control of the on screen height. When set to max, they will occupy the maxiumum space allowed to start. Padding is considered.
- *
- * **This will be removed in a future version of EDS**
- */
-export const LargeMax: Story = {
+export const LargeScrolling: Story = {
   args: {
     size: 'lg',
-    height: 'max',
-  },
-  parameters: Default.parameters,
-  render: Default.render,
-  play: Default.play,
-};
-
-/**
- * Large modals allow for control of the on screen height. When set to auto, the height will grow based on the amount of content in the modal body.
- *
- * **This will be removed in a future version of EDS**
- */
-export const LargeAuto: Story = {
-  args: {
-    size: 'lg',
-    height: 'auto',
-  },
-  parameters: Default.parameters,
-  render: Default.render,
-  play: Default.play,
-};
-
-/**
- * Large modals allow for control of the on screen height. When set to fixed, the modal's size will match a fixed maxiumum height based on the viewport.
- *
- * **This will be removed in a future version of EDS**
- */
-export const LargeFixed: Story = {
-  args: {
-    size: 'lg',
-    height: 'fixed',
-  },
-  parameters: Default.parameters,
-  render: Default.render,
-  play: Default.play,
-};
-
-/**
- * The dynamic setting for height is the new default, which handles scrollable content areas in the `Modal` body content.
- * - When the content height is small, `Modal` is centered on the screen.
- * - When the content is taller and requires scroll, `Modal` will keep the header and footer on screen, but allow the content to scroll
- *
- * This will supercede the other height calculations and become the new default. As such, use of other height values (`auto`, `mqx`, etc. are discouraged)
- */
-export const LargeDynamic: Story = {
-  args: {
-    size: 'lg',
-    height: 'dynamic',
   },
   parameters: Default.parameters,
   render: (args) => (
@@ -296,7 +236,7 @@ export const LargeDynamic: Story = {
 };
 
 /**
- * Small will always try to take up the least amount of space, and ignore the height property.
+ * Small will always try to take up the least amount of space.
  */
 export const Small: Story = {
   args: {
@@ -377,30 +317,6 @@ export const ContentLarge: Story = {
   args: {
     ...ContentDefault.args,
     size: 'lg',
-  },
-};
-
-/**
- * Large modals can have height set to auto, which will allow the modal's height to vary based on the contents of the modal container.
- *
- * This can be as large as the viewport allows, or as short as the content specifies.
- */
-export const ContentLargeAuto: Story = {
-  ...ContentLarge,
-  args: {
-    ...ContentLarge.args,
-    height: 'auto',
-  },
-};
-
-/**
- * Large modals can have height set to max, which will take up the maxiumum vertical height allowed in the viewport.
- */
-export const ContentLargeMax: Story = {
-  ...ContentLarge,
-  args: {
-    ...ContentLarge.args,
-    height: 'max',
   },
 };
 

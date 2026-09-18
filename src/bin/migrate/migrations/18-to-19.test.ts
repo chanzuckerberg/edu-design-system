@@ -514,6 +514,76 @@ describe('18-to-19', () => {
     expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 
+  it('drops the Modal height and overlay emphasis props', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Modal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Modal height="auto" onClose={onClose} open overlayEmphasis="high" size="lg">
+            <Modal.Body height="auto">Body</Modal.Body>
+          </Modal>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Modal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Modal onClose={onClose} open size="lg">
+            <Modal.Body>Body</Modal.Body>
+          </Modal>
+        )
+      }
+    `);
+  });
+
+  it('drops the Modal height values that named the new default', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Modal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Modal height="dynamic" onClose={onClose} open overlayEmphasis="low" />
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Modal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Modal onClose={onClose} open />
+        )
+      }
+    `);
+  });
+
+  it('leaves the Modal props that stayed alone', () => {
+    const sourceFileText = dedent`
+      import {Modal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Modal hideCloseButton onClose={onClose} open size="sm" />
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
   it('renames the AppFooter color custom properties', () => {
     const sourceFile = createTestSourceFile(dedent`
       import {AppFooter} from '@chanzuckerberg/eds';
