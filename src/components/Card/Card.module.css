@@ -149,6 +149,20 @@
   flex-grow: 0;
 }
 
+/* Holds the title and its trailing marker on one line, wrapping when the pair outgrows it. */
+.header__title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(var(--eds-spacing-size-1) * 1px);
+}
+
+.header__titleTrailingContent {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
 .header__text,
 .header__custom {
   flex-grow: 2;

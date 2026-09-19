@@ -10,6 +10,7 @@ import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
 import { Menu } from '../Menu/Menu';
+import Tag from '../Tag';
 import { Text } from '../Text/Text';
 
 export default {
@@ -64,7 +65,7 @@ export default {
       control: 'boolean',
     },
   },
-  tags: ['autodocs', 'version:3.1'],
+  tags: ['autodocs', 'version:3.2'],
 } as Meta<typeof Card>;
 
 type Story = StoryObj<typeof Card>;
@@ -393,6 +394,37 @@ export const WithFpoHeaderIconContent: Story = {
           size="md"
           subTitle="Medium header, 24px slot"
           title="Text Complexity"
+        />
+      </>
+    ),
+  },
+};
+
+/**
+ * `Card.Header` renders its `title` as a heading, at the level `titleAs` sets. Take that
+ * level from the page outline rather than from how large you want the title to read: both
+ * headers below carry the same `size`, so they look the same while sitting at different
+ * levels.
+ *
+ * `titleTrailingContent` holds a short marker on the same line as the title, usually a
+ * `Tag` naming the card's state. It renders beside the heading rather than inside it, so
+ * each heading still announces as just its title.
+ */
+export const WithTitleLevelAndTrailingContent: Story = {
+  args: {
+    children: (
+      <>
+        <Card.Header
+          subTitle="Sitting directly under the page's own heading"
+          title="Text Complexity"
+          titleAs="h2"
+          titleTrailingContent={<Tag label="New" status="informational" />}
+        />
+        <Card.Header
+          subTitle="Sitting inside a section that already has an h2"
+          title="Text Complexity"
+          titleAs="h3"
+          titleTrailingContent={<Tag label="Beta" status="warning" />}
         />
       </>
     ),

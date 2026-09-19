@@ -2,10 +2,11 @@ import clsx from 'clsx';
 import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 
+import { assertEdsUsage } from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 
-import Heading from '../Heading';
+import Heading, { type HeadingElement } from '../Heading';
 import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 
@@ -82,6 +83,24 @@ export type CardSubComponentProps = {
   className?: string;
 };
 
+/**
+ * Heading levels `Card.Header` takes for its title.
+ *
+ * A card always sits inside a section the page has already given a heading, so its title
+ * goes below that heading rather than competing with it. `h2` and `h3` cover where a card
+ * actually lands in an outline: `h1` would claim the page, and `h4` and down are deeper
+ * than a card nests.
+ *
+ * Kept as a value as well as a type so the component can check a level that reached it
+ * from untyped code, where the type alone stops nothing.
+ */
+const titleElements = ['h2', 'h3'] as const;
+
+export type CardHeaderTitleElement = Extract<
+  HeadingElement,
+  (typeof titleElements)[number]
+>;
+
 export type CardHeaderProps = {
   // Component API
   /**
@@ -118,6 +137,27 @@ export type CardHeaderProps = {
    * The title/heading of the component
    */
   title?: string;
+  /**
+   * Which heading level `title` renders at. Take it from the page outline: the level below
+   * whatever heading introduces the section the card sits in, not the size you want the
+   * title to read at.
+   *
+   * Only `h2` and `h3` are available, since a card's title sits under a heading the page
+   * has already set. The level never changes the title's treatment, which follows `size`,
+   * so a card can sit at the right level in the outline and still look the same.
+   *
+   * **Default is `"h3"`**.
+   */
+  titleAs?: CardHeaderTitleElement;
+  /**
+   * Slot that follows the title on the same line, for a short marker qualifying it. A
+   * `Tag` carrying the card's state is the usual case.
+   *
+   * It renders beside the heading rather than inside it, so the marker's text stays out of
+   * the heading's accessible name. Needs a `title` to trail. For content in the header's
+   * own trailing area, away from the title and usually a control, use `action`.
+   */
+  titleTrailingContent?: ReactNode;
 };
 
 export interface CardCSSProperties extends React.CSSProperties {
@@ -137,6 +177,38 @@ export interface CardCSSProperties extends React.CSSProperties {
  * * Limit call-to-action buttons and/or links, using only one primary call-to-action per card.
  * * Do not use a card as an action.
  *
+ * ## Header titles
+ *
+ * `Card.Header` renders its `title` as a heading, at the level `titleAs` sets. Take that
+ * level from the page outline, the one below whatever heading introduces the section the
+ * card sits in. Only `h2` and `h3` are available, because a card's title always sits under
+ * a heading the page has already set.
+ *
+ * | Prop | What it sets | Where the value comes from |
+ * |------|--------------|----------------------------|
+ * | `titleAs` | Which heading tag the title renders as, `h2` or `h3`. | The document structure: the level below the heading of the section holding the card. |
+ * | `size` | The treatment of the title, and the rest of the header with it. | The design. |
+ *
+ * The two stay independent, so moving a card to a different level of the outline never
+ * changes how its title looks.
+ *
+ * A short marker can sit on the same line as the title, passed to `titleTrailingContent`.
+ * A `Tag` giving the card's state is the case this is for:
+ *
+ * ```tsx
+ * <Card.Header
+ *   subTitle="Get to know your colleagues"
+ *   title="Text Complexity"
+ *   titleAs="h2"
+ *   titleTrailingContent={<Tag label="New" status="informational" />}
+ * />
+ * ```
+ *
+ * The marker renders beside the heading rather than inside it, so a screen reader
+ * announces the heading as "Text Complexity" and reaches the tag separately. Keep it to
+ * something short that qualifies the title. Anything the reader acts on belongs in
+ * `action`, which sits in the header's own trailing area.
+ *
  * ## Content & Accessibility
  *
  * ### Do's
@@ -145,11 +217,15 @@ export interface CardCSSProperties extends React.CSSProperties {
  * * Use subheadings, paragraphs, and bullet lists to break up larger amounts of content.
  * * Use headings that make the card's purpose clear.
  * * Include essential, summarized information.
+ * * Set `titleAs` to the level the page outline calls for, so a card's title doesn't skip a heading level.
+ * * Keep `titleTrailingContent` to a short marker, like a `Tag` naming the card's state.
  *
  * ### Don'ts
  *
  * * Don't overwhelm the card with too much content; keep it scannable.
  * * Avoid too many call-to-action buttons or links within the same card.
+ * * Don't pick `titleAs` for the size it renders at. The title's treatment comes from `size`.
+ * * Don't put a control in `titleTrailingContent`. Anything the reader clicks goes in `action`.
  */
 export const Card = ({
   containerColor = 'default',
@@ -250,6 +326,8 @@ const CardHeader = ({
   size = 'md',
   subTitle,
   title,
+  titleAs = 'h3',
+  titleTrailingContent,
   ...other
 }: CardHeaderProps) => {
   const componentClassName = clsx(
@@ -268,6 +346,28 @@ const CardHeader = ({
   const headerSubTitleClassName = clsx(
     styles['header__sub-title'],
     size && styles[`header--size-${size}`],
+  );
+
+  const isSupportedTitleElement = titleElements.includes(titleAs);
+
+  assertEdsUsage(
+    [!isSupportedTitleElement],
+    `Card.Header takes only \`h2\` or \`h3\` for \`titleAs\`, and \`${titleAs}\` is ignored in favor of \`h3\`. A card's title sits under a heading the page has already set, so pick the level just below that one.`,
+  );
+
+  assertEdsUsage(
+    [hasSlotContent(titleTrailingContent) && !title],
+    "Card.Header renders `titleTrailingContent` beside a `title`, and the one passed has no title to trail, so nothing renders. Set a `title`, or pass the content to `action` to place it in the header's trailing area instead.",
+  );
+
+  const titleHeading = (
+    <Heading
+      as={isSupportedTitleElement ? titleAs : 'h3'}
+      className={headerTitleClassName}
+      preset={size === 'sm' ? 'title-sm' : 'title-lg'}
+    >
+      {title}
+    </Heading>
   );
 
   return children ? (
@@ -295,15 +395,17 @@ const CardHeader = ({
             {eyebrow}
           </Text>
         )}
-        {title && (
-          <Heading
-            as="h3"
-            className={headerTitleClassName}
-            preset={size === 'sm' ? 'title-sm' : 'title-lg'}
-          >
-            {title}
-          </Heading>
-        )}
+        {title &&
+          (hasSlotContent(titleTrailingContent) ? (
+            <div className={styles['header__title-row']}>
+              {titleHeading}
+              <div className={styles['header__titleTrailingContent']}>
+                {titleTrailingContent}
+              </div>
+            </div>
+          ) : (
+            titleHeading
+          ))}
         {subTitle && (
           <Text
             as="div"
