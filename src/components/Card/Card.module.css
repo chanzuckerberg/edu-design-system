@@ -157,7 +157,7 @@
   gap: calc(var(--eds-spacing-size-1) * 1px);
 }
 
-.header__title-trailing-content {
+.header__titleTrailingContent {
   display: flex;
   flex-shrink: 0;
   align-items: center;

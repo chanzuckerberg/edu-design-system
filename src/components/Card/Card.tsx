@@ -356,7 +356,7 @@ const CardHeader = ({
   );
 
   assertEdsUsage(
-    [typeof titleTrailingContent !== 'undefined' && !title],
+    [hasSlotContent(titleTrailingContent) && !title],
     "Card.Header renders `titleTrailingContent` beside a `title`, and the one passed has no title to trail, so nothing renders. Set a `title`, or pass the content to `action` to place it in the header's trailing area instead.",
   );
 
@@ -396,12 +396,12 @@ const CardHeader = ({
           </Text>
         )}
         {title &&
-          (titleTrailingContent ? (
+          (hasSlotContent(titleTrailingContent) ? (
             <div className={styles['header__title-row']}>
               {titleHeading}
-              <span className={styles['header__title-trailing-content']}>
+              <div className={styles['header__titleTrailingContent']}>
                 {titleTrailingContent}
-              </span>
+              </div>
             </div>
           ) : (
             titleHeading

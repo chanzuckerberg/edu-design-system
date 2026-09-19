@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import type { ReactNode } from 'react';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -89,6 +90,33 @@ describe('<Card.Header /> title trailing content', () => {
     render(<Card.Header titleTrailingContent={<span>New</span>} />);
 
     expect(screen.queryByText('New')).not.toBeInTheDocument();
+  });
+
+  it('renders trailing content that is renderable but falsy', () => {
+    render(<Card.Header title="Text Complexity" titleTrailingContent={0} />);
+
+    // `0` renders as text, so dropping it would lose content the consumer passed. A
+    // truthiness check did exactly that, which is why the slot asks `hasSlotContent`.
+    expect(screen.getByText('0')).toBeInTheDocument();
+  });
+
+  it.each<[string, ReactNode]>([
+    ['an empty array', []],
+    // eslint-disable-next-line react/jsx-no-useless-fragment -- the empty fragment is the case under test
+    ['an empty fragment', <></>],
+  ])('leaves the heading unwrapped for %s', (_label, titleTrailingContent) => {
+    render(
+      <Card.Header
+        title="Text Complexity"
+        titleTrailingContent={titleTrailingContent}
+      />,
+    );
+
+    // Both are truthy while rendering nothing, so a truthiness check built a row holding
+    // an empty slot and put its gap after the title.
+    expect(
+      screen.getByRole('heading', { level: 3 }).parentElement?.className,
+    ).toContain('header__text');
   });
 
   it('leaves the heading unwrapped when no trailing content is passed', () => {
