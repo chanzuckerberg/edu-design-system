@@ -102,7 +102,7 @@
             "paths": [
               {
                 "name": "lodash",
-                "message": "For better tree shaking, prefer deep imports from lodash (e.g. import at from 'lodash/at') instead of named (e.g. import {at} from 'lodash)"
+                "message": "For better tree shaking, prefer deep imports from lodash (e.g. import at from 'lodash/at.js') instead of named (e.g. import {at} from 'lodash)"
               }
             ],
             "patterns": [
