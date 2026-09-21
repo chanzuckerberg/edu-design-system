@@ -40,7 +40,7 @@ exports[`<ProgressBar /> > DescriptionLabelAndValueStringResizingBehavior story 
   >
     <label
       class="_label_76755a _label--md_76755a"
-      id="_r_8_"
+      id="_r_a_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -55,7 +55,7 @@ exports[`<ProgressBar /> > DescriptionLabelAndValueStringResizingBehavior story 
     </span>
   </div>
   <div
-    aria-labelledby="_r_8_"
+    aria-labelledby="_r_a_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.2;"
@@ -64,6 +64,57 @@ exports[`<ProgressBar /> > DescriptionLabelAndValueStringResizingBehavior story 
       class="_progress-bar__content_2e61df"
     />
   </div>
+</div>
+`;
+
+exports[`<ProgressBar /> > Embedded story renders snapshot 1`] = `
+<div
+  class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[366px]"
+>
+  <div
+    class="_card__header_f66b11 _header--size-md_f66b11"
+  >
+    <div
+      class="_header__text_f66b11"
+    >
+      <h3
+        class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
+      >
+        Text complexity
+      </h3>
+      <div
+        class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
+      >
+        Lesson 3 of 9
+      </div>
+    </div>
+  </div>
+  <div
+    class="_card__body_f66b11 pb-spacing-size-3 pt-spacing-size-2"
+  >
+    <p
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Pick up where you left off. Your progress is saved as you go.
+    </p>
+  </div>
+  <div
+    class="_progress-bar_2e61df _progress-bar--labelLayout-vertical_2e61df -mx-spacing-size-3 -mb-spacing-size-3"
+  >
+    <div
+      aria-label="Lesson progress, 33 percent"
+      class="_progress-bar__track_2e61df _progress-bar__track--context-embedded_2e61df"
+      role="progressbar"
+      style="--progress-bar__progress: 0.33;"
+    >
+      <div
+        class="_progress-bar__content_2e61df"
+      />
+    </div>
+  </div>
+  <div
+    class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
+  />
 </div>
 `;
 
@@ -76,7 +127,7 @@ exports[`<ProgressBar /> > HorizontalLabelAndValueStringResizingBehavior story r
   >
     <label
       class="_label_76755a _label--md_76755a"
-      id="_r_9_"
+      id="_r_b_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -91,7 +142,7 @@ exports[`<ProgressBar /> > HorizontalLabelAndValueStringResizingBehavior story r
     </span>
   </div>
   <div
-    aria-labelledby="_r_9_"
+    aria-labelledby="_r_b_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.2;"
@@ -138,7 +189,7 @@ exports[`<ProgressBar /> > WithDescriptionLabel story renders snapshot 1`] = `
   >
     <label
       class="_label_76755a _label--md_76755a"
-      id="_r_2_"
+      id="_r_4_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -159,7 +210,7 @@ exports[`<ProgressBar /> > WithDescriptionLabel story renders snapshot 1`] = `
   </div>
   <div
     aria-label="33 percent"
-    aria-labelledby="_r_2_"
+    aria-labelledby="_r_4_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.33;"
@@ -180,7 +231,7 @@ exports[`<ProgressBar /> > WithDescriptionLabelAndValueLabel story renders snaps
   >
     <label
       class="_label_76755a _label--md_76755a"
-      id="_r_6_"
+      id="_r_8_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -196,7 +247,7 @@ exports[`<ProgressBar /> > WithDescriptionLabelAndValueLabel story renders snaps
   </div>
   <div
     aria-label="33 percent"
-    aria-labelledby="_r_6_"
+    aria-labelledby="_r_8_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.33;"
@@ -217,7 +268,7 @@ exports[`<ProgressBar /> > WithHorizontalDescriptionLabel story renders snapshot
   >
     <label
       class="_label_76755a _label--md_76755a"
-      id="_r_4_"
+      id="_r_6_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -228,7 +279,7 @@ exports[`<ProgressBar /> > WithHorizontalDescriptionLabel story renders snapshot
   </div>
   <div
     aria-label="33 percent"
-    aria-labelledby="_r_4_"
+    aria-labelledby="_r_6_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.33;"
@@ -249,7 +300,7 @@ exports[`<ProgressBar /> > WithLongDescriptionLabel story renders snapshot 1`] =
   >
     <label
       class="_label_76755a _label--md_76755a"
-      id="_r_3_"
+      id="_r_5_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -270,7 +321,7 @@ exports[`<ProgressBar /> > WithLongDescriptionLabel story renders snapshot 1`] =
   </div>
   <div
     aria-label="33 percent"
-    aria-labelledby="_r_3_"
+    aria-labelledby="_r_5_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.5;"
@@ -291,7 +342,7 @@ exports[`<ProgressBar /> > WithLongDescriptionLabelAndValueLabel story renders s
   >
     <label
       class="_label_76755a _label--md_76755a"
-      id="_r_7_"
+      id="_r_9_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -307,7 +358,7 @@ exports[`<ProgressBar /> > WithLongDescriptionLabelAndValueLabel story renders s
   </div>
   <div
     aria-label="33 percent"
-    aria-labelledby="_r_7_"
+    aria-labelledby="_r_9_"
     class="_progress-bar__track_2e61df _progress-bar__track--context-standalone_2e61df"
     role="progressbar"
     style="--progress-bar__progress: 0.33;"
