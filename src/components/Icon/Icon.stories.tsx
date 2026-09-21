@@ -2,7 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
 import clsx from 'clsx';
-import kebabCase from 'lodash/kebabCase';
+import kebabCase from 'lodash/kebabCase.js';
 import React from 'react';
 import { Icon, type IconProps } from './Icon';
 import icons, { type IconName, type IconBody } from '../../icons/spritemap';

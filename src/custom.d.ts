@@ -36,3 +36,13 @@ declare module 'react-children-by-type' {
     ...types: React.JSXElementConstructor<P>[]
   ): React.ReactElement<P>;
 }
+
+/**
+ * `@types/react-syntax-highlighter` declares this path without a file
+ * extension, but the package has no `exports` map, so Node's ESM resolver
+ * needs the explicit `/index.js`. Re-export the typed module under the
+ * specifier we actually import.
+ */
+declare module 'react-syntax-highlighter/dist/esm/styles/prism/index.js' {
+  export * from 'react-syntax-highlighter/dist/esm/styles/prism';
+}

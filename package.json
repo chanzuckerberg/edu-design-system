@@ -7,11 +7,21 @@
   "license": "MIT",
   "type": "commonjs",
   "exports": {
-    ".": "./lib/index.js",
-    "./tokens": "./lib/tokens.js",
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.js"
+    },
+    "./tokens": {
+      "types": "./lib/tokens.d.ts",
+      "import": "./lib/tokens.mjs",
+      "require": "./lib/tokens.js"
+    },
     "./index.css": "./lib/index.css",
     "./tailwind.config": "./tailwind.config.mts"
   },
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
   "types": "lib/index.d.ts",
   "sideEffects": [
     "lib/index.css"

@@ -1,4 +1,4 @@
-import identity from 'lodash/identity';
+import identity from 'lodash/identity.js';
 
 type Check = boolean;
 type LogLevel = 'warn' | 'error';
