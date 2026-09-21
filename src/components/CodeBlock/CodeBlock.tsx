@@ -1,10 +1,12 @@
 import clsx from 'clsx';
-import delay from 'lodash/delay';
+import delay from 'lodash/delay.js';
 import React from 'react';
 
 import Markdown from 'react-markdown';
 import { Prism, type SyntaxHighlighterProps } from 'react-syntax-highlighter';
-import { solarizedDarkAtom as theme } from 'react-syntax-highlighter/dist/esm/styles/prism';
+// react-syntax-highlighter has no exports map, so Node needs the explicit file path to read this as ESM
+// eslint-disable-next-line import/extensions
+import { solarizedDarkAtom as theme } from 'react-syntax-highlighter/dist/esm/styles/prism/index.js';
 
 import Button from '../Button';
 import { useSemanticIcon } from '../Icon';

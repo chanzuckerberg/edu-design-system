@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import clamp from 'lodash/clamp';
-import debounce from 'lodash/debounce';
+import clamp from 'lodash/clamp.js';
+import debounce from 'lodash/debounce.js';
 import React, {
   type ReactNode,
   useCallback,
