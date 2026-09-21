@@ -14,8 +14,8 @@ describe('<ProgressBar />', () => {
   generateSnapshots(stories as StoryFile);
 
   // The usage assertions are covered in `ProgressBar.usage.test.tsx`. Console output is
-  // suppressed per-test rather than for the whole file, so a log nothing here expects still
-  // shows up.
+  // suppressed per-test rather than for the whole file, so a log from a test that does not
+  // expect one still shows up.
 
   describe('the computed value label', () => {
     it('reports progress as a whole percentage', () => {
