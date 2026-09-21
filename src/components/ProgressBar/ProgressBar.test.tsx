@@ -1,27 +1,21 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest';
+import { describe, expect, it, vi, afterEach } from 'vitest';
 import { ProgressBar } from './ProgressBar';
 import * as stories from './ProgressBar.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<ProgressBar />', () => {
-  beforeEach(() => {
-    // Add in mocks for the calls that can occur in implementation to suppress logging in tests
-    const consoleMock = vi.spyOn(console, 'error');
-    const consoleWarnMock = vi.spyOn(console, 'warn');
-    consoleMock.mockImplementation(() => {});
-    consoleWarnMock.mockImplementation(() => {});
-  });
-
   afterEach(() => {
-    vi.resetAllMocks();
+    vi.restoreAllMocks();
   });
 
   generateSnapshots(stories as StoryFile);
 
-  // TODO(next-major): add in tests for assertions
+  // The usage assertions are covered in `ProgressBar.usage.test.tsx`. Console output is
+  // suppressed per-test rather than for the whole file, so a log nothing here expects still
+  // shows up.
 
   describe('the computed value label', () => {
     it('reports progress as a whole percentage', () => {
@@ -46,6 +40,9 @@ describe('<ProgressBar />', () => {
     });
 
     it('clamps a value above the max rather than reporting over 100%', () => {
+      // Out of range on purpose, so the component warns about it
+      vi.spyOn(console, 'warn').mockImplementation(() => {});
+
       render(<ProgressBar aria-label="progress" max={10} value={30} />);
 
       expect(screen.getByText('100%')).toBeInTheDocument();
@@ -55,6 +52,9 @@ describe('<ProgressBar />', () => {
     });
 
     it('clamps a value below zero rather than reporting a negative', () => {
+      // Out of range on purpose, so the component warns about it
+      vi.spyOn(console, 'warn').mockImplementation(() => {});
+
       render(<ProgressBar aria-label="progress" max={10} value={-5} />);
 
       expect(screen.getByText('0%')).toBeInTheDocument();

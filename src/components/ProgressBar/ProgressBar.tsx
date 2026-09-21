@@ -175,13 +175,14 @@ export const ProgressBar = ({
     '--progress-bar__progress': computedValue / max,
   };
 
+  // Both checks cover label props, which an embedded bar never renders. Advisory rather than
+  // broken usage, so it warns at the same level as the range check below.
   assertEdsUsage(
     [
       context === 'embedded' && !!descriptionLabel,
-      context === 'embedded' && !!value,
+      context === 'embedded' && !!valueLabel,
     ],
     'Labels are not allowed when context is embedded',
-    'error',
   );
 
   assertEdsUsage(
