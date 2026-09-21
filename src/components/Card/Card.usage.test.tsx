@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import type { ReactNode } from 'react';
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -64,72 +63,6 @@ describe('<Card.Header /> title heading level', () => {
   });
 });
 
-describe('<Card.Header /> title trailing content', () => {
-  beforeEach(() => {
-    vi.spyOn(console, 'warn').mockImplementation(() => {});
-  });
-
-  it('renders trailing content beside the heading, not inside it', () => {
-    render(
-      <Card.Header
-        title="Text Complexity"
-        titleAs="h2"
-        titleTrailingContent={<span>New</span>}
-      />,
-    );
-
-    const heading = screen.getByRole('heading', { level: 2 });
-    // The accessible name is the point: a marker nested in the heading would make this
-    // read "Text Complexity New" in a screen reader's heading list.
-    expect(heading).toHaveAccessibleName('Text Complexity');
-    expect(heading).not.toContainElement(screen.getByText('New'));
-    expect(screen.getByText('New')).toBeInTheDocument();
-  });
-
-  it('renders nothing for trailing content with no title to trail', () => {
-    render(<Card.Header titleTrailingContent={<span>New</span>} />);
-
-    expect(screen.queryByText('New')).not.toBeInTheDocument();
-  });
-
-  it('renders trailing content that is renderable but falsy', () => {
-    render(<Card.Header title="Text Complexity" titleTrailingContent={0} />);
-
-    // `0` renders as text, so dropping it would lose content the consumer passed. A
-    // truthiness check did exactly that, which is why the slot asks `hasSlotContent`.
-    expect(screen.getByText('0')).toBeInTheDocument();
-  });
-
-  it.each<[string, ReactNode]>([
-    ['an empty array', []],
-    // eslint-disable-next-line react/jsx-no-useless-fragment -- the empty fragment is the case under test
-    ['an empty fragment', <></>],
-  ])('leaves the heading unwrapped for %s', (_label, titleTrailingContent) => {
-    render(
-      <Card.Header
-        title="Text Complexity"
-        titleTrailingContent={titleTrailingContent}
-      />,
-    );
-
-    // Both are truthy while rendering nothing, so a truthiness check built a row holding
-    // an empty slot and put its gap after the title.
-    expect(
-      screen.getByRole('heading', { level: 3 }).parentElement?.className,
-    ).toContain('header__text');
-  });
-
-  it('leaves the heading unwrapped when no trailing content is passed', () => {
-    render(<Card.Header title="Text Complexity" />);
-
-    // No trailing content means no row to hold the pair, so the heading stays a direct
-    // child of the header's text column and every existing card keeps its markup.
-    expect(
-      screen.getByRole('heading', { level: 3 }).parentElement?.className,
-    ).toContain('header__text');
-  });
-});
-
 describe('<Card.Header /> usage warnings', () => {
   let warn: ReturnType<typeof vi.spyOn>;
 
@@ -161,27 +94,6 @@ describe('<Card.Header /> usage warnings', () => {
 
   it('stays quiet when the level is left off', () => {
     render(<Card.Header title="Text Complexity" />);
-
-    expect(warn).not.toHaveBeenCalled();
-  });
-
-  it('warns when trailing content is set with no title', () => {
-    render(<Card.Header titleTrailingContent={<span>New</span>} />);
-
-    expect(warn).toHaveBeenCalledWith(
-      expect.stringContaining(
-        'Card.Header renders `titleTrailingContent` beside a `title`',
-      ),
-    );
-  });
-
-  it('stays quiet when trailing content is set with a title', () => {
-    render(
-      <Card.Header
-        title="Text Complexity"
-        titleTrailingContent={<span>New</span>}
-      />,
-    );
 
     expect(warn).not.toHaveBeenCalled();
   });

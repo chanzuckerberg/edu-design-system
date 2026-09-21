@@ -10,7 +10,6 @@ import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
 import { Menu } from '../Menu/Menu';
-import Tag from '../Tag';
 import { Text } from '../Text/Text';
 
 export default {
@@ -406,11 +405,8 @@ export const WithFpoHeaderIconContent: Story = {
  * headers below carry the same `size`, so they look the same while sitting at different
  * levels.
  *
- * `titleTrailingContent` holds a short marker on the same line as the title, usually a
- * `Tag` naming the card's state. It renders beside the heading rather than inside it, so
- * each heading still announces as just its title.
  */
-export const WithTitleLevelAndTrailingContent: Story = {
+export const WithTitleLevel: Story = {
   args: {
     children: (
       <>
@@ -418,13 +414,11 @@ export const WithTitleLevelAndTrailingContent: Story = {
           subTitle="Sitting directly under the page's own heading"
           title="Text Complexity"
           titleAs="h2"
-          titleTrailingContent={<Tag label="New" status="informational" />}
         />
         <Card.Header
           subTitle="Sitting inside a section that already has an h2"
           title="Text Complexity"
           titleAs="h3"
-          titleTrailingContent={<Tag label="Beta" status="warning" />}
         />
       </>
     ),
