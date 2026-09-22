@@ -99,7 +99,7 @@ ${children}
                 }}
                 language={match[1]}
                 PreTag="div"
-                // override the type ti match the declarations in RSH's built-in themes
+                // override the type to match the declarations in RSH's built-in themes
                 style={
                   theme as { [key: string]: React.CSSProperties } | undefined
                 }
