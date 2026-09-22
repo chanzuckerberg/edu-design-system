@@ -64,7 +64,7 @@ export default {
       control: 'boolean',
     },
   },
-  tags: ['autodocs', 'version:3.1'],
+  tags: ['autodocs', 'version:3.2'],
 } as Meta<typeof Card>;
 
 type Story = StoryObj<typeof Card>;
@@ -393,6 +393,32 @@ export const WithFpoHeaderIconContent: Story = {
           size="md"
           subTitle="Medium header, 24px slot"
           title="Text Complexity"
+        />
+      </>
+    ),
+  },
+};
+
+/**
+ * `Card.Header` renders its `title` as a heading, at the level `titleAs` sets. Take that
+ * level from the page outline rather than from how large you want the title to read: both
+ * headers below carry the same `size`, so they look the same while sitting at different
+ * levels.
+ *
+ */
+export const WithTitleLevel: Story = {
+  args: {
+    children: (
+      <>
+        <Card.Header
+          subTitle="Sitting directly under the page's own heading"
+          title="Text Complexity"
+          titleAs="h2"
+        />
+        <Card.Header
+          subTitle="Sitting inside a section that already has an h2"
+          title="Text Complexity"
+          titleAs="h3"
         />
       </>
     ),

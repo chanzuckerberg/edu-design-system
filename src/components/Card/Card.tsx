@@ -2,10 +2,11 @@ import clsx from 'clsx';
 import type { HTMLAttributes, ReactNode } from 'react';
 import React from 'react';
 
+import { assertEdsUsage } from '../../util/logging';
 import type { IconOrContent } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 
-import Heading from '../Heading';
+import Heading, { type HeadingElement } from '../Heading';
 import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 
@@ -82,6 +83,24 @@ export type CardSubComponentProps = {
   className?: string;
 };
 
+/**
+ * Heading levels `Card.Header` takes for its title.
+ *
+ * A card always sits inside a section the page has already given a heading, so its title
+ * goes below that heading rather than competing with it. `h2` and `h3` cover where a card
+ * actually lands in an outline: `h1` would claim the page, and `h4` and down are deeper
+ * than a card nests.
+ *
+ * Kept as a value as well as a type so the component can check a level that reached it
+ * from untyped code, where the type alone stops nothing.
+ */
+const titleElements = ['h2', 'h3'] as const;
+
+export type CardHeaderTitleElement = Extract<
+  HeadingElement,
+  (typeof titleElements)[number]
+>;
+
 export type CardHeaderProps = {
   // Component API
   /**
@@ -118,6 +137,18 @@ export type CardHeaderProps = {
    * The title/heading of the component
    */
   title?: string;
+  /**
+   * Which heading level `title` renders at. Take it from the page outline: the level below
+   * whatever heading introduces the section the card sits in, not the size you want the
+   * title to read at.
+   *
+   * Only `h2` and `h3` are available, since a card's title sits under a heading the page
+   * has already set. The level never changes the title's treatment, which follows `size`,
+   * so a card can sit at the right level in the outline and still look the same.
+   *
+   * **Default is `"h3"`**.
+   */
+  titleAs?: CardHeaderTitleElement;
 };
 
 export interface CardCSSProperties extends React.CSSProperties {
@@ -137,6 +168,21 @@ export interface CardCSSProperties extends React.CSSProperties {
  * * Limit call-to-action buttons and/or links, using only one primary call-to-action per card.
  * * Do not use a card as an action.
  *
+ * ## Header titles
+ *
+ * `Card.Header` renders its `title` as a heading, at the level `titleAs` sets. Take that
+ * level from the page outline, the one below whatever heading introduces the section the
+ * card sits in. Only `h2` and `h3` are available, because a card's title always sits under
+ * a heading the page has already set.
+ *
+ * | Prop | What it sets | Where the value comes from |
+ * |------|--------------|----------------------------|
+ * | `titleAs` | Which heading tag the title renders as, `h2` or `h3`. | The document structure: the level below the heading of the section holding the card. |
+ * | `size` | The treatment of the title, and the rest of the header with it. | The design. |
+ *
+ * The two stay independent, so moving a card to a different level of the outline never
+ * changes how its title looks.
+ *
  * ## Content & Accessibility
  *
  * ### Do's
@@ -145,11 +191,13 @@ export interface CardCSSProperties extends React.CSSProperties {
  * * Use subheadings, paragraphs, and bullet lists to break up larger amounts of content.
  * * Use headings that make the card's purpose clear.
  * * Include essential, summarized information.
+ * * Set `titleAs` to the level the page outline calls for, so a card's title doesn't skip a heading level.
  *
  * ### Don'ts
  *
  * * Don't overwhelm the card with too much content; keep it scannable.
  * * Avoid too many call-to-action buttons or links within the same card.
+ * * Don't pick `titleAs` for the size it renders at. The title's treatment comes from `size`.
  */
 export const Card = ({
   containerColor = 'default',
@@ -250,6 +298,7 @@ const CardHeader = ({
   size = 'md',
   subTitle,
   title,
+  titleAs = 'h3',
   ...other
 }: CardHeaderProps) => {
   const componentClassName = clsx(
@@ -268,6 +317,13 @@ const CardHeader = ({
   const headerSubTitleClassName = clsx(
     styles['header__sub-title'],
     size && styles[`header--size-${size}`],
+  );
+
+  const isSupportedTitleElement = titleElements.includes(titleAs);
+
+  assertEdsUsage(
+    [!isSupportedTitleElement],
+    `Card.Header takes only \`h2\` or \`h3\` for \`titleAs\`, and \`${titleAs}\` is ignored in favor of \`h3\`. A card's title sits under a heading the page has already set, so pick the level just below that one.`,
   );
 
   return children ? (
@@ -297,7 +353,7 @@ const CardHeader = ({
         )}
         {title && (
           <Heading
-            as="h3"
+            as={isSupportedTitleElement ? titleAs : 'h3'}
             className={headerTitleClassName}
             preset={size === 'sm' ? 'title-sm' : 'title-lg'}
           >

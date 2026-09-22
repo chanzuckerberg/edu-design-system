@@ -929,3 +929,53 @@ exports[`<Card /> > WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`<Card /> > WithTitleLevel story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[450px]"
+  >
+    <div
+      class="_card__header_f66b11 _header--size-md_f66b11"
+    >
+      <div
+        class="_header__text_f66b11"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
+        >
+          Text Complexity
+        </h2>
+        <div
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
+        >
+          Sitting directly under the page's own heading
+        </div>
+      </div>
+    </div>
+    <div
+      class="_card__header_f66b11 _header--size-md_f66b11"
+    >
+      <div
+        class="_header__text_f66b11"
+      >
+        <h3
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
+        >
+          Text Complexity
+        </h3>
+        <div
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
+        >
+          Sitting inside a section that already has an h2
+        </div>
+      </div>
+    </div>
+    <div
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
+    />
+  </div>
+</div>
+`;
