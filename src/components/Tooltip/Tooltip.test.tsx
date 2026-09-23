@@ -422,4 +422,22 @@ describe('<Tooltip />', () => {
     expect(container).toContainElement(screen.getByRole('tooltip'));
     container.remove();
   });
+
+  it('draws the arrow unless arrow is false', () => {
+    const { rerender } = render(
+      <Tooltip content="Tooltip text" duration={0} visible>
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    const bubble = () => screen.getByRole('tooltip').firstElementChild;
+    expect(bubble()?.children).toHaveLength(2);
+
+    rerender(
+      <Tooltip arrow={false} content="Tooltip text" duration={0} visible>
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    expect(bubble()?.children).toHaveLength(1);
+    expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
+  });
 });
