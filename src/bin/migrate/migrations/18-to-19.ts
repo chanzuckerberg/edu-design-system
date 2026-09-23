@@ -223,6 +223,32 @@ const removedModalProps: EditJsxPropChange[] = [
   },
 ];
 
+/**
+ * `Tooltip` is built on Floating UI now, not Tippy.js, and no longer takes every Tippy prop.
+ * It keeps the ones EDS documented along with the common ones it could carry over
+ * unchanged. Three of the rest move without changing anything:
+ *
+ * - `content` was Tippy's name for what EDS calls `text`, and overrode it when both were set.
+ * - `offset` never took effect: `Tooltip` always passed its own 12px offset through
+ *   `popperOptions`, which Tippy merged in after it.
+ * - `animateFill` did nothing without Tippy's `animateFill` plugin, which EDS never loaded.
+ *
+ * Every other Tippy-only prop (`plugins`, `popperOptions`, `render`, `theme`, `followCursor`,
+ * and so on) changed how the tooltip behaved and has no equivalent to move it onto, so it is
+ * left in place to become a type error on upgrade. So is a Tippy callback that reads the
+ * instance it was handed: `onShow` and `onHide` still exist but take no arguments.
+ */
+const tooltipChanges: EditJsxPropChange[] = [
+  {
+    componentName: 'Tooltip',
+    edits: [
+      { type: 'update_name', oldPropName: 'content', newPropName: 'text' },
+      { type: 'remove', propName: 'offset' },
+      { type: 'remove', propName: 'animateFill' },
+    ],
+  },
+];
+
 export const PropChanges: EditJsxPropChange[] = [
   {
     componentName: 'Text',
@@ -311,6 +337,7 @@ export const PropChanges: EditJsxPropChange[] = [
     edits: removeSemanticIconProps(['icon']),
   },
   ...removedModalProps,
+  ...tooltipChanges,
   {
     /**
      * `Link.icon` never took an arbitrary icon: it picked one of two roles, or none. Both

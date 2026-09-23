@@ -7,7 +7,6 @@
   border-width: 1px;
   border-radius: calc(var(--eds-theme-border-radius-surfaces-md) * 1px);
   box-shadow: var(--eds-box-shadow-md);
-  max-width: 224px;
 
   @media (prefers-reduced-motion) {
     transition: none;
@@ -21,7 +20,7 @@
   opacity: 0;
 }
 
-.tooltip :global(.tippy-content) {
+.tooltip .tooltip__content {
   padding-left: calc(var(--eds-spacing-size-2) * 1px);
   padding-right: calc(var(--eds-spacing-size-2) * 1px);
   padding-bottom: calc(var(--eds-spacing-size-1) * 1px);
@@ -29,16 +28,16 @@
 }
 
 /**
- * Add arrows
+ * Add arrows. Their offset along the bubble is set inline, to point at the trigger.
  */
-.tooltip :global(.tippy-arrow) {
+.tooltip .tooltip__arrow {
   position: absolute;
 
   width: calc(var(--eds-spacing-size-2) * 1px);
   height: calc(var(--eds-spacing-size-2) * 1px);
 }
 
-.tooltip :global(.tippy-arrow::before) {
+.tooltip .tooltip__arrow::before {
   position: absolute;
 
   border-style: solid;
@@ -48,41 +47,33 @@
   content: '';
 }
 
-.tooltip[data-placement^='top'] :global(.tippy-arrow) {
+.tooltip[data-placement^='top'] .tooltip__arrow {
   left: 0;
-
-  transform: translate3d(73px, 0, 0);
 }
 
-.tooltip[data-placement^='bottom'] :global(.tippy-arrow) {
+.tooltip[data-placement^='bottom'] .tooltip__arrow {
   top: 0;
   left: 0;
-
-  transform: translate3d(73px, 0, 0);
 }
 
-.tooltip[data-placement^='left'] :global(.tippy-arrow) {
+.tooltip[data-placement^='left'] .tooltip__arrow {
   top: 0;
   right: 0;
-
-  transform: translate3d(0, 19px, 0);
 }
 
-.tooltip[data-placement^='right'] :global(.tippy-arrow) {
+.tooltip[data-placement^='right'] .tooltip__arrow {
   top: 0;
   left: 0;
-
-  transform: translate3d(0, 25px, 0);
 }
 
-.tooltip[data-placement^='top'] :global(.tippy-arrow::before) {
+.tooltip[data-placement^='top'] .tooltip__arrow::before {
   left: 0;
 
   border-top-color: var(--arrow-color);
   border-bottom-width: 0;
 }
 
-.tooltip[data-placement^='bottom'] :global(.tippy-arrow::before) {
+.tooltip[data-placement^='bottom'] .tooltip__arrow::before {
   left: 0;
 
   border-bottom-color: var(--arrow-color);
@@ -90,13 +81,13 @@
   top: -7px;
 }
 
-.tooltip[data-placement^='left'] :global(.tippy-arrow::before) {
+.tooltip[data-placement^='left'] .tooltip__arrow::before {
   border-left-color: var(--arrow-color);
   border-right-width: 0;
   right: -7px;
 }
 
-.tooltip[data-placement^='right'] :global(.tippy-arrow::before) {
+.tooltip[data-placement^='right'] .tooltip__arrow::before {
   border-right-color: var(--arrow-color);
   border-left-width: 0;
   left: -7px;

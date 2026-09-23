@@ -671,6 +671,54 @@ describe('18-to-19', () => {
     expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 
+  it('moves Tooltip content onto text and drops Tippy props that had no effect', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip animateFill content="Tooltip text" offset={[0, 20]} placement="top">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip text="Tooltip text" placement="top">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+  });
+
+  it('leaves Tooltip props with no Floating UI equivalent alone', () => {
+    const sourceFileText = dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip followCursor popperOptions={{}} text="Tooltip text" theme="light">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
   it('leaves a same-named component from another package alone', () => {
     const sourceFileText = dedent`
       import {Text} from 'some-other-library';

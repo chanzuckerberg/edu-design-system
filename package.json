@@ -84,9 +84,9 @@
     "react-dom": ">= 19"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.27.20",
     "@headlessui/react": "^2.2.10",
     "@tanstack/react-table": "^8.21.3",
-    "@tippyjs/react": "^4.2.6",
     "chalk": "^4.1.2",
     "clsx": "^2.1.1",
     "enquirer": "^2.4.1",

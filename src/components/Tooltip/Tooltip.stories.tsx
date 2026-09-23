@@ -57,7 +57,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:3.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tooltip>;

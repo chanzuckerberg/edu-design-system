@@ -5,7 +5,7 @@ exports[`<Tooltip /> > BottomPlacement story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    aria-describedby="tippy-3"
+    aria-describedby="_r_6_"
     class="fpo p-1"
   >
     Target Component
@@ -18,7 +18,7 @@ exports[`<Tooltip /> > FormattedContent story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    aria-describedby="tippy-9"
+    aria-describedby="_r_m_"
     class="fpo p-1"
   >
     Target Component
@@ -60,7 +60,7 @@ exports[`<Tooltip /> > InverseVariant story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    aria-describedby="tippy-6"
+    aria-describedby="_r_f_"
     class="fpo p-1"
   >
     Target Component
@@ -73,7 +73,7 @@ exports[`<Tooltip /> > LeftPlacement story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    aria-describedby="tippy-1"
+    aria-describedby="_r_0_"
     class="fpo p-1"
   >
     Target Component
@@ -86,7 +86,7 @@ exports[`<Tooltip /> > LongText story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    aria-describedby="tippy-4"
+    aria-describedby="_r_9_"
     class="fpo p-1"
   >
     Target Component
@@ -99,7 +99,7 @@ exports[`<Tooltip /> > LongTriggerText story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    aria-describedby="tippy-5"
+    aria-describedby="_r_c_"
     class="fpo p-1"
   >
     Longer text to test placement
@@ -112,7 +112,7 @@ exports[`<Tooltip /> > TopPlacement story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    aria-describedby="tippy-2"
+    aria-describedby="_r_3_"
     class="fpo p-1"
   >
     Target Component
