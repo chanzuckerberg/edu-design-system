@@ -204,7 +204,7 @@ export const UsingWithTooltip: Story = {
   },
   tags: ['code-only'],
   render: (args) => (
-    <Tooltip text="Show additional user information">
+    <Tooltip content="Show additional user information">
       <span>
         <Avatar {...args} />
       </span>

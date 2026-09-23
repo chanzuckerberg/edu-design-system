@@ -671,6 +671,130 @@ describe('18-to-19', () => {
     expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 
+  it('renames Tooltip text to content and drops Tippy props that had no effect', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip animateFill offset={[0, 20]} placement="top" text="Tooltip text">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip placement="top" content="Tooltip text">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+  });
+
+  it('keeps Tooltip content over text when both were set', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip content="What rendered" text="What was overridden">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip content="What rendered">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+  });
+
+  it('leaves Tooltip text written after a spread alone', () => {
+    const sourceFileText = dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <Tooltip {...props} text="Tooltip text">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
+  it('renames Tooltip text written before a spread', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <Tooltip text="Tooltip text" {...props}>
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <Tooltip content="Tooltip text" {...props}>
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+  });
+
+  it('leaves Tooltip props with no Floating UI equivalent alone', () => {
+    const sourceFileText = dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip content="Tooltip text" followCursor popperOptions={{}} theme="light">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
   it('leaves a same-named component from another package alone', () => {
     const sourceFileText = dedent`
       import {Text} from 'some-other-library';

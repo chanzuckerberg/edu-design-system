@@ -38,7 +38,7 @@ export const LabelAfter: StoryObj<Args> = {
   args: {
     text: 'Label',
     labelAfter: (
-      <Tooltip text="Test">
+      <Tooltip content="Test">
         <span>*</span>
       </Tooltip>
     ),

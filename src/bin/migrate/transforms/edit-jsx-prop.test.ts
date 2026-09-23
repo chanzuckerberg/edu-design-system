@@ -408,6 +408,139 @@ describe('transform', () => {
     `);
   });
 
+  it('lets the callback check for other props on the element', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" size="lg" />
+            <Icon size="lg" />
+          </>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'size',
+              callback: ({ hasProp }) => hasProp('text'),
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" />
+            <Icon size="lg" />
+          </>
+        )
+      }
+    `);
+  });
+
+  it('lets an update_name callback check for other props on the element', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" size="lg" />
+            <Icon size="lg" />
+          </>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'size',
+              newPropName: 'scale',
+              callback: ({ hasProp }) => !hasProp('text'),
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" size="lg" />
+            <Icon scale="lg" />
+          </>
+        )
+      }
+    `);
+  });
+
+  it('tells the callback whether a spread comes before the prop', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <>
+            <Icon {...props} size="lg" />
+            <Icon size="lg" {...props} />
+          </>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'size',
+              callback: ({ followsSpread }) => !followsSpread,
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <>
+            <Icon {...props} size="lg" />
+            <Icon {...props} />
+          </>
+        )
+      }
+    `);
+  });
+
   it('edits multiple props on the same component', () => {
     const sourceFileText = dedent`
     import {Button, ButtonGroup} from '@chanzuckerberg/eds';
