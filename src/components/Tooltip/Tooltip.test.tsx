@@ -162,6 +162,37 @@ describe('<Tooltip />', () => {
     expect(trigger).toHaveAttribute('aria-describedby', 'existing-description');
   });
 
+  it('tracks the expanded state on a reference with no aria-expanded of its own', async () => {
+    const user = userEvent.setup();
+    const Example = () => {
+      const ref = React.useRef<HTMLButtonElement>(null);
+      return (
+        <>
+          <button ref={ref}>Trigger</button>
+          <Tooltip
+            content="Tooltip text"
+            duration={0}
+            interactive
+            reference={ref}
+          />
+        </>
+      );
+    };
+    const { unmount } = render(<Example />);
+    const trigger = screen.getByRole('button');
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
+    await user.hover(trigger);
+    expect(screen.getByRole('tooltip')).toBeInTheDocument();
+    expect(trigger).toHaveAttribute('aria-expanded', 'true');
+    await user.keyboard('{Escape}');
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
+    await user.unhover(trigger);
+    await user.hover(trigger);
+    expect(trigger).toHaveAttribute('aria-expanded', 'true');
+    unmount();
+    expect(trigger).not.toHaveAttribute('aria-expanded');
+  });
+
   it('leaves aria-expanded alone on a reference that sets its own', async () => {
     const user = userEvent.setup();
     const Example = () => {
