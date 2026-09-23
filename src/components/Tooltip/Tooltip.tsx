@@ -165,6 +165,13 @@ type TooltipProps = {
 } & Omit<HTMLAttributes<HTMLElement>, 'children' | 'content'>;
 
 /**
+ * Space-separated ID references, as `aria-describedby` takes them, with any empty ones left out.
+ */
+function joinIds(...ids: unknown[]) {
+  return ids.filter(Boolean).join(' ') || undefined;
+}
+
+/**
  * Interaction hooks hand back React props (`onFocus`, `aria-describedby`, ...). A trigger passed
  * by `reference` is not rendered by the Tooltip, so there is nothing to spread them onto.
  * Bind them to the element directly instead, and return a cleanup that unbinds them.
@@ -201,7 +208,12 @@ function bindPropsToElement(
       cleanups.push(() => element.removeEventListener(eventName, listener));
     } else if (typeof value === 'string' || typeof value === 'boolean') {
       const previousValue = element.getAttribute(key);
-      element.setAttribute(key, String(value));
+      element.setAttribute(
+        key,
+        key === 'aria-describedby'
+          ? (joinIds(previousValue, value) as string)
+          : String(value),
+      );
       cleanups.push(() =>
         previousValue === null
           ? element.removeAttribute(key)
@@ -335,7 +347,10 @@ export const Tooltip = ({
         interactionsEnabled &&
         (triggers.includes('focus') || triggers.includes('focusin')),
     }),
-    useClick(context, { enabled: interactionsEnabled && hasClickTrigger }),
+    useClick(context, {
+      enabled: interactionsEnabled && hasClickTrigger,
+      toggle: hideOnClick !== false,
+    }),
     useDismiss(context, {
       enabled: interactionsEnabled,
       outsidePress: hideOnClick === true,
@@ -392,7 +407,12 @@ export const Tooltip = ({
     }
   }, [reference, refs]);
 
+  // The tooltip describes its trigger alongside any description the trigger already has. An
+  // interactive tooltip holds more than a description, so it marks the trigger expanded
+  // instead, unless the trigger already manages `aria-expanded` itself.
+  const describedById = open && !interactive ? context.floatingId : undefined;
   const ariaExpanded = interactive ? open : undefined;
+
   const externalReference = reference ? elements.domReference : null;
   // Rebinds every render, since the interaction props change with the open state
   // eslint-disable-next-line @chanzuckerberg/edu-react/use-effect-deps-presence
@@ -400,7 +420,12 @@ export const Tooltip = ({
     if (externalReference) {
       return bindPropsToElement(
         externalReference,
-        getReferenceProps({ 'aria-expanded': ariaExpanded }),
+        getReferenceProps({
+          'aria-describedby': describedById,
+          'aria-expanded': externalReference.hasAttribute('aria-expanded')
+            ? undefined
+            : ariaExpanded,
+        }),
       );
     }
   });
@@ -442,8 +467,12 @@ export const Tooltip = ({
         React.cloneElement(
           children,
           getReferenceProps({
-            ...children.props,
             'aria-expanded': ariaExpanded,
+            ...children.props,
+            'aria-describedby': joinIds(
+              children.props['aria-describedby'],
+              describedById,
+            ),
             ref: triggerRef,
           }),
         )}

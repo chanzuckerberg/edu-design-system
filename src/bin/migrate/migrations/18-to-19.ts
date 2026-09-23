@@ -230,7 +230,9 @@ const removedModalProps: EditJsxPropChange[] = [
  * already gave it and the one `Tooltip` had marked for this major.
  *
  * - `text` becomes `content`. A tooltip that set both rendered `content`, since the Tippy
- *   props spread in after `text`, so there `text` is dropped instead of renamed.
+ *   props spread in after `text`, so there `text` is dropped instead of renamed. That also
+ *   held for a `content` arriving in a spread (`{...props}`), and renaming a `text` written
+ *   after one would flip which wins, so that `text` is left to become a type error instead.
  * - `offset` never took effect: `Tooltip` always passed its own 12px offset through
  *   `popperOptions`, which Tippy merged in after it.
  * - `animateFill` did nothing without Tippy's `animateFill` plugin, which EDS never loaded.
@@ -249,7 +251,12 @@ const tooltipChanges: EditJsxPropChange[] = [
         propName: 'text',
         callback: ({ hasProp }) => hasProp('content'),
       },
-      { type: 'update_name', oldPropName: 'text', newPropName: 'content' },
+      {
+        type: 'update_name',
+        oldPropName: 'text',
+        newPropName: 'content',
+        callback: ({ followsSpread }) => !followsSpread,
+      },
       { type: 'remove', propName: 'offset' },
       { type: 'remove', propName: 'animateFill' },
     ],

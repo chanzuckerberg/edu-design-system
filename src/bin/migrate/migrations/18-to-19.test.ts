@@ -727,6 +727,54 @@ describe('18-to-19', () => {
     `);
   });
 
+  it('leaves Tooltip text written after a spread alone', () => {
+    const sourceFileText = dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <Tooltip {...props} text="Tooltip text">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
+  it('renames Tooltip text written before a spread', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <Tooltip text="Tooltip text" {...props}>
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <Tooltip content="Tooltip text" {...props}>
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+  });
+
   it('leaves Tooltip props with no Floating UI equivalent alone', () => {
     const sourceFileText = dedent`
       import {Tooltip} from '@chanzuckerberg/eds';

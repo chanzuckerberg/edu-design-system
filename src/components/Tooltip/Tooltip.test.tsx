@@ -155,11 +155,93 @@ describe('<Tooltip />', () => {
     await user.hover(trigger);
     expect(trigger).toHaveAttribute(
       'aria-describedby',
-      screen.getByRole('tooltip').id,
+      `existing-description ${screen.getByRole('tooltip').id}`,
     );
     await user.keyboard('{Escape}');
     expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
     expect(trigger).toHaveAttribute('aria-describedby', 'existing-description');
+  });
+
+  it('leaves aria-expanded alone on a reference that sets its own', async () => {
+    const user = userEvent.setup();
+    const Example = () => {
+      const ref = React.useRef<HTMLButtonElement>(null);
+      return (
+        <>
+          <button aria-expanded="false" ref={ref}>
+            Trigger
+          </button>
+          <Tooltip
+            content="Tooltip text"
+            duration={0}
+            interactive
+            reference={ref}
+          />
+        </>
+      );
+    };
+    render(<Example />);
+    const trigger = screen.getByRole('button');
+    await user.hover(trigger);
+    expect(screen.getByRole('tooltip')).toBeInTheDocument();
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
+  });
+
+  it('adds to a description the trigger already has', async () => {
+    const user = userEvent.setup();
+    render(
+      <Tooltip content="Tooltip text" duration={0}>
+        <button aria-describedby="existing-description">Trigger</button>
+      </Tooltip>,
+    );
+    const trigger = screen.getByRole('button');
+    await user.hover(trigger);
+    expect(trigger).toHaveAttribute(
+      'aria-describedby',
+      `existing-description ${screen.getByRole('tooltip').id}`,
+    );
+    await user.keyboard('{Escape}');
+    expect(trigger).toHaveAttribute('aria-describedby', 'existing-description');
+  });
+
+  it('stays open on a second click when hideOnClick is false', async () => {
+    const user = userEvent.setup();
+    render(
+      <Tooltip
+        content="Tooltip text"
+        duration={0}
+        hideOnClick={false}
+        trigger="click"
+      >
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    const trigger = screen.getByRole('button');
+    await user.click(trigger);
+    await user.click(trigger);
+    expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
+    await user.click(document.body);
+    expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
+  });
+
+  it('toggles on click, but ignores outside clicks, when hideOnClick is toggle', async () => {
+    const user = userEvent.setup();
+    render(
+      <Tooltip
+        content="Tooltip text"
+        duration={0}
+        hideOnClick="toggle"
+        trigger="click"
+      >
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    const trigger = screen.getByRole('button');
+    await user.click(trigger);
+    await user.click(document.body);
+    expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
+    await user.click(trigger);
+    expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
   });
 
   it('appends to the trigger parent when interactive', async () => {
@@ -174,9 +256,23 @@ describe('<Tooltip />', () => {
     const trigger = screen.getByRole('button');
     await user.hover(trigger);
     expect(trigger).toHaveAttribute('aria-expanded', 'true');
+    expect(trigger).not.toHaveAttribute('aria-describedby');
     expect(screen.getByTestId('parent')).toContainElement(
       screen.getByRole('tooltip'),
     );
+  });
+
+  it('leaves aria-expanded alone on a child that sets its own', async () => {
+    const user = userEvent.setup();
+    render(
+      <Tooltip content="Tooltip text" duration={0} interactive>
+        <button aria-expanded="false">Trigger</button>
+      </Tooltip>,
+    );
+    const trigger = screen.getByRole('button');
+    await user.hover(trigger);
+    expect(screen.getByRole('tooltip')).toBeInTheDocument();
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
   });
 
   it('keeps the tooltip size and stacking defaults', () => {

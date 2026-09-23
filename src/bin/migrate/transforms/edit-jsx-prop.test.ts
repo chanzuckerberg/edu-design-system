@@ -497,6 +497,50 @@ describe('transform', () => {
     `);
   });
 
+  it('tells the callback whether a spread comes before the prop', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <>
+            <Icon {...props} size="lg" />
+            <Icon size="lg" {...props} />
+          </>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'size',
+              callback: ({ followsSpread }) => !followsSpread,
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <>
+            <Icon {...props} size="lg" />
+            <Icon {...props} />
+          </>
+        )
+      }
+    `);
+  });
+
   it('edits multiple props on the same component', () => {
     const sourceFileText = dedent`
     import {Button, ButtonGroup} from '@chanzuckerberg/eds';

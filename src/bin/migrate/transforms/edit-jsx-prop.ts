@@ -12,12 +12,18 @@ import { isDesignSystemImport } from '../helpers';
  *
  * `hasProp` answers for the element being edited, so an edit can depend on its siblings, as
  * when two props that used to overlap have to collapse into one.
+ *
+ * `followsSpread` says whether a spread (`{...props}`) comes before the prop. A spread's
+ * contents can't be read here, and a prop written after one overrides whatever it carried, so
+ * an edit that would change which of the two wins can decline rather than guess.
  */
 type EditCallback = ({
   currentPropValue,
+  followsSpread,
   hasProp,
 }: {
   currentPropValue: string;
+  followsSpread: boolean;
   hasProp: (propName: string) => boolean;
 }) => boolean;
 
@@ -72,6 +78,23 @@ function getStringLiteralValue(
   return literal?.getLiteralValue() ?? '';
 }
 
+/**
+ * The arguments a conditional edit's callback decides on, for one prop on one element.
+ */
+function getCallbackArgs(
+  element: JsxOpeningElement | JsxSelfClosingElement,
+  attribute: JsxAttribute,
+) {
+  const attributes = element.getAttributes();
+  return {
+    currentPropValue: getStringLiteralValue(attribute.getInitializer()),
+    followsSpread: attributes
+      .slice(0, attributes.indexOf(attribute))
+      .some((sibling) => sibling.isKind(SyntaxKind.JsxSpreadAttribute)),
+    hasProp: (propName: string) => element.getAttribute(propName) !== undefined,
+  };
+}
+
 function removeProp(
   element: JsxOpeningElement | JsxSelfClosingElement,
   edit: Extract<Edit, { type: 'remove' }>,
@@ -79,11 +102,7 @@ function removeProp(
   const attribute = element.getAttribute(edit.propName);
   if (attribute && 'getNameNode' in attribute) {
     const performEdit =
-      !edit.callback ||
-      edit.callback({
-        currentPropValue: getStringLiteralValue(attribute.getInitializer()),
-        hasProp: (propName) => element.getAttribute(propName) !== undefined,
-      });
+      !edit.callback || edit.callback(getCallbackArgs(element, attribute));
 
     if (performEdit) {
       attribute.remove();
@@ -98,11 +117,7 @@ function updatePropName(
   const attribute = element.getAttribute(edit.oldPropName);
   if (attribute && 'getNameNode' in attribute) {
     const performEdit =
-      !edit.callback ||
-      edit.callback({
-        currentPropValue: getStringLiteralValue(attribute.getInitializer()),
-        hasProp: (propName) => element.getAttribute(propName) !== undefined,
-      });
+      !edit.callback || edit.callback(getCallbackArgs(element, attribute));
 
     if (performEdit) {
       attribute.setName(edit.newPropName);
