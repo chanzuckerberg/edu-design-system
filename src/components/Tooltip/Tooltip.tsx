@@ -64,7 +64,7 @@ type TooltipProps = {
    *
    * Please note that spacing and placement styling will need to be added to a wrapper around the Tooltip,
    * not on the child component inside the Tooltip, because there will be a wrapper around the child. Example:
-   * <div className="spacing-goes-here"><Tooltip text="Tooltip text"><Button disabled>Button text</Button></Tooltip></div>
+   * <div className="spacing-goes-here"><Tooltip content="Tooltip text"><Button disabled>Button text</Button></Tooltip></div>
    */
   childNotInteractive?: boolean;
   /**
@@ -155,7 +155,7 @@ type TooltipProps = {
   /**
    * The content of the tooltip bubble.
    */
-  text?: React.ReactNode;
+  content?: React.ReactNode;
   /**
    * The variant treatment for tooltips
    *
@@ -270,6 +270,7 @@ export const Tooltip = ({
   arrow = true,
   childNotInteractive,
   className,
+  content,
   delay,
   disabled,
   duration = 200,
@@ -280,7 +281,6 @@ export const Tooltip = ({
   onShow,
   placement = 'auto',
   reference,
-  text, // TODO(next-major): change prop name to `content`
   trigger = 'mouseenter focus',
   variant = 'default',
   visible,
@@ -414,13 +414,13 @@ export const Tooltip = ({
     portalRoot = appendTo;
   }
 
-  const textContent =
-    typeof text === 'string' ? (
+  const bubbleContent =
+    typeof content === 'string' ? (
       <Text as="span" data-testid="tooltip-content" preset="body-sm">
-        {text}
+        {content}
       </Text>
     ) : (
-      text
+      content
     );
 
   const tooltipClassNames = clsx(
@@ -466,7 +466,7 @@ export const Tooltip = ({
                 ...style,
               }}
             >
-              <div className={styles['tooltip__content']}>{textContent}</div>
+              <div className={styles['tooltip__content']}>{bubbleContent}</div>
               {arrow && (
                 <div
                   className={styles['tooltip__arrow']}

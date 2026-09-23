@@ -226,9 +226,11 @@ const removedModalProps: EditJsxPropChange[] = [
 /**
  * `Tooltip` is built on Floating UI now, not Tippy.js, and no longer takes every Tippy prop.
  * It keeps the ones EDS documented along with the common ones it could carry over
- * unchanged. Three of the rest move without changing anything:
+ * unchanged. Its bubble's content also moved from `text` to `content`, the name Tippy
+ * already gave it and the one `Tooltip` had marked for this major.
  *
- * - `content` was Tippy's name for what EDS calls `text`, and overrode it when both were set.
+ * - `text` becomes `content`. A tooltip that set both rendered `content`, since the Tippy
+ *   props spread in after `text`, so there `text` is dropped instead of renamed.
  * - `offset` never took effect: `Tooltip` always passed its own 12px offset through
  *   `popperOptions`, which Tippy merged in after it.
  * - `animateFill` did nothing without Tippy's `animateFill` plugin, which EDS never loaded.
@@ -242,7 +244,12 @@ const tooltipChanges: EditJsxPropChange[] = [
   {
     componentName: 'Tooltip',
     edits: [
-      { type: 'update_name', oldPropName: 'content', newPropName: 'text' },
+      {
+        type: 'remove',
+        propName: 'text',
+        callback: ({ hasProp }) => hasProp('content'),
+      },
+      { type: 'update_name', oldPropName: 'text', newPropName: 'content' },
       { type: 'remove', propName: 'offset' },
       { type: 'remove', propName: 'animateFill' },
     ],

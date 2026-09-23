@@ -11,7 +11,8 @@ import Text from '../Text';
 // https://www.chromatic.com/docs/threshold
 const diffThreshold = 0.75;
 const defaultArgs = {
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a erat eu augue consequat eleifend non vel sem. Praesent efficitur mauris ac leo semper accumsan.',
+  content:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a erat eu augue consequat eleifend non vel sem. Praesent efficitur mauris ac leo semper accumsan.',
   children: <div className="fpo p-1">Target Component</div>,
   placement: 'right',
   // most stories show a visible, non-interactive tooltip.
@@ -25,7 +26,7 @@ export default {
   component: Tooltip,
   args: defaultArgs,
   argTypes: {
-    text: {
+    content: {
       control: {
         type: 'text',
       },
@@ -93,7 +94,8 @@ export const BottomPlacement: Story = {
 
 export const LongText: Story = {
   args: {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a erat eu augue consequat eleifend non vel sem. Praesent efficitur mauris ac leo semper accumsan. Donec posuere semper fermentum. Vivamus venenatis laoreet venenatis. Sed consectetur, dolor sed tristique vehicula, sapien nulla convallis odio, et tempus urna mi eu leo. Phasellus a venenatis sapien. Cras massa lectus, sollicitudin id nulla id, laoreet facilisis est.',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a erat eu augue consequat eleifend non vel sem. Praesent efficitur mauris ac leo semper accumsan. Donec posuere semper fermentum. Vivamus venenatis laoreet venenatis. Sed consectetur, dolor sed tristique vehicula, sapien nulla convallis odio, et tempus urna mi eu leo. Phasellus a venenatis sapien. Cras massa lectus, sollicitudin id nulla id, laoreet facilisis est.',
   },
 };
 
@@ -141,9 +143,9 @@ export const InteractiveDisabled: Story = {
   render: (args) => (
     <Tooltip
       childNotInteractive
+      content={defaultArgs.content}
       duration={args.duration}
       placement="top"
-      text={defaultArgs.text}
     >
       <div className="fpo p-1">Target Component</div>
     </Tooltip>
@@ -155,7 +157,7 @@ export const InteractiveDisabled: Story = {
  */
 export const FormattedContent: Story = {
   args: {
-    text: (
+    content: (
       <>
         <Text as="p" preset="headline-md">
           Formatted Tooltip

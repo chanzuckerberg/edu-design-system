@@ -671,13 +671,13 @@ describe('18-to-19', () => {
     expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 
-  it('moves Tooltip content onto text and drops Tippy props that had no effect', () => {
+  it('renames Tooltip text to content and drops Tippy props that had no effect', () => {
     const sourceFile = createTestSourceFile(dedent`
       import {Tooltip} from '@chanzuckerberg/eds';
 
       export default function Component() {
         return (
-          <Tooltip animateFill content="Tooltip text" offset={[0, 20]} placement="top">
+          <Tooltip animateFill offset={[0, 20]} placement="top" text="Tooltip text">
             <button>Trigger</button>
           </Tooltip>
         )
@@ -691,7 +691,35 @@ describe('18-to-19', () => {
 
       export default function Component() {
         return (
-          <Tooltip text="Tooltip text" placement="top">
+          <Tooltip placement="top" content="Tooltip text">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+  });
+
+  it('keeps Tooltip content over text when both were set', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip content="What rendered" text="What was overridden">
+            <button>Trigger</button>
+          </Tooltip>
+        )
+      }
+    `);
+
+    migration(sourceFile.getProject());
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Tooltip} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <Tooltip content="What rendered">
             <button>Trigger</button>
           </Tooltip>
         )
@@ -705,7 +733,7 @@ describe('18-to-19', () => {
 
       export default function Component() {
         return (
-          <Tooltip followCursor popperOptions={{}} text="Tooltip text" theme="light">
+          <Tooltip content="Tooltip text" followCursor popperOptions={{}} theme="light">
             <button>Trigger</button>
           </Tooltip>
         )

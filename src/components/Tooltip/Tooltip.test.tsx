@@ -70,7 +70,7 @@ describe('<Tooltip />', () => {
   it('toggles on click when triggered by click', async () => {
     const user = userEvent.setup();
     render(
-      <Tooltip duration={0} text="Tooltip text" trigger="click">
+      <Tooltip content="Tooltip text" duration={0} trigger="click">
         <button>Trigger</button>
       </Tooltip>,
     );
@@ -86,7 +86,7 @@ describe('<Tooltip />', () => {
   it('never shows when disabled', async () => {
     const user = userEvent.setup();
     render(
-      <Tooltip disabled duration={0} text="Tooltip text" visible>
+      <Tooltip content="Tooltip text" disabled duration={0} visible>
         <button>Trigger</button>
       </Tooltip>,
     );
@@ -97,7 +97,7 @@ describe('<Tooltip />', () => {
   it('ignores the trigger when visibility is controlled', async () => {
     const user = userEvent.setup();
     render(
-      <Tooltip duration={0} text="Tooltip text" visible={false}>
+      <Tooltip content="Tooltip text" duration={0} visible={false}>
         <button>Trigger</button>
       </Tooltip>,
     );
@@ -110,7 +110,12 @@ describe('<Tooltip />', () => {
     const onShow = vi.fn();
     const onHide = vi.fn();
     render(
-      <Tooltip duration={0} onHide={onHide} onShow={onShow} text="Tooltip text">
+      <Tooltip
+        content="Tooltip text"
+        duration={0}
+        onHide={onHide}
+        onShow={onShow}
+      >
         <button>Trigger</button>
       </Tooltip>,
     );
@@ -125,7 +130,7 @@ describe('<Tooltip />', () => {
   it('keeps the ref on its child', () => {
     const ref = React.createRef<HTMLButtonElement>();
     render(
-      <Tooltip text="Tooltip text">
+      <Tooltip content="Tooltip text">
         <button ref={ref}>Trigger</button>
       </Tooltip>,
     );
@@ -141,7 +146,7 @@ describe('<Tooltip />', () => {
           <button aria-describedby="existing-description" ref={ref}>
             Trigger
           </button>
-          <Tooltip duration={0} reference={ref} text="Tooltip text" />
+          <Tooltip content="Tooltip text" duration={0} reference={ref} />
         </>
       );
     };
@@ -161,7 +166,7 @@ describe('<Tooltip />', () => {
     const user = userEvent.setup();
     render(
       <div data-testid="parent">
-        <Tooltip duration={0} interactive text="Tooltip text">
+        <Tooltip content="Tooltip text" duration={0} interactive>
           <button>Trigger</button>
         </Tooltip>
       </div>,
@@ -176,7 +181,7 @@ describe('<Tooltip />', () => {
 
   it('keeps the tooltip size and stacking defaults', () => {
     render(
-      <Tooltip duration={0} text="Tooltip text" visible>
+      <Tooltip content="Tooltip text" duration={0} visible>
         <button>Trigger</button>
       </Tooltip>,
     );

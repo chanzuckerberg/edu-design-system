@@ -7,6 +7,20 @@ import type {
 } from 'ts-morph';
 import { isDesignSystemImport } from '../helpers';
 
+/**
+ * Decides whether a conditional edit goes ahead.
+ *
+ * `hasProp` answers for the element being edited, so an edit can depend on its siblings, as
+ * when two props that used to overlap have to collapse into one.
+ */
+type EditCallback = ({
+  currentPropValue,
+  hasProp,
+}: {
+  currentPropValue: string;
+  hasProp: (propName: string) => boolean;
+}) => boolean;
+
 type Edit =
   | {
       type: 'add';
@@ -17,22 +31,14 @@ type Edit =
       type: 'remove';
       propName: string;
       /** Only performs edit if the callback returns truthy */
-      callback?: ({
-        currentPropValue,
-      }: {
-        currentPropValue: string;
-      }) => boolean;
+      callback?: EditCallback;
     }
   | {
       type: 'update_name';
       oldPropName: string;
       newPropName: string;
       /** Only performs edit if the callback returns truthy */
-      callback?: ({
-        currentPropValue,
-      }: {
-        currentPropValue: string;
-      }) => boolean;
+      callback?: EditCallback;
     }
   | {
       type: 'update_value';
@@ -76,6 +82,7 @@ function removeProp(
       !edit.callback ||
       edit.callback({
         currentPropValue: getStringLiteralValue(attribute.getInitializer()),
+        hasProp: (propName) => element.getAttribute(propName) !== undefined,
       });
 
     if (performEdit) {
@@ -94,6 +101,7 @@ function updatePropName(
       !edit.callback ||
       edit.callback({
         currentPropValue: getStringLiteralValue(attribute.getInitializer()),
+        hasProp: (propName) => element.getAttribute(propName) !== undefined,
       });
 
     if (performEdit) {

@@ -408,6 +408,50 @@ describe('transform', () => {
     `);
   });
 
+  it('lets the callback check for other props on the element', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" size="lg" />
+            <Icon size="lg" />
+          </>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'size',
+              callback: ({ hasProp }) => hasProp('text'),
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" />
+            <Icon size="lg" />
+          </>
+        )
+      }
+    `);
+  });
+
   it('edits multiple props on the same component', () => {
     const sourceFileText = dedent`
     import {Button, ButtonGroup} from '@chanzuckerberg/eds';
