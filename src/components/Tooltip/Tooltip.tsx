@@ -306,6 +306,12 @@ export const Tooltip = ({
   const open = !disabled && (isControlled ? visible : uncontrolledOpen);
 
   const arrowRef = React.useRef<HTMLDivElement>(null);
+  const maxWidthValue =
+    typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth;
+  // Floating UI keeps the first `apply` it sees, since it compares functions by their source,
+  // so the closure reads the current cap through a ref rather than capturing it
+  const maxWidthRef = React.useRef(maxWidthValue);
+  maxWidthRef.current = maxWidthValue;
   const {
     context,
     elements,
@@ -313,6 +319,7 @@ export const Tooltip = ({
     middlewareData,
     placement: resolvedPlacement,
     refs,
+    update,
   } = useFloating({
     open,
     onOpenChange: setUncontrolledOpen,
@@ -322,13 +329,24 @@ export const Tooltip = ({
       offset(TOOLTIP_OFFSET),
       placement === 'auto' ? autoPlacement() : flip(),
       size({
+        // The bubble is at least as wide as its trigger, but never past `maxWidth`, which
+        // would otherwise lose to the min width and push the arrow off a capped bubble.
         apply({ elements: { floating }, rects }) {
-          floating.style.minWidth = `${rects.reference.width}px`;
+          const triggerWidth = `${rects.reference.width}px`;
+          floating.style.minWidth =
+            maxWidthRef.current === 'none'
+              ? triggerWidth
+              : `min(${triggerWidth}, ${maxWidthRef.current})`;
         },
       }),
       arrow && arrowMiddleware({ element: arrowRef, padding: ARROW_PADDING }),
     ],
   });
+
+  // Nothing else re-runs the middleware when only the cap changes, so ask for it
+  React.useEffect(() => {
+    update();
+  }, [maxWidthValue, update]);
 
   // A controlled tooltip only follows `visible`, so the trigger's events are ignored.
   const interactionsEnabled = !isControlled && !disabled;
@@ -480,7 +498,7 @@ export const Tooltip = ({
         <FloatingPortal root={portalRoot as HTMLElement | null | undefined}>
           <div
             ref={refs.setFloating}
-            style={{ ...floatingStyles, zIndex }}
+            style={{ ...floatingStyles, maxWidth: maxWidthValue, zIndex }}
             {...getFloatingProps()}
           >
             <div
@@ -490,7 +508,6 @@ export const Tooltip = ({
               data-placement={resolvedPlacement}
               data-state={isShown ? 'visible' : 'hidden'}
               style={{
-                maxWidth,
                 transitionDuration: `${animationDuration}ms`,
                 ...style,
               }}

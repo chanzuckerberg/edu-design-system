@@ -282,8 +282,7 @@ describe('<Tooltip />', () => {
       </Tooltip>,
     );
     const tooltip = screen.getByRole('tooltip');
-    expect(tooltip).toHaveStyle({ zIndex: '9999' });
-    expect(tooltip.firstElementChild).toHaveStyle({ maxWidth: '350px' });
+    expect(tooltip).toHaveStyle({ maxWidth: '350px', zIndex: '9999' });
   });
 
   it('fades out before unmounting', async () => {
@@ -439,5 +438,28 @@ describe('<Tooltip />', () => {
     );
     expect(bubble()?.children).toHaveLength(1);
     expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
+  });
+
+  it('keeps a wide trigger from stretching the bubble past maxWidth', async () => {
+    vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(
+      DOMRect.fromRect({ width: 800, height: 40 }),
+    );
+    const { rerender } = render(
+      <Tooltip content="Tooltip text" duration={0} visible>
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    const tooltip = screen.getByRole('tooltip');
+    await waitFor(() =>
+      expect(tooltip.style.minWidth).toBe('min(800px, 350px)'),
+    );
+
+    rerender(
+      <Tooltip content="Tooltip text" duration={0} maxWidth="none" visible>
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    await waitFor(() => expect(tooltip.style.minWidth).toBe('800px'));
+    expect(tooltip).toHaveStyle({ maxWidth: 'none' });
   });
 });
