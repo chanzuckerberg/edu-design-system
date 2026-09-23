@@ -1,6 +1,6 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/react-vite';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { describe, expect, it, vi } from 'vitest';
@@ -188,5 +188,142 @@ describe('<Tooltip />', () => {
     const tooltip = screen.getByRole('tooltip');
     expect(tooltip).toHaveStyle({ zIndex: '9999' });
     expect(tooltip.firstElementChild).toHaveStyle({ maxWidth: '350px' });
+  });
+
+  it('fades out before unmounting', async () => {
+    const user = userEvent.setup();
+    render(<Interactive />);
+    const trigger = await screen.findByRole('button');
+    await user.hover(trigger);
+    const bubble = screen.getByRole('tooltip').firstElementChild;
+    await waitFor(() =>
+      expect(bubble).toHaveAttribute('data-state', 'visible'),
+    );
+    expect(bubble).toHaveAttribute('data-animation', 'fade');
+    expect(bubble).toHaveStyle({ transitionDuration: '200ms' });
+    await user.keyboard('{Escape}');
+    expect(bubble).toHaveAttribute('data-state', 'hidden');
+    expect(bubble).toBeInTheDocument();
+    await waitFor(() => expect(bubble).not.toBeInTheDocument());
+  });
+
+  it('shows and hides at once when animation is off', async () => {
+    const user = userEvent.setup();
+    render(
+      <Tooltip animation={false} content="Tooltip text">
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    await user.hover(screen.getByRole('button'));
+    const bubble = screen.getByRole('tooltip').firstElementChild;
+    expect(bubble).toHaveAttribute('data-state', 'visible');
+    expect(bubble).not.toHaveAttribute('data-animation');
+    expect(bubble).toHaveStyle({ transitionDuration: '0ms' });
+    await user.keyboard('{Escape}');
+    expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
+  });
+
+  it('delays showing and hiding separately', async () => {
+    const user = userEvent.setup();
+    render(
+      <Tooltip content="Tooltip text" delay={[50, null]} duration={0}>
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    const trigger = screen.getByRole('button');
+    await user.hover(trigger);
+    expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
+    expect(await screen.findByTestId('tooltip-content')).toBeInTheDocument();
+    await user.unhover(trigger);
+    expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
+  });
+
+  it('shows at once when only hiding is delayed', async () => {
+    const user = userEvent.setup();
+    render(
+      <Tooltip content="Tooltip text" delay={[null, 50]} duration={0}>
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    const trigger = screen.getByRole('button');
+    await user.hover(trigger);
+    expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
+    await user.unhover(trigger);
+    expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
+    await waitFor(() =>
+      expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument(),
+    );
+  });
+
+  it('attaches to an element passed directly', async () => {
+    const user = userEvent.setup();
+    const Example = () => {
+      const [element, setElement] = React.useState<HTMLButtonElement | null>(
+        null,
+      );
+      return (
+        <>
+          <button ref={setElement}>Trigger</button>
+          {element && (
+            <Tooltip content="Tooltip text" duration={0} reference={element} />
+          )}
+        </>
+      );
+    };
+    render(<Example />);
+    await user.tab();
+    expect(screen.getByRole('button')).toHaveAttribute(
+      'aria-describedby',
+      screen.getByRole('tooltip').id,
+    );
+    await user.tab();
+    expect(screen.queryByTestId('tooltip-content')).not.toBeInTheDocument();
+  });
+
+  it('passes event methods through to an element passed by reference', async () => {
+    const user = userEvent.setup();
+    const onKeyDown = vi.fn((event: KeyboardEvent) => event.defaultPrevented);
+    const Example = () => {
+      const ref = React.useRef<HTMLDivElement>(null);
+      return (
+        <>
+          {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
+          <div ref={ref} tabIndex={0}>
+            Trigger
+          </div>
+          <Tooltip
+            content="Tooltip text"
+            duration={0}
+            reference={ref}
+            trigger="click"
+          />
+        </>
+      );
+    };
+    render(<Example />);
+    document.addEventListener('keydown', onKeyDown);
+    await user.tab();
+    // Space on a non-button trigger calls preventDefault to stop the page scrolling
+    await user.keyboard(' ');
+    document.removeEventListener('keydown', onKeyDown);
+    expect(onKeyDown).toHaveReturnedWith(true);
+    expect(screen.getByTestId('tooltip-content')).toBeInTheDocument();
+  });
+
+  it('appends to the element appendTo returns', async () => {
+    const user = userEvent.setup();
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+    const appendTo = vi.fn(() => container);
+    render(
+      <Tooltip appendTo={appendTo} content="Tooltip text" duration={0}>
+        <button>Trigger</button>
+      </Tooltip>,
+    );
+    const trigger = screen.getByRole('button');
+    await user.hover(trigger);
+    expect(appendTo).toHaveBeenCalledWith(trigger);
+    expect(container).toContainElement(screen.getByRole('tooltip'));
+    container.remove();
   });
 });
