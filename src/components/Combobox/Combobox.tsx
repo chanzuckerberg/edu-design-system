@@ -327,13 +327,6 @@ const ComboboxContext = React.createContext<ComboboxContextType>({});
 const OPTIONS_GAP = 12;
 
 /**
- * Stands in as the value of the "no matches" entry. It is disabled, so it never gets selected,
- * but HeadlessUI still compares it against the selection (running any `by` function), so it
- * has to be an object that is safe to read keys from.
- */
-const NO_MATCHES_VALUE = {};
-
-/**
  * HeadlessUI infers its value type from a `multiple` type parameter, which we can't supply from
  * a plain props object. Our own `ComboboxProps` already describes the same shape, so we render
  * through it directly. Behavior is unchanged; only the inference is pinned down.
@@ -896,16 +889,19 @@ const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
       {...other}
     >
       {hasNoOptions ? (
-        // A disabled option rather than loose text, since a listbox may only hold options
-        <ComboboxOption
+        // A disabled option rather than loose text, since a listbox may only hold options. It's
+        // not a HeadlessUI option: those need a value, which HeadlessUI runs through the
+        // consumer's `by` comparator, and there's no value here that every comparator can read.
+        <div
+          aria-disabled="true"
+          aria-selected="false"
           className={styles['combobox__no-matches']}
-          disabled
-          value={NO_MATCHES_VALUE}
+          role="option"
         >
           <Text as="div" preset="body-md">
             {noMatchesText}
           </Text>
-        </ComboboxOption>
+        </div>
       ) : (
         children
       )}

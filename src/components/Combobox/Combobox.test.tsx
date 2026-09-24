@@ -1,10 +1,10 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStory } from '@storybook/react-vite';
-import { screen, render } from '@testing-library/react';
+import { screen, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React, { useState } from 'react';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { Combobox } from './Combobox';
 import * as stories from './Combobox.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
@@ -202,6 +202,29 @@ describe('<Combobox />', () => {
     await user.click(screen.getByRole('button'));
 
     expect(await screen.findByRole('option')).toHaveTextContent('Nothing here');
+  });
+
+  it('keeps the empty state out of a strict by comparator', async () => {
+    const user = userEvent.setup();
+    // A comparator that reads a required field, which would throw if handed anything that
+    // isn't a real option
+    const by = (
+      a: (typeof exampleOptions)[number],
+      z: (typeof exampleOptions)[number],
+    ) => a.key.toLowerCase() === z.key.toLowerCase();
+
+    render(
+      <TestMultipleCombobox
+        by={by as React.ComponentProps<typeof Combobox>['by']}
+        defaultValue={[exampleOptions[0]] as unknown as undefined}
+      />,
+    );
+
+    await user.type(await screen.findByRole('combobox'), 'zzz');
+
+    expect(await screen.findByRole('option')).toHaveTextContent(
+      'No matches found',
+    );
   });
 
   it('shows the current selection in the field via displayValue', async () => {
@@ -494,6 +517,95 @@ describe('<Combobox />', () => {
       expect(
         screen.getByRole('button', { name: 'remove Option 1' }),
       ).toBeDisabled();
+    });
+  });
+
+  describe('option list position', () => {
+    afterEach(() => {
+      // Drops the viewport size set in mockRects, falling back to jsdom's own
+      Reflect.deleteProperty(document.documentElement, 'clientWidth');
+      Reflect.deleteProperty(document.documentElement, 'clientHeight');
+    });
+
+    // Built by hand, since the ResizeObserver mock above replaces `DOMRect` with one that has
+    // no `fromRect`
+    const rect = (x: number, y: number, width: number, height: number) =>
+      ({
+        x,
+        y,
+        width,
+        height,
+        top: y,
+        left: x,
+        right: x + width,
+        bottom: y + height,
+        toJSON: () => ({}),
+      }) as DOMRect;
+
+    const mockRects = () => {
+      const fieldRect = rect(10, 20, 240, 50);
+      // Chips push the text field right and narrow it, so it sits well inside the field
+      const inputRect = rect(150, 30, 60, 30);
+      const listRect = rect(0, 0, 100, 80);
+
+      vi.spyOn(
+        HTMLElement.prototype,
+        'getBoundingClientRect',
+      ).mockImplementation(function (this: HTMLElement) {
+        // Floating UI measures the page too, to place the list relative to it
+        if (this === document.documentElement || this === document.body) {
+          return rect(0, 0, 1024, 768);
+        }
+        if (this.getAttribute('role') === 'listbox') {
+          return listRect;
+        }
+        return this instanceof HTMLInputElement ? inputRect : fieldRect;
+      });
+      // jsdom lays nothing out, so the viewport is 0x0 and the list would always flip upward
+      Object.defineProperties(document.documentElement, {
+        clientWidth: { configurable: true, value: 1024 },
+        clientHeight: { configurable: true, value: 768 },
+      });
+    };
+
+    it('lines the list up with the field, not the text field', async () => {
+      mockRects();
+      const user = userEvent.setup();
+      const { container } = render(<TestCombobox />);
+
+      await user.click(screen.getByRole('button'));
+      const listbox = await screen.findByRole('listbox');
+
+      await waitFor(() => expect(listbox.style.left).toBe('10px'));
+      // Field bottom plus the 12px gap
+      expect(listbox.style.top).toBe('82px');
+      expect(listbox.style.minWidth).toBe('240px');
+      // Portaled, so an overflow-hidden ancestor can't clip it
+      expect(container).not.toContainElement(listbox);
+    });
+
+    it('falls back to HeadlessUI anchoring when given an anchor', async () => {
+      mockRects();
+      const user = userEvent.setup();
+      render(
+        <Combobox aria-label="test" name="test-combobox">
+          <Combobox.Input />
+          <Combobox.Options anchor={{ to: 'bottom start' }}>
+            {exampleOptions.map((option) => (
+              <Combobox.Option key={option.key} value={option}>
+                {option.label}
+              </Combobox.Option>
+            ))}
+          </Combobox.Options>
+        </Combobox>,
+      );
+
+      await user.click(screen.getByRole('button'));
+      const listbox = await screen.findByRole('listbox');
+
+      // HeadlessUI measures from the text field, and our field-width sizing stays out of it
+      await waitFor(() => expect(listbox.style.left).toBe('150px'));
+      expect(listbox.style.minWidth).toBe('');
     });
   });
 
