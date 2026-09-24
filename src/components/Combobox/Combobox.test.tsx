@@ -204,6 +204,30 @@ describe('<Combobox />', () => {
     expect(await screen.findByRole('option')).toHaveTextContent('Nothing here');
   });
 
+  it('shows the empty state when every conditional option renders nothing', async () => {
+    const user = userEvent.setup();
+    const showOption = false;
+    render(
+      <Combobox aria-label="test" name="test-combobox">
+        <Combobox.Input />
+        <Combobox.Options>
+          {showOption && (
+            <Combobox.Option value={exampleOptions[0]}>
+              {exampleOptions[0].label}
+            </Combobox.Option>
+          )}
+          {null}
+        </Combobox.Options>
+      </Combobox>,
+    );
+
+    await user.click(screen.getByRole('button'));
+
+    expect(await screen.findByRole('option')).toHaveTextContent(
+      'No matches found',
+    );
+  });
+
   it('keeps the empty state out of a strict by comparator', async () => {
     const user = userEvent.setup();
     // A comparator that reads a required field, which would throw if handed anything that

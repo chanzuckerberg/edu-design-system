@@ -871,8 +871,11 @@ const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
     optionsClassName,
   );
 
+  // `toArray` drops null, undefined, and boolean children, so options rendered conditionally
+  // (e.g., `{show && <Combobox.Option />}`) still count as none when every condition is false
   const hasNoOptions =
-    typeof children !== 'function' && React.Children.count(children) === 0;
+    typeof children !== 'function' &&
+    React.Children.toArray(children).length === 0;
 
   const options = (
     <ComboboxOptions
