@@ -117,8 +117,8 @@
   row-gap: calc(var(--eds-spacing-size-1) * 1px);
 
   /* Chips are taller than a line of text, so trim the block padding to keep a single row of
-  them at the same height as an empty field */
-  padding-block: calc(var(--eds-spacing-size-1) * 1px);
+  them close to the height of an empty field. The 2px comes off for the chips' own border. */
+  padding-block: calc(var(--eds-spacing-size-1) * 1px - 2px);
 
   & .combobox-input__field {
     /* Wrap onto a new line rather than shrinking away once chips fill the row */
