@@ -322,9 +322,9 @@ let showNameWarning = true;
 const ComboboxContext = React.createContext<ComboboxContextType>({});
 
 /**
- * Space between the field and the option list, matching `Select`.
+ * Space between the field and the option list
  */
-const OPTIONS_GAP = 12;
+const OPTIONS_GAP = 10;
 
 /**
  * HeadlessUI infers its value type from a `multiple` type parameter, which we can't supply from
@@ -898,7 +898,7 @@ const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
           className={styles['combobox__no-matches']}
           role="option"
         >
-          <Text as="div" preset="body-md">
+          <Text as="div" preset="body-sm">
             {noMatchesText}
           </Text>
         </div>

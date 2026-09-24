@@ -577,8 +577,8 @@ describe('<Combobox />', () => {
       const listbox = await screen.findByRole('listbox');
 
       await waitFor(() => expect(listbox.style.left).toBe('10px'));
-      // Field bottom plus the 12px gap
-      expect(listbox.style.top).toBe('82px');
+      // Field bottom plus the 10px gap
+      expect(listbox.style.top).toBe('80px');
       expect(listbox.style.minWidth).toBe('240px');
       // Portaled, so an overflow-hidden ancestor can't clip it
       expect(container).not.toContainElement(listbox);
