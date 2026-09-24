@@ -176,6 +176,34 @@ describe('<Combobox />', () => {
     expect(options[0]).toHaveTextContent('Option 2');
   });
 
+  it('says so when the query matches nothing', async () => {
+    const user = userEvent.setup();
+    render(<TestCombobox />);
+
+    await user.type(await screen.findByRole('combobox'), 'zzz');
+
+    const options = await screen.findAllByRole('option');
+    expect(options).toHaveLength(1);
+    expect(options[0]).toHaveTextContent('No matches found');
+    expect(options[0]).toHaveAttribute('aria-disabled', 'true');
+    // No radio or checkbox, since there's nothing to select
+    expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+  });
+
+  it('shows noMatchesText when there are no options', async () => {
+    const user = userEvent.setup();
+    render(
+      <Combobox aria-label="test" name="test-combobox">
+        <Combobox.Input />
+        <Combobox.Options noMatchesText="Nothing here">{[]}</Combobox.Options>
+      </Combobox>,
+    );
+
+    await user.click(screen.getByRole('button'));
+
+    expect(await screen.findByRole('option')).toHaveTextContent('Nothing here');
+  });
+
   it('shows the current selection in the field via displayValue', async () => {
     render(<TestCombobox value={exampleOptions[1]} />);
 
