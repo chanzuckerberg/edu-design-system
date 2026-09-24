@@ -54,7 +54,7 @@ const meta: Meta<typeof Combobox> = {
         'Optional handler that fires when the option list closes, useful for resetting the query',
     },
   },
-  tags: ['autodocs', 'beta', 'version:2.1.0'],
+  tags: ['autodocs', 'version:1.0.0'],
 };
 
 export default meta;
