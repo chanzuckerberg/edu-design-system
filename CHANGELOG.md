@@ -2,6 +2,64 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [19.0.0-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v19.0.0-alpha.0...v19.0.0-alpha.1) (2026-09-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* **Tooltip:** `Tooltip` no longer accepts Tippy-only props such as `plugins`,
+`popperOptions`, `render`, `theme`, and `followCursor`. `onShow` and `onHide`
+no longer receive the Tippy instance. Run `eds-migrate` for the props that
+move without changing behavior.
+
+EDS-2168
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+
+* feat(Tooltip)!: rename text to content
+
+- `Tooltip` takes `content` for its bubble, resolving the next-major TODO
+- Codemod: `text` -> `content`; when both were set, keep `content` and drop
+  `text`, since `content` won in v18
+- Replace the earlier `content` -> `text` codemod entry
+- `edit-jsx-prop` callbacks get `hasProp` to check sibling props
+* **Tooltip:** `Tooltip`'s `text` prop is now `content`. Run `eds-migrate`
+to rename it.
+
+EDS-2168
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+
+* test(Tooltip): cover the remaining Tooltip and transform branches
+
+- Fade: stays mounted as hidden until the transition ends
+- `animation={false}`, split `delay` values, `appendTo` as a function
+- `reference` passed as an element, and bridged event methods
+- `hasProp` on `update_name` edits
+
+EDS-2168
+
+Co-Authored-By: Claude Opus 5.5 (1M context) <noreply@anthropic.com>
+
+* fix(Tooltip): match Tippy's click and ARIA handling
+
+- `hideOnClick={false}` keeps a click-triggered tooltip open on a second click
+- Add the tooltip's id to the trigger's existing `aria-describedby` instead of
+  replacing it, and remove only that id on hide
+- Interactive tooltips set `aria-expanded` but not `aria-describedby`, and leave
+  an `aria-expanded` the trigger already has alone
+- Codemod: leave `text` written after a spread, since renaming it would flip
+  precedence over a spread `content`
+- `edit-jsx-prop` callbacks get `followsSpread`
+
+Notes:
+
+### Features
+
+* **Card:** add titleAs to Card.Header ([#2638](https://github.com/chanzuckerberg/edu-design-system/issues/2638)) ([b19974f](https://github.com/chanzuckerberg/edu-design-system/commit/b19974f9ff7c7cefda67679f4fe407867a2c1f4d))
+* **Combobox:** align options to the field, add empty state ([#2645](https://github.com/chanzuckerberg/edu-design-system/issues/2645)) ([28c13cb](https://github.com/chanzuckerberg/edu-design-system/commit/28c13cb5c9d25eaee783d060ceb864e72554ea74))
+* **Tooltip:** move from Tippy.js to Floating UI ([#2644](https://github.com/chanzuckerberg/edu-design-system/issues/2644)) ([98afbcb](https://github.com/chanzuckerberg/edu-design-system/commit/98afbcb8b998de6a74298e9c284b3ace613b17a1))
+
 ## [19.0.0-alpha.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.7.0...v19.0.0-alpha.0) (2026-09-21)
 
 
