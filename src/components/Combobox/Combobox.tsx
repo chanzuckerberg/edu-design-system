@@ -180,6 +180,10 @@ type ComboboxOptionsProps = HeadlessComboboxOptionsProps<'div'> & {
    * **Default is `"No matches found"`**.
    */
   noMatchesText?: ReactNode;
+  /**
+   * The list element. Merged with the ref used to position the list against the field.
+   */
+  ref?: React.Ref<HTMLDivElement>;
 };
 
 type ComboboxOptionProps = HeadlessComboboxOptionProps<'div', ComboboxValue> &
@@ -838,6 +842,7 @@ const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
     children,
     className,
     noMatchesText = 'No matches found',
+    ref,
     style,
     ...other
   } = props;
@@ -865,16 +870,46 @@ const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
     ],
   });
 
+  // The consumer's ref still gets the list when Floating UI needs it too
+  const floatingRef = useMergeRefs([refs.setFloating, ref]);
+
   const componentClassName = clsx(
     styles['combobox__options'],
     className,
     optionsClassName,
   );
 
-  // Looks inside fragments and arrays and skips null, undefined, and booleans, so options that
-  // are wrapped in a fragment or rendered conditionally still count as none when nothing renders
-  const hasNoOptions =
-    typeof children !== 'function' && !hasSlotContent(children);
+  // A disabled option rather than loose text, since a listbox may only hold options. It's not a
+  // HeadlessUI option: those need a value, which HeadlessUI runs through the consumer's `by`
+  // comparator, and there's no value here that every comparator can read.
+  const noMatches = (
+    <div
+      aria-disabled="true"
+      aria-selected="false"
+      className={styles['combobox__no-matches']}
+      role="option"
+    >
+      <Text as="div" preset="body-sm">
+        {noMatchesText}
+      </Text>
+    </div>
+  );
+
+  // `hasSlotContent` looks inside fragments and arrays and skips null, undefined, and booleans,
+  // so options that are wrapped in a fragment or rendered conditionally still count as none
+  // when nothing renders. A render prop is checked on what it returns. In virtual mode
+  // HeadlessUI calls it once per option (passing that option), so its result is left alone.
+  const content =
+    typeof children === 'function'
+      ? (slot: Parameters<typeof children>[0]) => {
+          const result = children(slot);
+          return slot.option !== undefined || hasSlotContent(result)
+            ? result
+            : noMatches;
+        }
+      : hasSlotContent(children)
+        ? children
+        : noMatches;
 
   const options = (
     <ComboboxOptions
@@ -886,27 +921,11 @@ const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
       as={PopoverContainer}
       className={componentClassName}
       modal={false}
-      ref={shouldAnchorToField ? refs.setFloating : undefined}
+      ref={shouldAnchorToField ? floatingRef : ref}
       style={shouldAnchorToField ? { ...floatingStyles, ...style } : style}
       {...other}
     >
-      {hasNoOptions ? (
-        // A disabled option rather than loose text, since a listbox may only hold options. It's
-        // not a HeadlessUI option: those need a value, which HeadlessUI runs through the
-        // consumer's `by` comparator, and there's no value here that every comparator can read.
-        <div
-          aria-disabled="true"
-          aria-selected="false"
-          className={styles['combobox__no-matches']}
-          role="option"
-        >
-          <Text as="div" preset="body-sm">
-            {noMatchesText}
-          </Text>
-        </div>
-      ) : (
-        children
-      )}
+      {content}
     </ComboboxOptions>
   );
 
