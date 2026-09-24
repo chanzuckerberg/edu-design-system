@@ -229,6 +229,31 @@ describe('<Combobox />', () => {
     );
   });
 
+  it('shows the empty state when a fragment wraps no options', async () => {
+    const user = userEvent.setup();
+    const noOptions: typeof exampleOptions = [];
+    render(
+      <Combobox aria-label="test" name="test-combobox">
+        <Combobox.Input />
+        <Combobox.Options>
+          <>
+            {noOptions.map((option) => (
+              <Combobox.Option key={option.key} value={option}>
+                {option.label}
+              </Combobox.Option>
+            ))}
+          </>
+        </Combobox.Options>
+      </Combobox>,
+    );
+
+    await user.click(screen.getByRole('button'));
+
+    expect(await screen.findByRole('option')).toHaveTextContent(
+      'No matches found',
+    );
+  });
+
   it('keeps the empty state out of a strict by comparator', async () => {
     const user = userEvent.setup();
     // A comparator that reads a required field, which would throw if handed anything that
