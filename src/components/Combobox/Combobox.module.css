@@ -27,12 +27,28 @@
 }
 
 /**
- * The container for the individual combobox options.
+ * The container for the individual combobox options. Its width comes from the field, set inline
+ * when positioned. The min width here covers a custom `anchor`, where HeadlessUI positions it.
  */
 .combobox__options {
   max-height: 25vh;
   min-width: calc(var(--input-width) + var(--button-width) + 32px);
   z-index: var(--eds-z-index-top);
+}
+
+/**
+ * Shown in place of the options when there are none, such as when a query matches nothing.
+ * It carries no control. With the container's own padding, the list comes to 48px tall.
+ */
+.combobox__no-matches {
+  display: flex;
+  align-items: center;
+  min-height: calc(var(--eds-spacing-size-5) * 1px);
+  padding: calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-1-and-half) * 1px);
+
+  cursor: default;
+
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
 }
 
 .combobox--label-layout-vertical {
@@ -99,6 +115,10 @@
 .combobox-input--has-chips {
   flex-wrap: wrap;
   row-gap: calc(var(--eds-spacing-size-1) * 1px);
+
+  /* Chips are taller than a line of text, so trim the block padding to keep a single row of
+  them close to the height of an empty field. The 2px comes off for the chips' own border. */
+  padding-block: calc(var(--eds-spacing-size-1) * 1px - 2px);
 
   & .combobox-input__field {
     /* Wrap onto a new line rather than shrinking away once chips fill the row */

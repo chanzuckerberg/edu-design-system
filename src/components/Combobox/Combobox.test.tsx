@@ -1,13 +1,14 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStory } from '@storybook/react-vite';
-import { screen, render } from '@testing-library/react';
+import { screen, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React, { useState } from 'react';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { Combobox } from './Combobox';
 import * as stories from './Combobox.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
+import Modal from '../Modal';
 
 mockResizeObserver();
 
@@ -174,6 +175,228 @@ describe('<Combobox />', () => {
     const options = await screen.findAllByRole('option');
     expect(options).toHaveLength(1);
     expect(options[0]).toHaveTextContent('Option 2');
+  });
+
+  it('says so when the query matches nothing', async () => {
+    const user = userEvent.setup();
+    render(<TestCombobox />);
+
+    await user.type(await screen.findByRole('combobox'), 'zzz');
+
+    const options = await screen.findAllByRole('option');
+    expect(options).toHaveLength(1);
+    expect(options[0]).toHaveTextContent('No matches found');
+    expect(options[0]).toHaveAttribute('aria-disabled', 'true');
+    // No radio or checkbox, since there's nothing to select
+    expect(screen.queryByRole('radio')).not.toBeInTheDocument();
+  });
+
+  it('shows noMatchesText when there are no options', async () => {
+    const user = userEvent.setup();
+    render(
+      <Combobox aria-label="test" name="test-combobox">
+        <Combobox.Input />
+        <Combobox.Options noMatchesText="Nothing here">{[]}</Combobox.Options>
+      </Combobox>,
+    );
+
+    await user.click(screen.getByRole('button'));
+
+    expect(await screen.findByRole('option')).toHaveTextContent('Nothing here');
+  });
+
+  it('shows the empty state when every conditional option renders nothing', async () => {
+    const user = userEvent.setup();
+    const showOption = false;
+    render(
+      <Combobox aria-label="test" name="test-combobox">
+        <Combobox.Input />
+        <Combobox.Options>
+          {showOption && (
+            <Combobox.Option value={exampleOptions[0]}>
+              {exampleOptions[0].label}
+            </Combobox.Option>
+          )}
+          {null}
+        </Combobox.Options>
+      </Combobox>,
+    );
+
+    await user.click(screen.getByRole('button'));
+
+    expect(await screen.findByRole('option')).toHaveTextContent(
+      'No matches found',
+    );
+  });
+
+  it('shows the empty state when a fragment wraps no options', async () => {
+    const user = userEvent.setup();
+    const noOptions: typeof exampleOptions = [];
+    render(
+      <Combobox aria-label="test" name="test-combobox">
+        <Combobox.Input />
+        <Combobox.Options>
+          <>
+            {noOptions.map((option) => (
+              <Combobox.Option key={option.key} value={option}>
+                {option.label}
+              </Combobox.Option>
+            ))}
+          </>
+        </Combobox.Options>
+      </Combobox>,
+    );
+
+    await user.click(screen.getByRole('button'));
+
+    expect(await screen.findByRole('option')).toHaveTextContent(
+      'No matches found',
+    );
+  });
+
+  it('shows the empty state when a render prop returns no options', async () => {
+    const user = userEvent.setup();
+    const noOptions: typeof exampleOptions = [];
+    render(
+      <Combobox aria-label="test" name="test-combobox">
+        <Combobox.Input />
+        <Combobox.Options>
+          {() => (
+            <>
+              {noOptions.map((option) => (
+                <Combobox.Option key={option.key} value={option}>
+                  {option.label}
+                </Combobox.Option>
+              ))}
+            </>
+          )}
+        </Combobox.Options>
+      </Combobox>,
+    );
+
+    await user.click(screen.getByRole('button'));
+
+    expect(await screen.findByRole('option')).toHaveTextContent(
+      'No matches found',
+    );
+  });
+
+  it('renders the options a render prop returns', async () => {
+    const user = userEvent.setup();
+    render(
+      <Combobox aria-label="test" name="test-combobox">
+        <Combobox.Input />
+        <Combobox.Options>
+          {({ open }) => (
+            <>
+              {exampleOptions.map((option) => (
+                <Combobox.Option key={option.key} value={option}>
+                  {open ? option.label : ''}
+                </Combobox.Option>
+              ))}
+            </>
+          )}
+        </Combobox.Options>
+      </Combobox>,
+    );
+
+    await user.click(screen.getByRole('button'));
+
+    expect(await screen.findAllByRole('option')).toHaveLength(3);
+    expect(screen.queryByText('No matches found')).not.toBeInTheDocument();
+  });
+
+  describe('virtual', () => {
+    /**
+     * Virtual mode takes its options on the root and renders one per call of the render prop.
+     */
+    const TestVirtualCombobox = ({
+      onChange,
+    }: {
+      onChange?: (value: unknown) => void;
+    }) => {
+      const [query, setQuery] = useState('');
+      const filteredOptions = exampleOptions.filter((option) =>
+        option.label.toLowerCase().includes(query.toLowerCase()),
+      );
+
+      return (
+        <Combobox
+          aria-label="test"
+          name="test-combobox"
+          onChange={onChange}
+          virtual={{ options: filteredOptions }}
+        >
+          <Combobox.Input onChange={(event) => setQuery(event.target.value)} />
+          <Combobox.Options>
+            {({ option }) => (
+              <Combobox.Option value={option}>
+                {(option as (typeof exampleOptions)[number]).label}
+              </Combobox.Option>
+            )}
+          </Combobox.Options>
+        </Combobox>
+      );
+    };
+
+    it('shows the empty state when there are no virtual options', async () => {
+      const user = userEvent.setup();
+      render(<TestVirtualCombobox />);
+
+      await user.type(await screen.findByRole('combobox'), 'zzz');
+
+      expect(await screen.findByRole('option')).toHaveTextContent(
+        'No matches found',
+      );
+    });
+
+    it('brings the virtual options back once the query matches again', async () => {
+      // The virtualizer only renders the rows that fit, and jsdom lays nothing out, so give
+      // every element room for all of them
+      vi.spyOn(HTMLElement.prototype, 'offsetHeight', 'get').mockReturnValue(
+        400,
+      );
+      vi.spyOn(HTMLElement.prototype, 'offsetWidth', 'get').mockReturnValue(
+        240,
+      );
+      const changeHandler = vi.fn();
+      const user = userEvent.setup();
+      render(<TestVirtualCombobox onChange={changeHandler} />);
+
+      const input = await screen.findByRole('combobox');
+      await user.type(input, 'zzz');
+      await screen.findByText('No matches found');
+
+      await user.clear(input);
+      await user.type(input, 'Option 2');
+
+      expect(await screen.findByRole('option')).toHaveTextContent('Option 2');
+      await user.keyboard('{arrowdown}{enter}');
+      expect(changeHandler).toHaveBeenCalledWith(exampleOptions[1]);
+    });
+  });
+
+  it('keeps the empty state out of a strict by comparator', async () => {
+    const user = userEvent.setup();
+    // A comparator that reads a required field, which would throw if handed anything that
+    // isn't a real option
+    const by = (
+      a: (typeof exampleOptions)[number],
+      z: (typeof exampleOptions)[number],
+    ) => a.key.toLowerCase() === z.key.toLowerCase();
+
+    render(
+      <TestMultipleCombobox
+        by={by as React.ComponentProps<typeof Combobox>['by']}
+        defaultValue={[exampleOptions[0]] as unknown as undefined}
+      />,
+    );
+
+    await user.type(await screen.findByRole('combobox'), 'zzz');
+
+    expect(await screen.findByRole('option')).toHaveTextContent(
+      'No matches found',
+    );
   });
 
   it('shows the current selection in the field via displayValue', async () => {
@@ -466,6 +689,189 @@ describe('<Combobox />', () => {
       expect(
         screen.getByRole('button', { name: 'remove Option 1' }),
       ).toBeDisabled();
+    });
+  });
+
+  describe('inside a Modal', () => {
+    it('keeps the option list usable', async () => {
+      const changeHandler = vi.fn();
+      const onClose = vi.fn();
+      const user = userEvent.setup();
+      render(
+        <Modal aria-label="test modal" onClose={onClose} open>
+          <Modal.Body>
+            <TestCombobox onChange={changeHandler} />
+          </Modal.Body>
+        </Modal>,
+      );
+
+      await user.click(
+        await screen.findByRole('button', { name: 'Show options' }),
+      );
+      const listbox = await screen.findByRole('listbox');
+
+      // The list is portaled outside the dialog. HeadlessUI only makes the app root inert, and
+      // counts other top-level nodes as inside the dialog, so the list stays usable.
+      expect(screen.getByRole('dialog')).not.toContainElement(listbox);
+      expect(listbox.closest('[inert]')).toBeNull();
+
+      await user.click(screen.getByRole('option', { name: 'Option 2' }));
+
+      expect(changeHandler).toHaveBeenCalledWith(exampleOptions[1]);
+      // Picking an option isn't a click outside the dialog
+      expect(onClose).not.toHaveBeenCalled();
+    });
+
+    it('selects an option from the keyboard', async () => {
+      const changeHandler = vi.fn();
+      const user = userEvent.setup();
+      render(
+        <Modal aria-label="test modal" onClose={vi.fn()} open>
+          <Modal.Body>
+            <TestCombobox onChange={changeHandler} />
+          </Modal.Body>
+        </Modal>,
+      );
+
+      await user.click(await screen.findByRole('combobox'));
+      await user.keyboard('{arrowdown}{arrowdown}{enter}');
+
+      expect(changeHandler).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('option list position', () => {
+    afterEach(() => {
+      // Drops the viewport size set in mockRects, falling back to jsdom's own
+      Reflect.deleteProperty(document.documentElement, 'clientWidth');
+      Reflect.deleteProperty(document.documentElement, 'clientHeight');
+    });
+
+    // Built by hand, since the ResizeObserver mock above replaces `DOMRect` with one that has
+    // no `fromRect`
+    const rect = (x: number, y: number, width: number, height: number) =>
+      ({
+        x,
+        y,
+        width,
+        height,
+        top: y,
+        left: x,
+        right: x + width,
+        bottom: y + height,
+        toJSON: () => ({}),
+      }) as DOMRect;
+
+    const mockRects = () => {
+      const fieldRect = rect(10, 20, 240, 50);
+      // Chips push the text field right and narrow it, so it sits well inside the field
+      const inputRect = rect(150, 30, 60, 30);
+      const listRect = rect(0, 0, 100, 80);
+
+      vi.spyOn(
+        HTMLElement.prototype,
+        'getBoundingClientRect',
+      ).mockImplementation(function (this: HTMLElement) {
+        // Floating UI measures the page too, to place the list relative to it
+        if (this === document.documentElement || this === document.body) {
+          return rect(0, 0, 1024, 768);
+        }
+        if (this.getAttribute('role') === 'listbox') {
+          return listRect;
+        }
+        return this instanceof HTMLInputElement ? inputRect : fieldRect;
+      });
+      // jsdom lays nothing out, so the viewport is 0x0 and the list would always flip upward
+      Object.defineProperties(document.documentElement, {
+        clientWidth: { configurable: true, value: 1024 },
+        clientHeight: { configurable: true, value: 768 },
+      });
+    };
+
+    it('lines the list up with the field, not the text field', async () => {
+      mockRects();
+      const user = userEvent.setup();
+      const { container } = render(<TestCombobox />);
+
+      await user.click(screen.getByRole('button'));
+      const listbox = await screen.findByRole('listbox');
+
+      await waitFor(() => expect(listbox.style.left).toBe('10px'));
+      // Field bottom plus the 10px gap
+      expect(listbox.style.top).toBe('80px');
+      expect(listbox.style.minWidth).toBe('240px');
+      // Portaled, so an overflow-hidden ancestor can't clip it
+      expect(container).not.toContainElement(listbox);
+    });
+
+    it('still lines the list up with the field when given a ref', async () => {
+      mockRects();
+      const user = userEvent.setup();
+      const ref = React.createRef<HTMLDivElement>();
+      render(
+        <Combobox aria-label="test" name="test-combobox">
+          <Combobox.Input />
+          <Combobox.Options ref={ref}>
+            {exampleOptions.map((option) => (
+              <Combobox.Option key={option.key} value={option}>
+                {option.label}
+              </Combobox.Option>
+            ))}
+          </Combobox.Options>
+        </Combobox>,
+      );
+
+      await user.click(screen.getByRole('button'));
+      const listbox = await screen.findByRole('listbox');
+
+      expect(ref.current).toBe(listbox);
+      await waitFor(() => expect(listbox.style.left).toBe('10px'));
+      expect(listbox.style.top).toBe('80px');
+    });
+
+    it('passes a ref through when given an anchor', async () => {
+      const user = userEvent.setup();
+      const ref = React.createRef<HTMLDivElement>();
+      render(
+        <Combobox aria-label="test" name="test-combobox">
+          <Combobox.Input />
+          <Combobox.Options anchor={{ to: 'bottom start' }} ref={ref}>
+            {exampleOptions.map((option) => (
+              <Combobox.Option key={option.key} value={option}>
+                {option.label}
+              </Combobox.Option>
+            ))}
+          </Combobox.Options>
+        </Combobox>,
+      );
+
+      await user.click(screen.getByRole('button'));
+
+      expect(ref.current).toBe(await screen.findByRole('listbox'));
+    });
+
+    it('falls back to HeadlessUI anchoring when given an anchor', async () => {
+      mockRects();
+      const user = userEvent.setup();
+      render(
+        <Combobox aria-label="test" name="test-combobox">
+          <Combobox.Input />
+          <Combobox.Options anchor={{ to: 'bottom start' }}>
+            {exampleOptions.map((option) => (
+              <Combobox.Option key={option.key} value={option}>
+                {option.label}
+              </Combobox.Option>
+            ))}
+          </Combobox.Options>
+        </Combobox>,
+      );
+
+      await user.click(screen.getByRole('button'));
+      const listbox = await screen.findByRole('listbox');
+
+      // HeadlessUI measures from the text field, and our field-width sizing stays out of it
+      await waitFor(() => expect(listbox.style.left).toBe('150px'));
+      expect(listbox.style.minWidth).toBe('');
     });
   });
 

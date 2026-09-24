@@ -1,4 +1,13 @@
 import {
+  autoUpdate,
+  flip,
+  FloatingPortal,
+  offset,
+  size,
+  useFloating,
+  useMergeRefs,
+} from '@floating-ui/react';
+import {
   Combobox as HeadlessCombobox,
   type ComboboxProps as HeadlessComboboxProps,
   ComboboxButton,
@@ -151,7 +160,32 @@ type ComboboxLabelProps = ExtractProps<typeof Label> & {
   subLabel?: ReactNode;
 };
 
-type ComboboxOptionsProps = HeadlessComboboxOptionsProps<'div'>;
+type ComboboxOptionsProps = HeadlessComboboxOptionsProps<'div'> & {
+  // Component API
+  /**
+   * Where the option list sits relative to the field. When left unset, the list lines up with
+   * the field's bottom left edge and is at least as wide as the field, however many chips it
+   * holds. A width class on the list can make it wider.
+   *
+   * Setting it hands positioning back to HeadlessUI, which measures from the text field itself
+   * rather than the field's border.
+   *
+   * See: https://headlessui.com/react/combobox#positioning-the-options
+   */
+  anchor?: HeadlessComboboxOptionsProps<'div'>['anchor'];
+  // Design API
+  /**
+   * Text shown in place of the options when none are passed in, such as when a query matches
+   * nothing.
+   *
+   * **Default is `"No matches found"`**.
+   */
+  noMatchesText?: ReactNode;
+  /**
+   * The list element. Merged with the ref used to position the list against the field.
+   */
+  ref?: React.Ref<HTMLDivElement>;
+};
 
 type ComboboxOptionProps = HeadlessComboboxOptionProps<'div', ComboboxValue> &
   Pick<PopoverListItemProps, 'subLabel'> & {
@@ -259,12 +293,25 @@ type ComboboxInputWrapperProps = {
 type ComboboxContextType = {
   ariaLabel?: string;
   disabled?: boolean;
+  /**
+   * The bordered field, which the option list lines up with.
+   */
+  fieldElement?: HTMLDivElement | null;
+  /**
+   * Whether the consumer passed `virtual` with an empty `options` list, so the option list
+   * shows its empty state instead of calling the render prop.
+   */
+  hasNoVirtualOptions?: boolean;
   optionsClassName?: string;
   /**
    * Drops one value from the selection. Backs the remove button on each chip.
    */
   removeValue?: (value: ComboboxValue) => void;
   required?: boolean;
+  /**
+   * Registers the bordered field. Backs the ref on `Combobox.InputWrapper`.
+   */
+  setFieldElement?: (element: HTMLDivElement | null) => void;
   /**
    * The current selection, always as a list. Empty unless `multiple` is set.
    */
@@ -283,6 +330,11 @@ const defaultChipLabel = (value: ComboboxValue) =>
 let showNameWarning = true;
 
 const ComboboxContext = React.createContext<ComboboxContextType>({});
+
+/**
+ * Space between the field and the option list
+ */
+const OPTIONS_GAP = 10;
 
 /**
  * HeadlessUI infers its value type from a `multiple` type parameter, which we can't supply from
@@ -312,8 +364,9 @@ const ComboboxRoot = HeadlessCombobox as React.ComponentType<ComboboxProps>;
  *
  * * Use `Combobox` for long lists where typing is faster than scrolling. For 3-10 options, use `Select`.
  * * Order the menu options logically to make it easier for users to find the option they want. Default to alphabetical order.
- * * Keep the option list the same width as the field that triggered it.
- * * Always render something when the filtered list is empty, so the field doesn't look broken.
+ * * Keep the option list the same width as the field that triggered it. This is the default.
+ * * When the filtered list is empty, `Combobox.Options` says "No matches found" so the field doesn't look broken. Use `noMatchesText` to change the wording.
+ * * When only so many values may be selected, say so in the `subLabel` (e.g., "Choose up to 3"). If the user selects more than that, set `status` to `"critical"` and explain in the `fieldNote`. Don't disable the remaining options: it hides the choices without telling the user why.
  *
  * ## Interaction
  *
@@ -379,6 +432,9 @@ export function Combobox({
     ComboboxSelection | null | undefined
   >(other.value !== undefined ? other.value : other.defaultValue);
 
+  // Held in state, not a ref, so the option list re-renders to anchor itself once the field mounts
+  const [fieldElement, setFieldElement] = useState<HTMLDivElement | null>(null);
+
   const componentClassName = clsx(
     styles['combobox'],
     fieldNote && styles['combobox--has-fieldNote'],
@@ -387,6 +443,11 @@ export function Combobox({
   );
 
   const { defaultValue: theirDefaultValue, ...restProps } = other;
+
+  // In virtual mode HeadlessUI renders the list by calling the render prop once per option, so
+  // with no options there's nothing to call and the empty state can't show. With nothing to
+  // virtualize, we turn virtualization off and let `Combobox.Options` show the empty state.
+  const hasNoVirtualOptions = other.virtual?.options.length === 0;
 
   // Removing a chip has to change what HeadlessUI treats as selected, and it offers no
   // imperative way in. So for multi-select we drive its value from the copy we already track,
@@ -415,6 +476,7 @@ export function Combobox({
     invalid: other.invalid ?? status === 'critical',
     name,
     ...restProps,
+    ...(hasNoVirtualOptions && { virtual: null }),
     ...(shouldControlValue
       ? { value: selectedValue ?? [] }
       : { defaultValue: theirDefaultValue }),
@@ -452,6 +514,8 @@ export function Combobox({
     // hand it down to `Combobox.Input` rather than putting it on the root.
     ariaLabel,
     disabled,
+    fieldElement,
+    hasNoVirtualOptions,
     optionsClassName,
     removeValue: (valueToRemove) => {
       const remaining = selectedValues.filter(
@@ -463,6 +527,7 @@ export function Combobox({
     },
     required,
     selectedValues,
+    setFieldElement,
     status,
     multiple: other.multiple,
   };
@@ -777,15 +842,50 @@ const ComboboxInputComponent = function (props: ComboboxInputProps) {
 
 /**
  * The content container showing the available options. Pass in the options that match the
- * current query; `Combobox` does no filtering of its own.
+ * current query; `Combobox` does no filtering of its own. With none passed in, it shows
+ * `noMatchesText` instead.
+ *
+ * The list lines up with the field, not the text field inside it. HeadlessUI can only anchor to
+ * the text field, which moves and narrows as chips fill the field, so we position the list with
+ * Floating UI instead.
  */
 const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
   const {
-    anchor = { to: 'bottom start', gap: 24, offset: -12 },
+    anchor,
+    children,
     className,
+    noMatchesText = 'No matches found',
+    ref,
+    style,
     ...other
   } = props;
-  const { optionsClassName } = useContext(ComboboxContext);
+  const { fieldElement, hasNoVirtualOptions, optionsClassName } =
+    useContext(ComboboxContext);
+
+  // Without a field to line up with (e.g., a custom input outside `Combobox.InputWrapper`), fall
+  // back to HeadlessUI's anchoring from the text field
+  const shouldAnchorToField = anchor === undefined && Boolean(fieldElement);
+
+  const { floatingStyles, refs } = useFloating({
+    elements: { reference: shouldAnchorToField ? fieldElement : null },
+    placement: 'bottom-start',
+    // Position with top/left, since the container's entry animation holds `transform`
+    transform: false,
+    whileElementsMounted: autoUpdate,
+    middleware: [
+      offset(OPTIONS_GAP),
+      flip(),
+      size({
+        // At least as wide as the field. A width class from the consumer can still widen it.
+        apply({ elements: { floating }, rects }) {
+          floating.style.minWidth = `${rects.reference.width}px`;
+        },
+      }),
+    ],
+  });
+
+  // The consumer's ref still gets the list when Floating UI needs it too
+  const floatingRef = useMergeRefs([refs.setFloating, ref]);
 
   const componentClassName = clsx(
     styles['combobox__options'],
@@ -793,14 +893,64 @@ const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
     optionsClassName,
   );
 
-  return (
+  // A disabled option rather than loose text, since a listbox may only hold options. It's not a
+  // HeadlessUI option: those need a value, which HeadlessUI runs through the consumer's `by`
+  // comparator, and there's no value here that every comparator can read.
+  const noMatches = (
+    <div
+      aria-disabled="true"
+      aria-selected="false"
+      className={styles['combobox__no-matches']}
+      role="option"
+    >
+      <Text as="div" preset="body-sm">
+        {noMatchesText}
+      </Text>
+    </div>
+  );
+
+  // `hasSlotContent` looks inside fragments and arrays and skips null, undefined, and booleans,
+  // so options that are wrapped in a fragment or rendered conditionally still count as none
+  // when nothing renders. A render prop is checked on what it returns. In virtual mode
+  // HeadlessUI calls it once per option (passing that option), so its result is left alone,
+  // and with no virtual options it isn't called at all.
+  const content = hasNoVirtualOptions
+    ? noMatches
+    : typeof children === 'function'
+      ? (slot: Parameters<typeof children>[0]) => {
+          const result = children(slot);
+          return slot.option !== undefined || hasSlotContent(result)
+            ? result
+            : noMatches;
+        }
+      : hasSlotContent(children)
+        ? children
+        : noMatches;
+
+  const options = (
     <ComboboxOptions
-      anchor={anchor}
+      anchor={
+        shouldAnchorToField
+          ? undefined
+          : (anchor ?? { to: 'bottom start', gap: 24, offset: -12 })
+      }
       as={PopoverContainer}
       className={componentClassName}
       modal={false}
+      ref={shouldAnchorToField ? floatingRef : ref}
+      style={shouldAnchorToField ? { ...floatingStyles, ...style } : style}
       {...other}
-    />
+    >
+      {content}
+    </ComboboxOptions>
+  );
+
+  // HeadlessUI portals the list itself when it anchors. We do the same so the list isn't clipped
+  // by a scrolling or overflow-hidden ancestor.
+  return shouldAnchorToField ? (
+    <FloatingPortal>{options}</FloatingPortal>
+  ) : (
+    options
   );
 };
 
@@ -898,8 +1048,10 @@ export const ComboboxInputWrapper = React.forwardRef<
     removedIcon,
   );
 
-  const { status: contextStatus } = useContext(ComboboxContext);
+  const { setFieldElement, status: contextStatus } =
+    useContext(ComboboxContext);
   const status = theirStatus ?? contextStatus;
+  const mergedRef = useMergeRefs([ref, setFieldElement]);
 
   const componentClassName = clsx(
     styles['combobox-input'],
@@ -910,7 +1062,7 @@ export const ComboboxInputWrapper = React.forwardRef<
   );
 
   return (
-    <div className={componentClassName} ref={ref} {...other}>
+    <div className={componentClassName} ref={mergedRef} {...other}>
       {children}
       <ComboboxButtonComponent />
     </div>

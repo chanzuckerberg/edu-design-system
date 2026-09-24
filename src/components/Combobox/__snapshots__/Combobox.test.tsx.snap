@@ -14,8 +14,8 @@ exports[`<Combobox /> > Generated Snapshots > AdjustedWidth story renders snapsh
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_6l_"
-      id="headlessui-label-_r_6k_"
+      for="headlessui-combobox-input-_r_9b_"
+      id="headlessui-label-_r_9a_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -28,34 +28,34 @@ exports[`<Combobox /> > Generated Snapshots > AdjustedWidth story renders snapsh
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_6q_"
+      aria-activedescendant="headlessui-combobox-option-_r_9l_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_6n_"
+      aria-controls="headlessui-combobox-options-_r_9i_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_6k_"
+      aria-labelledby="headlessui-label-_r_9a_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_6l_"
+      id="headlessui-combobox-input-_r_9b_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_6n_"
+      aria-controls="headlessui-combobox-options-_r_9i_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_6k_ headlessui-combobox-button-_r_6m_"
+      aria-labelledby="headlessui-label-_r_9a_ headlessui-combobox-button-_r_9c_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_6m_"
+      id="headlessui-combobox-button-_r_9c_"
       tabindex="-1"
       type="button"
     >
@@ -106,9 +106,9 @@ exports[`<Combobox /> > Generated Snapshots > Default story renders snapshot 1`]
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_8_"
+      aria-activedescendant="headlessui-combobox-option-_r_d_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_5_"
+      aria-controls="headlessui-combobox-options-_r_a_"
       aria-expanded="true"
       aria-labelledby="headlessui-label-_r_2_"
       class="_combobox-input__field_ff8210"
@@ -118,12 +118,12 @@ exports[`<Combobox /> > Generated Snapshots > Default story renders snapshot 1`]
       data-testid="input-button"
       id="headlessui-combobox-input-_r_3_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_5_"
+      aria-controls="headlessui-combobox-options-_r_a_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
@@ -171,8 +171,8 @@ exports[`<Combobox /> > Generated Snapshots > Error story renders snapshot 1`] =
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_85_"
-      id="headlessui-label-_r_84_"
+      for="headlessui-combobox-input-_r_ba_"
+      id="headlessui-label-_r_b9_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -199,37 +199,37 @@ exports[`<Combobox /> > Generated Snapshots > Error story renders snapshot 1`] =
     class="_combobox-input_ff8210 _combobox-input--error_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_8a_"
+      aria-activedescendant="headlessui-combobox-option-_r_bk_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_87_"
+      aria-controls="headlessui-combobox-options-_r_bh_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_84_"
+      aria-labelledby="headlessui-label-_r_b9_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open invalid focus"
       data-invalid=""
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_85_"
+      id="headlessui-combobox-input-_r_ba_"
       required=""
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_87_"
+      aria-controls="headlessui-combobox-options-_r_bh_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_84_ headlessui-combobox-button-_r_86_"
+      aria-labelledby="headlessui-label-_r_b9_ headlessui-combobox-button-_r_bb_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active invalid hover"
       data-hover=""
       data-invalid=""
       data-open=""
-      id="headlessui-combobox-button-_r_86_"
+      id="headlessui-combobox-button-_r_bb_"
       tabindex="-1"
       type="button"
     >
@@ -266,8 +266,8 @@ exports[`<Combobox /> > Generated Snapshots > HorizontalLabel story renders snap
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_13_"
-      id="headlessui-label-_r_12_"
+      for="headlessui-combobox-input-_r_1d_"
+      id="headlessui-label-_r_1c_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -280,34 +280,34 @@ exports[`<Combobox /> > Generated Snapshots > HorizontalLabel story renders snap
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_18_"
+      aria-activedescendant="headlessui-combobox-option-_r_1n_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_15_"
+      aria-controls="headlessui-combobox-options-_r_1k_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_12_"
+      aria-labelledby="headlessui-label-_r_1c_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_13_"
+      id="headlessui-combobox-input-_r_1d_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_15_"
+      aria-controls="headlessui-combobox-options-_r_1k_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_12_ headlessui-combobox-button-_r_14_"
+      aria-labelledby="headlessui-label-_r_1c_ headlessui-combobox-button-_r_1e_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_14_"
+      id="headlessui-combobox-button-_r_1e_"
       tabindex="-1"
       type="button"
     >
@@ -344,8 +344,8 @@ exports[`<Combobox /> > Generated Snapshots > Immediate story renders snapshot 1
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_j_"
-      id="headlessui-label-_r_i_"
+      for="headlessui-combobox-input-_r_o_"
+      id="headlessui-label-_r_n_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -358,34 +358,34 @@ exports[`<Combobox /> > Generated Snapshots > Immediate story renders snapshot 1
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_o_"
+      aria-activedescendant="headlessui-combobox-option-_r_12_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_l_"
+      aria-controls="headlessui-combobox-options-_r_v_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_i_"
+      aria-labelledby="headlessui-label-_r_n_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_j_"
+      id="headlessui-combobox-input-_r_o_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_l_"
+      aria-controls="headlessui-combobox-options-_r_v_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_i_ headlessui-combobox-button-_r_k_"
+      aria-labelledby="headlessui-label-_r_n_ headlessui-combobox-button-_r_p_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_k_"
+      id="headlessui-combobox-button-_r_p_"
       tabindex="-1"
       type="button"
     >
@@ -422,8 +422,8 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithChipIcons story render
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_4j_"
-      id="headlessui-label-_r_4i_"
+      for="headlessui-combobox-input-_r_6l_"
+      id="headlessui-label-_r_6k_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -524,33 +524,33 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithChipIcons story render
       </li>
     </ul>
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_4o_"
+      aria-activedescendant="headlessui-combobox-option-_r_6v_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_4l_"
+      aria-controls="headlessui-combobox-options-_r_6s_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_4i_"
+      aria-labelledby="headlessui-label-_r_6k_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_4j_"
+      id="headlessui-combobox-input-_r_6l_"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_4l_"
+      aria-controls="headlessui-combobox-options-_r_6s_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_4i_ headlessui-combobox-button-_r_4k_"
+      aria-labelledby="headlessui-label-_r_6k_ headlessui-combobox-button-_r_6m_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_4k_"
+      id="headlessui-combobox-button-_r_6m_"
       tabindex="-1"
       type="button"
     >
@@ -587,8 +587,8 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithFpoChipContent story r
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_a4_"
-      id="headlessui-label-_r_a3_"
+      for="headlessui-combobox-input-_r_dt_"
+      id="headlessui-label-_r_ds_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -685,33 +685,33 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithFpoChipContent story r
       </li>
     </ul>
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_a9_"
+      aria-activedescendant="headlessui-combobox-option-_r_e7_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_a6_"
+      aria-controls="headlessui-combobox-options-_r_e4_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_a3_"
+      aria-labelledby="headlessui-label-_r_ds_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_a4_"
+      id="headlessui-combobox-input-_r_dt_"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_a6_"
+      aria-controls="headlessui-combobox-options-_r_e4_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_a3_ headlessui-combobox-button-_r_a5_"
+      aria-labelledby="headlessui-label-_r_ds_ headlessui-combobox-button-_r_du_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_a5_"
+      id="headlessui-combobox-button-_r_du_"
       tabindex="-1"
       type="button"
     >
@@ -748,8 +748,8 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithManySelected story ren
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_43_"
-      id="headlessui-label-_r_42_"
+      for="headlessui-combobox-input-_r_5b_"
+      id="headlessui-label-_r_5a_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -890,33 +890,219 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithManySelected story ren
       </li>
     </ul>
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_48_"
+      aria-activedescendant="headlessui-combobox-option-_r_5l_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_45_"
+      aria-controls="headlessui-combobox-options-_r_5i_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_42_"
+      aria-labelledby="headlessui-label-_r_5a_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_43_"
+      id="headlessui-combobox-input-_r_5b_"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_45_"
+      aria-controls="headlessui-combobox-options-_r_5i_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_42_ headlessui-combobox-button-_r_44_"
+      aria-labelledby="headlessui-label-_r_5a_ headlessui-combobox-button-_r_5c_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_44_"
+      id="headlessui-combobox-button-_r_5c_"
+      tabindex="-1"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="_icon_779da8 _combobox-input__icon_ff8210 _combobox-input__icon--reversed_ff8210"
+        fill="currentColor"
+        height="24px"
+        style="--icon-size: 24px;"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Combobox /> > Generated Snapshots > MultipleWithSelectionLimit story renders snapshot 1`] = `
+<div
+  class="_combobox_ff8210 _combobox--has-fieldNote_ff8210 _combobox--label-layout-vertical_ff8210 w-[320px]"
+  data-headlessui-state="open invalid"
+  data-invalid=""
+  data-open=""
+  data-testid="combobox"
+>
+  <div
+    class="_combobox__overline_ff8210"
+  >
+    <label
+      class="_label_76755a _label--md_76755a _combobox__label_ff8210"
+      data-headlessui-state="open"
+      data-open=""
+      for="headlessui-combobox-input-_r_60_"
+      id="headlessui-label-_r_5v_"
+    >
+      <span
+        class="_text_b3eba3 _text--label-md_b3eba3"
+      >
+        Favorite Animal(s)
+      </span>
+    </label>
+    <div
+      class="_combobox__subLabel_ff8210"
+    >
+      <span
+        class="_text_b3eba3 _text--body-sm_b3eba3"
+      >
+        Choose up to 2
+      </span>
+    </div>
+  </div>
+  <div
+    class="_combobox-input_ff8210 _combobox-input--has-chips_ff8210 _combobox-input--error_ff8210"
+  >
+    <ul
+      class="_combobox-input__chips_ff8210"
+    >
+      <li>
+        <div
+          class="_input-chip_f95fba"
+        >
+          <div
+            class="_input-chip__label_f95fba"
+          >
+            <span
+              class="_text_b3eba3 _text--body-xs_b3eba3"
+            >
+              Dogs
+            </span>
+          </div>
+          <button
+            aria-label="remove Dogs"
+            class="_input-chip__action-button_f95fba"
+          >
+            <svg
+              aria-hidden="true"
+              class="_icon_779da8"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.39994 18.6542L5.34619 17.6004L10.9462 12.0004L5.34619 6.40043L6.39994 5.34668L11.9999 10.9467L17.5999 5.34668L18.6537 6.40043L13.0537 12.0004L18.6537 17.6004L17.5999 18.6542L11.9999 13.0542L6.39994 18.6542Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li>
+        <div
+          class="_input-chip_f95fba"
+        >
+          <div
+            class="_input-chip__label_f95fba"
+          >
+            <span
+              class="_text_b3eba3 _text--body-xs_b3eba3"
+            >
+              Cats
+            </span>
+          </div>
+          <button
+            aria-label="remove Cats"
+            class="_input-chip__action-button_f95fba"
+          >
+            <svg
+              aria-hidden="true"
+              class="_icon_779da8"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.39994 18.6542L5.34619 17.6004L10.9462 12.0004L5.34619 6.40043L6.39994 5.34668L11.9999 10.9467L17.5999 5.34668L18.6537 6.40043L13.0537 12.0004L18.6537 17.6004L17.5999 18.6542L11.9999 13.0542L6.39994 18.6542Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </li>
+      <li>
+        <div
+          class="_input-chip_f95fba"
+        >
+          <div
+            class="_input-chip__label_f95fba"
+          >
+            <span
+              class="_text_b3eba3 _text--body-xs_b3eba3"
+            >
+              Birds
+            </span>
+          </div>
+          <button
+            aria-label="remove Birds"
+            class="_input-chip__action-button_f95fba"
+          >
+            <svg
+              aria-hidden="true"
+              class="_icon_779da8"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.39994 18.6542L5.34619 17.6004L10.9462 12.0004L5.34619 6.40043L6.39994 5.34668L11.9999 10.9467L17.5999 5.34668L18.6537 6.40043L13.0537 12.0004L18.6537 17.6004L17.5999 18.6542L11.9999 13.0542L6.39994 18.6542Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </li>
+    </ul>
+    <input
+      aria-activedescendant="headlessui-combobox-option-_r_6a_"
+      aria-autocomplete="list"
+      aria-controls="headlessui-combobox-options-_r_67_"
+      aria-expanded="true"
+      aria-labelledby="headlessui-label-_r_5v_"
+      class="_combobox-input__field_ff8210"
+      data-focus=""
+      data-headlessui-state="open invalid focus"
+      data-invalid=""
+      data-open=""
+      data-testid="input-button"
+      id="headlessui-combobox-input-_r_60_"
+      role="combobox"
+      style="--combobox__input-width: calc(0 * 1ch);"
+      type="text"
+    />
+    <button
+      aria-controls="headlessui-combobox-options-_r_67_"
+      aria-expanded="true"
+      aria-haspopup="listbox"
+      aria-label="Show options"
+      aria-labelledby="headlessui-label-_r_5v_ headlessui-combobox-button-_r_61_"
+      class="_combobox-input__button_ff8210"
+      data-active=""
+      data-headlessui-state="open active invalid hover"
+      data-hover=""
+      data-invalid=""
+      data-open=""
+      id="headlessui-combobox-button-_r_61_"
       tabindex="-1"
       type="button"
     >
@@ -953,8 +1139,8 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithoutChips story renders
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_53_"
-      id="headlessui-label-_r_52_"
+      for="headlessui-combobox-input-_r_7a_"
+      id="headlessui-label-_r_79_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -967,34 +1153,34 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithoutChips story renders
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_58_"
+      aria-activedescendant="headlessui-combobox-option-_r_7k_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_55_"
+      aria-controls="headlessui-combobox-options-_r_7h_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_52_"
+      aria-labelledby="headlessui-label-_r_79_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_53_"
+      id="headlessui-combobox-input-_r_7a_"
       placeholder="1 selected"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_55_"
+      aria-controls="headlessui-combobox-options-_r_7h_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_52_ headlessui-combobox-button-_r_54_"
+      aria-labelledby="headlessui-label-_r_79_ headlessui-combobox-button-_r_7b_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_54_"
+      id="headlessui-combobox-button-_r_7b_"
       tabindex="-1"
       type="button"
     >
@@ -1028,9 +1214,9 @@ exports[`<Combobox /> > Generated Snapshots > NoVisibleLabel story renders snaps
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_99_"
+      aria-activedescendant="headlessui-combobox-option-_r_ct_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_96_"
+      aria-controls="headlessui-combobox-options-_r_cq_"
       aria-expanded="true"
       aria-label="hidden label"
       class="_combobox-input__field_ff8210"
@@ -1038,14 +1224,14 @@ exports[`<Combobox /> > Generated Snapshots > NoVisibleLabel story renders snaps
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_94_"
+      id="headlessui-combobox-input-_r_cj_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_96_"
+      aria-controls="headlessui-combobox-options-_r_cq_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
@@ -1054,7 +1240,7 @@ exports[`<Combobox /> > Generated Snapshots > NoVisibleLabel story renders snaps
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_95_"
+      id="headlessui-combobox-button-_r_ck_"
       tabindex="-1"
       type="button"
     >
@@ -1091,8 +1277,8 @@ exports[`<Combobox /> > Generated Snapshots > NoVisibleLabelButRequired story re
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_9k_"
-      id="headlessui-label-_r_9j_"
+      for="headlessui-combobox-input-_r_d8_"
+      id="headlessui-label-_r_d7_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1103,36 +1289,36 @@ exports[`<Combobox /> > Generated Snapshots > NoVisibleLabelButRequired story re
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_9p_"
+      aria-activedescendant="headlessui-combobox-option-_r_di_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_9m_"
+      aria-controls="headlessui-combobox-options-_r_df_"
       aria-expanded="true"
       aria-label="hidden label"
-      aria-labelledby="headlessui-label-_r_9j_"
+      aria-labelledby="headlessui-label-_r_d7_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_9k_"
+      id="headlessui-combobox-input-_r_d8_"
       required=""
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_9m_"
+      aria-controls="headlessui-combobox-options-_r_df_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_9j_ headlessui-combobox-button-_r_9l_"
+      aria-labelledby="headlessui-label-_r_d7_ headlessui-combobox-button-_r_d9_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_9l_"
+      id="headlessui-combobox-button-_r_d9_"
       tabindex="-1"
       type="button"
     >
@@ -1169,8 +1355,8 @@ exports[`<Combobox /> > Generated Snapshots > Optional story renders snapshot 1`
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_7l_"
-      id="headlessui-label-_r_7k_"
+      for="headlessui-combobox-input-_r_al_"
+      id="headlessui-label-_r_ak_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1197,34 +1383,34 @@ exports[`<Combobox /> > Generated Snapshots > Optional story renders snapshot 1`
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_7q_"
+      aria-activedescendant="headlessui-combobox-option-_r_av_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_7n_"
+      aria-controls="headlessui-combobox-options-_r_as_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_7k_"
+      aria-labelledby="headlessui-label-_r_ak_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_7l_"
+      id="headlessui-combobox-input-_r_al_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_7n_"
+      aria-controls="headlessui-combobox-options-_r_as_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_7k_ headlessui-combobox-button-_r_7m_"
+      aria-labelledby="headlessui-label-_r_ak_ headlessui-combobox-button-_r_am_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_7m_"
+      id="headlessui-combobox-button-_r_am_"
       tabindex="-1"
       type="button"
     >
@@ -1261,8 +1447,8 @@ exports[`<Combobox /> > Generated Snapshots > Required story renders snapshot 1`
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_75_"
-      id="headlessui-label-_r_74_"
+      for="headlessui-combobox-input-_r_a0_"
+      id="headlessui-label-_r_9v_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1289,35 +1475,35 @@ exports[`<Combobox /> > Generated Snapshots > Required story renders snapshot 1`
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_7a_"
+      aria-activedescendant="headlessui-combobox-option-_r_aa_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_77_"
+      aria-controls="headlessui-combobox-options-_r_a7_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_74_"
+      aria-labelledby="headlessui-label-_r_9v_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_75_"
+      id="headlessui-combobox-input-_r_a0_"
       required=""
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_77_"
+      aria-controls="headlessui-combobox-options-_r_a7_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_74_ headlessui-combobox-button-_r_76_"
+      aria-labelledby="headlessui-label-_r_9v_ headlessui-combobox-button-_r_a1_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_76_"
+      id="headlessui-combobox-button-_r_a1_"
       tabindex="-1"
       type="button"
     >
@@ -1354,8 +1540,8 @@ exports[`<Combobox /> > Generated Snapshots > Warning story renders snapshot 1`]
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_8l_"
-      id="headlessui-label-_r_8k_"
+      for="headlessui-combobox-input-_r_bv_"
+      id="headlessui-label-_r_bu_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1382,34 +1568,34 @@ exports[`<Combobox /> > Generated Snapshots > Warning story renders snapshot 1`]
     class="_combobox-input_ff8210 _combobox-input--warning_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_8q_"
+      aria-activedescendant="headlessui-combobox-option-_r_c9_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_8n_"
+      aria-controls="headlessui-combobox-options-_r_c6_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_8k_"
+      aria-labelledby="headlessui-label-_r_bu_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_8l_"
+      id="headlessui-combobox-input-_r_bv_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_8n_"
+      aria-controls="headlessui-combobox-options-_r_c6_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_8k_ headlessui-combobox-button-_r_8m_"
+      aria-labelledby="headlessui-label-_r_bu_ headlessui-combobox-button-_r_c0_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_8m_"
+      id="headlessui-combobox-button-_r_c0_"
       tabindex="-1"
       type="button"
     >
@@ -1446,8 +1632,8 @@ exports[`<Combobox /> > Generated Snapshots > WithFieldName story renders snapsh
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_2j_"
-      id="headlessui-label-_r_2i_"
+      for="headlessui-combobox-input-_r_3c_"
+      id="headlessui-label-_r_3b_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1469,34 +1655,34 @@ exports[`<Combobox /> > Generated Snapshots > WithFieldName story renders snapsh
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_2o_"
+      aria-activedescendant="headlessui-combobox-option-_r_3m_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_2l_"
+      aria-controls="headlessui-combobox-options-_r_3j_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_2i_"
+      aria-labelledby="headlessui-label-_r_3b_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_2j_"
+      id="headlessui-combobox-input-_r_3c_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_2l_"
+      aria-controls="headlessui-combobox-options-_r_3j_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_2i_ headlessui-combobox-button-_r_2k_"
+      aria-labelledby="headlessui-label-_r_3b_ headlessui-combobox-button-_r_3d_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_2k_"
+      id="headlessui-combobox-button-_r_3d_"
       tabindex="-1"
       type="button"
     >
@@ -1533,8 +1719,8 @@ exports[`<Combobox /> > Generated Snapshots > WithFieldNote story renders snapsh
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_33_"
-      id="headlessui-label-_r_32_"
+      for="headlessui-combobox-input-_r_41_"
+      id="headlessui-label-_r_40_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1547,34 +1733,34 @@ exports[`<Combobox /> > Generated Snapshots > WithFieldNote story renders snapsh
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_38_"
+      aria-activedescendant="headlessui-combobox-option-_r_4b_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_35_"
+      aria-controls="headlessui-combobox-options-_r_48_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_32_"
+      aria-labelledby="headlessui-label-_r_40_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_33_"
+      id="headlessui-combobox-input-_r_41_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_35_"
+      aria-controls="headlessui-combobox-options-_r_48_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_32_ headlessui-combobox-button-_r_34_"
+      aria-labelledby="headlessui-label-_r_40_ headlessui-combobox-button-_r_42_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_34_"
+      id="headlessui-combobox-button-_r_42_"
       tabindex="-1"
       type="button"
     >
@@ -1611,8 +1797,8 @@ exports[`<Combobox /> > Generated Snapshots > WithPlaceholder story renders snap
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_3j_"
-      id="headlessui-label-_r_3i_"
+      for="headlessui-combobox-input-_r_4m_"
+      id="headlessui-label-_r_4l_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1625,34 +1811,34 @@ exports[`<Combobox /> > Generated Snapshots > WithPlaceholder story renders snap
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_3o_"
+      aria-activedescendant="headlessui-combobox-option-_r_50_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_3l_"
+      aria-controls="headlessui-combobox-options-_r_4t_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_3i_"
+      aria-labelledby="headlessui-label-_r_4l_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_3j_"
+      id="headlessui-combobox-input-_r_4m_"
       placeholder="Search animals"
       role="combobox"
       style="--combobox__input-width: calc(0 * 1ch);"
       type="text"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_3l_"
+      aria-controls="headlessui-combobox-options-_r_4t_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_3i_ headlessui-combobox-button-_r_3k_"
+      aria-labelledby="headlessui-label-_r_4l_ headlessui-combobox-button-_r_4n_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_3k_"
+      id="headlessui-combobox-button-_r_4n_"
       tabindex="-1"
       type="button"
     >
@@ -1689,8 +1875,8 @@ exports[`<Combobox /> > Generated Snapshots > WithProvidedIcons story renders sn
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_ak_"
-      id="headlessui-label-_r_aj_"
+      for="headlessui-combobox-input-_r_ei_"
+      id="headlessui-label-_r_eh_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1703,34 +1889,34 @@ exports[`<Combobox /> > Generated Snapshots > WithProvidedIcons story renders sn
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_ap_"
+      aria-activedescendant="headlessui-combobox-option-_r_es_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_am_"
+      aria-controls="headlessui-combobox-options-_r_ep_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_aj_"
+      aria-labelledby="headlessui-label-_r_eh_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_ak_"
+      id="headlessui-combobox-input-_r_ei_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_am_"
+      aria-controls="headlessui-combobox-options-_r_ep_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_aj_ headlessui-combobox-button-_r_al_"
+      aria-labelledby="headlessui-label-_r_eh_ headlessui-combobox-button-_r_ej_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_al_"
+      id="headlessui-combobox-button-_r_ej_"
       tabindex="-1"
       type="button"
     >
@@ -1767,8 +1953,8 @@ exports[`<Combobox /> > Generated Snapshots > WithRenderProp story renders snaps
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_5j_"
-      id="headlessui-label-_r_5i_"
+      for="headlessui-combobox-input-_r_7v_"
+      id="headlessui-label-_r_7u_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1781,33 +1967,33 @@ exports[`<Combobox /> > Generated Snapshots > WithRenderProp story renders snaps
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_5o_"
+      aria-activedescendant="headlessui-combobox-option-_r_89_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_5l_"
+      aria-controls="headlessui-combobox-options-_r_86_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_5i_"
+      aria-labelledby="headlessui-label-_r_7u_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
-      id="headlessui-combobox-input-_r_5j_"
+      id="headlessui-combobox-input-_r_7v_"
       role="combobox"
       style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Dogs"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_5l_"
+      aria-controls="headlessui-combobox-options-_r_86_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_5i_ headlessui-combobox-button-_r_5k_"
+      aria-labelledby="headlessui-label-_r_7u_ headlessui-combobox-button-_r_80_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_5k_"
+      id="headlessui-combobox-button-_r_80_"
       tabindex="-1"
       type="button"
     >
@@ -1851,8 +2037,8 @@ exports[`<Combobox /> > Generated Snapshots > WithSelectedBy story renders snaps
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_23_"
-      id="headlessui-label-_r_22_"
+      for="headlessui-combobox-input-_r_2n_"
+      id="headlessui-label-_r_2m_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1865,34 +2051,34 @@ exports[`<Combobox /> > Generated Snapshots > WithSelectedBy story renders snaps
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_2a_"
+      aria-activedescendant="headlessui-combobox-option-_r_33_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_25_"
+      aria-controls="headlessui-combobox-options-_r_2u_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_22_"
+      aria-labelledby="headlessui-label-_r_2m_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_23_"
+      id="headlessui-combobox-input-_r_2n_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Cats"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_25_"
+      aria-controls="headlessui-combobox-options-_r_2u_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_22_ headlessui-combobox-button-_r_24_"
+      aria-labelledby="headlessui-label-_r_2m_ headlessui-combobox-button-_r_2o_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_24_"
+      id="headlessui-combobox-button-_r_2o_"
       tabindex="-1"
       type="button"
     >
@@ -1929,8 +2115,8 @@ exports[`<Combobox /> > Generated Snapshots > WithSelectedOption story renders s
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_1j_"
-      id="headlessui-label-_r_1i_"
+      for="headlessui-combobox-input-_r_22_"
+      id="headlessui-label-_r_21_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -1943,34 +2129,34 @@ exports[`<Combobox /> > Generated Snapshots > WithSelectedOption story renders s
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_1q_"
+      aria-activedescendant="headlessui-combobox-option-_r_2e_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_1l_"
+      aria-controls="headlessui-combobox-options-_r_29_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_1i_"
+      aria-labelledby="headlessui-label-_r_21_"
       class="_combobox-input__field_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_1j_"
+      id="headlessui-combobox-input-_r_22_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(4 * 1ch);"
       type="text"
       value="Cats"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_1l_"
+      aria-controls="headlessui-combobox-options-_r_29_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_1i_ headlessui-combobox-button-_r_1k_"
+      aria-labelledby="headlessui-label-_r_21_ headlessui-combobox-button-_r_23_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_1k_"
+      id="headlessui-combobox-button-_r_23_"
       tabindex="-1"
       type="button"
     >
@@ -2007,8 +2193,8 @@ exports[`<Combobox /> > Generated Snapshots > WithTruncation story renders snaps
       class="_label_76755a _label--md_76755a _combobox__label_ff8210"
       data-headlessui-state="open"
       data-open=""
-      for="headlessui-combobox-input-_r_63_"
-      id="headlessui-label-_r_62_"
+      for="headlessui-combobox-input-_r_8k_"
+      id="headlessui-label-_r_8j_"
     >
       <span
         class="_text_b3eba3 _text--label-md_b3eba3"
@@ -2021,34 +2207,34 @@ exports[`<Combobox /> > Generated Snapshots > WithTruncation story renders snaps
     class="_combobox-input_ff8210"
   >
     <input
-      aria-activedescendant="headlessui-combobox-option-_r_68_"
+      aria-activedescendant="headlessui-combobox-option-_r_8u_"
       aria-autocomplete="list"
-      aria-controls="headlessui-combobox-options-_r_65_"
+      aria-controls="headlessui-combobox-options-_r_8r_"
       aria-expanded="true"
-      aria-labelledby="headlessui-label-_r_62_"
+      aria-labelledby="headlessui-label-_r_8j_"
       class="_combobox-input__field_ff8210 _combobox-input__field--truncated_ff8210"
       data-focus=""
       data-headlessui-state="open focus"
       data-open=""
       data-testid="input-button"
-      id="headlessui-combobox-input-_r_63_"
+      id="headlessui-combobox-input-_r_8k_"
       role="combobox"
-      style="--combobox__input-width: calc(0 * 1ch);"
+      style="--combobox__input-width: calc(42 * 1ch);"
       type="text"
       value="A very long option label that will not fit"
     />
     <button
-      aria-controls="headlessui-combobox-options-_r_65_"
+      aria-controls="headlessui-combobox-options-_r_8r_"
       aria-expanded="true"
       aria-haspopup="listbox"
       aria-label="Show options"
-      aria-labelledby="headlessui-label-_r_62_ headlessui-combobox-button-_r_64_"
+      aria-labelledby="headlessui-label-_r_8j_ headlessui-combobox-button-_r_8l_"
       class="_combobox-input__button_ff8210"
       data-active=""
       data-headlessui-state="open active hover"
       data-hover=""
       data-open=""
-      id="headlessui-combobox-button-_r_64_"
+      id="headlessui-combobox-button-_r_8l_"
       tabindex="-1"
       type="button"
     >

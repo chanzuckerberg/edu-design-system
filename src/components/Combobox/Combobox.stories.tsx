@@ -54,7 +54,7 @@ const meta: Meta<typeof Combobox> = {
         'Optional handler that fires when the option list closes, useful for resetting the query',
     },
   },
-  tags: ['autodocs', 'beta', 'version:2.0.0'],
+  tags: ['autodocs', 'version:1.0.0'],
 };
 
 export default meta;
@@ -141,21 +141,15 @@ const ComboboxDemo = ({
         {...inputProps}
       />
       <Combobox.Options anchor={optionsAnchor} className="w-60">
-        {filteredOptions.length === 0 ? (
-          <Combobox.Option disabled value="">
-            No matches
+        {filteredOptions.map((option) => (
+          <Combobox.Option
+            key={option.key}
+            subLabel={showSubLabels ? option.subLabel : undefined}
+            value={option}
+          >
+            {option.label}
           </Combobox.Option>
-        ) : (
-          filteredOptions.map((option) => (
-            <Combobox.Option
-              key={option.key}
-              subLabel={showSubLabels ? option.subLabel : undefined}
-              value={option}
-            >
-              {option.label}
-            </Combobox.Option>
-          ))
-        )}
+        ))}
       </Combobox.Options>
     </Combobox>
   );
@@ -267,8 +261,9 @@ export const FilteredByQuery: StoryObj<DemoProps> = {
 };
 
 /**
- * Because filtering is the consumer's job, so is the empty state. Always render something when
- * nothing matches, so the field doesn't look broken. Here a disabled option says "No matches".
+ * When `Combobox.Options` gets no options, such as when a query matches nothing, it says
+ * "No matches found" so the field doesn't look broken. The entry carries no control and can't be
+ * selected. Pass `noMatchesText` to `Combobox.Options` to change the wording.
  */
 export const NoMatches: StoryObj<DemoProps> = {
   ...Default,
@@ -276,7 +271,9 @@ export const NoMatches: StoryObj<DemoProps> = {
     await typeQuery('zzz')?.(playOptions);
 
     const popoverCanvas = within(document.body);
-    await expect(await popoverCanvas.findByText('No matches')).toBeVisible();
+    await expect(
+      await popoverCanvas.findByText('No matches found'),
+    ).toBeVisible();
   },
   parameters: {
     ...Default.parameters,
@@ -570,6 +567,74 @@ export const MultipleWithManySelected: StoryObj<DemoProps> = {
     ...Multiple.args,
     defaultValue: exampleOptions,
     className: 'w-[240px]',
+  },
+};
+
+/**
+ * The option list lines up with the field's left edge and matches its width, however many rows
+ * of chips the field holds and wherever the cursor sits.
+ */
+export const MultipleWithManySelectedOpen: StoryObj<DemoProps> = {
+  render: (args) => <MultipleComboboxDemo {...args} />,
+  args: {
+    ...MultipleWithManySelected.args,
+  },
+  play: async (playOptions) => {
+    const canvas = within(playOptions.canvasElement);
+    const input = await canvas.findByRole('combobox');
+
+    await userEvent.click(input);
+    await userEvent.keyboard('{ArrowDown}');
+    await expect(input.getAttribute('aria-expanded')).toEqual('true');
+  },
+  decorators: [
+    (Story) => (
+      <div className="p-spacing-size-4 pb-spacing-size-8">{Story()}</div>
+    ),
+  ],
+  parameters: {
+    snapshot: {
+      skip: true,
+    },
+  },
+};
+
+const selectionLimit = 2;
+
+/**
+ * When only so many values may be selected, say so in the `subLabel`. If the user goes past the
+ * limit, set `status` to `"critical"` and explain in the `fieldNote`. Leave the remaining options
+ * enabled: disabling them hides the choices without saying why.
+ */
+const MultipleWithSelectionLimitDemo = (args: DemoProps) => {
+  const [selectedCount, setSelectedCount] = useState(
+    Array.isArray(args.defaultValue) ? args.defaultValue.length : 0,
+  );
+  const isOverLimit = selectedCount > selectionLimit;
+
+  return (
+    <MultipleComboboxDemo
+      {...args}
+      fieldNote={
+        isOverLimit
+          ? `You've chosen ${selectedCount}. Remove ${selectedCount - selectionLimit} to continue.`
+          : undefined
+      }
+      onChange={(value) =>
+        setSelectedCount(Array.isArray(value) ? value.length : 0)
+      }
+      status={isOverLimit ? 'critical' : 'default'}
+      subLabel={`Choose up to ${selectionLimit}`}
+    />
+  );
+};
+
+export const MultipleWithSelectionLimit: StoryObj<DemoProps> = {
+  render: (args) => <MultipleWithSelectionLimitDemo {...args} />,
+  args: {
+    ...Multiple.args,
+    defaultValue: [exampleOptions[0], exampleOptions[1], exampleOptions[2]],
+    className: 'w-[320px]',
   },
 };
 
