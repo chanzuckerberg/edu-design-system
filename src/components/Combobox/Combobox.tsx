@@ -164,7 +164,8 @@ type ComboboxOptionsProps = HeadlessComboboxOptionsProps<'div'> & {
   // Component API
   /**
    * Where the option list sits relative to the field. When left unset, the list lines up with
-   * the field's bottom left edge and matches its width, however many chips it holds.
+   * the field's bottom left edge and is at least as wide as the field, however many chips it
+   * holds. A width class on the list can make it wider.
    *
    * Setting it hands positioning back to HeadlessUI, which measures from the text field itself
    * rather than the field's border.
@@ -296,6 +297,11 @@ type ComboboxContextType = {
    * The bordered field, which the option list lines up with.
    */
   fieldElement?: HTMLDivElement | null;
+  /**
+   * Whether the consumer passed `virtual` with an empty `options` list, so the option list
+   * shows its empty state instead of calling the render prop.
+   */
+  hasNoVirtualOptions?: boolean;
   optionsClassName?: string;
   /**
    * Drops one value from the selection. Backs the remove button on each chip.
@@ -438,6 +444,11 @@ export function Combobox({
 
   const { defaultValue: theirDefaultValue, ...restProps } = other;
 
+  // In virtual mode HeadlessUI renders the list by calling the render prop once per option, so
+  // with no options there's nothing to call and the empty state can't show. With nothing to
+  // virtualize, we turn virtualization off and let `Combobox.Options` show the empty state.
+  const hasNoVirtualOptions = other.virtual?.options.length === 0;
+
   // Removing a chip has to change what HeadlessUI treats as selected, and it offers no
   // imperative way in. So for multi-select we drive its value from the copy we already track,
   // seeded from `defaultValue`. The consumer's uncontrolled API is unchanged.
@@ -465,6 +476,7 @@ export function Combobox({
     invalid: other.invalid ?? status === 'critical',
     name,
     ...restProps,
+    ...(hasNoVirtualOptions && { virtual: null }),
     ...(shouldControlValue
       ? { value: selectedValue ?? [] }
       : { defaultValue: theirDefaultValue }),
@@ -503,6 +515,7 @@ export function Combobox({
     ariaLabel,
     disabled,
     fieldElement,
+    hasNoVirtualOptions,
     optionsClassName,
     removeValue: (valueToRemove) => {
       const remaining = selectedValues.filter(
@@ -846,7 +859,8 @@ const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
     style,
     ...other
   } = props;
-  const { fieldElement, optionsClassName } = useContext(ComboboxContext);
+  const { fieldElement, hasNoVirtualOptions, optionsClassName } =
+    useContext(ComboboxContext);
 
   // Without a field to line up with (e.g., a custom input outside `Combobox.InputWrapper`), fall
   // back to HeadlessUI's anchoring from the text field
@@ -898,9 +912,11 @@ const ComboboxOptionsComponent = function (props: ComboboxOptionsProps) {
   // `hasSlotContent` looks inside fragments and arrays and skips null, undefined, and booleans,
   // so options that are wrapped in a fragment or rendered conditionally still count as none
   // when nothing renders. A render prop is checked on what it returns. In virtual mode
-  // HeadlessUI calls it once per option (passing that option), so its result is left alone.
-  const content =
-    typeof children === 'function'
+  // HeadlessUI calls it once per option (passing that option), so its result is left alone,
+  // and with no virtual options it isn't called at all.
+  const content = hasNoVirtualOptions
+    ? noMatches
+    : typeof children === 'function'
       ? (slot: Parameters<typeof children>[0]) => {
           const result = children(slot);
           return slot.option !== undefined || hasSlotContent(result)

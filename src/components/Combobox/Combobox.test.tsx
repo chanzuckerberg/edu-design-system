@@ -306,6 +306,76 @@ describe('<Combobox />', () => {
     expect(screen.queryByText('No matches found')).not.toBeInTheDocument();
   });
 
+  describe('virtual', () => {
+    /**
+     * Virtual mode takes its options on the root and renders one per call of the render prop.
+     */
+    const TestVirtualCombobox = ({
+      onChange,
+    }: {
+      onChange?: (value: unknown) => void;
+    }) => {
+      const [query, setQuery] = useState('');
+      const filteredOptions = exampleOptions.filter((option) =>
+        option.label.toLowerCase().includes(query.toLowerCase()),
+      );
+
+      return (
+        <Combobox
+          aria-label="test"
+          name="test-combobox"
+          onChange={onChange}
+          virtual={{ options: filteredOptions }}
+        >
+          <Combobox.Input onChange={(event) => setQuery(event.target.value)} />
+          <Combobox.Options>
+            {({ option }) => (
+              <Combobox.Option value={option}>
+                {(option as (typeof exampleOptions)[number]).label}
+              </Combobox.Option>
+            )}
+          </Combobox.Options>
+        </Combobox>
+      );
+    };
+
+    it('shows the empty state when there are no virtual options', async () => {
+      const user = userEvent.setup();
+      render(<TestVirtualCombobox />);
+
+      await user.type(await screen.findByRole('combobox'), 'zzz');
+
+      expect(await screen.findByRole('option')).toHaveTextContent(
+        'No matches found',
+      );
+    });
+
+    it('brings the virtual options back once the query matches again', async () => {
+      // The virtualizer only renders the rows that fit, and jsdom lays nothing out, so give
+      // every element room for all of them
+      vi.spyOn(HTMLElement.prototype, 'offsetHeight', 'get').mockReturnValue(
+        400,
+      );
+      vi.spyOn(HTMLElement.prototype, 'offsetWidth', 'get').mockReturnValue(
+        240,
+      );
+      const changeHandler = vi.fn();
+      const user = userEvent.setup();
+      render(<TestVirtualCombobox onChange={changeHandler} />);
+
+      const input = await screen.findByRole('combobox');
+      await user.type(input, 'zzz');
+      await screen.findByText('No matches found');
+
+      await user.clear(input);
+      await user.type(input, 'Option 2');
+
+      expect(await screen.findByRole('option')).toHaveTextContent('Option 2');
+      await user.keyboard('{arrowdown}{enter}');
+      expect(changeHandler).toHaveBeenCalledWith(exampleOptions[1]);
+    });
+  });
+
   it('keeps the empty state out of a strict by comparator', async () => {
     const user = userEvent.setup();
     // A comparator that reads a required field, which would throw if handed anything that
