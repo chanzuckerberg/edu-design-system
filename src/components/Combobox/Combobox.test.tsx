@@ -8,6 +8,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { Combobox } from './Combobox';
 import * as stories from './Combobox.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
+import Modal from '../Modal';
 
 mockResizeObserver();
 
@@ -541,6 +542,54 @@ describe('<Combobox />', () => {
       expect(
         screen.getByRole('button', { name: 'remove Option 1' }),
       ).toBeDisabled();
+    });
+  });
+
+  describe('inside a Modal', () => {
+    it('keeps the option list usable', async () => {
+      const changeHandler = vi.fn();
+      const onClose = vi.fn();
+      const user = userEvent.setup();
+      render(
+        <Modal aria-label="test modal" onClose={onClose} open>
+          <Modal.Body>
+            <TestCombobox onChange={changeHandler} />
+          </Modal.Body>
+        </Modal>,
+      );
+
+      await user.click(
+        await screen.findByRole('button', { name: 'Show options' }),
+      );
+      const listbox = await screen.findByRole('listbox');
+
+      // The list is portaled outside the dialog. HeadlessUI only makes the app root inert, and
+      // counts other top-level nodes as inside the dialog, so the list stays usable.
+      expect(screen.getByRole('dialog')).not.toContainElement(listbox);
+      expect(listbox.closest('[inert]')).toBeNull();
+
+      await user.click(screen.getByRole('option', { name: 'Option 2' }));
+
+      expect(changeHandler).toHaveBeenCalledWith(exampleOptions[1]);
+      // Picking an option isn't a click outside the dialog
+      expect(onClose).not.toHaveBeenCalled();
+    });
+
+    it('selects an option from the keyboard', async () => {
+      const changeHandler = vi.fn();
+      const user = userEvent.setup();
+      render(
+        <Modal aria-label="test modal" onClose={vi.fn()} open>
+          <Modal.Body>
+            <TestCombobox onChange={changeHandler} />
+          </Modal.Body>
+        </Modal>,
+      );
+
+      await user.click(await screen.findByRole('combobox'));
+      await user.keyboard('{arrowdown}{arrowdown}{enter}');
+
+      expect(changeHandler).toHaveBeenCalledTimes(1);
     });
   });
 
