@@ -103,4 +103,20 @@ describe('<TextareaField />', () => {
 
     expect(onChangeFn).toHaveBeenCalledTimes(3);
   });
+
+  it('uses a custom aria-describedby over the generated one', () => {
+    render(
+      <TextareaField
+        aria-describedby="custom-description"
+        fieldNote="Field note"
+        label="Comments"
+        subLabel="Sub label"
+      />,
+    );
+
+    expect(screen.getByRole('textbox')).toHaveAttribute(
+      'aria-describedby',
+      'custom-description',
+    );
+  });
 });

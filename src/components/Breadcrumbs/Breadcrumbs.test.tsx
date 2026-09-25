@@ -2,7 +2,7 @@ import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/react-vite';
 import { render, screen, waitFor } from '@testing-library/react';
 import React from 'react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import * as stories from './Breadcrumbs.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 import Breadcrumbs from './index';
@@ -69,5 +69,34 @@ describe('<Breadcrumbs />', () => {
         expect(screen.getAllByRole('listitem').length).toEqual(12);
       });
     });
+  });
+
+  it('ignores a pending resize check that lands after unmount', () => {
+    vi.useFakeTimers();
+    const error = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    const { unmount } = render(<LongList />);
+    window.dispatchEvent(new Event('resize'));
+    unmount();
+
+    expect(() => vi.advanceTimersByTime(200)).not.toThrow();
+    expect(error).not.toHaveBeenCalled();
+    vi.useRealTimers();
+  });
+
+  it('throws when given children other than Breadcrumbs.Item', () => {
+    // React logs the thrown render error; keep the test output quiet
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    expect(() =>
+      render(
+        <Breadcrumbs>
+          <Breadcrumbs.Item href="/a" text="Parent" />
+          <span>Not a crumb</span>
+        </Breadcrumbs>,
+      ),
+    ).toThrow(
+      'Only <Breadcrumbs.Item> or React.Fragment of aforementioned components allowed',
+    );
   });
 });

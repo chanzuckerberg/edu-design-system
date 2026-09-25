@@ -95,6 +95,34 @@ describe('<Accordion />', () => {
     expect(onClose).not.toHaveBeenCalled();
   });
 
+  it('should call onOpen and onClose callbacks when toggled from the keyboard', async () => {
+    const user = userEvent.setup();
+    const onClose = vi.fn();
+    const onOpen = vi.fn();
+    render(
+      <Accordion headingAs="h2">
+        <Accordion.Row>
+          <Accordion.Button onClose={onClose} onOpen={onOpen}>
+            Accordion Button
+          </Accordion.Button>
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </Accordion.Row>
+      </Accordion>,
+    );
+
+    await user.tab();
+    await user.keyboard('{Enter}');
+    expect(onOpen).toHaveBeenCalled();
+    expect(onClose).not.toHaveBeenCalled();
+    expect(screen.getByText('Accordion Panel')).toBeInTheDocument();
+
+    onOpen.mockClear();
+    await user.keyboard('{Enter}');
+    expect(onClose).toHaveBeenCalled();
+    expect(onOpen).not.toHaveBeenCalled();
+    expect(screen.queryByText('Accordion Panel')).not.toBeInTheDocument();
+  });
+
   it('should not call onOpen callback when accordion opens on an empty row', async () => {
     const user = userEvent.setup();
     const onClose = vi.fn();
