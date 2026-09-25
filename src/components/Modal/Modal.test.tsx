@@ -112,6 +112,79 @@ describe('Modal', () => {
     consoleErrorMock.mockRestore();
   });
 
+  describe('direct children', () => {
+    it('does not print an error for sections, fragments, and empty children', () => {
+      const consoleErrorMock = vi
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+      const showFooter = false;
+
+      render(
+        <Modal aria-label="aria label" onClose={() => {}} open>
+          <>
+            <Modal.Header>Modal Title</Modal.Header>
+            <Modal.Body>Modal body content.</Modal.Body>
+          </>
+          {null}
+          {showFooter && <Modal.Footer>Modal footer content.</Modal.Footer>}
+        </Modal>,
+      );
+
+      expect(consoleErrorMock).not.toHaveBeenCalled();
+      consoleErrorMock.mockRestore();
+    });
+
+    it.each([
+      ['an element', <div key="stray">Stray content</div>],
+      ['text', 'Stray content'],
+      [
+        'an element inside a fragment',
+        <React.Fragment key="stray">
+          <p>Stray content</p>
+        </React.Fragment>,
+      ],
+    ])('prints an error for %s', (_description, stray) => {
+      const consoleErrorMock = vi
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+
+      render(
+        <Modal aria-label="aria label" onClose={() => {}} open>
+          <Modal.Header>Modal Title</Modal.Header>
+          <Modal.Body>Modal body content.</Modal.Body>
+          {stray}
+        </Modal>,
+      );
+
+      expect(consoleErrorMock).toHaveBeenCalledWith(
+        expect.stringContaining(
+          'Modal only takes Modal.Header, Modal.Body, and Modal.Footer',
+        ),
+      );
+      consoleErrorMock.mockRestore();
+    });
+
+    it('prints an error for Modal.Content used on its own', () => {
+      const consoleErrorMock = vi
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+
+      render(
+        <Modal.Content onClose={() => {}} open>
+          <Modal.Body>Modal body content.</Modal.Body>
+          <div>Stray content</div>
+        </Modal.Content>,
+      );
+
+      expect(consoleErrorMock).toHaveBeenCalledWith(
+        expect.stringContaining(
+          'Modal only takes Modal.Header, Modal.Body, and Modal.Footer',
+        ),
+      );
+      consoleErrorMock.mockRestore();
+    });
+  });
+
   /**
    * v19 removed `height` and `overlayEmphasis`. Untyped code never sees the type error that
    * replaced them, and React's own reporting is uneven: it names an unknown camelCase prop

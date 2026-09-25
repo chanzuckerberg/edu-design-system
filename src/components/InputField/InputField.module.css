@@ -34,8 +34,11 @@
  * `--input-field__input-within-width` from that measurement; the fallback reserves the same
  * space the previous fixed treatment did, and is what renders before measurement (during SSR,
  * or when ResizeObserver is unavailable).
+ *
+ * Scoped under the body so it outranks the padding `Input` sets on the same element, whichever
+ * stylesheet happens to load last.
  */
-.input-field__input--input-within {
+.input-field__body .input-field__input--input-within {
   padding-inline-end: calc(
     var(--input-field__input-within-width, calc(var(--eds-spacing-size-9) * 1px)) +
       (var(--eds-spacing-size-1-and-half) * 2px)
@@ -75,7 +78,11 @@
   position: relative;
 }
 
-.input-field__input--leading-content {
+/**
+ * Scoped under the body so it outranks the padding `Input` sets on the same element, whichever
+ * stylesheet happens to load last.
+ */
+.input-field__body .input-field__input--leading-content {
   padding-left: calc(var(--eds-spacing-size-4-and-half) * 1px);
 }
 

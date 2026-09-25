@@ -38,7 +38,8 @@ type ModalContentProps = {
    */
   className?: string;
   /**
-   * Contents of the modal.
+   * Contents of the modal. Only `Modal.Header`, `Modal.Body`, and `Modal.Footer` are allowed
+   * as direct children; anything else logs an error.
    */
   children: ReactNode;
   /**
@@ -163,7 +164,7 @@ type ModalBodyProps = {
   // Component API
   /**
    * Child node(s) that can be nested inside component. `Modal.Header`,
-   * `Modal.Body`, and `Model.Footer` are the only permissible children of the Modal.
+   * `Modal.Body`, and `Modal.Footer` are the only permissible children of the Modal.
    */
   children: ReactNode;
   /**
@@ -231,6 +232,33 @@ function childrenHaveModalTitle(children?: ReactNode): boolean {
 }
 
 /**
+ * Helper function to determine whether a set of children has anything other than `Modal.Header`,
+ * `Modal.Body`, or `Modal.Footer` at the top level. Fragments are looked through, since they
+ * add nothing to the DOM, and empty children (`null`, `false`, `undefined`) are skipped, so
+ * conditionally rendered sections are fine.
+ *
+ * @param children component children (ReactNode)
+ * @returns boolean representing whether any top-level child is not one of the three sections
+ */
+function childrenHaveNonSectionChild(children?: ReactNode): boolean {
+  return React.Children.toArray(children).some((child) => {
+    if (!React.isValidElement(child)) {
+      return true;
+    }
+    if (child.type === React.Fragment) {
+      return childrenHaveNonSectionChild(
+        (child.props as { children?: ReactNode }).children,
+      );
+    }
+    return (
+      child.type !== ModalHeader &&
+      child.type !== ModalBody &&
+      child.type !== ModalFooter
+    );
+  });
+}
+
+/**
  * The actual modal, without the dark overlay behind it.
  *
  * This is only exported for testing purposes; please do not import and use this directly.
@@ -266,6 +294,12 @@ const ModalContent = (props: ModalContentProps) => {
     'overlayEmphasis',
     'Every modal draws the low-emphasis overlay now.',
     removedOverlayEmphasis,
+  );
+
+  assertEdsUsage(
+    [childrenHaveNonSectionChild(children)],
+    'Modal only takes Modal.Header, Modal.Body, and Modal.Footer as direct children. The modal lays out and scrolls those three sections, so anything else placed alongside them breaks that layout. Move the content into one of the sections, usually Modal.Body.',
+    'error',
   );
 
   const componentClassName = clsx(
