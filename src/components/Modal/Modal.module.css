@@ -247,7 +247,7 @@
 
   @media all and (min-width: $eds-bp-sm) {
     max-width: 800px;
-    height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+    max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
     border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
 
     margin: calc(var(--eds-spacing-size-3) * 1px);
@@ -255,21 +255,21 @@
 
   @media all and (min-width: $eds-bp-md) {
     max-width: 800px;
-    height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+    max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
 
     margin: calc(var(--eds-spacing-size-6) * 1px);
   }
 
   @media all and (min-width: $eds-bp-lg) {
     max-width: 960px;
-    height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+    max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
 
     margin: calc(var(--eds-spacing-size-6) * 1px);
   }
 
   @media all and (min-width: $eds-bp-xl) {
     max-width: 960px;
-    height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+    max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
 
     margin: calc(var(--eds-spacing-size-6) * 1px);
   }

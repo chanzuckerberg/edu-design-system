@@ -27,7 +27,7 @@ export default {
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:4.0.0'],
+  tags: ['autodocs', 'version:4.0.1'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -82,7 +82,7 @@ export const Default: Story = {
         <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
       </Modal.Header>
       <Modal.Body>
-        <div className="fpo h-full w-full">Modal Content</div>
+        <div className="fpo">Modal Content</div>
       </Modal.Body>
       <Modal.Footer>
         <ButtonGroup>
