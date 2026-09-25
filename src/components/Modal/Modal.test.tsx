@@ -459,10 +459,15 @@ describe('Modal', () => {
       expect(getContent().style.maxHeight).toBe('304px');
     });
 
-    it('measures a plain-text body', () => {
-      vi.spyOn(Range.prototype, 'getBoundingClientRect').mockReturnValue({
-        height: 40,
-      } as DOMRect);
+    it('measures a plain-text body, and re-fits when the text changes', async () => {
+      // one 40px line for short text, two for long
+      vi.spyOn(Range.prototype, 'getBoundingClientRect').mockImplementation(
+        function (this: Range) {
+          return {
+            height: this.toString().length > 20 ? 80 : 40,
+          } as DOMRect;
+        },
+      );
       render(
         <Modal aria-label="aria label" onClose={() => {}} open>
           <Modal.Header>Modal Title</Modal.Header>
@@ -470,11 +475,20 @@ describe('Modal', () => {
         </Modal>,
       );
 
-      const content = screen
-        .getByText('Plain text body.')
-        .closest<HTMLElement>('[class*="modal__content"]')!;
+      const scroller = screen.getByText('Plain text body.');
+      const content = scroller.closest<HTMLElement>(
+        '[class*="modal__content"]',
+      )!;
       // 200px around the scroll area + 40px of text + 4px
       expect(content.style.maxHeight).toBe('244px');
+
+      // how React updates text: in place, on the existing text node
+      (scroller.firstChild as Text).data =
+        'Plain text body, now long enough to wrap.';
+
+      await waitFor(() => {
+        expect(content.style.maxHeight).toBe('284px');
+      });
     });
   });
 });

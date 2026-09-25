@@ -378,12 +378,17 @@ const ModalContent = (props: ModalContentProps) => {
         observer?.observe(el),
       );
     observeAll();
-    // children added later need observing too, and change the height on their own
+    // Children added later need observing too, and change the height on their own. Text edits
+    // count as well: React updates a text node in place, which resizes nothing observable.
     const mutationObserver = new MutationObserver(() => {
       observeAll();
       fitToContent();
     });
-    mutationObserver.observe(scroller, { childList: true });
+    mutationObserver.observe(scroller, {
+      characterData: true,
+      childList: true,
+      subtree: true,
+    });
     window.addEventListener('resize', fitToContent);
     return () => {
       observer?.disconnect();
