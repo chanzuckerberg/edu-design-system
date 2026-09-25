@@ -308,12 +308,18 @@ describe('Modal', () => {
       vi.spyOn(window, 'innerHeight', 'get').mockReturnValue(900);
       vi.spyOn(HTMLElement.prototype, 'offsetHeight', 'get').mockImplementation(
         function (this: HTMLElement) {
-          return this.className.includes('modal__content') ? 300 : 0;
+          if (this.className.includes('modal__content')) return 300;
+          if (this.className.includes('modal-header')) return 60;
+          if (this.className.includes('modal-footer')) return 80;
+          return 0;
         },
       );
       vi.spyOn(HTMLElement.prototype, 'clientHeight', 'get').mockImplementation(
         function (this: HTMLElement) {
-          return this.className.includes('scroll-wrapper__inner') ? 100 : 0;
+          // a 1px border top and bottom
+          if (this.className.includes('modal__content')) return 298;
+          if (this.className.includes('scroll-wrapper__inner')) return 100;
+          return 0;
         },
       );
       vi.spyOn(
@@ -449,6 +455,35 @@ describe('Modal', () => {
       await waitFor(() => {
         expect(getContent().style.maxHeight).toBe('454px');
       });
+    });
+
+    it('re-fits when a body child only changes its margins', async () => {
+      bodyContentHeight = 100;
+      renderModal();
+      expect(getContent().style.maxHeight).toBe('304px');
+
+      // a stateful child toggling a margin, which resizes nothing
+      screen.getByTestId('first').style.marginTop = '20px';
+
+      // 200px around the scroll area + 100px of body content + 20px of margin + 4px
+      await waitFor(() => {
+        expect(getContent().style.maxHeight).toBe('324px');
+      });
+    });
+
+    it('fits an lg modal without a body to its header and footer', () => {
+      render(
+        <Modal aria-label="aria label" onClose={() => {}} open>
+          <Modal.Header>Modal Title</Modal.Header>
+          <Modal.Footer>Modal footer content.</Modal.Footer>
+        </Modal>,
+      );
+
+      const content = screen
+        .getByText('Modal Title')
+        .closest<HTMLElement>('[class*="modal__content"]')!;
+      // 60px header + 80px footer + 2px border + 4px
+      expect(content.style.maxHeight).toBe('146px');
     });
 
     it('still fits on open without ResizeObserver', () => {

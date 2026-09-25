@@ -322,11 +322,36 @@ const ModalContent = (props: ModalContentProps) => {
   const contentRef = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
     const content = contentRef.current;
+    if (!content || size !== 'lg') return;
+
+    const sections = Array.from(
+      content.querySelectorAll<HTMLElement>(
+        `:scope > .${styles['modal-header']}, :scope > .${styles['modal-footer']}`,
+      ),
+    );
     // the body's ScrollWrapper inner, which holds Modal.Body's children
-    const scroller = content?.querySelector<HTMLElement>(
+    const scroller = content.querySelector<HTMLElement>(
       `:scope > .${styles['modal-body']} > * > *`,
     );
-    if (!content || !scroller || size !== 'lg') return;
+
+    const measureBodyContent = (scroller: HTMLElement) => {
+      // read fresh each time, since a stateful child can add or remove siblings after opening
+      const bodyChildren = Array.from(scroller.children);
+      const first = bodyChildren[0];
+      const last = bodyChildren[bodyChildren.length - 1];
+      if (!first) {
+        // plain text has no element to measure, so measure the text itself
+        const range = document.createRange();
+        range.selectNodeContents(scroller);
+        return range.getBoundingClientRect().height;
+      }
+      return (
+        last.getBoundingClientRect().bottom -
+        first.getBoundingClientRect().top +
+        parseFloat(getComputedStyle(first).marginTop) +
+        parseFloat(getComputedStyle(last).marginBottom)
+      );
+    };
 
     const fitToContent = () => {
       if (!window.matchMedia(`(min-width: ${EDS_BP_SM})`).matches) {
@@ -334,25 +359,14 @@ const ModalContent = (props: ModalContentProps) => {
         return;
       }
 
-      // read fresh each time, since a stateful child can add or remove siblings after opening
-      const bodyChildren = Array.from(scroller.children);
-      const first = bodyChildren[0];
-      const last = bodyChildren[bodyChildren.length - 1];
-      let bodyContentHeight: number;
-      if (first) {
-        bodyContentHeight =
-          last.getBoundingClientRect().bottom -
-          first.getBoundingClientRect().top +
-          parseFloat(getComputedStyle(first).marginTop) +
-          parseFloat(getComputedStyle(last).marginBottom);
-      } else {
-        // plain text has no element to measure, so measure the text itself
-        const range = document.createRange();
-        range.selectNodeContents(scroller);
-        bodyContentHeight = range.getBoundingClientRect().height;
-      }
-      // everything around the scroll area: header, footer, body padding, and border
-      const chrome = content.offsetHeight - scroller.clientHeight;
+      // Everything around the body's content: header, footer, body padding, and border. Without
+      // a body, that's the header and footer plus the border.
+      const chrome = scroller
+        ? content.offsetHeight - scroller.clientHeight
+        : sections.reduce((sum, section) => sum + section.offsetHeight, 0) +
+          content.offsetHeight -
+          content.clientHeight;
+      const bodyContentHeight = scroller ? measureBodyContent(scroller) : 0;
       // a little extra room so the body does not scroll by a pixel or two from rounding
       const total = chrome + bodyContentHeight + 4;
 
@@ -374,21 +388,27 @@ const ModalContent = (props: ModalContentProps) => {
         ? undefined
         : new ResizeObserver(fitToContent);
     const observeAll = () =>
-      [content, scroller, ...Array.from(scroller.children)].forEach((el) =>
-        observer?.observe(el),
-      );
+      [
+        content,
+        ...sections,
+        ...(scroller ? [scroller, ...Array.from(scroller.children)] : []),
+      ].forEach((el) => observer?.observe(el));
     observeAll();
-    // Children added later need observing too, and change the height on their own. Text edits
-    // count as well: React updates a text node in place, which resizes nothing observable.
+    // Changes inside the body that resize nothing observable: children added later (which also
+    // need observing), text React updates in place, and class or style edits that only move
+    // margins.
     const mutationObserver = new MutationObserver(() => {
       observeAll();
       fitToContent();
     });
-    mutationObserver.observe(scroller, {
-      characterData: true,
-      childList: true,
-      subtree: true,
-    });
+    if (scroller) {
+      mutationObserver.observe(scroller, {
+        attributeFilter: ['class', 'style'],
+        characterData: true,
+        childList: true,
+        subtree: true,
+      });
+    }
     window.addEventListener('resize', fitToContent);
     return () => {
       observer?.disconnect();
