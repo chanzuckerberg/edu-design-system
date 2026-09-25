@@ -334,6 +334,12 @@ describe('Modal', () => {
         }[this.dataset.testid ?? ''];
         return { top: 0, bottom: bottom ?? 0 } as DOMRect;
       });
+      // hidden children render no boxes
+      vi.spyOn(HTMLElement.prototype, 'getClientRects').mockImplementation(
+        function (this: HTMLElement) {
+          return (this.hidden ? [] : [{}]) as unknown as DOMRectList;
+        },
+      );
     });
 
     afterEach(() => {
@@ -484,6 +490,52 @@ describe('Modal', () => {
         .closest<HTMLElement>('[class*="modal__content"]')!;
       // 60px header + 80px footer + 2px border + 4px
       expect(content.style.maxHeight).toBe('146px');
+    });
+
+    it('skips a hidden child at the end of the body', () => {
+      bodyContentHeight = 100;
+      render(
+        <Modal aria-label="aria label" onClose={() => {}} open>
+          <Modal.Header>Modal Title</Modal.Header>
+          <Modal.Body>
+            <p data-testid="first" style={{ margin: 0 }}>
+              First
+            </p>
+            <p data-testid="last" style={{ margin: 0 }}>
+              Last
+            </p>
+            <p hidden>Hidden</p>
+          </Modal.Body>
+        </Modal>,
+      );
+
+      // measured to the last visible child, not the hidden one's empty box
+      expect(getContent().style.maxHeight).toBe('304px');
+    });
+
+    it('stops observing body children once they are removed', async () => {
+      const observed = new Set<Element>();
+      vi.stubGlobal(
+        'ResizeObserver',
+        class {
+          observe(el: Element) {
+            observed.add(el);
+          }
+          disconnect() {
+            observed.clear();
+          }
+        },
+      );
+      bodyContentHeight = 100;
+      renderModal();
+      const last = screen.getByTestId('last');
+      expect(observed.has(last)).toBe(true);
+
+      last.remove();
+
+      await waitFor(() => {
+        expect(observed.has(last)).toBe(false);
+      });
     });
 
     it('still fits on open without ResizeObserver', () => {

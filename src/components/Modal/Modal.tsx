@@ -335,8 +335,11 @@ const ModalContent = (props: ModalContentProps) => {
     );
 
     const measureBodyContent = (scroller: HTMLElement) => {
-      // read fresh each time, since a stateful child can add or remove siblings after opening
-      const bodyChildren = Array.from(scroller.children);
+      // Read fresh each time, since a stateful child can add or remove siblings after opening.
+      // Skip hidden children: with no box, their zero rect would throw off the measurement.
+      const bodyChildren = Array.from(scroller.children).filter(
+        (child) => child.getClientRects().length > 0,
+      );
       const first = bodyChildren[0];
       const last = bodyChildren[bodyChildren.length - 1];
       if (!first) {
@@ -398,6 +401,8 @@ const ModalContent = (props: ModalContentProps) => {
     // need observing), text React updates in place, and class or style edits that only move
     // margins.
     const mutationObserver = new MutationObserver(() => {
+      // start over, so children that have left the body stop being observed
+      observer?.disconnect();
       observeAll();
       fitToContent();
     });
