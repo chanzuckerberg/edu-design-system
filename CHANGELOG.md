@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [19.0.0-alpha.2](https://github.com/chanzuckerberg/edu-design-system/compare/v19.0.0-alpha.1...v19.0.0-alpha.2) (2026-09-25)
+
+
+### Features
+
+* guard Modal children, fix InputField padding precedence ([#2646](https://github.com/chanzuckerberg/edu-design-system/issues/2646)) ([792648c](https://github.com/chanzuckerberg/edu-design-system/commit/792648ce0eb533f406adae4ab4a4db1012ae3f5f))
+
 ## [19.0.0-alpha.1](https://github.com/chanzuckerberg/edu-design-system/compare/v19.0.0-alpha.0...v19.0.0-alpha.1) (2026-09-24)
 
 
