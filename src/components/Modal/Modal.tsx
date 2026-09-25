@@ -263,6 +263,9 @@ function childrenHaveNonSectionChild(children?: ReactNode): boolean {
  *
  * This is only exported for testing purposes; please do not import and use this directly.
  */
+// Mirrors `$eds-bp-sm`, which CSS custom properties can't carry into a media query.
+const EDS_BP_SM = '600px';
+
 const ModalContent = (props: ModalContentProps) => {
   const {
     children,
@@ -315,6 +318,7 @@ const ModalContent = (props: ModalContentProps) => {
 
   // Shrinks an lg modal to its content when that content is shorter than the lg max height
   // (`100vh - spacing-size-12`). Taller content keeps the CSS max height and the body scrolls.
+  // Below `$eds-bp-sm` the lg modal is full-bleed, so it keeps the full screen there.
   const contentRef = React.useRef<HTMLDivElement>(null);
   React.useEffect(() => {
     const content = contentRef.current;
@@ -327,6 +331,11 @@ const ModalContent = (props: ModalContentProps) => {
     const bodyChildren = Array.from(scroller.children) as HTMLElement[];
 
     const fitToContent = () => {
+      if (!window.matchMedia(`(min-width: ${EDS_BP_SM})`).matches) {
+        content.style.maxHeight = '';
+        return;
+      }
+
       const first = bodyChildren[0];
       const last = bodyChildren[bodyChildren.length - 1];
       const bodyContentHeight = first

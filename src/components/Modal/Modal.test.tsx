@@ -379,6 +379,20 @@ describe('Modal', () => {
       },
     );
 
+    it('keeps an lg modal full-bleed below the sm breakpoint', () => {
+      // only the modal's sm query; Headless UI runs its own through matchMedia too
+      const matchMedia = window.matchMedia.bind(window);
+      vi.spyOn(window, 'matchMedia').mockImplementation((query) =>
+        query === '(min-width: 600px)'
+          ? ({ ...matchMedia(query), matches: false } as MediaQueryList)
+          : matchMedia(query),
+      );
+      bodyContentHeight = 100;
+      renderModal();
+
+      expect(getContent().style.maxHeight).toBe('');
+    });
+
     it('re-fits when the window resizes', () => {
       bodyContentHeight = 100;
       renderModal();
