@@ -331,6 +331,7 @@ describe('Modal', () => {
 
     afterEach(() => {
       document.documentElement.style.removeProperty('--eds-spacing-size-12');
+      vi.unstubAllGlobals();
     });
 
     const renderModal = (size?: 'sm' | 'lg' | 'full') =>
@@ -405,6 +406,57 @@ describe('Modal', () => {
       });
 
       expect(getContent().style.maxHeight).toBe('');
+    });
+
+    it('re-fits when the body content resizes', () => {
+      const callbacks: ResizeObserverCallback[] = [];
+      vi.stubGlobal(
+        'ResizeObserver',
+        class {
+          constructor(callback: ResizeObserverCallback) {
+            callbacks.push(callback);
+          }
+          observe() {}
+          disconnect() {}
+        },
+      );
+      bodyContentHeight = 100;
+      renderModal();
+      expect(getContent().style.maxHeight).toBe('304px');
+
+      // content that grows after opening, such as an image loading in
+      bodyContentHeight = 200;
+      act(() => {
+        callbacks.forEach((callback) => callback([], {} as ResizeObserver));
+      });
+
+      expect(getContent().style.maxHeight).toBe('404px');
+    });
+
+    it('still fits on open without ResizeObserver', () => {
+      vi.stubGlobal('ResizeObserver', undefined);
+      bodyContentHeight = 100;
+      renderModal();
+
+      expect(getContent().style.maxHeight).toBe('304px');
+    });
+
+    it('measures a plain-text body', () => {
+      vi.spyOn(Range.prototype, 'getBoundingClientRect').mockReturnValue({
+        height: 40,
+      } as DOMRect);
+      render(
+        <Modal aria-label="aria label" onClose={() => {}} open>
+          <Modal.Header>Modal Title</Modal.Header>
+          <Modal.Body>Plain text body.</Modal.Body>
+        </Modal>,
+      );
+
+      const content = screen
+        .getByText('Plain text body.')
+        .closest<HTMLElement>('[class*="modal__content"]')!;
+      // 200px around the scroll area + 40px of text + 4px
+      expect(content.style.maxHeight).toBe('244px');
     });
   });
 });

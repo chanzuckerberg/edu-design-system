@@ -15,7 +15,8 @@
   height: 100vh;
   width: 100%;
 
-  animation: calc(var(--eds-anim-fade-long) * 1s) ease-out running forwards 1 fade-in;
+  animation: calc(var(--eds-anim-fade-long) * 1s) ease-out running forwards 1
+    fade-in;
 }
 
 @keyframes fade-in {
@@ -50,7 +51,8 @@
   align-items: center;
   justify-content: center;
 
-  animation: calc(var(--eds-anim-fade-quick) * 1s) ease-out running forwards 1 rotate-panel;
+  animation: calc(var(--eds-anim-fade-quick) * 1s) ease-out running forwards 1
+    rotate-panel;
 
   @supports (container-type: size) {
     container-type: size;
@@ -82,14 +84,24 @@
   display: flex;
   flex-direction: column;
 
-  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
+  background-color: light-dark(
+    var(--eds-theme-color-background-utility-container),
+    var(--eds-dark-theme-color-background-utility-container)
+  );
 
   transition: transform calc(var(--eds-anim-fade-quick) * 1s) ease-out;
   transform: scale(0.95);
 
   /* add border and box shadow above smallest breakpoint */
   @media all and (min-width: $eds-bp-sm) {
-    border: 1px solid var(--modal-content__border, light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis)));
+    border: 1px solid
+      var(
+        --modal-content__border,
+        light-dark(
+          var(--eds-theme-color-border-utility-default-low-emphasis),
+          var(--eds-dark-theme-color-border-utility-default-low-emphasis)
+        )
+      );
     box-shadow: var(--eds-box-shadow-lg);
   }
 
@@ -114,11 +126,15 @@
 .modal-header {
   width: 100%;
 
-  padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
+  padding: calc(var(--eds-spacing-size-3) * 1px)
+    calc(var(--eds-spacing-size-4) * 1px);
 }
 
 .modal-title {
-  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  color: light-dark(
+    var(--eds-theme-color-text-utility-default-primary),
+    var(--eds-dark-theme-color-text-utility-default-primary)
+  );
 }
 
 .modal-title:has(+ .modal-sub-title) {
@@ -151,9 +167,13 @@
   width: 100%;
   z-index: 1000;
 
-  padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
+  padding: calc(var(--eds-spacing-size-3) * 1px)
+    calc(var(--eds-spacing-size-4) * 1px);
 
-  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
+  background-color: light-dark(
+    var(--eds-theme-color-background-utility-container),
+    var(--eds-dark-theme-color-background-utility-container)
+  );
 }
 
 /**
@@ -283,7 +303,14 @@
  * breakpoint, and needs the boundary against the overlay to read as one.
  */
 .modal__content--sm {
-  border: 1px solid var(--modal-content__border, light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis)));
+  border: 1px solid
+    var(
+      --modal-content__border,
+      light-dark(
+        var(--eds-theme-color-border-utility-default-low-emphasis),
+        var(--eds-dark-theme-color-border-utility-default-low-emphasis)
+      )
+    );
   box-shadow: var(--eds-box-shadow-lg);
 
   @media all and (min-width: $eds-bp-xs) {
@@ -327,12 +354,22 @@
 }
 
 .modal-sub-title {
-  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+  color: light-dark(
+    var(--eds-theme-color-text-utility-default-secondary),
+    var(--eds-dark-theme-color-text-utility-default-secondary)
+  );
 }
 
 /**
  * The inverted background of the modal to provide contrast with the actual modal.
  */
 .modal__overlay {
-  background-color: rgb(from light-dark(var(--eds-theme-color-background-utility-overlay-low-emphasis), var(--eds-dark-theme-color-background-utility-overlay-low-emphasis)) r g b / 0.5);
+  background-color: rgb(
+    from
+      light-dark(
+        var(--eds-theme-color-background-utility-overlay-low-emphasis),
+        var(--eds-dark-theme-color-background-utility-overlay-low-emphasis)
+      )
+      r g b / 0.5
+  );
 }

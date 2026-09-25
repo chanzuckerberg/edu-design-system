@@ -338,12 +338,19 @@ const ModalContent = (props: ModalContentProps) => {
 
       const first = bodyChildren[0];
       const last = bodyChildren[bodyChildren.length - 1];
-      const bodyContentHeight = first
-        ? last.getBoundingClientRect().bottom -
+      let bodyContentHeight: number;
+      if (first) {
+        bodyContentHeight =
+          last.getBoundingClientRect().bottom -
           first.getBoundingClientRect().top +
           parseFloat(getComputedStyle(first).marginTop) +
-          parseFloat(getComputedStyle(last).marginBottom)
-        : 0;
+          parseFloat(getComputedStyle(last).marginBottom);
+      } else {
+        // plain text has no element to measure, so measure the text itself
+        const range = document.createRange();
+        range.selectNodeContents(scroller);
+        bodyContentHeight = range.getBoundingClientRect().height;
+      }
       // everything around the scroll area: header, footer, body padding, and border
       const chrome = content.offsetHeight - scroller.clientHeight;
       // a little extra room so the body does not scroll by a pixel or two from rounding
@@ -361,11 +368,15 @@ const ModalContent = (props: ModalContentProps) => {
     };
 
     fitToContent();
-    const observer = new ResizeObserver(fitToContent);
-    [content, scroller, ...bodyChildren].forEach((el) => observer.observe(el));
+    // Without ResizeObserver, content that changes size after opening waits for a window resize.
+    const observer =
+      typeof ResizeObserver === 'undefined'
+        ? undefined
+        : new ResizeObserver(fitToContent);
+    [content, scroller, ...bodyChildren].forEach((el) => observer?.observe(el));
     window.addEventListener('resize', fitToContent);
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
       window.removeEventListener('resize', fitToContent);
       content.style.maxHeight = '';
     };
