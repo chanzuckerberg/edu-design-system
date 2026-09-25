@@ -320,12 +320,13 @@ describe('Modal', () => {
         HTMLElement.prototype,
         'getBoundingClientRect',
       ).mockImplementation(function (this: HTMLElement) {
-        // the first child starts at 0 and the last one ends at `bodyContentHeight`
-        return (
-          this.dataset.testid === 'last'
-            ? { top: 0, bottom: bodyContentHeight }
-            : { top: 0, bottom: 0 }
-        ) as DOMRect;
+        // the first child starts at 0 and the last one ends at `bodyContentHeight`;
+        // a child added after opening ends 150px further down
+        const bottom = {
+          last: bodyContentHeight,
+          added: bodyContentHeight + 150,
+        }[this.dataset.testid ?? ''];
+        return { top: 0, bottom: bottom ?? 0 } as DOMRect;
       });
     });
 
@@ -431,6 +432,23 @@ describe('Modal', () => {
       });
 
       expect(getContent().style.maxHeight).toBe('404px');
+    });
+
+    it('re-fits when a body child is added after opening', async () => {
+      bodyContentHeight = 100;
+      renderModal();
+      expect(getContent().style.maxHeight).toBe('304px');
+
+      // a stateful child rendering a new sibling
+      const added = document.createElement('p');
+      added.dataset.testid = 'added';
+      added.style.margin = '0';
+      screen.getByTestId('last').after(added);
+
+      // 200px around the scroll area + 250px of body content + 4px
+      await waitFor(() => {
+        expect(getContent().style.maxHeight).toBe('454px');
+      });
     });
 
     it('still fits on open without ResizeObserver', () => {

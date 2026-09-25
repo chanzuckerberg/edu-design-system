@@ -328,14 +328,14 @@ const ModalContent = (props: ModalContentProps) => {
     );
     if (!content || !scroller || size !== 'lg') return;
 
-    const bodyChildren = Array.from(scroller.children) as HTMLElement[];
-
     const fitToContent = () => {
       if (!window.matchMedia(`(min-width: ${EDS_BP_SM})`).matches) {
         content.style.maxHeight = '';
         return;
       }
 
+      // read fresh each time, since a stateful child can add or remove siblings after opening
+      const bodyChildren = Array.from(scroller.children);
       const first = bodyChildren[0];
       const last = bodyChildren[bodyChildren.length - 1];
       let bodyContentHeight: number;
@@ -373,10 +373,21 @@ const ModalContent = (props: ModalContentProps) => {
       typeof ResizeObserver === 'undefined'
         ? undefined
         : new ResizeObserver(fitToContent);
-    [content, scroller, ...bodyChildren].forEach((el) => observer?.observe(el));
+    const observeAll = () =>
+      [content, scroller, ...Array.from(scroller.children)].forEach((el) =>
+        observer?.observe(el),
+      );
+    observeAll();
+    // children added later need observing too, and change the height on their own
+    const mutationObserver = new MutationObserver(() => {
+      observeAll();
+      fitToContent();
+    });
+    mutationObserver.observe(scroller, { childList: true });
     window.addEventListener('resize', fitToContent);
     return () => {
       observer?.disconnect();
+      mutationObserver.disconnect();
       window.removeEventListener('resize', fitToContent);
       content.style.maxHeight = '';
     };
