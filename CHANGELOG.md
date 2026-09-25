@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [18.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.7.0...v18.8.0) (2026-09-25)
+
+
+### Features
+
+* **CodeBlock:** add custom theme ([#2642](https://github.com/chanzuckerberg/edu-design-system/issues/2642)) ([b091164](https://github.com/chanzuckerberg/edu-design-system/commit/b091164b5fa461222272d8148dcf9069464a138b))
+* **icons:** add in new open-in-new icon ([#2643](https://github.com/chanzuckerberg/edu-design-system/issues/2643)) ([4c0fcab](https://github.com/chanzuckerberg/edu-design-system/commit/4c0fcab98095cdff66e071f168ab531a641dac7e))
+
 ## [18.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.6.1...v18.7.0) (2026-09-01)
 
 
