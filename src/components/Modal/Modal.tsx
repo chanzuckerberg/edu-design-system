@@ -92,8 +92,8 @@ type ModalContentProps = {
   /**
    * The modal's footprint at each breakpoint:
    * - `"sm"` is a compact floating surface that sizes to its content, up to 480px tall
-   * - `"lg"` fills the viewport at the smallest breakpoint, and above it takes the viewport
-   *   height less a margin
+   * - `"lg"` fills the viewport at the smallest breakpoint. Above it, it sizes to its content,
+   *   up to the viewport height less a margin
    * - `"full"` takes the whole viewport at every breakpoint
    *
    * Height is managed for you at all three. The body takes whatever space the header and
@@ -258,6 +258,9 @@ function childrenHaveNonSectionChild(children?: ReactNode): boolean {
   });
 }
 
+// Mirrors `$eds-bp-sm`, which CSS custom properties can't carry into a media query.
+const EDS_BP_SM = '600px';
+
 /**
  * The actual modal, without the dark overlay behind it.
  *
@@ -313,8 +316,147 @@ const ModalContent = (props: ModalContentProps) => {
   // app, so it is set once through `IconProvider` rather than per modal.
   const closeIcon = useSemanticIcon('close');
 
+  // Shrinks an lg modal to its content when that content is shorter than the lg max height
+  // (`100vh - spacing-size-12`). Taller content keeps the CSS max height and the body scrolls.
+  // Below `$eds-bp-sm` the lg modal is full-bleed, so it keeps the full screen there.
+  const contentRef = React.useRef<HTMLDivElement>(null);
+  const consumerMaxHeight = other.style?.maxHeight;
+  React.useEffect(() => {
+    const content = contentRef.current;
+    // a max-height passed in through `style` is the consumer's call, so leave it to them
+    if (!content || size !== 'lg' || consumerMaxHeight !== undefined) return;
+
+    const sections = Array.from(
+      content.querySelectorAll<HTMLElement>(
+        `:scope > .${styles['modal-header']}, :scope > .${styles['modal-footer']}`,
+      ),
+    );
+    // the body's ScrollWrapper inner, which holds Modal.Body's children
+    const scroller = content.querySelector<HTMLElement>(
+      `:scope > .${styles['modal-body']} > * > *`,
+    );
+
+    // what the fit last wrote, so cleanup can tell it apart from a consumer's value
+    let fittedMaxHeight = '';
+    const setMaxHeight = (value: string) => {
+      fittedMaxHeight = value;
+      content.style.maxHeight = value;
+    };
+
+    const measureBodyContent = (scroller: HTMLElement) => {
+      // Read fresh each time, since a stateful child can add or remove siblings after opening.
+      // Skip hidden children: with no box, their zero rect would throw off the measurement.
+      const bodyChildren = Array.from(scroller.children).filter(
+        (child) => child.getClientRects().length > 0,
+      );
+      const first = bodyChildren[0];
+      const last = bodyChildren[bodyChildren.length - 1];
+      if (!first) {
+        // plain text has no element to measure, so measure the text itself
+        const range = document.createRange();
+        range.selectNodeContents(scroller);
+        return range.getBoundingClientRect().height;
+      }
+      return (
+        last.getBoundingClientRect().bottom -
+        first.getBoundingClientRect().top +
+        parseFloat(getComputedStyle(first).marginTop) +
+        parseFloat(getComputedStyle(last).marginBottom)
+      );
+    };
+
+    const fitToContent = () => {
+      if (!window.matchMedia(`(min-width: ${EDS_BP_SM})`).matches) {
+        setMaxHeight('');
+        return;
+      }
+
+      // Everything around the body's content: header, footer, body padding, and border. Without
+      // a body, that's the header and footer plus the border.
+      const chrome = scroller
+        ? content.offsetHeight - scroller.clientHeight
+        : sections.reduce((sum, section) => {
+            // flex items' margins don't collapse, so each one adds to the height
+            const { marginTop, marginBottom } = getComputedStyle(section);
+            return (
+              sum +
+              section.offsetHeight +
+              parseFloat(marginTop) +
+              parseFloat(marginBottom)
+            );
+          }, 0) +
+          content.offsetHeight -
+          content.clientHeight;
+      const bodyContentHeight = scroller ? measureBodyContent(scroller) : 0;
+      // The close button is positioned out of the flow, so nothing above counts it. Without a
+      // header, a short body can leave the modal shorter than the button, clipping it.
+      const closeButton = content.querySelector<HTMLElement>(
+        `:scope > .${styles['modal__close-button']}`,
+      );
+      const closeButtonBottom = closeButton
+        ? closeButton.offsetTop +
+          closeButton.offsetHeight +
+          content.offsetHeight -
+          content.clientHeight
+        : 0;
+      // a little extra room so the body does not scroll by a pixel or two from rounding
+      const total = Math.max(chrome + bodyContentHeight + 4, closeButtonBottom);
+
+      const largeHeight =
+        window.innerHeight -
+        parseFloat(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            '--eds-spacing-size-12',
+          ),
+        );
+      // an empty value hands max-height back to the stylesheet
+      setMaxHeight(total < largeHeight ? `${total}px` : '');
+    };
+
+    fitToContent();
+    // Without ResizeObserver, content that changes size after opening waits for a window resize.
+    const observer =
+      typeof ResizeObserver === 'undefined'
+        ? undefined
+        : new ResizeObserver(fitToContent);
+    const observeAll = () =>
+      [
+        content,
+        ...sections,
+        ...(scroller ? [scroller, ...Array.from(scroller.children)] : []),
+      ].forEach((el) => observer?.observe(el));
+    observeAll();
+    // Changes inside the body that resize nothing observable: children added later (which also
+    // need observing), text React updates in place, and class or style edits that only move
+    // margins.
+    const mutationObserver = new MutationObserver(() => {
+      // start over, so children that have left the body stop being observed
+      observer?.disconnect();
+      observeAll();
+      fitToContent();
+    });
+    if (scroller) {
+      mutationObserver.observe(scroller, {
+        attributeFilter: ['class', 'style'],
+        characterData: true,
+        childList: true,
+        subtree: true,
+      });
+    }
+    window.addEventListener('resize', fitToContent);
+    return () => {
+      observer?.disconnect();
+      mutationObserver.disconnect();
+      window.removeEventListener('resize', fitToContent);
+      // React commits a new consumer max-height before this runs, so only clear the fit's own
+      if (content.style.maxHeight === fittedMaxHeight) {
+        content.style.maxHeight = '';
+      }
+    };
+  }, [children, consumerMaxHeight, size]);
+
   return (
-    <div className={componentClassName} {...other}>
+    <div className={componentClassName} ref={contentRef} {...other}>
       {!hideCloseButton && (
         <Button
           aria-label="close"
