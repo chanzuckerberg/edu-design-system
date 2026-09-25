@@ -1,9 +1,9 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { describe, expect, it, beforeEach, afterEach, vi } from 'vitest';
 
-vi.mock('lilconfig');
-
-const lilconfig = require('lilconfig');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
 const identity = require('lodash/identity');
 const utils = require('../bin/_util');
 
@@ -28,6 +28,10 @@ describe('utils', function () {
         const emptyArray = [];
 
         expect(utils.minifyDictionaryUsingFormat(emptyArray)).toEqual([]);
+      });
+
+      it('bypasses parsing when object is a primitive', () => {
+        expect(utils.minifyDictionaryUsingFormat('#000000')).toEqual('#000000');
       });
 
       it('allows interpretation of parsed values as identity', () => {
@@ -79,6 +83,44 @@ describe('utils', function () {
 
         expect(input).toEqual(expected);
       });
+
+      it('removes groups left empty after flattening', () => {
+        const input = {
+          solo: {
+            only: {
+              '@': 'var(--eds-theme-color-solo)',
+            },
+          },
+        };
+
+        utils.formatEdsTokens(input);
+
+        expect(input).toEqual({
+          'solo-only': 'var(--eds-theme-color-solo)',
+        });
+      });
+
+      it('recurses into nested groups without an at-symbol', () => {
+        const input = {
+          border: {
+            plain: 'var(--eds-theme-color-border-plain)',
+            neutral: {
+              strong: {
+                '@': 'var(--eds-theme-color-border-neutral-strong)',
+              },
+            },
+          },
+        };
+
+        utils.formatEdsTokens(input);
+
+        expect(input).toEqual({
+          border: {
+            plain: 'var(--eds-theme-color-border-plain)',
+            'neutral-strong': 'var(--eds-theme-color-border-neutral-strong)',
+          },
+        });
+      });
     });
 
     describe('isStrictSubset', () => {
@@ -114,6 +156,12 @@ describe('utils', function () {
         expect(utils.isStrictSubset(base, theme)).toBeTruthy();
       });
 
+      it('ignores literal values when comparing', () => {
+        expect(
+          utils.isStrictSubset({ eds: {} }, { eds: { anything: '#FFFFFF' } }),
+        ).toBeTruthy();
+      });
+
       it('throws when the theme has things not in the base theme file', () => {
         const theme = {
           ...base,
@@ -134,39 +182,47 @@ describe('utils', function () {
   });
 
   describe('getConfig', function () {
-    // Silence console output AND hook up for counting in tests
-    let origWarn;
+    let tmpDir;
     beforeEach(() => {
-      origWarn = console.warn;
-      console.warn = vi.fn();
+      tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'eds-config-'));
+      vi.spyOn(process, 'cwd').mockReturnValue(tmpDir);
     });
 
     afterEach(() => {
-      console.warn = origWarn;
+      fs.rmSync(tmpDir, { recursive: true, force: true });
     });
 
-    describe('with no settings read', () => {
-      it.skip('throws when no settings are defined', async () => {
-        lilconfig.lilconfig.mockImplementation(() => {
-          return {
-            search: function () {
-              // https://www.npmjs.com/package/cosmiconfig#result
-              return Promise.resolve(undefined);
-            },
-          };
-        });
+    it('returns the eds config from package.json', async () => {
+      const config = { src: 'src/theme.json', dest: 'src/theme-dist' };
+      fs.writeFileSync(
+        path.join(tmpDir, 'package.json'),
+        JSON.stringify({ name: 'consumer', eds: config }),
+      );
 
-        const test = async () => {
-          await utils.getConfig();
-        };
+      await expect(utils.getConfig()).resolves.toEqual(config);
+    });
 
-        // We expect it to reject because it will also throw and throwing rejects
-        await expect(test()).rejects.toThrow(ReferenceError);
-      });
+    it('rejects when no config can be found', async () => {
+      await expect(utils.getConfig()).rejects.toThrow(ReferenceError);
     });
   });
 
   describe('Reader Classes', () => {
+    it('prevents using the abstract reader directly', () => {
+      const AbstractFigmaReader = Object.getPrototypeOf(utils.FigmaAPIReader);
+      const reader = new AbstractFigmaReader({});
+
+      expect(() => reader.getModes('id')).toThrow(
+        'Cannot Use Abstract class directly',
+      );
+      expect(() => reader.getVariableCollections()).toThrow(
+        'Cannot Use Abstract class directly',
+      );
+      expect(() => reader.getVariablesByCollectionId('id')).toThrow(
+        'Cannot Use Abstract class directly',
+      );
+    });
+
     const mockData = {
       status: 200,
       error: false,
