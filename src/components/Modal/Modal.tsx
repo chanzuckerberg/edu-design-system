@@ -313,8 +313,57 @@ const ModalContent = (props: ModalContentProps) => {
   // app, so it is set once through `IconProvider` rather than per modal.
   const closeIcon = useSemanticIcon('close');
 
+  // Shrinks an lg modal to its content when that content is shorter than the lg max height
+  // (`100vh - spacing-size-12`). Taller content keeps the CSS max height and the body scrolls.
+  const contentRef = React.useRef<HTMLDivElement>(null);
+  React.useEffect(() => {
+    const content = contentRef.current;
+    // the body's ScrollWrapper inner, which holds Modal.Body's children
+    const scroller = content?.querySelector<HTMLElement>(
+      `:scope > .${styles['modal-body']} > * > *`,
+    );
+    if (!content || !scroller || size !== 'lg') return;
+
+    const bodyChildren = Array.from(scroller.children) as HTMLElement[];
+
+    const fitToContent = () => {
+      const first = bodyChildren[0];
+      const last = bodyChildren[bodyChildren.length - 1];
+      const bodyContentHeight = first
+        ? last.getBoundingClientRect().bottom -
+          first.getBoundingClientRect().top +
+          parseFloat(getComputedStyle(first).marginTop) +
+          parseFloat(getComputedStyle(last).marginBottom)
+        : 0;
+      // everything around the scroll area: header, footer, body padding, and border
+      const chrome = content.offsetHeight - scroller.clientHeight;
+      // a little extra room so the body does not scroll by a pixel or two from rounding
+      const total = chrome + bodyContentHeight + 4;
+
+      const largeHeight =
+        window.innerHeight -
+        parseFloat(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            '--eds-spacing-size-12',
+          ),
+        );
+      // an empty value hands max-height back to the stylesheet
+      content.style.maxHeight = total < largeHeight ? `${total}px` : '';
+    };
+
+    fitToContent();
+    const observer = new ResizeObserver(fitToContent);
+    [content, scroller, ...bodyChildren].forEach((el) => observer.observe(el));
+    window.addEventListener('resize', fitToContent);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', fitToContent);
+      content.style.maxHeight = '';
+    };
+  }, [children, size]);
+
   return (
-    <div className={componentClassName} {...other}>
+    <div className={componentClassName} ref={contentRef} {...other}>
       {!hideCloseButton && (
         <Button
           aria-label="close"

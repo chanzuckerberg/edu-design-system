@@ -1,10 +1,10 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { composeStories } from '@storybook/react-vite';
-import { render, screen, waitFor } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { mockAnimationsApi } from 'jsdom-testing-mocks';
 import React from 'react';
-import { describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { Modal } from './Modal';
 import * as stories from './Modal.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
@@ -105,6 +105,24 @@ describe('Modal', () => {
         <Modal.Header>Modal Title</Modal.Header>
         <Modal.Body>Modal body content.</Modal.Body>
         <Modal.Footer>Modal footer content.</Modal.Footer>
+      </Modal>,
+    );
+
+    expect(consoleErrorMock).toHaveBeenCalledTimes(1);
+    consoleErrorMock.mockRestore();
+  });
+
+  it('does print an error if the header holds only childless elements', () => {
+    const consoleErrorMock = vi
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
+
+    render(
+      <Modal onClose={() => {}} open>
+        <Modal.Header>
+          <hr />
+        </Modal.Header>
+        <Modal.Body>Modal body content.</Modal.Body>
       </Modal>,
     );
 
@@ -275,4 +293,104 @@ describe('Modal', () => {
       expect(scrollableRegion).toBeTruthy();
     },
   );
+
+  /**
+   * An lg modal shrinks to its content when that content is shorter than the lg max height
+   * (`100vh - spacing-size-12`). The test DOM has no layout, so these tests stand in for it:
+   * the modal is 300px with a 100px scroll area (200px of header, footer, and border), the
+   * window is 900px, and spacing-size-12 is 48px, which puts the lg max height at 852px.
+   */
+  describe('fitting to its content', () => {
+    let bodyContentHeight = 0;
+
+    beforeEach(() => {
+      document.documentElement.style.setProperty('--eds-spacing-size-12', '48');
+      vi.spyOn(window, 'innerHeight', 'get').mockReturnValue(900);
+      vi.spyOn(HTMLElement.prototype, 'offsetHeight', 'get').mockImplementation(
+        function (this: HTMLElement) {
+          return this.className.includes('modal__content') ? 300 : 0;
+        },
+      );
+      vi.spyOn(HTMLElement.prototype, 'clientHeight', 'get').mockImplementation(
+        function (this: HTMLElement) {
+          return this.className.includes('scroll-wrapper__inner') ? 100 : 0;
+        },
+      );
+      vi.spyOn(
+        HTMLElement.prototype,
+        'getBoundingClientRect',
+      ).mockImplementation(function (this: HTMLElement) {
+        // the first child starts at 0 and the last one ends at `bodyContentHeight`
+        return (
+          this.dataset.testid === 'last'
+            ? { top: 0, bottom: bodyContentHeight }
+            : { top: 0, bottom: 0 }
+        ) as DOMRect;
+      });
+    });
+
+    afterEach(() => {
+      document.documentElement.style.removeProperty('--eds-spacing-size-12');
+    });
+
+    const renderModal = (size?: 'sm' | 'lg' | 'full') =>
+      render(
+        <Modal aria-label="aria label" onClose={() => {}} open size={size}>
+          <Modal.Header>Modal Title</Modal.Header>
+          <Modal.Body>
+            <p data-testid="first" style={{ margin: 0 }}>
+              First
+            </p>
+            <p data-testid="last" style={{ margin: 0 }}>
+              Last
+            </p>
+          </Modal.Body>
+          <Modal.Footer>Modal footer content.</Modal.Footer>
+        </Modal>,
+      );
+
+    const getContent = () =>
+      screen
+        .getByTestId('first')
+        .closest<HTMLElement>('[class*="modal__content"]')!;
+
+    it('caps an lg modal at its content height, plus 4px, when that is shorter', () => {
+      bodyContentHeight = 100;
+      renderModal();
+
+      // 200px around the scroll area + 100px of body content + 4px
+      expect(getContent().style.maxHeight).toBe('304px');
+    });
+
+    it('leaves the max height to the stylesheet when the content is taller', () => {
+      bodyContentHeight = 1000;
+      renderModal();
+
+      expect(getContent().style.maxHeight).toBe('');
+    });
+
+    it.each(['sm', 'full'] as const)(
+      'leaves a size="%s" modal alone',
+      (size) => {
+        bodyContentHeight = 100;
+        renderModal(size);
+
+        expect(getContent().style.maxHeight).toBe('');
+      },
+    );
+
+    it('re-fits when the window resizes', () => {
+      bodyContentHeight = 100;
+      renderModal();
+      expect(getContent().style.maxHeight).toBe('304px');
+
+      // a window short enough that the content no longer fits
+      vi.spyOn(window, 'innerHeight', 'get').mockReturnValue(300);
+      act(() => {
+        window.dispatchEvent(new Event('resize'));
+      });
+
+      expect(getContent().style.maxHeight).toBe('');
+    });
+  });
 });
