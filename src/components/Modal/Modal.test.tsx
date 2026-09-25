@@ -477,19 +477,47 @@ describe('Modal', () => {
       });
     });
 
-    it('fits an lg modal without a body to its header and footer', () => {
+    it('fits an lg modal without a body to its header and footer, margins included', () => {
       render(
         <Modal aria-label="aria label" onClose={() => {}} open>
           <Modal.Header>Modal Title</Modal.Header>
           <Modal.Footer>Modal footer content.</Modal.Footer>
         </Modal>,
       );
+      const header = screen.getByText('Modal Title');
+      const footer = screen.getByText('Modal footer content.');
+      const content = header.closest<HTMLElement>('[class*="modal__content"]')!;
 
-      const content = screen
-        .getByText('Modal Title')
-        .closest<HTMLElement>('[class*="modal__content"]')!;
-      // 60px header + 80px footer + 2px border + 4px
-      expect(content.style.maxHeight).toBe('146px');
+      // margins as a spacing utility passed through `className` would add them
+      header.style.margin = '10px 0 0';
+      footer.style.margin = '0 0 6px';
+      act(() => {
+        window.dispatchEvent(new Event('resize'));
+      });
+
+      // 60px header + 10px margin + 80px footer + 6px margin + 2px border + 4px
+      expect(content.style.maxHeight).toBe('162px');
+    });
+
+    it('leaves a max-height passed through style alone', () => {
+      bodyContentHeight = 100;
+      render(
+        <Modal
+          aria-label="aria label"
+          onClose={() => {}}
+          open
+          style={{ maxHeight: '500px' }}
+        >
+          <Modal.Header>Modal Title</Modal.Header>
+          <Modal.Body>
+            <p data-testid="first" style={{ margin: 0 }}>
+              First
+            </p>
+          </Modal.Body>
+        </Modal>,
+      );
+
+      expect(getContent().style.maxHeight).toBe('500px');
     });
 
     it('skips a hidden child at the end of the body', () => {

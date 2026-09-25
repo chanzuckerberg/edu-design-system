@@ -92,8 +92,8 @@ type ModalContentProps = {
   /**
    * The modal's footprint at each breakpoint:
    * - `"sm"` is a compact floating surface that sizes to its content, up to 480px tall
-   * - `"lg"` fills the viewport at the smallest breakpoint, and above it takes the viewport
-   *   height less a margin
+   * - `"lg"` fills the viewport at the smallest breakpoint. Above it, it sizes to its content,
+   *   up to the viewport height less a margin
    * - `"full"` takes the whole viewport at every breakpoint
    *
    * Height is managed for you at all three. The body takes whatever space the header and
@@ -320,9 +320,11 @@ const ModalContent = (props: ModalContentProps) => {
   // (`100vh - spacing-size-12`). Taller content keeps the CSS max height and the body scrolls.
   // Below `$eds-bp-sm` the lg modal is full-bleed, so it keeps the full screen there.
   const contentRef = React.useRef<HTMLDivElement>(null);
+  const consumerMaxHeight = other.style?.maxHeight;
   React.useEffect(() => {
     const content = contentRef.current;
-    if (!content || size !== 'lg') return;
+    // a max-height passed in through `style` is the consumer's call, so leave it to them
+    if (!content || size !== 'lg' || consumerMaxHeight !== undefined) return;
 
     const sections = Array.from(
       content.querySelectorAll<HTMLElement>(
@@ -366,7 +368,16 @@ const ModalContent = (props: ModalContentProps) => {
       // a body, that's the header and footer plus the border.
       const chrome = scroller
         ? content.offsetHeight - scroller.clientHeight
-        : sections.reduce((sum, section) => sum + section.offsetHeight, 0) +
+        : sections.reduce((sum, section) => {
+            // flex items' margins don't collapse, so each one adds to the height
+            const { marginTop, marginBottom } = getComputedStyle(section);
+            return (
+              sum +
+              section.offsetHeight +
+              parseFloat(marginTop) +
+              parseFloat(marginBottom)
+            );
+          }, 0) +
           content.offsetHeight -
           content.clientHeight;
       const bodyContentHeight = scroller ? measureBodyContent(scroller) : 0;
@@ -421,7 +432,7 @@ const ModalContent = (props: ModalContentProps) => {
       window.removeEventListener('resize', fitToContent);
       content.style.maxHeight = '';
     };
-  }, [children, size]);
+  }, [children, consumerMaxHeight, size]);
 
   return (
     <div className={componentClassName} ref={contentRef} {...other}>
