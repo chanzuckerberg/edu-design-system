@@ -566,6 +566,49 @@ describe('Modal', () => {
       });
     });
 
+    it('keeps a max-height passed through style on a later render', () => {
+      bodyContentHeight = 100;
+      const modal = (style?: React.CSSProperties) => (
+        <Modal aria-label="aria label" onClose={() => {}} open style={style}>
+          <Modal.Header>Modal Title</Modal.Header>
+          <Modal.Body>
+            <p data-testid="first" style={{ margin: 0 }}>
+              First
+            </p>
+          </Modal.Body>
+        </Modal>
+      );
+      const { rerender } = render(modal());
+      expect(getContent().style.maxHeight).toBe('204px');
+
+      rerender(modal({ maxHeight: '500px' }));
+
+      expect(getContent().style.maxHeight).toBe('500px');
+    });
+
+    it('clears its fitted max-height when leaving lg', () => {
+      bodyContentHeight = 100;
+      const { rerender } = renderModal();
+      expect(getContent().style.maxHeight).toBe('304px');
+
+      rerender(
+        <Modal aria-label="aria label" onClose={() => {}} open size="sm">
+          <Modal.Header>Modal Title</Modal.Header>
+          <Modal.Body>
+            <p data-testid="first" style={{ margin: 0 }}>
+              First
+            </p>
+            <p data-testid="last" style={{ margin: 0 }}>
+              Last
+            </p>
+          </Modal.Body>
+          <Modal.Footer>Modal footer content.</Modal.Footer>
+        </Modal>,
+      );
+
+      expect(getContent().style.maxHeight).toBe('');
+    });
+
     it('still fits on open without ResizeObserver', () => {
       vi.stubGlobal('ResizeObserver', undefined);
       bodyContentHeight = 100;

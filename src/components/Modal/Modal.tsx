@@ -336,6 +336,13 @@ const ModalContent = (props: ModalContentProps) => {
       `:scope > .${styles['modal-body']} > * > *`,
     );
 
+    // what the fit last wrote, so cleanup can tell it apart from a consumer's value
+    let fittedMaxHeight = '';
+    const setMaxHeight = (value: string) => {
+      fittedMaxHeight = value;
+      content.style.maxHeight = value;
+    };
+
     const measureBodyContent = (scroller: HTMLElement) => {
       // Read fresh each time, since a stateful child can add or remove siblings after opening.
       // Skip hidden children: with no box, their zero rect would throw off the measurement.
@@ -360,7 +367,7 @@ const ModalContent = (props: ModalContentProps) => {
 
     const fitToContent = () => {
       if (!window.matchMedia(`(min-width: ${EDS_BP_SM})`).matches) {
-        content.style.maxHeight = '';
+        setMaxHeight('');
         return;
       }
 
@@ -392,7 +399,7 @@ const ModalContent = (props: ModalContentProps) => {
           ),
         );
       // an empty value hands max-height back to the stylesheet
-      content.style.maxHeight = total < largeHeight ? `${total}px` : '';
+      setMaxHeight(total < largeHeight ? `${total}px` : '');
     };
 
     fitToContent();
@@ -430,7 +437,10 @@ const ModalContent = (props: ModalContentProps) => {
       observer?.disconnect();
       mutationObserver.disconnect();
       window.removeEventListener('resize', fitToContent);
-      content.style.maxHeight = '';
+      // React commits a new consumer max-height before this runs, so only clear the fit's own
+      if (content.style.maxHeight === fittedMaxHeight) {
+        content.style.maxHeight = '';
+      }
     };
   }, [children, consumerMaxHeight, size]);
 
