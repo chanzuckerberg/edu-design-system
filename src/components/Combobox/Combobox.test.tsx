@@ -963,4 +963,151 @@ describe('<Combobox />', () => {
       expect(changeHandler).toHaveBeenCalledTimes(0);
     });
   });
+
+  it('warns once when rendered without a name', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    render(<TestCombobox name={undefined} />);
+    render(<TestCombobox name={undefined} />);
+
+    expect(warn).toHaveBeenCalledTimes(1);
+    expect(warn.mock.calls[0][0]).toContain('include a `name` prop');
+  });
+
+  it('labels chips for string values and values without a label', () => {
+    render(
+      <Combobox
+        aria-label="test"
+        defaultValue={['Apples', { key: 'unlabeled' }]}
+        multiple
+        name="string-combobox"
+      >
+        <Combobox.Input />
+      </Combobox>,
+    );
+
+    expect(screen.getAllByRole('listitem')).toHaveLength(2);
+    expect(
+      screen.getByRole('button', { name: 'remove Apples' }),
+    ).toBeInTheDocument();
+  });
+
+  describe('by', () => {
+    // Copies of the options, the way values loaded separately from the option list would be
+    const loadedValues = exampleOptions.map((option) => ({ ...option }));
+
+    it('removes the matching chip using a property name', async () => {
+      const changeHandler = vi.fn();
+      const user = userEvent.setup();
+
+      render(
+        <TestCombobox
+          by="key"
+          defaultValue={[loadedValues[0], loadedValues[1]]}
+          multiple
+          onChange={changeHandler}
+        />,
+      );
+
+      await user.click(screen.getByRole('button', { name: 'remove Option 1' }));
+
+      expect(changeHandler).toHaveBeenCalledWith([loadedValues[1]]);
+    });
+
+    it('removes the matching chip using a comparator', async () => {
+      const changeHandler = vi.fn();
+      const user = userEvent.setup();
+
+      render(
+        <TestCombobox
+          by={(a, z) =>
+            (a as (typeof exampleOptions)[number]).key ===
+            (z as (typeof exampleOptions)[number]).key
+          }
+          defaultValue={[loadedValues[0], loadedValues[1]]}
+          multiple
+          onChange={changeHandler}
+        />,
+      );
+
+      await user.click(screen.getByRole('button', { name: 'remove Option 2' }));
+
+      expect(changeHandler).toHaveBeenCalledWith([loadedValues[0]]);
+    });
+  });
+
+  describe('render props', () => {
+    it('renders custom content in the option list toggle', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Combobox aria-label="test" name="button-children-combobox">
+          <Combobox.Button>Browse</Combobox.Button>
+          <Combobox.Options>
+            {exampleOptions.map((option) => (
+              <Combobox.Option key={option.key} value={option}>
+                {option.label}
+              </Combobox.Option>
+            ))}
+          </Combobox.Options>
+        </Combobox>,
+      );
+
+      await user.click(screen.getByRole('button', { name: 'Show options' }));
+
+      expect(screen.getByText('Browse')).toBeInTheDocument();
+      expect(await screen.findAllByRole('option')).toHaveLength(
+        exampleOptions.length,
+      );
+    });
+
+    it('passes toggle and option state to render props', async () => {
+      const user = userEvent.setup();
+
+      render(
+        <Combobox
+          aria-label="test"
+          defaultValue={exampleOptions[0]}
+          name="render-prop-children-combobox"
+        >
+          <Combobox.Button>
+            {({ open }) => <span>{open ? 'Hide' : 'Browse'}</span>}
+          </Combobox.Button>
+          <Combobox.Options>
+            {exampleOptions.map((option) => (
+              <Combobox.Option key={option.key} value={option}>
+                {({ selected }) => (
+                  <div>
+                    {option.label}
+                    {selected && ' (selected)'}
+                  </div>
+                )}
+              </Combobox.Option>
+            ))}
+          </Combobox.Options>
+        </Combobox>,
+      );
+
+      await user.click(screen.getByRole('button', { name: 'Show options' }));
+
+      expect(screen.getByText('Hide')).toBeInTheDocument();
+      expect(screen.getByText('Option 1 (selected)')).toBeInTheDocument();
+      expect(screen.getByText('Option 2')).toBeInTheDocument();
+    });
+  });
+
+  it('leaves the query text alone when the selection changes from outside the field', () => {
+    const { rerender } = render(
+      <TestCombobox multiple value={[exampleOptions[0]]} />,
+    );
+    const input: HTMLInputElement = screen.getByRole('combobox');
+    const select = vi.spyOn(input, 'select');
+
+    rerender(
+      <TestCombobox multiple value={[exampleOptions[0], exampleOptions[1]]} />,
+    );
+
+    expect(screen.getAllByRole('listitem')).toHaveLength(2);
+    expect(select).not.toHaveBeenCalled();
+  });
 });

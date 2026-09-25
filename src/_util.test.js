@@ -1,11 +1,10 @@
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import identity from 'lodash/identity';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { describe, expect, it, beforeEach, afterEach, vi } from 'vitest';
-
-const fs = require('node:fs');
-const os = require('node:os');
-const path = require('node:path');
-const identity = require('lodash/identity');
-const utils = require('../bin/_util');
+import utils from '../bin/_util';
 
 describe('utils', function () {
   describe('style-dictionary tools', function () {
@@ -448,6 +447,90 @@ describe('utils', function () {
     });
 
     describe('FigmaVariable', function () {
+      describe('string and alias handling', () => {
+        const tier1Mode = '1:0';
+        const tier2Mode = '2:0';
+        const reader = new utils.FigmaAPIReader({
+          meta: {
+            variableCollections: {},
+            variables: {
+              'VariableID:1:1': {
+                id: 'VariableID:1:1',
+                name: 'font-family/body',
+                resolvedType: 'STRING',
+                valuesByMode: { [tier1Mode]: 'Arial' },
+              },
+              'VariableID:1:2': {
+                id: 'VariableID:1:2',
+                name: 'size/2',
+                resolvedType: 'FLOAT',
+                valuesByMode: { [tier1Mode]: 8 },
+              },
+            },
+          },
+        });
+        const createVariable = (name, resolvedType, value) =>
+          new utils.FigmaVariable(
+            {
+              id: `VariableID:${name}`,
+              name,
+              resolvedType,
+              valuesByMode: { [tier2Mode]: value },
+            },
+            tier1Mode,
+            tier2Mode,
+            'common',
+            reader,
+          );
+
+        it('handles literal string variables', () => {
+          const variable = createVariable(
+            '-> font/body',
+            'STRING',
+            'Helvetica',
+          );
+
+          expect(variable.getTokenPath()).toEqual('eds.theme.font.body');
+          expect(variable.isAliased()).toBe(false);
+          expect(variable.getResovledName()).toBeUndefined();
+          expect(variable.value).toEqual('Helvetica');
+          expect(variable.valueRef).toEqual('Helvetica');
+        });
+
+        it('references the aliased token for string variables', () => {
+          const variable = createVariable('-> font/body', 'STRING', {
+            type: 'VARIABLE_ALIAS',
+            id: 'VariableID:1:1',
+          });
+
+          expect(variable.isAliased()).toBe(true);
+          expect(variable.value).toEqual('Arial');
+          expect(variable.valueRef).toEqual('eds.font.family.body');
+        });
+
+        it('references the aliased token for float variables', () => {
+          const variable = createVariable('-> spacing/sm', 'FLOAT', {
+            type: 'VARIABLE_ALIAS',
+            id: 'VariableID:1:2',
+          });
+
+          expect(variable.value).toEqual('8');
+          expect(variable.valueRef).toEqual('eds.size.2');
+        });
+
+        it('uses the literal value for colors that are not aliased', () => {
+          const variable = createVariable('-> background/utility', 'COLOR', {
+            r: 0,
+            g: 0.02,
+            b: 1,
+            a: 1,
+          });
+
+          // single-digit hex parts are zero-padded
+          expect(variable.valueRef).toEqual('#0005FF');
+        });
+      });
+
       it('can identify an orphaned variable (deleted in figma but still in use somewhere)', () => {
         const variable = new utils.FigmaVariable(
           {

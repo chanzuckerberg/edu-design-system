@@ -240,4 +240,82 @@ describe('<Select />', () => {
       expect(changeHandler).toHaveBeenCalledTimes(0);
     });
   });
+
+  it('warns once when rendered without a name', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const unnamedSelect = (
+      <Select aria-label="test" onChange={() => undefined}>
+        <Select.Button>Select</Select.Button>
+      </Select>
+    );
+
+    render(unnamedSelect);
+    render(unnamedSelect);
+
+    expect(warn).toHaveBeenCalledTimes(1);
+    expect(warn.mock.calls[0][0]).toContain('include a `name` prop');
+  });
+
+  it('supports render props for the select and its options', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <Select
+        aria-label="test"
+        name="render-prop-select"
+        value={exampleOptions[0]}
+      >
+        {({ open }) => (
+          <>
+            <Select.Button>{open ? 'Close' : 'Open'}</Select.Button>
+            <Select.Options>
+              {exampleOptions.map((option) => (
+                <Select.Option key={option.key} value={option}>
+                  {({ selected }) => (
+                    <li>
+                      {option.label}
+                      {selected && ' (selected)'}
+                    </li>
+                  )}
+                </Select.Option>
+              ))}
+            </Select.Options>
+          </>
+        )}
+      </Select>,
+    );
+
+    await user.click(screen.getByRole('button', { name: 'Open' }));
+
+    expect(screen.getByRole('button', { name: 'Close' })).toBeInTheDocument();
+    expect(screen.getByText('Option 1 (selected)')).toBeInTheDocument();
+    expect(screen.getByText('Option 2')).toBeInTheDocument();
+  });
+
+  it('shows a checkbox for each option when multiple values are allowed', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <Select aria-label="test" multiple name="multiple-select">
+        <Select.Button>Select</Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </Select>,
+    );
+
+    await user.click(screen.getByRole('button'));
+    await user.click(screen.getByRole('option', { name: /Option 1/ }));
+
+    const checkboxes = screen.getAllByLabelText('checkbox', {
+      selector: 'input',
+    });
+    expect(checkboxes).toHaveLength(exampleOptions.length);
+    expect(checkboxes[0]).toBeChecked();
+    expect(checkboxes[1]).not.toBeChecked();
+  });
 });

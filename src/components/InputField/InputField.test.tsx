@@ -111,4 +111,106 @@ describe('<InputField />', () => {
       inputBody.style.getPropertyValue('--input-field__input-within-width'),
     ).toBe('140px');
   });
+
+  it('falls back to the content width when the border box size is unavailable', () => {
+    // Older browsers report only `contentRect`, which the shared mock can't reproduce
+    let notify: ResizeObserverCallback = () => {};
+    vi.stubGlobal(
+      'ResizeObserver',
+      class {
+        constructor(callback: ResizeObserverCallback) {
+          notify = callback;
+        }
+        observe() {}
+        disconnect() {}
+      },
+    );
+
+    try {
+      render(
+        <InputField
+          aria-label="label"
+          data-testid="test-input"
+          inputWithin={<Button size="sm">Go</Button>}
+        />,
+      );
+      const inputBody = screen.getByTestId('test-input')
+        .parentElement as HTMLElement;
+
+      act(() =>
+        notify(
+          [{ contentRect: { width: 40.5 } } as ResizeObserverEntry],
+          {} as ResizeObserver,
+        ),
+      );
+
+      expect(
+        inputBody.style.getPropertyValue('--input-field__input-within-width'),
+      ).toBe('41px');
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
+
+  it('uses the given aria-describedby over the generated one', () => {
+    render(
+      <InputField
+        aria-describedby="custom-description"
+        data-testid="test-input"
+        fieldNote="A field note"
+        label="Label"
+      />,
+    );
+
+    expect(screen.getByTestId('test-input')).toHaveAttribute(
+      'aria-describedby',
+      'custom-description',
+    );
+  });
+
+  it('tracks text when uncontrolled without an onChange handler', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <InputField
+        data-testid="test-input"
+        defaultValue="abc"
+        label="Label"
+        maxLength={10}
+      />,
+    );
+    // the counter splits the count and total across elements, so match on its full text
+    const counter = (text: RegExp) =>
+      screen.getByText(
+        (_, element) =>
+          element?.tagName === 'DIV' && text.test(element.textContent ?? ''),
+      );
+    expect(counter(/^3\s*\/\s*10$/)).toBeInTheDocument();
+
+    await user.type(screen.getByTestId('test-input'), 'de');
+
+    expect(screen.getByTestId('test-input')).toHaveValue('abcde');
+    expect(counter(/^5\s*\/\s*10$/)).toBeInTheDocument();
+  });
+
+  it('toggles password visibility', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <InputField
+        aria-label="label"
+        data-testid="test-input"
+        type="password"
+      />,
+    );
+    const input = screen.getByTestId('test-input');
+
+    expect(input).toHaveAttribute('type', 'password');
+
+    await user.click(screen.getByRole('button', { name: 'Show password' }));
+    expect(input).toHaveAttribute('type', 'text');
+
+    await user.click(screen.getByRole('button', { name: 'Hide password' }));
+    expect(input).toHaveAttribute('type', 'password');
+  });
 });

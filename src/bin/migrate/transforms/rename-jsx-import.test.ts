@@ -179,4 +179,32 @@ describe('transform', () => {
       }
     `);
   });
+
+  it('supports new import names that are not valid identifiers', () => {
+    const sourceFileText = dedent`
+      import {Button as B} from '@chanzuckerberg/eds';
+
+      const button = <B />;
+      const other = <Other />;
+    `;
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          oldImportName: 'Button',
+          newImportName: 'button-v2',
+          alias: 'ButtonV2',
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {"button-v2" as ButtonV2} from '@chanzuckerberg/eds';
+
+      const button = <ButtonV2 />;
+      const other = <Other />;
+    `);
+  });
 });
