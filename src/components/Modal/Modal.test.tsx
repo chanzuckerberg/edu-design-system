@@ -609,6 +609,49 @@ describe('Modal', () => {
       expect(getContent().style.maxHeight).toBe('');
     });
 
+    it.each([
+      // 2px border + 10px of body content + 4px would clip the 40px close button, so the
+      // button sets the height: 40px + 2px border
+      ['stays tall enough for the close button', false, '42px'],
+      ['fits to the body alone when the close button is hidden', true, '16px'],
+    ])('without a header, %s', (_description, hideCloseButton, maxHeight) => {
+      // a headerless modal: just the 1px border around a 100px scroll area
+      vi.spyOn(HTMLElement.prototype, 'offsetHeight', 'get').mockImplementation(
+        function (this: HTMLElement) {
+          if (this.className.includes('modal__content')) return 102;
+          if (this.className.includes('modal__close-button')) return 40;
+          return 0;
+        },
+      );
+      vi.spyOn(HTMLElement.prototype, 'clientHeight', 'get').mockImplementation(
+        function (this: HTMLElement) {
+          if (this.className.includes('modal__content')) return 100;
+          if (this.className.includes('scroll-wrapper__inner')) return 100;
+          return 0;
+        },
+      );
+      bodyContentHeight = 10;
+      render(
+        <Modal
+          aria-label="aria label"
+          hideCloseButton={hideCloseButton}
+          onClose={() => {}}
+          open
+        >
+          <Modal.Body>
+            <p data-testid="first" style={{ margin: 0 }}>
+              First
+            </p>
+            <p data-testid="last" style={{ margin: 0 }}>
+              Last
+            </p>
+          </Modal.Body>
+        </Modal>,
+      );
+
+      expect(getContent().style.maxHeight).toBe(maxHeight);
+    });
+
     it('still fits on open without ResizeObserver', () => {
       vi.stubGlobal('ResizeObserver', undefined);
       bodyContentHeight = 100;

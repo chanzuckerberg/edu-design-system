@@ -258,14 +258,14 @@ function childrenHaveNonSectionChild(children?: ReactNode): boolean {
   });
 }
 
+// Mirrors `$eds-bp-sm`, which CSS custom properties can't carry into a media query.
+const EDS_BP_SM = '600px';
+
 /**
  * The actual modal, without the dark overlay behind it.
  *
  * This is only exported for testing purposes; please do not import and use this directly.
  */
-// Mirrors `$eds-bp-sm`, which CSS custom properties can't carry into a media query.
-const EDS_BP_SM = '600px';
-
 const ModalContent = (props: ModalContentProps) => {
   const {
     children,
@@ -388,8 +388,19 @@ const ModalContent = (props: ModalContentProps) => {
           content.offsetHeight -
           content.clientHeight;
       const bodyContentHeight = scroller ? measureBodyContent(scroller) : 0;
+      // The close button is positioned out of the flow, so nothing above counts it. Without a
+      // header, a short body can leave the modal shorter than the button, clipping it.
+      const closeButton = content.querySelector<HTMLElement>(
+        `:scope > .${styles['modal__close-button']}`,
+      );
+      const closeButtonBottom = closeButton
+        ? closeButton.offsetTop +
+          closeButton.offsetHeight +
+          content.offsetHeight -
+          content.clientHeight
+        : 0;
       // a little extra room so the body does not scroll by a pixel or two from rounding
-      const total = chrome + bodyContentHeight + 4;
+      const total = Math.max(chrome + bodyContentHeight + 4, closeButtonBottom);
 
       const largeHeight =
         window.innerHeight -
