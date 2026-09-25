@@ -78,6 +78,17 @@ describe('<DataTable />', () => {
       const icon = screen.getByTestId('status').querySelector('svg');
       expect(icon).toHaveAttribute('width', '16px');
     });
+
+    it('uses a full-size status icon in default tables', () => {
+      render(
+        <DataTable>
+          <DataTable.StatusCell data-testid="status" status="critical" />
+        </DataTable>,
+      );
+
+      const icon = screen.getByTestId('status').querySelector('svg');
+      expect(icon).toHaveAttribute('width', '24px');
+    });
   });
 
   describe('Row', () => {

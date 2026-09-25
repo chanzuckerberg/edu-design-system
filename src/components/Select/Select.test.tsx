@@ -241,6 +241,20 @@ describe('<Select />', () => {
     });
   });
 
+  it('does not warn about a missing name in production', () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    render(
+      <Select aria-label="test" onChange={() => undefined}>
+        <Select.Button>Select</Select.Button>
+      </Select>,
+    );
+
+    expect(warn).not.toHaveBeenCalled();
+    vi.unstubAllEnvs();
+  });
+
   it('warns once when rendered without a name', () => {
     const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
     const unnamedSelect = (

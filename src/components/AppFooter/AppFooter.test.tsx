@@ -17,6 +17,7 @@ import { AppFooter, type AppFooterCSSProperties } from './AppFooter';
 import * as stories from './AppFooter.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 import type { NavLink } from '../../util/utility-types';
+import linkStyles from '../Link/Link.module.css';
 
 /**
  * Valid colors that no theme token resolves to, so an assertion cannot pass on an emphasis
@@ -170,6 +171,28 @@ describe('<AppFooter />', () => {
       );
     });
   });
+
+  it.each([
+    ['high', true],
+    ['low', false],
+  ] as const)(
+    'uses the inverse title link only on %s emphasis',
+    (emphasis, isInverse) => {
+      render(
+        <AppFooter
+          emphasis={emphasis}
+          href="#homepage"
+          navItems={NAV_ITEMS}
+          title="text"
+        />,
+      );
+
+      const titleLink = screen.getByRole('link', { name: 'text' });
+      expect(
+        titleLink.classList.contains(linkStyles['link--variant-inverse']),
+      ).toBe(isInverse);
+    },
+  );
 
   describe('event handling', () => {
     it('handles clicks on footer logo', async () => {

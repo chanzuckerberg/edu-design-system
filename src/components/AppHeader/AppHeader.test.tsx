@@ -710,5 +710,62 @@ describe('<AppHeader />', () => {
       expect(onLinkClickMock).toHaveBeenCalledTimes(1);
       expect(hidePopover).toHaveBeenCalledTimes(3);
     });
+
+    it('closes the drawer when tree and menu items inside it are clicked', async () => {
+      const user = userEvent.setup();
+      const onButtonClickMock = vi.fn();
+      const onLinkClickMock = vi.fn();
+      const hidePopover = vi.fn();
+
+      render(
+        <AppHeader
+          navGroups={[
+            {
+              name: 'group-1',
+              navItems: [
+                {
+                  name: 'Lakes',
+                  type: 'tree',
+                  navItems: [
+                    { name: 'Lake Superior', type: 'link', href: '#' },
+                    { name: 'Refresh lakes', type: 'button' },
+                  ],
+                },
+                {
+                  name: 'Profile',
+                  type: 'menu',
+                  navItems: [
+                    { name: 'Settings', type: 'button' },
+                    { name: 'Help', type: 'link', href: '#' },
+                  ],
+                },
+              ],
+            },
+          ]}
+          onButtonClick={onButtonClickMock}
+          onLinkClick={onLinkClickMock}
+          title="Test"
+        />,
+      );
+
+      const drawer = document.getElementById('popover') as HTMLElement;
+      drawer.hidePopover = hidePopover;
+
+      await user.click(
+        within(drawer).getByRole('link', { name: 'Lake Superior' }),
+      );
+      await user.click(
+        within(drawer).getByRole('button', { name: 'Refresh lakes' }),
+      );
+
+      await user.click(within(drawer).getByRole('button', { name: 'Profile' }));
+      await user.click(screen.getByRole('menuitem', { name: 'Settings' }));
+      await user.click(within(drawer).getByRole('button', { name: 'Profile' }));
+      await user.click(screen.getByRole('menuitem', { name: 'Help' }));
+
+      expect(onLinkClickMock).toHaveBeenCalledTimes(2);
+      expect(onButtonClickMock).toHaveBeenCalledTimes(2);
+      expect(hidePopover).toHaveBeenCalledTimes(4);
+    });
   });
 });

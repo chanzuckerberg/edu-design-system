@@ -873,4 +873,41 @@ describe('transform', () => {
       }
     `);
   });
+
+  it.each([
+    ['is not set', '<Icon purpose="informative" title="add item to cart" />'],
+    [
+      'is set without a value',
+      '<Icon name purpose="informative" title="add item to cart" />',
+    ],
+  ])('leaves the element alone when the prop %s', (_label, element) => {
+    const sourceFileText = dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return ${element};
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'update_value',
+              propName: 'name',
+              oldPropValue: 'add-circle',
+              newPropValue: 'add-encircled',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
 });

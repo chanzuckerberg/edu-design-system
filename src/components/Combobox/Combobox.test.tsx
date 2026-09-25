@@ -425,6 +425,21 @@ describe('<Combobox />', () => {
   });
 
   describe('multiple', () => {
+    it('starts empty and adds a chip when no value is given', async () => {
+      const user = userEvent.setup();
+
+      render(<TestCombobox multiple />);
+      expect(screen.queryAllByRole('listitem')).toHaveLength(0);
+
+      await user.click(screen.getByRole('button'));
+      // opening highlights the first option, so this picks the second
+      await user.keyboard('{arrowdown}{enter}');
+
+      expect(
+        screen.getByRole('button', { name: 'remove Option 2' }),
+      ).toBeInTheDocument();
+    });
+
     it('shows a chip for each selected value', () => {
       render(
         <TestMultipleCombobox
@@ -962,6 +977,16 @@ describe('<Combobox />', () => {
 
       expect(changeHandler).toHaveBeenCalledTimes(0);
     });
+  });
+
+  it('does not warn about a missing name in production', () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    render(<TestCombobox name={undefined} />);
+
+    expect(warn).not.toHaveBeenCalled();
+    vi.unstubAllEnvs();
   });
 
   it('warns once when rendered without a name', () => {

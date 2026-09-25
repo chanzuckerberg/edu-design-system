@@ -71,6 +71,19 @@ describe('<Breadcrumbs />', () => {
     });
   });
 
+  it('ignores a pending resize check that lands after unmount', () => {
+    vi.useFakeTimers();
+    const error = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    const { unmount } = render(<LongList />);
+    window.dispatchEvent(new Event('resize'));
+    unmount();
+
+    expect(() => vi.advanceTimersByTime(200)).not.toThrow();
+    expect(error).not.toHaveBeenCalled();
+    vi.useRealTimers();
+  });
+
   it('throws when given children other than Breadcrumbs.Item', () => {
     // React logs the thrown render error; keep the test output quiet
     vi.spyOn(console, 'error').mockImplementation(() => {});
