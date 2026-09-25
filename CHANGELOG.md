@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [19.0.0-alpha.3](https://github.com/chanzuckerberg/edu-design-system/compare/v19.0.0-alpha.2...v19.0.0-alpha.3) (2026-09-25)
+
+
+### Features
+
+* **Modal:** shrink lg modals to fit short content ([#2649](https://github.com/chanzuckerberg/edu-design-system/issues/2649)) ([1548917](https://github.com/chanzuckerberg/edu-design-system/commit/1548917857eb43945f756fdbf0b521b15b423fed))
+
 ## [19.0.0-alpha.2](https://github.com/chanzuckerberg/edu-design-system/compare/v19.0.0-alpha.1...v19.0.0-alpha.2) (2026-09-25)
 
 
