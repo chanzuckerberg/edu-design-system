@@ -69,6 +69,17 @@ export default defineConfig({
           exclude: ['node_modules/', '**/*.stories.{ts,tsx}'],
           globals: true,
           environment: 'happy-dom',
+          environmentOptions: {
+            happyDOM: {
+              settings: {
+                // Keep link clicks from fetching real pages over the network
+                navigation: {
+                  disableChildPageNavigation: true,
+                  disableMainFrameNavigation: true,
+                },
+              },
+            },
+          },
           restoreMocks: true,
           setupFiles: 'test/test.setup.js',
         },

@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 
 import React from 'react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { AppHeader } from './AppHeader';
+import { AppHeader, type AppHeaderEventHandler } from './AppHeader';
 import * as stories from './AppHeader.stories';
 
 import type { StoryFile } from '../../../.storybook/utility-types';
@@ -108,7 +108,10 @@ describe('<AppHeader />', () => {
 
   it('handles onLinkClick handler on nested menus (EDS-1829)', async () => {
     const onButtonClickMock = vi.fn();
-    const onLinkClickMock = vi.fn();
+    // Cancel the click like a client-side router would, so the external link doesn't open
+    const onLinkClickMock = vi.fn<AppHeaderEventHandler>((ev) =>
+      ev.preventDefault(),
+    );
 
     render(
       <AppHeader
