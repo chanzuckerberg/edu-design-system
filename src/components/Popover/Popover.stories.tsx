@@ -1,9 +1,9 @@
 import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
-import { userEvent, within } from '@storybook/testing-library';
 import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
+import { userEvent, within } from 'storybook/test';
 import { Popover } from './Popover';
 import type { PopoverProps } from './Popover';
 import Button from '../Button';

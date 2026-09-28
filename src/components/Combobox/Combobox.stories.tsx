@@ -1,8 +1,6 @@
 import type { StoryObj, Meta } from '@storybook/react-vite';
-// Importing this here, since using @storybook/test below leads to superfluous act() warnings
-import { userEvent, within } from '@storybook/testing-library';
 import React, { useState } from 'react';
-import { expect } from 'storybook/test';
+import { expect, userEvent, within } from 'storybook/test';
 import { Combobox } from './Combobox';
 import FpoBlock from '../../storyUtils/FpoBlock';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';

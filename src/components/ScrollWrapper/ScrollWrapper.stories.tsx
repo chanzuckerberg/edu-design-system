@@ -1,9 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
-import { userEvent, within } from '@storybook/testing-library';
-
 import React from 'react';
+import { userEvent, within } from 'storybook/test';
 
 import { ScrollWrapper } from './ScrollWrapper';
 

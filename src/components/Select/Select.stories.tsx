@@ -1,10 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
-// Importing this here, since using @storybook/test below leads to superfluous act() warnings
-import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
-import { expect } from 'storybook/test';
+import { expect, userEvent, within } from 'storybook/test';
 import { Select } from './Select';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { IconProvider } from '../Icon';

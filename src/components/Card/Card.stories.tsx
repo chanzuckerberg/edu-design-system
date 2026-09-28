@@ -1,8 +1,8 @@
 import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
-import { userEvent } from '@storybook/testing-library';
 import React from 'react';
+import { userEvent } from 'storybook/test';
 
 import { Card } from './Card';
 import FpoBlock from '../../storyUtils/FpoBlock';

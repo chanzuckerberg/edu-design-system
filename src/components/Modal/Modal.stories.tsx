@@ -1,10 +1,10 @@
 import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
-import { userEvent } from '@storybook/testing-library';
 
 import React from 'react';
 import { useState } from 'react';
+import { userEvent } from 'storybook/test';
 
 import { Modal } from './Modal';
 import Heading from '../../components/Heading';
