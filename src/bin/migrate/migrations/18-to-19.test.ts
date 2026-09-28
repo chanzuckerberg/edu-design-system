@@ -1,10 +1,29 @@
 import { dedent } from 'ts-dedent';
 
-import { describe, expect, it } from 'vitest';
+import {
+  beforeEach,
+  afterEach,
+  describe,
+  expect,
+  it,
+  type Mock,
+  vi,
+} from 'vitest';
 import migration from './18-to-19';
 import { createTestSourceFile } from '../helpers';
 
 describe('18-to-19', () => {
+  let consoleMock: Mock;
+  // Stub out the calls to the debugger when running migrations
+  beforeEach(() => {
+    consoleMock = vi.spyOn(console, 'debug');
+    consoleMock.mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    consoleMock.mockRestore();
+  });
+
   it('replaces component-specific presets on Text', () => {
     const sourceFile = createTestSourceFile(dedent`
       import {Text} from '@chanzuckerberg/eds';
