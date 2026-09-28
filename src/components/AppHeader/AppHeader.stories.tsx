@@ -4,7 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import isChromatic from 'chromatic/isChromatic';
 
 import React from 'react';
-import { userEvent } from 'storybook/test';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { AppHeader } from './AppHeader';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
@@ -413,10 +413,14 @@ export const CanFocusMenuItem: Story = {
     },
   },
 
-  // Select the menu then expand it with the keyboard. set up for snapshotting
+  // At this viewport the header renders horizontally, so the hamburger is the only tab stop.
+  // Tab to it with the keyboard so the snapshot shows the focus ring
   play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const menuButton = await canvas.findByRole('button', { name: 'Show Menu' });
+
     await userEvent.tab();
-    await userEvent.tab();
+    await expect(menuButton).toHaveFocus();
   },
 
   globals: {
