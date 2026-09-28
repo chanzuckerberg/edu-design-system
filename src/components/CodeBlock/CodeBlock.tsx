@@ -4,9 +4,8 @@ import React from 'react';
 
 import Markdown from 'react-markdown';
 import { Prism, type SyntaxHighlighterProps } from 'react-syntax-highlighter';
-// react-syntax-highlighter has no exports map, so Node needs the explicit file path to read this as ESM
-// eslint-disable-next-line import/extensions
-import { solarizedDarkAtom as theme } from 'react-syntax-highlighter/dist/esm/styles/prism/index.js';
+
+import theme from './theme';
 
 import Button from '../Button';
 import { useSemanticIcon } from '../Icon';
@@ -106,7 +105,10 @@ ${children}
                 }}
                 language={match[1]}
                 PreTag="div"
-                style={theme}
+                // override the type to match the declarations in RSH's built-in themes
+                style={
+                  theme as { [key: string]: React.CSSProperties } | undefined
+                }
                 wrapLongLines
               />
             ) : (
@@ -149,7 +151,6 @@ ${children}
               }
             }}
             rank="secondary"
-            variant="inverse"
           >
             {copyStyle === 'text' ? copyButtonText : undefined}
           </Button>
