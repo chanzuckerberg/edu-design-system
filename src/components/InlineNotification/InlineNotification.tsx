@@ -1,10 +1,9 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { Status } from '../../util/variant-types';
 
-import Icon from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './InlineNotification.module.css';
@@ -15,6 +14,13 @@ type InlineNotificationProps = {
    * CSS class names that can be appended to the component for styling.
    */
   className?: string;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--inline-notification__bg`
+   * - `--inline-notification__fg`
+   */
+  style?: InlineNotificationCSSProperties;
   // Design API
   /**
    * Keyword to characterize the state of the notification
@@ -31,6 +37,18 @@ type InlineNotificationProps = {
    */
   title: string;
 };
+
+export interface InlineNotificationCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--inline-notification__bg'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--inline-notification__fg'?: string;
+}
 
 /**
  * ## Usage
@@ -79,14 +97,20 @@ export const InlineNotification = ({
     className,
   );
 
+  // The status icon is semantic: it is the notification's whole signal of severity, so
+  // the app sets it once through `IconProvider` rather than per notification.
+  const statusIcon = useSemanticIcon(status);
+
   return (
     <div className={componentClassName} {...other}>
-      <Icon
-        className={styles['inline-notification__icon']}
-        name={getIconNameFromStatus(status)}
-        purpose="decorative"
-        size="16px"
-      />
+      {hasSlotContent(statusIcon) && (
+        <IconSlot
+          className={styles['inline-notification__icon']}
+          content={statusIcon}
+          purpose="decorative"
+          size="16px"
+        />
+      )}
       <div className={styles['inline-notication__body']}>
         <Text
           as="div"

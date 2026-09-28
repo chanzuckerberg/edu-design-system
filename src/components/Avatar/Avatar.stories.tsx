@@ -1,8 +1,11 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 
 import React from 'react';
 
 import { Avatar } from './Avatar';
+import FpoBlock from '../../storyUtils/FpoBlock';
 import Tooltip from '../Tooltip';
 
 export default {
@@ -11,7 +14,7 @@ export default {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2.0'],
 } as Meta<typeof Avatar>;
 
 type Story = StoryObj<typeof Avatar>;
@@ -201,7 +204,7 @@ export const UsingWithTooltip: Story = {
   },
   tags: ['code-only'],
   render: (args) => (
-    <Tooltip text="Show additional user information">
+    <Tooltip content="Show additional user information">
       <span>
         <Avatar {...args} />
       </span>
@@ -219,4 +222,26 @@ export const Fixed: Story = {
     ...Default.args,
     color: 'fixed',
   },
+};
+
+/**
+ * The icon slot takes arbitrary content, not only an EDS icon name. The blocks below stand
+ * in for whatever you supply, so the slot itself is the subject rather than the icon that
+ * happened to be picked.
+ *
+ * `Avatar` sizes its icon from `size`, so each block matches that size's own icon: 16px at
+ * `sm`, 24px at `md`, 32px at `lg`, and 40px at `xl`.
+ */
+export const WithFpoIconContent: Story = {
+  args: {
+    variant: 'icon',
+  },
+  render: (args) => (
+    <div className="flex items-center gap-2">
+      <Avatar {...args} icon={<FpoBlock size={16} />} size="sm" />
+      <Avatar {...args} icon={<FpoBlock size={24} />} size="md" />
+      <Avatar {...args} icon={<FpoBlock size={32} />} size="lg" />
+      <Avatar {...args} icon={<FpoBlock size={40} />} size="xl" />
+    </div>
+  ),
 };

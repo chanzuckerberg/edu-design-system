@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Accordion /> Default story renders snapshot 1`] = `
+exports[`<Accordion /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -8,28 +8,28 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
     class="w-[600px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:r0:"
+        id="headlessui-disclosure-button-_r_0_"
         type="button"
       >
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Accordion title
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -48,37 +48,37 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button2"
-        id="headlessui-disclosure-button-:r2:"
+        id="headlessui-disclosure-button-_r_2_"
         type="button"
       >
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Accordion title
           </span>
         </h2>
         <span
-          class="text text--tag tag tag--emphasis-high tag--status-informational"
+          class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-informational_f57044"
         >
           <span
-            class="tag__body"
+            class="_tag__body_f57044"
           >
             Tag Text
           </span>
         </span>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -97,31 +97,31 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state="open"
       data-open=""
     >
       <button
-        aria-controls="headlessui-disclosure-panel-:r5:"
+        aria-controls="headlessui-disclosure-panel-_r_5_"
         aria-expanded="true"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state="open"
         data-open=""
         data-testid="accordion-button3"
-        id="headlessui-disclosure-button-:r4:"
+        id="headlessui-disclosure-button-_r_4_"
         type="button"
       >
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Accordion title
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon accordion-button__trailing-icon--open"
+          class="_icon_779da8 _accordion-button__indicator_86d7df _accordion-button__indicator--open_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -139,17 +139,17 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
         </svg>
       </button>
       <div
-        class="accordion-panel"
+        class="_accordion-panel_86d7df"
         data-headlessui-state="open"
         data-open=""
         data-testid="accordion-panel3"
-        id="headlessui-disclosure-panel-:r5:"
+        id="headlessui-disclosure-panel-_r_5_"
       >
         <span
-          class="text text--body-md"
+          class="_text_b3eba3 _text--body-md_b3eba3"
         >
           <p
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Lorem ipsum dolor sit amet consectetur. Massa lacus id dictum id pharetra et semper cras. Ante aliquam nec urna amet. Ipsum viverra pharetra libero sit nam adipiscing quam erat. Ultricies lacinia malesuada ac eget convallis convallis semper purus purus.
           </p>
@@ -160,7 +160,7 @@ exports[`<Accordion /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
+exports[`<Accordion /> > HasLeadingIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -168,23 +168,23 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
     class="w-[600px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:re:"
+        id="headlessui-disclosure-button-_r_e_"
         type="button"
       >
         <span
-          class="accordion-button__leading-icon"
+          class="_accordion-button__leading-content_86d7df"
         >
           <svg
             aria-hidden="true"
-            class="icon"
+            class="_icon_779da8"
             fill="currentColor"
             height="24px"
             style="--icon-size: 24px;"
@@ -198,21 +198,21 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
           </svg>
         </span>
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
           <span
-            class="text text--body-md accordion-button__subTitle"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__subTitle_86d7df"
           >
             Quam lacus maecenas nibh malesuada.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -234,7 +234,7 @@ exports[`<Accordion /> HasLeadingIcon story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
+exports[`<Accordion /> > TitleAndSubtitle story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -242,27 +242,27 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
     class="w-[600px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:rc:"
+        id="headlessui-disclosure-button-_r_c_"
         type="button"
       >
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa.
           </span>
           <span
-            class="text text--body-md accordion-button__subTitle"
+            class="_text_b3eba3 _text--body-md_b3eba3 _accordion-button__subTitle_86d7df"
           >
             <span>
               "Quam lacus maecenas nibh malesuada."
@@ -270,7 +270,7 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -292,7 +292,7 @@ exports[`<Accordion /> TitleAndSubtitle story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
+exports[`<Accordion /> > UsingRenderProp story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -300,29 +300,29 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
     class="w-[600px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:rg:"
+        id="headlessui-disclosure-button-_r_g_"
         type="button"
       >
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Accordion Button 
             closed
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -344,7 +344,7 @@ exports[`<Accordion /> UsingRenderProp story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
+exports[`<Accordion /> > WithFpoContentSlots story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -352,27 +352,210 @@ exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
     class="w-[600px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
-        id="headlessui-disclosure-button-:ri:"
+        id="headlessui-disclosure-button-_r_k_"
+        type="button"
+      >
+        <span
+          class="_accordion-button__leading-content_86d7df"
+        >
+          <span
+            aria-hidden="true"
+            class="fpo"
+            style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+          >
+            FPO
+          </span>
+        </span>
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Leading content
+          </span>
+        </h2>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_m_"
         type="button"
       >
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Trailing content
+          </span>
+        </h2>
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        >
+          FPO
+        </span>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state="open"
+      data-open=""
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-_r_p_"
+        aria-expanded="true"
+        class="_accordion-button_86d7df"
+        data-headlessui-state="open"
+        data-open=""
+        id="headlessui-disclosure-button-_r_o_"
+        type="button"
+      >
+        <span
+          class="_accordion-button__leading-content_86d7df"
+        >
+          <span
+            aria-hidden="true"
+            class="fpo"
+            style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+          >
+            FPO
+          </span>
+        </span>
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Both at once
+          </span>
+        </h2>
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        >
+          FPO
+        </span>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df _accordion-button__indicator--open_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            hide content
+          </title>
+          <path
+            d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+          />
+        </svg>
+      </button>
+      <div
+        class="_accordion-panel_86d7df _accordion-panel--leading-content_86d7df"
+        data-headlessui-state="open"
+        data-open=""
+        id="headlessui-disclosure-panel-_r_p_"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          <p
+            class="_text_b3eba3 _text--body-md_b3eba3"
+          >
+            Shown open, to check the slots still line up once the indicator has rotated.
+          </p>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> > WithLargeHeader story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[600px]"
+  >
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        id="headlessui-disclosure-button-_r_i_"
+        type="button"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa. Massa quam egestas massa.
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -394,7 +577,7 @@ exports[`<Accordion /> WithLargeHeader story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Accordion /> WithLeadingNumberIcon story renders snapshot 1`] = `
+exports[`<Accordion /> > WithLeadingNumberIcon story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
@@ -402,23 +585,23 @@ exports[`<Accordion /> WithLeadingNumberIcon story renders snapshot 1`] = `
     class="w-[600px]"
   >
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:r6:"
+        id="headlessui-disclosure-button-_r_6_"
         type="button"
       >
         <span
-          class="accordion-button__leading-icon"
+          class="_accordion-button__leading-content_86d7df"
         >
           <span
             aria-label="Numero uno"
-            class="text text--label-md number-icon number-icon--size-md number-icon--status-default"
+            class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
             role="img"
             tabindex="-1"
           >
@@ -426,16 +609,16 @@ exports[`<Accordion /> WithLeadingNumberIcon story renders snapshot 1`] = `
           </span>
         </span>
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Accordion title
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -454,23 +637,23 @@ exports[`<Accordion /> WithLeadingNumberIcon story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:r8:"
+        id="headlessui-disclosure-button-_r_8_"
         type="button"
       >
         <span
-          class="accordion-button__leading-icon"
+          class="_accordion-button__leading-content_86d7df"
         >
           <span
             aria-label="Numero uno"
-            class="text text--label-md number-icon number-icon--size-md number-icon--status-default"
+            class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
             role="img"
             tabindex="-1"
           >
@@ -478,16 +661,16 @@ exports[`<Accordion /> WithLeadingNumberIcon story renders snapshot 1`] = `
           </span>
         </span>
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Accordion title
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -506,23 +689,23 @@ exports[`<Accordion /> WithLeadingNumberIcon story renders snapshot 1`] = `
       </button>
     </div>
     <div
-      class="accordion-row"
+      class="_accordion-row_86d7df"
       data-headlessui-state=""
     >
       <button
         aria-expanded="false"
-        class="accordion-button accordion-button--md"
+        class="_accordion-button_86d7df"
         data-headlessui-state=""
         data-testid="accordion-button"
-        id="headlessui-disclosure-button-:ra:"
+        id="headlessui-disclosure-button-_r_a_"
         type="button"
       >
         <span
-          class="accordion-button__leading-icon"
+          class="_accordion-button__leading-content_86d7df"
         >
           <span
             aria-label="Numero uno"
-            class="text text--label-md number-icon number-icon--size-md number-icon--status-default"
+            class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
             role="img"
             tabindex="-1"
           >
@@ -530,16 +713,16 @@ exports[`<Accordion /> WithLeadingNumberIcon story renders snapshot 1`] = `
           </span>
         </span>
         <h2
-          class="text text--title-md accordion-button__heading"
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
         >
           <span
-            class="text text--title-md accordion-button__title"
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
           >
             Accordion title
           </span>
         </h2>
         <svg
-          class="icon accordion-button__trailing-icon"
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
           fill="currentColor"
           height="24px"
           role="img"
@@ -556,6 +739,166 @@ exports[`<Accordion /> WithLeadingNumberIcon story renders snapshot 1`] = `
           />
         </svg>
       </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Accordion /> > WithProvidedIcons story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="w-[600px]"
+  >
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        data-testid="accordion-button"
+        id="headlessui-disclosure-button-_r_q_"
+        type="button"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Accordion title
+          </span>
+        </h2>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state=""
+    >
+      <button
+        aria-expanded="false"
+        class="_accordion-button_86d7df"
+        data-headlessui-state=""
+        data-testid="accordion-button2"
+        id="headlessui-disclosure-button-_r_s_"
+        type="button"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Accordion title
+          </span>
+        </h2>
+        <span
+          class="_text_b3eba3 _text--tag_b3eba3 _tag_f57044 _tag--emphasis-high_f57044 _tag--status-informational_f57044"
+        >
+          <span
+            class="_tag__body_f57044"
+          >
+            Tag Text
+          </span>
+        </span>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            show content
+          </title>
+          <path
+            d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="_accordion-row_86d7df"
+      data-headlessui-state="open"
+      data-open=""
+    >
+      <button
+        aria-controls="headlessui-disclosure-panel-_r_v_"
+        aria-expanded="true"
+        class="_accordion-button_86d7df"
+        data-headlessui-state="open"
+        data-open=""
+        data-testid="accordion-button3"
+        id="headlessui-disclosure-button-_r_u_"
+        type="button"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__heading_86d7df"
+        >
+          <span
+            class="_text_b3eba3 _text--title-md_b3eba3 _accordion-button__title_86d7df"
+          >
+            Accordion title
+          </span>
+        </h2>
+        <svg
+          class="_icon_779da8 _accordion-button__indicator_86d7df _accordion-button__indicator--open_86d7df"
+          fill="currentColor"
+          height="24px"
+          role="img"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            hide content
+          </title>
+          <path
+            d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+          />
+        </svg>
+      </button>
+      <div
+        class="_accordion-panel_86d7df"
+        data-headlessui-state="open"
+        data-open=""
+        data-testid="accordion-panel3"
+        id="headlessui-disclosure-panel-_r_v_"
+      >
+        <span
+          class="_text_b3eba3 _text--body-md_b3eba3"
+        >
+          <p
+            class="_text_b3eba3 _text--body-md_b3eba3"
+          >
+            Lorem ipsum dolor sit amet consectetur. Massa lacus id dictum id pharetra et semper cras. Ante aliquam nec urna amet. Ipsum viverra pharetra libero sit nam adipiscing quam erat. Ultricies lacinia malesuada ac eget convallis convallis semper purus purus.
+          </p>
+        </span>
+      </div>
     </div>
   </div>
 </div>

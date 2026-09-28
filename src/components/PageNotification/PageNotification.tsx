@@ -1,17 +1,19 @@
 import clsx from 'clsx';
 import React, { type ReactNode } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import type { Status } from '../../util/variant-types';
 
 import Button from '../Button';
 import Heading from '../Heading';
-import Icon from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './PageNotification.module.css';
 
-export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
+export type PageNotificationProps = Omit<
+  React.HTMLAttributes<HTMLElement>,
+  'style'
+> & {
   // Component API
   /**
    * CSS class names that can be appended to the component.
@@ -21,6 +23,13 @@ export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
    * Callback when notification is dismissed. When passed in, renders banner with a close icon in the top right.
    */
   onDismiss?: () => void;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--page-notification__bg`
+   * - `--page-notification__fg`
+   */
+  style?: PageNotificationCSSProperties;
   // Design API
   /**
    * Whether the button layout for the call to action is vertical or horizontal.
@@ -45,6 +54,18 @@ export type PageNotificationProps = React.HTMLAttributes<HTMLElement> & {
    */
   title?: string;
 };
+
+export interface PageNotificationCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--page-notification__bg'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--page-notification__fg'?: string;
+}
 
 /**
  * ## Usage
@@ -91,14 +112,22 @@ export const PageNotification = ({
     className,
   );
 
+  // Both icons here are semantic: the status icon carries the notification's severity,
+  // and the dismiss button is the same close affordance used everywhere else. The app
+  // sets either one through `IconProvider`, not per notification.
+  const statusIcon = useSemanticIcon(status);
+  const closeIcon = useSemanticIcon('close');
+
   return (
     <aside className={componentClassName} {...other}>
-      <Icon
-        className={styles['page-notification__icon']}
-        name={getIconNameFromStatus(status)}
-        purpose="decorative"
-        size="24px"
-      />
+      {hasSlotContent(statusIcon) && (
+        <IconSlot
+          className={styles['page-notification__icon']}
+          content={statusIcon}
+          purpose="decorative"
+          size="24px"
+        />
+      )}
 
       <div
         className={clsx(
@@ -137,7 +166,7 @@ export const PageNotification = ({
         <Button
           aria-label="Dismiss the notification"
           className={styles['page-notification__close-button']}
-          icon="close"
+          icon={closeIcon}
           iconLayout="icon-only"
           onClick={onDismiss}
           rank="tertiary"

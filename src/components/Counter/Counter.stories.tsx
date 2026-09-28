@@ -1,4 +1,4 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite';
 import React, { useState } from 'react';
 
 import { Counter } from './Counter';
@@ -13,7 +13,7 @@ const InteractiveCounter = ({ count, ...other }: Args) => {
   const [value, setValue] = useState('Some initial text');
 
   return (
-    <div className="flex w-[384px] flex-col gap-spacing-size-1">
+    <div className="gap-spacing-size-1 flex w-[384px] flex-col">
       <Input
         aria-label="Type to change the count"
         onChange={(event) => setValue(event.target.value)}

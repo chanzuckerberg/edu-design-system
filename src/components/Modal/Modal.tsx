@@ -8,12 +8,17 @@ import clsx from 'clsx';
 import type { MutableRefObject, ReactNode } from 'react';
 import React from 'react';
 
-import { assertEdsUsage } from '../../util/logging';
+import {
+  assertEdsUsage,
+  assertNoRemovedProp,
+  type WithRemovedProps,
+} from '../../util/logging';
 import type { ExtractProps } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
 
 import Button from '../Button';
 import Heading from '../Heading';
+import { useSemanticIcon } from '../Icon';
 import ScrollWrapper from '../ScrollWrapper';
 import Text from '../Text';
 
@@ -33,7 +38,8 @@ type ModalContentProps = {
    */
   className?: string;
   /**
-   * Contents of the modal.
+   * Contents of the modal. Only `Modal.Header`, `Modal.Body`, and `Modal.Footer` are allowed
+   * as direct children; anything else logs an error.
    */
   children: ReactNode;
   /**
@@ -75,31 +81,38 @@ type ModalContentProps = {
    * ```
    */
   onClose: () => void;
-  // Design API
   /**
-   * Determine how the height of the modal container is calculated when `size` is `"lg"`:
-   * - `"fixed"` applies the fixed dimensions, which will not adjust
-   * - `"auto"` applies a floating height dimension, that will fit to the content (can be smaller or larger than `"default"`)
-   * - `"max"` applies the maximum height within the viewport, leaving space along the top and bottom edges
-   * - `"dynamic"` manages the height for you, with intelligent presets and scroll truncation as needed
+   * CSS properties defined for the modal's content element. Includes the component's CSS Custom Properties:
    *
-   * **Default is `"fixed"`**.
+   * - `--modal-content__border`
    */
-  height?: 'fixed' | 'auto' | 'max' | 'dynamic';
+  style?: ModalContentCSSProperties;
+  // Design API
   open?: boolean;
   /**
-   * Emphasis used on the backgound overlay (behind the modal)
+   * The modal's footprint at each breakpoint:
+   * - `"sm"` is a compact floating surface that sizes to its content, up to 480px tall
+   * - `"lg"` fills the viewport at the smallest breakpoint. Above it, it sizes to its content,
+   *   up to the viewport height less a margin
+   * - `"full"` takes the whole viewport at every breakpoint
    *
-   * **Default is `"low"`**.
-   */
-  overlayEmphasis?: 'low' | 'high';
-  /**
-   * Fixed sizes for the modal's height and width. Used in conjunction with `height` when using size `lg`.
+   * Height is managed for you at all three. The body takes whatever space the header and
+   * footer leave over and scrolls once the content outgrows it, so the actions stay on screen
+   * however long the content runs. The exception is a viewport under 320px tall, too short to
+   * seat the header and footer and still leave a body worth scrolling, where the modal scrolls
+   * as a whole instead and the footer does go off screen.
    *
    * **Default is `"lg"`**.
    */
   size?: Extract<Size, 'sm' | 'lg'> | 'full';
 };
+
+export interface ModalContentCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--modal-content__border'?: string;
+}
 
 type ModalProps = ModalContentProps & {
   /**
@@ -151,24 +164,13 @@ type ModalBodyProps = {
   // Component API
   /**
    * Child node(s) that can be nested inside component. `Modal.Header`,
-   * `Modal.Body`, and `Model.Footer` are the only permissible children of the Modal.
+   * `Modal.Body`, and `Modal.Footer` are the only permissible children of the Modal.
    */
   children: ReactNode;
   /**
    * CSS class names that can be appended to the component.
    */
   className?: string;
-  // Design API
-  /**
-   * Determine how the height of the modal container is calculated when `size` is `"lg"`:
-   * - `"fixed"` applies the fixed dimensions, which will not adjust
-   * - `"auto"` applies a floating height dimension, that will fit to the content (can be smaller or larger than `"default"`)
-   * - `"max"` applies the maximum height within the viewport, leaving space along the top and bottom edges
-   * - `"dynamic"` manages the height for you, with intelligent presets and scroll truncation as needed
-   *
-   * **Default is `"fixed"`**.
-   */
-  height?: ModalContentProps['height'];
 };
 
 type ModalHeaderProps = {
@@ -198,12 +200,6 @@ type ModalFooterProps = {
   // Design API
 };
 
-type Context = {
-  height?: ModalContentProps['height'];
-};
-
-const ModalContext = React.createContext<Context>({});
-
 /**
  * Helper function to determine whether a set of children contain a `ModalTitle` or `Modal.Title` child
  *
@@ -214,21 +210,56 @@ function childrenHaveModalTitle(children?: ReactNode): boolean {
   // TODO: this could be a common utility function for other use cases, or from a library
   const childrenArray = React.Children.toArray(children);
   return childrenArray.some((child) => {
-    if (typeof child === 'string' || typeof child === 'number') {
+    // `ReactNode` covers strings, numbers, bigints and promises as of React 19,
+    // none of which carry `props`.
+    if (typeof child !== 'object' || !('props' in child)) {
       return false;
-    } else if (
-      'props' in child &&
+    }
+    const { children: grandchildren } = child.props as {
+      children?: ReactNode;
+    };
+    if (
       child.type &&
       typeof child.type !== 'string' &&
       (child.type?.name === 'ModalTitle' || child.type?.name === 'Modal.Title')
     ) {
       return true;
-    } else if ('props' in child && child.props.children) {
-      return childrenHaveModalTitle(child.props.children);
+    } else if (grandchildren) {
+      return childrenHaveModalTitle(grandchildren);
     }
     return false;
   });
 }
+
+/**
+ * Helper function to determine whether a set of children has anything other than `Modal.Header`,
+ * `Modal.Body`, or `Modal.Footer` at the top level. Fragments are looked through, since they
+ * add nothing to the DOM, and empty children (`null`, `false`, `undefined`) are skipped, so
+ * conditionally rendered sections are fine.
+ *
+ * @param children component children (ReactNode)
+ * @returns boolean representing whether any top-level child is not one of the three sections
+ */
+function childrenHaveNonSectionChild(children?: ReactNode): boolean {
+  return React.Children.toArray(children).some((child) => {
+    if (!React.isValidElement(child)) {
+      return true;
+    }
+    if (child.type === React.Fragment) {
+      return childrenHaveNonSectionChild(
+        (child.props as { children?: ReactNode }).children,
+      );
+    }
+    return (
+      child.type !== ModalHeader &&
+      child.type !== ModalBody &&
+      child.type !== ModalFooter
+    );
+  });
+}
+
+// Mirrors `$eds-bp-sm`, which CSS custom properties can't carry into a media query.
+const EDS_BP_SM = '600px';
 
 /**
  * The actual modal, without the dark overlay behind it.
@@ -239,40 +270,207 @@ const ModalContent = (props: ModalContentProps) => {
   const {
     children,
     className,
-    height = 'fixed',
     hideCloseButton = false,
     open,
     onClose,
     size = 'lg',
+    // TODO(next-major): remove, with the asserts below.
+    height: removedHeight,
+    overlayEmphasis: removedOverlayEmphasis,
     ...other
-  } = props;
+  } = props as WithRemovedProps<
+    ModalContentProps,
+    'height' | 'overlayEmphasis'
+  >;
+
+  // TODO(next-major): remove.
+  assertNoRemovedProp(
+    'Modal/.Content',
+    'height',
+    'It manages its own height now: the body scrolls once the content outgrows the space the header and footer leave over.',
+    removedHeight,
+  );
+
+  // TODO(next-major): remove.
+  assertNoRemovedProp(
+    'Modal/.Content',
+    'overlayEmphasis',
+    'Every modal draws the low-emphasis overlay now.',
+    removedOverlayEmphasis,
+  );
+
+  assertEdsUsage(
+    [childrenHaveNonSectionChild(children)],
+    'Modal only takes Modal.Header, Modal.Body, and Modal.Footer as direct children. The modal lays out and scrolls those three sections, so anything else placed alongside them breaks that layout. Move the content into one of the sections, usually Modal.Body.',
+    'error',
+  );
 
   const componentClassName = clsx(
     styles['modal__content'],
-    height && styles[`modal__content--height-${height}`],
     size && styles[`modal__content--${size}`],
     open && styles[`modal__content--is-open`],
     className,
   );
 
+  // The close button is semantic: it is the same affordance as every other close in the
+  // app, so it is set once through `IconProvider` rather than per modal.
+  const closeIcon = useSemanticIcon('close');
+
+  // Shrinks an lg modal to its content when that content is shorter than the lg max height
+  // (`100vh - spacing-size-12`). Taller content keeps the CSS max height and the body scrolls.
+  // Below `$eds-bp-sm` the lg modal is full-bleed, so it keeps the full screen there.
+  const contentRef = React.useRef<HTMLDivElement>(null);
+  const consumerMaxHeight = other.style?.maxHeight;
+  React.useEffect(() => {
+    const content = contentRef.current;
+    // a max-height passed in through `style` is the consumer's call, so leave it to them
+    if (!content || size !== 'lg' || consumerMaxHeight !== undefined) return;
+
+    const sections = Array.from(
+      content.querySelectorAll<HTMLElement>(
+        `:scope > .${styles['modal-header']}, :scope > .${styles['modal-footer']}`,
+      ),
+    );
+    // the body's ScrollWrapper inner, which holds Modal.Body's children
+    const scroller = content.querySelector<HTMLElement>(
+      `:scope > .${styles['modal-body']} > * > *`,
+    );
+
+    // what the fit last wrote, so cleanup can tell it apart from a consumer's value
+    let fittedMaxHeight = '';
+    const setMaxHeight = (value: string) => {
+      fittedMaxHeight = value;
+      content.style.maxHeight = value;
+    };
+
+    const measureBodyContent = (scroller: HTMLElement) => {
+      // Read fresh each time, since a stateful child can add or remove siblings after opening.
+      // Skip hidden children: with no box, their zero rect would throw off the measurement.
+      const bodyChildren = Array.from(scroller.children).filter(
+        (child) => child.getClientRects().length > 0,
+      );
+      const first = bodyChildren[0];
+      const last = bodyChildren[bodyChildren.length - 1];
+      if (!first) {
+        // plain text has no element to measure, so measure the text itself
+        const range = document.createRange();
+        range.selectNodeContents(scroller);
+        return range.getBoundingClientRect().height;
+      }
+      return (
+        last.getBoundingClientRect().bottom -
+        first.getBoundingClientRect().top +
+        parseFloat(getComputedStyle(first).marginTop) +
+        parseFloat(getComputedStyle(last).marginBottom)
+      );
+    };
+
+    const fitToContent = () => {
+      if (!window.matchMedia(`(min-width: ${EDS_BP_SM})`).matches) {
+        setMaxHeight('');
+        return;
+      }
+
+      // Everything around the body's content: header, footer, body padding, and border. Without
+      // a body, that's the header and footer plus the border.
+      const chrome = scroller
+        ? content.offsetHeight - scroller.clientHeight
+        : sections.reduce((sum, section) => {
+            // flex items' margins don't collapse, so each one adds to the height
+            const { marginTop, marginBottom } = getComputedStyle(section);
+            return (
+              sum +
+              section.offsetHeight +
+              parseFloat(marginTop) +
+              parseFloat(marginBottom)
+            );
+          }, 0) +
+          content.offsetHeight -
+          content.clientHeight;
+      const bodyContentHeight = scroller ? measureBodyContent(scroller) : 0;
+      // The close button is positioned out of the flow, so nothing above counts it. Without a
+      // header, a short body can leave the modal shorter than the button, clipping it.
+      const closeButton = content.querySelector<HTMLElement>(
+        `:scope > .${styles['modal__close-button']}`,
+      );
+      const closeButtonBottom = closeButton
+        ? closeButton.offsetTop +
+          closeButton.offsetHeight +
+          content.offsetHeight -
+          content.clientHeight
+        : 0;
+      // a little extra room so the body does not scroll by a pixel or two from rounding
+      const total = Math.max(chrome + bodyContentHeight + 4, closeButtonBottom);
+
+      const largeHeight =
+        window.innerHeight -
+        parseFloat(
+          getComputedStyle(document.documentElement).getPropertyValue(
+            '--eds-spacing-size-12',
+          ),
+        );
+      // an empty value hands max-height back to the stylesheet
+      setMaxHeight(total < largeHeight ? `${total}px` : '');
+    };
+
+    fitToContent();
+    // Without ResizeObserver, content that changes size after opening waits for a window resize.
+    const observer =
+      typeof ResizeObserver === 'undefined'
+        ? undefined
+        : new ResizeObserver(fitToContent);
+    const observeAll = () =>
+      [
+        content,
+        ...sections,
+        ...(scroller ? [scroller, ...Array.from(scroller.children)] : []),
+      ].forEach((el) => observer?.observe(el));
+    observeAll();
+    // Changes inside the body that resize nothing observable: children added later (which also
+    // need observing), text React updates in place, and class or style edits that only move
+    // margins.
+    const mutationObserver = new MutationObserver(() => {
+      // start over, so children that have left the body stop being observed
+      observer?.disconnect();
+      observeAll();
+      fitToContent();
+    });
+    if (scroller) {
+      mutationObserver.observe(scroller, {
+        attributeFilter: ['class', 'style'],
+        characterData: true,
+        childList: true,
+        subtree: true,
+      });
+    }
+    window.addEventListener('resize', fitToContent);
+    return () => {
+      observer?.disconnect();
+      mutationObserver.disconnect();
+      window.removeEventListener('resize', fitToContent);
+      // React commits a new consumer max-height before this runs, so only clear the fit's own
+      if (content.style.maxHeight === fittedMaxHeight) {
+        content.style.maxHeight = '';
+      }
+    };
+  }, [children, consumerMaxHeight, size]);
+
   return (
-    <ModalContext.Provider value={{ height }}>
-      <div className={componentClassName} {...other}>
-        {!hideCloseButton && (
-          <Button
-            aria-label="close"
-            className={styles['modal__close-button']}
-            context="default"
-            icon="close"
-            iconLayout="icon-only"
-            onClick={onClose}
-            rank="tertiary"
-            variant="neutral"
-          ></Button>
-        )}
-        {children}
-      </div>
-    </ModalContext.Provider>
+    <div className={componentClassName} ref={contentRef} {...other}>
+      {!hideCloseButton && (
+        <Button
+          aria-label="close"
+          className={styles['modal__close-button']}
+          context="default"
+          icon={closeIcon}
+          iconLayout="icon-only"
+          onClick={onClose}
+          rank="tertiary"
+          variant="neutral"
+        ></Button>
+      )}
+      {children}
+    </div>
   );
 };
 
@@ -313,6 +511,7 @@ const ModalContent = (props: ModalContentProps) => {
  *
  * * Include long headings or body text. The more words, the less likely people are to read any of it.
  * * Include long passages of informative text in a modal. Use a short summary and then link to a help article, FAQ etc.
+ * * Avoid applying inline stylistic modifications to the Modal.Title sub-component. Use the defaults or preset props where present.
  *
  * ## Resources
  *
@@ -325,7 +524,6 @@ export const Modal = (props: ModalProps) => {
     modalContainerClassName,
     onClose,
     open,
-    overlayEmphasis = 'low',
     ...rest
   } = props;
 
@@ -333,18 +531,6 @@ export const Modal = (props: ModalProps) => {
     [!childrenHaveModalTitle(rest.children) && !ariaLabel],
     "You must use the Modal.Title helper component or pass in an aria-label when using the Modal. The Modal uses the Modal.Title to describe the modal to screen readers using aria-labelledby. If you're not using the Modal.Title component, you can pass in an aria-label instead.",
     'error',
-  );
-
-  // check to make sure folks aren't using size="lg" with "height"
-  assertEdsUsage(
-    [rest.size !== 'lg' && typeof rest.height !== 'undefined'],
-    'Height is only supported when size is set to "lg"',
-  );
-
-  // check to make sure we only use height=dynamic from now on
-  assertEdsUsage(
-    [rest.height !== 'dynamic' && typeof rest.height !== 'undefined'],
-    `Height value ${rest.height} is deprecated and will be removed in a future version of EDS`,
   );
 
   const componentClassName = clsx(styles['modal'], modalContainerClassName);
@@ -367,13 +553,7 @@ export const Modal = (props: ModalProps) => {
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
         onClose={onClose}
       >
-        <div
-          className={clsx(
-            styles['modal__overlay'],
-            overlayEmphasis &&
-              styles[`modal__overlay--emphasis-${overlayEmphasis}`],
-          )}
-        />
+        <div className={styles['modal__overlay']} />
         <DialogPanel className={styles['modal__panel']}>
           <ModalContent onClose={onClose} open={open} {...rest} />
         </DialogPanel>
@@ -384,26 +564,39 @@ export const Modal = (props: ModalProps) => {
 
 /**
  * Component defines the body of the modal.
+ *
+ * The body scrolls its content, so however long that content is, it does not push the header
+ * and footer off the viewport. Below 320px of viewport height there is no room to scroll the
+ * body within and the modal scrolls as a whole, which is the one case where the footer does
+ * move off screen.
+ *
+ * `ScrollWrapper` leaves the region it scrolls in the tab order, which is how a keyboard user
+ * reaches the rest of it; this element only sizes that region, so it stays out of the tab
+ * order itself.
  */
-const ModalBody = ({
-  children,
-  className,
-  height,
-  ...other
-}: ModalBodyProps) => (
-  <div
-    className={clsx(styles['modal-body'], className)}
-    // This element is tabbable to allow keyboard users to scroll long content.
-    tabIndex={height === 'dynamic' ? 0 : undefined}
-    {...other}
-  >
-    {height === 'dynamic' ? (
+const ModalBody = (props: ModalBodyProps) => {
+  const {
+    children,
+    className,
+    // TODO(next-major): remove, with the assert below.
+    height: removedHeight,
+    ...other
+  } = props as WithRemovedProps<ModalBodyProps, 'height'>;
+
+  // TODO(next-major): remove.
+  assertNoRemovedProp(
+    'Modal.Body',
+    'height',
+    'The body scrolls its own content, at every modal size.',
+    removedHeight,
+  );
+
+  return (
+    <div className={clsx(styles['modal-body'], className)} {...other}>
       <ScrollWrapper shadowType="contain">{children}</ScrollWrapper>
-    ) : (
-      children
-    )}
-  </div>
-);
+    </div>
+  );
+};
 
 /**
  * Component defines the Footer section of the modal.
@@ -466,20 +659,15 @@ const ModalSubTitle = ({
   );
 };
 
-const FocusableModalBody = (props: ModalBodyProps) => {
-  const { height } = React.useContext(ModalContext);
-  return <ModalBody height={height} {...props} />;
-};
-
 Modal.displayName = 'Modal';
 ModalTitle.displayName = 'Modal.Title';
 ModalSubTitle.displayName = 'Modal.SubTitle';
-FocusableModalBody.displayName = 'Modal.Body';
+ModalBody.displayName = 'Modal.Body';
 ModalFooter.displayName = 'Modal.Footer';
 
 Modal.Header = ModalHeader;
 Modal.Content = ModalContent;
 Modal.Title = ModalTitle;
 Modal.SubTitle = ModalSubTitle;
-Modal.Body = FocusableModalBody;
+Modal.Body = ModalBody;
 Modal.Footer = ModalFooter;

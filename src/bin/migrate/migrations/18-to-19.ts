@@ -1,0 +1,431 @@
+import type { Project } from 'ts-morph';
+import editJsxProp from '../transforms/edit-jsx-prop';
+import type { Change as EditJsxPropChange } from '../transforms/edit-jsx-prop';
+import renameJsxImport from '../transforms/rename-jsx-import';
+import type { Change as RenameJsxImportChange } from '../transforms/rename-jsx-import';
+import renameStyleCustomProperty from '../transforms/rename-style-custom-property';
+import type { Change as RenameStyleCustomPropertyChange } from '../transforms/rename-style-custom-property';
+
+/**
+ * Import paths that changed from EDS v18 to v19
+ *
+ * Given a component, list out the change to the component name(s).
+ *
+ * Take the following transform:
+ * [
+ *   {
+ *      removeAlias: true,
+ *      oldImportName: 'ButtonV2',
+ *      newImportName: 'Button',
+ *    },
+ * ]
+ *
+ * Make the following transform:
+ *
+ * @example
+ * ```
+ * // Before:
+ * import {ButtonV2 as Button} from '@chanzuckerberg/eds';
+ *
+ * // After:
+ * import {Button} from '@chanzuckerberg/eds';
+ * ```
+ */
+const ImportChanges: RenameJsxImportChange[] = [];
+
+/**
+ * `Text` and `Heading` no longer accept the typography presets that belong to a single
+ * component (see `componentPresets` in `src/util/variant-types.ts`). Each one here maps
+ * to the reusable preset whose `Text.module.css` declarations are identical, so the
+ * rendered type does not change.
+ *
+ * Two reusable presets match `dataTable-headerCell` exactly, `title-xs` and
+ * `overline-md`. We land on `title-xs`.
+ */
+const presetReplacements = [
+  { oldPropValue: 'input-md', newPropValue: 'body-md' },
+  { oldPropValue: 'input', newPropValue: 'body-md' },
+  { oldPropValue: 'tab-lg-active', newPropValue: 'label-md' },
+  { oldPropValue: 'tab-lg', newPropValue: 'body-sm' },
+  { oldPropValue: 'tab-sm-active', newPropValue: 'label-sm' },
+  { oldPropValue: 'tab-sm', newPropValue: 'body-xs' },
+  { oldPropValue: 'tag', newPropValue: 'overline-sm' },
+  { oldPropValue: 'appHeader-label', newPropValue: 'body-sm' },
+  { oldPropValue: 'appHeader-subLabel', newPropValue: 'body-xs' },
+  { oldPropValue: 'dataTable-headerCell', newPropValue: 'title-xs' },
+] as const;
+
+const presetEdits = presetReplacements.map(
+  ({ oldPropValue, newPropValue }) => ({
+    type: 'update_value' as const,
+    propName: 'preset',
+    oldPropValue,
+    newPropValue,
+  }),
+);
+
+/**
+ * The leading slot on these components is now a content slot: it still takes an EDS
+ * icon name, and also takes a node. Only the prop name changed, so passing the same
+ * icon name under the new name renders exactly what it did before.
+ *
+ * `Accordion.Row`'s `hasLeadingIcon` is the boolean companion to the renamed slot, and
+ * sits beside an existing `hasTrailingContent`, so it follows to `hasLeadingContent`.
+ */
+/**
+ * Known prop changes for updated components from EDS v18 to v19
+ *
+ * Given a component, list out the changes of props and values.
+ *
+ * Take the following transform:
+ * {
+ *    componentName: 'ComponentName',
+ *    edits: [
+ *         {
+ *           type: 'update_value',
+ *           propName: 'propName',
+ *           oldPropValue: 'valueA',
+ *           newPropValue: 'valueB',
+ *         }
+ *    ]
+ * }
+ *
+ * Make the following conversion
+ *
+ * @example
+ * ```
+ * // Before
+ * <ComponentName propName="valueA" />
+ *
+ * // After
+ * <ComponentName propName="valueB" />
+ * ```
+ */
+const leadingIconToContent = [
+  {
+    type: 'update_name' as const,
+    oldPropName: 'leadingIcon',
+    newPropName: 'leadingContent',
+  },
+];
+
+/**
+ * `PopoverListItem` and `Menu.Item` each had a deprecated `icon` alongside
+ * `leadingContent`, and both rendered into the same slot. `leadingContent` now routes a
+ * string through `IconSlot` at the same 24px the `icon` prop used, so moving the icon name
+ * across renders exactly what it did before.
+ */
+const iconToLeadingContent = [
+  {
+    type: 'update_name' as const,
+    oldPropName: 'icon',
+    newPropName: 'leadingContent',
+  },
+];
+
+/**
+ * The icons these props set are semantic: each marks one well-defined role (expand,
+ * back), and a role only reads as itself if it looks the same everywhere it appears. They
+ * are now set app-wide through `IconProvider` and no longer taken per instance, so the
+ * prop is dropped rather than renamed.
+ *
+ * Most were typed to a single icon name (`'chevron-left'` on `Breadcrumbs.Item`,
+ * `'chevron-down'` on the `Select` and `Combobox` indicators and on v18's
+ * `Menu.Button.icon`), so dropping them is lossless: each rendered exactly what the default
+ * `IconProvider` renders now.
+ *
+ * Each removal covers both the v18 name and the name it briefly carried during v19
+ * prereleases, so a consumer who already ran an earlier copy of this migration lands in
+ * the same place.
+ */
+const removeSemanticIconProps = (propNames: string[]) =>
+  propNames.map((propName) => ({
+    type: 'remove' as const,
+    propName,
+  }));
+
+/**
+ * The glyph the `expand` role draws by default. Keep in step with
+ * `defaultSemanticIcons.expand`; this file cannot import it, since that module pulls in
+ * React and the CLI does not.
+ */
+const EXPAND_DEFAULT_ICON = 'chevron-down';
+
+/**
+ * Two of these were not name-only. `Accordion.Button.indicatorContent` and
+ * `Menu.Button.trailingContent` were widened to `IconOrContent` in v19 prereleases, so a
+ * consumer on one of those could be passing a node, or an icon name other than the default,
+ * and deleting it would throw away a choice this migration cannot put anywhere else.
+ *
+ * So these drop the value only when it already equals the role's default, where removing it
+ * changes nothing. Anything else stays put and becomes a type error on upgrade, which the
+ * consumer answers: move it into an `IconProvider` if the indicator should look that way
+ * everywhere, or drop it. Better a compile error than a glyph that quietly changes.
+ *
+ * The comparison is exact for that reason. Matching every `chevron-*` would have swept up
+ * `indicatorContent="chevron-up"` — a deliberate override, and the value the removed
+ * `WithCustomIndicator` story used — and silently re-rendered it pointing down.
+ */
+const removeSemanticIconPropsWhenDefault = (
+  propNames: string[],
+  defaultValue: string,
+) =>
+  propNames.map((propName) => ({
+    type: 'remove' as const,
+    propName,
+    callback: ({ currentPropValue }: { currentPropValue: string }) =>
+      currentPropValue === defaultValue,
+  }));
+
+/**
+ * `Modal` no longer takes `height` or `overlayEmphasis`, and neither has a replacement to move
+ * a value onto, so both are dropped whatever they were set to. A type error would have only
+ * one answer here — delete it — which is the edit itself.
+ *
+ * Both props were declared on `ModalContentProps`, so `Modal.Content` accepted them as well as
+ * `Modal` did, and `Modal.Body` took `height` too. All three are covered: a consumer who wrote
+ * the prop anywhere it typechecked in v18 gets it removed, rather than half a migration and a
+ * compile error in whichever spot the codemod skipped.
+ *
+ * `height="dynamic"` and `overlayEmphasis="low"` are lossless: each named what the modal now
+ * does by default. `Modal.Body`'s `height` is lossless whatever it said, since the body only
+ * ever read the value the parent `Modal` put on context and ignored its own. The remaining
+ * height values on `Modal` and `Modal.Content` do change how a modal looks, and the codemod
+ * cannot decide that for anyone, so re-check any modal it edits here:
+ *
+ * - `"fixed"` capped the modal at 640px tall. It now fills the viewport height, less a margin,
+ *   and scrolls its body instead of capping.
+ * - `"auto"` sized the modal to its content. Short modals were short; they are now the same
+ *   height as any other.
+ * - `"max"` is the closest: its geometry is what every large modal has now. The body gains
+ *   scroll truncation on top of it.
+ *
+ * `overlayEmphasis="high"` drew a darker backdrop. Every modal now uses the low-emphasis one.
+ */
+const removedModalProps: EditJsxPropChange[] = [
+  {
+    componentName: 'Modal',
+    edits: [
+      { type: 'remove', propName: 'height' },
+      { type: 'remove', propName: 'overlayEmphasis' },
+    ],
+  },
+  {
+    componentName: 'Modal.Content',
+    edits: [
+      { type: 'remove', propName: 'height' },
+      { type: 'remove', propName: 'overlayEmphasis' },
+    ],
+  },
+  {
+    componentName: 'Modal.Body',
+    edits: [{ type: 'remove', propName: 'height' }],
+  },
+];
+
+/**
+ * `Tooltip` is built on Floating UI now, not Tippy.js, and no longer takes every Tippy prop.
+ * It keeps the ones EDS documented along with the common ones it could carry over
+ * unchanged. Its bubble's content also moved from `text` to `content`, the name Tippy
+ * already gave it and the one `Tooltip` had marked for this major.
+ *
+ * - `text` becomes `content`. A tooltip that set both rendered `content`, since the Tippy
+ *   props spread in after `text`, so there `text` is dropped instead of renamed. That also
+ *   held for a `content` arriving in a spread (`{...props}`), and renaming a `text` written
+ *   after one would flip which wins, so that `text` is left to become a type error instead.
+ * - `offset` never took effect: `Tooltip` always passed its own 12px offset through
+ *   `popperOptions`, which Tippy merged in after it.
+ * - `animateFill` did nothing without Tippy's `animateFill` plugin, which EDS never loaded.
+ *
+ * Every other Tippy-only prop (`plugins`, `popperOptions`, `render`, `theme`, `followCursor`,
+ * and so on) changed how the tooltip behaved and has no equivalent to move it onto, so it is
+ * left in place to become a type error on upgrade. So is a Tippy callback that reads the
+ * instance it was handed: `onShow` and `onHide` still exist but take no arguments.
+ */
+const tooltipChanges: EditJsxPropChange[] = [
+  {
+    componentName: 'Tooltip',
+    edits: [
+      {
+        type: 'remove',
+        propName: 'text',
+        callback: ({ hasProp }) => hasProp('content'),
+      },
+      {
+        type: 'update_name',
+        oldPropName: 'text',
+        newPropName: 'content',
+        callback: ({ followsSpread }) => !followsSpread,
+      },
+      { type: 'remove', propName: 'offset' },
+      { type: 'remove', propName: 'animateFill' },
+    ],
+  },
+];
+
+export const PropChanges: EditJsxPropChange[] = [
+  {
+    componentName: 'Text',
+    edits: presetEdits,
+  },
+  {
+    componentName: 'Heading',
+    edits: presetEdits,
+  },
+  {
+    componentName: 'Accordion.Button',
+    edits: [
+      ...leadingIconToContent,
+      ...removeSemanticIconPropsWhenDefault(
+        ['trailingIcon', 'indicatorContent'],
+        EXPAND_DEFAULT_ICON,
+      ),
+    ],
+  },
+  {
+    componentName: 'Accordion.Row',
+    edits: [
+      {
+        type: 'update_name',
+        oldPropName: 'hasLeadingIcon',
+        newPropName: 'hasLeadingContent',
+      },
+    ],
+  },
+  {
+    componentName: 'DataTable.DataCell',
+    edits: leadingIconToContent,
+  },
+  {
+    componentName: 'DataTable.HeaderCell',
+    edits: leadingIconToContent,
+  },
+  {
+    componentName: 'InputField',
+    edits: leadingIconToContent,
+  },
+  {
+    componentName: 'SelectionChip',
+    edits: leadingIconToContent,
+  },
+  {
+    componentName: 'PopoverListItem',
+    edits: iconToLeadingContent,
+  },
+  {
+    componentName: 'Menu.Item',
+    edits: iconToLeadingContent,
+  },
+  {
+    componentName: 'Menu.Button',
+    edits: [
+      ...removeSemanticIconProps(['icon']),
+      ...removeSemanticIconPropsWhenDefault(
+        ['trailingContent'],
+        EXPAND_DEFAULT_ICON,
+      ),
+    ],
+  },
+  {
+    componentName: 'Breadcrumbs.Item',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Select.Button',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Select.ButtonWrapper',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Combobox.Button',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Combobox.Input',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  {
+    componentName: 'Combobox.InputWrapper',
+    edits: removeSemanticIconProps(['icon']),
+  },
+  ...removedModalProps,
+  ...tooltipChanges,
+  {
+    /**
+     * `Link.icon` never took an arbitrary icon: it picked one of two roles, or none. Both
+     * are now named as roles and resolved through `IconProvider`, so the value that was
+     * already a role name (`open-in-new`) is unchanged, and the one that named a glyph
+     * becomes `forward`.
+     */
+    componentName: 'Link',
+    edits: [
+      {
+        type: 'update_value',
+        propName: 'icon',
+        oldPropValue: 'chevron-right',
+        newPropValue: 'forward',
+      },
+    ],
+  },
+];
+
+/**
+ * CSS custom property names that changed from EDS v18 to v19
+ *
+ * Given a custom property, list out the change to its name.
+ *
+ * Take the following transform:
+ * [
+ *   {
+ *     oldCustomPropertyName: '--component__bg-color',
+ *     newCustomPropertyName: '--component__bg',
+ *   },
+ * ]
+ *
+ * Make the following transform:
+ *
+ * @example
+ * ```
+ * // Before:
+ * <Component style={{ '--component__bg-color': 'red' }} />
+ *
+ * // After:
+ * <Component style={{ '--component__bg': 'red' }} />
+ * ```
+ *
+ * `AppFooter`'s two color custom properties are here because they dropped their `-color`
+ * suffix, to match how every other component names its own. Only the name changed: each still
+ * takes the same color and applies it to the same thing, so renaming the key is the whole
+ * migration.
+ */
+export const CustomPropertyChanges: RenameStyleCustomPropertyChange[] = [
+  {
+    oldCustomPropertyName: '--app-footer__bg-color',
+    newCustomPropertyName: '--app-footer__bg',
+  },
+  {
+    oldCustomPropertyName: '--app-footer__fg-color',
+    newCustomPropertyName: '--app-footer__fg',
+  },
+];
+
+/**
+ * Runs the migration to upgrade EDS from v18 to v19
+ */
+export default function migration(project: Project) {
+  const files = project.getSourceFiles();
+  const sourceFiles = files.filter((file) => !file.isDeclarationFile());
+
+  console.debug(`Running migration on ${sourceFiles.length} file(s)`);
+
+  sourceFiles.forEach((sourceFile) => {
+    renameJsxImport({ file: sourceFile, changes: ImportChanges });
+    editJsxProp({ file: sourceFile, changes: PropChanges });
+    renameStyleCustomProperty({
+      file: sourceFile,
+      changes: CustomPropertyChanges,
+    });
+  });
+}

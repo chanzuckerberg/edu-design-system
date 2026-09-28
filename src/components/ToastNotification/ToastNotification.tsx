@@ -1,11 +1,10 @@
 import clsx from 'clsx';
 import React, { useEffect } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
 import { assertEdsUsage } from '../../util/logging';
 import type { Status } from '../../util/variant-types';
 import Button from '../Button';
-import Icon from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './ToastNotification.module.css';
@@ -20,6 +19,10 @@ export type ToastNotificationProps = {
    * Callback when notification is dismissed. When passed in, renders banner with a close icon in the top right.
    */
   onDismiss?: () => void;
+  /**
+   * CSS properties defined for the HTML element.
+   */
+  style?: ToastNotificationCSSProperties;
   /**
    * Length of time to wait until `onDismiss` is called
    */
@@ -41,6 +44,31 @@ export type ToastNotificationProps = {
    */
   title: string;
 };
+
+/**
+ * Color overrides a toast still honors, kept out of the component's documented API on
+ * purpose. All three are held back: `--toast__bg`, `--toast__fg`, and `--toast__icon`.
+ *
+ * `--toast__icon` is the reason. It recolors the status icon, which is the one part of a
+ * toast a reader uses to tell severity apart at a glance, and recoloring it away from its
+ * status is how a favorable toast ends up looking critical. The background and foreground go
+ * with it, since a toast recolored past its status reads the same way whichever property did
+ * it.
+ *
+ * Held back rather than removed: they keep working, and the toasts already relying on them
+ * keep rendering. They are simply not advertised, so nothing points a new consumer at them.
+ * The declarations stay here so existing usage keeps type-checking, and
+ * `ToastNotification.test.tsx` covers all three still taking effect, since no story does.
+ *
+ * See "Properties held back from the documented API" in `.github/copilot-instructions.md`.
+ */
+export interface ToastNotificationCSSProperties extends React.CSSProperties {
+  '--toast__bg'?: string;
+
+  '--toast__fg'?: string;
+
+  '--toast__icon'?: string;
+}
 
 /**
  * ## Usage
@@ -91,6 +119,12 @@ export const ToastNotification = ({
     'error',
   );
 
+  // Both icons here are semantic: the status icon carries the toast's severity, and the
+  // dismiss button is the same close affordance used everywhere else. The app sets either
+  // one through `IconProvider`, not per toast.
+  const statusIcon = useSemanticIcon(status);
+  const closeIcon = useSemanticIcon('close');
+
   useEffect(() => {
     const expireId =
       dismissType === 'auto'
@@ -104,12 +138,14 @@ export const ToastNotification = ({
 
   return (
     <div className={componentClassName} {...other}>
-      <Icon
-        className={styles['toast__icon']}
-        name={getIconNameFromStatus(status)}
-        purpose="decorative"
-        size="24px"
-      />
+      {hasSlotContent(statusIcon) && (
+        <IconSlot
+          className={styles['toast__icon']}
+          content={statusIcon}
+          purpose="decorative"
+          size="24px"
+        />
+      )}
       <div className={styles['toast__body']}>
         <Text as="span" className={styles['toast__text']} preset="body-md">
           {title}
@@ -120,7 +156,7 @@ export const ToastNotification = ({
           aria-label="close"
           className={styles['toast__dismiss-button']}
           context="default"
-          icon="close"
+          icon={closeIcon}
           iconLayout="icon-only"
           onClick={onDismiss}
           rank="tertiary"

@@ -1,0 +1,63 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<FieldLabel /> > Default story renders snapshot 1`] = `
+<label
+  class="_label_76755a _label--lg_76755a"
+>
+  <span
+    class="_text_b3eba3 _text--label-lg_b3eba3"
+  >
+    Label
+  </span>
+</label>
+`;
+
+exports[`<FieldLabel /> > LargeDisabled story renders snapshot 1`] = `
+<label
+  aria-disabled="true"
+  class="_label_76755a _label--lg_76755a _label--disabled_76755a"
+>
+  <span
+    class="_text_b3eba3 _text--label-lg_b3eba3"
+  >
+    Label
+  </span>
+</label>
+`;
+
+exports[`<FieldLabel /> > LongCopy story renders snapshot 1`] = `
+<label
+  class="_label_76755a _label--lg_76755a"
+>
+  <span
+    class="_text_b3eba3 _text--label-lg_b3eba3"
+  >
+    Long label lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac id velit ut egestas arcu. Atmaecenas urna, risus donec praesent eu consectetur.
+  </span>
+</label>
+`;
+
+exports[`<FieldLabel /> > Medium story renders snapshot 1`] = `
+<label
+  class="_label_76755a _label--md_76755a"
+>
+  <span
+    class="_text_b3eba3 _text--label-md_b3eba3"
+  >
+    Label
+  </span>
+</label>
+`;
+
+exports[`<FieldLabel /> > MediumDisabled story renders snapshot 1`] = `
+<label
+  aria-disabled="true"
+  class="_label_76755a _label--md_76755a _label--disabled_76755a"
+>
+  <span
+    class="_text_b3eba3 _text--label-md_b3eba3"
+  >
+    Label
+  </span>
+</label>
+`;

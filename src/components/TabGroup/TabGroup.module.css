@@ -21,7 +21,6 @@
 
   border-bottom: 1px solid;
 
-
   &:not(.tabs--has-divider) {
     border-bottom-color: transparent;
   }
@@ -34,7 +33,7 @@
  * The color "white" is arbitrary and any non transparent color can be used here.
  */
 .tabs--scrollable-left {
-  -webkit-mask-image: -webkit-linear-gradient(left,
+  mask-image: linear-gradient(to right,
       transparent,
       white 64px);
 }
@@ -45,13 +44,13 @@
 }
 
 .tabs--scrollable-right {
-  -webkit-mask-image: -webkit-linear-gradient(right,
+  mask-image: linear-gradient(to left,
       transparent,
       white 64px);
 }
 
 .tabs--scrollable-left.tabs--scrollable-right {
-  -webkit-mask-image: -webkit-linear-gradient(left,
+  mask-image: linear-gradient(to right,
       transparent,
       white 64px,
       white calc(100% - 64px),
@@ -150,14 +149,6 @@
 
 .tab__icon {
   margin-right: calc(var(--eds-spacing-size-half) * 1px);
-}
-
-.tab__illustration {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  margin: calc(var(--eds-spacing-size-1) * 1px);
 }
 
 .tab__highlight {

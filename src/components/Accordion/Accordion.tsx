@@ -7,11 +7,15 @@ import clsx from 'clsx';
 import React, { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { ENTER_KEYCODE, SPACEBAR_KEYCODE } from '../../util/keycodes';
-import { assertEdsUsage } from '../../util/logging';
-import type { Size } from '../../util/variant-types';
+import {
+  assertEdsUsage,
+  assertNoRemovedIconProp,
+  type WithRemovedIconProps,
+} from '../../util/logging';
+import type { IconOrContent } from '../../util/utility-types';
 
 import Heading, { type HeadingElement } from '../Heading';
-import Icon, { type IconName } from '../Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import Text from '../Text';
 
 import styles from './Accordion.module.css';
@@ -33,13 +37,6 @@ type AccordionProps = {
    * **Default is `"h2"`**.
    */
   headingAs: HeadingElement;
-  /**
-   * Various sizes supported by the `Accordion`.
-   *
-   * **Default is `"md"`**.
-   * @deprecated
-   */
-  size?: Extract<Size, 'sm' | 'md'>;
 };
 
 type AccordionButtonProps = {
@@ -67,9 +64,10 @@ type AccordionButtonProps = {
    */
   headingAs?: HeadingElement;
   /**
-   * Icon to preceed the text in an accordion header
+   * Content that precedes the text in an accordion header. Pass an EDS icon name to render
+   * a decorative icon, or a node to render it as-is.
    */
-  leadingIcon?: ReactNode;
+  leadingContent?: IconOrContent;
   /**
    * Secondary text used to describe the content in more detail
    */
@@ -82,12 +80,6 @@ type AccordionButtonProps = {
    * Slot which follows the text in an accordion header
    */
   trailingContent?: ReactNode;
-  /**
-   * Icon override for component's expand/collapse indicator.
-   *
-   * **Default is `"chevron-down"`**.
-   */
-  trailingIcon?: Extract<IconName, 'chevron-down'>;
 };
 
 type AccordionPanelProps = {
@@ -121,7 +113,7 @@ type AccordionRowProps = {
   /**
    * Whether the row has content on the row's trigger that leads in front of the title
    */
-  hasLeadingIcon?: boolean;
+  hasLeadingContent?: boolean;
   /**
    * Whether the row has a content on the row's trigger that trails the title
    */
@@ -130,7 +122,6 @@ type AccordionRowProps = {
 
 const AccordionContext = createContext<{
   headingAs: HeadingElement;
-  size?: AccordionProps['size'];
 }>({
   headingAs: 'h2',
 });
@@ -138,11 +129,11 @@ const AccordionContext = createContext<{
 const AccordionRowContext = createContext<
   Pick<
     AccordionRowProps,
-    'isExpandable' | 'hasLeadingIcon' | 'hasTrailingContent'
+    'isExpandable' | 'hasLeadingContent' | 'hasTrailingContent'
   >
 >({
   isExpandable: true,
-  hasLeadingIcon: false,
+  hasLeadingContent: false,
   hasTrailingContent: false,
 });
 
@@ -164,7 +155,6 @@ const AccordionRowContext = createContext<
  *
  * ### Best Practices
  *
- * * Don't mix accordion sizes.
  * * Don't mix accordions where some have icons and others do not.
  *
  * ## Interaction
@@ -196,11 +186,10 @@ export const Accordion = ({
   children,
   className,
   headingAs,
-  size = 'md',
   ...other
 }: AccordionProps) => {
   return (
-    <AccordionContext.Provider value={{ headingAs, size }}>
+    <AccordionContext.Provider value={{ headingAs }}>
       <div className={className} {...other}>
         {children}
       </div>
@@ -208,26 +197,53 @@ export const Accordion = ({
   );
 };
 
-const AccordionButton = ({
-  children,
-  className,
-  headingAs,
-  leadingIcon, // TODO(next-major): rename to `leadingContent`
-  title,
-  trailingIcon = 'chevron-down',
-  trailingContent,
-  subTitle,
-  onClose,
-  onOpen,
-  ...other
-}: AccordionButtonProps) => {
-  const { headingAs: contextHeadingAs, size } = useContext(AccordionContext);
+const AccordionButton = (props: AccordionButtonProps) => {
+  const {
+    children,
+    className,
+    headingAs,
+    leadingContent,
+    title,
+    trailingContent,
+    subTitle,
+    onClose,
+    onOpen,
+    // TODO(next-major): remove these two, with the asserts below.
+    indicatorContent: removedIndicatorContent,
+    trailingIcon: removedTrailingIcon,
+    ...other
+  } = props as WithRemovedIconProps<
+    AccordionButtonProps,
+    'indicatorContent' | 'trailingIcon'
+  >;
+
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp(
+    'Accordion.Button',
+    'indicatorContent',
+    'expand',
+    removedIndicatorContent,
+  );
+  // TODO(next-major): remove.
+  assertNoRemovedIconProp(
+    'Accordion.Button',
+    'trailingIcon',
+    'expand',
+    removedTrailingIcon,
+  );
+
+  const { headingAs: contextHeadingAs } = useContext(AccordionContext);
 
   const { isExpandable } = useContext(AccordionRowContext);
 
+  // The indicator is semantic: it marks the row as the thing that expands, and reads as
+  // that only if every expandable thing in the app carries the same mark. It comes from
+  // `IconProvider` for that reason, and not from a prop on this row. The leading and
+  // trailing slots above are the consumer's to fill, and are left alone.
+  const expandIcon = useSemanticIcon('expand');
+
   const componentClassName = clsx(
     styles['accordion-button'],
-    size && styles[`accordion-button--${size}`],
     !isExpandable && styles['accordion-button--empty'],
     className,
   );
@@ -265,21 +281,21 @@ const AccordionButton = ({
           }}
           {...other}
         >
-          {leadingIcon && (
-            <span className={styles['accordion-button__leading-icon']}>
-              {leadingIcon}
+          {hasSlotContent(leadingContent) && (
+            <span className={styles['accordion-button__leading-content']}>
+              <IconSlot content={leadingContent} size="24px" />
             </span>
           )}
           <Heading
             as={headingAs || contextHeadingAs}
             className={styles['accordion-button__heading']}
-            preset={size === 'md' ? 'title-md' : 'title-sm'}
+            preset="title-md"
           >
             {(title || children) && (
               <Text
                 as="span"
                 className={styles['accordion-button__title']}
-                preset={size === 'md' ? 'title-md' : 'title-sm'}
+                preset="title-md"
               >
                 {title}
                 {children}
@@ -289,20 +305,20 @@ const AccordionButton = ({
               <Text
                 as="span"
                 className={styles['accordion-button__subTitle']}
-                preset={size === 'md' ? 'body-md' : 'body-sm'}
+                preset="body-md"
               >
                 {subTitle}
               </Text>
             )}
           </Heading>
           {trailingContent}
-          {isExpandable && (
-            <Icon
+          {isExpandable && hasSlotContent(expandIcon) && (
+            <IconSlot
               className={clsx(
-                styles['accordion-button__trailing-icon'],
-                open && styles['accordion-button__trailing-icon--open'],
+                styles['accordion-button__indicator'],
+                open && styles['accordion-button__indicator--open'],
               )}
-              name={trailingIcon}
+              content={expandIcon}
               purpose="informative"
               size="24px"
               title={open ? 'hide content' : 'show content'}
@@ -319,12 +335,12 @@ const AccordionPanel = ({
   children,
   ...other
 }: AccordionPanelProps) => {
-  const { isExpandable, hasLeadingIcon } = useContext(AccordionRowContext);
+  const { isExpandable, hasLeadingContent } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
     styles['accordion-panel'],
     !isExpandable && styles['accordion-panel--hidden'],
-    hasLeadingIcon && styles['accordion-panel--leading-icon'],
+    hasLeadingContent && styles['accordion-panel--leading-content'],
     className,
   );
 
@@ -344,13 +360,13 @@ const AccordionRow = ({
   defaultOpen,
   children,
   isExpandable = true,
-  hasLeadingIcon,
+  hasLeadingContent,
   hasTrailingContent,
   ...other
 }: AccordionRowProps) => {
   const componentClassName = clsx(styles['accordion-row'], className);
   return (
-    <AccordionRowContext.Provider value={{ isExpandable, hasLeadingIcon }}>
+    <AccordionRowContext.Provider value={{ isExpandable, hasLeadingContent }}>
       <Disclosure defaultOpen={defaultOpen}>
         {({ open }) => (
           <div className={componentClassName} {...other}>

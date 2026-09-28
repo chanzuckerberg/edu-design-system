@@ -10,9 +10,9 @@ import React, {
 } from 'react';
 
 import { createPortal } from 'react-dom';
-import breakpoints from '../../design-tokens/tier-1-definitions/breakpoints';
 import { assertEdsUsage } from '../../util/logging';
 import type {
+  IconOrContent,
   NavButton,
   NavGroup,
   NavItem,
@@ -25,12 +25,28 @@ import type {
 import Avatar from '../Avatar';
 import Button from '../Button';
 import Hr from '../Hr';
-import Icon, { type IconName } from '../Icon';
+import Icon, {
+  hasSlotContent,
+  IconSlot,
+  useSemanticIcon,
+  type IconName,
+} from '../Icon';
 import Menu from '../Menu';
 import PopoverContainer from '../PopoverContainer';
 import Text from '../Text';
+import { InternalText } from '../Text/Text';
 
 import styles from './AppHeader.module.css';
+
+// TODO-AH: Sync all the breakpoints across files
+const breakpoints = {
+  'eds-bp-xs': '0px',
+  'eds-bp-sm': '600px',
+  'eds-bp-md': '768px',
+  'eds-bp-lg': '1040px',
+  'eds-bp-xl': '1440px',
+  'eds-bp-xxl': '1920px',
+};
 
 export type AppHeaderEventHandler = (
   event: React.SyntheticEvent,
@@ -137,7 +153,7 @@ type AppHeaderLinkProps = NavLink &
     isExternal?: boolean;
   };
 
-type AppHeaderButtonProps = NavButton &
+type AppHeaderButtonProps = Omit<NavButton, 'icon'> &
   React.ButtonHTMLAttributes<HTMLButtonElement> & {
     // Component API
     /**
@@ -158,6 +174,14 @@ type AppHeaderButtonProps = NavButton &
      */
     isCurrent?: boolean;
     /**
+     * Icon for the button. Takes an EDS icon name, or a node.
+     *
+     * Widened past `NavItem.icon` because `AppHeader` fills this slot with semantic icons
+     * of its own (the hamburger, the expand chevron), which an `IconProvider` can set to
+     * a node. Consumer nav data still passes an icon name, as before.
+     */
+    icon?: IconOrContent;
+    /**
      * Content to use in the leading position of an app header button (allows icons or an `"avatar"`).
      */
     leadingContent?: IconName | 'avatar';
@@ -166,9 +190,10 @@ type AppHeaderButtonProps = NavButton &
      */
     user?: UserData;
     /**
-     * Content to use in the trailing position of an app header button.
+     * Content to use in the trailing position of an app header button. Takes an EDS icon
+     * name, or a node. Widened for the same reason as `icon`.
      */
-    trailingContent?: IconName;
+    trailingContent?: IconOrContent;
   };
 
 type AppHeaderDrawerProps = {
@@ -287,6 +312,12 @@ export const AppHeader = ({
     styles['app-header__drawer'],
   );
 
+  // The hamburger and the drawer's close button are semantic: they are the same "open the
+  // nav" and "close this" marks used elsewhere in the app, so they come from
+  // `IconProvider`. Icons that arrive as nav data stay the consumer's to choose.
+  const menuIcon = useSemanticIcon('menu');
+  const closeIcon = useSemanticIcon('close');
+
   const handleOrientationCalculation = function (
     orientation: AppHeaderProps['orientation'],
   ) {
@@ -357,7 +388,7 @@ export const AppHeader = ({
                   <div className={styles['app-header__menu']}>
                     <AppHeaderButton
                       aria-label="Show Menu"
-                      icon="menu"
+                      icon={menuIcon}
                       iconLayout="icon-only"
                       name="hamburger-menu"
                       onClick={() => {
@@ -384,14 +415,13 @@ export const AppHeader = ({
             <div
               className={drawerComponentClassName}
               id={'popover'}
-              // @ts-expect-error popover properly supported in React 19
               popover="auto"
             >
               <div className={styles['app-header__drawer-button']}>
                 <Button
                   aria-label="Close popover menu"
                   className={styles['app-header__drawer-button-instance']}
-                  icon="close"
+                  icon={closeIcon}
                   iconLayout="icon-only"
                   onClick={() => {
                     document.getElementById('popover')?.hidePopover();
@@ -461,6 +491,11 @@ const AppHeaderNavGroup = ({
   ...other
 }: AppHeaderNavGroupProps) => {
   const componentClassName = clsx(styles['app-header__nav-group']);
+
+  // The chevron marks a nav item as the thing that opens a menu, so it is the same
+  // semantic `expand` icon an `Accordion` row or a `Menu.Button` carries.
+  const expandIcon = useSemanticIcon('expand');
+
   return (
     <nav aria-label={name} className={componentClassName} {...other}>
       <ul>
@@ -493,7 +528,7 @@ const AppHeaderNavGroup = ({
                       <Menu.PlainButton as={React.Fragment}>
                         <AppHeaderButton
                           icon={
-                            navItem.type === 'tree' ? 'chevron-down' : undefined
+                            navItem.type === 'tree' ? expandIcon : undefined
                           }
                           iconLayout={
                             navItem.type === 'menu' &&
@@ -509,7 +544,7 @@ const AppHeaderNavGroup = ({
                           }
                           name={navItem.name}
                           trailingContent={
-                            navItem.type === 'menu' ? 'chevron-down' : undefined
+                            navItem.type === 'menu' ? expandIcon : undefined
                           }
                           type="button"
                           user={
@@ -518,9 +553,9 @@ const AppHeaderNavGroup = ({
                         >
                           {navItem.name}
                           {navItem.type === 'menu' && navItem.subLabel && (
-                            <Text as="div" preset="appHeader-subLabel">
+                            <InternalText as="div" preset="appHeader-subLabel">
                               {navItem.subLabel}
-                            </Text>
+                            </InternalText>
                           )}
                         </AppHeaderButton>
                       </Menu.PlainButton>
@@ -651,6 +686,11 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
       isCurrent && styles['app-header__nav-item--is-current'],
       isExternal && styles['app-header__nav-item--is-external'],
     );
+
+    // The mark on an external link is semantic, and matches the one `Link` renders for
+    // the same role. The link's own `icon` is nav data, and is left alone.
+    const openInNewIcon = useSemanticIcon('open-in-new');
+
     return (
       <a
         className={componentClassName}
@@ -665,16 +705,16 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
           )}
         >
           {!(iconLayout === 'icon-only') && (
-            <Text as="span" preset="appHeader-label">
+            <InternalText as="span" preset="appHeader-label">
               {children ?? name}
-            </Text>
+            </InternalText>
           )}
           {icon && iconLayout && (
             <Icon name={icon} purpose="decorative" size="24px" />
           )}
         </span>
-        {isExternal && isVertical && (
-          <Icon name="open-in-new" purpose="decorative" size="24px" />
+        {isExternal && isVertical && hasSlotContent(openInNewIcon) && (
+          <IconSlot content={openInNewIcon} purpose="decorative" size="24px" />
         )}
       </a>
     );
@@ -713,11 +753,15 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
       isCurrent && styles['app-header__nav-item--is-current'],
     );
 
+    // The chevron on a vertical nav button marks it as expandable, so it is the same
+    // semantic `expand` icon used elsewhere.
+    const expandIcon = useSemanticIcon('expand');
+
     // TODO(next-major): remove handling of icon, or simplify to composable subcomponents
     return (
       <button className={componentClassName} ref={ref} {...other}>
-        {isVertical && (
-          <Icon name={'chevron-down'} purpose="decorative" size="24px" />
+        {isVertical && hasSlotContent(expandIcon) && (
+          <IconSlot content={expandIcon} purpose="decorative" size="24px" />
         )}
         <span
           className={clsx(
@@ -727,19 +771,23 @@ const AppHeaderButton = forwardRef<HTMLButtonElement, AppHeaderButtonProps>(
           )}
         >
           {!(iconLayout === 'icon-only') && (
-            <Text as="span" preset="appHeader-label">
+            <InternalText as="span" preset="appHeader-label">
               {children ?? name}
-            </Text>
+            </InternalText>
           )}
-          {icon && iconLayout && (
-            <Icon name={icon} purpose="decorative" size="24px" />
+          {hasSlotContent(icon) && iconLayout && (
+            <IconSlot content={icon} purpose="decorative" size="24px" />
           )}
-          {!icon && leadingContent === 'avatar' && user && (
+          {!hasSlotContent(icon) && leadingContent === 'avatar' && user && (
             <Avatar size="sm" user={user} />
           )}
         </span>
-        {trailingContent && (
-          <Icon name={trailingContent} purpose="decorative" size="24px" />
+        {hasSlotContent(trailingContent) && (
+          <IconSlot
+            content={trailingContent}
+            purpose="decorative"
+            size="24px"
+          />
         )}
       </button>
     );
@@ -902,9 +950,12 @@ const AppHeaderDrawerContent = ({
                           >
                             {navItem.name}
                             {navItem.type === 'menu' && navItem.subLabel && (
-                              <Text as="div" preset="appHeader-subLabel">
+                              <InternalText
+                                as="div"
+                                preset="appHeader-subLabel"
+                              >
                                 {navItem.subLabel}
-                              </Text>
+                              </InternalText>
                             )}
                           </AppHeaderButton>
                         </Menu.PlainButton>

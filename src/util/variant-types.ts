@@ -51,6 +51,9 @@ export type Status = 'informational' | 'warning' | 'favorable' | 'critical';
  * By setting the array `as const`, we can treat each array value as
  * read-only and a unique type.
  *
+ * These are the reusable presets: the ones any code can reach for. Presets that
+ * belong to a single component live in `componentPresets` instead.
+ *
  * NOTE: To reduce maintenance, generate this from the tokens statically
  */
 export const presets = [
@@ -83,6 +86,24 @@ export const presets = [
   'overline-sm',
   'caption-md',
   'caption-sm',
+  'code-xl',
+  'code-lg',
+  'code-md',
+  'code-sm',
+  'code-xs',
+] as const;
+
+/**
+ * Presets that exist for one component's own use, and are not part of the reusable
+ * scale. They are styled in `Text.module.css` next to the reusable presets, but only
+ * the internal compositions (`InternalText`, `InternalHeading`) accept them, which
+ * keeps them out of custom code.
+ *
+ * Each of these has a reusable preset with identical CSS. When one is retired, map it
+ * to that equivalent in the current migration (`src/bin/migrate/migrations`) so
+ * consumers land somewhere that looks the same.
+ */
+export const componentPresets = [
   'input-md',
   'input', // TODO(next-major): consider removing
   'tab-lg-active',
@@ -90,17 +111,24 @@ export const presets = [
   'tab-sm-active',
   'tab-sm',
   'tag',
-  'code-xl',
-  'code-lg',
-  'code-md',
-  'code-sm',
-  'code-xs',
   'appHeader-label',
   'appHeader-subLabel',
   'dataTable-headerCell',
 ] as const;
 
 /**
- * Presets matching all the available typography tokens (tier-2 and tier-3)
+ * Presets matching the reusable typography tokens (tier-2 and tier-3). This is what
+ * `Text` and `Heading` accept.
  */
 export type Preset = (typeof presets)[number];
+
+/**
+ * Presets reserved for a single component's own use. See `componentPresets`.
+ */
+export type ComponentPreset = (typeof componentPresets)[number];
+
+/**
+ * Any preset, reusable or component-specific. Only for the internal compositions that
+ * need to render a component-specific preset.
+ */
+export type AnyPreset = Preset | ComponentPreset;

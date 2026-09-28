@@ -1,9 +1,13 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 
 import { Accordion } from './Accordion';
+import FpoBlock from '../../storyUtils/FpoBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports } from '../../util/viewports';
-import Icon from '../Icon';
+import Icon, { IconProvider } from '../Icon';
 import NumberIcon from '../NumberIcon';
 import Tag from '../Tag';
 import Text from '../Text';
@@ -84,7 +88,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:3.1'],
+  tags: ['autodocs', 'version:4.0.0'],
 } as Meta<typeof Accordion>;
 
 type Story = StoryObj<typeof Accordion>;
@@ -99,10 +103,10 @@ export const WithLeadingNumberIcon: Story = {
     ...Default.args,
     children: (
       <>
-        <Accordion.Row hasLeadingIcon>
+        <Accordion.Row hasLeadingContent>
           <Accordion.Button
             data-testid="accordion-button"
-            leadingIcon={
+            leadingContent={
               <NumberIcon
                 aria-label="Numero uno"
                 number={1}
@@ -121,10 +125,10 @@ export const WithLeadingNumberIcon: Story = {
             </Text>
           </Accordion.Panel>
         </Accordion.Row>
-        <Accordion.Row hasLeadingIcon>
+        <Accordion.Row hasLeadingContent>
           <Accordion.Button
             data-testid="accordion-button"
-            leadingIcon={
+            leadingContent={
               <NumberIcon
                 aria-label="Numero uno"
                 number={1}
@@ -143,10 +147,10 @@ export const WithLeadingNumberIcon: Story = {
             </Text>
           </Accordion.Panel>
         </Accordion.Row>
-        <Accordion.Row hasLeadingIcon>
+        <Accordion.Row hasLeadingContent>
           <Accordion.Button
             data-testid="accordion-button"
-            leadingIcon={
+            leadingContent={
               <NumberIcon
                 aria-label="Numero uno"
                 number={1}
@@ -195,10 +199,10 @@ export const HasLeadingIcon: Story = {
   args: {
     ...Default.args,
     children: (
-      <Accordion.Row hasLeadingIcon>
+      <Accordion.Row hasLeadingContent>
         <Accordion.Button
           data-testid="accordion-button"
-          leadingIcon={
+          leadingContent={
             <Icon name="person-encircled" purpose="decorative" size="24px" />
           }
           subTitle="Quam lacus maecenas nibh malesuada."
@@ -278,4 +282,71 @@ export const WithLargeHeader: Story = {
       </Accordion.Row>
     ),
   },
+};
+
+/**
+ * Both content slots on `Accordion.Button` take arbitrary content, not only an icon name.
+ * The blocks below stand in for whatever you supply, flanking the title.
+ *
+ * The expand/collapse indicator is not one of them. It marks the row as expandable, which
+ * is a semantic role, so it is set app-wide through `IconProvider` rather than per row.
+ */
+export const WithFpoContentSlots: Story = {
+  args: {
+    children: (
+      <>
+        <Accordion.Row hasLeadingContent>
+          <Accordion.Button
+            leadingContent={<FpoBlock size={24} />}
+            title="Leading content"
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              `leadingContent` sits before the title, in the space reserved by
+              `hasLeadingContent` on the row.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row>
+          <Accordion.Button
+            title="Trailing content"
+            trailingContent={<FpoBlock size={24} />}
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              `trailingContent` sits after the title and before the indicator.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+        <Accordion.Row defaultOpen hasLeadingContent>
+          <Accordion.Button
+            leadingContent={<FpoBlock size={24} />}
+            title="Both at once"
+            trailingContent={<FpoBlock size={24} />}
+          />
+          <Accordion.Panel>
+            <Text preset="body-md">
+              Shown open, to check the slots still line up once the indicator
+              has rotated.
+            </Text>
+          </Accordion.Panel>
+        </Accordion.Row>
+      </>
+    ),
+  },
+};
+
+/**
+ * The expand indicator is not a prop on the row. It marks the row as expandable, which is a
+ * role rather than a decoration, so it is set once for the whole app through `IconProvider`
+ * and every expandable thing changes with it.
+ *
+ * Here it becomes a doubled chevron. It still rotates when the row opens.
+ */
+export const WithProvidedIcons: Story = {
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

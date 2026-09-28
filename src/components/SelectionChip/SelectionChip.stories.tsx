@@ -1,7 +1,10 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
-import type React from 'react';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
+import React from 'react';
 
 import { SelectionChip } from './SelectionChip';
+import FpoBlock from '../../storyUtils/FpoBlock';
 
 export default {
   title: 'Components/SelectionChip',
@@ -12,7 +15,7 @@ export default {
     },
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:1.1'],
+  tags: ['autodocs', 'version:2.0.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof SelectionChip>;
@@ -40,7 +43,7 @@ export const Selected: Story = {
 export const WithIcon: Story = {
   args: {
     ...Default.args,
-    leadingIcon: 'add',
+    leadingContent: 'add',
   },
 };
 
@@ -83,5 +86,17 @@ export const UncontrolledChecked: Story = {
   args: {
     ...WithIcon.args,
     defaultChecked: true,
+  },
+};
+
+/**
+ * The leading slot also takes arbitrary content, for cases an EDS icon does not cover.
+ * The block below stands in for whatever you supply, so the slot itself is the subject
+ * rather than the component that happened to be picked.
+ */
+export const WithLeadingContent: Story = {
+  args: {
+    ...Default.args,
+    leadingContent: <FpoBlock size={14} />,
   },
 };

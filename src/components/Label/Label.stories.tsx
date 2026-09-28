@@ -1,4 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 
 import { Label } from './Label';
@@ -36,7 +38,7 @@ export const LabelAfter: StoryObj<Args> = {
   args: {
     text: 'Label',
     labelAfter: (
-      <Tooltip text="Test">
+      <Tooltip content="Test">
         <span>*</span>
       </Tooltip>
     ),

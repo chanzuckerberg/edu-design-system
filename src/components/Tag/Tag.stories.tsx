@@ -1,6 +1,9 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 import { Tag } from './Tag';
+import FpoBlock from '../../storyUtils/FpoBlock';
 
 export default {
   title: 'Components/Tag',
@@ -32,7 +35,7 @@ export default {
       },
     },
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Tag>;
@@ -40,7 +43,7 @@ type Story = StoryObj<Args>;
 
 export const Default: Story = {
   render: (args) => (
-    <div className="flex gap-spacing-size-2">
+    <div className="gap-spacing-size-2 flex">
       <Tag {...args} status="informational" />
       <Tag {...args} status="favorable" />
       <Tag {...args} status="warning" />
@@ -65,5 +68,17 @@ export const LowEmphasisInformational: Story = {
     label: 'API Docs',
     emphasis: 'low',
     status: 'informational',
+  },
+};
+
+/**
+ * The leading slot takes arbitrary content, not only an EDS icon name. The block below
+ * stands in for whatever you supply, so the slot itself is the subject rather than the icon
+ * that happened to be picked.
+ */
+export const WithFpoIconContent: Story = {
+  ...Default,
+  args: {
+    icon: <FpoBlock size={16} />,
   },
 };

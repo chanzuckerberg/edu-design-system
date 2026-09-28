@@ -1,10 +1,31 @@
 import { SyntaxKind } from 'ts-morph';
 import type {
+  JsxAttribute,
   JsxOpeningElement,
   JsxSelfClosingElement,
   SourceFile,
 } from 'ts-morph';
 import { isDesignSystemImport } from '../helpers';
+
+/**
+ * Decides whether a conditional edit goes ahead.
+ *
+ * `hasProp` answers for the element being edited, so an edit can depend on its siblings, as
+ * when two props that used to overlap have to collapse into one.
+ *
+ * `followsSpread` says whether a spread (`{...props}`) comes before the prop. A spread's
+ * contents can't be read here, and a prop written after one overrides whatever it carried, so
+ * an edit that would change which of the two wins can decline rather than guess.
+ */
+type EditCallback = ({
+  currentPropValue,
+  followsSpread,
+  hasProp,
+}: {
+  currentPropValue: string;
+  followsSpread: boolean;
+  hasProp: (propName: string) => boolean;
+}) => boolean;
 
 type Edit =
   | {
@@ -16,22 +37,14 @@ type Edit =
       type: 'remove';
       propName: string;
       /** Only performs edit if the callback returns truthy */
-      callback?: ({
-        currentPropValue,
-      }: {
-        currentPropValue: string;
-      }) => boolean;
+      callback?: EditCallback;
     }
   | {
       type: 'update_name';
       oldPropName: string;
       newPropName: string;
       /** Only performs edit if the callback returns truthy */
-      callback?: ({
-        currentPropValue,
-      }: {
-        currentPropValue: string;
-      }) => boolean;
+      callback?: EditCallback;
     }
   | {
       type: 'update_value';
@@ -40,20 +53,56 @@ type Edit =
       newPropValue: string;
     };
 
+/**
+ * The string a prop was given, for the callbacks that decide an edit by value.
+ *
+ * Reads both `prop="value"` and `prop={'value'}`, which mean the same thing and which
+ * consumers write interchangeably. Only those two: the expression has to *be* a string
+ * literal, not merely contain one, so `prop={cond ? 'a' : 'b'}` reports nothing rather than
+ * matching on a branch. Callbacks gate destructive edits, and reporting a value out of a
+ * larger expression would let one remove the whole attribute.
+ *
+ * Anything else — an identifier, a call, JSX — reports the empty string, so a callback
+ * matching on a value leaves it alone.
+ */
+function getStringLiteralValue(
+  initializer: ReturnType<JsxAttribute['getInitializer']>,
+) {
+  const literal =
+    initializer?.asKind(SyntaxKind.StringLiteral) ??
+    initializer
+      ?.asKind(SyntaxKind.JsxExpression)
+      ?.getExpression()
+      ?.asKind(SyntaxKind.StringLiteral);
+
+  return literal?.getLiteralValue() ?? '';
+}
+
+/**
+ * The arguments a conditional edit's callback decides on, for one prop on one element.
+ */
+function getCallbackArgs(
+  element: JsxOpeningElement | JsxSelfClosingElement,
+  attribute: JsxAttribute,
+) {
+  const attributes = element.getAttributes();
+  return {
+    currentPropValue: getStringLiteralValue(attribute.getInitializer()),
+    followsSpread: attributes
+      .slice(0, attributes.indexOf(attribute))
+      .some((sibling) => sibling.isKind(SyntaxKind.JsxSpreadAttribute)),
+    hasProp: (propName: string) => element.getAttribute(propName) !== undefined,
+  };
+}
+
 function removeProp(
   element: JsxOpeningElement | JsxSelfClosingElement,
   edit: Extract<Edit, { type: 'remove' }>,
 ) {
   const attribute = element.getAttribute(edit.propName);
   if (attribute && 'getNameNode' in attribute) {
-    const initializer = attribute.getInitializer();
     const performEdit =
-      !edit.callback ||
-      edit.callback({
-        currentPropValue:
-          initializer?.asKind(SyntaxKind.StringLiteral)?.getLiteralValue() ||
-          '',
-      });
+      !edit.callback || edit.callback(getCallbackArgs(element, attribute));
 
     if (performEdit) {
       attribute.remove();
@@ -67,14 +116,8 @@ function updatePropName(
 ) {
   const attribute = element.getAttribute(edit.oldPropName);
   if (attribute && 'getNameNode' in attribute) {
-    const initializer = attribute.getInitializer();
     const performEdit =
-      !edit.callback ||
-      edit.callback({
-        currentPropValue:
-          initializer?.asKind(SyntaxKind.StringLiteral)?.getLiteralValue() ||
-          '',
-      });
+      !edit.callback || edit.callback(getCallbackArgs(element, attribute));
 
     if (performEdit) {
       attribute.setName(edit.newPropName);
@@ -108,6 +151,24 @@ function updatePropValue(
   }
 }
 
+/**
+ * The imported identifier a component name hangs off of. `DataTable.DataCell` is
+ * reached through the `DataTable` import, and `Button` through its own.
+ */
+function getRootName(componentName: string) {
+  return componentName.split('.')[0];
+}
+
+/**
+ * The tag a component is written as in one file, which is not always the name EDS exports it
+ * under. An import can be aliased, and a subcomponent hangs off whatever its root was renamed
+ * to, so `DataTable.DataCell` imported as `DT` is written `<DT.DataCell>`.
+ */
+function getLocalTagName(componentName: string, localRootName: string) {
+  const [, ...subcomponent] = componentName.split('.');
+  return [localRootName, ...subcomponent].join('.');
+}
+
 export type Change = {
   componentName: string;
   edits: Edit[];
@@ -129,18 +190,35 @@ export default function transform({ file, changes }: TransformOptions) {
 
   // Only apply changes to EDS Imported components because EDS consumers may have
   // their own components with the same names as our components.
-  const changesToApply: Change[] = [];
+  //
+  // A change can name a subcomponent, as in `DataTable.DataCell`. Only the root of
+  // that name is imported, so match on the root and let the tag name check below
+  // pick the specific subcomponent.
+  //
+  // The import carries both names: `getName()` is always what EDS exports, which is what a
+  // change names, while the alias is what this file writes its tags as. Match the change on
+  // the former and remember the latter, so `import { Modal as EdsModal }` still edits
+  // `<EdsModal>`.
+  const changesToApply: { change: Change; localTagName: string }[] = [];
   importDeclarations.forEach((importDeclaration) => {
     const namedImports = importDeclaration.getNamedImports();
     namedImports.forEach((namedImport) => {
-      const change = changes.find(
-        (change) =>
-          change.componentName.toLowerCase() ===
-          namedImport.getName().toLowerCase(),
-      );
-      if (change) {
-        changesToApply.push(change);
-      }
+      const localRootName = (
+        namedImport.getAliasNode() ?? namedImport.getNameNode()
+      ).getText();
+
+      changes
+        .filter(
+          (change) =>
+            getRootName(change.componentName).toLowerCase() ===
+            namedImport.getName().toLowerCase(),
+        )
+        .forEach((change) => {
+          changesToApply.push({
+            change,
+            localTagName: getLocalTagName(change.componentName, localRootName),
+          });
+        });
     });
   });
 
@@ -151,9 +229,8 @@ export default function transform({ file, changes }: TransformOptions) {
 
   [...jsxElements, ...jsxSelfClosingElements].forEach((element) => {
     const tagName = element.getTagNameNode().getText();
-    for (const change of changesToApply) {
-      const isChangeable =
-        change.componentName.toLowerCase() === tagName.toLowerCase();
+    for (const { change, localTagName } of changesToApply) {
+      const isChangeable = localTagName.toLowerCase() === tagName.toLowerCase();
       if (!isChangeable) {
         continue;
       }

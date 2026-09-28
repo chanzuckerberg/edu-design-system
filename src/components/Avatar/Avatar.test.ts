@@ -1,5 +1,8 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { getInitials } from './Avatar';
+import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { describe, it, expect } from 'vitest';
+import { Avatar, getInitials } from './Avatar';
 import * as stories from './Avatar.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
 
@@ -34,5 +37,11 @@ describe('<Avatar />', () => {
         expect(getInitials(givenName)).toEqual(expectedInitials);
       },
     );
+  });
+
+  it('falls back to a question mark when a small avatar has no name to abbreviate', () => {
+    render(React.createElement(Avatar, { size: 'sm', user: { fullName: '' } }));
+
+    expect(screen.getByText('?')).toBeInTheDocument();
   });
 });

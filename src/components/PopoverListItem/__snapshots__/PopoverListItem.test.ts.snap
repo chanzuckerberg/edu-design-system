@@ -1,0 +1,492 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<PopoverListItem /> > Caption story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d _popover-list-item--type-caption_e0596d"
+>
+  <div
+    class="_popover-list-item__no-icon_e0596d"
+  />
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-xs_b3eba3"
+    >
+      Copyright 2005 Logo Ipsum Inc. All rights reserved.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > Default story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 20.3271L10.8963 19.3349C9.23858 17.8311 7.86775 16.5388 6.78375 15.4581C5.69975 14.3773 4.84075 13.4154 4.20675 12.5724C3.57275 11.7296 3.12983 10.9606 2.878 10.2656C2.626 9.57081 2.5 8.86572 2.5 8.15039C2.5 6.73122 2.9785 5.54306 3.9355 4.58589C4.89267 3.62889 6.08083 3.15039 7.5 3.15039C8.373 3.15039 9.198 3.35456 9.975 3.76289C10.752 4.17122 11.427 4.75681 12 5.51964C12.573 4.75681 13.248 4.17122 14.025 3.76289C14.802 3.35456 15.627 3.15039 16.5 3.15039C17.9192 3.15039 19.1073 3.62889 20.0645 4.58589C21.0215 5.54306 21.5 6.73122 21.5 8.15039C21.5 8.86572 21.374 9.57081 21.122 10.2656C20.8702 10.9606 20.4272 11.7296 19.7932 12.5724C19.1592 13.4154 18.3018 14.3773 17.221 15.4581C16.1403 16.5388 14.7679 17.8311 13.1038 19.3349L12 20.3271Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d _popover-list-item--has-sub-label_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Favorite
+    </div>
+    <div
+      class="_text_b3eba3 _text--body-sm_b3eba3 _popover-list-item__sub-label_e0596d"
+    >
+      Save posts for later
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > DefaultWithTrailingContent story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12 20.3271L10.8963 19.3349C9.23858 17.8311 7.86775 16.5388 6.78375 15.4581C5.69975 14.3773 4.84075 13.4154 4.20675 12.5724C3.57275 11.7296 3.12983 10.9606 2.878 10.2656C2.626 9.57081 2.5 8.86572 2.5 8.15039C2.5 6.73122 2.9785 5.54306 3.9355 4.58589C4.89267 3.62889 6.08083 3.15039 7.5 3.15039C8.373 3.15039 9.198 3.35456 9.975 3.76289C10.752 4.17122 11.427 4.75681 12 5.51964C12.573 4.75681 13.248 4.17122 14.025 3.76289C14.802 3.35456 15.627 3.15039 16.5 3.15039C17.9192 3.15039 19.1073 3.62889 20.0645 4.58589C21.0215 5.54306 21.5 6.73122 21.5 8.15039C21.5 8.86572 21.374 9.57081 21.122 10.2656C20.8702 10.9606 20.4272 11.7296 19.7932 12.5724C19.1592 13.4154 18.3018 14.3773 17.221 15.4581C16.1403 16.5388 14.7679 17.8311 13.1038 19.3349L12 20.3271Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d _popover-list-item--has-sub-label_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Favorite
+    </div>
+    <div
+      class="_text_b3eba3 _text--body-sm_b3eba3 _popover-list-item__sub-label_e0596d"
+    >
+      Save posts for later
+    </div>
+  </div>
+  <div
+    class="_popover-list-item__trailing-content_e0596d"
+  >
+    <span
+      class="_text_b3eba3 _text--body-xs_b3eba3"
+    >
+      5
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > Destructive story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d _popover-list-item--destructive-action_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.30775 20.4997C6.80908 20.4997 6.38308 20.3232 6.02975 19.97C5.67658 19.6167 5.5 19.1907 5.5 18.692V5.99973H4.5V4.49973H9V3.61523H15V4.49973H19.5V5.99973H18.5V18.692C18.5 19.1972 18.325 19.6247 17.975 19.9747C17.625 20.3247 17.1974 20.4997 16.6923 20.4997H7.30775ZM17 5.99973H7V18.692C7 18.7818 7.02883 18.8556 7.0865 18.9132C7.14417 18.9709 7.21792 18.9997 7.30775 18.9997H16.6923C16.7693 18.9997 16.8398 18.9677 16.9038 18.9035C16.9679 18.8395 17 18.769 17 18.692V5.99973ZM9.404 16.9997H10.9037V7.99973H9.404V16.9997ZM13.0962 16.9997H14.596V7.99973H13.0962V16.9997Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Delete
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > Disabled story renders snapshot 1`] = `
+<div
+  aria-disabled="true"
+  class="_popover-list-item_e0596d _popover-list-item--disabled_e0596d _popover-list-item--type-listitem_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16 8.30762V5.30762H7.99995V8.30762H6.49995V3.80762H17.5V8.30762H16ZM17.8077 12.3076C18.091 12.3076 18.3285 12.2118 18.5202 12.0201C18.7119 11.8285 18.8077 11.591 18.8077 11.3076C18.8077 11.0243 18.7119 10.7868 18.5202 10.5951C18.3285 10.4035 18.091 10.3076 17.8077 10.3076C17.5244 10.3076 17.2869 10.4035 17.0952 10.5951C16.9035 10.7868 16.8077 11.0243 16.8077 11.3076C16.8077 11.591 16.9035 11.8285 17.0952 12.0201C17.2869 12.2118 17.5244 12.3076 17.8077 12.3076ZM16 18.9999V14.7306H7.99995V18.9999H16ZM17.5 20.4999H6.49995V16.4999H2.78845V10.8076C2.78845 10.0993 3.03045 9.50553 3.51445 9.02637C3.99845 8.5472 4.58979 8.30762 5.28845 8.30762H18.7115C19.4198 8.30762 20.0135 8.5472 20.4927 9.02637C20.9719 9.50553 21.2115 10.0993 21.2115 10.8076V16.4999H17.5V20.4999ZM19.7115 14.9999V10.8076C19.7115 10.5243 19.6156 10.2868 19.424 10.0951C19.2323 9.90345 18.9948 9.80762 18.7115 9.80762H5.28845C5.00512 9.80762 4.76762 9.90345 4.57595 10.0951C4.38429 10.2868 4.28845 10.5243 4.28845 10.8076V14.9999H6.49995V13.2306H17.5V14.9999H19.7115Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Print
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > DisabledAndDestructive story renders snapshot 1`] = `
+<div
+  aria-disabled="true"
+  class="_popover-list-item_e0596d _popover-list-item--disabled_e0596d _popover-list-item--destructive-action_e0596d _popover-list-item--type-listitem_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.30775 20.4997C6.80908 20.4997 6.38308 20.3232 6.02975 19.97C5.67658 19.6167 5.5 19.1907 5.5 18.692V5.99973H4.5V4.49973H9V3.61523H15V4.49973H19.5V5.99973H18.5V18.692C18.5 19.1972 18.325 19.6247 17.975 19.9747C17.625 20.3247 17.1974 20.4997 16.6923 20.4997H7.30775ZM17 5.99973H7V18.692C7 18.7818 7.02883 18.8556 7.0865 18.9132C7.14417 18.9709 7.21792 18.9997 7.30775 18.9997H16.6923C16.7693 18.9997 16.8398 18.9677 16.9038 18.9035C16.9679 18.8395 17 18.769 17 18.692V5.99973ZM9.404 16.9997H10.9037V7.99973H9.404V16.9997ZM13.0962 16.9997H14.596V7.99973H13.0962V16.9997Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d _popover-list-item--has-sub-label_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Delete
+    </div>
+    <div
+      class="_text_b3eba3 _text--body-sm_b3eba3 _popover-list-item__sub-label_e0596d"
+    >
+      Permanently remove this item
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > Label story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d _popover-list-item--type-label_e0596d"
+>
+  <div
+    class="_popover-list-item__no-icon_e0596d"
+  />
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--overline-sm_b3eba3 _popover-list-item__label_e0596d"
+    >
+      Account
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > Separator story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d _popover-list-item--type-separator_e0596d"
+>
+  <div
+    class="_popover-list-item__no-icon_e0596d"
+  />
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    />
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > WithFpoContentSlots story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    >
+      FPO
+    </span>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Add comment
+    </div>
+  </div>
+  <div
+    class="_popover-list-item__trailing-content_e0596d"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    >
+      FPO
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > WithKeyboardShortcut story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.30775 21.5C6.80258 21.5 6.375 21.325 6.025 20.975C5.675 20.625 5.5 20.1974 5.5 19.6923V4.30775C5.5 3.80258 5.675 3.375 6.025 3.025C6.375 2.675 6.80258 2.5 7.30775 2.5H13.0788C13.3198 2.5 13.5515 2.54517 13.774 2.6355C13.9965 2.726 14.1898 2.8565 14.3538 3.027L17.9827 6.7135C18.1467 6.87767 18.274 7.06775 18.3645 7.28375C18.4548 7.49975 18.5 7.72825 18.5 7.96925V19.6923C18.5 20.1974 18.325 20.625 17.975 20.975C17.625 21.325 17.1974 21.5 16.6923 21.5H7.30775ZM11.25 4H7.30775C7.21792 4 7.14417 4.03042 7.0865 4.09125C7.02883 4.15225 7 4.22442 7 4.30775V19.6923C7 19.7821 7.02883 19.8558 7.0865 19.9135C7.14417 19.9712 7.21792 20 7.30775 20H16.6923C16.7756 20 16.8477 19.9712 16.9087 19.9135C16.9696 19.8558 17 19.7821 17 19.6923V9.8365H13.9135C13.1763 9.8365 12.5481 9.57367 12.0287 9.048C11.5096 8.52233 11.25 7.88458 11.25 7.13475V4ZM12.75 4V7.13475C12.75 7.46925 12.8602 7.75317 13.0807 7.9865C13.3012 8.21983 13.5788 8.3365 13.9135 8.3365H17V7.85375L13.2135 4H12.75Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Add comment
+    </div>
+  </div>
+  <div
+    class="_popover-list-item__trailing-content_e0596d"
+  >
+    <span
+      class="_text_b3eba3 _text--body-xs_b3eba3"
+    >
+      ⌘K
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > WithLeadingAndTrailingContent story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.30775 21.5C6.80258 21.5 6.375 21.325 6.025 20.975C5.675 20.625 5.5 20.1974 5.5 19.6923V4.30775C5.5 3.80258 5.675 3.375 6.025 3.025C6.375 2.675 6.80258 2.5 7.30775 2.5H13.0788C13.3198 2.5 13.5515 2.54517 13.774 2.6355C13.9965 2.726 14.1898 2.8565 14.3538 3.027L17.9827 6.7135C18.1467 6.87767 18.274 7.06775 18.3645 7.28375C18.4548 7.49975 18.5 7.72825 18.5 7.96925V19.6923C18.5 20.1974 18.325 20.625 17.975 20.975C17.625 21.325 17.1974 21.5 16.6923 21.5H7.30775ZM11.25 4H7.30775C7.21792 4 7.14417 4.03042 7.0865 4.09125C7.02883 4.15225 7 4.22442 7 4.30775V19.6923C7 19.7821 7.02883 19.8558 7.0865 19.9135C7.14417 19.9712 7.21792 20 7.30775 20H16.6923C16.7756 20 16.8477 19.9712 16.9087 19.9135C16.9696 19.8558 17 19.7821 17 19.6923V9.8365H13.9135C13.1763 9.8365 12.5481 9.57367 12.0287 9.048C11.5096 8.52233 11.25 7.88458 11.25 7.13475V4ZM12.75 4V7.13475C12.75 7.46925 12.8602 7.75317 13.0807 7.9865C13.3012 8.21983 13.5788 8.3365 13.9135 8.3365H17V7.85375L13.2135 4H12.75Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Add comment
+    </div>
+  </div>
+  <div
+    class="_popover-list-item__trailing-content_e0596d"
+  >
+    <span
+      class="_text_b3eba3 _text--body-xs_b3eba3"
+    >
+      5
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > WithLeadingAndTrailingIcons story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.30775 21.5C6.80258 21.5 6.375 21.325 6.025 20.975C5.675 20.625 5.5 20.1974 5.5 19.6923V4.30775C5.5 3.80258 5.675 3.375 6.025 3.025C6.375 2.675 6.80258 2.5 7.30775 2.5H13.0788C13.3198 2.5 13.5515 2.54517 13.774 2.6355C13.9965 2.726 14.1898 2.8565 14.3538 3.027L17.9827 6.7135C18.1467 6.87767 18.274 7.06775 18.3645 7.28375C18.4548 7.49975 18.5 7.72825 18.5 7.96925V19.6923C18.5 20.1974 18.325 20.625 17.975 20.975C17.625 21.325 17.1974 21.5 16.6923 21.5H7.30775ZM11.25 4H7.30775C7.21792 4 7.14417 4.03042 7.0865 4.09125C7.02883 4.15225 7 4.22442 7 4.30775V19.6923C7 19.7821 7.02883 19.8558 7.0865 19.9135C7.14417 19.9712 7.21792 20 7.30775 20H16.6923C16.7756 20 16.8477 19.9712 16.9087 19.9135C16.9696 19.8558 17 19.7821 17 19.6923V9.8365H13.9135C13.1763 9.8365 12.5481 9.57367 12.0287 9.048C11.5096 8.52233 11.25 7.88458 11.25 7.13475V4ZM12.75 4V7.13475C12.75 7.46925 12.8602 7.75317 13.0807 7.9865C13.3012 8.21983 13.5788 8.3365 13.9135 8.3365H17V7.85375L13.2135 4H12.75Z"
+      />
+    </svg>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Add comment
+    </div>
+  </div>
+  <div
+    class="_popover-list-item__trailing-content_e0596d"
+  >
+    <svg
+      aria-hidden="true"
+      class="_icon_779da8"
+      fill="currentColor"
+      height="24px"
+      style="--icon-size: 24px;"
+      viewBox="0 0 24 24"
+      width="24px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.54995 17.6534L4.21545 12.3189L5.28445 11.2496L9.54995 15.5151L18.7155 6.34961L19.7845 7.41886L9.54995 17.6534Z"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > WithLeadingAvatar story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d"
+>
+  <div
+    class="_popover-list-item__leading-content_e0596d"
+  >
+    <div
+      aria-label="Avatar for unknown user "
+      class="_avatar_814665 _avatar--sm_814665 _avatar--icon_814665 _avatar--color-scheme-4_814665"
+      role="img"
+    >
+      <svg
+        aria-hidden="true"
+        class="_icon_779da8"
+        fill="currentColor"
+        height="16px"
+        style="--icon-size: 16px;"
+        viewBox="0 0 24 24"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.16725 15.6274C4.86475 15.0646 4.63625 14.4835 4.48175 13.8842C4.32725 13.2847 4.25 12.6734 4.25 12.0504C4.25 9.8876 5.00258 8.04693 6.50775 6.52843C8.01292 5.00976 9.84367 4.25043 12 4.25043H12.7808L10.9308 2.40043L11.9845 1.34668L15.6385 5.00043L11.9845 8.65418L10.9308 7.60043L12.7808 5.75043H12C10.2628 5.75043 8.78683 6.36193 7.572 7.58493C6.35733 8.8081 5.75 10.2966 5.75 12.0504C5.75 12.4646 5.79517 12.8783 5.8855 13.2917C5.976 13.7052 6.11158 14.1088 6.29225 14.5024L5.16725 15.6274ZM12.0155 22.6542L8.3615 19.0004L12.0155 15.3467L13.0693 16.4004L11.2192 18.2504H12C13.7372 18.2504 15.2132 17.6389 16.428 16.4159C17.6427 15.1928 18.25 13.7043 18.25 11.9504C18.25 11.5363 18.2048 11.1225 18.1145 10.7092C18.024 10.2957 17.8884 9.8921 17.7078 9.49843L18.8328 8.37343C19.1353 8.93626 19.3637 9.51735 19.5182 10.1167C19.6727 10.7162 19.75 11.3274 19.75 11.9504C19.75 14.1133 18.9974 15.9539 17.4923 17.4724C15.9871 18.9911 14.1563 19.7504 12 19.7504H11.2192L13.0693 21.6004L12.0155 22.6542Z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    class="_popover-list-item__menu-labels_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Switch account
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PopoverListItem /> > WithNoIcon story renders snapshot 1`] = `
+<div
+  class="_popover-list-item_e0596d _popover-list-item--type-listitem_e0596d"
+>
+  <div
+    class="_popover-list-item__no-icon_e0596d"
+  />
+  <div
+    class="_popover-list-item__menu-labels_e0596d _popover-list-item--has-sub-label_e0596d"
+  >
+    <div
+      class="_text_b3eba3 _text--body-md_b3eba3"
+    >
+      Favorite
+    </div>
+    <div
+      class="_text_b3eba3 _text--body-sm_b3eba3 _popover-list-item__sub-label_e0596d"
+    >
+      Save posts for later
+    </div>
+  </div>
+</div>
+`;

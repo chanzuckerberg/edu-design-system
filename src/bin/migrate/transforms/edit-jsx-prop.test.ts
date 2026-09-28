@@ -1,5 +1,6 @@
 import { dedent } from 'ts-dedent';
 
+import { describe, expect, it } from 'vitest';
 import transform from './edit-jsx-prop';
 import { createTestSourceFile } from '../helpers';
 
@@ -407,6 +408,139 @@ describe('transform', () => {
     `);
   });
 
+  it('lets the callback check for other props on the element', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" size="lg" />
+            <Icon size="lg" />
+          </>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'size',
+              callback: ({ hasProp }) => hasProp('text'),
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" />
+            <Icon size="lg" />
+          </>
+        )
+      }
+    `);
+  });
+
+  it('lets an update_name callback check for other props on the element', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" size="lg" />
+            <Icon size="lg" />
+          </>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'size',
+              newPropName: 'scale',
+              callback: ({ hasProp }) => !hasProp('text'),
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <>
+            <Icon text="add item to cart" size="lg" />
+            <Icon scale="lg" />
+          </>
+        )
+      }
+    `);
+  });
+
+  it('tells the callback whether a spread comes before the prop', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <>
+            <Icon {...props} size="lg" />
+            <Icon size="lg" {...props} />
+          </>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'size',
+              callback: ({ followsSpread }) => !followsSpread,
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component(props) {
+        return (
+          <>
+            <Icon {...props} size="lg" />
+            <Icon {...props} />
+          </>
+        )
+      }
+    `);
+  });
+
   it('edits multiple props on the same component', () => {
     const sourceFileText = dedent`
     import {Button, ButtonGroup} from '@chanzuckerberg/eds';
@@ -492,6 +626,215 @@ describe('transform', () => {
     `);
   });
 
+  it('edits props on a subcomponent reached through its root import', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DataTable.DataCell leadingIcon="person-add">Ada</DataTable.DataCell>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'DataTable.DataCell',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'leadingIcon',
+              newPropName: 'leadingContent',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DataTable.DataCell leadingContent="person-add">Ada</DataTable.DataCell>
+        )
+      }
+    `);
+  });
+
+  it('edits a component imported under an alias', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {Modal as EdsModal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <EdsModal height="auto">Body</EdsModal>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Modal',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'height',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {Modal as EdsModal} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <EdsModal>Body</EdsModal>
+        )
+      }
+    `);
+  });
+
+  it('edits a subcomponent hanging off an aliased root import', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {DataTable as DT} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DT.DataCell leadingIcon="person-add">Ada</DT.DataCell>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'DataTable.DataCell',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'leadingIcon',
+              newPropName: 'leadingContent',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {DataTable as DT} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DT.DataCell leadingContent="person-add">Ada</DT.DataCell>
+        )
+      }
+    `);
+  });
+
+  it('leaves the name an alias displaced alone', () => {
+    const sourceFileText = dedent`
+      import {Modal as EdsModal} from '@chanzuckerberg/eds';
+      import Modal from '~/components/Modal';
+
+      export default function Component() {
+        return (
+          <Modal height="auto">Body</Modal>
+        )
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Modal',
+          edits: [
+            {
+              type: 'remove',
+              propName: 'height',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
+  });
+
+  it('applies every change that shares one root import', () => {
+    const sourceFile = createTestSourceFile(dedent`
+      import {DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DataTable subcaption="By team">
+            <DataTable.HeaderCell leadingIcon="person-add">Name</DataTable.HeaderCell>
+            <DataTable.DataCell leadingIcon="person-add">Ada</DataTable.DataCell>
+          </DataTable>
+        )
+      }
+    `);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'DataTable',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'subcaption',
+              newPropName: 'subCaption',
+            },
+          ],
+        },
+        {
+          componentName: 'DataTable.HeaderCell',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'leadingIcon',
+              newPropName: 'leadingContent',
+            },
+          ],
+        },
+        {
+          componentName: 'DataTable.DataCell',
+          edits: [
+            {
+              type: 'update_name',
+              oldPropName: 'leadingIcon',
+              newPropName: 'leadingContent',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(dedent`
+      import {DataTable} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return (
+          <DataTable subCaption="By team">
+            <DataTable.HeaderCell leadingContent="person-add">Name</DataTable.HeaderCell>
+            <DataTable.DataCell leadingContent="person-add">Ada</DataTable.DataCell>
+          </DataTable>
+        )
+      }
+    `);
+  });
+
   it('does not modify props from Non-EDS components', () => {
     const sourceFileText = dedent`
     import {Link} from '~/components/Link';
@@ -529,5 +872,42 @@ describe('transform', () => {
         )
       }
     `);
+  });
+
+  it.each([
+    ['is not set', '<Icon purpose="informative" title="add item to cart" />'],
+    [
+      'is set without a value',
+      '<Icon name purpose="informative" title="add item to cart" />',
+    ],
+  ])('leaves the element alone when the prop %s', (_label, element) => {
+    const sourceFileText = dedent`
+      import {Icon} from '@chanzuckerberg/eds';
+
+      export default function Component() {
+        return ${element};
+      }
+    `;
+
+    const sourceFile = createTestSourceFile(sourceFileText);
+
+    transform({
+      file: sourceFile,
+      changes: [
+        {
+          componentName: 'Icon',
+          edits: [
+            {
+              type: 'update_value',
+              propName: 'name',
+              oldPropValue: 'add-circle',
+              newPropValue: 'add-encircled',
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(sourceFile.getText()).toEqual(sourceFileText);
   });
 });

@@ -1,8 +1,9 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 import { assertEdsUsage } from '../../util/logging';
+import type { IconOrContent } from '../../util/utility-types';
 import type { Size } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import LoadingIndicator from '../LoadingIndicator';
 import Text from '../Text';
 
@@ -10,7 +11,10 @@ import styles from './Button.module.css';
 
 type ButtonHTMLElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
+export type ButtonProps<ExtendedElement = unknown> = Omit<
+  ButtonHTMLElementProps,
+  'style'
+> & {
   // Component API
   /**
    * Component used to render the element. Meant to support interaction with framework navigation libraries.
@@ -22,6 +26,14 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
    * `Button` contents or label.
    */
   children?: string;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--button__bg`
+   * - `--button__border`
+   * - `--button__fg`
+   */
+  style?: ButtonCSSProperties;
   /**
    * Determine the behavior of the button upon click:
    * - **button** `Button` is a clickable button with no default behavior
@@ -49,9 +61,18 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
   context?: 'default' | 'standalone';
 
   /**
-   * Icon from the set of defined EDS icon set, when `iconLayout` is used.
+   * Content for the icon slot, used when `iconLayout` is set. Takes an EDS icon name, or
+   * any content to render in its place, sized to match `size`.
+   *
+   * Required whenever `iconLayout` is anything but `"none"`, and has no default: the layout
+   * reserves space for an icon, so a missing one leaves a gap rather than falling back to
+   * some arbitrary glyph. EDS warns when the two disagree.
+   *
+   * Custom content is rendered as-is, so it carries its own accessible treatment. With
+   * `iconLayout="icon-only"` the button still takes its accessible name from `aria-label`,
+   * the same as it does for an icon name.
    */
-  icon?: IconName;
+  icon?: IconOrContent;
 
   /**
    * Allows configuation of the icon's positioning within `Button`.
@@ -85,6 +106,23 @@ export type ButtonProps<ExtendedElement = unknown> = ButtonHTMLElementProps & {
    */
   isLoading?: boolean;
 } & ExtendedElement;
+
+export interface ButtonCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--button__bg'?: string;
+
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--button__border'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--button__fg'?: string;
+}
 
 /**
  * ## Usage
@@ -125,7 +163,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       className,
       context,
-      icon = 'add-encircled',
+      icon,
       iconLayout = 'none',
       isDisabled,
       isFullWidth,
@@ -171,6 +209,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       'Specifying content for "children" when using icon-only layout is not required and can be removed.',
     );
 
+    assertEdsUsage(
+      [iconLayout !== 'none' && !hasSlotContent(icon)],
+      `Button has iconLayout="${iconLayout}" and no "icon" to put in it. The layout reserves space for one, so the button renders a gap where the icon should be — or nothing at all when the layout is "icon-only", since that hides "children" too. Pass an "icon", or leave "iconLayout" unset.`,
+    );
+
     return (
       <Component
         className={componentClassName}
@@ -184,24 +227,24 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className={buttonContentClassName}
           preset={`label-${size}`}
         >
-          {iconLayout === 'icon-only' && (
-            <Icon
-              name={icon}
+          {iconLayout === 'icon-only' && hasSlotContent(icon) && (
+            <IconSlot
+              content={icon}
               purpose="decorative"
               size={size === 'lg' ? '24px' : '16px'}
             />
           )}
-          {iconLayout === 'left' && (
-            <Icon
-              name={icon}
+          {iconLayout === 'left' && hasSlotContent(icon) && (
+            <IconSlot
+              content={icon}
               purpose="decorative"
               size={size === 'lg' ? '24px' : '16px'}
             />
           )}
           {iconLayout !== 'icon-only' && children}
-          {iconLayout === 'right' && (
-            <Icon
-              name={icon}
+          {iconLayout === 'right' && hasSlotContent(icon) && (
+            <IconSlot
+              content={icon}
               purpose="decorative"
               size={size === 'lg' ? '24px' : '16px'}
             />

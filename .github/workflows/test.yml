@@ -26,11 +26,22 @@ jobs:
       - name: Type check 📋
         run: yarn run types
 
+      # Re-enable if running storybook tests in CI
+      # - name: Install Playwright
+      #   run: npx playwright install --with-deps
+
       - name: Run CI Tests ✅
         run: yarn run test:ci
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
           CI: true
+
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/codecov-action@v5
+        with: 
+          report_type: coverage
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   build:
     runs-on: ubuntu-latest
@@ -83,12 +94,9 @@ jobs:
       - name: Build design tokens
         run: yarn build:tokens
       - name: Build Storybook 📚
-        run: yarn build:storybook --webpack-stats-json
-      - name: Serve storybook and run accessibility tests
-        run: |
-          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-          "npx http-server storybook-static --port 6006 --silent" \
-          "npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook"
+        run: yarn build:storybook --stats-json
+      - name: Run tests 🔬
+        run: yarn test:storybook
       - name: Publish to Chromatic 🦄
         run: |
           yarn run chromatic \

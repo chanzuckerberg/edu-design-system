@@ -1,4 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 
 import { PopoverContainer } from './PopoverContainer';
@@ -20,7 +22,7 @@ export default {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.0.1'],
+  tags: ['autodocs', 'version:2.1.0'],
 } as Meta<typeof PopoverContainer>;
 
 /**
@@ -31,12 +33,12 @@ export const Default: StoryObj<typeof PopoverContainer> = {
     children: (
       <>
         <div aria-label="test items" role="group">
-          <PopoverListItem icon="arrow-down">test 1</PopoverListItem>
-          <PopoverListItem icon="arrow-left">test 2</PopoverListItem>
-          <PopoverListItem icon="arrow-up">test 3</PopoverListItem>
+          <PopoverListItem leadingContent="arrow-down">test 1</PopoverListItem>
+          <PopoverListItem leadingContent="arrow-left">test 2</PopoverListItem>
+          <PopoverListItem leadingContent="arrow-up">test 3</PopoverListItem>
         </div>
         <div aria-label="actions" role="group">
-          <PopoverListItem icon="arrow-right" isDestructiveAction>
+          <PopoverListItem isDestructiveAction leadingContent="arrow-right">
             Delete All
           </PopoverListItem>
         </div>

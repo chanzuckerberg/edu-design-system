@@ -1,7 +1,11 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 
 import { InlineNotification } from './InlineNotification';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/InlineNotification',
@@ -17,7 +21,7 @@ export default {
     title: 'Inline notifications lorem ipsum text',
     className: 'w-[384px]',
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof InlineNotification>;
@@ -68,4 +72,21 @@ export const LongText: StoryObj<Args> = {
     title:
       'Long text inline notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
+};
+
+/**
+ * The status icon is the notification's whole signal of severity, so which glyph each status
+ * draws comes from `IconProvider` and is the same here, on a `FieldNote`, and on a toast.
+ *
+ * Here `critical` becomes the outline version of the icon.
+ */
+export const WithProvidedIcons: StoryObj<Args> = {
+  args: {
+    ...Critical.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

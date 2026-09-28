@@ -1,7 +1,8 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
-import { userEvent, within } from '@storybook/testing-library';
-
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
+import { userEvent, within } from 'storybook/test';
 
 import { ScrollWrapper } from './ScrollWrapper';
 
@@ -28,10 +29,10 @@ type Args = React.ComponentProps<typeof ScrollWrapper>;
 export const Default: StoryObj<Args> = {
   args: {},
   render: (args) => (
-    <div className="h-[200px] w-[200px] bg-utility-default-noEmphasis-hover">
+    <div className="bg-utility-default-noEmphasis-hover h-[200px] w-[200px]">
       <ScrollWrapper {...args}>
         <div
-          className="h-[300px] w-[300px] p-spacing-size-3"
+          className="p-spacing-size-3 h-[300px] w-[300px]"
           data-testid="scrollContent"
         ></div>
       </ScrollWrapper>
@@ -90,7 +91,7 @@ export const ContainVertical: StoryObj<Args> = {
     shadowType: 'contain',
   },
   render: (args) => (
-    <div className="h-[200px] w-[200px] bg-utility-default-noEmphasis-hover">
+    <div className="bg-utility-default-noEmphasis-hover h-[200px] w-[200px]">
       <ScrollWrapper {...args}>
         <div className="h-[300px] w-[300px]" data-testid="scrollContent"></div>
       </ScrollWrapper>

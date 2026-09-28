@@ -1,15 +1,15 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<CodeBlock /> CurlExample story renders snapshot 1`] = `
+exports[`<CodeBlock /> > CurlExample story renders snapshot 1`] = `
 <div
-  class="code-block w-[350px]"
+  class="_code-block_961fb8 w-[350px]"
 >
   <pre>
     <div
-      style="color: rgb(58, 58, 55); background: rgb(255, 255, 255); font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
     >
       <code
-        class="code-block__block"
+        class="_code-block__block_961fb8"
         style="white-space: pre-wrap;"
       >
         <span>
@@ -18,7 +18,7 @@ exports[`<CodeBlock /> CurlExample story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             curl
           </span>
@@ -27,7 +27,7 @@ exports[`<CodeBlock /> CurlExample story renders snapshot 1`] = `
           </span>
           <span
             class="token token parameter"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             -X
           </span>
@@ -36,7 +36,7 @@ exports[`<CodeBlock /> CurlExample story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(18, 91, 58);"
+            style="color: #125B3A;"
           >
             'http://api.example.org/v1/testapikey'
           </span>
@@ -45,7 +45,7 @@ exports[`<CodeBlock /> CurlExample story renders snapshot 1`] = `
           </span>
           <span
             class="token token parameter"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             -H
           </span>
@@ -54,7 +54,7 @@ exports[`<CodeBlock /> CurlExample story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(18, 91, 58);"
+            style="color: #125B3A;"
           >
             'apikey: my_key'
           </span>
@@ -63,20 +63,20 @@ exports[`<CodeBlock /> CurlExample story renders snapshot 1`] = `
     </div>
   </pre>
   <div
-    class="code-block__copy"
+    class="_code-block__copy_961fb8"
   >
     <button
       aria-label="Copy this code block"
-      class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-testid="copy-button"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -94,16 +94,16 @@ exports[`<CodeBlock /> CurlExample story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<CodeBlock /> Default story renders snapshot 1`] = `
+exports[`<CodeBlock /> > Default story renders snapshot 1`] = `
 <div
-  class="code-block"
+  class="_code-block_961fb8"
 >
   <pre>
     <div
-      style="color: rgb(58, 58, 55); background: rgb(255, 255, 255); font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
     >
       <code
-        class="code-block__block"
+        class="_code-block__block_961fb8"
         style="white-space: pre-wrap;"
       >
         <span>
@@ -117,22 +117,22 @@ exports[`<CodeBlock /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<CodeBlock /> Python story renders snapshot 1`] = `
+exports[`<CodeBlock /> > Python story renders snapshot 1`] = `
 <div
-  class="code-block"
+  class="_code-block_961fb8"
 >
   <pre>
     <div
-      style="color: rgb(58, 58, 55); background: rgb(255, 255, 255); font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
     >
       <code
-        class="code-block__block"
+        class="_code-block__block_961fb8"
         style="white-space: pre-wrap;"
       >
         <span>
           <span
             class="token token triple-quoted-string"
-            style="color: rgb(18, 91, 58);"
+            style="color: #125B3A;"
           >
             """
 
@@ -140,21 +140,21 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
         </span>
         <span
           class="token token triple-quoted-string"
-          style="color: rgb(18, 91, 58);"
+          style="color: #125B3A;"
         >
           Sorts an array of numbers using the Bubble Sort Algorithm.
 
         </span>
         <span
           class="token token triple-quoted-string"
-          style="color: rgb(18, 91, 58);"
+          style="color: #125B3A;"
         >
           * @param arr - the array of numbers to be sorted.
 
         </span>
         <span
           class="token token triple-quoted-string"
-          style="color: rgb(18, 91, 58);"
+          style="color: #125B3A;"
         >
           * @returns A new sorted array of numbers
 
@@ -162,7 +162,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
         <span>
           <span
             class="token token triple-quoted-string"
-            style="color: rgb(18, 91, 58);"
+            style="color: #125B3A;"
           >
             """
           </span>
@@ -175,7 +175,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           <span />
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             def
           </span>
@@ -184,13 +184,13 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             bubble_sort
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -199,13 +199,13 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -220,7 +220,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -229,13 +229,13 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             len
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -244,7 +244,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -259,7 +259,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             for
           </span>
@@ -268,7 +268,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             in
           </span>
@@ -277,13 +277,13 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             range
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -292,7 +292,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -301,19 +301,19 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -328,7 +328,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             for
           </span>
@@ -337,7 +337,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             in
           </span>
@@ -346,13 +346,13 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             range
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -361,7 +361,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -370,7 +370,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -379,19 +379,19 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -406,7 +406,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             if
           </span>
@@ -415,7 +415,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -424,7 +424,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -433,7 +433,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &gt;
           </span>
@@ -442,7 +442,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -451,7 +451,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -460,19 +460,19 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -487,7 +487,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -496,13 +496,13 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ,
           </span>
@@ -511,7 +511,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -520,7 +520,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -529,13 +529,13 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -544,7 +544,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -553,7 +553,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -562,7 +562,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -571,19 +571,19 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ,
           </span>
@@ -592,7 +592,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -601,7 +601,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -614,7 +614,7 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
           <span />
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             return
           </span>
@@ -630,22 +630,22 @@ exports[`<CodeBlock /> Python story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
+exports[`<CodeBlock /> > TypeScript story renders snapshot 1`] = `
 <div
-  class="code-block"
+  class="_code-block_961fb8"
 >
   <pre>
     <div
-      style="color: rgb(58, 58, 55); background: rgb(255, 255, 255); font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
     >
       <code
-        class="code-block__block"
+        class="_code-block__block_961fb8"
         style="white-space: pre-wrap;"
       >
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             /**
 
@@ -653,7 +653,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
         </span>
         <span
           class="token token doc-comment"
-          style="color: rgb(107, 106, 100); font-style: italic;"
+          style="color: #6B6A64; font-style: italic;"
         >
            * Sorts an array of numbers using the Bubble Sort algorithm.
 
@@ -661,31 +661,31 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              * 
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(77, 99, 203); font-style: italic;"
+            style="color: #4D63CB; font-style: italic;"
           >
             @param
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              
           </span>
           <span
             class="token token doc-comment parameter"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             arr
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              - The array of numbers to be sorted.
 
@@ -694,19 +694,19 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              * 
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(77, 99, 203); font-style: italic;"
+            style="color: #4D63CB; font-style: italic;"
           >
             @returns
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              A new sorted array of numbers.
 
@@ -715,7 +715,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              */
           </span>
@@ -728,7 +728,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           <span />
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             export
           </span>
@@ -737,7 +737,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             function
           </span>
@@ -746,13 +746,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             bubbleSort
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -761,7 +761,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -770,31 +770,31 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             number
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -803,19 +803,19 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             number
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -824,7 +824,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -839,7 +839,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Create a shallow copy to keep the function pure and avoid mutating the input
           </span>
@@ -854,7 +854,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             const
           </span>
@@ -863,7 +863,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -872,13 +872,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ...
           </span>
@@ -887,13 +887,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -908,7 +908,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             const
           </span>
@@ -917,7 +917,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -926,7 +926,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             .
           </span>
@@ -935,7 +935,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -950,7 +950,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             let
           </span>
@@ -959,7 +959,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -968,13 +968,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             boolean
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -993,7 +993,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             for
           </span>
@@ -1002,13 +1002,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             let
           </span>
@@ -1017,7 +1017,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -1026,13 +1026,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             0
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -1041,7 +1041,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &lt;
           </span>
@@ -1050,7 +1050,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -1059,13 +1059,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -1074,13 +1074,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ++
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -1089,7 +1089,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -1104,7 +1104,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -1113,13 +1113,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             false
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -1138,7 +1138,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Inner loop shrinks because the largest elements "bubble" to the end
           </span>
@@ -1153,7 +1153,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             for
           </span>
@@ -1162,13 +1162,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             let
           </span>
@@ -1177,7 +1177,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -1186,13 +1186,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             0
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -1201,7 +1201,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &lt;
           </span>
@@ -1210,7 +1210,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -1219,7 +1219,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
@@ -1228,7 +1228,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -1237,7 +1237,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -1246,13 +1246,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ++
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -1261,7 +1261,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -1276,7 +1276,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             if
           </span>
@@ -1285,7 +1285,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -1294,7 +1294,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -1303,7 +1303,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -1312,7 +1312,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &gt;
           </span>
@@ -1321,7 +1321,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -1330,7 +1330,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -1339,19 +1339,19 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -1360,7 +1360,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -1375,7 +1375,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Swap elements using destructuring assignment
           </span>
@@ -1390,7 +1390,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -1399,7 +1399,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -1408,13 +1408,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ,
           </span>
@@ -1423,7 +1423,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -1432,7 +1432,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -1441,19 +1441,19 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -1462,7 +1462,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -1471,7 +1471,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -1480,7 +1480,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -1489,7 +1489,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -1498,19 +1498,19 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ,
           </span>
@@ -1519,7 +1519,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -1528,19 +1528,19 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -1555,7 +1555,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -1564,13 +1564,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             true
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -1585,7 +1585,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -1600,7 +1600,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -1619,7 +1619,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Optimization: If no elements were swapped, the array is already sorted
           </span>
@@ -1634,7 +1634,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             if
           </span>
@@ -1643,13 +1643,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             !
           </span>
@@ -1658,7 +1658,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -1667,7 +1667,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -1682,13 +1682,13 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             break
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -1703,7 +1703,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -1718,7 +1718,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -1737,7 +1737,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             return
           </span>
@@ -1746,7 +1746,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -1759,7 +1759,7 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
           <span />
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -1775,22 +1775,22 @@ exports[`<CodeBlock /> TypeScript story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
+exports[`<CodeBlock /> > TypeScriptWithCopyIcon story renders snapshot 1`] = `
 <div
-  class="code-block"
+  class="_code-block_961fb8"
 >
   <pre>
     <div
-      style="color: rgb(58, 58, 55); background: rgb(255, 255, 255); font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
     >
       <code
-        class="code-block__block"
+        class="_code-block__block_961fb8"
         style="white-space: pre-wrap;"
       >
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             /**
 
@@ -1798,7 +1798,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
         </span>
         <span
           class="token token doc-comment"
-          style="color: rgb(107, 106, 100); font-style: italic;"
+          style="color: #6B6A64; font-style: italic;"
         >
            * Sorts an array of numbers using the Bubble Sort algorithm.
 
@@ -1806,31 +1806,31 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              * 
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(77, 99, 203); font-style: italic;"
+            style="color: #4D63CB; font-style: italic;"
           >
             @param
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              
           </span>
           <span
             class="token token doc-comment parameter"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             arr
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              - The array of numbers to be sorted.
 
@@ -1839,19 +1839,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              * 
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(77, 99, 203); font-style: italic;"
+            style="color: #4D63CB; font-style: italic;"
           >
             @returns
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              A new sorted array of numbers.
 
@@ -1860,7 +1860,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              */
           </span>
@@ -1873,7 +1873,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           <span />
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             export
           </span>
@@ -1882,7 +1882,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             function
           </span>
@@ -1891,13 +1891,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             bubbleSort
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -1906,7 +1906,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -1915,31 +1915,31 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             number
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -1948,19 +1948,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             number
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -1969,7 +1969,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -1984,7 +1984,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Create a shallow copy to keep the function pure and avoid mutating the input
           </span>
@@ -1999,7 +1999,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             const
           </span>
@@ -2008,7 +2008,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -2017,13 +2017,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ...
           </span>
@@ -2032,13 +2032,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2053,7 +2053,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             const
           </span>
@@ -2062,7 +2062,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -2071,7 +2071,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             .
           </span>
@@ -2080,7 +2080,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2095,7 +2095,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             let
           </span>
@@ -2104,7 +2104,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -2113,13 +2113,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             boolean
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2138,7 +2138,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             for
           </span>
@@ -2147,13 +2147,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             let
           </span>
@@ -2162,7 +2162,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -2171,13 +2171,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             0
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2186,7 +2186,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &lt;
           </span>
@@ -2195,7 +2195,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -2204,13 +2204,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2219,13 +2219,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ++
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -2234,7 +2234,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -2249,7 +2249,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -2258,13 +2258,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             false
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2283,7 +2283,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Inner loop shrinks because the largest elements "bubble" to the end
           </span>
@@ -2298,7 +2298,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             for
           </span>
@@ -2307,13 +2307,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             let
           </span>
@@ -2322,7 +2322,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -2331,13 +2331,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             0
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2346,7 +2346,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &lt;
           </span>
@@ -2355,7 +2355,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -2364,7 +2364,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
@@ -2373,7 +2373,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -2382,7 +2382,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2391,13 +2391,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ++
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -2406,7 +2406,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -2421,7 +2421,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             if
           </span>
@@ -2430,7 +2430,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -2439,7 +2439,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -2448,7 +2448,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -2457,7 +2457,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &gt;
           </span>
@@ -2466,7 +2466,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -2475,7 +2475,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -2484,19 +2484,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -2505,7 +2505,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -2520,7 +2520,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Swap elements using destructuring assignment
           </span>
@@ -2535,7 +2535,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -2544,7 +2544,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -2553,13 +2553,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ,
           </span>
@@ -2568,7 +2568,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -2577,7 +2577,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -2586,19 +2586,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -2607,7 +2607,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -2616,7 +2616,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -2625,7 +2625,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -2634,7 +2634,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -2643,19 +2643,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ,
           </span>
@@ -2664,7 +2664,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -2673,19 +2673,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2700,7 +2700,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -2709,13 +2709,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             true
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2730,7 +2730,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -2745,7 +2745,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -2764,7 +2764,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Optimization: If no elements were swapped, the array is already sorted
           </span>
@@ -2779,7 +2779,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             if
           </span>
@@ -2788,13 +2788,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             !
           </span>
@@ -2803,7 +2803,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -2812,7 +2812,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -2827,13 +2827,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             break
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2848,7 +2848,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -2863,7 +2863,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -2882,7 +2882,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             return
           </span>
@@ -2891,7 +2891,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -2904,7 +2904,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
           <span />
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -2918,20 +2918,20 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
     </div>
   </pre>
   <div
-    class="code-block__copy"
+    class="_code-block__copy_961fb8"
   >
     <button
       aria-label="Copy this code block"
-      class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-testid="copy-button"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         <svg
           aria-hidden="true"
-          class="icon"
+          class="_icon_779da8"
           fill="currentColor"
           height="24px"
           style="--icon-size: 24px;"
@@ -2949,22 +2949,22 @@ exports[`<CodeBlock /> TypeScriptWithCopyIcon story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
+exports[`<CodeBlock /> > TypeScriptWithCopyText story renders snapshot 1`] = `
 <div
-  class="code-block"
+  class="_code-block_961fb8"
 >
   <pre>
     <div
-      style="color: rgb(58, 58, 55); background: rgb(255, 255, 255); font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
     >
       <code
-        class="code-block__block"
+        class="_code-block__block_961fb8"
         style="white-space: pre-wrap;"
       >
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             /**
 
@@ -2972,7 +2972,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
         </span>
         <span
           class="token token doc-comment"
-          style="color: rgb(107, 106, 100); font-style: italic;"
+          style="color: #6B6A64; font-style: italic;"
         >
            * Sorts an array of numbers using the Bubble Sort algorithm.
 
@@ -2980,31 +2980,31 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              * 
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(77, 99, 203); font-style: italic;"
+            style="color: #4D63CB; font-style: italic;"
           >
             @param
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              
           </span>
           <span
             class="token token doc-comment parameter"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             arr
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              - The array of numbers to be sorted.
 
@@ -3013,19 +3013,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              * 
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(77, 99, 203); font-style: italic;"
+            style="color: #4D63CB; font-style: italic;"
           >
             @returns
           </span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              A new sorted array of numbers.
 
@@ -3034,7 +3034,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
         <span>
           <span
             class="token token doc-comment"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
              */
           </span>
@@ -3047,7 +3047,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           <span />
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             export
           </span>
@@ -3056,7 +3056,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             function
           </span>
@@ -3065,13 +3065,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             bubbleSort
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -3080,7 +3080,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -3089,31 +3089,31 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             number
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -3122,19 +3122,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             number
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -3143,7 +3143,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -3158,7 +3158,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Create a shallow copy to keep the function pure and avoid mutating the input
           </span>
@@ -3173,7 +3173,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             const
           </span>
@@ -3182,7 +3182,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -3191,13 +3191,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ...
           </span>
@@ -3206,13 +3206,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3227,7 +3227,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             const
           </span>
@@ -3236,7 +3236,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -3245,7 +3245,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             .
           </span>
@@ -3254,7 +3254,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3269,7 +3269,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             let
           </span>
@@ -3278,7 +3278,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             :
           </span>
@@ -3287,13 +3287,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(58, 58, 55);"
+            style="color: #3A3A37;"
           >
             boolean
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3312,7 +3312,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             for
           </span>
@@ -3321,13 +3321,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             let
           </span>
@@ -3336,7 +3336,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -3345,13 +3345,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             0
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3360,7 +3360,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &lt;
           </span>
@@ -3369,7 +3369,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -3378,13 +3378,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3393,13 +3393,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ++
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -3408,7 +3408,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -3423,7 +3423,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -3432,13 +3432,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             false
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3457,7 +3457,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Inner loop shrinks because the largest elements "bubble" to the end
           </span>
@@ -3472,7 +3472,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             for
           </span>
@@ -3481,13 +3481,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             let
           </span>
@@ -3496,7 +3496,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -3505,13 +3505,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             0
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3520,7 +3520,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &lt;
           </span>
@@ -3529,7 +3529,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -3538,7 +3538,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
@@ -3547,7 +3547,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             -
           </span>
@@ -3556,7 +3556,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3565,13 +3565,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ++
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -3580,7 +3580,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -3595,7 +3595,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             if
           </span>
@@ -3604,7 +3604,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
@@ -3613,7 +3613,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -3622,7 +3622,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -3631,7 +3631,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             &gt;
           </span>
@@ -3640,7 +3640,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -3649,7 +3649,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -3658,19 +3658,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -3679,7 +3679,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -3694,7 +3694,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Swap elements using destructuring assignment
           </span>
@@ -3709,7 +3709,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -3718,7 +3718,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -3727,13 +3727,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ,
           </span>
@@ -3742,7 +3742,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -3751,7 +3751,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -3760,19 +3760,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
@@ -3781,7 +3781,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -3790,7 +3790,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -3799,7 +3799,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -3808,7 +3808,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             +
           </span>
@@ -3817,19 +3817,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             1
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ,
           </span>
@@ -3838,7 +3838,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             [
           </span>
@@ -3847,19 +3847,19 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ]
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3874,7 +3874,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             =
           </span>
@@ -3883,13 +3883,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(110, 58, 136);"
+            style="color: #6E3A88;"
           >
             true
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -3904,7 +3904,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -3919,7 +3919,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -3938,7 +3938,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(107, 106, 100); font-style: italic;"
+            style="color: #6B6A64; font-style: italic;"
           >
             // Optimization: If no elements were swapped, the array is already sorted
           </span>
@@ -3953,7 +3953,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             if
           </span>
@@ -3962,13 +3962,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             (
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             !
           </span>
@@ -3977,7 +3977,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             )
           </span>
@@ -3986,7 +3986,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             {
           </span>
@@ -4001,13 +4001,13 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             break
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -4022,7 +4022,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -4037,7 +4037,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -4056,7 +4056,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(77, 99, 203);"
+            style="color: #4D63CB;"
           >
             return
           </span>
@@ -4065,7 +4065,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           </span>
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             ;
           </span>
@@ -4078,7 +4078,7 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
           <span />
           <span
             class="token token"
-            style="color: rgb(85, 85, 78);"
+            style="color: #55554E;"
           >
             }
           </span>
@@ -4092,18 +4092,1192 @@ exports[`<CodeBlock /> TypeScriptWithCopyText story renders snapshot 1`] = `
     </div>
   </pre>
   <div
-    class="code-block__copy"
+    class="_code-block__copy_961fb8"
   >
     <button
       aria-label="Copy this code block"
-      class="button button--layout-none button--secondary button--lg button--size-lg button--variant-default"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-testid="copy-button"
       type="button"
     >
       <span
-        class="text text--label-lg button__text"
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
       >
         Copy
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<CodeBlock /> > WithProvidedIcons story renders snapshot 1`] = `
+<div
+  class="_code-block_961fb8"
+>
+  <pre>
+    <div
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+    >
+      <code
+        class="_code-block__block_961fb8"
+        style="white-space: pre-wrap;"
+      >
+        <span>
+          <span
+            class="token token doc-comment"
+            style="color: #6B6A64; font-style: italic;"
+          >
+            /**
+
+          </span>
+        </span>
+        <span
+          class="token token doc-comment"
+          style="color: #6B6A64; font-style: italic;"
+        >
+           * Sorts an array of numbers using the Bubble Sort algorithm.
+
+        </span>
+        <span>
+          <span
+            class="token token doc-comment"
+            style="color: #6B6A64; font-style: italic;"
+          >
+             * 
+          </span>
+          <span
+            class="token token doc-comment"
+            style="color: #4D63CB; font-style: italic;"
+          >
+            @param
+          </span>
+          <span
+            class="token token doc-comment"
+            style="color: #6B6A64; font-style: italic;"
+          >
+             
+          </span>
+          <span
+            class="token token doc-comment parameter"
+            style="color: #6B6A64; font-style: italic;"
+          >
+            arr
+          </span>
+          <span
+            class="token token doc-comment"
+            style="color: #6B6A64; font-style: italic;"
+          >
+             - The array of numbers to be sorted.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token token doc-comment"
+            style="color: #6B6A64; font-style: italic;"
+          >
+             * 
+          </span>
+          <span
+            class="token token doc-comment"
+            style="color: #4D63CB; font-style: italic;"
+          >
+            @returns
+          </span>
+          <span
+            class="token token doc-comment"
+            style="color: #6B6A64; font-style: italic;"
+          >
+             A new sorted array of numbers.
+
+          </span>
+        </span>
+        <span>
+          <span
+            class="token token doc-comment"
+            style="color: #6B6A64; font-style: italic;"
+          >
+             */
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            export
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            function
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #3A3A37;"
+          >
+            bubbleSort
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            (
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #3A3A37;"
+          >
+            number
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            )
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #3A3A37;"
+          >
+            number
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token token"
+            style="color: #6B6A64; font-style: italic;"
+          >
+            // Create a shallow copy to keep the function pure and avoid mutating the input
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            const
+          </span>
+          <span>
+             sortedArray 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ...
+          </span>
+          <span>
+            arr
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            const
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            =
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            .
+          </span>
+          <span>
+            length
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            let
+          </span>
+          <span>
+             swapped
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            :
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #3A3A37;"
+          >
+            boolean
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            (
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            let
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #6E3A88;"
+          >
+            0
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+             i 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #6E3A88;"
+          >
+            1
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ++
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    swapped 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #6E3A88;"
+          >
+            false
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token token"
+            style="color: #6B6A64; font-style: italic;"
+          >
+            // Inner loop shrinks because the largest elements "bubble" to the end
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            for
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            (
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            let
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #6E3A88;"
+          >
+            0
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+             j 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            &lt;
+          </span>
+          <span>
+             n 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            -
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #6E3A88;"
+          >
+            1
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            -
+          </span>
+          <span>
+             i
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+             j
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ++
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            (
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            &gt;
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #6E3A88;"
+          >
+            1
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token token"
+            style="color: #6B6A64; font-style: italic;"
+          >
+            // Swap elements using destructuring assignment
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #6E3A88;"
+          >
+            1
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span>
+            sortedArray
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span>
+            j 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            +
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #6E3A88;"
+          >
+            1
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ,
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            [
+          </span>
+          <span>
+            j
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ]
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                            swapped 
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            =
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #6E3A88;"
+          >
+            true
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token token"
+            style="color: #6B6A64; font-style: italic;"
+          >
+            // Optimization: If no elements were swapped, the array is already sorted
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            if
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            (
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            !
+          </span>
+          <span>
+            swapped
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            )
+          </span>
+          <span>
+             
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            {
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                        
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            break
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                    
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          
+
+        </span>
+        <span>
+          <span>
+                
+          </span>
+          <span
+            class="token token"
+            style="color: #4D63CB;"
+          >
+            return
+          </span>
+          <span>
+             sortedArray
+          </span>
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            ;
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span>
+          <span />
+          <span
+            class="token token"
+            style="color: #55554E;"
+          >
+            }
+          </span>
+          <span>
+            
+
+          </span>
+        </span>
+        <span />
+      </code>
+    </div>
+  </pre>
+  <div
+    class="_code-block__copy_961fb8"
+  >
+    <button
+      aria-label="Copy this code block"
+      class="_button_0829c1 _button--layout-icon-only_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      data-testid="copy-button"
+      type="button"
+    >
+      <span
+        class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+      >
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8"
+          fill="currentColor"
+          height="24px"
+          style="--icon-size: 24px;"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.30775 21.5C6.80258 21.5 6.375 21.325 6.025 20.975C5.675 20.625 5.5 20.1974 5.5 19.6923V4.30775C5.5 3.80258 5.675 3.375 6.025 3.025C6.375 2.675 6.80258 2.5 7.30775 2.5H13.0788C13.3198 2.5 13.5515 2.54517 13.774 2.6355C13.9965 2.726 14.1898 2.8565 14.3538 3.027L17.9828 6.7135C18.1468 6.87767 18.274 7.06775 18.3645 7.28375C18.4548 7.49975 18.5 7.72825 18.5 7.96925V19.6923C18.5 20.1974 18.325 20.625 17.975 20.975C17.625 21.325 17.1974 21.5 16.6923 21.5H7.30775ZM11.25 4H7.30775C7.21792 4 7.14417 4.03042 7.0865 4.09125C7.02883 4.15225 7 4.22442 7 4.30775V19.6923C7 19.7821 7.02883 19.8558 7.0865 19.9135C7.14417 19.9712 7.21792 20 7.30775 20H16.6923C16.7756 20 16.8477 19.9712 16.9087 19.9135C16.9696 19.8558 17 19.7821 17 19.6923V9.8365H13.9135C13.1763 9.8365 12.5481 9.57367 12.0287 9.048C11.5096 8.52233 11.25 7.88458 11.25 7.13475V4ZM12.75 4V7.13475C12.75 7.46925 12.8602 7.75317 13.0807 7.9865C13.3012 8.21983 13.5788 8.3365 13.9135 8.3365H17V7.85375L13.2135 4H12.75ZM10.077 18.5865C9.86417 18.5865 9.68592 18.5147 9.54225 18.3712C9.39875 18.2276 9.327 18.0493 9.327 17.8365C9.327 17.6237 9.39875 17.4455 9.54225 17.302C9.68592 17.1583 9.86417 17.0865 10.077 17.0865H12C12.2128 17.0865 12.391 17.1583 12.5345 17.302C12.6782 17.4455 12.75 17.6237 12.75 17.8365C12.75 18.0493 12.6782 18.2276 12.5345 18.3712C12.391 18.5147 12.2128 18.5865 12 18.5865H10.077ZM10.077 14.6923C9.86417 14.6923 9.68592 14.6205 9.54225 14.477C9.39875 14.3333 9.327 14.1551 9.327 13.9423C9.327 13.7294 9.39875 13.5513 9.54225 13.4078C9.68592 13.2641 9.86417 13.1923 10.077 13.1923H13.9135C14.1263 13.1923 14.3045 13.2641 14.448 13.4078C14.5917 13.5513 14.6635 13.7294 14.6635 13.9423C14.6635 14.1551 14.5917 14.3333 14.448 14.477C14.3045 14.6205 14.1263 14.6923 13.9135 14.6923H10.077Z"
+          />
+        </svg>
       </span>
     </button>
   </div>

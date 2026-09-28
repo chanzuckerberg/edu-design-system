@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import delay from 'lodash/delay';
+import delay from 'lodash/delay.js';
 import React from 'react';
 
 import Markdown from 'react-markdown';
@@ -8,7 +8,7 @@ import { Prism, type SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import theme from './theme';
 
 import Button from '../Button';
-import type { IconName } from '../Icon';
+import { useSemanticIcon } from '../Icon';
 
 import styles from './CodeBlock.module.css';
 
@@ -75,7 +75,13 @@ export const CodeBlock = ({
   language,
   ...other
 }: CodeBlockProps) => {
-  const [copyButtonIcon, setCopyButtonIcon] = React.useState<IconName>('copy');
+  // The copy affordance is semantic: it is the same mark every copy button in the app
+  // carries, so it comes from `IconProvider` rather than from a prop on this block. The
+  // confirmation that follows a copy is a transient state, not a role, so it stays a
+  // checkmark.
+  const copyIcon = useSemanticIcon('copy');
+
+  const [hasCopied, setHasCopied] = React.useState<boolean>(false);
   const [copyButtonText, setCopyButtonText] = React.useState<string>('Copy');
 
   const componentClassName = clsx(styles['code-block'], className);
@@ -120,18 +126,24 @@ ${children}
           <Button
             aria-label="Copy this code block"
             data-testid="copy-button"
-            icon={copyStyle === 'icon' ? copyButtonIcon : undefined}
+            icon={
+              copyStyle === 'icon'
+                ? hasCopied
+                  ? 'check'
+                  : copyIcon
+                : undefined
+            }
             iconLayout={copyStyle === 'icon' ? 'icon-only' : undefined}
             onClick={async () => {
               try {
                 await navigator.clipboard.writeText(children);
                 copyStyle === 'icon'
-                  ? setCopyButtonIcon('check')
+                  ? setHasCopied(true)
                   : setCopyButtonText('Copied!');
 
                 delay(() => {
                   copyStyle === 'icon'
-                    ? setCopyButtonIcon('copy')
+                    ? setHasCopied(false)
                     : setCopyButtonText('Copy');
                 }, 3000);
               } catch (error) {

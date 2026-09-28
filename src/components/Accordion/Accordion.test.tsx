@@ -1,8 +1,10 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStories } from '@storybook/react-webpack5';
+import { composeStories } from '@storybook/react-vite';
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import { describe, expect, it, vi } from 'vitest';
+
 import { Accordion } from './Accordion';
 import * as stories from './Accordion.stories';
 import type { StoryFile } from '../../../.storybook/utility-types';
@@ -51,7 +53,7 @@ describe('<Accordion />', () => {
 
   it('should call onClose callback when accordion closes', async () => {
     const user = userEvent.setup();
-    const onClose = jest.fn();
+    const onClose = vi.fn();
     render(
       <Accordion headingAs="h2">
         <Accordion.Row defaultOpen>
@@ -70,8 +72,8 @@ describe('<Accordion />', () => {
 
   it('should call onOpen callback when accordion opens', async () => {
     const user = userEvent.setup();
-    const onClose = jest.fn();
-    const onOpen = jest.fn();
+    const onClose = vi.fn();
+    const onOpen = vi.fn();
     render(
       <Accordion headingAs="h2">
         <Accordion.Row>
@@ -93,10 +95,38 @@ describe('<Accordion />', () => {
     expect(onClose).not.toHaveBeenCalled();
   });
 
+  it('should call onOpen and onClose callbacks when toggled from the keyboard', async () => {
+    const user = userEvent.setup();
+    const onClose = vi.fn();
+    const onOpen = vi.fn();
+    render(
+      <Accordion headingAs="h2">
+        <Accordion.Row>
+          <Accordion.Button onClose={onClose} onOpen={onOpen}>
+            Accordion Button
+          </Accordion.Button>
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </Accordion.Row>
+      </Accordion>,
+    );
+
+    await user.tab();
+    await user.keyboard('{Enter}');
+    expect(onOpen).toHaveBeenCalled();
+    expect(onClose).not.toHaveBeenCalled();
+    expect(screen.getByText('Accordion Panel')).toBeInTheDocument();
+
+    onOpen.mockClear();
+    await user.keyboard('{Enter}');
+    expect(onClose).toHaveBeenCalled();
+    expect(onOpen).not.toHaveBeenCalled();
+    expect(screen.queryByText('Accordion Panel')).not.toBeInTheDocument();
+  });
+
   it('should not call onOpen callback when accordion opens on an empty row', async () => {
     const user = userEvent.setup();
-    const onClose = jest.fn();
-    const onOpen = jest.fn();
+    const onClose = vi.fn();
+    const onOpen = vi.fn();
     render(
       <Accordion headingAs="h2">
         <Accordion.Row isExpandable={false}>
@@ -118,10 +148,50 @@ describe('<Accordion />', () => {
     expect(onClose).not.toHaveBeenCalled();
   });
 
+  it('renders an icon name in the leading slot as an icon', () => {
+    // The slot is a content slot, the same as the leading slots on `DataTable`,
+    // `InputField`, and `SelectionChip`, and `eds-migrate 18-to-19` renames `leadingIcon`
+    // onto all four. This one rendered its value straight into the wrapper, so an icon name
+    // arriving from that rename came out as the text "person-add".
+    /* eslint-disable testing-library/no-container */
+    const { container } = render(
+      <Accordion headingAs="h2">
+        <Accordion.Row hasLeadingContent>
+          <Accordion.Button leadingContent="person-add" title="Title" />
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </Accordion.Row>
+      </Accordion>,
+    );
+
+    const leadingSlot = container.querySelector(
+      'button [class*="leading-content"]',
+    );
+
+    expect(leadingSlot?.querySelector('svg')).toBeInTheDocument();
+    /* eslint-enable testing-library/no-container */
+    expect(screen.queryByText('person-add')).not.toBeInTheDocument();
+  });
+
+  it('renders a node in the leading slot as-is', () => {
+    render(
+      <Accordion headingAs="h2">
+        <Accordion.Row hasLeadingContent>
+          <Accordion.Button
+            leadingContent={<span data-testid="custom">1</span>}
+            title="Title"
+          />
+          <Accordion.Panel>Accordion Panel</Accordion.Panel>
+        </Accordion.Row>
+      </Accordion>,
+    );
+
+    expect(screen.getByTestId('custom')).toBeInTheDocument();
+  });
+
   describe('emits warnings when misused', () => {
     it('warns when title and children are used together', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Accordion headingAs="h2">
           <Accordion.Row>
@@ -145,8 +215,8 @@ describe('<Accordion />', () => {
     });
 
     it('warns when subTitle and children are used together', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Accordion headingAs="h2">
           <Accordion.Row>
@@ -170,8 +240,8 @@ describe('<Accordion />', () => {
     });
 
     it('warns when title, subTitle and children are used together', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Accordion headingAs="h2">
           <Accordion.Row>
@@ -196,8 +266,8 @@ describe('<Accordion />', () => {
     });
 
     it('does not warn when title & subTitle are used together', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Accordion headingAs="h2">
           <Accordion.Row>
@@ -220,8 +290,8 @@ describe('<Accordion />', () => {
     });
 
     it('does not warn when just children is used', () => {
-      const consoleMock = jest.spyOn(console, 'warn');
-      consoleMock.mockImplementation();
+      const consoleMock = vi.spyOn(console, 'warn');
+      consoleMock.mockImplementation(() => {});
       render(
         <Accordion headingAs="h2">
           <Accordion.Row>

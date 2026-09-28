@@ -1,11 +1,15 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import isChromatic from 'chromatic/isChromatic';
 
 import React from 'react';
-import { userEvent } from 'storybook/test';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { AppHeader } from './AppHeader';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports } from '../../util/viewports';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/AppHeader',
@@ -28,7 +32,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.7.1'],
+  tags: ['autodocs', 'version:1.7.2'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -404,15 +408,22 @@ export const CanFocusMenuItem: Story = {
   },
 
   parameters: {
+    // The hamburger only renders at the smallest breakpoint
+    chromatic: { viewports: [chromaticViewports.googlePixel2] },
+
     snapshot: {
       skip: true,
     },
   },
 
-  // Select the menu then expand it with the keyboard. set up for snapshotting
-  play: async () => {
+  // At this viewport the header renders horizontally, so the hamburger is the only tab stop.
+  // Tab to it with the keyboard so the snapshot shows the focus ring
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const menuButton = await canvas.findByRole('button', { name: 'Show Menu' });
+
     await userEvent.tab();
-    await userEvent.tab();
+    await expect(menuButton).toHaveFocus();
   },
 
   globals: {
@@ -460,4 +471,42 @@ export const CanHandleFallbackNavMenus: Story = {
       await userEvent.keyboard(' ', { delay: 300 });
     }
   },
+};
+
+/**
+ * `AppHeader` draws four semantic icons: the chevron marking a nav item as a menu, the
+ * hamburger that opens the drawer at narrow widths, that drawer's close button, and the mark
+ * on a link that leaves the site. All four come from `IconProvider`.
+ *
+ * Icons that arrive as nav data stay the consumer's to choose, so `NavItem.icon` is
+ * untouched by the provider.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    ...Default.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
+};
+
+/**
+ * The mark on a link that leaves the site only renders in the vertical orientation, so it
+ * needs a story of its own. Here it becomes a chain rather than the usual box-and-arrow.
+ *
+ * The fourth icon `AppHeader` resolves, the close button on the drawer, cannot be shown in a
+ * story at all: it renders through a portal, outside the tree a story snapshots. It is
+ * covered in `IconProvider`'s own tests instead.
+ */
+export const WithProvidedIconsVertical: Story = {
+  args: {
+    ...VerticalOrientation.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

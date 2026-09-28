@@ -17,6 +17,14 @@ export type NumberIconProps = {
    * CSS class names that can be appended to the component.
    */
   className?: string;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--number-icon__bg`
+   * - `--number-icon__border`
+   * - `--number-icon__fg`
+   */
+  style?: NumberIconCSSProperties;
   // Design API
   /**
    * Whether `NumberIcon` can be focused on, clicked, etc.
@@ -37,6 +45,23 @@ export type NumberIconProps = {
    */
   status?: 'completed' | 'incomplete' | 'default';
 };
+
+export interface NumberIconCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--number-icon__bg'?: string;
+
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--number-icon__border'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--number-icon__fg'?: string;
+}
 
 /**
  * ## Usage

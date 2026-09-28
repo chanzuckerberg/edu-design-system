@@ -1,50 +1,50 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
+exports[`<Card /> > BackgroundCallout story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-call-out w-[450px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-call-out_f66b11 w-[450px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <div
-          class="text text--overline-md header__eyebrow header--size-md"
+          class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
         >
           Recommended for you
         </div>
         <h3
-          class="text text--title-lg header__title header--size-md"
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Question of the day
         </h3>
         <div
-          class="text text--body-md header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:rp:"
+            id="headlessui-menu-button-_r_p_"
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -65,7 +65,7 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo my-4"
@@ -74,17 +74,17 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-lg button__text"
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
           >
             Primary
           </span>
@@ -92,58 +92,58 @@ exports[`<Card /> BackgroundCallout story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> CancelMembership story renders snapshot 1`] = `
+exports[`<Card /> > CancelMembership story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[450px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[450px]"
   >
     <div
-      class="card__header header--size-sm"
+      class="_card__header_f66b11 _header--size-sm_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <h3
-          class="text text--title-sm header__title header--size-sm"
+          class="_text_b3eba3 _text--title-sm_b3eba3 _header__title_f66b11 _header--size-sm_f66b11"
         >
           Cancel membership?
         </h3>
         <div
-          class="text text--body-xs header__sub-title header--size-sm"
+          class="_text_b3eba3 _text--body-xs_b3eba3 _header__sub-title_f66b11 _header--size-sm_f66b11"
         >
           We're sad to see you go
         </div>
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <p
-        class="text text--body-sm py-4"
+        class="_text_b3eba3 _text--body-sm_b3eba3 py-4"
       >
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu
       </p>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--md button--size-md button--variant-critical"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-critical_0829c1"
           type="button"
         >
           <span
-            class="text text--label-md button__text"
+            class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
           >
             Confirm cancellation
           </span>
@@ -151,51 +151,51 @@ exports[`<Card /> CancelMembership story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
+exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="flex gap-spacing-size-1"
+    class="gap-spacing-size-1 flex"
   >
     <label
-      class="card__behavior-label"
-      for=":rv:"
+      class="_card__behavior-label_f66b11"
+      for="_r_v_"
     >
       <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[450px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
       >
         <div
-          class="card__header header--size-md"
+          class="_card__header_f66b11 _header--size-md_f66b11"
         >
           <div
-            class="header__text"
+            class="_header__text_f66b11"
           >
             <div
-              class="text text--overline-md header__eyebrow header--size-md"
+              class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
             >
               Recommended for you
             </div>
             <h3
-              class="text text--title-lg header__title header--size-md"
+              class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
             >
               Question of the day
             </h3>
             <div
-              class="text text--body-md header__sub-title header--size-md"
+              class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
             >
               Get to know your colleagues
             </div>
           </div>
         </div>
         <div
-          class="card__body"
+          class="_card__body_f66b11"
         >
           <div
             class="fpo"
@@ -204,7 +204,7 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__footer"
+          class="_card__footer_f66b11"
         >
           <div
             class="fpo"
@@ -213,47 +213,47 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__top-stripe top-stripe--medium"
+          class="_card__top-stripe_f66b11 _top-stripe--medium_f66b11"
         />
         <input
-          class="card__behavior-input"
-          id=":rv:"
+          class="_card__behavior-input_f66b11"
+          id="_r_v_"
           type="checkbox"
         />
       </div>
     </label>
     <label
-      class="card__behavior-label"
-      for=":r10:"
+      class="_card__behavior-label_f66b11"
+      for="_r_10_"
     >
       <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[450px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
       >
         <div
-          class="card__header header--size-md"
+          class="_card__header_f66b11 _header--size-md_f66b11"
         >
           <div
-            class="header__text"
+            class="_header__text_f66b11"
           >
             <div
-              class="text text--overline-md header__eyebrow header--size-md"
+              class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
             >
               Recommended for you
             </div>
             <h3
-              class="text text--title-lg header__title header--size-md"
+              class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
             >
               Question of the day
             </h3>
             <div
-              class="text text--body-md header__sub-title header--size-md"
+              class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
             >
               Get to know your colleagues
             </div>
           </div>
         </div>
         <div
-          class="card__body"
+          class="_card__body_f66b11"
         >
           <div
             class="fpo"
@@ -262,7 +262,7 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__footer"
+          class="_card__footer_f66b11"
         >
           <div
             class="fpo"
@@ -271,11 +271,11 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__top-stripe top-stripe--medium"
+          class="_card__top-stripe_f66b11 _top-stripe--medium_f66b11"
         />
         <input
-          class="card__behavior-input"
-          id=":r10:"
+          class="_card__behavior-input_f66b11"
+          id="_r_10_"
           type="checkbox"
         />
       </div>
@@ -284,51 +284,51 @@ exports[`<Card /> CheckboxCards story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Card /> Default story renders snapshot 1`] = `
+exports[`<Card /> > Default story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[450px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[450px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <div
-          class="text text--overline-md header__eyebrow header--size-md"
+          class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
         >
           New data set
         </div>
         <h3
-          class="text text--title-lg header__title header--size-md"
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Text Complexity
         </h3>
         <div
-          class="text text--body-md header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r3:"
+            id="headlessui-menu-button-_r_3_"
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -349,31 +349,31 @@ exports[`<Card /> Default story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body pb-spacing-size-5 pt-spacing-size-2"
+      class="_card__body_f66b11 pb-spacing-size-5 pt-spacing-size-2"
     >
       <p
-        class="text text--title-md pb-spacing-size-half"
+        class="_text_b3eba3 _text--title-md_b3eba3 pb-spacing-size-half"
       >
         Title text
       </p>
       <p
-        class="text text--body-md"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu lacus semper lectus proin. Turpis dolor tincidunt vehicula egestas suspendisse senectus enim. Quam euismod orci commodo aliquet vestibulum egestas amet mi. Iaculis pulvinar aenean duis justo pretium aenean.
       </p>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-lg button__text"
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
           >
             Primary action
           </span>
@@ -381,57 +381,57 @@ exports[`<Card /> Default story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> IsInteractive story renders snapshot 1`] = `
+exports[`<Card /> > IsInteractive story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default card--is-interactive w-[450px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 w-[450px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <div
-          class="text text--overline-md header__eyebrow header--size-md"
+          class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
         >
           New data set
         </div>
         <h3
-          class="text text--title-lg header__title header--size-md"
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Text Complexity
         </h3>
         <div
-          class="text text--body-md header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:ra:"
+            id="headlessui-menu-button-_r_a_"
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -452,31 +452,31 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body pb-spacing-size-5 pt-spacing-size-2"
+      class="_card__body_f66b11 pb-spacing-size-5 pt-spacing-size-2"
     >
       <p
-        class="text text--title-md pb-spacing-size-half"
+        class="_text_b3eba3 _text--title-md_b3eba3 pb-spacing-size-half"
       >
         Title text
       </p>
       <p
-        class="text text--body-md"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu lacus semper lectus proin. Turpis dolor tincidunt vehicula egestas suspendisse senectus enim. Quam euismod orci commodo aliquet vestibulum egestas amet mi. Iaculis pulvinar aenean duis justo pretium aenean.
       </p>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-lg button__text"
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
           >
             Primary action
           </span>
@@ -484,51 +484,51 @@ exports[`<Card /> IsInteractive story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> RadioCards story renders snapshot 1`] = `
+exports[`<Card /> > RadioCards story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="flex gap-spacing-size-1"
+    class="gap-spacing-size-1 flex"
   >
     <label
-      class="card__behavior-label"
-      for=":rt:"
+      class="_card__behavior-label_f66b11"
+      for="_r_t_"
     >
       <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[450px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
       >
         <div
-          class="card__header header--size-md"
+          class="_card__header_f66b11 _header--size-md_f66b11"
         >
           <div
-            class="header__text"
+            class="_header__text_f66b11"
           >
             <div
-              class="text text--overline-md header__eyebrow header--size-md"
+              class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
             >
               Recommended for you
             </div>
             <h3
-              class="text text--title-lg header__title header--size-md"
+              class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
             >
               Question of the day
             </h3>
             <div
-              class="text text--body-md header__sub-title header--size-md"
+              class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
             >
               Get to know your colleagues
             </div>
           </div>
         </div>
         <div
-          class="card__body"
+          class="_card__body_f66b11"
         >
           <div
             class="fpo"
@@ -537,7 +537,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__footer"
+          class="_card__footer_f66b11"
         >
           <div
             class="fpo"
@@ -546,48 +546,48 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__top-stripe top-stripe--medium"
+          class="_card__top-stripe_f66b11 _top-stripe--medium_f66b11"
         />
         <input
-          class="card__behavior-input"
-          id=":rt:"
+          class="_card__behavior-input_f66b11"
+          id="_r_t_"
           name="test"
           type="radio"
         />
       </div>
     </label>
     <label
-      class="card__behavior-label"
-      for=":ru:"
+      class="_card__behavior-label_f66b11"
+      for="_r_u_"
     >
       <div
-        class="card card--container-style-low card--container-color-default card--is-interactive card--has-behavior w-[450px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
       >
         <div
-          class="card__header header--size-md"
+          class="_card__header_f66b11 _header--size-md_f66b11"
         >
           <div
-            class="header__text"
+            class="_header__text_f66b11"
           >
             <div
-              class="text text--overline-md header__eyebrow header--size-md"
+              class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
             >
               Recommended for you
             </div>
             <h3
-              class="text text--title-lg header__title header--size-md"
+              class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
             >
               Question of the day
             </h3>
             <div
-              class="text text--body-md header__sub-title header--size-md"
+              class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
             >
               Get to know your colleagues
             </div>
           </div>
         </div>
         <div
-          class="card__body"
+          class="_card__body_f66b11"
         >
           <div
             class="fpo"
@@ -596,7 +596,7 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__footer"
+          class="_card__footer_f66b11"
         >
           <div
             class="fpo"
@@ -605,11 +605,11 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
           </div>
         </div>
         <div
-          class="card__top-stripe top-stripe--medium"
+          class="_card__top-stripe_f66b11 _top-stripe--medium_f66b11"
         />
         <input
-          class="card__behavior-input"
-          id=":ru:"
+          class="_card__behavior-input_f66b11"
+          id="_r_u_"
           name="test"
           type="radio"
         />
@@ -619,51 +619,51 @@ exports[`<Card /> RadioCards story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Card /> WhileDragging story renders snapshot 1`] = `
+exports[`<Card /> > WhileDragging story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default card--is-dragging-true w-[450px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-dragging-true_f66b11 w-[450px]"
   >
     <div
-      class="card__header header--size-md"
+      class="_card__header_f66b11 _header--size-md_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__text_f66b11"
       >
         <div
-          class="text text--overline-md header__eyebrow header--size-md"
+          class="_text_b3eba3 _text--overline-md_b3eba3 _header__eyebrow_f66b11 _header--size-md_f66b11"
         >
           New data set
         </div>
         <h3
-          class="text text--title-lg header__title header--size-md"
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
         >
           Text Complexity
         </h3>
         <div
-          class="text text--body-md header__sub-title header--size-md"
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:r14:"
+            id="headlessui-menu-button-_r_14_"
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -684,31 +684,31 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body pb-spacing-size-5 pt-spacing-size-2"
+      class="_card__body_f66b11 pb-spacing-size-5 pt-spacing-size-2"
     >
       <p
-        class="text text--title-md pb-spacing-size-half"
+        class="_text_b3eba3 _text--title-md_b3eba3 pb-spacing-size-half"
       >
         Title text
       </p>
       <p
-        class="text text--body-md"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu lacus semper lectus proin. Turpis dolor tincidunt vehicula egestas suspendisse senectus enim. Quam euismod orci commodo aliquet vestibulum egestas amet mi. Iaculis pulvinar aenean duis justo pretium aenean.
       </p>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
-        class="button-group button-group--horizontal"
+        class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
         <button
-          class="button button--layout-none button--primary button--lg button--size-lg button--variant-default"
+          class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
           type="button"
         >
           <span
-            class="text text--label-lg button__text"
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
           >
             Primary action
           </span>
@@ -716,24 +716,24 @@ exports[`<Card /> WhileDragging story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
+exports[`<Card /> > WithCustomizedHeader story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[450px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[450px]"
   >
     <div
-      class="card__header header--size-md mb-spacing-size-2"
+      class="_card__header_f66b11 _header--size-md_f66b11 mb-spacing-size-2"
     >
       <div
-        class="header__custom"
+        class="_header__custom_f66b11"
       >
         Displaying 
         <strong>
@@ -747,7 +747,7 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo"
@@ -756,7 +756,7 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
         class="fpo"
@@ -765,57 +765,127 @@ exports[`<Card /> WithCustomizedHeader story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>
 `;
 
-exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
+exports[`<Card /> > WithFpoHeaderIconContent story renders snapshot 1`] = `
 <div
   class="p-spacing-size-4"
 >
   <div
-    class="card card--container-style-low card--container-color-default w-[450px]"
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[450px]"
   >
     <div
-      class="card__header header--size-sm"
+      class="_card__header_f66b11 _header--size-sm_f66b11"
     >
       <div
-        class="header__text"
+        class="_header__icon_f66b11"
       >
-        <div
-          class="text text--overline-sm header__eyebrow header--size-sm"
-        >
-          New data set
-        </div>
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 16px; width: 16px; font-size: 6px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        />
+      </div>
+      <div
+        class="_header__text_f66b11"
+      >
         <h3
-          class="text text--title-sm header__title header--size-sm"
+          class="_text_b3eba3 _text--title-sm_b3eba3 _header__title_f66b11 _header--size-sm_f66b11"
         >
           Text Complexity
         </h3>
         <div
-          class="text text--body-xs header__sub-title header--size-sm"
+          class="_text_b3eba3 _text--body-xs_b3eba3 _header__sub-title_f66b11 _header--size-sm_f66b11"
+        >
+          Small header, 16px slot
+        </div>
+      </div>
+    </div>
+    <div
+      class="_card__header_f66b11 _header--size-md_f66b11"
+    >
+      <div
+        class="_header__icon_f66b11"
+      >
+        <span
+          aria-hidden="true"
+          class="fpo"
+          style="height: 24px; width: 24px; font-size: 9px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+        >
+          FPO
+        </span>
+      </div>
+      <div
+        class="_header__text_f66b11"
+      >
+        <h3
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
+        >
+          Text Complexity
+        </h3>
+        <div
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
+        >
+          Medium header, 24px slot
+        </div>
+      </div>
+    </div>
+    <div
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Card /> > WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[450px]"
+  >
+    <div
+      class="_card__header_f66b11 _header--size-sm_f66b11"
+    >
+      <div
+        class="_header__text_f66b11"
+      >
+        <div
+          class="_text_b3eba3 _text--overline-sm_b3eba3 _header__eyebrow_f66b11 _header--size-sm_f66b11"
+        >
+          New data set
+        </div>
+        <h3
+          class="_text_b3eba3 _text--title-sm_b3eba3 _header__title_f66b11 _header--size-sm_f66b11"
+        >
+          Text Complexity
+        </h3>
+        <div
+          class="_text_b3eba3 _text--body-xs_b3eba3 _header__sub-title_f66b11 _header--size-sm_f66b11"
         >
           Get to know your colleagues
         </div>
       </div>
       <div
-        class="header__action"
+        class="_header__action_f66b11"
       >
         <div
-          class="menu"
+          class="_menu_33ee5b"
           data-headlessui-state=""
         >
           <button
             aria-expanded="false"
             aria-haspopup="menu"
             data-headlessui-state=""
-            id="headlessui-menu-button-:rh:"
+            id="headlessui-menu-button-_r_h_"
             type="button"
           >
             <svg
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="32px"
               role="img"
@@ -836,7 +906,7 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__body"
+      class="_card__body_f66b11"
     >
       <div
         class="fpo"
@@ -845,7 +915,7 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__footer"
+      class="_card__footer_f66b11"
     >
       <div
         class="fpo"
@@ -854,7 +924,57 @@ exports[`<Card /> WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
       </div>
     </div>
     <div
-      class="card__top-stripe top-stripe--none"
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Card /> > WithTitleLevel story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 w-[450px]"
+  >
+    <div
+      class="_card__header_f66b11 _header--size-md_f66b11"
+    >
+      <div
+        class="_header__text_f66b11"
+      >
+        <h2
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
+        >
+          Text Complexity
+        </h2>
+        <div
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
+        >
+          Sitting directly under the page's own heading
+        </div>
+      </div>
+    </div>
+    <div
+      class="_card__header_f66b11 _header--size-md_f66b11"
+    >
+      <div
+        class="_header__text_f66b11"
+      >
+        <h3
+          class="_text_b3eba3 _text--title-lg_b3eba3 _header__title_f66b11 _header--size-md_f66b11"
+        >
+          Text Complexity
+        </h3>
+        <div
+          class="_text_b3eba3 _text--body-md_b3eba3 _header__sub-title_f66b11 _header--size-md_f66b11"
+        >
+          Sitting inside a section that already has an h2
+        </div>
+      </div>
+    </div>
+    <div
+      class="_card__top-stripe_f66b11 _top-stripe--none_f66b11"
     />
   </div>
 </div>

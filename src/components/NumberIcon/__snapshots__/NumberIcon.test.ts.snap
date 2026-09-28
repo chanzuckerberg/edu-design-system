@@ -1,0 +1,340 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<NumberIcon /> > Completed story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="flex flex-wrap gap-1"
+  >
+    <span
+      aria-label="number icon example"
+      class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-completed_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      1
+    </span>
+    <span
+      aria-label="number icon example"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-completed_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<NumberIcon /> > Default story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <span
+    aria-label="number icon example"
+    class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+    role="img"
+    tabindex="-1"
+  >
+    1
+  </span>
+</div>
+`;
+
+exports[`<NumberIcon /> > DifferentNumbers story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div>
+    <span
+      aria-label="Step 0"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      0
+    </span>
+    <span
+      aria-label="Step 1"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      1
+    </span>
+    <span
+      aria-label="Step 2"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      2
+    </span>
+    <span
+      aria-label="Step 3"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      3
+    </span>
+    <span
+      aria-label="Step 4"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      4
+    </span>
+    <span
+      aria-label="Step 5"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      5
+    </span>
+    <span
+      aria-label="Step 6"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      6
+    </span>
+    <span
+      aria-label="Step 7"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      7
+    </span>
+    <span
+      aria-label="Step 8"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      8
+    </span>
+    <span
+      aria-label="Step 9"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      9
+    </span>
+    <span
+      aria-label="Step 10"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      10
+    </span>
+    <span
+      aria-label="Step 21"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      21
+    </span>
+    <span
+      aria-label="Step 32"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      32
+    </span>
+    <span
+      aria-label="Step 43"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      43
+    </span>
+    <span
+      aria-label="Step 54"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      54
+    </span>
+    <span
+      aria-label="Step 65"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      65
+    </span>
+    <span
+      aria-label="Step 76"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      76
+    </span>
+    <span
+      aria-label="Step 87"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      87
+    </span>
+    <span
+      aria-label="Step 98"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      98
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<NumberIcon /> > Incomplete story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="flex flex-wrap gap-1"
+  >
+    <span
+      aria-label="number icon example"
+      class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-incomplete_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      1
+    </span>
+    <span
+      aria-label="number icon example"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-incomplete_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<NumberIcon /> > IsInteractive story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <span
+    aria-label="number icon example"
+    class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--is-interactive_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
+    role="img"
+    tabindex="0"
+  >
+    1
+  </span>
+  <span
+    aria-label="number icon example"
+    class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--is-interactive_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+    role="img"
+    tabindex="0"
+  >
+    1
+  </span>
+</div>
+`;
+
+exports[`<NumberIcon /> > NumberIconList story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="flex flex-wrap gap-1"
+  >
+    <span
+      aria-label="Item 1"
+      class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      1
+    </span>
+    <span
+      aria-label="Item 2"
+      class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      2
+    </span>
+    <span
+      aria-label="Item 3"
+      class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      3
+    </span>
+    <span
+      aria-label="Item 4"
+      class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      4
+    </span>
+    <span
+      aria-label="Item 5"
+      class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      5
+    </span>
+    <span
+      aria-label="Item 6"
+      class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      6
+    </span>
+  </div>
+</div>
+`;
+
+exports[`<NumberIcon /> > Sizes story renders snapshot 1`] = `
+<div
+  class="p-spacing-size-4"
+>
+  <div
+    class="flex flex-wrap gap-1"
+  >
+    <span
+      aria-label="number icon example"
+      class="_text_b3eba3 _text--label-md_b3eba3 _number-icon_1e17fc _number-icon--size-md_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      1
+    </span>
+    <span
+      aria-label="number icon example"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _number-icon_1e17fc _number-icon--size-lg_1e17fc _number-icon--status-default_1e17fc"
+      role="img"
+      tabindex="-1"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;

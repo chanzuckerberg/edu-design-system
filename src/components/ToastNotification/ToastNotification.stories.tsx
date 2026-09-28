@@ -1,12 +1,16 @@
 import { Transition } from '@headlessui/react';
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 
 import type { ComponentProps } from 'react';
 
 import { ToastNotification } from './ToastNotification';
 
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import Button from '../Button';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/ToastNotification',
@@ -25,7 +29,7 @@ export default {
   args: {
     title: 'A toast should not exceed two lines of text.',
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2.0'],
 } as Meta<Args>;
 
 type Args = ComponentProps<typeof ToastNotification>;
@@ -118,7 +122,7 @@ const ToastNotificationManager = (args: Args) => {
         Trigger A Toast Notification
       </Button>
       <div
-        className="absolute bottom-0 right-0 m-spacing-size-1 flex max-h-full flex-col gap-spacing-size-2 overflow-scroll"
+        className="m-spacing-size-1 gap-spacing-size-2 absolute bottom-0 right-0 flex max-h-full flex-col overflow-scroll"
         id="toast-container"
       >
         {toasts.map((toast) => (
@@ -173,4 +177,25 @@ export const ExampleDismissingToasts: Story = {
     chromatic: { disableSnapshot: true },
     snapshot: { skip: true },
   },
+};
+
+/**
+ * Both icons here come from `IconProvider`: the status icon carrying the toast's severity,
+ * and the dismiss button, which is the same close affordance used everywhere else.
+ *
+ * Here `critical` becomes the outline version of the icon, and the close button a minus.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    ...Critical.args,
+    // Set here rather than left to the `onDismiss` action, which is applied in the browser
+    // but not when the stories are rendered for snapshots, so the dismiss button this story
+    // is partly about would be missing there.
+    onDismiss: () => {},
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };
