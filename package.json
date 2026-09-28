@@ -139,7 +139,7 @@
     "@vitest/coverage-v8": "^4.1.5",
     "@vitest/ui": "4.1.5",
     "chromatic": "^18.9.4",
-    "commit-and-tag-version": "^12.7.3",
+    "commit-and-tag-version": "^13.2.1",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.2",
     "eslint-plugin-prettier": "^5.5.6",
