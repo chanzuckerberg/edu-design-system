@@ -408,6 +408,9 @@ export const CanFocusMenuItem: Story = {
   },
 
   parameters: {
+    // The hamburger only renders at the smallest breakpoint
+    chromatic: { viewports: [chromaticViewports.googlePixel2] },
+
     snapshot: {
       skip: true,
     },
