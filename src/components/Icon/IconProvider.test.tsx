@@ -401,11 +401,16 @@ describe('<IconProvider />', () => {
     // the point of the provider.
     const unmigrated = { icon: 'add' } as Record<string, unknown>;
 
+    // quiet the warning since that is expected
+    const consoleMock = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
     const { container } = render(
       <Menu>
         <Menu.Button {...unmigrated}>Actions</Menu.Button>
       </Menu>,
     );
+
+    consoleMock.mockRestore();
 
     expect(hasGlyph(container, 'chevron-down')).toBe(true);
     expect(hasGlyph(container, 'add')).toBe(false);
