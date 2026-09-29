@@ -157,7 +157,7 @@
     "postcss-mixins": "^12.1.2",
     "postcss-nested": "^7.0.2",
     "postcss-simple-vars": "^7.0.1",
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.9",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
