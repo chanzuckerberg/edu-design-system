@@ -35,8 +35,6 @@ export type CodeBlockProps = {
 };
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ## Usage
  *
  * Show a block of formatted code, with syntax highlighting, in a block container.
@@ -151,6 +149,7 @@ ${children}
               }
             }}
             rank="secondary"
+            size="md"
           >
             {copyStyle === 'text' ? copyButtonText : undefined}
           </Button>
