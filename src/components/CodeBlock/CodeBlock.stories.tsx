@@ -131,6 +131,20 @@ export const CurlExample: StoryObj<Args> = {
   },
 };
 
+/**
+ * The copy button fits within a single-line code block.
+ */
+export const SingleLineWithCopyIcon: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+    copyStyle: 'icon',
+  },
+
+  play: async () => {
+    await userEvent.tab();
+  },
+};
+
 // TODO: Add code example showing when to use an external copy button instead of the built-in one
 
 /**

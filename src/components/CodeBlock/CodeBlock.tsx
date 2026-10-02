@@ -151,6 +151,7 @@ ${children}
               }
             }}
             rank="secondary"
+            size="md"
           >
             {copyStyle === 'text' ? copyButtonText : undefined}
           </Button>
