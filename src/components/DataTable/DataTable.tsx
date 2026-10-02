@@ -7,12 +7,12 @@ import React, {
   type ReactNode,
 } from 'react';
 
-import getIconNameFromStatus from '../../util/getIconNameFromStatus';
+import type { IconOrContent } from '../../util/utility-types';
 import type { EDSBase, Size, Status, Align } from '../../util/variant-types';
 
 import Button, { type ButtonProps } from '../Button';
 import ButtonGroup from '../ButtonGroup';
-import { Icon, type IconName } from '../Icon/Icon';
+import { hasSlotContent, IconSlot, useSemanticIcon } from '../Icon';
 import InputField from '../InputField';
 import Text from '../Text';
 
@@ -111,9 +111,10 @@ export type DataTableHeaderCellProps = EDSBase & {
    */
   isSortable?: boolean;
   /**
-   * An icon that prefixes the field input.
+   * Content that prefixes the cell text. Pass an EDS icon name to render a decorative
+   * icon, or a node to render it as-is.
    */
-  leadingIcon?: IconName;
+  leadingContent?: IconOrContent;
   /**
    * SubLabel to use next to table cell text content
    *
@@ -451,7 +452,7 @@ export const DataTableHeaderCell = ({
   className,
   hasHorizontalDivider,
   isSortable,
-  leadingIcon,
+  leadingContent,
   sortDirection = 'default',
   onSortClick,
   subLabel,
@@ -467,11 +468,11 @@ export const DataTableHeaderCell = ({
     )}
     {...rest}
   >
-    {leadingIcon && (
-      <Icon
-        className={styles['data-cell__cell--icon']}
-        name={leadingIcon}
-        purpose="decorative"
+    {hasSlotContent(leadingContent) && (
+      <IconSlot
+        as="div"
+        className={styles['data-cell__cell--leading-content']}
+        content={leadingContent}
         size="16px"
       />
     )}
@@ -508,7 +509,7 @@ export const DataTableDataCell = ({
   children,
   className,
   hasHorizontalDivider,
-  leadingIcon,
+  leadingContent,
   subLabel,
   ...rest
 }: DataTableDataCellProps) => {
@@ -519,11 +520,11 @@ export const DataTableDataCell = ({
   );
   return (
     <div className={dataCellClassName} {...rest}>
-      {leadingIcon && (
-        <Icon
-          className={styles['data-cell__cell--icon']}
-          name={leadingIcon}
-          purpose="decorative"
+      {hasSlotContent(leadingContent) && (
+        <IconSlot
+          as="div"
+          className={styles['data-cell__cell--leading-content']}
+          content={leadingContent}
           size="16px"
         />
       )}
@@ -565,11 +566,15 @@ export const DataTableStatusCell = ({
 
   const { size } = useContext(DataTableContext);
 
+  // The status icon is semantic, and the same glyph a notification shows for that status,
+  // so it comes from `IconProvider` rather than from a map of its own.
+  const statusIcon = useSemanticIcon(status);
+
   return (
     <div className={statusCellClassName} {...rest}>
-      {status && (
-        <Icon
-          name={getIconNameFromStatus(status)}
+      {status && hasSlotContent(statusIcon) && (
+        <IconSlot
+          content={statusIcon}
           purpose="decorative"
           size={size === 'sm' ? '16px' : '24px'}
         />
@@ -702,7 +707,7 @@ const DataTableSearch = () => {
     <InputField
       aria-label="search"
       disabled
-      leadingIcon="search"
+      leadingContent="search"
       placeholder="Search..."
       type="search"
     />

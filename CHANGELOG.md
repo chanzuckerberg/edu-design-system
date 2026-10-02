@@ -2,13 +2,108 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
-## [18.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.7.0...v18.8.0) (2026-09-25)
+## [19.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.8.0...v19.0.0) (2026-09-28)
 
+### ⚠ BREAKING CHANGES
+
+* `Accordion.Button` no longer accepts `indicatorContent`, `Menu.Button` no
+  longer accepts `trailingContent` or `icon`, `Breadcrumbs.Item` no longer accepts `icon`, and
+  `Select.Button`, `Select.ButtonWrapper`, `Combobox.Button`, `Combobox.Input`, and
+  `Combobox.InputWrapper` no longer accept `icon`. Run `npx eds-migrate 18-to-19` to clean them
+  up; each rendered what the default `IconProvider` renders now. To change one of those icons,
+  wrap the app in an `IconProvider` and set the role instead.
+* **Accordion, DataTable, InputField, SelectionChip:** `Accordion.Button` no longer accepts `trailingIcon`. Run `npx
+  eds-migrate 18-to-19` to move to `indicatorContent`.
+
+  EDS-2000
+* **Accordion, DataTable, InputField, SelectionChip:** `Accordion.Button`, `DataTable.HeaderCell`, `DataTable.DataCell`,
+  `InputField`, and `SelectionChip` no longer accept `leadingIcon`. Run `npx eds-migrate
+  18-to-19` to move to `leadingContent`.
+
+  EDS-2000
+* **Accordion, DataTable, InputField, SelectionChip:** `Accordion.Row` no longer accepts `hasLeadingIcon`. Run `npx
+  eds-migrate 18-to-19` to move to `hasLeadingContent`.
+
+  EDS-2000
+* `Button` no longer supplies a default `icon`. A button with `iconLayout` set
+  to anything but `"none"` and no `icon` now renders no icon and warns, where it previously
+  rendered `add-encircled`. Pass the icon explicitly, or leave `iconLayout` unset.
+
+  EDS-2136
+* `Link`'s `icon` takes `"forward"` where it took `"chevron-right"`. Run
+  `npx eds-migrate 18-to-19` to rename them. `"forward"` defaults to `chevron-right`, so links
+  render exactly as before; set the `forward` role on an `IconProvider` to change it.
+* `PopoverListItem` and `Menu.Item` no longer accept `icon`, and
+  `Menu.Button` no longer accepts `icon`. Run `npx eds-migrate 18-to-19` to move them to
+  `leadingContent` and `trailingContent`. A string passed to
+  `PopoverListItem.leadingContent` is now read as an EDS icon name rather than rendered as
+  text; pass a `Text` node instead if you meant a label.
+
+  EDS-2134
+* **Text, Heading:** `Text` and `Heading` no longer accept the `input-md`, `input`,
+  `tab-lg-active`, `tab-lg`, `tab-sm-active`, `tab-sm`, `tag`, `appHeader-label`,
+  `appHeader-subLabel`, and `dataTable-headerCell` presets. Run `npx eds-migrate
+  18-to-19` to move to the equivalent reusable preset.
+
+  EDS-2028
+* **Tooltip:** `Tooltip` no longer accepts Tippy-only props such as `plugins`,
+  `popperOptions`, `render`, `theme`, and `followCursor`. `onShow` and `onHide`
+  no longer receive the Tippy instance. Run `eds-migrate` for the props that
+  move without changing behavior.
+
+  EDS-2168
+* **Tooltip:** `Tooltip`'s `text` prop is now `content`. Run `eds-migrate`
+  to rename it.
+
+  EDS-2168
+* **AppFooter:** drop the -color suffix from the color custom properties ([#2619](https://github.com/chanzuckerberg/edu-design-system/issues/2619))
+* EDS now requires React 19. The peer dependency range moved
+  from `>= 18` to `>= 19`, and `SelectionChip`, `Combobox`, `Select` and
+  `AppHeader` depend on React 19 rendering `inert` and `popover`.
+
+  EDS-2127
+
+  * test(AppHeader): apply focus ring to nav item
+* **TabGroup:** remove handling for TabGroup Illustrations ([#2616](https://github.com/chanzuckerberg/edu-design-system/issues/2616))
+* **Accordion:** remove size property ([#2617](https://github.com/chanzuckerberg/edu-design-system/issues/2617))
+* **Modal:** trim the height and overlay emphasis props ([#2635](https://github.com/chanzuckerberg/edu-design-system/issues/2635))
+* update to latest test harness versions ([#2472](https://github.com/chanzuckerberg/edu-design-system/issues/2472))
+* **tokens:** update token naming for datatable tokens ([#2631](https://github.com/chanzuckerberg/edu-design-system/issues/2631))
+
+### Features
+
+* **Accordion, DataTable, InputField, SelectionChip:** rename leading icon props to content props ([#2620](https://github.com/chanzuckerberg/edu-design-system/issues/2620)) ([67f284f](https://github.com/chanzuckerberg/edu-design-system/commit/67f284fe0d2c2a73d0ac2c51109786f50e127462))
+* **Accordion:** remove size property ([#2617](https://github.com/chanzuckerberg/edu-design-system/issues/2617)) ([cf8a349](https://github.com/chanzuckerberg/edu-design-system/commit/cf8a349df5c6437d83617007b9b641a97554d578))
+* allow custom property overrides via the style prop ([#2618](https://github.com/chanzuckerberg/edu-design-system/issues/2618)) ([3b80b3a](https://github.com/chanzuckerberg/edu-design-system/commit/3b80b3abf6481ad82ba1453804885ff12ef76d6a))
+* **AppFooter:** drop the -color suffix from the color custom properties ([#2619](https://github.com/chanzuckerberg/edu-design-system/issues/2619)) ([6963bf1](https://github.com/chanzuckerberg/edu-design-system/commit/6963bf12d5113ba3a83de0b849f51bcb249c290a))
+* **build:** emit an ESM build alongside CommonJS ([#2640](https://github.com/chanzuckerberg/edu-design-system/issues/2640)) ([f87590a](https://github.com/chanzuckerberg/edu-design-system/commit/f87590a2a3fea01badacf77e45506dcc5a998f52))
+* **Card:** add titleAs to Card.Header ([#2638](https://github.com/chanzuckerberg/edu-design-system/issues/2638)) ([b19974f](https://github.com/chanzuckerberg/edu-design-system/commit/b19974f9ff7c7cefda67679f4fe407867a2c1f4d))
+* **Combobox:** align options to the field, add empty state ([#2645](https://github.com/chanzuckerberg/edu-design-system/issues/2645)) ([28c13cb](https://github.com/chanzuckerberg/edu-design-system/commit/28c13cb5c9d25eaee783d060ceb864e72554ea74))
+* draw semantic icons from an IconProvider context ([#2627](https://github.com/chanzuckerberg/edu-design-system/issues/2627))
+* guard Modal children, fix InputField padding precedence ([#2646](https://github.com/chanzuckerberg/edu-design-system/issues/2646)) ([792648c](https://github.com/chanzuckerberg/edu-design-system/commit/792648ce0eb533f406adae4ab4a4db1012ae3f5f))
+* **migrate:** add a transform for renamed CSS custom properties ([#2632](https://github.com/chanzuckerberg/edu-design-system/issues/2632)) ([4719580](https://github.com/chanzuckerberg/edu-design-system/commit/47195803a265cf2ecd49553de25face566d67a97))
+* **Modal:** shrink lg modals to fit short content ([#2649](https://github.com/chanzuckerberg/edu-design-system/issues/2649)) ([1548917](https://github.com/chanzuckerberg/edu-design-system/commit/1548917857eb43945f756fdbf0b521b15b423fed))
+* **Modal:** trim the height and overlay emphasis props ([#2635](https://github.com/chanzuckerberg/edu-design-system/issues/2635)) ([2cef261](https://github.com/chanzuckerberg/edu-design-system/commit/2cef261c7cf7d34be5a32e2ece5ae0461b5b8595))
+* **TabGroup:** remove handling for TabGroup Illustrations ([#2616](https://github.com/chanzuckerberg/edu-design-system/issues/2616)) ([1b462d1](https://github.com/chanzuckerberg/edu-design-system/commit/1b462d1092803d5e0870c2dffa845139ae8dd276))
+* **Text, Heading:** hide component-specific typography presets ([#2613](https://github.com/chanzuckerberg/edu-design-system/issues/2613))
+* **tokens:** update token naming for datatable tokens ([#2631](https://github.com/chanzuckerberg/edu-design-system/issues/2631)) ([cc784f1](https://github.com/chanzuckerberg/edu-design-system/commit/cc784f1a05110fe41b8ec22bd1f8a4537936849e))
+* **Tooltip:** move from Tippy.js to Floating UI ([#2644](https://github.com/chanzuckerberg/edu-design-system/issues/2644)) ([98afbcb](https://github.com/chanzuckerberg/edu-design-system/commit/98afbcb8b998de6a74298e9c284b3ace613b17a1))
+* update to latest test harness versions ([#2472](https://github.com/chanzuckerberg/edu-design-system/issues/2472)) ([9ca13e8](https://github.com/chanzuckerberg/edu-design-system/commit/9ca13e826ec88f425bd19519070983dac2ca4324))
+* upgrade to React 19 ([#2614](https://github.com/chanzuckerberg/edu-design-system/issues/2614)) ([d08a637](https://github.com/chanzuckerberg/edu-design-system/commit/d08a63752eb78656e3f9e56ae86d30eec9964c1e))
+* widen the remaining icon props to content slots ([#2623](https://github.com/chanzuckerberg/edu-design-system/issues/2623)) ([d3dbb3e](https://github.com/chanzuckerberg/edu-design-system/commit/d3dbb3ed89c338fe6f230619aee85f226354be8e))
+
+### Bug Fixes
+
+* **Modal:** correct responsive widths for size="sm" ([#2633](https://github.com/chanzuckerberg/edu-design-system/issues/2633)) ([8aead00](https://github.com/chanzuckerberg/edu-design-system/commit/8aead009386503088876d17c91f5af90a198dce0))
+* **ProgressBar:** stop an embedded bar erroring on its own value ([#2639](https://github.com/chanzuckerberg/edu-design-system/issues/2639)) ([c066083](https://github.com/chanzuckerberg/edu-design-system/commit/c06608330a3e93c46ba513ce5d15a449e014ba0b))
+
+## [18.8.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.7.0...v18.8.0) (2026-09-25)
 
 ### Features
 
 * **CodeBlock:** add custom theme ([#2642](https://github.com/chanzuckerberg/edu-design-system/issues/2642)) ([b091164](https://github.com/chanzuckerberg/edu-design-system/commit/b091164b5fa461222272d8148dcf9069464a138b))
 * **icons:** add in new open-in-new icon ([#2643](https://github.com/chanzuckerberg/edu-design-system/issues/2643)) ([4c0fcab](https://github.com/chanzuckerberg/edu-design-system/commit/4c0fcab98095cdff66e071f168ab531a641dac7e))
+
 
 ## [18.7.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.6.1...v18.7.0) (2026-09-01)
 

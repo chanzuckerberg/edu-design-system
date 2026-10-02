@@ -1,4 +1,6 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 
 import React from 'react';
 
@@ -9,12 +11,15 @@ import {
 } from './DataTable';
 
 // We import all of the utilities from tanstack here, and this can contain other custom utilities
-import Button from '../../components/Button';
-import Checkbox from '../../components/Checkbox';
 import { utils as DataTableUtils } from '../../components/DataTable';
-import Menu from '../../components/Menu';
 
+import FpoBlock from '../../storyUtils/FpoBlock';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports } from '../../util/viewports';
+import Button from '../Button';
+import Checkbox from '../Checkbox';
+import { IconProvider } from '../Icon';
+import Menu from '../Menu';
 
 export default {
   title: 'Components/DataTable',
@@ -40,7 +45,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:2.1.0'],
+  tags: ['autodocs', 'version:3.0.0'],
 } as Meta<Args>;
 
 type Args = DataTableProps;
@@ -370,7 +375,7 @@ export const Selectable: StoryObj<Args> = {
         columnHelper.accessor('firstName', {
           header: () => (
             <DataTable.HeaderCell
-              leadingIcon="person-add"
+              leadingContent="person-add"
               sortDirection="ascending"
               subLabel="Given Name"
             >
@@ -378,7 +383,7 @@ export const Selectable: StoryObj<Args> = {
             </DataTable.HeaderCell>
           ),
           cell: (info) => (
-            <DataTable.DataCell leadingIcon="person-add">
+            <DataTable.DataCell leadingContent="person-add">
               {info.getValue()}
             </DataTable.DataCell>
           ),
@@ -521,7 +526,7 @@ export const VerticalDivider: StoryObj<Args> = {
           header: () => (
             <DataTable.HeaderCell
               hasHorizontalDivider
-              leadingIcon="person-add"
+              leadingContent="person-add"
               sortDirection="ascending"
               subLabel="Given Name"
             >
@@ -529,7 +534,10 @@ export const VerticalDivider: StoryObj<Args> = {
             </DataTable.HeaderCell>
           ),
           cell: (info) => (
-            <DataTable.DataCell hasHorizontalDivider leadingIcon="person-add">
+            <DataTable.DataCell
+              hasHorizontalDivider
+              leadingContent="person-add"
+            >
               {info.getValue()}
             </DataTable.DataCell>
           ),
@@ -851,7 +859,7 @@ export const DefaultWithCustomTable: StoryObj<Args> = {
   args: {
     children: (
       <table>
-        <tbody className="border-2 border-utility-default-lowEmphasis-hover">
+        <tbody className="border-utility-default-lowEmphasis-hover border-2">
           <tr>
             <td>Custom or standard table rows/cells here</td>
           </tr>
@@ -971,4 +979,77 @@ export const WithLongCaption: StoryObj<Args> = {
       />
     ),
   },
+};
+
+// A cell's `leadingContent` renders its icon at 16px, so the FPO blocks below match
+// that rather than pushing the row height out.
+const fpoColumns = [
+  columnHelper.accessor('firstName', {
+    header: () => (
+      <DataTable.HeaderCell
+        leadingContent={<FpoBlock size={16} />}
+        subLabel="Given Name"
+      >
+        First Name
+      </DataTable.HeaderCell>
+    ),
+    cell: (info) => (
+      <DataTable.DataCell leadingContent={<FpoBlock size={16} />}>
+        {info.getValue()}
+      </DataTable.DataCell>
+    ),
+  }),
+  columnHelper.accessor((row) => row.lastName, {
+    id: 'lastName',
+    header: () => (
+      <DataTable.HeaderCell subLabel="Surname">Last Name</DataTable.HeaderCell>
+    ),
+    cell: (info) => <DataTable.DataCell>{info.getValue()}</DataTable.DataCell>,
+  }),
+  columnHelper.accessor('age', {
+    header: () => (
+      <DataTable.HeaderCell alignment="trailing">Age</DataTable.HeaderCell>
+    ),
+    cell: (info) => (
+      <DataTable.DataCell alignment="trailing">
+        {info.renderValue()}
+      </DataTable.DataCell>
+    ),
+  }),
+];
+
+/**
+ * `leadingContent` on `DataTable.HeaderCell` and `DataTable.DataCell` takes arbitrary
+ * content, not only an icon name. The blocks below stand in for whatever you supply, so
+ * the slot itself is the subject rather than the icon that happened to be picked.
+ */
+export const WithFpoLeadingContent: StoryObj<Args> = {
+  args: {
+    caption: 'Leading content slot',
+    subCaption: 'Header cell and data cell both take arbitrary content',
+  },
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const table = DataTableUtils.useReactTable({
+      data: defaultData,
+      columns: fpoColumns,
+      getCoreRowModel: DataTableUtils.getCoreRowModel(),
+    });
+
+    return <DataTable {...args} table={table} />;
+  },
+};
+
+/**
+ * A status cell's icon is the same glyph a notification shows for that status, so it comes
+ * from `IconProvider` rather than from a map of `DataTable`'s own. The leading and trailing
+ * cell slots are the consumer's to fill, and the provider says nothing about them.
+ */
+export const WithProvidedIcons: StoryObj<Args> = {
+  ...StatusRows,
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

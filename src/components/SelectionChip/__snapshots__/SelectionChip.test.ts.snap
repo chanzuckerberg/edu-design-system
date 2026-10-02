@@ -1,22 +1,22 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<SelectionChip /> ControlledChecked story renders snapshot 1`] = `
+exports[`<SelectionChip /> > ControlledChecked story renders snapshot 1`] = `
 <label
-  class="selection-chip selection-chip--has-icon"
-  for=":r5:"
+  class="_selection-chip_b63b89 _selection-chip--has-leading-content_b63b89"
+  for="_r_5_"
 >
   <input
     checked=""
-    class="selection-chip__input"
-    id=":r5:"
+    class="_selection-chip__input_b63b89"
+    id="_r_5_"
     type="checkbox"
   />
   <div
-    class="selection-chip__body"
+    class="_selection-chip__body_b63b89"
   >
     <svg
       aria-hidden="true"
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ exports[`<SelectionChip /> ControlledChecked story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--label-lg selection-chip__label"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
     >
       Label
     </span>
@@ -34,21 +34,21 @@ exports[`<SelectionChip /> ControlledChecked story renders snapshot 1`] = `
 </label>
 `;
 
-exports[`<SelectionChip /> Default story renders snapshot 1`] = `
+exports[`<SelectionChip /> > Default story renders snapshot 1`] = `
 <label
-  class="selection-chip"
-  for=":r0:"
+  class="_selection-chip_b63b89"
+  for="_r_0_"
 >
   <input
-    class="selection-chip__input"
-    id=":r0:"
+    class="_selection-chip__input_b63b89"
+    id="_r_0_"
     type="checkbox"
   />
   <div
-    class="selection-chip__body"
+    class="_selection-chip__body_b63b89"
   >
     <span
-      class="text text--label-lg selection-chip__label"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
     >
       Label
     </span>
@@ -56,22 +56,23 @@ exports[`<SelectionChip /> Default story renders snapshot 1`] = `
 </label>
 `;
 
-exports[`<SelectionChip /> Disabled story renders snapshot 1`] = `
+exports[`<SelectionChip /> > Disabled story renders snapshot 1`] = `
 <label
-  class="selection-chip selection-chip--disabled"
-  for=":r3:"
+  class="_selection-chip_b63b89 _selection-chip--disabled_b63b89"
+  for="_r_3_"
+  inert=""
 >
   <input
-    class="selection-chip__input"
+    class="_selection-chip__input_b63b89"
     disabled=""
-    id=":r3:"
+    id="_r_3_"
     type="checkbox"
   />
   <div
-    class="selection-chip__body"
+    class="_selection-chip__body_b63b89"
   >
     <span
-      class="text text--label-lg selection-chip__label"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
     >
       Label
     </span>
@@ -79,23 +80,24 @@ exports[`<SelectionChip /> Disabled story renders snapshot 1`] = `
 </label>
 `;
 
-exports[`<SelectionChip /> DisabledSelected story renders snapshot 1`] = `
+exports[`<SelectionChip /> > DisabledSelected story renders snapshot 1`] = `
 <label
-  class="selection-chip selection-chip--disabled"
-  for=":r4:"
+  class="_selection-chip_b63b89 _selection-chip--disabled_b63b89"
+  for="_r_4_"
+  inert=""
 >
   <input
     checked=""
-    class="selection-chip__input"
+    class="_selection-chip__input_b63b89"
     disabled=""
-    id=":r4:"
+    id="_r_4_"
     type="checkbox"
   />
   <div
-    class="selection-chip__body"
+    class="_selection-chip__body_b63b89"
   >
     <span
-      class="text text--label-lg selection-chip__label"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
     >
       Label
     </span>
@@ -103,22 +105,22 @@ exports[`<SelectionChip /> DisabledSelected story renders snapshot 1`] = `
 </label>
 `;
 
-exports[`<SelectionChip /> Selected story renders snapshot 1`] = `
+exports[`<SelectionChip /> > Selected story renders snapshot 1`] = `
 <label
-  class="selection-chip"
-  for=":r1:"
+  class="_selection-chip_b63b89"
+  for="_r_1_"
 >
   <input
     checked=""
-    class="selection-chip__input"
-    id=":r1:"
+    class="_selection-chip__input_b63b89"
+    id="_r_1_"
     type="checkbox"
   />
   <div
-    class="selection-chip__body"
+    class="_selection-chip__body_b63b89"
   >
     <span
-      class="text text--label-lg selection-chip__label"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
     >
       Label
     </span>
@@ -126,23 +128,23 @@ exports[`<SelectionChip /> Selected story renders snapshot 1`] = `
 </label>
 `;
 
-exports[`<SelectionChip /> UncontrolledChecked story renders snapshot 1`] = `
+exports[`<SelectionChip /> > UncontrolledChecked story renders snapshot 1`] = `
 <label
-  class="selection-chip selection-chip--has-icon"
-  for=":r6:"
+  class="_selection-chip_b63b89 _selection-chip--has-leading-content_b63b89"
+  for="_r_6_"
 >
   <input
     checked=""
-    class="selection-chip__input"
-    id=":r6:"
+    class="_selection-chip__input_b63b89"
+    id="_r_6_"
     type="checkbox"
   />
   <div
-    class="selection-chip__body"
+    class="_selection-chip__body_b63b89"
   >
     <svg
       aria-hidden="true"
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +154,7 @@ exports[`<SelectionChip /> UncontrolledChecked story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--label-lg selection-chip__label"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
     >
       Label
     </span>
@@ -160,22 +162,22 @@ exports[`<SelectionChip /> UncontrolledChecked story renders snapshot 1`] = `
 </label>
 `;
 
-exports[`<SelectionChip /> WithIcon story renders snapshot 1`] = `
+exports[`<SelectionChip /> > WithIcon story renders snapshot 1`] = `
 <label
-  class="selection-chip selection-chip--has-icon"
-  for=":r2:"
+  class="_selection-chip_b63b89 _selection-chip--has-leading-content_b63b89"
+  for="_r_2_"
 >
   <input
-    class="selection-chip__input"
-    id=":r2:"
+    class="_selection-chip__input_b63b89"
+    id="_r_2_"
     type="checkbox"
   />
   <div
-    class="selection-chip__body"
+    class="_selection-chip__body_b63b89"
   >
     <svg
       aria-hidden="true"
-      class="icon"
+      class="_icon_779da8"
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +187,34 @@ exports[`<SelectionChip /> WithIcon story renders snapshot 1`] = `
       />
     </svg>
     <span
-      class="text text--label-lg selection-chip__label"
+      class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
+    >
+      Label
+    </span>
+  </div>
+</label>
+`;
+
+exports[`<SelectionChip /> > WithLeadingContent story renders snapshot 1`] = `
+<label
+  class="_selection-chip_b63b89 _selection-chip--has-leading-content_b63b89"
+  for="_r_7_"
+>
+  <input
+    class="_selection-chip__input_b63b89"
+    id="_r_7_"
+    type="checkbox"
+  />
+  <div
+    class="_selection-chip__body_b63b89"
+  >
+    <span
+      aria-hidden="true"
+      class="fpo"
+      style="height: 14px; width: 14px; font-size: 5px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+    />
+    <span
+      class="_text_b3eba3 _text--label-lg_b3eba3 _selection-chip__label_b63b89"
     >
       Label
     </span>

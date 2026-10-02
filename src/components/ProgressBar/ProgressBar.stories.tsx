@@ -1,7 +1,11 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
-import type React from 'react';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
+import React from 'react';
 
 import { ProgressBar } from './ProgressBar';
+import Card from '../Card';
+import Text from '../Text';
 
 export default {
   title: 'Components/ProgressBar',
@@ -13,7 +17,7 @@ export default {
     },
     layout: 'centered',
   },
-  tags: ['beta', 'version:1.0.1'],
+  tags: ['beta', 'version:1.1.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof ProgressBar>;
@@ -27,6 +31,37 @@ export const Default: StoryObj<Args> = {
     value: 0.33,
     className: 'w-[200px]',
   },
+};
+
+/**
+ * `context="embedded"` is for a bar that belongs to the container around it rather than to the
+ * page. The corners square off so the bar can sit flush against the container's edges, and the
+ * labels drop out. Give it an `aria-label`, since nothing visible is left to name it.
+ *
+ * The bar does not break out of its container's padding on its own. Here the negative margins
+ * cancel the `Card`'s padding to take it to the edges, and the `Card` clips the square corners
+ * back to its own radius.
+ */
+export const Embedded: StoryObj<Args> = {
+  args: {
+    'aria-label': 'Lesson progress, 33 percent',
+    context: 'embedded',
+    value: 0.33,
+  },
+  render: (args: Args) => (
+    <Card className="w-[366px]">
+      <Card.Header subTitle="Lesson 3 of 9" title="Text complexity" />
+      <Card.Body className="pb-spacing-size-3 pt-spacing-size-2">
+        <Text preset="body-md">
+          Pick up where you left off. Your progress is saved as you go.
+        </Text>
+      </Card.Body>
+      <ProgressBar
+        {...args}
+        className="-mx-spacing-size-3 -mb-spacing-size-3"
+      />
+    </Card>
+  ),
 };
 
 /**

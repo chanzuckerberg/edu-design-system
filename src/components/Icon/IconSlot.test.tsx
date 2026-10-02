@@ -1,0 +1,149 @@
+import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { describe, expect, it } from 'vitest';
+
+import { hasSlotContent, IconSlot } from './IconSlot';
+import type { IconOrContent } from '../../util/utility-types';
+
+describe('<IconSlot />', () => {
+  it('renders a string as a decorative icon', () => {
+    const { container } = render(<IconSlot content="search" />);
+
+    // A decorative icon is aria-hidden by design, so there is no accessible query for
+    // it. Reaching into the container is the only way to assert it rendered.
+    /* eslint-disable testing-library/no-container */
+    expect(container.querySelector('svg')).toBeInTheDocument();
+    expect(container.querySelector('svg')).toHaveAttribute('aria-hidden');
+    /* eslint-enable testing-library/no-container */
+  });
+
+  it('gives an informative icon its title', () => {
+    render(
+      <IconSlot content="chevron-down" purpose="informative" title="Expand" />,
+    );
+
+    expect(screen.getByTitle('Expand')).toBeInTheDocument();
+  });
+
+  it('renders custom content as-is, unwrapped when there is no className', () => {
+    const { container } = render(
+      <IconSlot content={<span data-testid="custom">Hi</span>} />,
+    );
+
+    expect(screen.getByTestId('custom')).toBeInTheDocument();
+    expect(container.firstElementChild).toBe(screen.getByTestId('custom'));
+  });
+
+  it('wraps custom content so it can carry the className', () => {
+    const { container } = render(
+      <IconSlot className="wrapper" content={<span>Hi</span>} />,
+    );
+
+    expect(container.firstElementChild?.tagName).toBe('SPAN');
+    expect(container.firstElementChild).toHaveClass('wrapper');
+  });
+
+  it('wraps in the requested element so block content stays valid', () => {
+    const { container } = render(
+      <IconSlot as="div" className="wrapper" content={<div>Hi</div>} />,
+    );
+
+    expect(container.firstElementChild?.tagName).toBe('DIV');
+  });
+
+  it.each([[null], [undefined], [false], [true], ['']])(
+    'throws for %p',
+    (content) => {
+      // Returning `null` here read as harmless and was not: the slot kept its place in the
+      // layout, so a row laid out space around nothing and an icon-only control came out
+      // blank and still clickable. The caller is the one that can decide what to do
+      // instead, so the mistake goes back to it.
+      expect(() => render(<IconSlot content={content} />)).toThrow(
+        /rendered with content that draws nothing/,
+      );
+    },
+  );
+
+  it('renders 0 rather than treating it as absent', () => {
+    // Guards the `{content && ...}` trap: `0` is a valid ReactNode, and a truthiness
+    // check would both skip the slot and leak a stray "0" into the markup.
+    const { container } = render(<IconSlot content={0} />);
+
+    expect(container).toHaveTextContent('0');
+  });
+
+  describe('hasSlotContent', () => {
+    it.each([[null], [undefined], [false], [true], ['']])(
+      'reports %p as empty',
+      (content) => {
+        expect(hasSlotContent(content)).toBe(false);
+      },
+    );
+
+    it.each([[0], ['search'], [<span key="a">Hi</span>]])(
+      'reports %p as present',
+      (content) => {
+        expect(hasSlotContent(content)).toBe(true);
+      },
+    );
+
+    // An array is judged by its contents, the way React renders one. Wrapping each case in
+    // an extra array because `it.each` spreads the outer one.
+    it.each([[[]], [[null, false]], [[[], [null]]]])(
+      'reports the array %p as empty',
+      (content) => {
+        expect(hasSlotContent(content)).toBe(false);
+      },
+    );
+
+    /* eslint-disable react/jsx-no-useless-fragment -- a fragment with nothing useful in it
+       is exactly the shape under test here */
+    it('judges a fragment by its children', () => {
+      // A fragment contributes no element of its own, so `<></>` renders nothing at all.
+      // Counting it as content was the last way to empty a semantic role, which left an
+      // icon-only control blank but still clickable.
+      expect(hasSlotContent(<></>)).toBe(false);
+      expect(hasSlotContent(<>{null}</>)).toBe(false);
+      expect(hasSlotContent(<>{[]}</>)).toBe(false);
+      expect(hasSlotContent(<>{'search'}</>)).toBe(true);
+    });
+    /* eslint-enable react/jsx-no-useless-fragment */
+
+    it('counts an element that happens to render nothing', () => {
+      // Unlike a fragment, this produces a node, and what a component returns cannot be
+      // known without rendering it.
+      expect(hasSlotContent(<span>{null}</span>)).toBe(true);
+    });
+
+    it('takes a non-array iterable on trust rather than consuming it', () => {
+      // React renders any iterable of children, so judging one by its contents would be
+      // more accurate — but inspecting it means iterating it, and that exhausts a generator
+      // and leaves nothing for the caller to render. Losing valid content is worse than
+      // reserving space for an empty collection, so only arrays are looked into.
+      function* nothing() {}
+      const generator = nothing() as unknown as IconOrContent;
+
+      expect(hasSlotContent(generator)).toBe(true);
+      // Still intact for whoever renders it, which is the point.
+      expect(Array.from(generator as Iterable<unknown>)).toEqual([]);
+
+      expect(hasSlotContent(new Set() as unknown as IconOrContent)).toBe(true);
+    });
+
+    it.each([[[0]], [[<span key="a">Hi</span>]], [[null, 'search']]])(
+      'reports the array %p as present',
+      (content) => {
+        expect(hasSlotContent(content)).toBe(true);
+      },
+    );
+
+    it('throws for an array with nothing in it rather than leaving a wrapper', () => {
+      // The array itself used to count as content and leave `<span class="wrapper">`
+      // behind, laying out space around nothing. Judging it by its contents made the slot
+      // empty instead, and an empty slot is now the caller's to avoid.
+      expect(() =>
+        render(<IconSlot className="wrapper" content={[]} />),
+      ).toThrow(/rendered with content that draws nothing/);
+    });
+  });
+});

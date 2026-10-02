@@ -1,6 +1,15 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
+import {
+  describe,
+  beforeEach,
+  afterEach,
+  expect,
+  it,
+  vi,
+  type Mock,
+} from 'vitest';
 
 import { Counter } from './Counter';
 import * as stories from './Counter.stories';
@@ -9,14 +18,14 @@ import type { StoryFile } from '../../../.storybook/utility-types';
 describe('<Counter />', () => {
   beforeEach(() => {
     // Add in mocks for the calls that can occur in implementation to suppress logging in tests
-    const consoleMock = jest.spyOn(console, 'error');
-    const consoleWarnMock = jest.spyOn(console, 'warn');
-    consoleMock.mockImplementation();
-    consoleWarnMock.mockImplementation();
+    const consoleMock = vi.spyOn(console, 'error');
+    const consoleWarnMock = vi.spyOn(console, 'warn');
+    consoleMock.mockImplementation(() => {});
+    consoleWarnMock.mockImplementation(() => {});
   });
 
   afterEach(() => {
-    jest.resetAllMocks();
+    vi.resetAllMocks();
   });
 
   generateSnapshots(stories as StoryFile);
@@ -31,7 +40,7 @@ describe('<Counter />', () => {
     render(<Counter count={10} data-testid="counter" total={10} />);
 
     expect(screen.getByTestId('counter').firstElementChild).not.toHaveClass(
-      'counter__count--invalid',
+      '_counter__count_172002 _counter__count--invalid_172002',
     );
   });
 
@@ -39,7 +48,7 @@ describe('<Counter />', () => {
     render(<Counter count={11} data-testid="counter" total={10} />);
 
     expect(screen.getByTestId('counter').firstElementChild).toHaveClass(
-      'counter__count--invalid',
+      '_counter__count_172002 _counter__count--invalid_172002',
     );
   });
 
@@ -82,7 +91,9 @@ describe('<Counter />', () => {
     const counter = screen.getByTestId('counter');
 
     expect(counter).toHaveTextContent(/^120%$/);
-    expect(counter.firstElementChild).toHaveClass('counter__count--invalid');
+    expect(counter.firstElementChild).toHaveClass(
+      '_counter__count_172002 _counter__count--invalid_172002',
+    );
   });
 
   it('reports zero percent rather than a non-finite value against a total of zero', () => {
@@ -99,12 +110,12 @@ describe('<Counter />', () => {
   });
 
   describe('emits messages when misused', () => {
-    let consoleErrorMock: jest.SpyInstance, consoleWarnMock: jest.SpyInstance;
+    let consoleErrorMock: Mock, consoleWarnMock: Mock;
     beforeEach(() => {
-      consoleWarnMock = jest.spyOn(console, 'warn');
-      consoleErrorMock = jest.spyOn(console, 'error');
-      consoleWarnMock.mockImplementation();
-      consoleErrorMock.mockImplementation();
+      consoleWarnMock = vi.spyOn(console, 'warn');
+      consoleErrorMock = vi.spyOn(console, 'error');
+      consoleWarnMock.mockImplementation(() => {});
+      consoleErrorMock.mockImplementation(() => {});
     });
 
     it('warns when given a negative value', () => {

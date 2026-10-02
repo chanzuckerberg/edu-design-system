@@ -1,5 +1,3 @@
-const breakpoints = require('./src/design-tokens/tier-1-definitions/breakpoints');
-
 module.exports = {
   plugins: {
     'postcss-import': {
@@ -7,7 +5,17 @@ module.exports = {
     },
     'tailwindcss/nesting': {},
     'postcss-mixins': {},
-    'postcss-simple-vars': { variables: breakpoints },
+    'postcss-simple-vars': {
+      variables: {
+        // TODO-AH: Sync all the breakpoints across files
+        'eds-bp-xs': '0px',
+        'eds-bp-sm': '600px',
+        'eds-bp-md': '768px',
+        'eds-bp-lg': '1040px',
+        'eds-bp-xl': '1440px',
+        'eds-bp-xxl': '1920px',
+      },
+    },
     'postcss-nested': {},
     tailwindcss: {},
   },

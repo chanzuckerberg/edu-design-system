@@ -1,22 +1,22 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Markdown /> Default story renders snapshot 1`] = `
+exports[`<Markdown /> > Default story renders snapshot 1`] = `
 <div
-  class="markdown"
+  class="_markdown_7f0a4d"
 >
   <h1
-    class="text text--headline-lg"
+    class="_text_b3eba3 _text--headline-lg_b3eba3"
   >
     Introduction
   </h1>
   
 
   <p
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     Source for Testing Images: 
     <a
-      class="link link--emphasis-default"
+      class="_link_d78ce8 _link--emphasis-default_d78ce8"
       href="https://picsum.photos/200/300"
     >
       https://picsum.photos/200/300
@@ -25,11 +25,11 @@ exports[`<Markdown /> Default story renders snapshot 1`] = `
   
 
   <p
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     This is an introductory block of text, with no additional formatting. 
     <span
-      class="text text--body-md-bold"
+      class="_text_b3eba3 _text--body-md-bold_b3eba3"
     >
       <strong>
         Strength
@@ -44,54 +44,54 @@ exports[`<Markdown /> Default story renders snapshot 1`] = `
   
 
   <h2
-    class="text text--headline-md"
+    class="_text_b3eba3 _text--headline-md_b3eba3"
   >
     Details
   </h2>
   
 
   <h3
-    class="text text--headline-sm"
+    class="_text_b3eba3 _text--headline-sm_b3eba3"
   >
     Lists
   </h3>
   
 
   <h4
-    class="text text--title-lg"
+    class="_text_b3eba3 _text--title-lg_b3eba3"
   >
     Unordered
   </h4>
   
 
   <p
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     Here are a list of items:
   </p>
   
 
   <ul
-    class="list list--size-md list--markerType-default"
+    class="_list_3b68af _list--size-md_3b68af _list--markerType-default_3b68af"
   >
     
 
     <li
-      class="list-item list-item--size-md"
+      class="_list-item_3b68af _list-item--size-md_3b68af"
     >
       Item One
     </li>
     
 
     <li
-      class="list-item list-item--size-md"
+      class="_list-item_3b68af _list-item--size-md_3b68af"
     >
       Item Two
     </li>
     
 
     <li
-      class="list-item list-item--size-md"
+      class="_list-item_3b68af _list-item--size-md_3b68af"
     >
       Item Three
     </li>
@@ -101,31 +101,31 @@ exports[`<Markdown /> Default story renders snapshot 1`] = `
   
 
   <hr
-    class="hr"
+    class="_hr_8bd4b7"
   />
   
 
   <ul
-    class="list list--size-md list--markerType-default"
+    class="_list_3b68af _list--size-md_3b68af _list--markerType-default_3b68af"
   >
     
 
     <li
-      class="list-item list-item--size-md"
+      class="_list-item_3b68af _list-item--size-md_3b68af"
     >
       Item A
     </li>
     
 
     <li
-      class="list-item list-item--size-md"
+      class="_list-item_3b68af _list-item--size-md_3b68af"
     >
       Item B
     </li>
     
 
     <li
-      class="list-item list-item--size-md"
+      class="_list-item_3b68af _list-item--size-md_3b68af"
     >
       Item C
     </li>
@@ -135,33 +135,33 @@ exports[`<Markdown /> Default story renders snapshot 1`] = `
   
 
   <h4
-    class="text text--title-lg"
+    class="_text_b3eba3 _text--title-lg_b3eba3"
   >
     Ordered
   </h4>
   
 
   <ol
-    class="list list--size-md list--markerType-default"
+    class="_list_3b68af _list--size-md_3b68af _list--markerType-default_3b68af"
   >
     
 
     <li
-      class="list-item list-item--size-md"
+      class="_list-item_3b68af _list-item--size-md_3b68af"
     >
       First Item
     </li>
     
 
     <li
-      class="list-item list-item--size-md"
+      class="_list-item_3b68af _list-item--size-md_3b68af"
     >
       Second Item
     </li>
     
 
     <li
-      class="list-item list-item--size-md"
+      class="_list-item_3b68af _list-item--size-md_3b68af"
     >
       Third Item
     </li>
@@ -171,19 +171,19 @@ exports[`<Markdown /> Default story renders snapshot 1`] = `
   
 
   <h3
-    class="text text--headline-sm"
+    class="_text_b3eba3 _text--headline-sm_b3eba3"
   >
     Block Quotes
   </h3>
   
 
   <blockquote
-    class="markdown__blockquote"
+    class="_markdown__blockquote_7f0a4d"
   >
     
 
     <p
-      class="text text--body-md"
+      class="_text_b3eba3 _text--body-md_b3eba3"
     >
       Including a block quote to demonstrate appearance.
 This should apply across multiple lines.
@@ -194,25 +194,25 @@ This should apply across multiple lines.
   
 
   <h3
-    class="text text--headline-sm"
+    class="_text_b3eba3 _text--headline-sm_b3eba3"
   >
     Code
   </h3>
   
 
   <h4
-    class="text text--title-lg"
+    class="_text_b3eba3 _text--title-lg_b3eba3"
   >
     Inline & Pre-formatted
   </h4>
   
 
   <p
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     To run a command try the following: 
     <code
-      class="markdown__code text text--code-md"
+      class="_markdown__code_7f0a4d _text_b3eba3 _text--code-md_b3eba3"
     >
       shell.py init
     </code>
@@ -221,10 +221,10 @@ This should apply across multiple lines.
   
 
   <pre
-    class="markdown__pre"
+    class="_markdown__pre_7f0a4d"
   >
     <code
-      class="markdown__code text text--code-md"
+      class="_markdown__code_7f0a4d _text_b3eba3 _text--code-md_b3eba3"
     >
       Some output from the above!
 When indented, it spans multiple lines.
@@ -234,54 +234,54 @@ When indented, it spans multiple lines.
   
 
   <h4
-    class="text text--title-lg"
+    class="_text_b3eba3 _text--title-lg_b3eba3"
   >
     MultiLine
   </h4>
   
 
   <pre
-    class="markdown__pre"
+    class="_markdown__pre_7f0a4d"
   >
     <div
-      class="code-block markdown--multiline"
+      class="_code-block_961fb8 _markdown--multiline_7f0a4d"
     >
       <pre>
         <div
-          style="color: rgb(58, 58, 55); background: rgb(255, 255, 255); font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
+          style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
         >
           <code
-            class="code-block__block"
+            class="_code-block__block_961fb8"
             style="white-space: pre-wrap;"
           >
             <span>
               <span
                 class="token token macro directive-hash"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 #
               </span>
               <span
                 class="token token macro directive"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 include
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                  
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 &lt;iostream.h&gt;
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                  
               </span>
@@ -294,31 +294,31 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token macro directive-hash"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 #
               </span>
               <span
                 class="token token macro directive"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 include
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                  
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 &lt;iomanip.h&gt;
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                  
               </span>
@@ -331,37 +331,37 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token macro directive-hash"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 #
               </span>
               <span
                 class="token token macro directive"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 include
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                  
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 &lt;fstream.h&gt;
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 	
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // To send the data to a text file 
               </span>
@@ -374,37 +374,37 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token macro directive-hash"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 #
               </span>
               <span
                 class="token token macro directive"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 include
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                  
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 &lt;conio.h&gt;
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 		
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // For the getch() function 
               </span>
@@ -417,25 +417,25 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token macro directive-hash"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 #
               </span>
               <span
                 class="token token macro directive"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 include
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                  
               </span>
               <span
                 class="token token macro"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 &lt;stdlib.h&gt;
               </span>
@@ -452,7 +452,7 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // This program calculates the cost of a gas fillup when the miles
               </span>
@@ -465,7 +465,7 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // travelled, the miles per gallon, and the price of a gallon of gas
               </span>
@@ -478,7 +478,7 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // is inputed. It also keeps track of the total transactions and sums
               </span>
@@ -491,7 +491,7 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // the total of all gas sales. This information is sent to a text file
               </span>
@@ -504,7 +504,7 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // on the desktop named dailyrpt.txt.
               </span>
@@ -521,7 +521,7 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 int
               </span>
@@ -530,19 +530,19 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 main
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -555,7 +555,7 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 {
               </span>
@@ -570,7 +570,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Defining output function 
               </span>
@@ -585,7 +585,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -604,7 +604,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 int
               </span>
@@ -613,7 +613,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -622,7 +622,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Variables being initialized... 
               </span>
@@ -637,7 +637,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -652,7 +652,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 =
               </span>
@@ -661,13 +661,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 0
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -682,7 +682,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -697,7 +697,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -712,7 +712,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -735,7 +735,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 char
               </span>
@@ -744,7 +744,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -753,7 +753,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // character in the dates
               </span>
@@ -772,7 +772,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 double
               </span>
@@ -781,7 +781,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -796,7 +796,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -811,7 +811,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -826,7 +826,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -841,7 +841,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -856,7 +856,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 =
               </span>
@@ -865,13 +865,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 0
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -886,7 +886,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 =
               </span>
@@ -895,13 +895,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 0
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -916,7 +916,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ,
               </span>
@@ -931,7 +931,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 =
               </span>
@@ -940,13 +940,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 0.0
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -955,7 +955,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // ...Variables initialized 
               </span>
@@ -978,7 +978,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Open the output file for the total price and transaction output 
               </span>
@@ -993,37 +993,37 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 .
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 open
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "C:\\windows\\desktop\\dailyrpt.txt"
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1042,7 +1042,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Setting precision and value output style 
               </span>
@@ -1057,7 +1057,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1066,25 +1066,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setprecision
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 2
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -1093,7 +1093,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1102,13 +1102,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setiosflags
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -1117,7 +1117,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token double-colon"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ::
               </span>
@@ -1126,7 +1126,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 |
               </span>
@@ -1135,7 +1135,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token double-colon"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ::
               </span>
@@ -1144,13 +1144,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1169,7 +1169,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Greeting and input... 
               </span>
@@ -1188,7 +1188,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1197,13 +1197,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nWelcome to the Gas Register Cashier"
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1218,7 +1218,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1227,7 +1227,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\n-----------------------------------"
               </span>
@@ -1236,7 +1236,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1245,13 +1245,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\n"
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1270,7 +1270,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1279,7 +1279,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nTo begin, enter the date (i.e. 01/01/2001)"
               </span>
@@ -1288,7 +1288,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1297,7 +1297,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1312,7 +1312,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;&gt;
               </span>
@@ -1321,7 +1321,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;&gt;
               </span>
@@ -1330,7 +1330,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;&gt;
               </span>
@@ -1339,7 +1339,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;&gt;
               </span>
@@ -1348,7 +1348,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;&gt;
               </span>
@@ -1357,7 +1357,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1366,7 +1366,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 //Input the date
               </span>
@@ -1385,7 +1385,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1394,7 +1394,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nPlease input requested values. If you want to quit, simply type -1 in"
               </span>
@@ -1403,7 +1403,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1412,13 +1412,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\n 'Miles Travelled' Data to exit."
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1433,7 +1433,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1442,7 +1442,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\n"
               </span>
@@ -1451,7 +1451,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1460,13 +1460,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\n"
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1485,7 +1485,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1494,13 +1494,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Miles Travelled: "
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1509,7 +1509,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Input miles
               </span>
@@ -1524,7 +1524,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;&gt;
               </span>
@@ -1533,7 +1533,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1556,7 +1556,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Loop begin: Calculator 
               </span>
@@ -1575,7 +1575,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 while
               </span>
@@ -1584,7 +1584,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -1593,7 +1593,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;=
               </span>
@@ -1602,13 +1602,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 0
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -1623,7 +1623,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 {
               </span>
@@ -1642,7 +1642,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1651,13 +1651,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Miles per Gallon for Your Car: "
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1672,7 +1672,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;&gt;
               </span>
@@ -1681,7 +1681,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1700,7 +1700,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -1709,13 +1709,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Price Per Gallon You're Paying: "
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1730,7 +1730,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;&gt;
               </span>
@@ -1739,7 +1739,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1758,7 +1758,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ++
               </span>
@@ -1767,7 +1767,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1776,7 +1776,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Adds one to the counter, keeping control of transactions 
               </span>
@@ -1795,7 +1795,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 =
               </span>
@@ -1804,13 +1804,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 double
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -1819,7 +1819,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -1828,7 +1828,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 /
               </span>
@@ -1837,13 +1837,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 double
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -1852,13 +1852,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1867,7 +1867,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Calculations... 
               </span>
@@ -1882,7 +1882,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 =
               </span>
@@ -1891,7 +1891,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 *
               </span>
@@ -1900,7 +1900,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1919,7 +1919,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 +=
               </span>
@@ -1928,7 +1928,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1937,7 +1937,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Averaging calculations
               </span>
@@ -1952,7 +1952,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 +=
               </span>
@@ -1961,7 +1961,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -1976,7 +1976,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 +=
               </span>
@@ -1985,7 +1985,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2004,7 +2004,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // ...end 
               </span>
@@ -2023,7 +2023,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Displaying data entry information 
               </span>
@@ -2042,7 +2042,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2051,13 +2051,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setiosflags
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -2066,7 +2066,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token double-colon"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ::
               </span>
@@ -2075,7 +2075,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 |
               </span>
@@ -2084,7 +2084,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token double-colon"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ::
               </span>
@@ -2093,7 +2093,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -2102,7 +2102,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2111,31 +2111,31 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setprecision
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 2
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2150,7 +2150,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2159,7 +2159,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nMiles per Gallon:"
               </span>
@@ -2168,7 +2168,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2177,25 +2177,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 9
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -2204,7 +2204,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2213,7 +2213,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2228,7 +2228,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2237,7 +2237,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nMiles Travelled:"
               </span>
@@ -2246,7 +2246,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2255,25 +2255,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 10
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -2282,7 +2282,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2291,7 +2291,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2300,7 +2300,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2309,7 +2309,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2328,7 +2328,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2337,7 +2337,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Number of Gallons: "
               </span>
@@ -2346,7 +2346,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2355,25 +2355,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 7
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -2382,7 +2382,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2391,7 +2391,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2406,7 +2406,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2415,31 +2415,31 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setprecision
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 3
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2448,7 +2448,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Setting Precision for gas price 
               </span>
@@ -2463,7 +2463,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2472,7 +2472,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nPrice per Gallon: "
               </span>
@@ -2481,7 +2481,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2490,25 +2490,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 8
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -2517,7 +2517,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2526,7 +2526,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2535,7 +2535,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2554,7 +2554,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2563,31 +2563,31 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setprecision
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 2
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2596,7 +2596,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Re-setting precision for final total 
               </span>
@@ -2611,7 +2611,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2620,13 +2620,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\n--------------------------"
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2641,7 +2641,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2650,7 +2650,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nCost of Fillup: "
               </span>
@@ -2659,7 +2659,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2668,25 +2668,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 10
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -2695,7 +2695,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2704,7 +2704,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2713,25 +2713,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 15
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -2740,7 +2740,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2749,7 +2749,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Transaction: "
               </span>
@@ -2758,7 +2758,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2767,7 +2767,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2782,7 +2782,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2791,7 +2791,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\n--------------------------"
               </span>
@@ -2800,7 +2800,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2809,7 +2809,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2818,7 +2818,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2841,31 +2841,31 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 system
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "cls"
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2874,7 +2874,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // clears the screen
               </span>
@@ -2893,7 +2893,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2902,7 +2902,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2911,7 +2911,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nRe-enter values. Again, type -1 in 'Miles Travelled' to exit."
               </span>
@@ -2920,7 +2920,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2929,7 +2929,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2944,7 +2944,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -2953,13 +2953,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Miles Travelled: "
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -2974,7 +2974,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &gt;&gt;
               </span>
@@ -2983,7 +2983,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3002,7 +3002,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 }
               </span>
@@ -3021,7 +3021,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Final Calculations
               </span>
@@ -3036,7 +3036,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 =
               </span>
@@ -3045,7 +3045,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 /
               </span>
@@ -3054,13 +3054,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 double
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -3069,13 +3069,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3090,7 +3090,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 =
               </span>
@@ -3099,7 +3099,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 /
               </span>
@@ -3108,13 +3108,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 double
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -3123,13 +3123,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3144,7 +3144,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 =
               </span>
@@ -3153,7 +3153,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 /
               </span>
@@ -3162,13 +3162,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 double
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -3177,13 +3177,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3202,7 +3202,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Final output 
               </span>
@@ -3217,7 +3217,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3226,25 +3226,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setprecision
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 2
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -3253,7 +3253,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3262,13 +3262,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setiosflags
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -3277,7 +3277,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token double-colon"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ::
               </span>
@@ -3286,7 +3286,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -3295,7 +3295,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3304,13 +3304,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setiosflags
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
@@ -3319,7 +3319,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token double-colon"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ::
               </span>
@@ -3328,13 +3328,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3349,7 +3349,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3358,7 +3358,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nDaily Report for "
               </span>
@@ -3367,7 +3367,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3376,7 +3376,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3385,7 +3385,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3394,7 +3394,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3403,7 +3403,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3412,7 +3412,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3427,7 +3427,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3436,7 +3436,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3451,7 +3451,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3460,7 +3460,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "================================"
               </span>
@@ -3469,7 +3469,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3478,7 +3478,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3493,7 +3493,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3502,7 +3502,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Number of Sales: "
               </span>
@@ -3511,7 +3511,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3520,25 +3520,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 15
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -3547,7 +3547,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3556,7 +3556,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3565,7 +3565,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3580,7 +3580,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3589,7 +3589,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Total Gallons Sold: "
               </span>
@@ -3598,7 +3598,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3607,25 +3607,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 12
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -3634,7 +3634,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3643,7 +3643,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3652,7 +3652,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3671,7 +3671,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3680,7 +3680,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3699,7 +3699,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3708,31 +3708,31 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setprecision
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 3
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3747,7 +3747,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3756,7 +3756,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Average price per Gallon: "
               </span>
@@ -3765,7 +3765,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3774,25 +3774,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 6
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -3801,7 +3801,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3810,7 +3810,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3819,7 +3819,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3834,7 +3834,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3843,31 +3843,31 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setprecision
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 2
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3886,7 +3886,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3895,7 +3895,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Total Sales: "
               </span>
@@ -3904,7 +3904,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3913,25 +3913,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 19
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -3940,7 +3940,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3949,7 +3949,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3958,7 +3958,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -3977,7 +3977,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -3986,7 +3986,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -4005,7 +4005,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4014,7 +4014,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Average Gallons: "
               </span>
@@ -4023,7 +4023,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4032,25 +4032,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 15
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -4059,7 +4059,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4068,7 +4068,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4077,7 +4077,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -4092,7 +4092,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4101,7 +4101,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Average Sale: "
               </span>
@@ -4110,7 +4110,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4119,25 +4119,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 18
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -4146,7 +4146,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4155,7 +4155,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4164,7 +4164,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -4179,7 +4179,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4188,13 +4188,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "--------------------------------"
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -4217,7 +4217,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Name Entry
               </span>
@@ -4232,7 +4232,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4241,7 +4241,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "\\nPrepared by:"
               </span>
@@ -4250,7 +4250,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4259,25 +4259,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 setw
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 20
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
@@ -4286,7 +4286,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 &lt;&lt;
               </span>
@@ -4295,13 +4295,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(18, 91, 58);"
+                style="color: #125B3A;"
               >
                 "Andrew Holloway"
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -4316,7 +4316,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Output file located at C:\\windows\\desktop\\dailyrpt.txt
               </span>
@@ -4335,7 +4335,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Closing the generated file 
               </span>
@@ -4350,31 +4350,31 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 .
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 close
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -4393,25 +4393,25 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(58, 58, 55);"
+                style="color: #3A3A37;"
               >
                 getch
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 (
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 )
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -4420,7 +4420,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(107, 106, 100); font-style: italic;"
+                style="color: #6B6A64; font-style: italic;"
               >
                 // Hit a key function
               </span>
@@ -4439,7 +4439,7 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(77, 99, 203);"
+                style="color: #4D63CB;"
               >
                 return
               </span>
@@ -4448,13 +4448,13 @@ When indented, it spans multiple lines.
               </span>
               <span
                 class="token token"
-                style="color: rgb(110, 58, 136);"
+                style="color: #6E3A88;"
               >
                 0
               </span>
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 ;
               </span>
@@ -4467,7 +4467,7 @@ When indented, it spans multiple lines.
               <span />
               <span
                 class="token token"
-                style="color: rgb(85, 85, 78);"
+                style="color: #55554E;"
               >
                 }
               </span>
@@ -4481,20 +4481,20 @@ When indented, it spans multiple lines.
         </div>
       </pre>
       <div
-        class="code-block__copy"
+        class="_code-block__copy_961fb8"
       >
         <button
           aria-label="Copy this code block"
-          class="button button--layout-icon-only button--secondary button--lg button--size-lg button--variant-default"
+          class="_button_0829c1 _button--layout-icon-only_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
           data-testid="copy-button"
           type="button"
         >
           <span
-            class="text text--label-lg button__text"
+            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
           >
             <svg
               aria-hidden="true"
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="24px"
               style="--icon-size: 24px;"
@@ -4514,25 +4514,25 @@ When indented, it spans multiple lines.
   
 
   <h5
-    class="text text--title-md"
+    class="_text_b3eba3 _text--title-md_b3eba3"
   >
     Miscellaneous
   </h5>
   
 
   <h6
-    class="text text--title-sm"
+    class="_text_b3eba3 _text--title-sm_b3eba3"
   >
     Links
   </h6>
   
 
   <p
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     Here's a link to 
     <a
-      class="link link--emphasis-default"
+      class="_link_d78ce8 _link--emphasis-default_d78ce8"
       href="https://commonmark.org/"
     >
       CommonMark
@@ -4542,30 +4542,30 @@ When indented, it spans multiple lines.
 </div>
 `;
 
-exports[`<Markdown /> GithubFlavoredMarkdown story renders snapshot 1`] = `
+exports[`<Markdown /> > GithubFlavoredMarkdown story renders snapshot 1`] = `
 <div
-  class="markdown"
+  class="_markdown_7f0a4d"
 >
   <h1
-    class="text text--headline-lg"
+    class="_text_b3eba3 _text--headline-lg_b3eba3"
   >
     GitHub-Flavored Markdown
   </h1>
   
 
   <h2
-    class="text text--headline-md"
+    class="_text_b3eba3 _text--headline-md_b3eba3"
   >
     Tables
   </h2>
   
 
   <p
-    class="text text--body-md"
+    class="_text_b3eba3 _text--body-md_b3eba3"
   >
     GitHub-flavored markdown supports basic tables. Alignment can be controlled for each column. 
     <a
-      class="link link--emphasis-default"
+      class="_link_d78ce8 _link--emphasis-default_d78ce8"
       href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables"
     >
       See doc.s
@@ -4575,34 +4575,34 @@ exports[`<Markdown /> GithubFlavoredMarkdown story renders snapshot 1`] = `
   
 
   <table
-    class="markdown__table"
+    class="_markdown__table_7f0a4d"
   >
     <thead
-      class="markdown__thead"
+      class="_markdown__thead_7f0a4d"
     >
       <tr
-        class="markdown__tr"
+        class="_markdown__tr_7f0a4d"
       >
         <th
-          class="markdown__th"
+          class="_markdown__th_7f0a4d"
         >
           a
         </th>
         <th
           align="left"
-          class="markdown__th"
+          class="_markdown__th_7f0a4d"
         >
           b
         </th>
         <th
           align="right"
-          class="markdown__th"
+          class="_markdown__th_7f0a4d"
         >
           c
         </th>
         <th
           align="center"
-          class="markdown__th"
+          class="_markdown__th_7f0a4d"
         >
           d
         </th>
@@ -4610,28 +4610,28 @@ exports[`<Markdown /> GithubFlavoredMarkdown story renders snapshot 1`] = `
     </thead>
     <tbody>
       <tr
-        class="markdown__tr"
+        class="_markdown__tr_7f0a4d"
       >
         <td
-          class="markdown__td"
+          class="_markdown__td_7f0a4d"
         >
           1
         </td>
         <td
           align="left"
-          class="markdown__td"
+          class="_markdown__td_7f0a4d"
         >
           2
         </td>
         <td
           align="right"
-          class="markdown__td"
+          class="_markdown__td_7f0a4d"
         >
           3
         </td>
         <td
           align="center"
-          class="markdown__td"
+          class="_markdown__td_7f0a4d"
         >
           4
         </td>

@@ -1,6 +1,15 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
 import { render } from '@testing-library/react';
 import React from 'react';
+import {
+  type Mock,
+  vi,
+  describe,
+  beforeEach,
+  afterEach,
+  it,
+  expect,
+} from 'vitest';
 
 import { Hr } from './Hr';
 
@@ -11,15 +20,15 @@ describe('<Hr />', () => {
   generateSnapshots(stories as StoryFile);
 
   describe('emits messages when misused', () => {
-    let consoleWarnMock: jest.SpyInstance;
+    let consoleWarnMock: Mock;
     beforeEach(() => {
       // Add in mocks for the calls that can occur in implementation to suppress logging in tests
-      consoleWarnMock = jest.spyOn(console, 'warn');
-      consoleWarnMock.mockImplementation();
+      consoleWarnMock = vi.spyOn(console, 'warn');
+      consoleWarnMock.mockImplementation(() => {});
     });
 
     afterEach(() => {
-      jest.resetAllMocks();
+      vi.resetAllMocks();
     });
 
     it('warns when Hr instances use size prop', () => {

@@ -1,18 +1,19 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import React from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { TextareaField } from './TextareaField';
 import * as stories from './TextareaField.stories';
+
 import type { StoryFile } from '../../../.storybook/utility-types';
 
 describe('<TextareaField />', () => {
   generateSnapshots(stories as StoryFile);
 
   it('can handle custom events when there is content', async () => {
-    const onChangeFn = jest.fn();
+    const onChangeFn = vi.fn();
     const user = userEvent.setup();
     render(
       <TextareaField
@@ -36,7 +37,7 @@ describe('<TextareaField />', () => {
   });
 
   it('will not fire a custom event when there is no content', async () => {
-    const onChangeFn = jest.fn();
+    const onChangeFn = vi.fn();
     const user = userEvent.setup();
     render(<TextareaField aria-label="test" onChange={() => onChangeFn()} />);
 
@@ -54,7 +55,7 @@ describe('<TextareaField />', () => {
   });
 
   it('will not fire a custom event when at max length', async () => {
-    const onChangeFn = jest.fn();
+    const onChangeFn = vi.fn();
     const user = userEvent.setup();
     render(
       <TextareaField
@@ -79,7 +80,7 @@ describe('<TextareaField />', () => {
   });
 
   it('will fire a custom event when at max recommended length', async () => {
-    const onChangeFn = jest.fn();
+    const onChangeFn = vi.fn();
     const user = userEvent.setup();
     render(
       <TextareaField
@@ -101,5 +102,21 @@ describe('<TextareaField />', () => {
     await user.type(field, 'abc');
 
     expect(onChangeFn).toHaveBeenCalledTimes(3);
+  });
+
+  it('uses a custom aria-describedby over the generated one', () => {
+    render(
+      <TextareaField
+        aria-describedby="custom-description"
+        fieldNote="Field note"
+        label="Comments"
+        subLabel="Sub label"
+      />,
+    );
+
+    expect(screen.getByRole('textbox')).toHaveAttribute(
+      'aria-describedby',
+      'custom-description',
+    );
   });
 });

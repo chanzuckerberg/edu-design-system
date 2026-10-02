@@ -1,67 +1,67 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<AppHeader /> CanHandleFallbackNavMenus story renders snapshot 1`] = `
+exports[`<AppHeader /> > CanHandleFallbackNavMenus story renders snapshot 1`] = `
 <header
-  class="app-header app-header--orientation-horizontal app-header--style-docked"
+  class="_app-header_7b1fec _app-header--orientation-horizontal_7b1fec _app-header--style-docked_7b1fec"
 >
   <div>
     <div
-      class="app-header__content"
+      class="_app-header__content_7b1fec"
     >
       <div
-        class="app-header-title"
+        class="_app-header-title_7b1fec"
       >
         <div
-          class="app-header-title__title"
+          class="_app-header-title__title_7b1fec"
         >
           <span
-            class="text text--headline-sm"
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
           >
             Bodies of water
           </span>
         </div>
         <div
-          class="app-header-title__sub-title"
+          class="_app-header-title__sub-title_7b1fec"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             They're cool!
           </span>
         </div>
       </div>
       <div
-        class="app-header__nav-groups"
+        class="_app-header__nav-groups_7b1fec"
       >
         <nav
           aria-label="group-2"
-          class="app-header__nav-group"
+          class="_app-header__nav-group_7b1fec"
         >
           <ul>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r3e:"
+                  id="headlessui-menu-button-_r_3e_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Show Profile
                     </span>
                   </span>
                   <svg
                     aria-hidden="true"
-                    class="icon"
+                    class="_icon_779da8"
                     fill="currentColor"
                     height="24px"
                     style="--icon-size: 24px;"
@@ -80,18 +80,18 @@ exports[`<AppHeader /> CanHandleFallbackNavMenus story renders snapshot 1`] = `
         </nav>
       </div>
       <div
-        class="app-header__menu"
+        class="_app-header__menu_7b1fec"
       >
         <button
           aria-label="Show Menu"
-          class="app-header__nav-item app-header__nav-item--button"
+          class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
         >
           <span
-            class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+            class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-icon-only_7b1fec"
           >
             <svg
               aria-hidden="true"
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="24px"
               style="--icon-size: 24px;"
@@ -111,67 +111,67 @@ exports[`<AppHeader /> CanHandleFallbackNavMenus story renders snapshot 1`] = `
 </header>
 `;
 
-exports[`<AppHeader /> Default story renders snapshot 1`] = `
+exports[`<AppHeader /> > Default story renders snapshot 1`] = `
 <header
-  class="app-header app-header--orientation-horizontal app-header--style-docked"
+  class="_app-header_7b1fec _app-header--orientation-horizontal_7b1fec _app-header--style-docked_7b1fec"
 >
   <div>
     <div
-      class="app-header__content"
+      class="_app-header__content_7b1fec"
     >
       <div
-        class="app-header-title"
+        class="_app-header-title_7b1fec"
       >
         <div
-          class="app-header-title__title"
+          class="_app-header-title__title_7b1fec"
         >
           <span
-            class="text text--headline-sm"
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
           >
             Bodies of water
           </span>
         </div>
         <div
-          class="app-header-title__sub-title"
+          class="_app-header-title__sub-title_7b1fec"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             They're cool!
           </span>
         </div>
       </div>
       <div
-        class="app-header__nav-groups"
+        class="_app-header__nav-groups_7b1fec"
       >
         <nav
           aria-label="lakes"
-          class="app-header__nav-group"
+          class="_app-header__nav-group_7b1fec"
         >
           <ul>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r2:"
+                  id="headlessui-menu-button-_r_2_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Lakes
                     </span>
                     <svg
                       aria-hidden="true"
-                      class="icon"
+                      class="_icon_779da8"
                       fill="currentColor"
                       height="24px"
                       style="--icon-size: 24px;"
@@ -189,27 +189,27 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
             </li>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r8:"
+                  id="headlessui-menu-button-_r_8_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Oceans
                     </span>
                     <svg
                       aria-hidden="true"
-                      class="icon"
+                      class="_icon_779da8"
                       fill="currentColor"
                       height="24px"
                       style="--icon-size: 24px;"
@@ -227,27 +227,27 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
             </li>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:re:"
+                  id="headlessui-menu-button-_r_e_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Rivers
                     </span>
                     <svg
                       aria-hidden="true"
-                      class="icon"
+                      class="_icon_779da8"
                       fill="currentColor"
                       height="24px"
                       style="--icon-size: 24px;"
@@ -267,20 +267,20 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
         </nav>
         <nav
           aria-label="group-2"
-          class="app-header__nav-group"
+          class="_app-header__nav-group_7b1fec"
         >
           <ul>
             <li>
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     Documentation
                   </span>
@@ -289,15 +289,15 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
             </li>
             <li>
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     GitHub
                   </span>
@@ -306,36 +306,36 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
             </li>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:rk:"
+                  id="headlessui-menu-button-_r_k_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Profile
                       <div
-                        class="text text--appHeader-subLabel"
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
                       >
                         sublabel
                       </div>
                     </span>
                     <div
                       aria-label="Avatar for user Lorem Ipsum"
-                      class="avatar avatar--sm avatar--text avatar--color-scheme-1"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
                       role="img"
                     >
                       <span
-                        class="text text--label-sm"
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
                       >
                         L
                       </span>
@@ -343,7 +343,7 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
                   </span>
                   <svg
                     aria-hidden="true"
-                    class="icon"
+                    class="_icon_779da8"
                     fill="currentColor"
                     height="24px"
                     style="--icon-size: 24px;"
@@ -362,18 +362,18 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
         </nav>
       </div>
       <div
-        class="app-header__menu"
+        class="_app-header__menu_7b1fec"
       >
         <button
           aria-label="Show Menu"
-          class="app-header__nav-item app-header__nav-item--button"
+          class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
         >
           <span
-            class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+            class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-icon-only_7b1fec"
           >
             <svg
               aria-hidden="true"
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="24px"
               style="--icon-size: 24px;"
@@ -393,24 +393,24 @@ exports[`<AppHeader /> Default story renders snapshot 1`] = `
 </header>
 `;
 
-exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
+exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
 <header
-  class="app-header app-header--orientation-horizontal app-header--style-docked"
+  class="_app-header_7b1fec _app-header--orientation-horizontal_7b1fec _app-header--style-docked_7b1fec"
 >
   <div>
     <div
-      class="app-header__content"
+      class="_app-header__content_7b1fec"
     >
       <div
-        class="app-header-title"
+        class="_app-header-title_7b1fec"
       >
         <a
           aria-label="homepage"
-          class="app-header__home-link"
+          class="_app-header__home-link_7b1fec"
           href="https://example.org"
         >
           <div
-            class="app-header-title__title app-header-title--has-logo"
+            class="_app-header-title__title_7b1fec _app-header-title--has-logo_7b1fec"
           >
             <div
               class="fpo h-[36px] w-[175px]"
@@ -422,36 +422,36 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
         </a>
       </div>
       <div
-        class="app-header__nav-groups"
+        class="_app-header__nav-groups_7b1fec"
       >
         <nav
           aria-label="lakes"
-          class="app-header__nav-group"
+          class="_app-header__nav-group_7b1fec"
         >
           <ul>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r10:"
+                  id="headlessui-menu-button-_r_10_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Lakes
                     </span>
                     <svg
                       aria-hidden="true"
-                      class="icon"
+                      class="_icon_779da8"
                       fill="currentColor"
                       height="24px"
                       style="--icon-size: 24px;"
@@ -469,27 +469,27 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
             </li>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r16:"
+                  id="headlessui-menu-button-_r_16_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Oceans
                     </span>
                     <svg
                       aria-hidden="true"
-                      class="icon"
+                      class="_icon_779da8"
                       fill="currentColor"
                       height="24px"
                       style="--icon-size: 24px;"
@@ -507,27 +507,27 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
             </li>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r1c:"
+                  id="headlessui-menu-button-_r_1c_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Rivers
                     </span>
                     <svg
                       aria-hidden="true"
-                      class="icon"
+                      class="_icon_779da8"
                       fill="currentColor"
                       height="24px"
                       style="--icon-size: 24px;"
@@ -547,20 +547,20 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
         </nav>
         <nav
           aria-label="group-2"
-          class="app-header__nav-group"
+          class="_app-header__nav-group_7b1fec"
         >
           <ul>
             <li>
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     Documentation
                   </span>
@@ -569,15 +569,15 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
             </li>
             <li>
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     GitHub
                   </span>
@@ -586,36 +586,36 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
             </li>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r1i:"
+                  id="headlessui-menu-button-_r_1i_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Profile
                       <div
-                        class="text text--appHeader-subLabel"
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
                       >
                         sublabel
                       </div>
                     </span>
                     <div
                       aria-label="Avatar for user Lorem Ipsum"
-                      class="avatar avatar--sm avatar--text avatar--color-scheme-1"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
                       role="img"
                     >
                       <span
-                        class="text text--label-sm"
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
                       >
                         L
                       </span>
@@ -623,7 +623,7 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
                   </span>
                   <svg
                     aria-hidden="true"
-                    class="icon"
+                    class="_icon_779da8"
                     fill="currentColor"
                     height="24px"
                     style="--icon-size: 24px;"
@@ -642,18 +642,18 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
         </nav>
       </div>
       <div
-        class="app-header__menu"
+        class="_app-header__menu_7b1fec"
       >
         <button
           aria-label="Show Menu"
-          class="app-header__nav-item app-header__nav-item--button"
+          class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
         >
           <span
-            class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+            class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-icon-only_7b1fec"
           >
             <svg
               aria-hidden="true"
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="24px"
               style="--icon-size: 24px;"
@@ -673,57 +673,57 @@ exports[`<AppHeader /> DefaultWithImageLogo story renders snapshot 1`] = `
 </header>
 `;
 
-exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = `
+exports[`<AppHeader /> > FloatingVerticalOrientation story renders snapshot 1`] = `
 <header
-  class="app-header app-header--orientation-vertical app-header--style-floating"
+  class="_app-header_7b1fec _app-header--orientation-vertical_7b1fec _app-header--style-floating_7b1fec"
 >
   <div>
     <div
-      class="app-header__content"
+      class="_app-header__content_7b1fec"
     >
       <div
-        class="app-header-title"
+        class="_app-header-title_7b1fec"
       >
         <div
-          class="app-header-title__title"
+          class="_app-header-title__title_7b1fec"
         >
           <span
-            class="text text--headline-sm"
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
           >
             Bodies of water
           </span>
         </div>
         <div
-          class="app-header-title__sub-title"
+          class="_app-header-title__sub-title_7b1fec"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             They're cool!
           </span>
         </div>
       </div>
       <div
-        class="drawer-content"
+        class="_drawer-content_7b1fec"
       >
         <nav
           aria-label="lakes"
-          class="drawer-content__nav-group"
+          class="_drawer-content__nav-group_7b1fec"
         >
           <ul>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-tree"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
             >
               <menu>
                 <div
-                  class="drawer-content__header-container"
+                  class="_drawer-content__header-container_7b1fec"
                 >
                   <div>
                     <span
-                      class="app-header__nav-item--button app-header_nav-item-label"
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
                     >
                       <span
-                        class="text text--overline-sm"
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
                       >
                         Lakes
                       </span>
@@ -733,14 +733,14 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                 <ul>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-current"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-current_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Lake Superior
                         </span>
@@ -749,14 +749,14 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Lake Tahoe
                         </span>
@@ -765,14 +765,14 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Crater Lake
                         </span>
@@ -783,18 +783,18 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
               </menu>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-tree"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
             >
               <menu>
                 <div
-                  class="drawer-content__header-container"
+                  class="_drawer-content__header-container_7b1fec"
                 >
                   <div>
                     <span
-                      class="app-header__nav-item--button app-header_nav-item-label"
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
                     >
                       <span
-                        class="text text--overline-sm"
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
                       >
                         Oceans
                       </span>
@@ -804,14 +804,14 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                 <ul>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Pacific Ocean
                         </span>
@@ -820,14 +820,14 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Atlantic Ocean
                         </span>
@@ -836,14 +836,14 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Arctic Ocean
                         </span>
@@ -854,18 +854,18 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
               </menu>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-tree"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
             >
               <menu>
                 <div
-                  class="drawer-content__header-container"
+                  class="_drawer-content__header-container_7b1fec"
                 >
                   <div>
                     <span
-                      class="app-header__nav-item--button app-header_nav-item-label"
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
                     >
                       <span
-                        class="text text--overline-sm"
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
                       >
                         Rivers
                       </span>
@@ -875,14 +875,14 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                 <ul>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Nile River
                         </span>
@@ -891,14 +891,14 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Amazon River
                         </span>
@@ -907,14 +907,14 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Danube River
                         </span>
@@ -928,29 +928,29 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
         </nav>
         <nav
           aria-label="group-2"
-          class="drawer-content__nav-group"
+          class="_drawer-content__nav-group_7b1fec"
         >
           <ul>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     Documentation
                   </span>
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="icon"
+                  class="_icon_779da8"
                   fill="currentColor"
                   height="24px"
                   style="--icon-size: 24px;"
@@ -965,25 +965,25 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
               </a>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     GitHub
                   </span>
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="icon"
+                  class="_icon_779da8"
                   fill="currentColor"
                   height="24px"
                   style="--icon-size: 24px;"
@@ -998,31 +998,31 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
               </a>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-separator"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-separator_7b1fec"
             >
               <hr
-                class="hr app-header__nav-item--separator"
+                class="_hr_8bd4b7 _app-header__nav-item--separator_7b1fec"
                 name="line-0"
                 type="separator"
               />
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-menu"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-menu_7b1fec"
             >
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__menu-trigger app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r32:"
+                  id="headlessui-menu-button-_r_32_"
                 >
                   <svg
                     aria-hidden="true"
-                    class="icon"
+                    class="_icon_779da8"
                     fill="currentColor"
                     height="24px"
                     style="--icon-size: 24px;"
@@ -1035,25 +1035,25 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
                     />
                   </svg>
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Profile
                       <div
-                        class="text text--appHeader-subLabel"
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
                       >
                         sublabel
                       </div>
                     </span>
                     <div
                       aria-label="Avatar for user Lorem Ipsum"
-                      class="avatar avatar--sm avatar--text avatar--color-scheme-1"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
                       role="img"
                     >
                       <span
-                        class="text text--label-sm"
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
                       >
                         L
                       </span>
@@ -1070,105 +1070,105 @@ exports[`<AppHeader /> FloatingVerticalOrientation story renders snapshot 1`] = 
 </header>
 `;
 
-exports[`<AppHeader /> MobileFloatingVerticalEmpty story renders snapshot 1`] = `
+exports[`<AppHeader /> > MobileFloatingVerticalEmpty story renders snapshot 1`] = `
 <header
-  class="app-header app-header--orientation-vertical app-header--style-floating"
+  class="_app-header_7b1fec _app-header--orientation-vertical_7b1fec _app-header--style-floating_7b1fec"
 >
   <div>
     <div
-      class="app-header__content"
+      class="_app-header__content_7b1fec"
     >
       <div
-        class="app-header-title"
+        class="_app-header-title_7b1fec"
       >
         <div
-          class="app-header-title__title"
+          class="_app-header-title__title_7b1fec"
         >
           <span
-            class="text text--headline-sm"
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
           >
             Bodies of water
           </span>
         </div>
         <div
-          class="app-header-title__sub-title"
+          class="_app-header-title__sub-title_7b1fec"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             They're cool!
           </span>
         </div>
       </div>
       <div
-        class="drawer-content"
+        class="_drawer-content_7b1fec"
       />
     </div>
   </div>
 </header>
 `;
 
-exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
+exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
 <header
-  class="app-header app-header--orientation-horizontal app-header--style-floating"
+  class="_app-header_7b1fec _app-header--orientation-horizontal_7b1fec _app-header--style-floating_7b1fec"
 >
   <div>
     <div
-      class="app-header__content"
+      class="_app-header__content_7b1fec"
     >
       <div
-        class="app-header-title"
+        class="_app-header-title_7b1fec"
       >
         <div
-          class="app-header-title__title"
+          class="_app-header-title__title_7b1fec"
         >
           <span
-            class="text text--headline-sm"
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
           >
             Bodies of water
           </span>
         </div>
         <div
-          class="app-header-title__sub-title"
+          class="_app-header-title__sub-title_7b1fec"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             They're cool!
           </span>
         </div>
       </div>
       <div
-        class="app-header__nav-groups"
+        class="_app-header__nav-groups_7b1fec"
       >
         <nav
           aria-label="lakes"
-          class="app-header__nav-group"
+          class="_app-header__nav-group_7b1fec"
         >
           <ul>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r1u:"
+                  id="headlessui-menu-button-_r_1u_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Lakes
                     </span>
                     <svg
                       aria-hidden="true"
-                      class="icon"
+                      class="_icon_779da8"
                       fill="currentColor"
                       height="24px"
                       style="--icon-size: 24px;"
@@ -1186,27 +1186,27 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
             </li>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r24:"
+                  id="headlessui-menu-button-_r_24_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Oceans
                     </span>
                     <svg
                       aria-hidden="true"
-                      class="icon"
+                      class="_icon_779da8"
                       fill="currentColor"
                       height="24px"
                       style="--icon-size: 24px;"
@@ -1224,27 +1224,27 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
             </li>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r2a:"
+                  id="headlessui-menu-button-_r_2a_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-none"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Rivers
                     </span>
                     <svg
                       aria-hidden="true"
-                      class="icon"
+                      class="_icon_779da8"
                       fill="currentColor"
                       height="24px"
                       style="--icon-size: 24px;"
@@ -1264,20 +1264,20 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
         </nav>
         <nav
           aria-label="group-2"
-          class="app-header__nav-group"
+          class="_app-header__nav-group_7b1fec"
         >
           <ul>
             <li>
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     Documentation
                   </span>
@@ -1286,15 +1286,15 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
             </li>
             <li>
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     GitHub
                   </span>
@@ -1303,36 +1303,36 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
             </li>
             <li>
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r2g:"
+                  id="headlessui-menu-button-_r_2g_"
                 >
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Profile
                       <div
-                        class="text text--appHeader-subLabel"
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
                       >
                         sublabel
                       </div>
                     </span>
                     <div
                       aria-label="Avatar for user Lorem Ipsum"
-                      class="avatar avatar--sm avatar--text avatar--color-scheme-1"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
                       role="img"
                     >
                       <span
-                        class="text text--label-sm"
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
                       >
                         L
                       </span>
@@ -1340,7 +1340,7 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
                   </span>
                   <svg
                     aria-hidden="true"
-                    class="icon"
+                    class="_icon_779da8"
                     fill="currentColor"
                     height="24px"
                     style="--icon-size: 24px;"
@@ -1359,18 +1359,18 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
         </nav>
       </div>
       <div
-        class="app-header__menu"
+        class="_app-header__menu_7b1fec"
       >
         <button
           aria-label="Show Menu"
-          class="app-header__nav-item app-header__nav-item--button"
+          class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
         >
           <span
-            class="app-header__nav-item--button app-header__nav-item--icon-layout-icon-only"
+            class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-icon-only_7b1fec"
           >
             <svg
               aria-hidden="true"
-              class="icon"
+              class="_icon_779da8"
               fill="currentColor"
               height="24px"
               style="--icon-size: 24px;"
@@ -1390,24 +1390,24 @@ exports[`<AppHeader /> StyleFloating story renders snapshot 1`] = `
 </header>
 `;
 
-exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] = `
+exports[`<AppHeader /> > VerticalDefaultWithImageLogo story renders snapshot 1`] = `
 <header
-  class="app-header app-header--orientation-vertical app-header--style-docked"
+  class="_app-header_7b1fec _app-header--orientation-vertical_7b1fec _app-header--style-docked_7b1fec"
 >
   <div>
     <div
-      class="app-header__content"
+      class="_app-header__content_7b1fec"
     >
       <div
-        class="app-header-title"
+        class="_app-header-title_7b1fec"
       >
         <a
           aria-label="homepage"
-          class="app-header__home-link"
+          class="_app-header__home-link_7b1fec"
           href="https://example.org"
         >
           <div
-            class="app-header-title__title app-header-title--has-logo"
+            class="_app-header-title__title_7b1fec _app-header-title--has-logo_7b1fec"
           >
             <div
               class="fpo h-[36px] w-[175px]"
@@ -1419,26 +1419,26 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
         </a>
       </div>
       <div
-        class="drawer-content"
+        class="_drawer-content_7b1fec"
       >
         <nav
           aria-label="lakes"
-          class="drawer-content__nav-group"
+          class="_drawer-content__nav-group_7b1fec"
         >
           <ul>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-tree"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
             >
               <menu>
                 <div
-                  class="drawer-content__header-container"
+                  class="_drawer-content__header-container_7b1fec"
                 >
                   <div>
                     <span
-                      class="app-header__nav-item--button app-header_nav-item-label"
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
                     >
                       <span
-                        class="text text--overline-sm"
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
                       >
                         Lakes
                       </span>
@@ -1448,14 +1448,14 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                 <ul>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-current"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-current_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Lake Superior
                         </span>
@@ -1464,14 +1464,14 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Lake Tahoe
                         </span>
@@ -1480,14 +1480,14 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Crater Lake
                         </span>
@@ -1498,18 +1498,18 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
               </menu>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-tree"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
             >
               <menu>
                 <div
-                  class="drawer-content__header-container"
+                  class="_drawer-content__header-container_7b1fec"
                 >
                   <div>
                     <span
-                      class="app-header__nav-item--button app-header_nav-item-label"
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
                     >
                       <span
-                        class="text text--overline-sm"
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
                       >
                         Oceans
                       </span>
@@ -1519,14 +1519,14 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                 <ul>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Pacific Ocean
                         </span>
@@ -1535,14 +1535,14 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Atlantic Ocean
                         </span>
@@ -1551,14 +1551,14 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Arctic Ocean
                         </span>
@@ -1569,18 +1569,18 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
               </menu>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-tree"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
             >
               <menu>
                 <div
-                  class="drawer-content__header-container"
+                  class="_drawer-content__header-container_7b1fec"
                 >
                   <div>
                     <span
-                      class="app-header__nav-item--button app-header_nav-item-label"
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
                     >
                       <span
-                        class="text text--overline-sm"
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
                       >
                         Rivers
                       </span>
@@ -1590,14 +1590,14 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                 <ul>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Nile River
                         </span>
@@ -1606,14 +1606,14 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Amazon River
                         </span>
@@ -1622,14 +1622,14 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Danube River
                         </span>
@@ -1643,29 +1643,29 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
         </nav>
         <nav
           aria-label="group-2"
-          class="drawer-content__nav-group"
+          class="_drawer-content__nav-group_7b1fec"
         >
           <ul>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     Documentation
                   </span>
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="icon"
+                  class="_icon_779da8"
                   fill="currentColor"
                   height="24px"
                   style="--icon-size: 24px;"
@@ -1680,25 +1680,25 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
               </a>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     GitHub
                   </span>
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="icon"
+                  class="_icon_779da8"
                   fill="currentColor"
                   height="24px"
                   style="--icon-size: 24px;"
@@ -1713,31 +1713,31 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
               </a>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-separator"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-separator_7b1fec"
             >
               <hr
-                class="hr app-header__nav-item--separator"
+                class="_hr_8bd4b7 _app-header__nav-item--separator_7b1fec"
                 name="line-0"
                 type="separator"
               />
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-menu"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-menu_7b1fec"
             >
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__menu-trigger app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r38:"
+                  id="headlessui-menu-button-_r_38_"
                 >
                   <svg
                     aria-hidden="true"
-                    class="icon"
+                    class="_icon_779da8"
                     fill="currentColor"
                     height="24px"
                     style="--icon-size: 24px;"
@@ -1750,25 +1750,25 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
                     />
                   </svg>
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Profile
                       <div
-                        class="text text--appHeader-subLabel"
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
                       >
                         sublabel
                       </div>
                     </span>
                     <div
                       aria-label="Avatar for user Lorem Ipsum"
-                      class="avatar avatar--sm avatar--text avatar--color-scheme-1"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
                       role="img"
                     >
                       <span
-                        class="text text--label-sm"
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
                       >
                         L
                       </span>
@@ -1785,57 +1785,57 @@ exports[`<AppHeader /> VerticalDefaultWithImageLogo story renders snapshot 1`] =
 </header>
 `;
 
-exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
+exports[`<AppHeader /> > VerticalOrientation story renders snapshot 1`] = `
 <header
-  class="app-header app-header--orientation-vertical app-header--style-docked"
+  class="_app-header_7b1fec _app-header--orientation-vertical_7b1fec _app-header--style-docked_7b1fec"
 >
   <div>
     <div
-      class="app-header__content"
+      class="_app-header__content_7b1fec"
     >
       <div
-        class="app-header-title"
+        class="_app-header-title_7b1fec"
       >
         <div
-          class="app-header-title__title"
+          class="_app-header-title__title_7b1fec"
         >
           <span
-            class="text text--headline-sm"
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
           >
             Bodies of water
           </span>
         </div>
         <div
-          class="app-header-title__sub-title"
+          class="_app-header-title__sub-title_7b1fec"
         >
           <span
-            class="text text--body-md"
+            class="_text_b3eba3 _text--body-md_b3eba3"
           >
             They're cool!
           </span>
         </div>
       </div>
       <div
-        class="drawer-content"
+        class="_drawer-content_7b1fec"
       >
         <nav
           aria-label="lakes"
-          class="drawer-content__nav-group"
+          class="_drawer-content__nav-group_7b1fec"
         >
           <ul>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-tree"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
             >
               <menu>
                 <div
-                  class="drawer-content__header-container"
+                  class="_drawer-content__header-container_7b1fec"
                 >
                   <div>
                     <span
-                      class="app-header__nav-item--button app-header_nav-item-label"
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
                     >
                       <span
-                        class="text text--overline-sm"
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
                       >
                         Lakes
                       </span>
@@ -1845,14 +1845,14 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                 <ul>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-current"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-current_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Lake Superior
                         </span>
@@ -1861,14 +1861,14 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Lake Tahoe
                         </span>
@@ -1877,14 +1877,14 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Crater Lake
                         </span>
@@ -1895,18 +1895,18 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
               </menu>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-tree"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
             >
               <menu>
                 <div
-                  class="drawer-content__header-container"
+                  class="_drawer-content__header-container_7b1fec"
                 >
                   <div>
                     <span
-                      class="app-header__nav-item--button app-header_nav-item-label"
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
                     >
                       <span
-                        class="text text--overline-sm"
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
                       >
                         Oceans
                       </span>
@@ -1916,14 +1916,14 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                 <ul>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Pacific Ocean
                         </span>
@@ -1932,14 +1932,14 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Atlantic Ocean
                         </span>
@@ -1948,14 +1948,14 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Arctic Ocean
                         </span>
@@ -1966,18 +1966,18 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
               </menu>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-tree"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
             >
               <menu>
                 <div
-                  class="drawer-content__header-container"
+                  class="_drawer-content__header-container_7b1fec"
                 >
                   <div>
                     <span
-                      class="app-header__nav-item--button app-header_nav-item-label"
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
                     >
                       <span
-                        class="text text--overline-sm"
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
                       >
                         Rivers
                       </span>
@@ -1987,14 +1987,14 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                 <ul>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Nile River
                         </span>
@@ -2003,14 +2003,14 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Amazon River
                         </span>
@@ -2019,14 +2019,14 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                   </li>
                   <li>
                     <a
-                      class="app-header__nav-item app-header__nav-item--link"
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                       href="https://example.org"
                     >
                       <span
-                        class="app-header__nav-item--icon-layout-none"
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
                       >
                         <span
-                          class="text text--appHeader-label"
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
                         >
                           Danube River
                         </span>
@@ -2040,29 +2040,29 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
         </nav>
         <nav
           aria-label="group-2"
-          class="drawer-content__nav-group"
+          class="_drawer-content__nav-group_7b1fec"
         >
           <ul>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     Documentation
                   </span>
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="icon"
+                  class="_icon_779da8"
                   fill="currentColor"
                   height="24px"
                   style="--icon-size: 24px;"
@@ -2077,25 +2077,25 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
               </a>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-link"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="app-header__nav-item app-header__nav-item--link app-header__nav-item--is-external"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
                 <span
-                  class="app-header__nav-item--icon-layout-none"
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
                 >
                   <span
-                    class="text text--appHeader-label"
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
                   >
                     GitHub
                   </span>
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="icon"
+                  class="_icon_779da8"
                   fill="currentColor"
                   height="24px"
                   style="--icon-size: 24px;"
@@ -2110,31 +2110,31 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
               </a>
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-separator"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-separator_7b1fec"
             >
               <hr
-                class="hr app-header__nav-item--separator"
+                class="_hr_8bd4b7 _app-header__nav-item--separator_7b1fec"
                 name="line-0"
                 type="separator"
               />
             </li>
             <li
-              class="drawer-content__nav-group-item drawer-content__nav-group-item--type-menu"
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-menu_7b1fec"
             >
               <div
-                class="menu"
+                class="_menu_33ee5b"
                 data-headlessui-state=""
               >
                 <button
                   aria-expanded="false"
                   aria-haspopup="menu"
-                  class="app-header__menu-trigger app-header__nav-item app-header__nav-item--button"
+                  class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-:r2s:"
+                  id="headlessui-menu-button-_r_2s_"
                 >
                   <svg
                     aria-hidden="true"
-                    class="icon"
+                    class="_icon_779da8"
                     fill="currentColor"
                     height="24px"
                     style="--icon-size: 24px;"
@@ -2147,25 +2147,704 @@ exports[`<AppHeader /> VerticalOrientation story renders snapshot 1`] = `
                     />
                   </svg>
                   <span
-                    class="app-header__nav-item--button app-header__nav-item--icon-layout-left"
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
                   >
                     <span
-                      class="text text--appHeader-label"
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
                     >
                       Profile
                       <div
-                        class="text text--appHeader-subLabel"
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
                       >
                         sublabel
                       </div>
                     </span>
                     <div
                       aria-label="Avatar for user Lorem Ipsum"
-                      class="avatar avatar--sm avatar--text avatar--color-scheme-1"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
                       role="img"
                     >
                       <span
-                        class="text text--label-sm"
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
+                      >
+                        L
+                      </span>
+                    </div>
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<AppHeader /> > WithProvidedIcons story renders snapshot 1`] = `
+<header
+  class="_app-header_7b1fec _app-header--orientation-horizontal_7b1fec _app-header--style-docked_7b1fec"
+>
+  <div>
+    <div
+      class="_app-header__content_7b1fec"
+    >
+      <div
+        class="_app-header-title_7b1fec"
+      >
+        <div
+          class="_app-header-title__title_7b1fec"
+        >
+          <span
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
+          >
+            Bodies of water
+          </span>
+        </div>
+        <div
+          class="_app-header-title__sub-title_7b1fec"
+        >
+          <span
+            class="_text_b3eba3 _text--body-md_b3eba3"
+          >
+            They're cool!
+          </span>
+        </div>
+      </div>
+      <div
+        class="_app-header__nav-groups_7b1fec"
+      >
+        <nav
+          aria-label="lakes"
+          class="_app-header__nav-group_7b1fec"
+        >
+          <ul>
+            <li>
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_3q_"
+                >
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Lakes
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="_icon_779da8"
+                      fill="currentColor"
+                      height="24px"
+                      style="--icon-size: 24px;"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_40_"
+                >
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Oceans
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="_icon_779da8"
+                      fill="currentColor"
+                      height="24px"
+                      style="--icon-size: 24px;"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_46_"
+                >
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Rivers
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="_icon_779da8"
+                      fill="currentColor"
+                      height="24px"
+                      style="--icon-size: 24px;"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          aria-label="group-2"
+          class="_app-header__nav-group_7b1fec"
+        >
+          <ul>
+            <li>
+              <a
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                href="https://example.org"
+                target="_blank"
+              >
+                <span
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
+                >
+                  <span
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                  >
+                    Documentation
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                href="https://example.org"
+                target="_blank"
+              >
+                <span
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
+                >
+                  <span
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                  >
+                    GitHub
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_4c_"
+                >
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Profile
+                      <div
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
+                      >
+                        sublabel
+                      </div>
+                    </span>
+                    <div
+                      aria-label="Avatar for user Lorem Ipsum"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
+                      role="img"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
+                      >
+                        L
+                      </span>
+                    </div>
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="_icon_779da8"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="_app-header__menu_7b1fec"
+      >
+        <button
+          aria-label="Show Menu"
+          class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+        >
+          <span
+            class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-icon-only_7b1fec"
+          >
+            <svg
+              aria-hidden="true"
+              class="_icon_779da8"
+              fill="currentColor"
+              height="24px"
+              style="--icon-size: 24px;"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.23071 13.5C5.81821 13.5 5.46513 13.3531 5.17146 13.0592C4.87763 12.7656 4.73071 12.4125 4.73071 12C4.73071 11.5875 4.87763 11.2344 5.17146 10.9408C5.46513 10.6469 5.81821 10.5 6.23071 10.5C6.64321 10.5 6.99638 10.6469 7.29021 10.9408C7.58388 11.2344 7.73071 11.5875 7.73071 12C7.73071 12.4125 7.58388 12.7656 7.29021 13.0592C6.99638 13.3531 6.64321 13.5 6.23071 13.5ZM12 13.5C11.5875 13.5 11.2344 13.3531 10.9407 13.0592C10.6469 12.7656 10.5 12.4125 10.5 12C10.5 11.5875 10.6469 11.2344 10.9407 10.9408C11.2344 10.6469 11.5875 10.5 12 10.5C12.4125 10.5 12.7655 10.6469 13.0592 10.9408C13.353 11.2344 13.5 11.5875 13.5 12C13.5 12.4125 13.353 12.7656 13.0592 13.0592C12.7655 13.3531 12.4125 13.5 12 13.5ZM17.7692 13.5C17.3567 13.5 17.0035 13.3531 16.7097 13.0592C16.416 12.7656 16.2692 12.4125 16.2692 12C16.2692 11.5875 16.416 11.2344 16.7097 10.9408C17.0035 10.6469 17.3567 10.5 17.7692 10.5C18.1817 10.5 18.5348 10.6469 18.8285 10.9408C19.1223 11.2344 19.2692 11.5875 19.2692 12C19.2692 12.4125 19.1223 12.7656 18.8285 13.0592C18.5348 13.3531 18.1817 13.5 17.7692 13.5Z"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<AppHeader /> > WithProvidedIconsVertical story renders snapshot 1`] = `
+<header
+  class="_app-header_7b1fec _app-header--orientation-vertical_7b1fec _app-header--style-docked_7b1fec"
+>
+  <div>
+    <div
+      class="_app-header__content_7b1fec"
+    >
+      <div
+        class="_app-header-title_7b1fec"
+      >
+        <div
+          class="_app-header-title__title_7b1fec"
+        >
+          <span
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
+          >
+            Bodies of water
+          </span>
+        </div>
+        <div
+          class="_app-header-title__sub-title_7b1fec"
+        >
+          <span
+            class="_text_b3eba3 _text--body-md_b3eba3"
+          >
+            They're cool!
+          </span>
+        </div>
+      </div>
+      <div
+        class="_drawer-content_7b1fec"
+      >
+        <nav
+          aria-label="lakes"
+          class="_drawer-content__nav-group_7b1fec"
+        >
+          <ul>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
+            >
+              <menu>
+                <div
+                  class="_drawer-content__header-container_7b1fec"
+                >
+                  <div>
+                    <span
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
+                      >
+                        Lakes
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-current_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Lake Superior
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Lake Tahoe
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Crater Lake
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </menu>
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
+            >
+              <menu>
+                <div
+                  class="_drawer-content__header-container_7b1fec"
+                >
+                  <div>
+                    <span
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
+                      >
+                        Oceans
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Pacific Ocean
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Atlantic Ocean
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Arctic Ocean
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </menu>
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-tree_7b1fec"
+            >
+              <menu>
+                <div
+                  class="_drawer-content__header-container_7b1fec"
+                >
+                  <div>
+                    <span
+                      class="_app-header__nav-item--button_7b1fec _app-header_nav-item-label_7b1fec"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--overline-sm_b3eba3"
+                      >
+                        Rivers
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <ul>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Nile River
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Amazon River
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                      href="https://example.org"
+                    >
+                      <span
+                        class="_app-header__nav-item--icon-layout-none_7b1fec"
+                      >
+                        <span
+                          class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                        >
+                          Danube River
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </menu>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          aria-label="group-2"
+          class="_drawer-content__nav-group_7b1fec"
+        >
+          <ul>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
+            >
+              <a
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                href="https://example.org"
+                target="_blank"
+              >
+                <span
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
+                >
+                  <span
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                  >
+                    Documentation
+                  </span>
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="_icon_779da8"
+                  fill="currentColor"
+                  height="24px"
+                  style="--icon-size: 24px;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8078 16.5389H7.0385C5.78283 16.5389 4.7125 16.0964 3.8275 15.2114C2.9425 14.3266 2.5 13.2564 2.5 12.0009C2.5 10.7454 2.9425 9.67508 3.8275 8.78991C4.7125 7.90458 5.78283 7.46191 7.0385 7.46191H10.8078V8.96191H7.0385C6.19867 8.96191 5.48233 9.25841 4.8895 9.85141C4.2965 10.4444 4 11.1607 4 12.0004C4 12.8401 4.2965 13.5564 4.8895 14.1494C5.48233 14.7424 6.19867 15.0389 7.0385 15.0389H10.8078V16.5389ZM8.25 12.7504V11.2504H15.75V12.7504H8.25ZM13.1923 16.5389V15.0389H16.9615C17.8013 15.0389 18.5177 14.7424 19.1105 14.1494C19.7035 13.5564 20 12.8401 20 12.0004C20 11.1607 19.7035 10.4444 19.1105 9.85141C18.5177 9.25841 17.8013 8.96191 16.9615 8.96191H13.1923V7.46191H16.9615C18.2172 7.46191 19.2875 7.90441 20.1725 8.78941C21.0575 9.67425 21.5 10.7444 21.5 11.9999C21.5 13.2554 21.0575 14.3257 20.1725 15.2109C19.2875 16.0962 18.2172 16.5389 16.9615 16.5389H13.1923Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
+            >
+              <a
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                href="https://example.org"
+                target="_blank"
+              >
+                <span
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
+                >
+                  <span
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                  >
+                    GitHub
+                  </span>
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="_icon_779da8"
+                  fill="currentColor"
+                  height="24px"
+                  style="--icon-size: 24px;"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.8078 16.5389H7.0385C5.78283 16.5389 4.7125 16.0964 3.8275 15.2114C2.9425 14.3266 2.5 13.2564 2.5 12.0009C2.5 10.7454 2.9425 9.67508 3.8275 8.78991C4.7125 7.90458 5.78283 7.46191 7.0385 7.46191H10.8078V8.96191H7.0385C6.19867 8.96191 5.48233 9.25841 4.8895 9.85141C4.2965 10.4444 4 11.1607 4 12.0004C4 12.8401 4.2965 13.5564 4.8895 14.1494C5.48233 14.7424 6.19867 15.0389 7.0385 15.0389H10.8078V16.5389ZM8.25 12.7504V11.2504H15.75V12.7504H8.25ZM13.1923 16.5389V15.0389H16.9615C17.8013 15.0389 18.5177 14.7424 19.1105 14.1494C19.7035 13.5564 20 12.8401 20 12.0004C20 11.1607 19.7035 10.4444 19.1105 9.85141C18.5177 9.25841 17.8013 8.96191 16.9615 8.96191H13.1923V7.46191H16.9615C18.2172 7.46191 19.2875 7.90441 20.1725 8.78941C21.0575 9.67425 21.5 10.7444 21.5 11.9999C21.5 13.2554 21.0575 14.3257 20.1725 15.2109C19.2875 16.0962 18.2172 16.5389 16.9615 16.5389H13.1923Z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-separator_7b1fec"
+            >
+              <hr
+                class="_hr_8bd4b7 _app-header__nav-item--separator_7b1fec"
+                name="line-0"
+                type="separator"
+              />
+            </li>
+            <li
+              class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-menu_7b1fec"
+            >
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_4o_"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="_icon_779da8"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.9999 18.6345L6.34619 12.9808L7.39994 11.927L11.9999 16.5115L16.5999 11.927L17.6537 12.9808L11.9999 18.6345ZM11.9999 12.6538L6.34619 7.00004L7.39994 5.94629L11.9999 10.5308L16.5999 5.94629L17.6537 7.00004L11.9999 12.6538Z"
+                    />
+                  </svg>
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Profile
+                      <div
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
+                      >
+                        sublabel
+                      </div>
+                    </span>
+                    <div
+                      aria-label="Avatar for user Lorem Ipsum"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
+                      role="img"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
                       >
                         L
                       </span>

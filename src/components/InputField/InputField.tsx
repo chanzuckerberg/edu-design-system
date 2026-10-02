@@ -5,13 +5,14 @@ import { getMinValue } from '../../util/getMinValue';
 import type {
   EitherInclusive,
   ForwardedRefComponent,
+  IconOrContent,
 } from '../../util/utility-types';
 import type { Status } from '../../util/variant-types';
 import Button from '../Button';
 import Counter from '../Counter';
 import FieldLabel from '../FieldLabel';
 import FieldNote from '../FieldNote';
-import Icon, { type IconName } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Input from '../Input';
 import Text from '../Text';
 import styles from './InputField.module.css';
@@ -106,9 +107,10 @@ export type InputFieldProps = React.InputHTMLAttributes<HTMLInputElement> & {
    */
   fieldNote?: ReactNode;
   /**
-   * An icon that prefixes the field input.
+   * Content that prefixes the field input. Pass an EDS icon name to render a decorative
+   * icon, or a node to render it as-is.
    */
-  leadingIcon?: IconName;
+  leadingContent?: IconOrContent;
   /**
    * Placeholder attribute for input. Note: placeholder should be used sparingly
    */
@@ -213,7 +215,7 @@ export const InputField: InputFieldType = forwardRef(
       id,
       inputWithin,
       label,
-      leadingIcon,
+      leadingContent,
       maxLength,
       onChange,
       readOnly,
@@ -292,9 +294,10 @@ export const InputField: InputFieldType = forwardRef(
       fieldNote && styles['input-field--has-fieldNote'],
     );
 
-    // Modify the padding of `Input` to account for trailing/leading icons and trailing buttons
+    // Modify the padding of `Input` to account for trailing/leading content and trailing buttons
     const inputOverlayClassName = clsx(
-      leadingIcon && styles['input-field__input--leading-icon'],
+      hasSlotContent(leadingContent) &&
+        styles['input-field__input--leading-content'],
       shouldRenderInputWithin && styles['input-field__input--input-within'],
     );
 
@@ -435,9 +438,9 @@ export const InputField: InputFieldType = forwardRef(
               )}
             </div>
           )}
-          {leadingIcon && (
-            <div className={styles['input-field__leading-icon']}>
-              <Icon name={leadingIcon} purpose="decorative" size="24px" />
+          {hasSlotContent(leadingContent) && (
+            <div className={styles['input-field__leading-content']}>
+              <IconSlot content={leadingContent} size="24px" />
             </div>
           )}
         </div>

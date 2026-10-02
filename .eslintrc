@@ -54,14 +54,6 @@
   },
   "overrides": [
     {
-      "files": ["*.test.{js,ts}", "*.test.tsx", "**/test/**"],
-      "plugins": ["jest"],
-      "extends": ["plugin:jest/recommended"],
-      "env": {
-        "jest/globals": true
-      }
-    },
-    {
       "files": [
         "config.js",
         "*.config.js",
@@ -72,6 +64,12 @@
       "env": {
         "browser": false,
         "node": true
+      }
+    },
+    {
+      "files": ["src/storyUtils/**/*.{ts,tsx}"],
+      "rules": {
+        "@chanzuckerberg/stories/no-components-without-story": "off"
       }
     },
     {
@@ -104,10 +102,14 @@
             "paths": [
               {
                 "name": "lodash",
-                "message": "For better tree shaking, prefer deep imports from lodash (e.g. import at from 'lodash/at') instead of named (e.g. import {at} from 'lodash)"
+                "message": "For better tree shaking, prefer deep imports from lodash (e.g. import at from 'lodash/at.js') instead of named (e.g. import {at} from 'lodash)"
               }
             ],
             "patterns": [
+              {
+                "group": ["lodash/*", "!lodash/*.js"],
+                "message": "Include the file extension (e.g. import debounce from 'lodash/debounce.js'). lodash has no exports map, so Node cannot resolve an extensionless deep import in the ESM build."
+              },
               {
                 "group": ["**/tokens-dist/ts/colors"],
                 "message": "Do not import JavaScript color variables into component files. Use CSS variables in styles instead."

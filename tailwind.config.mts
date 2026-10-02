@@ -145,7 +145,7 @@ export function applyTailwindConfig(
       2: edsTokens.typography.fontFamily[2],
       3: edsTokens.typography.fontFamily[3],
     },
-    // sync with src/design-tokens/tier-1-definitions/breakpoints.js
+    // TODO-AH: Sync all the breakpoints across files
     // Docs: https://v3.tailwindcss.com/docs/responsive-design#customizing-your-theme
     screens: {
       xs: '0px',

@@ -1,8 +1,11 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
-import { userEvent, within } from '@storybook/testing-library';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
+import { userEvent, within } from 'storybook/test';
 
 import { InputField } from './InputField';
+import FpoBlock from '../../storyUtils/FpoBlock';
 import Button from '../Button';
 
 const meta: Meta<typeof InputField> = {
@@ -42,7 +45,7 @@ const meta: Meta<typeof InputField> = {
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.1.3'],
+  tags: ['autodocs', 'version:3.0.0'],
 };
 
 export default meta;
@@ -151,7 +154,7 @@ export const Disabled: Story = {
  */
 export const LeadingIcon: Story = {
   args: {
-    leadingIcon: 'search',
+    leadingContent: 'search',
     'aria-label': 'search field',
     placeholder: 'Search...',
   },
@@ -447,4 +450,17 @@ export const WithBothMaxAndRecommendedLength: Story = {
     required: true,
   },
   render: (args) => <InputField {...args} />,
+};
+
+/**
+ * The leading slot also takes arbitrary content, for cases an EDS icon does not cover.
+ * The block below stands in for whatever you supply, so the slot itself is the subject
+ * rather than the component that happened to be picked.
+ */
+export const LeadingContent: Story = {
+  args: {
+    leadingContent: <FpoBlock size={24} />,
+    'aria-label': 'assignee field',
+    placeholder: 'Assign to...',
+  },
 };

@@ -336,8 +336,15 @@
             "hover": "#177A4D",
             "active": "#125B3A"
           },
-          "dataTable": {
-            "headerCell": "#FAF9F8"
+          "datatable": {
+            "headerCell": "#FAF9F8",
+            "row": {
+              "stripe": {
+                "1": "#FFFFFF",
+                "2": "#FAF9F8"
+              },
+              "selected": "#F4F1EF"
+            }
           },
           "input": "#FFFFFF",
           "radioButton": {
@@ -348,13 +355,6 @@
           "skeleton": {
             "@": "#E6E2DE",
             "stripe": "#F4F1EF"
-          },
-          "tableRow": {
-            "stripe": {
-              "1": "#FFFFFF",
-              "2": "#FAF9F8"
-            },
-            "selected": "#F4F1EF"
           },
           "tabUnderline": "#19955D",
           "visualPageIndicator": {

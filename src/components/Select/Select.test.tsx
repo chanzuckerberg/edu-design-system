@@ -1,14 +1,13 @@
 import { generateSnapshots } from '@chanzuckerberg/story-utils';
-import { composeStory } from '@storybook/react-webpack5';
+import { composeStory } from '@storybook/react-vite';
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { mockResizeObserver } from 'jsdom-testing-mocks';
 import React from 'react';
+import { describe, expect, it, vi } from 'vitest';
 import { Select } from './Select';
 import * as stories from './Select.stories';
-import type { StoryFile } from '../../../.storybook/utility-types';
 
-mockResizeObserver();
+import type { StoryFile } from '../../../.storybook/utility-types';
 
 const {
   EventHandlingOnRenderProp,
@@ -34,17 +33,7 @@ const exampleOptions = [
 ];
 
 describe('<Select />', () => {
-  describe('Generated Snapshots', () => {
-    generateSnapshots(closedStories as StoryFile, {
-      getElement: async () => {
-        const user = userEvent.setup();
-        const openButton = await screen.findByRole('button');
-        await user.click(openButton);
-        await screen.findAllByRole('option');
-        return screen.getByTestId('dropdown');
-      },
-    });
-  });
+  generateSnapshots(stories as StoryFile);
 
   it('does not open a list when clicked and disabled', async () => {
     const user = userEvent.setup();
@@ -113,7 +102,7 @@ describe('<Select />', () => {
 
   describe('event handling', () => {
     it('handles click on .Button', async () => {
-      const clickHandler = jest.fn();
+      const clickHandler = vi.fn();
       const user = userEvent.setup();
 
       render(
@@ -143,7 +132,7 @@ describe('<Select />', () => {
     });
 
     it('handles click on .ButtonWrapper when using render prop', async () => {
-      const clickHandler = jest.fn();
+      const clickHandler = vi.fn();
       const user = userEvent.setup();
 
       render(
@@ -179,7 +168,7 @@ describe('<Select />', () => {
     });
 
     it('handles change on <Select/>', async () => {
-      const changeHandler = jest.fn();
+      const changeHandler = vi.fn();
       const user = userEvent.setup();
 
       render(
@@ -216,7 +205,7 @@ describe('<Select />', () => {
     });
 
     it('does not call change when <Select/> is picking the same item', async () => {
-      const changeHandler = jest.fn();
+      const changeHandler = vi.fn();
       const user = userEvent.setup();
 
       render(
@@ -250,5 +239,97 @@ describe('<Select />', () => {
 
       expect(changeHandler).toHaveBeenCalledTimes(0);
     });
+  });
+
+  it('does not warn about a missing name in production', () => {
+    vi.stubEnv('NODE_ENV', 'production');
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    render(
+      <Select aria-label="test" onChange={() => undefined}>
+        <Select.Button>Select</Select.Button>
+      </Select>,
+    );
+
+    expect(warn).not.toHaveBeenCalled();
+    vi.unstubAllEnvs();
+  });
+
+  it('warns once when rendered without a name', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const unnamedSelect = (
+      <Select aria-label="test" onChange={() => undefined}>
+        <Select.Button>Select</Select.Button>
+      </Select>
+    );
+
+    render(unnamedSelect);
+    render(unnamedSelect);
+
+    expect(warn).toHaveBeenCalledTimes(1);
+    expect(warn.mock.calls[0][0]).toContain('include a `name` prop');
+  });
+
+  it('supports render props for the select and its options', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <Select
+        aria-label="test"
+        name="render-prop-select"
+        value={exampleOptions[0]}
+      >
+        {({ open }) => (
+          <>
+            <Select.Button>{open ? 'Close' : 'Open'}</Select.Button>
+            <Select.Options>
+              {exampleOptions.map((option) => (
+                <Select.Option key={option.key} value={option}>
+                  {({ selected }) => (
+                    <li>
+                      {option.label}
+                      {selected && ' (selected)'}
+                    </li>
+                  )}
+                </Select.Option>
+              ))}
+            </Select.Options>
+          </>
+        )}
+      </Select>,
+    );
+
+    await user.click(screen.getByRole('button', { name: 'Open' }));
+
+    expect(screen.getByRole('button', { name: 'Close' })).toBeInTheDocument();
+    expect(screen.getByText('Option 1 (selected)')).toBeInTheDocument();
+    expect(screen.getByText('Option 2')).toBeInTheDocument();
+  });
+
+  it('shows a checkbox for each option when multiple values are allowed', async () => {
+    const user = userEvent.setup();
+
+    render(
+      <Select aria-label="test" multiple name="multiple-select">
+        <Select.Button>Select</Select.Button>
+        <Select.Options>
+          {exampleOptions.map((option) => (
+            <Select.Option key={option.key} value={option}>
+              {option.label}
+            </Select.Option>
+          ))}
+        </Select.Options>
+      </Select>,
+    );
+
+    await user.click(screen.getByRole('button'));
+    await user.click(screen.getByRole('option', { name: /Option 1/ }));
+
+    const checkboxes = screen.getAllByLabelText('checkbox', {
+      selector: 'input',
+    });
+    expect(checkboxes).toHaveLength(exampleOptions.length);
+    expect(checkboxes[0]).toBeChecked();
+    expect(checkboxes[1]).not.toBeChecked();
   });
 });

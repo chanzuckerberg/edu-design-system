@@ -1,5 +1,5 @@
 export { AppHeader as default } from './AppHeader';
-export {
+export type {
   NavGroup,
   NavItem,
   NavLink,

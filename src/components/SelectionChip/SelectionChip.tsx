@@ -1,15 +1,26 @@
 import clsx from 'clsx';
 import React, { forwardRef } from 'react';
 
-import type { ForwardedRefComponent } from '../../util/utility-types';
+import type {
+  ForwardedRefComponent,
+  IconOrContent,
+} from '../../util/utility-types';
 
-import Icon, { type IconName } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 
 import styles from './SelectionChip.module.css';
 
 export type SelectionChipProps = {
   // Component API
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--selection-chip__bg`
+   * - `--selection-chip__border`
+   * - `--selection-chip__fg`
+   */
+  style?: SelectionChipCSSProperties;
   // Design API
   /**
    * Whether the chip is disabled or not
@@ -20,9 +31,10 @@ export type SelectionChipProps = {
    */
   label: string;
   /**
-   * Leading icon for the chip
+   * Content that precedes the label. Pass an EDS icon name to render a decorative
+   * icon, or a node to render it as-is.
    */
-  leadingIcon?: IconName;
+  leadingContent?: IconOrContent;
   /**
    * Chip types (correspond to the equivalent input types)
    */
@@ -31,6 +43,23 @@ export type SelectionChipProps = {
   React.InputHTMLAttributes<HTMLInputElement>,
   'id' | 'name' | 'className' | 'checked' | 'defaultChecked' | 'onChange'
 >;
+
+export interface SelectionChipCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--selection-chip__bg'?: string;
+
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--selection-chip__border'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--selection-chip__fg'?: string;
+}
 
 type SelectionChipRefProps = ForwardedRefComponent<
   HTMLInputElement,
@@ -72,7 +101,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
       id,
       isDisabled,
       label,
-      leadingIcon,
+      leadingContent,
       name,
       onChange,
       type = 'checkbox',
@@ -82,7 +111,8 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
   ) => {
     const componentClassName = clsx(
       styles['selection-chip'],
-      leadingIcon && styles['selection-chip--has-icon'],
+      hasSlotContent(leadingContent) &&
+        styles['selection-chip--has-leading-content'],
       isDisabled && styles['selection-chip--disabled'],
       className,
     );
@@ -94,8 +124,7 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
       <label
         className={componentClassName}
         htmlFor={idVar}
-        // TODO(next-major): use inert when using React 19+
-        // inert={isDisabled}
+        inert={isDisabled}
         {...other}
       >
         <input
@@ -110,7 +139,9 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
           type={type}
         />
         <div className={styles['selection-chip__body']}>
-          {leadingIcon && <Icon name={leadingIcon} purpose="decorative" />}
+          {hasSlotContent(leadingContent) && (
+            <IconSlot content={leadingContent} />
+          )}
           <Text
             as="span"
             className={styles['selection-chip__label']}

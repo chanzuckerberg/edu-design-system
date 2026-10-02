@@ -1,9 +1,12 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 
 import React from 'react';
 
 import { PopoverListItem } from './PopoverListItem';
 
+import FpoBlock from '../../storyUtils/FpoBlock';
 import Avatar from '../Avatar';
 import Icon from '../Icon';
 
@@ -19,9 +22,6 @@ export default {
   },
   tags: ['autodocs', 'version:2.1.1'],
   argTypes: {
-    icon: {
-      table: { disable: true },
-    },
     leadingContent: {
       control: false,
     },
@@ -60,7 +60,7 @@ export const DefaultWithTrailingContent: Story = {
 };
 
 /**
- * Note: using `__type` list item b/c there is no icon to display. Other types preserve icon space for checkboxes.
+ * Note: using `__type` list item b/c there is no leading content to display. Other types preserve that space for checkboxes.
  */
 export const WithNoIcon: Story = {
   args: {
@@ -75,7 +75,7 @@ export const WithNoIcon: Story = {
 /**
  * Popover list items can be disabled, and ignore all user interaction.
  *
- * Note: using `__type` list item b/c there is no icon to display
+ * Note: using `__type` list item b/c there is no leading content to display
  */
 export const Disabled: Story = {
   args: {
@@ -186,5 +186,18 @@ export const Label: Story = {
   args: {
     __type: 'label',
     children: 'Account',
+  },
+};
+
+/**
+ * Both slots take arbitrary content, not only an icon. The blocks below stand in for
+ * whatever you supply, so the slot itself is the subject rather than the icon that
+ * happened to be picked.
+ */
+export const WithFpoContentSlots: Story = {
+  args: {
+    ...WithLeadingAndTrailingIcons.args,
+    leadingContent: <FpoBlock size={24} />,
+    trailingContent: <FpoBlock size={24} />,
   },
 };

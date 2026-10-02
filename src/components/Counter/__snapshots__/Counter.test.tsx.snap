@@ -1,11 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Counter /> AtTotal story renders snapshot 1`] = `
+exports[`<Counter /> > AtTotal story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count"
+    class="_counter__count_172002"
   >
     10
   </span>
@@ -14,20 +14,20 @@ exports[`<Counter /> AtTotal story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> CountChanging story renders snapshot 1`] = `
+exports[`<Counter /> > CountChanging story renders snapshot 1`] = `
 <div
-  class="flex w-[384px] flex-col gap-spacing-size-1"
+  class="gap-spacing-size-1 flex w-[384px] flex-col"
 >
   <input
     aria-label="Type to change the count"
-    class="input"
+    class="_input_0d9f86"
     value="Some initial text"
   />
   <div
-    class="text text--body-sm counter"
+    class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
   >
     <span
-      class="counter__count"
+      class="_counter__count_172002"
     >
       17
     </span>
@@ -37,12 +37,12 @@ exports[`<Counter /> CountChanging story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> Default story renders snapshot 1`] = `
+exports[`<Counter /> > Default story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count"
+    class="_counter__count_172002"
   >
     3
   </span>
@@ -51,12 +51,12 @@ exports[`<Counter /> Default story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> EmptyCount story renders snapshot 1`] = `
+exports[`<Counter /> > EmptyCount story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count"
+    class="_counter__count_172002"
   >
     0
   </span>
@@ -65,12 +65,12 @@ exports[`<Counter /> EmptyCount story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> NegativeTotal story renders snapshot 1`] = `
+exports[`<Counter /> > NegativeTotal story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count counter__count--invalid"
+    class="_counter__count_172002 _counter__count--invalid_172002"
   >
     3
   </span>
@@ -79,12 +79,12 @@ exports[`<Counter /> NegativeTotal story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> OverTotal story renders snapshot 1`] = `
+exports[`<Counter /> > OverTotal story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count counter__count--invalid"
+    class="_counter__count_172002 _counter__count--invalid_172002"
   >
     12
   </span>
@@ -93,12 +93,12 @@ exports[`<Counter /> OverTotal story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> Percentage story renders snapshot 1`] = `
+exports[`<Counter /> > Percentage story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count"
+    class="_counter__count_172002"
   >
     30
     %
@@ -106,20 +106,20 @@ exports[`<Counter /> Percentage story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> PercentageChanging story renders snapshot 1`] = `
+exports[`<Counter /> > PercentageChanging story renders snapshot 1`] = `
 <div
-  class="flex w-[384px] flex-col gap-spacing-size-1"
+  class="gap-spacing-size-1 flex w-[384px] flex-col"
 >
   <input
     aria-label="Type to change the count"
-    class="input"
+    class="_input_0d9f86"
     value="Some initial text"
   />
   <div
-    class="text text--body-sm counter"
+    class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
   >
     <span
-      class="counter__count"
+      class="_counter__count_172002"
     >
       85
       %
@@ -128,12 +128,12 @@ exports[`<Counter /> PercentageChanging story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> PercentageOverTotal story renders snapshot 1`] = `
+exports[`<Counter /> > PercentageOverTotal story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count counter__count--invalid"
+    class="_counter__count_172002 _counter__count--invalid_172002"
   >
     120
     %
@@ -141,12 +141,12 @@ exports[`<Counter /> PercentageOverTotal story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> PercentageRounded story renders snapshot 1`] = `
+exports[`<Counter /> > PercentageRounded story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count"
+    class="_counter__count_172002"
   >
     33
     %
@@ -154,12 +154,12 @@ exports[`<Counter /> PercentageRounded story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> PercentageZeroTotal story renders snapshot 1`] = `
+exports[`<Counter /> > PercentageZeroTotal story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count counter__count--invalid"
+    class="_counter__count_172002 _counter__count--invalid_172002"
   >
     0
     %
@@ -167,12 +167,12 @@ exports[`<Counter /> PercentageZeroTotal story renders snapshot 1`] = `
 </div>
 `;
 
-exports[`<Counter /> ZeroTotal story renders snapshot 1`] = `
+exports[`<Counter /> > ZeroTotal story renders snapshot 1`] = `
 <div
-  class="text text--body-sm counter"
+  class="_text_b3eba3 _text--body-sm_b3eba3 _counter_172002"
 >
   <span
-    class="counter__count counter__count--invalid"
+    class="_counter__count_172002 _counter__count--invalid_172002"
   >
     3
   </span>

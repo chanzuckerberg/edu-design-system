@@ -1,8 +1,12 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 
 import { PageNotification } from './PageNotification';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import Button from '../Button';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/PageNotification',
@@ -34,7 +38,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:2.1'],
+  tags: ['autodocs', 'version:2.2.0'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof PageNotification>;
@@ -109,7 +113,7 @@ export const WithHorizontalLayout: StoryObj<Args> = {
  */
 export const MultipleNotifications: StoryObj<Args> = {
   render: (args) => (
-    <div className="flex flex-col gap-spacing-size-1">
+    <div className="gap-spacing-size-1 flex flex-col">
       <PageNotification
         {...args}
         aria-label="Notification 1 of 2"
@@ -126,4 +130,21 @@ export const MultipleNotifications: StoryObj<Args> = {
       />
     </div>
   ),
+};
+
+/**
+ * Both icons here come from `IconProvider`: the status icon carrying the notification's
+ * severity, and the dismiss button, which is the same close affordance used everywhere else.
+ *
+ * Here `critical` becomes the outline version of the icon, and the close button a minus.
+ */
+export const WithProvidedIcons: StoryObj<Args> = {
+  args: {
+    ...Critical.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

@@ -793,10 +793,26 @@
                 "group": "color"
               }
             },
-            "dataTable": {
+            "datatable": {
               "headerCell": {
                 "value": "{eds.color.neutral.025}",
                 "group": "color"
+              },
+              "row": {
+                "stripe": {
+                  "1": {
+                    "value": "{eds.color.white}",
+                    "group": "color"
+                  },
+                  "2": {
+                    "value": "{eds.color.neutral.025}",
+                    "group": "color"
+                  }
+                },
+                "selected": {
+                  "value": "{eds.color.neutral.050}",
+                  "group": "color"
+                }
               }
             },
             "input": {
@@ -824,22 +840,6 @@
                 "group": "color"
               },
               "stripe": {
-                "value": "{eds.color.neutral.050}",
-                "group": "color"
-              }
-            },
-            "tableRow": {
-              "stripe": {
-                "1": {
-                  "value": "{eds.color.white}",
-                  "group": "color"
-                },
-                "2": {
-                  "value": "{eds.color.neutral.025}",
-                  "group": "color"
-                }
-              },
-              "selected": {
                 "value": "{eds.color.neutral.050}",
                 "group": "color"
               }

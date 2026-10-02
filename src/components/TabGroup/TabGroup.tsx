@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import clamp from 'lodash/clamp';
-import debounce from 'lodash/debounce';
+import clamp from 'lodash/clamp.js';
+import debounce from 'lodash/debounce.js';
 import React, {
   type ReactNode,
   useCallback,
@@ -18,9 +18,9 @@ import {
   R_ARROW_KEYCODE,
   D_ARROW_KEYCODE,
 } from '../../util/keycodes';
-import type { RenderProps } from '../../util/utility-types';
+import type { IconOrContent, RenderProps } from '../../util/utility-types';
 import type { Align } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 
 import styles from './TabGroup.module.css';
 
@@ -107,17 +107,10 @@ export type TabProps = {
    */
   title: string;
   /**
-   * Icon name from the defined set of EDS icons
-   *
-   * **NOTE**: this cannot be used with `illustration`.
+   * Leading slot for the tab. Takes an EDS icon name, or any content to render in its
+   * place at 16px.
    */
-  icon?: IconName;
-  /**
-   * Illustration to appear above the tab text
-   *
-   * **NOTE**: this cannot be used with `icon`
-   */
-  illustration?: ReactNode;
+  icon?: IconOrContent;
 };
 
 type TabButtonProps = RenderProps<TabContextArgs>;
@@ -389,15 +382,10 @@ export const TabGroup = ({
                   role="tab"
                   tabIndex={isActive ? 0 : -1}
                 >
-                  {tab.props.illustration && (
-                    <div className={styles['tab__illustration']}>
-                      {tab.props.illustration}
-                    </div>
-                  )}
-                  {tab.props.icon && (
-                    <Icon
+                  {hasSlotContent(tab.props.icon) && (
+                    <IconSlot
                       className={styles['tab__icon']}
-                      name={tab.props.icon}
+                      content={tab.props.icon}
                       purpose="decorative"
                       size="16px"
                     />
@@ -446,7 +434,6 @@ export const Tab = ({
   className,
   icon,
   id,
-  illustration,
   // Destructure `title` so it is not applied to the rendered element
   title,
   ...other

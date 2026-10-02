@@ -1,7 +1,11 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 import React from 'react';
 
 import { FieldNote } from './FieldNote';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { IconProvider } from '../Icon';
 import Link from '../Link';
 import Text from '../Text';
 
@@ -30,7 +34,6 @@ export const WithErrorIcon: Story = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
-    icon: 'warning-filled',
     status: 'critical',
   },
 };
@@ -47,7 +50,6 @@ export const WithWarningIcon: Story = {
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
-    icon: 'warning-filled',
     status: 'warning',
   },
 };
@@ -68,4 +70,21 @@ export const WithText: Story = {
     ),
     id: 'field-1',
   },
+};
+
+/**
+ * A note's icon reports its status, so which glyph each status draws comes from
+ * `IconProvider` and matches what the notification components show for the same status.
+ *
+ * Here `critical` becomes the outline version of the icon.
+ */
+export const WithProvidedIcons: Story = {
+  args: {
+    ...WithErrorIcon.args,
+  },
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

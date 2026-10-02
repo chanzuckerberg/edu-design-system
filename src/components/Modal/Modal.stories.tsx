@@ -1,15 +1,19 @@
-import type { StoryObj, Meta } from '@storybook/react-webpack5';
-import { userEvent } from '@storybook/testing-library';
+import type { StoryObj, Meta } from '@storybook/react-vite' with {
+  'resolution-mode': 'import',
+};
 
 import React from 'react';
 import { useState } from 'react';
+import { userEvent } from 'storybook/test';
 
 import { Modal } from './Modal';
 import Heading from '../../components/Heading';
 import Text from '../../components/Text';
+import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
+import { IconProvider } from '../Icon';
 
 export default {
   title: 'Components/Modal',
@@ -23,7 +27,7 @@ export default {
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:3.1.1'],
+  tags: ['autodocs', 'version:4.0.1'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -78,7 +82,7 @@ export const Default: Story = {
         <Modal.SubTitle>Modal Sub-title</Modal.SubTitle>
       </Modal.Header>
       <Modal.Body>
-        <div className="fpo h-full w-full">Modal Content</div>
+        <div className="fpo">Modal Content</div>
       </Modal.Body>
       <Modal.Footer>
         <ButtonGroup>
@@ -131,73 +135,16 @@ export const Full: Story = {
 };
 
 /**
- * Modals can also have a more emphasized backdrop overlay
- */
-export const HighEmphasis: Story = {
-  args: {
-    overlayEmphasis: 'high',
-  },
-  parameters: Default.parameters,
-  render: Default.render,
-  play: Default.play,
-};
-
-/**
- * Large modals allow for control of the on screen height. When set to max, they will occupy the maxiumum space allowed to start. Padding is considered.
+ * `Modal` manages its own height. Content taller than the space available scrolls inside the
+ * body, and the header and footer stay on screen while it does, so a long modal does not run
+ * its actions off the bottom of the viewport.
  *
- * **This will be removed in a future version of EDS**
+ * Below 320px of viewport height there is no room to scroll the body within, and the modal
+ * scrolls as a whole instead, which is the one case where the footer goes off screen.
  */
-export const LargeMax: Story = {
+export const LargeScrolling: Story = {
   args: {
     size: 'lg',
-    height: 'max',
-  },
-  parameters: Default.parameters,
-  render: Default.render,
-  play: Default.play,
-};
-
-/**
- * Large modals allow for control of the on screen height. When set to auto, the height will grow based on the amount of content in the modal body.
- *
- * **This will be removed in a future version of EDS**
- */
-export const LargeAuto: Story = {
-  args: {
-    size: 'lg',
-    height: 'auto',
-  },
-  parameters: Default.parameters,
-  render: Default.render,
-  play: Default.play,
-};
-
-/**
- * Large modals allow for control of the on screen height. When set to fixed, the modal's size will match a fixed maxiumum height based on the viewport.
- *
- * **This will be removed in a future version of EDS**
- */
-export const LargeFixed: Story = {
-  args: {
-    size: 'lg',
-    height: 'fixed',
-  },
-  parameters: Default.parameters,
-  render: Default.render,
-  play: Default.play,
-};
-
-/**
- * The dynamic setting for height is the new default, which handles scrollable content areas in the `Modal` body content.
- * - When the content height is small, `Modal` is centered on the screen.
- * - When the content is taller and requires scroll, `Modal` will keep the header and footer on screen, but allow the content to scroll
- *
- * This will supercede the other height calculations and become the new default. As such, use of other height values (`auto`, `mqx`, etc. are discouraged)
- */
-export const LargeDynamic: Story = {
-  args: {
-    size: 'lg',
-    height: 'dynamic',
   },
   parameters: Default.parameters,
   render: (args) => (
@@ -292,7 +239,7 @@ export const LargeDynamic: Story = {
 };
 
 /**
- * Small will always try to take up the least amount of space, and ignore the height property.
+ * Small will always try to take up the least amount of space.
  */
 export const Small: Story = {
   args: {
@@ -316,7 +263,7 @@ export const Small: Story = {
 export const ContentDefault: Story = {
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="absolute h-[100vh] w-full bg-utility-overlay-lowEmphasis opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -377,37 +324,30 @@ export const ContentLarge: Story = {
 };
 
 /**
- * Large modals can have height set to auto, which will allow the modal's height to vary based on the contents of the modal container.
- *
- * This can be as large as the viewport allows, or as short as the content specifies.
- */
-export const ContentLargeAuto: Story = {
-  ...ContentLarge,
-  args: {
-    ...ContentLarge.args,
-    height: 'auto',
-  },
-};
-
-/**
- * Large modals can have height set to max, which will take up the maxiumum vertical height allowed in the viewport.
- */
-export const ContentLargeMax: Story = {
-  ...ContentLarge,
-  args: {
-    ...ContentLarge.args,
-    height: 'max',
-  },
-};
-
-/**
  * `Modal` also allows for `small`.
+ *
+ * Unlike `lg`, `size="sm"` never goes full-bleed and has a different width at each
+ * breakpoint (480px max at the smallest, 480px through `md`, 560px at `lg` and up), so this
+ * snapshots at every available viewport rather than the single default width.
  */
 export const ContentSmall: Story = {
   ...ContentDefault,
   args: {
     ...ContentDefault.args,
     size: 'sm',
+  },
+  parameters: {
+    ...ContentDefault.parameters,
+    chromatic: {
+      disableSnapshot: false,
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.ipadMini,
+        chromaticViewports.ipadPro,
+        chromaticViewports.chromebook,
+        chromaticViewports.macbookPro,
+      ],
+    },
   },
 };
 
@@ -450,7 +390,7 @@ export const LayoutVertical: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -499,7 +439,7 @@ export const LayoutVerticalWithTertiary: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -544,7 +484,7 @@ export const WithCriticalButton: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="absolute h-full w-full bg-utility-overlay-lowEmphasis opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -615,4 +555,19 @@ export const Tablet: Story = {
       viewports: [chromaticViewports.ipadMini],
     },
   },
+};
+
+/**
+ * The close button comes from `IconProvider`, so it is the same affordance as every other
+ * close in the app rather than something set per modal.
+ *
+ * Shown non-interactive, like the other `Modal.Content` stories.
+ */
+export const WithProvidedIcons: Story = {
+  ...ContentDefault,
+  decorators: [
+    (Story) => (
+      <IconProvider icons={alternativeSemanticIcons}>{Story()}</IconProvider>
+    ),
+  ],
 };

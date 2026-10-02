@@ -2,9 +2,9 @@ import clsx from 'clsx';
 import Graphemer from 'graphemer';
 
 import React from 'react';
-import { type UserData } from '../../util/utility-types';
+import { type IconOrContent, type UserData } from '../../util/utility-types';
 import type { Preset, Size } from '../../util/variant-types';
-import Icon, { type IconName } from '../Icon';
+import { hasSlotContent, IconSlot } from '../Icon';
 import Text from '../Text';
 import styles from './Avatar.module.css';
 
@@ -22,6 +22,14 @@ type AvatarProps = {
    * The URL to an image resource (loaded lazily)
    */
   src?: string;
+  /**
+   * CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:
+   *
+   * - `--avatar__bg`
+   * - `--avatar__border`
+   * - `--avatar__fg`
+   */
+  style?: AvatarCSSProperties;
   /**
    * The user associated with this avatar
    *
@@ -46,9 +54,10 @@ type AvatarProps = {
    */
   color?: 'default' | 'fixed';
   /**
-   * Icon to use when an "icon" variant of the avatar. Default is "person"
+   * Content for the `"icon"` variant of the avatar. Takes an EDS icon name, or any content
+   * to render in its place, sized to match `size`. Default is "person"
    */
-  icon?: IconName;
+  icon?: IconOrContent;
   /**
    * Marking whether the Avatar is intended to be interactive (have focus/hover states)
    */
@@ -62,6 +71,23 @@ type AvatarProps = {
    */
   variant?: 'icon' | 'text' | 'image';
 };
+
+export interface AvatarCSSProperties extends React.CSSProperties {
+  /**
+   * Custom property to customize the background color of this component (e.g., background color)
+   */
+  '--avatar__bg'?: string;
+
+  /**
+   * Custom property to customize the border color of this component
+   */
+  '--avatar__border'?: string;
+
+  /**
+   * Custom property to customize the foreground color of this component (e.g., text, icon, etc.)
+   */
+  '--avatar__fg'?: string;
+}
 
 const NUM_COLORS = 6; // this count should match the zero-indexed color schemes in the CSS Module
 
@@ -223,9 +249,9 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
             {avatarDisplayName}
           </Text>
         )}
-        {variant === 'icon' && (
-          <Icon
-            name={icon}
+        {variant === 'icon' && hasSlotContent(icon) && (
+          <IconSlot
+            content={icon}
             purpose="decorative"
             size={`${iconSizeMap[size]}px`}
           />
