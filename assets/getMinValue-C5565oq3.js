@@ -1,0 +1,1 @@
+import{n as e}from"./chunk-DnJy8xQt.js";function t(...e){let t=Math.min.apply(void 0,e.filter(e=>e!==void 0));return Math.abs(t)===1/0?void 0:t}var n=e((()=>{}));export{n,t};

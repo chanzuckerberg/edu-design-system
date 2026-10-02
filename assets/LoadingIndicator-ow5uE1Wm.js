@@ -1,0 +1,23 @@
+import{n as e}from"./chunk-DnJy8xQt.js";import{M as t,W as n}from"./iframe-CxYcUItw.js";import{n as r,t as i}from"./clsx-CU3OJm-u.js";var a,o=e((()=>{a={"loading-indicator":`_loading-indicator_1249o_8`,"loading-indicator--invisible":`_loading-indicator--invisible_1249o_14`}})),s,c,l,u,d,f=e((()=>{r(),n(),o(),s=t(),c={xs:16,sm:24,md:40,lg:56},l={xs:4,sm:4,md:4,lg:4},u={xs:`-22 -22 46 46`,sm:`-22 -22 46 46`,md:`-22 -22 46 46`,lg:`-22 -22 46 46`},d=({ariaLabel:e=`loading`,className:t,size:n=`md`,isVisible:r=!0,...o})=>(0,s.jsx)(`div`,{"aria-busy":`true`,"aria-label":e,className:i(a[`loading-indicator`],!r&&a[`loading-indicator--invisible`],t),"data-testid":`oval-loading`,role:`status`,...o,children:(0,s.jsx)(`svg`,{"data-testid":`oval-svg`,height:c[n],stroke:`transparent`,viewBox:u[n],width:c[n],xmlns:`http://www.w3.org/2000/svg`,children:(0,s.jsx)(`g`,{fill:`none`,fillRule:`evenodd`,children:(0,s.jsxs)(`g`,{"data-testid":`oval-secondary-group`,strokeWidth:l[n],transform:`translate(1 1)`,children:[(0,s.jsx)(`circle`,{cx:`0`,cy:`0`,r:`20`,stroke:`transparent`,strokeOpacity:`.5`,strokeWidth:l[n]}),(0,s.jsx)(`path`,{d:`M20 0c0-9.94-8.06-20-20-20`,children:(0,s.jsx)(`animateTransform`,{attributeName:`transform`,dur:`1s`,from:`0 0 0`,repeatCount:`indefinite`,to:`360 0 0`,type:`rotate`})})]})})})}),d.displayName=`LoadingIndicator`;try{d.displayName=`LoadingIndicator`,d.__docgenInfo={description:`## Usage
+
+* **Indeterminate loaders**: use when a process does not have a specific endpoint (e.g., loading a page or fetching a component's content); the ongoing animation creates the perception of better performance.
+* **Spinners**: use as a secondary choice of loader to Skeleton states.
+
+| Type | Description | Example |
+|------|-------------|---------|
+| Spinner (Indeterminate) | Circular animation that loops while content loads without known duration. | Page transitions, unknown-length processes. |
+| Progress Bar (Determinate) | Horizontal bar that fills to show loading progress percentage. | File uploads, installers, long-running tasks with known duration. |
+| Progress Bar (Indeterminate) | Animated bar without a fixed percentage; shows ongoing activity. | Searching, connecting, polling data with unpredictable timing. |
+| Skeleton Loader | Placeholder UI shaped like content. | Content-heavy pages, feeds, dashboards. |
+| Dots/Bouncing loader | Animated dots or shapes to suggest activity. | Messaging input, minimal UIs. |
+| Inline loader | Small spinner or bar embedded within buttons, fields, or table rows. | "Saving..." or "Submitting..." buttons, table row actions. |
+| Fullscreen loader | Large spinner or blocking indicator over the entire screen. | Initial page loads, app boot-up sequences. |
+| Overlay loader | Semi-transparent spinner overlay on a section of the UI. | Panel refreshes, card-level async operations. |
+| Looping animation/GIF | Custom animated asset or branded loader. | Branded apps, unique user experiences. |
+| Success/Failure transition | Loader morphs into a checkmark or error icon. | Submission confirmation. |
+
+### Best Practices
+
+* **Do** use other loaders before using the Spinner.
+* **Don't** overload the page with Spinners; minimize usage.`,displayName:`LoadingIndicator`,filePath:`/home/runner/work/edu-design-system/edu-design-system/src/components/LoadingIndicator/LoadingIndicator.tsx`,methods:[],props:{className:{defaultValue:null,declarations:[{fileName:`edu-design-system/src/components/LoadingIndicator/LoadingIndicator.tsx`,name:`TypeLiteral`}],description:`CSS class names that can be appended to the component.`,name:`className`,required:!1,tags:{},type:{name:`string`}},ariaLabel:{defaultValue:{value:`loading`},declarations:[{fileName:`edu-design-system/src/components/LoadingIndicator/LoadingIndicator.tsx`,name:`TypeLiteral`}],description:`Aria label of the oval. Default is "loading". Will be overridden if ariaLabel is passed in props`,name:`ariaLabel`,required:!1,tags:{},type:{name:`string`}},size:{defaultValue:{value:`md`},declarations:[{fileName:`edu-design-system/src/components/LoadingIndicator/LoadingIndicator.tsx`,name:`TypeLiteral`}],description:`Layout size of the loader. This affects the overall size and associated
+stroke width.`,name:`size`,required:!1,tags:{},type:{name:`enum`,raw:`"xs" | "sm" | "md" | "lg"`,value:[{value:`"xs"`},{value:`"sm"`},{value:`"md"`},{value:`"lg"`}]}},isVisible:{defaultValue:null,declarations:[{fileName:`edu-design-system/src/components/LoadingIndicator/LoadingIndicator.tsx`,name:`TypeLiteral`}],description:`Whether the oval is visible. Default is true.`,name:`isVisible`,required:!1,tags:{},type:{name:`boolean`}}},tags:{}}}catch{}}));export{f as n,d as t};
