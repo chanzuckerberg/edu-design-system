@@ -4,6 +4,11 @@ type Check = boolean;
 type LogLevel = 'warn' | 'error';
 
 /**
+ * Prefix on every message that flags a bad usage pattern, so tools and people can filter for them.
+ */
+export const EDS_AUDIT_PREFIX = 'EDS-AUDIT: ';
+
+/**
  * Logging function used to check whether a usage of EDS is proper and advised. When using, it defaults
  * to warning, where it will print a message to the console for developers to see. LogLevel supported.
  *
@@ -17,7 +22,7 @@ export function assertEdsUsage(
   loglevel: LogLevel = 'warn',
 ): void {
   if (process.env.NODE_ENV !== 'production' && [...checks].some(identity)) {
-    console[loglevel](message);
+    console[loglevel](`${EDS_AUDIT_PREFIX}${message}`);
   }
 }
 
