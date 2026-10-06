@@ -153,6 +153,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
  * * Use short, instructional labels when necessary and use sentence case.
  * * Use `fieldNote` helper text when necessary, and use examples rather than instructions whenever possible (e.g., `yourname@emaildomain.com`).
  * * For errors, provide instructions for fixing the issue and explain what is happening.
+ * * Set `maxLength` on every textarea so there's a hard cap on what can be entered. Use `recommendedMaxLength` alongside it to show a lower, soft limit. Enforce the same limit on the server, since `maxLength` only constrains the browser.
  *
  * ### Don'ts
  *

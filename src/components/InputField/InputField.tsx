@@ -198,6 +198,7 @@ type InputFieldType = ForwardedRefComponent<
  * * Use helper text only when necessary, preferring examples (e.g., yourname@emaildomain.com) over instructions.
  * * For errors, provide instructions for fixing the issue and explain what is happening.
  * * Use `fieldNote` for examples or instructions explaining what should be entered.
+ * * Set `maxLength` on every free-text field (`text`, `search`, `email`, `url`, `tel`, `password`) so there's a hard cap on what can be entered. Use `recommendedMaxLength` alongside it to show a lower, soft limit. Enforce the same limit on the server, since `maxLength` only constrains the browser.
  *
  * ### Don'ts
  *
