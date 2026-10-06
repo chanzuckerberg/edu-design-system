@@ -26,7 +26,7 @@
    */
   margin-top: calc(var(--icon-size, 1em) * -1);
   position: relative;
-  top: calc((var(--icon-size, 1em) - 1ex) / 2);
+  top: calc((var(--icon-size, 1em) - 1.25ex) / 2);
 
   /* Sub-component spacing */
   &.link--size-xl,
