@@ -28,22 +28,26 @@ The last case is the one most often gotten wrong. "Any change to `src/**/*.tsx`"
 
 ### Deciding whether a bump has already happened on this branch
 
-One release gets one bump per component. Before adding one, compare the story's current version against the **same file on the branch this work merges into**, not against the working tree:
+One release gets one bump per component. Before adding one, compare the story's current version against the **same file at the last release**, not against the tip of the base branch. An earlier PR may already have bumped the component on the base branch for this unreleased release, and comparing against the tip would miss it:
 
 ```bash
-# what the base branch has
-git show origin/<base-branch>:src/components/<Name>/<Name>.stories.tsx | grep -oE "version:[0-9.]+"
+# the last stable release reachable from the base branch (skips alpha and other prerelease tags)
+LAST_RELEASE=$(git describe --tags --abbrev=0 --exclude='*-*' origin/<base-branch>)
+# what the last release shipped
+git show $LAST_RELEASE:src/components/<Name>/<Name>.stories.tsx | grep -oE "version:[0-9.]+"
 # what this branch has
 grep -oE "version:[0-9.]+" src/components/<Name>/<Name>.stories.tsx
 ```
 
+If the component doesn't exist at the last release, it's new in this release and its starting version is the only one it needs.
+
 Then:
 
-- **Base and branch match** — no bump has been taken yet for this release. Apply the level the change calls for.
+- **Last release and branch match** — no bump has been taken yet for this release. Apply the level the change calls for.
 - **The branch already sits a level at or above what the change needs** — do not add another. A second breaking change on a branch that has already gone major rides along with the first; two majors in one release is wrong.
 - **The branch sits below what the change needs** — raise it to the higher level rather than incrementing again. A branch carrying a patch that then takes a breaking change goes to the next major, not to another patch.
 
-This matters most on long-lived release branches (for example a `v19` branch collecting breaking changes over many PRs), where a component may already have been majored by an earlier PR against the same base.
+This comes up whenever two PRs touch the same component between releases. For example, two Select fixes land on `next` before the next release: the first takes Select from `4.0.0` to `4.0.1`, and the second already sits at the patch it needs, so it adds nothing. It matters most on long-lived release branches (for example a `v19` branch collecting breaking changes over many PRs), where a component may already have been majored by an earlier PR against the same base.
 
 ## Component API guidance
 
