@@ -454,6 +454,23 @@ describe('<Select />', () => {
       expect(screen.queryByText('Ignored')).not.toBeInTheDocument();
     });
 
+    it('uses a <Select.Label> child of 0 instead of aria-label', () => {
+      render(
+        <Select
+          aria-label="Ignored"
+          defaultValue={exampleOptions[1]}
+          name="label-child-zero-select"
+        >
+          <Select.Label>{0}</Select.Label>
+          <Select.Button>Option 2</Select.Button>
+          {renderOptions()}
+        </Select>,
+      );
+
+      expectLabelledBy('0');
+      expect(screen.queryByText('Ignored')).not.toBeInTheDocument();
+    });
+
     it('brings the aria-label back when a <Select.Label> child is removed', () => {
       const LabelledSelect = ({ showLabel }: { showLabel: boolean }) => (
         <Select

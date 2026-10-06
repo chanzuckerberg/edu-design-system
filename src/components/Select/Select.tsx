@@ -358,7 +358,8 @@ const SelectLabel = ({
   subLabel,
 }: SelectLabelProps) => {
   const { registerVisibleLabel } = useContext(SelectContext);
-  const hasText = !!label;
+  // Not `!!label`, since `0` is a valid child that renders as text.
+  const hasText = typeof label === 'function' || hasSlotContent(label);
   useEffect(
     () => (hasText ? registerVisibleLabel?.() : undefined),
     [hasText, registerVisibleLabel],
@@ -377,7 +378,7 @@ const SelectLabel = ({
 
   const overlineClassName = clsx(
     styles['select__overline'],
-    !label && styles['select__overline--no-label'],
+    !hasText && styles['select__overline--no-label'],
   );
 
   const subLabelClassName = clsx(
@@ -415,7 +416,7 @@ const SelectLabel = ({
           (Optional)
         </Text>
       )}
-      {label && subLabel && (
+      {hasText && subLabel && (
         <div className={subLabelClassName}>
           {/* TODO: is there a way to coerce HeadlessUI into using aria-describedby like InputField/TextareaField */}
           <Text as="span" preset="body-sm">
