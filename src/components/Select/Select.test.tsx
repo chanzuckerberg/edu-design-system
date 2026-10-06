@@ -239,6 +239,85 @@ describe('<Select />', () => {
 
       expect(changeHandler).toHaveBeenCalledTimes(0);
     });
+
+    it('handles change on <Select/> when children are a render prop', async () => {
+      const changeHandler = vi.fn();
+      const user = userEvent.setup();
+
+      render(
+        <Select
+          aria-label="test"
+          data-testid="dropdown"
+          name="render-prop-select"
+          onChange={changeHandler}
+          value={exampleOptions[0]}
+        >
+          {() => (
+            <>
+              <Select.Button>Select</Select.Button>
+
+              <Select.Options>
+                {exampleOptions.map((option) => (
+                  <Select.Option key={option.key} value={option}>
+                    {option.label}
+                  </Select.Option>
+                ))}
+              </Select.Options>
+            </>
+          )}
+        </Select>,
+      );
+
+      const openTrigger = await screen.findByRole('button');
+
+      await user.click(openTrigger);
+      expect(changeHandler).toHaveBeenCalledTimes(0);
+
+      // pick the second item
+      await user.keyboard('{arrowdown}');
+      await user.keyboard('{enter}');
+
+      expect(changeHandler).toHaveBeenCalledTimes(1);
+      expect(changeHandler).toHaveBeenCalledWith(exampleOptions[1]);
+    });
+
+    it('does not call change when a render-prop <Select/> is picking the same item', async () => {
+      const changeHandler = vi.fn();
+      const user = userEvent.setup();
+
+      render(
+        <Select
+          aria-label="test"
+          data-testid="dropdown"
+          name="render-prop-select"
+          onChange={changeHandler}
+          value={exampleOptions[0]}
+        >
+          {() => (
+            <>
+              <Select.Button>Select</Select.Button>
+
+              <Select.Options>
+                {exampleOptions.map((option) => (
+                  <Select.Option key={option.key} value={option}>
+                    {option.label}
+                  </Select.Option>
+                ))}
+              </Select.Options>
+            </>
+          )}
+        </Select>,
+      );
+
+      const openTrigger = await screen.findByRole('button');
+
+      await user.click(openTrigger);
+
+      // pick the same item
+      await user.keyboard('{enter}');
+
+      expect(changeHandler).toHaveBeenCalledTimes(0);
+    });
   });
 
   it('does not warn about a missing name in production', () => {

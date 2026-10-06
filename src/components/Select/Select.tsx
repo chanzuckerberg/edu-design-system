@@ -263,6 +263,15 @@ export function Select({
     labelLayout && styles[`select--label-layout-${labelLayout}`],
     className,
   );
+  // Shared by both kinds of children, so a render prop reports changes the same way.
+  const handleChange: SelectProps['onChange'] = (changedValue) => {
+    if (selectedValue !== changedValue) {
+      setSelectedValue(changedValue);
+      // Use the value from the event because updates to `useState` are queued
+      theirOnChange && theirOnChange(changedValue);
+    }
+  };
+
   const sharedProps: SelectProps = {
     className: componentClassName,
     // Provide a wrapping <div> element for the select. This is needed so that any props
@@ -272,6 +281,7 @@ export function Select({
     disabled,
     name,
     ...other,
+    onChange: handleChange,
   };
 
   // Counts the `Select.Label`s with text, whether from the `label` prop or passed in as
@@ -315,16 +325,7 @@ export function Select({
 
   return (
     <SelectContext.Provider value={context}>
-      <Listbox
-        {...sharedProps}
-        onChange={(changedValue) => {
-          if (selectedValue !== changedValue) {
-            setSelectedValue(changedValue);
-            // Use the value from the event because updates to `useState` are queued
-            theirOnChange && theirOnChange(changedValue);
-          }
-        }}
-      >
+      <Listbox {...sharedProps}>
         {(label || required) && (
           <Select.Label
             disabled={disabled}
