@@ -35,6 +35,10 @@
   color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary))
 }
 
+.textarea-field__hint--disabled {
+  color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+}
+
 .textarea-field__footer {
   display: flex;
   justify-content: space-between;

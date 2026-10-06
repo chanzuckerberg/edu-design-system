@@ -3,7 +3,7 @@
 exports[`<PageNotification /> > Critical story renders snapshot 1`] = `
 <aside
   aria-label="Critical title which communicates info to the user"
-  class="_page-notification_e69030 _page-notification--status-critical_e69030 _page-notification--dismissable_e69030 w-[627px]"
+  class="_page-notification_e69030 _page-notification--status-critical_e69030 w-[627px]"
 >
   <svg
     aria-hidden="true"
@@ -104,7 +104,7 @@ exports[`<PageNotification /> > Default story renders snapshot 1`] = `
         Alert title which communicates info to the user
       </h3>
       <p
-        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Body text which provides additional detail
       </p>
@@ -130,7 +130,7 @@ exports[`<PageNotification /> > Default story renders snapshot 1`] = `
 exports[`<PageNotification /> > Favorable story renders snapshot 1`] = `
 <aside
   aria-label="Favorable title which communicates info to the user"
-  class="_page-notification_e69030 _page-notification--status-favorable_e69030 _page-notification--dismissable_e69030 w-[627px]"
+  class="_page-notification_e69030 _page-notification--status-favorable_e69030 w-[627px]"
 >
   <svg
     aria-hidden="true"
@@ -203,7 +203,7 @@ exports[`<PageNotification /> > Favorable story renders snapshot 1`] = `
 exports[`<PageNotification /> > Informational story renders snapshot 1`] = `
 <aside
   aria-label="Default alert title"
-  class="_page-notification_e69030 _page-notification--status-informational_e69030 _page-notification--dismissable_e69030 w-[627px]"
+  class="_page-notification_e69030 _page-notification--status-informational_e69030 w-[627px]"
 >
   <svg
     aria-hidden="true"
@@ -279,7 +279,7 @@ exports[`<PageNotification /> > MultipleNotifications story renders snapshot 1`]
 >
   <aside
     aria-label="Notification 1 of 2"
-    class="_page-notification_e69030 _page-notification--status-critical_e69030 _page-notification--dismissable_e69030 w-[627px]"
+    class="_page-notification_e69030 _page-notification--status-critical_e69030 w-[627px]"
   >
     <svg
       aria-hidden="true"
@@ -307,7 +307,7 @@ exports[`<PageNotification /> > MultipleNotifications story renders snapshot 1`]
           Test Critical Title
         </h3>
         <p
-          class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Subtitle which provides additional detail
         </p>
@@ -354,7 +354,7 @@ exports[`<PageNotification /> > MultipleNotifications story renders snapshot 1`]
   </aside>
   <aside
     aria-label="Notification 2 of 2"
-    class="_page-notification_e69030 _page-notification--status-favorable_e69030 _page-notification--dismissable_e69030 w-[627px]"
+    class="_page-notification_e69030 _page-notification--status-favorable_e69030 w-[627px]"
   >
     <svg
       aria-hidden="true"
@@ -382,7 +382,7 @@ exports[`<PageNotification /> > MultipleNotifications story renders snapshot 1`]
           Test Favorable Title
         </h3>
         <p
-          class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
+          class="_text_b3eba3 _text--body-sm_b3eba3"
         >
           Subtitle which provides additional detail
         </p>
@@ -433,7 +433,7 @@ exports[`<PageNotification /> > MultipleNotifications story renders snapshot 1`]
 exports[`<PageNotification /> > Warning story renders snapshot 1`] = `
 <aside
   aria-label="Warning title which communicates info to the user"
-  class="_page-notification_e69030 _page-notification--status-warning_e69030 _page-notification--dismissable_e69030 w-[627px]"
+  class="_page-notification_e69030 _page-notification--status-warning_e69030 w-[627px]"
 >
   <svg
     aria-hidden="true"
@@ -506,7 +506,7 @@ exports[`<PageNotification /> > Warning story renders snapshot 1`] = `
 exports[`<PageNotification /> > WithHorizontalLayout story renders snapshot 1`] = `
 <aside
   aria-label="Default alert title"
-  class="_page-notification_e69030 _page-notification--status-informational_e69030 _page-notification--dismissable_e69030 w-[627px]"
+  class="_page-notification_e69030 _page-notification--status-informational_e69030 w-[627px]"
 >
   <svg
     aria-hidden="true"
@@ -534,7 +534,7 @@ exports[`<PageNotification /> > WithHorizontalLayout story renders snapshot 1`] 
         Shorter alert title
       </h3>
       <p
-        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Body text which provides additional detail
       </p>
@@ -584,7 +584,7 @@ exports[`<PageNotification /> > WithHorizontalLayout story renders snapshot 1`] 
 exports[`<PageNotification /> > WithProvidedIcons story renders snapshot 1`] = `
 <aside
   aria-label="Critical title which communicates info to the user"
-  class="_page-notification_e69030 _page-notification--status-critical_e69030 _page-notification--dismissable_e69030 w-[627px]"
+  class="_page-notification_e69030 _page-notification--status-critical_e69030 w-[627px]"
 >
   <svg
     aria-hidden="true"
@@ -657,7 +657,7 @@ exports[`<PageNotification /> > WithProvidedIcons story renders snapshot 1`] = `
 exports[`<PageNotification /> > WithTitleWrapping story renders snapshot 1`] = `
 <aside
   aria-label="Default alert title"
-  class="_page-notification_e69030 _page-notification--status-informational_e69030 _page-notification--dismissable_e69030 w-[627px]"
+  class="_page-notification_e69030 _page-notification--status-informational_e69030 w-[627px]"
 >
   <svg
     aria-hidden="true"
@@ -685,7 +685,7 @@ exports[`<PageNotification /> > WithTitleWrapping story renders snapshot 1`] = `
         Alert title which communicates info to the user that is kind of long and wraps to multiple lines
       </h3>
       <p
-        class="_text_b3eba3 _text--body-sm_b3eba3 _page-notification__sub-title_e69030"
+        class="_text_b3eba3 _text--body-sm_b3eba3"
       >
         Body text which provides additional detail
       </p>
@@ -735,7 +735,7 @@ exports[`<PageNotification /> > WithTitleWrapping story renders snapshot 1`] = `
 exports[`<PageNotification /> > WithTitleWrappingAndNoSubTitle story renders snapshot 1`] = `
 <aside
   aria-label="Default alert title"
-  class="_page-notification_e69030 _page-notification--status-informational_e69030 _page-notification--dismissable_e69030 w-[627px]"
+  class="_page-notification_e69030 _page-notification--status-informational_e69030 w-[627px]"
 >
   <svg
     aria-hidden="true"

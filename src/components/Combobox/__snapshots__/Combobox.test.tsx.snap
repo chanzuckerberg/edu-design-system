@@ -447,7 +447,7 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithChipIcons story render
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _input-chip__leading-component_f95fba"
+              class="_icon_779da8"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -489,7 +489,7 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithChipIcons story render
           >
             <svg
               aria-hidden="true"
-              class="_icon_779da8 _input-chip__leading-component_f95fba"
+              class="_icon_779da8"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -611,14 +611,10 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithFpoChipContent story r
             class="_input-chip__label_f95fba"
           >
             <span
-              class="_input-chip__leading-component_f95fba"
-            >
-              <span
-                aria-hidden="true"
-                class="fpo"
-                style="height: 14px; width: 14px; font-size: 5px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
-              />
-            </span>
+              aria-hidden="true"
+              class="fpo"
+              style="height: 14px; width: 14px; font-size: 5px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+            />
             <span
               class="_text_b3eba3 _text--body-xs_b3eba3"
             >
@@ -651,14 +647,10 @@ exports[`<Combobox /> > Generated Snapshots > MultipleWithFpoChipContent story r
             class="_input-chip__label_f95fba"
           >
             <span
-              class="_input-chip__leading-component_f95fba"
-            >
-              <span
-                aria-hidden="true"
-                class="fpo"
-                style="height: 14px; width: 14px; font-size: 5px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
-              />
-            </span>
+              aria-hidden="true"
+              class="fpo"
+              style="height: 14px; width: 14px; font-size: 5px; line-height: 1; overflow: hidden; padding: 0px; flex-grow: 0; flex-shrink: 0; flex-basis: auto;"
+            />
             <span
               class="_text_b3eba3 _text--body-xs_b3eba3"
             >

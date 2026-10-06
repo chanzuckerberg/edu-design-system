@@ -274,7 +274,7 @@ export function DataTable<T>({
               </div>
             )}
             {actions && (
-              <div className={styles['data-table__actions']}>
+              <div>
                 <DataTableActions>{actions}</DataTableActions>
               </div>
             )}

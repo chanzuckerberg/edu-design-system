@@ -50,7 +50,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
     class="grid grid-cols-3 items-center gap-x-8 gap-y-4"
   >
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-xs_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-xs_d78ce8"
       href="http://example.org/"
     >
       Leaves the site 
@@ -71,7 +71,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-xs_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8"
       href="http://example.org/"
     >
       Onward 
@@ -92,7 +92,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-xs_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xs_d78ce8"
       href="http://example.org/"
     >
       Custom icon 
@@ -114,7 +114,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </span>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-sm_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-sm_d78ce8"
       href="http://example.org/"
     >
       Leaves the site 
@@ -135,7 +135,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-sm_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-sm_d78ce8"
       href="http://example.org/"
     >
       Onward 
@@ -156,7 +156,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-sm_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-sm_d78ce8"
       href="http://example.org/"
     >
       Custom icon 
@@ -178,7 +178,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </span>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-md_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-md_d78ce8"
       href="http://example.org/"
     >
       Leaves the site 
@@ -199,7 +199,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-md_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-md_d78ce8"
       href="http://example.org/"
     >
       Onward 
@@ -220,7 +220,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-md_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-md_d78ce8"
       href="http://example.org/"
     >
       Custom icon 
@@ -242,7 +242,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </span>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
       href="http://example.org/"
     >
       Leaves the site 
@@ -263,7 +263,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-lg_d78ce8"
       href="http://example.org/"
     >
       Onward 
@@ -284,7 +284,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-lg_d78ce8"
       href="http://example.org/"
     >
       Custom icon 
@@ -306,7 +306,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </span>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-xl_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-xl_d78ce8"
       href="http://example.org/"
     >
       Leaves the site 
@@ -327,7 +327,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-xl_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xl_d78ce8"
       href="http://example.org/"
     >
       Onward 
@@ -348,7 +348,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
       </svg>
     </a>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-xl_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-xl_d78ce8"
       href="http://example.org/"
     >
       Custom icon 
@@ -471,7 +471,7 @@ exports[`<Link /> > LinkWithFormattedChildren story renders snapshot 1`] = `
   class="text-utility-default-primary"
 >
   <a
-    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
     href="http://example.org/"
   >
     <em>
@@ -500,7 +500,7 @@ exports[`<Link /> > LinkWithForwardIcon story renders snapshot 1`] = `
   class="text-utility-default-primary"
 >
   <a
-    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-lg_d78ce8"
     href="http://example.org/"
   >
     Default
@@ -527,7 +527,7 @@ exports[`<Link /> > LinkWithOpenIcon story renders snapshot 1`] = `
   class="text-utility-default-primary"
 >
   <a
-    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+    class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
     href="http://example.org/"
   >
     Default
@@ -588,7 +588,7 @@ exports[`<Link /> > WithProvidedIcons story renders snapshot 1`] = `
 >
   <div>
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
       href="http://example.org/"
     >
       Leaves the site
@@ -609,7 +609,7 @@ exports[`<Link /> > WithProvidedIcons story renders snapshot 1`] = `
     </a>
     <br />
     <a
-      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--has-right-icon_d78ce8 _link--size-lg_d78ce8"
+      class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-lg_d78ce8"
       href="http://example.org/"
     >
       Carries the reader onward

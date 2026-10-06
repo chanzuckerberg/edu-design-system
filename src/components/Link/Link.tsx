@@ -155,7 +155,6 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       styles['link'],
       context && styles[`link--context-${context}`],
       emphasis && styles[`link--emphasis-${emphasis}`],
-      showsIcon && styles['link--has-right-icon'],
       size && styles[`link--size-${size}`],
       variant === 'inverse' && styles[`link--variant-${variant}`],
     );

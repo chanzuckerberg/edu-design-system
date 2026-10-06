@@ -28,7 +28,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`,
     layout: 'centered',
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
-  tags: ['autodocs', 'version:2.1.3'],
+  tags: ['autodocs', 'version:2.1.4'],
 };
 
 export default meta;
@@ -69,6 +69,7 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`,
 export const WhenDisabled: Story = {
   args: {
     disabled: true,
+    showHint: true,
     rows: 2,
   },
   parameters: {

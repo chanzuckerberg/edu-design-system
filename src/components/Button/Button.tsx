@@ -182,7 +182,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       iconLayout && styles[`button--layout-${iconLayout}`],
       isDisabled && styles['button--disabled'],
       isFullWidth && styles['button--full-width'],
-      isLoading && styles['button--loading'],
       rank && styles[`button--${rank}`],
       size && styles[`button--${size}`],
       size && styles[`button--size-${size}`],

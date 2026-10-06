@@ -80,12 +80,7 @@ const RadioInput = ({
   ...other
 }: RadioInputProps) => {
   return (
-    <span
-      className={clsx(
-        styles['input__wrapper'],
-        disabled && styles['input__wrapper--disabled'],
-      )}
-    >
+    <span className={styles['input__wrapper']}>
       <input
         checked={checked}
         className={clsx(

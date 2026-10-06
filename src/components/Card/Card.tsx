@@ -218,7 +218,6 @@ export const Card = ({
     typeof isDragging !== 'undefined' &&
       styles[`card--is-dragging-${isDragging}`],
     isInteractive && styles['card--is-interactive'],
-    behavior && styles['card--has-behavior'],
     className,
   );
 
@@ -278,9 +277,8 @@ const CardFooter = ({
   className,
   ...other
 }: CardSubComponentProps) => {
-  const componentClassName = clsx(styles['card__footer'], className);
   return (
-    <div className={componentClassName} {...other}>
+    <div className={className} {...other}>
       {children}
     </div>
   );

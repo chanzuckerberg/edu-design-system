@@ -22,7 +22,7 @@ exports[`<ToastNotification /> > Critical story renders snapshot 1`] = `
     class="_toast__body_355ac2"
   >
     <span
-      class="_text_b3eba3 _text--body-md_b3eba3 _toast__text_355ac2"
+      class="_text_b3eba3 _text--body-md_b3eba3"
     >
       A toast should not exceed two lines of text.
     </span>
@@ -52,7 +52,7 @@ exports[`<ToastNotification /> > Default story renders snapshot 1`] = `
     class="_toast__body_355ac2"
   >
     <span
-      class="_text_b3eba3 _text--body-md_b3eba3 _toast__text_355ac2"
+      class="_text_b3eba3 _text--body-md_b3eba3"
     >
       A toast should not exceed two lines of text.
     </span>
@@ -82,7 +82,7 @@ exports[`<ToastNotification /> > Favorable story renders snapshot 1`] = `
     class="_toast__body_355ac2"
   >
     <span
-      class="_text_b3eba3 _text--body-md_b3eba3 _toast__text_355ac2"
+      class="_text_b3eba3 _text--body-md_b3eba3"
     >
       A toast should not exceed two lines of text.
     </span>
@@ -112,7 +112,7 @@ exports[`<ToastNotification /> > Informational story renders snapshot 1`] = `
     class="_toast__body_355ac2"
   >
     <span
-      class="_text_b3eba3 _text--body-md_b3eba3 _toast__text_355ac2"
+      class="_text_b3eba3 _text--body-md_b3eba3"
     >
       A toast should not exceed two lines of text.
     </span>
@@ -142,7 +142,7 @@ exports[`<ToastNotification /> > NotDismissable story renders snapshot 1`] = `
     class="_toast__body_355ac2"
   >
     <span
-      class="_text_b3eba3 _text--body-md_b3eba3 _toast__text_355ac2"
+      class="_text_b3eba3 _text--body-md_b3eba3"
     >
       A toast should not exceed two lines of text.
     </span>
@@ -172,7 +172,7 @@ exports[`<ToastNotification /> > Warning story renders snapshot 1`] = `
     class="_toast__body_355ac2"
   >
     <span
-      class="_text_b3eba3 _text--body-md_b3eba3 _toast__text_355ac2"
+      class="_text_b3eba3 _text--body-md_b3eba3"
     >
       A toast should not exceed two lines of text.
     </span>
@@ -202,7 +202,7 @@ exports[`<ToastNotification /> > WithProvidedIcons story renders snapshot 1`] = 
     class="_toast__body_355ac2"
   >
     <span
-      class="_text_b3eba3 _text--body-md_b3eba3 _toast__text_355ac2"
+      class="_text_b3eba3 _text--body-md_b3eba3"
     >
       A toast should not exceed two lines of text.
     </span>

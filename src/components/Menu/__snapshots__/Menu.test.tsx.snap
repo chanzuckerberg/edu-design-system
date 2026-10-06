@@ -11,7 +11,7 @@ exports[`<Menu /> > Default story renders snapshot 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="menu"
-      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       id="headlessui-menu-button-_r_2_"
       type="button"
@@ -170,7 +170,7 @@ exports[`<Menu /> > WithLongButtonText story renders snapshot 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="menu"
-      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       id="headlessui-menu-button-_r_8_"
       type="button"
@@ -210,7 +210,7 @@ exports[`<Menu /> > WithProvidedIcons story renders snapshot 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="menu"
-      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       id="headlessui-menu-button-_r_1c_"
       type="button"
@@ -250,7 +250,7 @@ exports[`<Menu /> > WithShortButtonText story renders snapshot 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="menu"
-      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       id="headlessui-menu-button-_r_e_"
       type="button"

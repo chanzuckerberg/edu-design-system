@@ -684,7 +684,6 @@ const AppHeaderLink = forwardRef<HTMLAnchorElement, AppHeaderLinkProps>(
       styles['app-header__nav-item'],
       styles[`app-header__nav-item--link`],
       isCurrent && styles['app-header__nav-item--is-current'],
-      isExternal && styles['app-header__nav-item--is-external'],
     );
 
     // The mark on an external link is semantic, and matches the one `Link` renders for
