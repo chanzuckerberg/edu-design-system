@@ -12,7 +12,7 @@ type BaseProps = {
    * Determine whether there should be an animation in the skeleton state
    */
   isAnimating?: boolean;
-};
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'children' | 'style'>;
 
 type SkeletonProps = BaseProps & {
   width?: number | string;
@@ -99,6 +99,7 @@ const TextSkeleton = ({
     <div
       aria-hidden
       className={componentClassName}
+      {...other}
       style={{ width, height: height }}
     ></div>
   );
@@ -125,6 +126,7 @@ const CircleSkeleton = ({
     <div
       aria-hidden
       className={componentClassName}
+      {...other}
       style={{ width, height: width }}
     ></div>
   );
