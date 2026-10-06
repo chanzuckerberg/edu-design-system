@@ -15,7 +15,7 @@ exports[`<AppNotification /> > Default story renders snapshot 1`] = `
         This is an AppNotification title
       </div>
       <span
-        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
       </span>
@@ -39,7 +39,7 @@ exports[`<AppNotification /> > InverseVariant story renders snapshot 1`] = `
         This is an AppNotification title
       </div>
       <span
-        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
       </span>
@@ -91,7 +91,7 @@ exports[`<AppNotification /> > InverseWithDismissAndControls story renders snaps
         This is an AppNotification title
       </div>
       <span
-        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
       </span>
@@ -167,7 +167,7 @@ exports[`<AppNotification /> > WithControls story renders snapshot 1`] = `
         This is an AppNotification title
       </div>
       <span
-        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
       </span>
@@ -219,7 +219,7 @@ exports[`<AppNotification /> > WithDismissAndControls story renders snapshot 1`]
         This is an AppNotification title
       </div>
       <span
-        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         Limited subTitle text
       </span>
@@ -295,7 +295,7 @@ exports[`<AppNotification /> > WithLinkInSubtitle story renders snapshot 1`] = `
         This is an AppNotification title
       </div>
       <span
-        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         <span
           class="_text_b3eba3 _text--body-md_b3eba3"
@@ -332,7 +332,7 @@ exports[`<AppNotification /> > WithProvidedIcons story renders snapshot 1`] = `
         This is an AppNotification title
       </div>
       <span
-        class="_text_b3eba3 _text--body-md_b3eba3 _app-notification__sub-title_d1763b"
+        class="_text_b3eba3 _text--body-md_b3eba3"
       >
         Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.
       </span>

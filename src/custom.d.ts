@@ -46,3 +46,11 @@ declare module 'react-children-by-type' {
 declare module 'react-syntax-highlighter/dist/esm/styles/prism/index.js' {
   export * from 'react-syntax-highlighter/dist/esm/styles/prism';
 }
+
+// postcss-import ships no types; only the plugin factory is used (in tests)
+declare module 'postcss-import' {
+  import type { PluginCreator } from 'postcss';
+
+  const postcssImport: PluginCreator<Record<string, unknown>>;
+  export default postcssImport;
+}

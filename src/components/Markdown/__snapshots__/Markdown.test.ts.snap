@@ -4577,12 +4577,8 @@ exports[`<Markdown /> > GithubFlavoredMarkdown story renders snapshot 1`] = `
   <table
     class="_markdown__table_7f0a4d"
   >
-    <thead
-      class="_markdown__thead_7f0a4d"
-    >
-      <tr
-        class="_markdown__tr_7f0a4d"
-      >
+    <thead>
+      <tr>
         <th
           class="_markdown__th_7f0a4d"
         >
@@ -4609,9 +4605,7 @@ exports[`<Markdown /> > GithubFlavoredMarkdown story renders snapshot 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr
-        class="_markdown__tr_7f0a4d"
-      >
+      <tr>
         <td
           class="_markdown__td_7f0a4d"
         >

@@ -73,9 +73,7 @@ exports[`<Card /> > BackgroundCallout story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <div
-      class="_card__footer_f66b11"
-    >
+    <div>
       <div
         class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
@@ -132,9 +130,7 @@ exports[`<Card /> > CancelMembership story renders snapshot 1`] = `
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu
       </p>
     </div>
-    <div
-      class="_card__footer_f66b11"
-    >
+    <div>
       <div
         class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
@@ -169,7 +165,7 @@ exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
       for="_r_v_"
     >
       <div
-        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 w-[450px]"
       >
         <div
           class="_card__header_f66b11 _header--size-md_f66b11"
@@ -203,9 +199,7 @@ exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
             Card Body
           </div>
         </div>
-        <div
-          class="_card__footer_f66b11"
-        >
+        <div>
           <div
             class="fpo"
           >
@@ -227,7 +221,7 @@ exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
       for="_r_10_"
     >
       <div
-        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 w-[450px]"
       >
         <div
           class="_card__header_f66b11 _header--size-md_f66b11"
@@ -261,9 +255,7 @@ exports[`<Card /> > CheckboxCards story renders snapshot 1`] = `
             Card Body
           </div>
         </div>
-        <div
-          class="_card__footer_f66b11"
-        >
+        <div>
           <div
             class="fpo"
           >
@@ -362,9 +354,7 @@ exports[`<Card /> > Default story renders snapshot 1`] = `
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu lacus semper lectus proin. Turpis dolor tincidunt vehicula egestas suspendisse senectus enim. Quam euismod orci commodo aliquet vestibulum egestas amet mi. Iaculis pulvinar aenean duis justo pretium aenean.
       </p>
     </div>
-    <div
-      class="_card__footer_f66b11"
-    >
+    <div>
       <div
         class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
@@ -465,9 +455,7 @@ exports[`<Card /> > IsInteractive story renders snapshot 1`] = `
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu lacus semper lectus proin. Turpis dolor tincidunt vehicula egestas suspendisse senectus enim. Quam euismod orci commodo aliquet vestibulum egestas amet mi. Iaculis pulvinar aenean duis justo pretium aenean.
       </p>
     </div>
-    <div
-      class="_card__footer_f66b11"
-    >
+    <div>
       <div
         class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
@@ -502,7 +490,7 @@ exports[`<Card /> > RadioCards story renders snapshot 1`] = `
       for="_r_t_"
     >
       <div
-        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 w-[450px]"
       >
         <div
           class="_card__header_f66b11 _header--size-md_f66b11"
@@ -536,9 +524,7 @@ exports[`<Card /> > RadioCards story renders snapshot 1`] = `
             Card Body
           </div>
         </div>
-        <div
-          class="_card__footer_f66b11"
-        >
+        <div>
           <div
             class="fpo"
           >
@@ -561,7 +547,7 @@ exports[`<Card /> > RadioCards story renders snapshot 1`] = `
       for="_r_u_"
     >
       <div
-        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 _card--has-behavior_f66b11 w-[450px]"
+        class="_card_f66b11 _card--container-style-low_f66b11 _card--container-color-default_f66b11 _card--is-interactive_f66b11 w-[450px]"
       >
         <div
           class="_card__header_f66b11 _header--size-md_f66b11"
@@ -595,9 +581,7 @@ exports[`<Card /> > RadioCards story renders snapshot 1`] = `
             Card Body
           </div>
         </div>
-        <div
-          class="_card__footer_f66b11"
-        >
+        <div>
           <div
             class="fpo"
           >
@@ -697,9 +681,7 @@ exports[`<Card /> > WhileDragging story renders snapshot 1`] = `
         Lorem ipsum dolor sit amet consectetur. Id pretium consequat consequat aliquam arcu lacus semper lectus proin. Turpis dolor tincidunt vehicula egestas suspendisse senectus enim. Quam euismod orci commodo aliquet vestibulum egestas amet mi. Iaculis pulvinar aenean duis justo pretium aenean.
       </p>
     </div>
-    <div
-      class="_card__footer_f66b11"
-    >
+    <div>
       <div
         class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
@@ -755,9 +737,7 @@ exports[`<Card /> > WithCustomizedHeader story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <div
-      class="_card__footer_f66b11"
-    >
+    <div>
       <div
         class="fpo"
       >
@@ -914,9 +894,7 @@ exports[`<Card /> > WithSmallFullHeaderAndIcon story renders snapshot 1`] = `
         Card Body
       </div>
     </div>
-    <div
-      class="_card__footer_f66b11"
-    >
+    <div>
       <div
         class="fpo"
       >

@@ -1,9 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
-<div
-  class="_tabs_5bfe90"
->
+<div>
   <div
     class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >
@@ -121,9 +119,7 @@ exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
 `;
 
 exports[`<TabGroup /> > Default story renders snapshot 1`] = `
-<div
-  class="_tabs_5bfe90"
->
+<div>
   <div
     class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >
@@ -244,9 +240,7 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
 <div
   class="p-spacing-size-half"
 >
-  <div
-    class="_tabs_5bfe90"
-  >
+  <div>
     <div
       class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-inverse_5bfe90"
     >
@@ -365,9 +359,7 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
 `;
 
 exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
-<div
-  class="_tabs_5bfe90"
->
+<div>
   <div
     class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >
@@ -485,9 +477,7 @@ exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
 `;
 
 exports[`<TabGroup /> > WithFpoTabContent story renders snapshot 1`] = `
-<div
-  class="_tabs_5bfe90"
->
+<div>
   <div
     class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >
@@ -582,9 +572,7 @@ exports[`<TabGroup /> > WithFpoTabContent story renders snapshot 1`] = `
 `;
 
 exports[`<TabGroup /> > WithTabIcons story renders snapshot 1`] = `
-<div
-  class="_tabs_5bfe90"
->
+<div>
   <div
     class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-default_5bfe90"
   >

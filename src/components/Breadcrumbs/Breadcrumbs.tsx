@@ -166,15 +166,9 @@ export const Breadcrumbs = ({
       );
     });
 
-  const componentClassName = clsx(styles['breadcrumbs'], className);
   return (
     <BreadcrumbsContext.Provider value={{ separator }}>
-      <nav
-        aria-label={ariaLabel}
-        className={componentClassName}
-        id={id}
-        {...other}
-      >
+      <nav aria-label={ariaLabel} className={className} id={id} {...other}>
         <ul className={styles['breadcrumbs__list']} ref={ref}>
           {/**
            * Back icon breadcrumb always exists, just hidden via css depending on breakpoint to increase performance

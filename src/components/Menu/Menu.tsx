@@ -138,8 +138,6 @@ const MenuButton = (props: MenuButtonProps) => {
     removedTrailingContent,
   );
 
-  const buttonClassNames = clsx(styles['menu__button'], className);
-
   // The chevron is semantic: it marks the button as the thing that expands the menu, and
   // reads as that role only if it looks the same on every menu in the app. It comes from
   // `IconProvider` for that reason, and not from a prop on this button.
@@ -157,7 +155,7 @@ const MenuButton = (props: MenuButtonProps) => {
         // has not run the codemod, or a dynamic spread — used to land after this one and win,
         // quietly putting the button back to a per-instance icon.
         {...other}
-        className={buttonClassNames}
+        className={className}
         icon={expandIcon}
         iconLayout="right"
         rank="primary"

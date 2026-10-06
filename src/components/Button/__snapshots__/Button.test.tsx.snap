@@ -624,7 +624,7 @@ exports[`<Button /> > LoadingStates story renders snapshot 1`] = `
   >
     <button
       aria-label="Large button"
-      class="_button_0829c1 _button--layout-none_0829c1 _button--loading_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
@@ -683,7 +683,7 @@ exports[`<Button /> > LoadingStates story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Medium button"
-      class="_button_0829c1 _button--layout-none_0829c1 _button--loading_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span
@@ -742,7 +742,7 @@ exports[`<Button /> > LoadingStates story renders snapshot 1`] = `
     </button>
     <button
       aria-label="Small button"
-      class="_button_0829c1 _button--layout-none_0829c1 _button--loading_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
+      class="_button_0829c1 _button--layout-none_0829c1 _button--primary_0829c1 _button--sm_0829c1 _button--size-sm_0829c1 _button--variant-default_0829c1"
       type="button"
     >
       <span

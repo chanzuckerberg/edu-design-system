@@ -11,7 +11,7 @@ exports[`<IconProvider /> > Default story renders snapshot 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="menu"
-      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       id="headlessui-menu-button-_r_2_"
       type="button"
@@ -125,10 +125,10 @@ exports[`<IconProvider /> > Default story renders snapshot 1`] = `
       />
     </svg>
     <div
-      class="_inline-notication__body_785732"
+      class="_inline-notification__body_785732"
     >
       <div
-        class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+        class="_text_b3eba3 _text--title-sm_b3eba3"
       >
         Something went wrong
       </div>
@@ -148,7 +148,7 @@ exports[`<IconProvider /> > WithCustomContent story renders snapshot 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="menu"
-      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       id="headlessui-menu-button-_r_c_"
       type="button"
@@ -263,10 +263,10 @@ exports[`<IconProvider /> > WithCustomContent story renders snapshot 1`] = `
       />
     </svg>
     <div
-      class="_inline-notication__body_785732"
+      class="_inline-notification__body_785732"
     >
       <div
-        class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+        class="_text_b3eba3 _text--title-sm_b3eba3"
       >
         Something went wrong
       </div>
@@ -286,7 +286,7 @@ exports[`<IconProvider /> > WithOverriddenIcons story renders snapshot 1`] = `
     <button
       aria-expanded="false"
       aria-haspopup="menu"
-      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1 _menu__button_33ee5b"
+      class="_button_0829c1 _button--layout-right_0829c1 _button--primary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
       data-headlessui-state=""
       id="headlessui-menu-button-_r_7_"
       type="button"
@@ -400,10 +400,10 @@ exports[`<IconProvider /> > WithOverriddenIcons story renders snapshot 1`] = `
       />
     </svg>
     <div
-      class="_inline-notication__body_785732"
+      class="_inline-notification__body_785732"
     >
       <div
-        class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+        class="_text_b3eba3 _text--title-sm_b3eba3"
       >
         Something went wrong
       </div>

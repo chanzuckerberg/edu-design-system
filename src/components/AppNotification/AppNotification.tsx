@@ -100,11 +100,7 @@ export const AppNotification = ({
           >
             {title}
           </Text>
-          <Text
-            as="span"
-            className={styles['app-notification__sub-title']}
-            preset="body-md"
-          >
+          <Text as="span" preset="body-md">
             {subTitle}
           </Text>
           {children && (

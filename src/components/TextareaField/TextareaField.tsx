@@ -112,7 +112,6 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
       styles['textarea'],
       status === 'critical' && styles['error'],
       status === 'warning' && styles['warning'],
-      disabled && styles['textarea--disabled'],
       className,
     );
 
@@ -203,11 +202,9 @@ export const TextareaField: TextareaFieldType = forwardRef(
       textExceedsMaxLength ||
       textExceedsRecommendedLength;
 
-    const componentClassName = clsx(styles['textarea-field'], className);
     const overlineClassName = clsx(
       styles['textarea-field__overline'],
       !label && styles['textarea-field__overline--no-label'],
-      disabled && styles['textarea-field__overline--disabled'],
     );
 
     const labelClassName = clsx(
@@ -221,11 +218,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
 
     const requiredTextClassName = clsx(
       styles['textarea-field__hint'],
-      disabled && styles['textarea-field__required-text--disabled'],
-    );
-
-    const textareaClassName = clsx(
-      readOnly && styles['textarea-field__textarea--read-only'],
+      disabled && styles['textarea-field__hint--disabled'],
     );
 
     // Accessibility: attach the IDs of fieldnote and/or subLabel to the input
@@ -246,7 +239,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
     const maxLengthShown = getMinValue(maxLength, recommendedMaxLength);
 
     return (
-      <div className={componentClassName}>
+      <div className={className}>
         {shouldRenderOverline && (
           <div className={overlineClassName}>
             {label && (
@@ -291,7 +284,6 @@ export const TextareaField: TextareaFieldType = forwardRef(
         <TextArea
           aria-describedby={completeDescribedByVar ?? undefined}
           aria-disabled={disabled}
-          className={textareaClassName}
           defaultValue={defaultValue}
           disabled={disabled}
           id={idVar}

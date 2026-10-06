@@ -272,7 +272,7 @@ exports[`<AppHeader /> > Default story renders snapshot 1`] = `
           <ul>
             <li>
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -289,7 +289,7 @@ exports[`<AppHeader /> > Default story renders snapshot 1`] = `
             </li>
             <li>
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -552,7 +552,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
           <ul>
             <li>
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -569,7 +569,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
             </li>
             <li>
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -935,7 +935,7 @@ exports[`<AppHeader /> > FloatingVerticalOrientation story renders snapshot 1`] 
               class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -968,7 +968,7 @@ exports[`<AppHeader /> > FloatingVerticalOrientation story renders snapshot 1`] 
               class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -1269,7 +1269,7 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
           <ul>
             <li>
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -1286,7 +1286,7 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
             </li>
             <li>
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -1650,7 +1650,7 @@ exports[`<AppHeader /> > VerticalDefaultWithImageLogo story renders snapshot 1`]
               class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -1683,7 +1683,7 @@ exports[`<AppHeader /> > VerticalDefaultWithImageLogo story renders snapshot 1`]
               class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -2047,7 +2047,7 @@ exports[`<AppHeader /> > VerticalOrientation story renders snapshot 1`] = `
               class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -2080,7 +2080,7 @@ exports[`<AppHeader /> > VerticalOrientation story renders snapshot 1`] = `
               class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -2343,7 +2343,7 @@ exports[`<AppHeader /> > WithProvidedIcons story renders snapshot 1`] = `
           <ul>
             <li>
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -2360,7 +2360,7 @@ exports[`<AppHeader /> > WithProvidedIcons story renders snapshot 1`] = `
             </li>
             <li>
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -2726,7 +2726,7 @@ exports[`<AppHeader /> > WithProvidedIconsVertical story renders snapshot 1`] = 
               class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
@@ -2759,7 +2759,7 @@ exports[`<AppHeader /> > WithProvidedIconsVertical story renders snapshot 1`] = 
               class="_drawer-content__nav-group-item_7b1fec _drawer-content__nav-group-item--type-link_7b1fec"
             >
               <a
-                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec _app-header__nav-item--is-external_7b1fec"
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
                 href="https://example.org"
                 target="_blank"
               >
