@@ -470,9 +470,9 @@ const TabButton = (props: TabButtonProps) => {
   return <div />;
 };
 
-Tab.displayName = 'Tab';
+Tab.displayName = 'TabGroup.Tab';
 Tab.Button = TabButton;
-TabButton.displayName = 'TabGroup.Button';
+TabButton.displayName = 'TabGroup.Tab.Button';
 
 TabGroup.displayName = 'TabGroup';
 TabGroup.Tab = Tab;

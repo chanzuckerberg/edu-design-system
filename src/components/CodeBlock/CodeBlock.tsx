@@ -158,3 +158,5 @@ ${children}
     </div>
   );
 };
+
+CodeBlock.displayName = 'CodeBlock';

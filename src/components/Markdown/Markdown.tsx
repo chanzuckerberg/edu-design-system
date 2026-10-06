@@ -218,3 +218,5 @@ export const Markdown = ({
     </div>
   );
 };
+
+Markdown.displayName = 'Markdown';

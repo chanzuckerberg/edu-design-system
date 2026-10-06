@@ -45,3 +45,5 @@ export function ButtonGroup({
 
   return <div className={componentClassName}>{children}</div>;
 }
+
+ButtonGroup.displayName = 'ButtonGroup';

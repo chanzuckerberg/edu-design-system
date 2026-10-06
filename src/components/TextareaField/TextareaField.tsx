@@ -329,7 +329,7 @@ export const TextareaField: TextareaFieldType = forwardRef(
 );
 
 TextareaField.displayName = 'TextareaField';
-TextArea.displayName = 'TextareaField.Textarea';
+TextArea.displayName = 'TextareaField.TextArea';
 
 TextareaField.TextArea = TextArea;
 TextareaField.Label = FieldLabel;

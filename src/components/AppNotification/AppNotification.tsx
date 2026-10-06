@@ -129,3 +129,5 @@ export const AppNotification = ({
     </div>
   );
 };
+
+AppNotification.displayName = 'AppNotification';

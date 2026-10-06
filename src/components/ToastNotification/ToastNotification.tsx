@@ -167,3 +167,5 @@ export const ToastNotification = ({
     </div>
   );
 };
+
+ToastNotification.displayName = 'ToastNotification';

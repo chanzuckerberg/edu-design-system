@@ -218,4 +218,4 @@ export const Checkbox = Object.assign(
 );
 
 Checkbox.displayName = 'Checkbox';
-CheckboxInput.displayName = 'CheckboxInput';
+CheckboxInput.displayName = 'Checkbox.Input';
