@@ -13,7 +13,7 @@
 * Sub-components (only should apply to standalone links
 */
 .link__icon {
-  padding-left: calc(var(--eds-spacing-size-half) * 1px);
+  margin-left: calc(var(--eds-spacing-size-half) * 1px);
 
   /**
    * Center the icon on the x-height instead of the line box, the way `vertical-align: middle`
@@ -31,7 +31,7 @@
   /* Sub-component spacing. The size class sits on the link, not the icon */
   .link--size-xl &,
   .link--size-lg & {
-    padding-left: calc(var(--eds-spacing-size-1) * 1px);
+    margin-left: calc(var(--eds-spacing-size-1) * 1px);
   }
 }
 
