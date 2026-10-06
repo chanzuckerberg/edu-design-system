@@ -139,5 +139,9 @@ export const OrderedList = (props: OrderedListProps) => {
   );
 };
 
+UnorderedList.displayName = 'UnorderedList';
+OrderedList.displayName = 'OrderedList';
+ListItem.displayName = 'ListItem';
+
 UnorderedList.ListItem = ListItem;
 OrderedList.ListItem = ListItem;

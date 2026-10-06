@@ -191,3 +191,5 @@ export const ScrollWrapper = ({
     </div>
   );
 };
+
+ScrollWrapper.displayName = 'ScrollWrapper';

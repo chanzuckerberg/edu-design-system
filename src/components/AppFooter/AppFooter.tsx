@@ -230,3 +230,5 @@ export const AppFooter = ({
     </footer>
   );
 };
+
+AppFooter.displayName = 'AppFooter';

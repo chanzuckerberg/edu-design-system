@@ -173,3 +173,5 @@ export const IconSlot = (props: IconSlotProps) => {
     <>{content}</>
   );
 };
+
+IconSlot.displayName = 'IconSlot';

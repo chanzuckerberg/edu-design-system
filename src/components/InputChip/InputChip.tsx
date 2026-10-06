@@ -112,3 +112,5 @@ export const InputChip = ({
     </div>
   );
 };
+
+InputChip.displayName = 'InputChip';

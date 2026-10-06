@@ -127,3 +127,5 @@ export const Tag = ({
     </InternalText>
   );
 };
+
+Tag.displayName = 'Tag';

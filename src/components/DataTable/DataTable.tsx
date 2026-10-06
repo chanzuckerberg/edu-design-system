@@ -720,6 +720,16 @@ const DataTableActions = ({ children }: Pick<EDSBase, 'children'>) => {
 
 // Assemble composed component with re-exported sub-components
 DataTable.displayName = 'DataTable';
+DataTableSearch.displayName = 'DataTable.Search';
+DataTableActions.displayName = 'DataTable.Actions';
+DataTableTable.displayName = 'DataTable.Table';
+DataTableHeader.displayName = 'DataTable.Header';
+DataTableRow.displayName = 'DataTable.Row';
+DataTableGroupRow.displayName = 'DataTable.GroupRow';
+DataTableHeaderCell.displayName = 'DataTable.HeaderCell';
+DataTableDataCell.displayName = 'DataTable.DataCell';
+DataTableStatusCell.displayName = 'DataTable.StatusCell';
+DataTableStatusHeaderCell.displayName = 'DataTable.StatusHeaderCell';
 DataTable.Search = DataTableSearch;
 DataTable.Actions = DataTableActions;
 DataTable.Table = DataTableTable;

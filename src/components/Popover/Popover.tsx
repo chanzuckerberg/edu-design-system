@@ -134,7 +134,7 @@ const PopoverContent = ({
 };
 
 Popover.displayName = 'Popover';
-PopoverButton.displayName = 'Popover.Group';
+PopoverButton.displayName = 'Popover.Button';
 PopoverContent.displayName = 'Popover.Content';
 PopoverOverlay.displayName = 'Popover.Overlay';
 PopoverGroup.displayName = 'Popover.Group';
