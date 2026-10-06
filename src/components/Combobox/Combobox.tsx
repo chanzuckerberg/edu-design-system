@@ -35,6 +35,7 @@ import React, {
 } from 'react';
 
 import {
+  EDS_AUDIT_PREFIX,
   assertNoRemovedIconProp,
   type WithRemovedIconProps,
 } from '../../util/logging';
@@ -418,7 +419,8 @@ export function Combobox({
   if (process.env.NODE_ENV !== 'production') {
     if (!name && showNameWarning) {
       console.warn(
-        "%c`Combobox` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/combobox#using-with-html-forms for more information",
+        EDS_AUDIT_PREFIX +
+          "%c`Combobox` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/combobox#using-with-html-forms for more information",
         'font-weight: bold',
       );
       showNameWarning = false;

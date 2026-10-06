@@ -996,6 +996,7 @@ describe('<Combobox />', () => {
     render(<TestCombobox name={undefined} />);
 
     expect(warn).toHaveBeenCalledTimes(1);
+    expect(warn.mock.calls[0][0]).toMatch(/^EDS-AUDIT: /);
     expect(warn.mock.calls[0][0]).toContain('include a `name` prop');
   });
 

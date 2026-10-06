@@ -123,7 +123,7 @@ describe('<Counter />', () => {
 
       expect(consoleErrorMock).toHaveBeenCalledTimes(0);
       expect(consoleWarnMock).toHaveBeenCalledWith(
-        'Counter values must not be negative (received 3 / -10)',
+        'EDS-AUDIT: Counter values must not be negative (received 3 / -10)',
       );
     });
 
@@ -132,7 +132,7 @@ describe('<Counter />', () => {
 
       expect(consoleWarnMock).toHaveBeenCalledTimes(0);
       expect(consoleErrorMock).toHaveBeenCalledWith(
-        'Counter cannot report 3 as a percentage of 0; the percentage variant requires a total greater than zero',
+        'EDS-AUDIT: Counter cannot report 3 as a percentage of 0; the percentage variant requires a total greater than zero',
       );
     });
 
@@ -140,7 +140,7 @@ describe('<Counter />', () => {
       render(<Counter count={3} total={-10} variant="percentage" />);
 
       expect(consoleErrorMock).toHaveBeenCalledWith(
-        'Counter cannot report 3 as a percentage of -10; the percentage variant requires a total greater than zero',
+        'EDS-AUDIT: Counter cannot report 3 as a percentage of -10; the percentage variant requires a total greater than zero',
       );
     });
 

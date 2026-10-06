@@ -19,6 +19,7 @@ import React, {
 } from 'react';
 
 import {
+  EDS_AUDIT_PREFIX,
   assertNoRemovedIconProp,
   type WithRemovedIconProps,
 } from '../../util/logging';
@@ -243,7 +244,8 @@ export function Select({
   if (process.env.NODE_ENV !== 'production') {
     if (!name && showNameWarning) {
       console.warn(
-        "%c`Select` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/listbox#using-with-html-forms for more information",
+        EDS_AUDIT_PREFIX +
+          "%c`Select` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/listbox#using-with-html-forms for more information",
         'font-weight: bold',
       );
       showNameWarning = false;
