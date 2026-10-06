@@ -9,7 +9,9 @@ import {
 import clsx from 'clsx';
 
 import React, {
+  useCallback,
   useContext,
+  useEffect,
   useState,
   type ReactNode,
   type MouseEventHandler,
@@ -164,6 +166,11 @@ type SelectContextType = {
   optionsClassName?: string;
   status?: SelectButtonWrapperProps['status'];
   multiple?: boolean; // pulls from HeadlessUI
+  /**
+   * Called by a `Select.Label` with text while it's mounted, so the root knows a visible label
+   * is naming the trigger. Returns the cleanup that unregisters it.
+   */
+  registerVisibleLabel?: () => () => void;
 };
 
 let showNameWarning = true;
@@ -267,17 +274,27 @@ export function Select({
     ...other,
   };
 
+  // Counts the `Select.Label`s with text, whether from the `label` prop or passed in as
+  // children, since either one is a visible label that should name the trigger.
+  const [visibleLabelCount, setVisibleLabelCount] = useState(0);
+  const registerVisibleLabel = useCallback(() => {
+    setVisibleLabelCount((count) => count + 1);
+    return () => setVisibleLabelCount((count) => count - 1);
+  }, []);
+
   const context: SelectContextType = {
     optionsClassName,
     status,
     multiple: other.multiple,
+    registerVisibleLabel,
   };
 
   // HeadlessUI names the trigger with `aria-labelledby`: every label in the listbox, then the
   // button itself, so it reads as the label followed by the selected value. With no visible
   // label, `aria-label` goes in a hidden label so it gets read the same way. An `aria-label`
-  // on the button would replace the selected value instead of coming before it.
-  const hiddenLabel = !label && ariaLabel && (
+  // on the button would replace the selected value instead of coming before it. A visible
+  // label wins, so the trigger isn't named twice.
+  const hiddenLabel = !label && !visibleLabelCount && ariaLabel && (
     <Label className={styles['select__label--hidden']}>{ariaLabel}</Label>
   );
 
@@ -340,6 +357,13 @@ const SelectLabel = ({
   showHint,
   subLabel,
 }: SelectLabelProps) => {
+  const { registerVisibleLabel } = useContext(SelectContext);
+  const hasText = !!label;
+  useEffect(
+    () => (hasText ? registerVisibleLabel?.() : undefined),
+    [hasText, registerVisibleLabel],
+  );
+
   const componentClassName = clsx(
     styles['select__label'],
     disabled && clsx(styles['select__label--disabled']),

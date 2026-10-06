@@ -415,6 +415,64 @@ describe('<Select />', () => {
       expectLabelledBy('Favorite option');
       expect(screen.queryByText('Ignored')).not.toBeInTheDocument();
     });
+
+    it('uses a <Select.Label> child instead of aria-label when both are given', () => {
+      render(
+        <Select
+          aria-label="Ignored"
+          defaultValue={exampleOptions[1]}
+          name="label-child-select"
+        >
+          <Select.Label>Favorite option</Select.Label>
+          <Select.Button>Option 2</Select.Button>
+          {renderOptions()}
+        </Select>,
+      );
+
+      expectLabelledBy('Favorite option');
+      expect(screen.queryByText('Ignored')).not.toBeInTheDocument();
+    });
+
+    it('uses a <Select.Label> child instead of aria-label when children are a render prop', () => {
+      render(
+        <Select
+          aria-label="Ignored"
+          defaultValue={exampleOptions[1]}
+          name="label-child-render-prop-select"
+        >
+          {() => (
+            <>
+              <Select.Label>Favorite option</Select.Label>
+              <Select.Button>Option 2</Select.Button>
+              {renderOptions()}
+            </>
+          )}
+        </Select>,
+      );
+
+      expectLabelledBy('Favorite option');
+      expect(screen.queryByText('Ignored')).not.toBeInTheDocument();
+    });
+
+    it('brings the aria-label back when a <Select.Label> child is removed', () => {
+      const LabelledSelect = ({ showLabel }: { showLabel: boolean }) => (
+        <Select
+          aria-label="Favorite option"
+          defaultValue={exampleOptions[1]}
+          name="label-child-toggle-select"
+        >
+          {showLabel && <Select.Label>Visible label</Select.Label>}
+          <Select.Button>Option 2</Select.Button>
+          {renderOptions()}
+        </Select>
+      );
+
+      const { rerender } = render(<LabelledSelect showLabel />);
+      expect(screen.queryByText('Favorite option')).not.toBeInTheDocument();
+
+      rerender(<LabelledSelect showLabel={false} />);
+      expectLabelledBy('Favorite option');
+    });
   });
 
   it('shows a checkbox for each option when multiple values are allowed', async () => {
