@@ -147,6 +147,9 @@ function isSemanticIconName(key: string): key is SemanticIconName {
  *
  * `String(value)` will not do on its own either — an array and an element each stringify to
  * something a reader cannot act on.
+ *
+ * The only element that can reach here is a fragment: `hasSlotContent` counts every other
+ * element as content, since what a component renders cannot be known from here.
  */
 function describeEmptyValue(icon: unknown): string {
   if (Array.isArray(icon)) {
@@ -154,9 +157,7 @@ function describeEmptyValue(icon: unknown): string {
   }
 
   if (React.isValidElement(icon)) {
-    return icon.type === Fragment
-      ? 'a fragment that renders nothing'
-      : 'an element that renders nothing';
+    return 'a fragment that renders nothing';
   }
 
   return `\`${String(icon)}\`, which renders nothing`;
