@@ -299,11 +299,122 @@ describe('<Select />', () => {
       </Select>,
     );
 
-    await user.click(screen.getByRole('button', { name: 'Open' }));
+    await user.click(screen.getByRole('button', { name: /^test/ }));
 
-    expect(screen.getByRole('button', { name: 'Close' })).toBeInTheDocument();
+    expect(screen.getByRole('button')).toHaveTextContent('Close');
     expect(screen.getByText('Option 1 (selected)')).toBeInTheDocument();
     expect(screen.getByText('Option 2')).toBeInTheDocument();
+  });
+
+  /**
+   * HeadlessUI points the trigger's `aria-labelledby` at every label, then at the button
+   * itself, so browsers read the label followed by the selected value. jsdom skips that
+   * self-reference and stops at the label, so these assert the name starts with it.
+   */
+  describe('accessible name', () => {
+    const expectLabelledBy = (text: string) => {
+      const button = screen.getByRole('button');
+      const labelIds = button.getAttribute('aria-labelledby')?.split(' ') ?? [];
+      expect(
+        labelIds.map(
+          (labelId) => document.getElementById(labelId)?.textContent,
+        ),
+      ).toContain(text);
+      expect(button).toHaveAccessibleName(new RegExp(`^${text}`));
+    };
+
+    const renderOptions = () => (
+      <Select.Options>
+        {exampleOptions.map((option) => (
+          <Select.Option key={option.key} value={option}>
+            {option.label}
+          </Select.Option>
+        ))}
+      </Select.Options>
+    );
+
+    it('names the trigger with aria-label', () => {
+      render(
+        <Select
+          aria-label="Favorite option"
+          defaultValue={exampleOptions[1]}
+          name="aria-label-select"
+        >
+          <Select.Button>Option 2</Select.Button>
+          {renderOptions()}
+        </Select>,
+      );
+
+      expectLabelledBy('Favorite option');
+    });
+
+    it('names the trigger with aria-label when children are a render prop', () => {
+      render(
+        <Select
+          aria-label="Favorite option"
+          defaultValue={exampleOptions[1]}
+          name="aria-label-render-prop-select"
+        >
+          {({ open }) => (
+            <>
+              <Select.Button>{open ? 'Close' : 'Option 2'}</Select.Button>
+              {renderOptions()}
+            </>
+          )}
+        </Select>,
+      );
+
+      expectLabelledBy('Favorite option');
+    });
+
+    it('names the trigger with aria-label when there is no visible label but the field is required', () => {
+      render(
+        <Select
+          aria-label="Favorite option"
+          defaultValue={exampleOptions[1]}
+          name="aria-label-required-select"
+          required
+        >
+          <Select.Button>Option 2</Select.Button>
+          {renderOptions()}
+        </Select>,
+      );
+
+      expectLabelledBy('Favorite option');
+    });
+
+    it('keeps the aria-label out of view and off the wrapper', () => {
+      render(
+        <Select aria-label="Favorite option" name="aria-label-wrapper-select">
+          {() => <Select.Button>Pick one</Select.Button>}
+        </Select>,
+      );
+
+      expect(screen.getByText('Favorite option')).toHaveClass(
+        /select__label--hidden/,
+      );
+      // Only the trigger is labelled, not the wrapper it used to land on.
+      expect(screen.getAllByLabelText('Favorite option')).toEqual([
+        screen.getByRole('button'),
+      ]);
+    });
+
+    it('uses a visible label instead of aria-label when both are given', () => {
+      render(
+        <Select
+          aria-label="Ignored"
+          defaultValue={exampleOptions[1]}
+          label="Favorite option"
+          name="visible-label-select"
+        >
+          <Select.Button>Option 2</Select.Button>
+          {renderOptions()}
+        </Select>,
+      );
+
+      expectLabelledBy('Favorite option');
+      expect(screen.queryByText('Ignored')).not.toBeInTheDocument();
+    });
   });
 
   it('shows a checkbox for each option when multiple values are allowed', async () => {

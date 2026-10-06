@@ -47,7 +47,7 @@ type SelectProps = ListboxProps<
    *
    * When possible, use a visible label by passing a <Select.Label> into `children`.
    * In rare cases where there's no visible label, you must provide an `aria-label` for screen readers.
-   * If you pass in an `aria-label`, <Select.Label>.
+   * The trigger reads it the way it reads a visible label, followed by the selected value.
    */
   'aria-label'?: string;
   /**
@@ -273,17 +273,24 @@ export function Select({
     multiple: other.multiple,
   };
 
+  // HeadlessUI names the trigger with `aria-labelledby`: every label in the listbox, then the
+  // button itself, so it reads as the label followed by the selected value. With no visible
+  // label, `aria-label` goes in a hidden label so it gets read the same way. An `aria-label`
+  // on the button would replace the selected value instead of coming before it.
+  const hiddenLabel = !label && ariaLabel && (
+    <Label className={styles['select__label--hidden']}>{ariaLabel}</Label>
+  );
+
   if (typeof children === 'function') {
     return (
       <SelectContext.Provider value={context}>
-        <Listbox
-          {...sharedProps}
-          // We prefer to pass the aria-label in via an invisible SelectLabel, but we can't
-          // easily pass down function children with component children, so we'll settle for
-          // using a standard aria-label in this case.
-          aria-label={ariaLabel}
-        >
-          {children}
+        <Listbox {...sharedProps}>
+          {(renderProps) => (
+            <>
+              {hiddenLabel}
+              {children(renderProps)}
+            </>
+          )}
         </Listbox>
       </SelectContext.Provider>
     );
@@ -311,6 +318,7 @@ export function Select({
             {label}
           </Select.Label>
         )}
+        {hiddenLabel}
         {children}
       </Listbox>
       {fieldNote && (

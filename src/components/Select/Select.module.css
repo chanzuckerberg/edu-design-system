@@ -122,6 +122,19 @@
   color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
 }
 
+/**
+ * Carries `aria-label` when there's no visible label. It stays in the accessibility tree so
+ * the trigger can point at it, but takes up no space on screen.
+ */
+.select__label--hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .select__option {
   color: light-dark(var(--eds-theme-color-text-utility-interactive-secondary), var(--eds-dark-theme-color-text-utility-interactive-secondary));
 }
