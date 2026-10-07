@@ -46,7 +46,7 @@ export const Default: Story = {
 
 /**
  * `AppNotification`s can contain children that represent actions related to the notification.
- * These should be composed in a `ButtonGroup` component, and put the primary `Button` / CTA on the left-hand side.
+ * These should be composed in a `ButtonGroup` component using `size="sm"` `Button`s, and put the primary `Button` / CTA on the left-hand side.
  */
 export const WithControls: Story = {
   render: (args) => (
@@ -54,12 +54,14 @@ export const WithControls: Story = {
       <ButtonGroup buttonLayout="horizontal" className="!flex-row">
         <Button
           rank="secondary"
+          size="sm"
           variant={args.variant === 'inverse' ? undefined : 'inverse'}
         >
           Call To Action
         </Button>
         <Button
           rank="tertiary"
+          size="sm"
           variant={args.variant === 'inverse' ? undefined : 'inverse'}
         >
           Other action
@@ -98,12 +100,14 @@ export const InverseVariant: Story = {
       <ButtonGroup buttonLayout="horizontal" className="!flex-row">
         <Button
           rank="secondary"
+          size="sm"
           variant={args.variant === 'inverse' ? undefined : 'inverse'}
         >
           Call To Action
         </Button>
         <Button
           rank="tertiary"
+          size="sm"
           variant={args.variant === 'inverse' ? undefined : 'inverse'}
         >
           Other action
