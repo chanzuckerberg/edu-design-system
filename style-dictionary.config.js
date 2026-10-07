@@ -13,11 +13,11 @@ const EDSStyleDictionary = StyleDictionary.extend({
       files: [
         {
           format: 'json/flat',
-          destination: '.storybook/data/tokens.json',
+          destination: 'src/storyUtils/data/tokens.json',
         },
         {
           format: 'json/flat-descriptions',
-          destination: '.storybook/data/token-descriptions.json',
+          destination: 'src/storyUtils/data/token-descriptions.json',
         },
       ],
     },
@@ -80,7 +80,7 @@ const EDSStyleDictionary = StyleDictionary.extend({
 /**
  * Emit a flat map of token name => description, for tokens that declare a
  * "description" in the source. Consumed by the Storybook token tables
- * (see .storybook/util/filterTokens.ts) to render a Description column.
+ * (see src/storyUtils/filterTokens.ts) to render a Description column.
  */
 EDSStyleDictionary.registerFormat({
   name: 'json/flat-descriptions',

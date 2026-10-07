@@ -167,6 +167,8 @@ export default {
   content: [
     './src/components/**/*.stories.{ts,tsx}',
     './src/components/**/*Example.tsx',
+    './src/documentation/**/*.{ts,tsx}',
+    './src/storyUtils/**/*.{ts,tsx}',
     './.storybook/**/*.{js,jsx,ts,tsx}',
   ],
   theme: { ...applyTailwindConfig(edsTokens) },

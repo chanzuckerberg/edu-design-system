@@ -3,13 +3,12 @@ import type { StorybookConfig } from '@storybook/react-vite' with {
 };
 
 const config: StorybookConfig = {
-  stories: [
-    './components/**/*.mdx',
-    './components/**/*.stories.@(js|jsx|ts|tsx)',
-    '../src/components',
-    './**/*.mdx',
-    './**/*.stories.@(js|jsx|ts|tsx)',
-  ],
+  /**
+   * Keep stories and docs out of `.storybook/`. Chromatic's TurboSnap treats every file there
+   * as config, so anything in it that imports from `src` turns each component change into a
+   * full rebuild.
+   */
+  stories: ['../src/documentation', '../src/components'],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-links',

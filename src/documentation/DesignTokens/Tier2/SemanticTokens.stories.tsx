@@ -13,7 +13,7 @@ import {
   TokenDataTable,
   getSpecifier,
   getTokenListItems,
-} from '../../TokenList/TokenList';
+} from '../../../storyUtils/TokenList/TokenList';
 
 // TODO: consider removing the generation of tokens.json entirely (only used for these internal pages)?
 const meta = {
