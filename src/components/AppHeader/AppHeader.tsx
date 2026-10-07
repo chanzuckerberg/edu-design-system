@@ -5,7 +5,7 @@ import React, {
   createContext,
   forwardRef,
   useState,
-  useEffect,
+  useLayoutEffect,
   type ReactNode,
 } from 'react';
 
@@ -223,6 +223,23 @@ const AppHeaderContext = createContext<
   href: '#',
 });
 
+/**
+ * Decide which orientation the header should render in for the current window size.
+ * Narrow screens always use `horizontal`, which collapses the nav into a drawer.
+ * @param orientation orientation requested by the consumer
+ */
+function resolveOrientation(
+  orientation: AppHeaderProps['orientation'],
+): NonNullable<AppHeaderProps['orientation']> {
+  // compare the screen width to the smallest breakpoint. if it's wider...
+  if (window.innerWidth > parseInt(breakpoints['eds-bp-sm'], 10)) {
+    // ...change to original user value (with default specified)
+    return orientation || 'horizontal';
+  }
+  // ...change 'vertical' to 'horizontal' if the original value was vertical
+  return 'horizontal';
+}
+
 function NavMenuItemLeadingContent(props: {
   navItem: NavMenuButton | NavMenuLink;
 }): ReactNode {
@@ -296,9 +313,11 @@ export const AppHeader = ({
   title,
   ...other
 }: AppHeaderProps) => {
-  const [headerOrientation, setHeaderOrientation] = useState(
-    orientation || 'horizontal',
-  );
+  // Unresolved (`null`) until we've measured the window, so the header never paints in
+  // an orientation it's about to swap out of (EDS-2125)
+  const [headerOrientation, setHeaderOrientation] = useState<
+    AppHeaderProps['orientation'] | null
+  >(null);
 
   const componentClassName = clsx(
     styles['app-header'],
@@ -318,32 +337,26 @@ export const AppHeader = ({
   const menuIcon = useSemanticIcon('menu');
   const closeIcon = useSemanticIcon('close');
 
-  const handleOrientationCalculation = function (
-    orientation: AppHeaderProps['orientation'],
-  ) {
-    // compare the screen width to the smallest breakpoint. if it's wider...
-    if (window.innerWidth > parseInt(breakpoints['eds-bp-sm'], 10)) {
-      // ...change to original user value (with default specified)
-      setHeaderOrientation(orientation || 'horizontal');
-    } else {
-      // ...change 'vertical' to 'horizontal' if the original value was vertical
-      setHeaderOrientation('horizontal');
-    }
-  };
-
-  useEffect(() => {
+  // Layout effect runs after the DOM commit but before the browser paints, so the first
+  // frame the user sees is already in the resolved orientation
+  useLayoutEffect(() => {
     const handler = () => {
-      handleOrientationCalculation(orientation);
+      setHeaderOrientation(resolveOrientation(orientation));
     };
 
     // Call it manually when this effect is triggered
-    handleOrientationCalculation(orientation);
+    handler();
 
     window.addEventListener('resize', handler);
     return () => {
       window.removeEventListener('resize', handler);
     };
   }, [orientation]);
+
+  if (!headerOrientation) {
+    // Placeholder until the orientation resolves (e.g., during server rendering)
+    return <header className={componentClassName} {...other} />;
+  }
 
   return (
     <AppHeaderContext.Provider value={{ href, orientation: headerOrientation }}>

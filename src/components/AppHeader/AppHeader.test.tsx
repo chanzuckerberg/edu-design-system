@@ -3,6 +3,7 @@ import { act, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import React from 'react';
+import { renderToString } from 'react-dom/server';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { AppHeader, type AppHeaderEventHandler } from './AppHeader';
 import * as stories from './AppHeader.stories';
@@ -680,6 +681,40 @@ describe('<AppHeader />', () => {
       ).toBeInTheDocument();
     });
 
+    it('never paints the vertical layout before resolving to horizontal (EDS-2125)', () => {
+      window.innerWidth = 320;
+      const container = document.createElement('div');
+      document.body.appendChild(container);
+      const observer = new MutationObserver(() => {});
+      observer.observe(container, {
+        attributeFilter: ['class'],
+        attributeOldValue: true,
+        childList: true,
+        subtree: true,
+      });
+
+      render(
+        <AppHeader navGroups={navGroups} orientation="vertical" title="Test" />,
+        { container },
+      );
+
+      const committedClasses = observer
+        .takeRecords()
+        .flatMap((record) =>
+          record.type === 'attributes'
+            ? [record.oldValue ?? '']
+            : Array.from(record.addedNodes, (node) =>
+                node instanceof Element ? node.className : '',
+              ),
+        );
+      observer.disconnect();
+
+      expect(committedClasses.join(' ')).not.toMatch(/orientation-vertical/);
+      expect(
+        screen.getByRole('button', { name: 'Show Menu' }),
+      ).toBeInTheDocument();
+    });
+
     it('opens and closes the drawer, closing it on nav item clicks', async () => {
       const user = userEvent.setup();
       const onButtonClickMock = vi.fn();
@@ -770,5 +805,20 @@ describe('<AppHeader />', () => {
       expect(onButtonClickMock).toHaveBeenCalledTimes(2);
       expect(hidePopover).toHaveBeenCalledTimes(4);
     });
+  });
+
+  it('renders an empty header until the orientation resolves (EDS-2125)', () => {
+    const view = renderToString(
+      <AppHeader
+        navGroups={[
+          { name: 'group-1', navItems: [{ name: 'Lakes', type: 'button' }] },
+        ]}
+        orientation="vertical"
+        title="Test"
+      />,
+    );
+
+    expect(view).not.toMatch(/orientation-vertical|orientation-horizontal/);
+    expect(view).not.toContain('Lakes');
   });
 });
