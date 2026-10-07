@@ -6,7 +6,7 @@ exports[`<CodeBlock /> > CurlExample story renders snapshot 1`] = `
 >
   <pre>
     <div
-      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
     >
       <code
         class="_code-block__block_961fb8"
@@ -100,7 +100,7 @@ exports[`<CodeBlock /> > Default story renders snapshot 1`] = `
 >
   <pre>
     <div
-      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
     >
       <code
         class="_code-block__block_961fb8"
@@ -123,7 +123,7 @@ exports[`<CodeBlock /> > Python story renders snapshot 1`] = `
 >
   <pre>
     <div
-      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
     >
       <code
         class="_code-block__block_961fb8"
@@ -636,7 +636,7 @@ exports[`<CodeBlock /> > SingleLineWithCopyIcon story renders snapshot 1`] = `
 >
   <pre>
     <div
-      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
     >
       <code
         class="_code-block__block_961fb8"
@@ -688,7 +688,7 @@ exports[`<CodeBlock /> > TypeScript story renders snapshot 1`] = `
 >
   <pre>
     <div
-      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
     >
       <code
         class="_code-block__block_961fb8"
@@ -1833,7 +1833,7 @@ exports[`<CodeBlock /> > TypeScriptWithCopyIcon story renders snapshot 1`] = `
 >
   <pre>
     <div
-      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
     >
       <code
         class="_code-block__block_961fb8"
@@ -3007,7 +3007,7 @@ exports[`<CodeBlock /> > TypeScriptWithCopyText story renders snapshot 1`] = `
 >
   <pre>
     <div
-      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
     >
       <code
         class="_code-block__block_961fb8"
@@ -4168,7 +4168,7 @@ exports[`<CodeBlock /> > WithProvidedIcons story renders snapshot 1`] = `
 >
   <pre>
     <div
-      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+      style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
     >
       <code
         class="_code-block__block_961fb8"
