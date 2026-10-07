@@ -34,5 +34,16 @@ describe('<Skeleton />', () => {
       fireEvent.click(skeleton);
       expect(onClick).toHaveBeenCalledTimes(1);
     });
+
+    it('stays hidden from assistive tech when aria-hidden is passed', () => {
+      const props = { 'aria-hidden': false, 'data-testid': 'skeleton' };
+      // @ts-expect-error aria-hidden is excluded from the props type; this covers JS callers
+      render(React.createElement(Component, props));
+
+      expect(screen.getByTestId('skeleton')).toHaveAttribute(
+        'aria-hidden',
+        'true',
+      );
+    });
   });
 });
