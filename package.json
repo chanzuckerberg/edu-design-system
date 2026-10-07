@@ -135,7 +135,6 @@
     "@types/react-syntax-highlighter": "^15.5.13",
     "@types/yargs": "^17.0.35",
     "@vitejs/plugin-react": "^6.0.1",
-    "@vitest/browser-playwright": "4.1.11",
     "@vitest/coverage-v8": "^4.1.11",
     "@vitest/ui": "4.1.11",
     "chromatic": "^18.11.0",
@@ -147,10 +146,8 @@
     "eslint-plugin-testing-library": "^7.16.2",
     "happy-dom": "^20.14.5",
     "husky": "^9.1.7",
-    "jest-preset-stylelint": "^7.3.0",
     "jsdom-testing-mocks": "^1.16.0",
     "lint-staged": "^15.5.2",
-    "playwright": "^1.63.0",
     "plop": "^4.0.5",
     "postcss": "^8.5.29",
     "postcss-import": "^16.2.0",
@@ -173,7 +170,8 @@
     "ts-dedent": "^2.3.0",
     "typescript": "^5.9.3",
     "vite": "^8.3.3",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.11",
+    "vitest-stylelint-utils": "^2.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
