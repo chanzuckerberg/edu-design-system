@@ -297,20 +297,16 @@ exports[`<AppNotification /> > WithLinkInSubtitle story renders snapshot 1`] = `
       <span
         class="_text_b3eba3 _text--body-sm_b3eba3"
       >
-        <span
-          class="_text_b3eba3 _text--body-md_b3eba3"
+        Some text with a
+         
+        <a
+          class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--variant-inverse_d78ce8"
+          href="https://example.com/"
         >
-          Some text with a
-           
-          <a
-            class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--variant-inverse_d78ce8"
-            href="https://example.com/"
-          >
-            link
-          </a>
-           
-          in.
-        </span>
+          link
+        </a>
+         
+        in.
       </span>
     </section>
   </div>

@@ -11,7 +11,6 @@ import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import { IconProvider } from '../Icon';
 import Link from '../Link';
-import Text from '../Text';
 
 export default {
   title: 'Components/AppNotification',
@@ -77,13 +76,13 @@ export const WithControls: Story = {
 export const WithLinkInSubtitle: Story = {
   args: {
     subTitle: (
-      <Text as="span">
+      <>
         Some text with a{' '}
         <Link href="https://example.com/" variant="inverse">
           link
         </Link>{' '}
         in.
-      </Text>
+      </>
     ),
   },
 };
