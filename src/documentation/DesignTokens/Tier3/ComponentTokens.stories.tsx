@@ -14,7 +14,7 @@ import {
   getSpecifier,
   getTokenListItems,
   TokenDataTable,
-} from '../../TokenList/TokenList';
+} from '../../../storyUtils/TokenList/TokenList';
 
 export default {
   title: 'Design Tokens/(3) Component',

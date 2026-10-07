@@ -1,5 +1,5 @@
-import descriptions from '../data/token-descriptions.json';
-import tokens from '../data/tokens.json';
+import descriptions from './data/token-descriptions.json';
+import tokens from './data/tokens.json';
 
 const recurseToPrimaryValue: (value: string) => string = (value) => {
   if (value.startsWith('var(--eds')) {

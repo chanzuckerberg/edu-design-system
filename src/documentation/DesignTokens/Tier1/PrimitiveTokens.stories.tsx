@@ -9,7 +9,10 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
 import React from 'react';
-import { TokenDataTable, getTokenListItems } from '../../TokenList/TokenList';
+import {
+  TokenDataTable,
+  getTokenListItems,
+} from '../../../storyUtils/TokenList/TokenList';
 
 // TODO: Consider using ColorPalette
 // https://storybook.js.org/docs/9/api/doc-blocks/doc-block-colorpalette

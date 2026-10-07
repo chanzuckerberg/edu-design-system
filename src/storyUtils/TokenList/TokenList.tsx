@@ -1,11 +1,10 @@
 import React from 'react';
-import {
-  DataTable,
+import DataTable, {
   type DataTableProps,
-  DataTableUtils,
-  Text,
-} from '../../../src';
-import filterTokens from '../../util/filterTokens';
+  utils as DataTableUtils,
+} from '../../components/DataTable';
+import Text from '../../components/Text';
+import filterTokens from '../filterTokens';
 
 import styles from './TokenList.module.css';
 
