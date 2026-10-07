@@ -17,7 +17,7 @@ export default {
     layout: 'centered',
   },
 
-  tags: ['autodocs', 'version:1.4'],
+  tags: ['autodocs', 'version:1.5'],
 
   globals: {
     backgrounds: {

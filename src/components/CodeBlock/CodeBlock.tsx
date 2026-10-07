@@ -32,7 +32,7 @@ export type CodeBlockProps = {
    */
   language: SyntaxHighlighterProps['language'];
   // Design API
-};
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;
 
 /**
  * ## Usage
@@ -88,7 +88,7 @@ ${children}
 ~~~`;
 
   return (
-    <div className={componentClassName}>
+    <div className={componentClassName} {...other}>
       <Markdown
         components={{
           code(props) {

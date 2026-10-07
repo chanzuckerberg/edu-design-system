@@ -11,7 +11,7 @@ import { IconProvider } from '../Icon';
 export default {
   title: 'Components/CodeBlock',
   component: CodeBlock,
-  tags: ['version:1.0.2'],
+  tags: ['version:1.1.0'],
   parameters: {
     docs: {
       subtitle:
