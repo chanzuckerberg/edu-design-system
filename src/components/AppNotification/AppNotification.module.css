@@ -6,7 +6,7 @@
  * AppNotification
  */
 .app-notification {
-    padding: calc(var(--eds-spacing-size-3) * 1px);
+    padding: calc(var(--eds-spacing-size-2) * 1px) calc(var(--eds-spacing-size-3) * 1px);
 
     &.app-notification--variant-default {
         color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse));
@@ -31,11 +31,11 @@
 }
 
 .app-notification__title {
-    margin-bottom: calc(var(--eds-spacing-size-1) * 1px);
+    margin-bottom: calc(var(--eds-spacing-size-quarter) * 1px);
 }
 
 .app-notification__actions {
-    margin-top: calc(var(--eds-spacing-size-3) * 1px);
+    margin-top: calc(var(--eds-spacing-size-2) * 1px);
 }
 
 .app-notification__content {
