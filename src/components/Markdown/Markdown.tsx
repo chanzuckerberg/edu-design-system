@@ -191,9 +191,7 @@ export const Markdown = ({
           },
           thead(props) {
             const { children } = props;
-            return (
-              <thead className={styles['markdown__thead']}>{children}</thead>
-            );
+            return <thead>{children}</thead>;
           },
           td(props) {
             const { children, node } = props;
@@ -205,7 +203,7 @@ export const Markdown = ({
           },
           tr(props) {
             const { children } = props;
-            return <tr className={styles['markdown__tr']}>{children}</tr>;
+            return <tr>{children}</tr>;
           },
         }}
         remarkPlugins={
@@ -218,3 +216,5 @@ export const Markdown = ({
     </div>
   );
 };
+
+Markdown.displayName = 'Markdown';

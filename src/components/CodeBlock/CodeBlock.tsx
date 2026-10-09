@@ -32,11 +32,9 @@ export type CodeBlockProps = {
    */
   language: SyntaxHighlighterProps['language'];
   // Design API
-};
+} & Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;
 
 /**
- * BETA: This component is still a work in progress and is subject to change.
- *
  * ## Usage
  *
  * Show a block of formatted code, with syntax highlighting, in a block container.
@@ -90,7 +88,7 @@ ${children}
 ~~~`;
 
   return (
-    <div className={componentClassName}>
+    <div className={componentClassName} {...other}>
       <Markdown
         components={{
           code(props) {
@@ -151,6 +149,7 @@ ${children}
               }
             }}
             rank="secondary"
+            size="md"
           >
             {copyStyle === 'text' ? copyButtonText : undefined}
           </Button>
@@ -159,3 +158,5 @@ ${children}
     </div>
   );
 };
+
+CodeBlock.displayName = 'CodeBlock';

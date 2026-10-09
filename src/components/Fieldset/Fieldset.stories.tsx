@@ -21,7 +21,7 @@ export default {
       control: false,
     },
   },
-  tags: ['autodocs', 'version:3.0'],
+  tags: ['autodocs', 'version:3.0.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Fieldset>;
@@ -90,6 +90,35 @@ export const FieldsetLegendWithSubtitle: StoryObj<LegendArgs> = {
     subTitle: 'With additional Subtitle',
   },
   render: FieldsetLegend.render,
+};
+
+/**
+ * The legend reads its disabled state from the surrounding `Fieldset`.
+ */
+export const FieldsetLegendDisabled: StoryObj<LegendArgs> = {
+  args: {
+    title: 'Legend',
+    subTitle: 'With additional Subtitle',
+    showHint: true,
+  },
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          // Disabled text does not need to meet color contrast
+          {
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
+  render: (args) => (
+    <Fieldset isDisabled>
+      <Fieldset.Legend {...args} />
+    </Fieldset>
+  ),
 };
 
 /**

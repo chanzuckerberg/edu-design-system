@@ -95,7 +95,7 @@ exports[`<Radio /> > Disabled story renders snapshot 1`] = `
     class="_radio_4c3e9c"
   >
     <span
-      class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
+      class="_input__wrapper_4c3e9c"
     >
       <input
         class="_radio__input_4c3e9c"
@@ -139,7 +139,7 @@ exports[`<Radio /> > DisabledAndChecked story renders snapshot 1`] = `
     class="_radio_4c3e9c"
   >
     <span
-      class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
+      class="_input__wrapper_4c3e9c"
     >
       <input
         checked=""

@@ -107,8 +107,6 @@ export const PageNotification = ({
     // Base styles
     styles['page-notification'],
     status && styles[`page-notification--status-${status}`],
-    // Other options
-    onDismiss && styles['page-notification--dismissable'],
     className,
   );
 
@@ -147,11 +145,7 @@ export const PageNotification = ({
             </Heading>
           )}
           {subTitle && (
-            <Text
-              as="p"
-              className={styles['page-notification__sub-title']}
-              preset="body-sm"
-            >
+            <Text as="p" preset="body-sm">
               {subTitle}
             </Text>
           )}

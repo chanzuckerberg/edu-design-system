@@ -23,7 +23,7 @@ export type AppNotificationProps = {
 
   // Component API
   /**
-   * Contents of the component below the title and sub-title (used mainly for `ButtonGroup` containing ranked `Buttons`)
+   * Contents of the component below the title and sub-title (used mainly for `ButtonGroup` containing ranked, `size="sm"` `Buttons`)
    */
   children?: ReactNode;
   /**
@@ -96,15 +96,11 @@ export const AppNotification = ({
           <Text
             as="div"
             className={styles['app-notification__title']}
-            preset="headline-sm"
+            preset="title-md"
           >
             {title}
           </Text>
-          <Text
-            as="span"
-            className={styles['app-notification__sub-title']}
-            preset="body-md"
-          >
+          <Text as="span" preset="body-sm">
             {subTitle}
           </Text>
           {children && (
@@ -129,3 +125,5 @@ export const AppNotification = ({
     </div>
   );
 };
+
+AppNotification.displayName = 'AppNotification';

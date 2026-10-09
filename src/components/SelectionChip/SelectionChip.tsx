@@ -154,3 +154,5 @@ export const SelectionChip: SelectionChipRefProps = forwardRef(
     );
   },
 );
+
+SelectionChip.displayName = 'SelectionChip';

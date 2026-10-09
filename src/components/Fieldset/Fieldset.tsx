@@ -125,10 +125,13 @@ export function Fieldset({
   fieldNote,
   isDisabled,
   status,
+  ...other
 }: FieldsetProps) {
   return (
     <FieldsetContext.Provider value={{ isDisabled, status }}>
-      <fieldset className={className}>{children}</fieldset>
+      <fieldset className={className} {...other}>
+        {children}
+      </fieldset>
       {fieldNote && (
         <div className={styles['fieldset__footer']}>
           <FieldNote disabled={isDisabled} status={status}>

@@ -19,10 +19,10 @@ exports[`<InlineNotification /> > Critical story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="_inline-notication__body_785732"
+    class="_inline-notification__body_785732"
   >
     <div
-      class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      class="_text_b3eba3 _text--title-sm_b3eba3"
     >
       Inline notifications lorem ipsum text
     </div>
@@ -54,10 +54,10 @@ exports[`<InlineNotification /> > Default story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="_inline-notication__body_785732"
+    class="_inline-notification__body_785732"
   >
     <div
-      class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      class="_text_b3eba3 _text--title-sm_b3eba3"
     >
       Inline notifications lorem ipsum text
     </div>
@@ -84,10 +84,10 @@ exports[`<InlineNotification /> > Favorable story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="_inline-notication__body_785732"
+    class="_inline-notification__body_785732"
   >
     <div
-      class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      class="_text_b3eba3 _text--title-sm_b3eba3"
     >
       Inline notifications lorem ipsum text
     </div>
@@ -119,10 +119,10 @@ exports[`<InlineNotification /> > LongText story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="_inline-notication__body_785732"
+    class="_inline-notification__body_785732"
   >
     <div
-      class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      class="_text_b3eba3 _text--title-sm_b3eba3"
     >
       Long text inline notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </div>
@@ -149,10 +149,10 @@ exports[`<InlineNotification /> > Warning story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="_inline-notication__body_785732"
+    class="_inline-notification__body_785732"
   >
     <div
-      class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      class="_text_b3eba3 _text--title-sm_b3eba3"
     >
       Inline notifications lorem ipsum text
     </div>
@@ -184,10 +184,10 @@ exports[`<InlineNotification /> > WithFormattedSubTitle story renders snapshot 1
     />
   </svg>
   <div
-    class="_inline-notication__body_785732"
+    class="_inline-notification__body_785732"
   >
     <div
-      class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      class="_text_b3eba3 _text--title-sm_b3eba3"
     >
       Inline notifications lorem ipsum text
     </div>
@@ -224,10 +224,10 @@ exports[`<InlineNotification /> > WithProvidedIcons story renders snapshot 1`] =
     />
   </svg>
   <div
-    class="_inline-notication__body_785732"
+    class="_inline-notification__body_785732"
   >
     <div
-      class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      class="_text_b3eba3 _text--title-sm_b3eba3"
     >
       Inline notifications lorem ipsum text
     </div>
@@ -259,10 +259,10 @@ exports[`<InlineNotification /> > WithSubTitle story renders snapshot 1`] = `
     />
   </svg>
   <div
-    class="_inline-notication__body_785732"
+    class="_inline-notification__body_785732"
   >
     <div
-      class="_text_b3eba3 _text--title-sm_b3eba3 _inline-notification__title_785732"
+      class="_text_b3eba3 _text--title-sm_b3eba3"
     >
       Inline notifications lorem ipsum text
     </div>

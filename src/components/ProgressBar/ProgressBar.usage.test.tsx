@@ -55,7 +55,7 @@ describe('<ProgressBar /> usage warnings', () => {
       );
 
       expect(warn).toHaveBeenCalledWith(
-        'Labels are not allowed when context is embedded',
+        'EDS-AUDIT: Labels are not allowed when context is embedded',
       );
     });
 
@@ -69,7 +69,7 @@ describe('<ProgressBar /> usage warnings', () => {
       );
 
       expect(warn).toHaveBeenCalledWith(
-        'Labels are not allowed when context is embedded',
+        'EDS-AUDIT: Labels are not allowed when context is embedded',
       );
     });
 
@@ -117,7 +117,7 @@ describe('<ProgressBar /> usage warnings', () => {
       render(<ProgressBar aria-label="progress" max={10} value={30} />);
 
       expect(warn).toHaveBeenCalledWith(
-        'Value 30 outside allowed range between 0 and 10',
+        'EDS-AUDIT: Value 30 outside allowed range between 0 and 10',
       );
     });
 
@@ -125,7 +125,7 @@ describe('<ProgressBar /> usage warnings', () => {
       render(<ProgressBar aria-label="progress" max={10} value={-5} />);
 
       expect(warn).toHaveBeenCalledWith(
-        'Value -5 outside allowed range between 0 and 10',
+        'EDS-AUDIT: Value -5 outside allowed range between 0 and 10',
       );
     });
 

@@ -248,7 +248,7 @@ When indented, it spans multiple lines.
     >
       <pre>
         <div
-          style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto;"
+          style="color: #3A3A37; background: #FFFFFF; font-family: var(--eds-typography-font-family-3); font-size: 0.875rem; line-height: 1.6; direction: ltr; text-align: left; white-space: pre; word-break: normal; tab-size: 2; hyphens: none; padding: 1rem; margin: 0px; overflow: auto; border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);"
         >
           <code
             class="_code-block__block_961fb8"
@@ -4485,21 +4485,21 @@ When indented, it spans multiple lines.
       >
         <button
           aria-label="Copy this code block"
-          class="_button_0829c1 _button--layout-icon-only_0829c1 _button--secondary_0829c1 _button--lg_0829c1 _button--size-lg_0829c1 _button--variant-default_0829c1"
+          class="_button_0829c1 _button--layout-icon-only_0829c1 _button--secondary_0829c1 _button--md_0829c1 _button--size-md_0829c1 _button--variant-default_0829c1"
           data-testid="copy-button"
           type="button"
         >
           <span
-            class="_text_b3eba3 _text--label-lg_b3eba3 _button__text_0829c1"
+            class="_text_b3eba3 _text--label-md_b3eba3 _button__text_0829c1"
           >
             <svg
               aria-hidden="true"
               class="_icon_779da8"
               fill="currentColor"
-              height="24px"
-              style="--icon-size: 24px;"
+              height="16px"
+              style="--icon-size: 16px;"
               viewBox="0 0 24 24"
-              width="24px"
+              width="16px"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -4577,12 +4577,8 @@ exports[`<Markdown /> > GithubFlavoredMarkdown story renders snapshot 1`] = `
   <table
     class="_markdown__table_7f0a4d"
   >
-    <thead
-      class="_markdown__thead_7f0a4d"
-    >
-      <tr
-        class="_markdown__tr_7f0a4d"
-      >
+    <thead>
+      <tr>
         <th
           class="_markdown__th_7f0a4d"
         >
@@ -4609,9 +4605,7 @@ exports[`<Markdown /> > GithubFlavoredMarkdown story renders snapshot 1`] = `
       </tr>
     </thead>
     <tbody>
-      <tr
-        class="_markdown__tr_7f0a4d"
-      >
+      <tr>
         <td
           class="_markdown__td_7f0a4d"
         >

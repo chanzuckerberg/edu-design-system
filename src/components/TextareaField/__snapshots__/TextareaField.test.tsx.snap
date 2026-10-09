@@ -5,7 +5,7 @@ exports[`<TextareaField /> > Default story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -42,7 +42,7 @@ exports[`<TextareaField /> > WhenDefaultStatus story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -103,10 +103,10 @@ exports[`<TextareaField /> > WhenDisabled story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
-      class="_textarea-field__overline_7bfcbf _textarea-field__overline--disabled_7bfcbf"
+      class="_textarea-field__overline_7bfcbf"
     >
       <label
         class="_label_76755a _label--md_76755a _textarea-field__label--disabled_7bfcbf"
@@ -118,6 +118,11 @@ exports[`<TextareaField /> > WhenDisabled story renders snapshot 1`] = `
           Textarea Field
         </span>
       </label>
+      <span
+        class="_text_b3eba3 _text--body-sm_b3eba3 _textarea-field__hint_7bfcbf _textarea-field__hint--disabled_7bfcbf"
+      >
+        (Optional)
+      </span>
       <div
         class="_textarea-field__subLabel_7bfcbf _textarea-field__label--disabled_7bfcbf"
       >
@@ -132,7 +137,7 @@ exports[`<TextareaField /> > WhenDisabled story renders snapshot 1`] = `
     <textarea
       aria-describedby="_r_b_ _r_a_"
       aria-disabled="true"
-      class="_textarea_7bfcbf _textarea--disabled_7bfcbf"
+      class="_textarea_7bfcbf"
       disabled=""
       id="_r_9_"
       placeholder="Enter long-form text here"
@@ -167,7 +172,7 @@ exports[`<TextareaField /> > WhenError story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -245,7 +250,7 @@ exports[`<TextareaField /> > WhenNoDefaultValue story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -288,7 +293,7 @@ exports[`<TextareaField /> > WhenOptional story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -354,7 +359,7 @@ exports[`<TextareaField /> > WhenReadOnly story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -382,7 +387,7 @@ exports[`<TextareaField /> > WhenReadOnly story renders snapshot 1`] = `
     </div>
     <textarea
       aria-describedby="_r_e_ _r_d_"
-      class="_textarea_7bfcbf _textarea-field__textarea--read-only_7bfcbf"
+      class="_textarea_7bfcbf"
       id="_r_c_"
       placeholder="Enter long-form text here"
       readonly=""
@@ -416,7 +421,7 @@ exports[`<TextareaField /> > WhenRequired story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -483,7 +488,7 @@ exports[`<TextareaField /> > WhenUsingValue story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -530,7 +535,7 @@ exports[`<TextareaField /> > WhenWarning story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -608,7 +613,7 @@ exports[`<TextareaField /> > WithADifferentSize story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -669,7 +674,7 @@ exports[`<TextareaField /> > WithAMaxLength story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -760,7 +765,7 @@ exports[`<TextareaField /> > WithARecommendedLength story renders snapshot 1`] =
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"
@@ -850,7 +855,7 @@ exports[`<TextareaField /> > WithBothRecommendedAndMaxLengths story renders snap
   class="p-spacing-size-4"
 >
   <div
-    class="_textarea-field_7bfcbf w-[384px]"
+    class="w-[384px]"
   >
     <div
       class="_textarea-field__overline_7bfcbf"

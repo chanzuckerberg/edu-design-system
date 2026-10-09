@@ -22,8 +22,8 @@
 .code-block__copy {
   opacity: 0;
   position: absolute;
-  right: calc(var(--eds-spacing-size-2) * 1px);
-  top: calc(var(--eds-spacing-size-2) * 1px);
+  right: calc(var(--eds-spacing-size-1) * 1px);
+  top: calc(var(--eds-spacing-size-1) * 1px);
 
   /* use blackdrop-filter to fuzz out the text or other colors, to match the themed bg color */
   backdrop-filter: blur(100px);

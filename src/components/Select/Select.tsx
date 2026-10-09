@@ -9,7 +9,9 @@ import {
 import clsx from 'clsx';
 
 import React, {
+  useCallback,
   useContext,
+  useEffect,
   useState,
   type ReactNode,
   type MouseEventHandler,
@@ -17,6 +19,7 @@ import React, {
 } from 'react';
 
 import {
+  EDS_AUDIT_PREFIX,
   assertNoRemovedIconProp,
   type WithRemovedIconProps,
 } from '../../util/logging';
@@ -47,7 +50,7 @@ type SelectProps = ListboxProps<
    *
    * When possible, use a visible label by passing a <Select.Label> into `children`.
    * In rare cases where there's no visible label, you must provide an `aria-label` for screen readers.
-   * If you pass in an `aria-label`, <Select.Label>.
+   * The trigger reads it the way it reads a visible label, followed by the selected value.
    */
   'aria-label'?: string;
   /**
@@ -164,6 +167,11 @@ type SelectContextType = {
   optionsClassName?: string;
   status?: SelectButtonWrapperProps['status'];
   multiple?: boolean; // pulls from HeadlessUI
+  /**
+   * Called by a `Select.Label` with text while it's mounted, so the root knows a visible label
+   * is naming the trigger. Returns the cleanup that unregisters it.
+   */
+  registerVisibleLabel?: () => () => void;
 };
 
 let showNameWarning = true;
@@ -236,7 +244,8 @@ export function Select({
   if (process.env.NODE_ENV !== 'production') {
     if (!name && showNameWarning) {
       console.warn(
-        "%c`Select` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/listbox#using-with-html-forms for more information",
+        EDS_AUDIT_PREFIX +
+          "%c`Select` won't render a form field unless you include a `name` prop.\n\n See https://headlessui.com/react/listbox#using-with-html-forms for more information",
         'font-weight: bold',
       );
       showNameWarning = false;
@@ -256,6 +265,15 @@ export function Select({
     labelLayout && styles[`select--label-layout-${labelLayout}`],
     className,
   );
+  // Shared by both kinds of children, so a render prop reports changes the same way.
+  const handleChange: SelectProps['onChange'] = (changedValue) => {
+    if (selectedValue !== changedValue) {
+      setSelectedValue(changedValue);
+      // Use the value from the event because updates to `useState` are queued
+      theirOnChange && theirOnChange(changedValue);
+    }
+  };
+
   const sharedProps: SelectProps = {
     className: componentClassName,
     // Provide a wrapping <div> element for the select. This is needed so that any props
@@ -265,25 +283,43 @@ export function Select({
     disabled,
     name,
     ...other,
+    onChange: handleChange,
   };
+
+  // Counts the `Select.Label`s with text, whether from the `label` prop or passed in as
+  // children, since either one is a visible label that should name the trigger.
+  const [visibleLabelCount, setVisibleLabelCount] = useState(0);
+  const registerVisibleLabel = useCallback(() => {
+    setVisibleLabelCount((count) => count + 1);
+    return () => setVisibleLabelCount((count) => count - 1);
+  }, []);
 
   const context: SelectContextType = {
     optionsClassName,
     status,
     multiple: other.multiple,
+    registerVisibleLabel,
   };
+
+  // HeadlessUI names the trigger with `aria-labelledby`: every label in the listbox, then the
+  // button itself, so it reads as the label followed by the selected value. With no visible
+  // label, `aria-label` goes in a hidden label so it gets read the same way. An `aria-label`
+  // on the button would replace the selected value instead of coming before it. A visible
+  // label wins, so the trigger isn't named twice.
+  const hiddenLabel = !label && !visibleLabelCount && ariaLabel && (
+    <Label className={styles['select__label--hidden']}>{ariaLabel}</Label>
+  );
 
   if (typeof children === 'function') {
     return (
       <SelectContext.Provider value={context}>
-        <Listbox
-          {...sharedProps}
-          // We prefer to pass the aria-label in via an invisible SelectLabel, but we can't
-          // easily pass down function children with component children, so we'll settle for
-          // using a standard aria-label in this case.
-          aria-label={ariaLabel}
-        >
-          {children}
+        <Listbox {...sharedProps}>
+          {(renderProps) => (
+            <>
+              {hiddenLabel}
+              {children(renderProps)}
+            </>
+          )}
         </Listbox>
       </SelectContext.Provider>
     );
@@ -291,16 +327,7 @@ export function Select({
 
   return (
     <SelectContext.Provider value={context}>
-      <Listbox
-        {...sharedProps}
-        onChange={(changedValue) => {
-          if (selectedValue !== changedValue) {
-            setSelectedValue(changedValue);
-            // Use the value from the event because updates to `useState` are queued
-            theirOnChange && theirOnChange(changedValue);
-          }
-        }}
-      >
+      <Listbox {...sharedProps}>
         {(label || required) && (
           <Select.Label
             disabled={disabled}
@@ -311,6 +338,7 @@ export function Select({
             {label}
           </Select.Label>
         )}
+        {hiddenLabel}
         {children}
       </Listbox>
       {fieldNote && (
@@ -332,6 +360,14 @@ const SelectLabel = ({
   showHint,
   subLabel,
 }: SelectLabelProps) => {
+  const { registerVisibleLabel } = useContext(SelectContext);
+  // Not `!!label`, since `0` is a valid child that renders as text.
+  const hasText = typeof label === 'function' || hasSlotContent(label);
+  useEffect(
+    () => (hasText ? registerVisibleLabel?.() : undefined),
+    [hasText, registerVisibleLabel],
+  );
+
   const componentClassName = clsx(
     styles['select__label'],
     disabled && clsx(styles['select__label--disabled']),
@@ -345,7 +381,7 @@ const SelectLabel = ({
 
   const overlineClassName = clsx(
     styles['select__overline'],
-    !label && styles['select__overline--no-label'],
+    !hasText && styles['select__overline--no-label'],
   );
 
   const subLabelClassName = clsx(
@@ -383,7 +419,7 @@ const SelectLabel = ({
           (Optional)
         </Text>
       )}
-      {label && subLabel && (
+      {hasText && subLabel && (
         <div className={subLabelClassName}>
           {/* TODO: is there a way to coerce HeadlessUI into using aria-describedby like InputField/TextareaField */}
           <Text as="span" preset="body-sm">

@@ -664,6 +664,8 @@ ModalTitle.displayName = 'Modal.Title';
 ModalSubTitle.displayName = 'Modal.SubTitle';
 ModalBody.displayName = 'Modal.Body';
 ModalFooter.displayName = 'Modal.Footer';
+ModalHeader.displayName = 'Modal.Header';
+ModalContent.displayName = 'Modal.Content';
 
 Modal.Header = ModalHeader;
 Modal.Content = ModalContent;

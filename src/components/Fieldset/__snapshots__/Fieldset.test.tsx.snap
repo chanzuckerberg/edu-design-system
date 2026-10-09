@@ -49,6 +49,46 @@ exports[`<Fieldset /> > FieldsetLegend story renders snapshot 1`] = `
 </legend>
 `;
 
+exports[`<Fieldset /> > FieldsetLegendDisabled story renders snapshot 1`] = `
+<fieldset>
+  <legend
+    aria-disabled="true"
+    class="_fieldset-legend_0405d0 _fieldset-legend--disabled_0405d0"
+  >
+    <div
+      class="_fieldset-legend__overline_0405d0"
+    >
+      <label
+        aria-disabled="true"
+        class="_label_76755a _label--md_76755a _label--disabled_76755a"
+      >
+        <span
+          class="_text_b3eba3 _text--label-md_b3eba3"
+        >
+          Legend
+        </span>
+      </label>
+      <span
+        aria-disabled="true"
+        class="_text_b3eba3 _text--body-sm_b3eba3 _fieldset-legend__hint_0405d0"
+      >
+        (Optional)
+      </span>
+    </div>
+    <div
+      aria-disabled="true"
+      class="_field-note_fd2e78 _field-note--disabled_fd2e78"
+    >
+      <span
+        class="_text_b3eba3 _text--body-sm_b3eba3"
+      >
+        With additional Subtitle
+      </span>
+    </div>
+  </legend>
+</fieldset>
+`;
+
 exports[`<Fieldset /> > FieldsetLegendOptional story renders snapshot 1`] = `
 <legend
   class="_fieldset-legend_0405d0"
@@ -395,7 +435,7 @@ exports[`<Fieldset /> > WithDisabledRadioButton story renders snapshot 1`] = `
       class="_radio_4c3e9c"
     >
       <span
-        class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
+        class="_input__wrapper_4c3e9c"
       >
         <input
           class="_radio__input_4c3e9c"
@@ -436,7 +476,7 @@ exports[`<Fieldset /> > WithDisabledRadioButton story renders snapshot 1`] = `
       class="_radio_4c3e9c"
     >
       <span
-        class="_input__wrapper_4c3e9c _input__wrapper--disabled_4c3e9c"
+        class="_input__wrapper_4c3e9c"
       >
         <input
           class="_radio__input_4c3e9c"

@@ -11,7 +11,7 @@ import { IconProvider } from '../Icon';
 export default {
   title: 'Components/CodeBlock',
   component: CodeBlock,
-  tags: ['beta', 'version:1.0.1'],
+  tags: ['version:1.1.0'],
   parameters: {
     docs: {
       subtitle:
@@ -125,6 +125,20 @@ export const CurlExample: StoryObj<Args> = {
   },
 
   tags: ['code-only'],
+
+  play: async () => {
+    await userEvent.tab();
+  },
+};
+
+/**
+ * The copy button fits within a single-line code block.
+ */
+export const SingleLineWithCopyIcon: StoryObj<Args> = {
+  args: {
+    ...Default.args,
+    copyStyle: 'icon',
+  },
 
   play: async () => {
     await userEvent.tab();

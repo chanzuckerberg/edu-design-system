@@ -26,7 +26,7 @@ export default {
   decorators: [
     (Story) => <div className="text-utility-default-primary">{Story()}</div>,
   ],
-  tags: ['autodocs', 'version:3.0'],
+  tags: ['autodocs', 'version:3.0.1'],
 } as Meta<typeof Link>;
 
 type Story = StoryObj<typeof Link>;
@@ -59,6 +59,52 @@ export const LinkWithOpenIcon: Story = {
     context: 'standalone',
     icon: 'open-in-new',
   },
+};
+
+const linkSizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
+
+// Custom content rather than an icon name, so the link sizes it from the font. Defined here
+// rather than in `render` so Storybook's source view doesn't try to walk its render owner.
+const customForwardIcon = (
+  <svg
+    aria-hidden="true"
+    fill="currentColor"
+    height="1em"
+    viewBox="0 0 24 24"
+    width="1em"
+  >
+    <path d="M5 11h11.17l-4.88-4.88L12.7 4.7 20 12l-7.3 7.3-1.41-1.41L16.17 13H5z" />
+  </svg>
+);
+
+/**
+ * The trailing icon sits centered on the text's x-height at every size. The last column has
+ * an `IconProvider` drawing custom content instead of a named icon, which is sized from the
+ * link's font rather than the icon size each named icon carries.
+ */
+export const IconAlignmentAcrossSizes: Story = {
+  args: {
+    context: 'standalone',
+  },
+  render: (args) => (
+    <div className="grid grid-cols-3 items-center gap-x-8 gap-y-4">
+      {linkSizes.map((size) => (
+        <React.Fragment key={size}>
+          <Link {...args} icon="open-in-new" size={size}>
+            Leaves the site {size}
+          </Link>
+          <Link {...args} emphasis="low" icon="forward" size={size}>
+            Onward {size}
+          </Link>
+          <IconProvider icons={{ forward: customForwardIcon }}>
+            <Link {...args} emphasis="low" icon="forward" size={size}>
+              Custom icon {size}
+            </Link>
+          </IconProvider>
+        </React.Fragment>
+      ))}
+    </div>
+  ),
 };
 
 /**

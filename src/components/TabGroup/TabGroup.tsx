@@ -322,8 +322,6 @@ export const TabGroup = ({
     }
   }
 
-  const componentClassName = clsx(styles['tabs'], className);
-
   const headerClassName = clsx(
     styles['tabs__header'],
     scrollableLeft && styles['tabs--scrollable-left'],
@@ -338,7 +336,7 @@ export const TabGroup = ({
   });
 
   return (
-    <div className={componentClassName} {...other}>
+    <div className={className} {...other}>
       <div
         className={headerClassName}
         onScroll={(e) => handleTabsScroll(e.target as HTMLDivElement)}
@@ -470,9 +468,9 @@ const TabButton = (props: TabButtonProps) => {
   return <div />;
 };
 
-Tab.displayName = 'Tab';
+Tab.displayName = 'TabGroup.Tab';
 Tab.Button = TabButton;
-TabButton.displayName = 'TabGroup.Button';
+TabButton.displayName = 'TabGroup.Tab.Button';
 
 TabGroup.displayName = 'TabGroup';
 TabGroup.Tab = Tab;

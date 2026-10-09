@@ -6,7 +6,6 @@ exports[`<Breadcrumbs /> > Default story renders snapshot 1`] = `
 >
   <nav
     aria-label="breadcrumbs links"
-    class="_breadcrumbs_325516"
   >
     <ul
       class="_breadcrumbs__list_325516"
@@ -97,7 +96,6 @@ exports[`<Breadcrumbs /> > LongList story renders snapshot 1`] = `
 >
   <nav
     aria-label="breadcrumbs links"
-    class="_breadcrumbs_325516"
   >
     <ul
       class="_breadcrumbs__list_325516"
@@ -316,7 +314,6 @@ exports[`<Breadcrumbs /> > LongText story renders snapshot 1`] = `
 >
   <nav
     aria-label="breadcrumbs links"
-    class="_breadcrumbs_325516"
   >
     <ul
       class="_breadcrumbs__list_325516"
@@ -423,7 +420,6 @@ exports[`<Breadcrumbs /> > LongTextCustomSeparator story renders snapshot 1`] = 
 >
   <nav
     aria-label="breadcrumbs links"
-    class="_breadcrumbs_325516"
   >
     <ul
       class="_breadcrumbs__list_325516"
@@ -530,7 +526,6 @@ exports[`<Breadcrumbs /> > OneCrumb story renders snapshot 1`] = `
 >
   <nav
     aria-label="breadcrumbs links"
-    class="_breadcrumbs_325516"
   >
     <ul
       class="_breadcrumbs__list_325516"
@@ -562,7 +557,6 @@ exports[`<Breadcrumbs /> > TwoCrumbs story renders snapshot 1`] = `
 >
   <nav
     aria-label="breadcrumbs links"
-    class="_breadcrumbs_325516"
   >
     <ul
       class="_breadcrumbs__list_325516"
@@ -637,7 +631,6 @@ exports[`<Breadcrumbs /> > WithProvidedIcons story renders snapshot 1`] = `
 >
   <nav
     aria-label="breadcrumbs links"
-    class="_breadcrumbs_325516"
   >
     <ul
       class="_breadcrumbs__list_325516"

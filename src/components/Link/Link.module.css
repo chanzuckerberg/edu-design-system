@@ -13,18 +13,25 @@
 * Sub-components (only should apply to standalone links
 */
 .link__icon {
-  padding-left: calc(var(--eds-spacing-size-half) * 1px);
+  margin-left: calc(var(--eds-spacing-size-half) * 1px);
 
-  /* Sub-component spacing */
-  &.link--size-xl,
-  &.link--size-lg {
-    padding-left: calc(var(--eds-spacing-size-1) * 1px);
-  }
+  /**
+   * Center the icon on the x-height instead of the line box, the way `vertical-align: middle`
+   * does for inline content. The link aligns its items on the baseline, which sits the icon's
+   * bottom edge there, so dropping it by half the icon less half an `ex` lands its middle at
+   * half the x-height. `ex` follows the link's font, so this holds at every size.
+   *
+   * Sitting on the baseline, a large icon would reach above the text and make the link
+   * taller, so the negative margin keeps it from adding any height. It still paints in full.
+   */
+  margin-top: calc(var(--icon-size, 1em) * -1);
+  position: relative;
+  top: calc((var(--icon-size, 1em) - 1.25ex) / 2);
 
-  &.link--size-md,
-  &.link--size-sm,
-  &.link--size-xs {
-    padding-left: calc(var(--eds-spacing-size-half) * 1px);
+  /* Sub-component spacing. The size class sits on the link, not the icon */
+  .link--size-xl &,
+  .link--size-lg & {
+    margin-left: calc(var(--eds-spacing-size-1) * 1px);
   }
 }
 
@@ -49,7 +56,7 @@
   font: var(--link-font-weight) var(--link-size-line-height) var(--link-font-family);
 
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
 
   &.link--emphasis-default {
     color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));

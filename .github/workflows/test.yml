@@ -26,10 +26,6 @@ jobs:
       - name: Type check 📋
         run: yarn run types
 
-      # Re-enable if running storybook tests in CI
-      # - name: Install Playwright
-      #   run: npx playwright install --with-deps
-
       - name: Run CI Tests ✅
         run: yarn run test:ci
         env:
@@ -89,8 +85,6 @@ jobs:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Install Playwright
-        run: npx playwright install --with-deps
       - name: Build design tokens
         run: yarn build:tokens
       - name: Build Storybook 📚

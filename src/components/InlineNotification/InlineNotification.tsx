@@ -111,12 +111,8 @@ export const InlineNotification = ({
           size="16px"
         />
       )}
-      <div className={styles['inline-notication__body']}>
-        <Text
-          as="div"
-          className={styles[`inline-notification__title`]}
-          preset="title-sm"
-        >
+      <div className={styles['inline-notification__body']}>
+        <Text as="div" preset="title-sm">
           {title}
         </Text>
         {subTitle && (

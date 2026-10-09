@@ -85,11 +85,7 @@ export const InputChip = ({
     <div className={componentClassName} {...other}>
       <div className={styles['input-chip__label']}>
         {hasSlotContent(leadingComponent) && (
-          <IconSlot
-            className={styles['input-chip__leading-component']}
-            content={leadingComponent}
-            purpose="decorative"
-          />
+          <IconSlot content={leadingComponent} purpose="decorative" />
         )}
         <Text as="span" preset="body-xs">
           {label}
@@ -112,3 +108,5 @@ export const InputChip = ({
     </div>
   );
 };
+
+InputChip.displayName = 'InputChip';

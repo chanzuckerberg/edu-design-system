@@ -12508,9 +12508,7 @@ exports[`<DataTable /> > WithLongCaption story renders snapshot 1`] = `
         </div>
       </div>
     </div>
-    <div
-      class="_data-table__actions_a06dc5"
-    >
+    <div>
       <div
         class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
@@ -12563,9 +12561,7 @@ exports[`<DataTable /> > WithOnlyActions story renders snapshot 1`] = `
   <div
     class="_data-table__caption-container_a06dc5 _data-table--size-md_a06dc5"
   >
-    <div
-      class="_data-table__actions_a06dc5"
-    >
+    <div>
       <div
         class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
@@ -13855,9 +13851,7 @@ exports[`<DataTable /> > WithSearchAndActions story renders snapshot 1`] = `
         </div>
       </div>
     </div>
-    <div
-      class="_data-table__actions_a06dc5"
-    >
+    <div>
       <div
         class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >
@@ -13964,9 +13958,7 @@ exports[`<DataTable /> > WithSearchAndCustomActions story renders snapshot 1`] =
         </div>
       </div>
     </div>
-    <div
-      class="_data-table__actions_a06dc5"
-    >
+    <div>
       <div
         class="_button-group_db62b8 _button-group--horizontal_db62b8"
       >

@@ -147,7 +147,7 @@ export const ToastNotification = ({
         />
       )}
       <div className={styles['toast__body']}>
-        <Text as="span" className={styles['toast__text']} preset="body-md">
+        <Text as="span" preset="body-md">
           {title}
         </Text>
       </div>
@@ -167,3 +167,5 @@ export const ToastNotification = ({
     </div>
   );
 };
+
+ToastNotification.displayName = 'ToastNotification';
