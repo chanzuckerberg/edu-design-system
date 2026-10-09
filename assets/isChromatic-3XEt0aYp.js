@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";function t(e){let t=e||globalThis.window!==void 0&&globalThis;return!!(t&&(/Chromatic/.test(t.navigator.userAgent)||/chromatic=true/.test(t.location.href)))}function n(){return(n=e((()=>{})))()}export{t as n,n as t};

@@ -620,13 +620,13 @@
 <header>
   <div class="wrap">
     <h1>Manifest Debugger</h1>
-    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill err" data-k="errors" href="#filter-errors">2/54 API errors</a><a class="filter-pill info" data-k="infos" href="#filter-infos">6/54 infos</a><a class="filter-pill" data-k="no-api" href="#filter-no-api">2/54 without API description</a><a class="filter-pill err" data-k="story-errors" href="#filter-story-errors">28/506 story errors</a><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">84/506 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">10 docs ok</a></div>
+    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill err" data-k="errors" href="#filter-errors">3/54 API errors</a><a class="filter-pill info" data-k="infos" href="#filter-infos">10/54 infos</a><a class="filter-pill" data-k="no-api" href="#filter-no-api">4/54 without API description</a><a class="filter-pill err" data-k="story-errors" href="#filter-story-errors">28/509 story errors</a><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">84/509 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">10 docs ok</a></div>
   </div>
 </header>
 <main>
   <div class="wrap">
     <div class="note err" style="margin-bottom: 16px;">
-              <strong>Performance warning:</strong> <code>react-docgen-typescript</code> took <strong>11.9s</strong> to generate the manifest. This delay applies every time the manifest is used by an agent. Consider switching to the faster <code>react-docgen</code> in your <code>main.ts</code>:
+              <strong>Performance warning:</strong> <code>react-docgen-typescript</code> took <strong>9.0s</strong> to generate the manifest. This delay applies every time the manifest is used by an agent. Consider switching to the faster <code>react-docgen</code> in your <code>main.ts</code>:
               <pre><code>typescript: {
   reactDocgen: 'react-docgen',
 }</code></pre>
@@ -4028,7 +4028,7 @@ App notification titles should be concise, ideally no more than two lines long.
             <pre><code>Component: src/components/AppNotification/AppNotification.tsx::AppNotification</code></pre>
             <pre><code>Props:</code></pre>
             <pre><code>/**
- * Contents of the component below the title and sub-title (used mainly for `ButtonGroup` containing ranked `Buttons`)
+ * Contents of the component below the title and sub-title (used mainly for `ButtonGroup` containing ranked, `size=&quot;sm&quot;` `Buttons`)
  */
 children?: ReactNode
 
@@ -4072,13 +4072,13 @@ variant?: &quot;default&quot; | &quot;inverse&quot; = default</code></pre>
               
               
               <pre><code>Expected render to be an arrow function or function expression
-  125 |     },
-  126 |   },
-&gt; 127 |   render: WithControls.render,
+  128 |     },
+  129 |   },
+&gt; 130 |   render: WithControls.render,
       |           ^^^^^^^^^^^^^^^^^^^
-  128 | };
-  129 |
-  130 | export const InverseWithDismissAndControls: Story = {</code></pre>
+  131 | };
+  132 |
+  133 | export const InverseWithDismissAndControls: Story = {</code></pre>
             </div>
             <div class="note err">
               <div class="row">
@@ -4091,13 +4091,13 @@ variant?: &quot;default&quot; | &quot;inverse&quot; = default</code></pre>
               
               
               <pre><code>Expected render to be an arrow function or function expression
-  135 |     },
-  136 |   },
-&gt; 137 |   render: InverseVariant.render,
+  138 |     },
+  139 |   },
+&gt; 140 |   render: InverseVariant.render,
       |           ^^^^^^^^^^^^^^^^^^^^^
-  138 | };
-  139 |
-  140 | /**</code></pre>
+  141 | };
+  142 |
+  143 | /**</code></pre>
             </div>
           
           
@@ -4105,8 +4105,7 @@ variant?: &quot;default&quot; | &quot;inverse&quot; = default</code></pre>
                 <div class="row">
                   <span class="ex-name">Imports</span>
                 </div>
-                <pre><code>import { AppNotification, Button, ButtonGroup, IconProvider, Link, Text } from '@chanzuckerberg/eds';
-import Text from '../Text';
+                <pre><code>import { AppNotification, Button, ButtonGroup, IconProvider, Link } from '@chanzuckerberg/eds';
 import Link from '../Link';</code></pre>
               </div>
           
@@ -4130,17 +4129,19 @@ import Link from '../Link';</code></pre>
               </div>
               
               <div class="hint">`AppNotification`s can contain children that represent actions related to the notification.
-These should be composed in a `ButtonGroup` component, and put the primary `Button` / CTA on the left-hand side.</div>
+These should be composed in a `ButtonGroup` component using `size=&quot;sm&quot;` `Button`s, and put the primary `Button` / CTA on the left-hand side.</div>
               <pre><code>const WithControls = args =&gt; &lt;AppNotification
     title=&quot;This is an AppNotification title&quot;
     subTitle=&quot;Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.&quot;&gt;
     &lt;ButtonGroup buttonLayout=&quot;horizontal&quot; className=&quot;!flex-row&quot;&gt;
         &lt;Button
             rank=&quot;secondary&quot;
+            size=&quot;sm&quot;
             variant={args.variant === &#39;inverse&#39; ? undefined : &#39;inverse&#39;}&gt;Call To Action
                     &lt;/Button&gt;
         &lt;Button
             rank=&quot;tertiary&quot;
+            size=&quot;sm&quot;
             variant={args.variant === &#39;inverse&#39; ? undefined : &#39;inverse&#39;}&gt;Other action
                     &lt;/Button&gt;
     &lt;/ButtonGroup&gt;
@@ -4156,11 +4157,11 @@ These should be composed in a `ButtonGroup` component, and put the primary `Butt
               <div class="hint">Subtitles in `AppNotification` can be formatted and also contain links. While light formatting is allowed, contents of subTitle should remain as prose.</div>
               <pre><code>const WithLinkInSubtitle = () =&gt; &lt;AppNotification
     title=&quot;This is an AppNotification title&quot;
-    subTitle={(&lt;Text as=&quot;span&quot;&gt;Some text with a{&#39; &#39;}
+    subTitle={(&lt;&gt;Some text with a{&#39; &#39;}
       &lt;Link href=&quot;https://example.com/&quot; variant=&quot;inverse&quot;&gt;
         link
       &lt;/Link&gt;{&#39; &#39;}in.
-            &lt;/Text&gt;)} /&gt;;</code></pre>
+            &lt;/&gt;)} /&gt;;</code></pre>
               
             </div>
             <div class="note ok">
@@ -4177,10 +4178,12 @@ These should be composed in a `ButtonGroup` component, and put the primary `Butt
     &lt;ButtonGroup buttonLayout=&quot;horizontal&quot; className=&quot;!flex-row&quot;&gt;
         &lt;Button
             rank=&quot;secondary&quot;
+            size=&quot;sm&quot;
             variant={args.variant === &#39;inverse&#39; ? undefined : &#39;inverse&#39;}&gt;Call To Action
                     &lt;/Button&gt;
         &lt;Button
             rank=&quot;tertiary&quot;
+            size=&quot;sm&quot;
             variant={args.variant === &#39;inverse&#39; ? undefined : &#39;inverse&#39;}&gt;Other action
                     &lt;/Button&gt;
     &lt;/ButtonGroup&gt;
@@ -4210,10 +4213,10 @@ button on a `Modal`, an `InputChip`, or any other notification.</div>
   id="components-avatar"
   class="card 
   no-error
-  no-info
+  has-info
   no-story-error
   no-story-warning
-  
+  missing-api
   no-doc-error"
   role="listitem"
   aria-label="Avatar">
@@ -4221,8 +4224,8 @@ button on a `Modal`, an `InputChip`, or any other notification.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Avatar</h2>
       <div class="badges">
-        <label for="c-4-components-avatar-props" class="badge ok as-toggle">10 prop types</label>
-        
+        <span class="badge">no API description</span>
+        <label for="c-4-components-avatar-info" class="badge info as-toggle">1 info</label>
         <label for="c-4-components-avatar-stories" class="badge ok as-toggle">18 stories</label>
         
         
@@ -4230,139 +4233,29 @@ button on a `Modal`, an `InputChip`, or any other notification.</div>
     </div>
     <div class="meta" title="./src/components/Avatar/Avatar.stories.tsx">components-avatar · ./src/components/Avatar/Avatar.stories.tsx</div>
     
-    <div class="hint">## Usage
-
-Avatars represent a single user in the system. The representation can be generated (using a color derived from the
-user data), or include an image for each user. `Avatar` supports text, images, and multi-byte characters (e.g., emoji),
-and can reference flexible metadata for the associated user.
-
-| Type/Use | Description | Example |
-|----------|-------------|---------|
-| Text | Initials generated from `user.fullName`, or a `displayName` you supply directly. | Comment authors. Member lists. Emoji stand-ins. |
-| Image | A profile photo loaded from `src`, falling back to text when no source is set. | Account menus. Profile pages. |
-| Icon | A named EDS icon instead of user-specific content. | Unidentified users. &quot;Add a person&quot; affordances. |
-
-### Best Practices
-
-* Use avatars in places where we want to show a user as identified and logged in.
-* Avatars can be used in place of regular `Button`s for triggers in certain components (e.g., `Menu`, `Tooltip`).
-
-## Interaction
-
-Avatars support focus rings and can exist in the tab order when used as a trigger. Set `isInteractive` to get focus
-and hover states.
-
-`Avatar` instances in a collection can overlap by 50% for efficient use of space. A hover state on the container
-holding multiple instances can then remove the overlap and show every `Avatar` in full.
-
-## Content &amp; Accessibility
-
-### Do&#39;s
-
-* Use `Avatar` to represent users in `AppHeader` when logged in.
-* Use the large size `Avatar` when the component is shown in the main page area. For menus and navigation, use a smaller `Avatar`.
-
-### Don&#39;ts
-
-* Avoid relying on the icon or text as the only indication of which user is being represented. Use adjacent text, or `aria-*` tags for screen-reader support.
-* Avoid using very large image files for user profiles in `Avatar`. Save a specific, low-resolution file for user avatar images.
-
-## Resources
-
-* https://github.com/flmnt/graphemer</div>
+    
     
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  
+  <input id="c-4-components-avatar-info" class="tg tg-info" type="checkbox" hidden />
   <input id="c-4-components-avatar-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-4-components-avatar-props" class="tg tg-props" type="checkbox" hidden />
+  
 
   <div class="panels">
     
     
-    
-        <div class="panel panel-props">
-          <div class="note ok">
-            <div class="row">
-              <span class="ex-name">Prop types <small>(react-docgen-typescript)</small></span>
-              <span class="badge ok">10 prop types</span>
-            </div>
-            <pre><code>Component: src/components/Avatar/Avatar.tsx::Avatar</code></pre>
-            <pre><code>Props:</code></pre>
-            <pre><code>/**
- * Label for the given avatar. Defaults to a string using user data.
- */
-ariaLabel?: string
-
-/**
- * CSS class names that can be appended to the component.
- */
-className?: string
-
-/**
- * Set the behavior of the avatar, based on the specified user data.
- * 
- * - `default` selects a color from a set, using the user data as a &quot;key&quot;
- * - `fixed` selects a static color that does not change based on the user data
- * 
- * **Default is `&quot;default&quot;`**.
- */
-color?: &quot;fixed&quot; | &quot;default&quot; = default
-
-/**
- * Content for the `&quot;icon&quot;` variant of the avatar. Takes an EDS icon name, or any content
- * to render in its place, sized to match `size`. Default is &quot;person&quot;
- */
-icon?: IconOrContent = person
-
-/**
- * Marking whether the Avatar is intended to be interactive (have focus/hover states)
- */
-isInteractive?: boolean
-
-/**
- * The size of the avatar
- */
-size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot; | &quot;xl&quot; = md
-
-/**
- * The URL to an image resource (loaded lazily)
- */
-src?: string
-
-/**
- * CSS properties defined for the HTML element. Includes the component&#39;s CSS Custom Properties:
- * 
- * - `--avatar__bg`
- * - `--avatar__border`
- * - `--avatar__fg`
- */
-style?: AvatarCSSProperties
-
-/**
- * The user associated with this avatar
- * 
- * `UserData` takes the format (`[]` key-values are optional):
- * 
- * ```
- * - fullName (string)
- * - [id] (string | number)
- * - [displayName] (string)
- * - [key:string] (string | number | boolean)
- * ```
- */
-user?: UserData
-
-/**
- * Variants of how the avatar will be portrayed
- */
-variant?: &quot;icon&quot; | &quot;text&quot; | &quot;image&quot; = text</code></pre>
-          </div>
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
         </div>
+    
     
         <div class="panel panel-stories">
           
@@ -6442,16 +6335,14 @@ the text will wrap, fixing the checkbox to the top edge.</div>
       <div class="badges">
         <label for="c-10-components-codeblock-props" class="badge ok as-toggle">3 prop types</label>
         
-        <label for="c-10-components-codeblock-stories" class="badge ok as-toggle">7 stories</label>
+        <label for="c-10-components-codeblock-stories" class="badge ok as-toggle">8 stories</label>
         
         
       </div>
     </div>
     <div class="meta" title="./src/components/CodeBlock/CodeBlock.stories.tsx">components-codeblock · ./src/components/CodeBlock/CodeBlock.stories.tsx</div>
     
-    <div class="hint">BETA: This component is still a work in progress and is subject to change.
-
-## Usage
+    <div class="hint">## Usage
 
 Show a block of formatted code, with syntax highlighting, in a block container.
 
@@ -6674,6 +6565,16 @@ export function bubbleSort(arr: number[]): number[] {
               
               <div class="hint">When using smaller code examples, you may resize the horizontal space of the container.</div>
               <pre><code>const CurlExample = () =&gt; &lt;CodeBlock language=&quot;bash&quot; className=&quot;w-[350px]&quot; copyStyle=&quot;icon&quot;&gt;{`$ curl -X GET &#39;http://api.example.org/v1/testapikey&#39; -H &#39;apikey: my_key&#39;`}&lt;/CodeBlock&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Single Line With Copy Icon</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">The copy button fits within a single-line code block.</div>
+              <pre><code>const SingleLineWithCopyIcon = () =&gt; &lt;CodeBlock copyStyle=&quot;icon&quot;&gt;This is the code block without any syntax highlighting applied&lt;/CodeBlock&gt;;</code></pre>
               
             </div>
             <div class="note ok">
@@ -9468,7 +9369,7 @@ Here `critical` becomes the outline version of the icon.</div>
       <div class="badges">
         <label for="c-16-components-fieldset-props" class="badge ok as-toggle">5 prop types</label>
         
-        <label for="c-16-components-fieldset-stories" class="badge err as-toggle">3/12 story errors · 4 incomplete</label>
+        <label for="c-16-components-fieldset-stories" class="badge err as-toggle">3/13 story errors · 4 incomplete</label>
         
         
       </div>
@@ -9672,6 +9573,18 @@ import Radio from '../Radio';</code></pre>
               
               
               <pre><code>const FieldsetLegend = () =&gt; &lt;Fieldset.Legend title=&quot;Legend&quot; /&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Fieldset Legend Disabled</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">The legend reads its disabled state from the surrounding `Fieldset`.</div>
+              <pre><code>const FieldsetLegendDisabled = () =&gt; &lt;Fieldset isDisabled&gt;
+    &lt;Fieldset.Legend title=&quot;Legend&quot; subTitle=&quot;With additional Subtitle&quot; showHint /&gt;
+&lt;/Fieldset&gt;;</code></pre>
               
             </div>
             <div class="note ok">
@@ -11095,6 +11008,7 @@ When the text exceeds the available space, it scrolls to show the end of the str
 * Use helper text only when necessary, preferring examples (e.g., yourname@emaildomain.com) over instructions.
 * For errors, provide instructions for fixing the issue and explain what is happening.
 * Use `fieldNote` for examples or instructions explaining what should be entered.
+* Set `maxLength` on every free-text field (`text`, `search`, `email`, `url`, `tel`, `password`) so there&#39;s a hard cap on what can be entered. Use `recommendedMaxLength` alongside it to show a lower, soft limit. Enforce the same limit on the server, since `maxLength` only constrains the browser.
 
 ### Don&#39;ts
 
@@ -11775,7 +11689,7 @@ import Tooltip from '../Tooltip';</code></pre>
       <div class="badges">
         <label for="c-25-components-link-props" class="badge ok as-toggle">6 prop types</label>
         
-        <label for="c-25-components-link-stories" class="badge ok as-toggle">11 stories</label>
+        <label for="c-25-components-link-stories" class="badge ok as-toggle">12 stories</label>
         
         
       </div>
@@ -11905,7 +11819,8 @@ variant?: &quot;default&quot; | &quot;inverse&quot; = default</code></pre>
                 <div class="row">
                   <span class="ex-name">Imports</span>
                 </div>
-                <pre><code>import { IconProvider, Link } from '@chanzuckerberg/eds';</code></pre>
+                <pre><code>import { IconProvider, Link } from '@chanzuckerberg/eds';
+import React from 'react';</code></pre>
               </div>
           
           
@@ -11956,6 +11871,36 @@ name here does not assume a chevron.
     onClick={(event: any) =&gt; event.preventDefault()}
     context=&quot;standalone&quot;
     icon=&quot;open-in-new&quot;&gt;Default&lt;/Link&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Icon Alignment Across Sizes</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">The trailing icon sits centered on the text&#39;s x-height at every size. The last column has
+an `IconProvider` drawing custom content instead of a named icon, which is sized from the
+link&#39;s font rather than the icon size each named icon carries.</div>
+              <pre><code>const IconAlignmentAcrossSizes = (args) =&gt; (
+  &lt;div className=&quot;grid grid-cols-3 items-center gap-x-8 gap-y-4&quot;&gt;
+    {linkSizes.map((size) =&gt; (
+      &lt;React.Fragment key={size}&gt;
+        &lt;Link {...args} icon=&quot;open-in-new&quot; size={size}&gt;
+          Leaves the site {size}
+        &lt;/Link&gt;
+        &lt;Link {...args} emphasis=&quot;low&quot; icon=&quot;forward&quot; size={size}&gt;
+          Onward {size}
+        &lt;/Link&gt;
+        &lt;IconProvider icons={{ forward: customForwardIcon }}&gt;
+          &lt;Link {...args} emphasis=&quot;low&quot; icon=&quot;forward&quot; size={size}&gt;
+            Custom icon {size}
+          &lt;/Link&gt;
+        &lt;/IconProvider&gt;
+      &lt;/React.Fragment&gt;
+    ))}
+  &lt;/div&gt;
+);</code></pre>
               
             </div>
             <div class="note ok">
@@ -14038,8 +13983,8 @@ they are positioned as block-level elements. use `flex` or `display` to update p
 <article
   id="components-orderedlist"
   class="card 
-  no-error
-  no-info
+  has-error
+  has-info
   no-story-error
   no-story-warning
   
@@ -14048,10 +13993,10 @@ they are positioned as block-level elements. use `flex` or `display` to update p
   aria-label="OrderedList">
   <div class="head">
     <div class="title">
-      <h2><span class="status-dot dot-ok"></span> OrderedList</h2>
+      <h2><span class="status-dot dot-err"></span> OrderedList</h2>
       <div class="badges">
-        <label for="c-31-components-orderedlist-props" class="badge ok as-toggle">2 prop types</label>
-        
+        <label for="c-31-components-orderedlist-err" class="badge err as-toggle">API error</label>
+        <label for="c-31-components-orderedlist-info" class="badge info as-toggle">1 info</label>
         <label for="c-31-components-orderedlist-stories" class="badge ok as-toggle">6 stories</label>
         
         
@@ -14059,42 +14004,38 @@ they are positioned as block-level elements. use `flex` or `display` to update p
     </div>
     <div class="meta" title="./src/components/List/OrderedList.stories.tsx">components-orderedlist · ./src/components/List/OrderedList.stories.tsx</div>
     
-    <div class="hint">Control a list of text items that are semantically ordered (ordinal sequence by number).</div>
+    
     
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
-  
-  
+  <input id="c-31-components-orderedlist-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-31-components-orderedlist-info" class="tg tg-info" type="checkbox" hidden />
   <input id="c-31-components-orderedlist-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-31-components-orderedlist-props" class="tg tg-props" type="checkbox" hidden />
+  
 
   <div class="panels">
     
-    
-    
-        <div class="panel panel-props">
-          <div class="note ok">
-            <div class="row">
-              <span class="ex-name">Prop types <small>(react-docgen-typescript)</small></span>
-              <span class="badge ok">2 prop types</span>
-            </div>
-            <pre><code>Component: src/components/List/List.tsx::OrderedList</code></pre>
-            <pre><code>Props:</code></pre>
-            <pre><code>/**
- * Marker to use with the given list type
- * - for `OrderedList`, will use no marker or the `default` marker (e.g., &quot;1.&quot;)
- */
-markerType?: &quot;default&quot; | &quot;none&quot;
-
-/**
- * Size of the list and its item (controls spacing but requires proper usage of `Text`/`Heading` when composing)
- */
-size?: &quot;xs&quot; | &quot;sm&quot; | &quot;md&quot;</code></pre>
-          </div>
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>File: /home/runner/work/edu-design-system/edu-design-system/src/components/List/List.tsx
+react-docgen-typescript returned component docs for this file, but none matched the story&#39;s component import.
+Looked for: componentName=OrderedList, localImportName=OrderedList, importName=OrderedList.</code></pre></div>
+    </div>
         </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
+    
     
         <div class="panel panel-stories">
           
@@ -15695,10 +15636,10 @@ subLabel?: ReactNode</code></pre>
   id="components-scrollwrapper"
   class="card 
   no-error
-  no-info
+  has-info
   has-story-error
   no-story-warning
-  
+  missing-api
   no-doc-error"
   role="listitem"
   aria-label="ScrollWrapper">
@@ -15706,8 +15647,8 @@ subLabel?: ReactNode</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-err"></span> ScrollWrapper</h2>
       <div class="badges">
-        <label for="c-38-components-scrollwrapper-props" class="badge ok as-toggle">2 prop types</label>
-        
+        <span class="badge">no API description</span>
+        <label for="c-38-components-scrollwrapper-info" class="badge info as-toggle">1 info</label>
         <label for="c-38-components-scrollwrapper-stories" class="badge err as-toggle">4/6 story errors</label>
         
         
@@ -15715,84 +15656,29 @@ subLabel?: ReactNode</code></pre>
     </div>
     <div class="meta" title="./src/components/ScrollWrapper/ScrollWrapper.stories.tsx">components-scrollwrapper · ./src/components/ScrollWrapper/ScrollWrapper.stories.tsx</div>
     
-    <div class="hint">## Usage
-
-Wrap content that has a fixed height but is scrollable, so that users have an indication that
-more content is available. Subtle shadows come in several variants.
-
-| Type/Use | Description | Example |
-|----------|-------------|---------|
-| Vertical | The default. Scrolls on the y axis and shades the top and bottom edges. | Long dialog bodies. Tall option lists. |
-| Horizontal | `orientation=&quot;horizontal&quot;` scrolls on the x axis and shades the start and end edges. | Wide tables. Toolbars that overflow. |
-
-`orientation` picks one axis at a time, so a single wrapper shades either the vertical or the
-horizontal edges, not both.
-
-`shadowType` controls the treatment: `cover` (the default) spans the full width of the wrapper,
-while `contain` keeps the shadow&#39;s edges inside it.
-
-The effect depends on the container being shorter than its content, so the element above the
-scroll wrapper must have a fixed height. Without that, nothing overflows and no shadow appears.
-
-## Interaction
-
-When vertical, scrolling will enable both shadows when there is more content above and below the
-current position. When there is only content above the current position (scrolled to the end of
-the container), only the top shadow is shown. When scrolled to the very top of the container,
-only the bottom shadow is shown. The same logic applies to the horizontal scrolling scenario,
-against the start and end edges.
-
-`Modal` renders a `ScrollWrapper` around its body for you, so its content scrolls without any
-extra setup.
-
-## Content &amp; Accessibility
-
-### Do&#39;s
-
-* Use `ScrollWrapper` in any overlay components that need to exceed the available screen real estate. This is not for ones that definitely will, but ones that have variable content which could grow to be either too tall or too wide.
-* Use `cover` for the shadow type to emphasize and make clear that more content is available.
-* Leave the scrollable region in the tab order. It carries `tabIndex={0}` so that people navigating by keyboard can scroll it.
-
-### Don&#39;ts
-
-* Avoid wrapping entire pages with `ScrollWrapper`.
-* Never use multiple, adjacent `ScrollWrapper` instances.</div>
+    
     
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  
+  <input id="c-38-components-scrollwrapper-info" class="tg tg-info" type="checkbox" hidden />
   <input id="c-38-components-scrollwrapper-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-38-components-scrollwrapper-props" class="tg tg-props" type="checkbox" hidden />
+  
 
   <div class="panels">
     
     
-    
-        <div class="panel panel-props">
-          <div class="note ok">
-            <div class="row">
-              <span class="ex-name">Prop types <small>(react-docgen-typescript)</small></span>
-              <span class="badge ok">2 prop types</span>
-            </div>
-            <pre><code>Component: src/components/ScrollWrapper/ScrollWrapper.tsx::ScrollWrapper</code></pre>
-            <pre><code>Props:</code></pre>
-            <pre><code>/**
- * Determines the direction that the shadows apply
- */
-orientation?: &quot;horizontal&quot; | &quot;vertical&quot; = vertical
-
-/**
- * Type of shadow treatment for the wrapper:
- * - **cover** - full-width shadow in the wrapper based on shadow context
- * - **contain** - shadow whose edges fit within the width of the wrapper
- */
-shadowType?: &quot;contain&quot; | &quot;cover&quot; = cover</code></pre>
-          </div>
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
         </div>
+    
     
         <div class="panel panel-stories">
           
@@ -18392,6 +18278,7 @@ When the amount of text exceeds the available space, the text scrolls to show th
 * Use short, instructional labels when necessary and use sentence case.
 * Use `fieldNote` helper text when necessary, and use examples rather than instructions whenever possible (e.g., `yourname@emaildomain.com`).
 * For errors, provide instructions for fixing the issue and explain what is happening.
+* Set `maxLength` on every textarea so there&#39;s a hard cap on what can be entered. Use `recommendedMaxLength` alongside it to show a lower, soft limit. Enforce the same limit on the server, since `maxLength` only constrains the browser.
 
 ### Don&#39;ts
 
@@ -18550,7 +18437,8 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`}
     rows={2}
     fieldNote=&quot;Validation information or error details about the input.&quot;
     spellCheck={false}
-    disabled /&gt;;</code></pre>
+    disabled
+    showHint /&gt;;</code></pre>
               
             </div>
             <div class="note ok">
@@ -19232,7 +19120,7 @@ subLabel?: ReactNode</code></pre>
         
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/DesignTokens/Tier1/PrimitiveTokens.stories.tsx">design-tokens-1-primitive · ./.storybook/components/DesignTokens/Tier1/PrimitiveTokens.stories.tsx</div>
+    <div class="meta" title="./src/documentation/DesignTokens/Tier1/PrimitiveTokens.stories.tsx">design-tokens-1-primitive · ./src/documentation/DesignTokens/Tier1/PrimitiveTokens.stories.tsx</div>
     
     
     
@@ -19263,7 +19151,7 @@ subLabel?: ReactNode</code></pre>
               <span class="ex-name">Prop types <small>(react-docgen-typescript)</small></span>
               <span class="badge ok">14 prop types</span>
             </div>
-            <pre><code>Component: .storybook/components/TokenList/TokenList.tsx::TokenDataTable</code></pre>
+            <pre><code>Component: src/storyUtils/TokenList/TokenList.tsx::TokenDataTable</code></pre>
             <pre><code>Props:</code></pre>
             <pre><code>/**
  * Collection of buttons/menus to control the table contents
@@ -19358,7 +19246,7 @@ tableStyle?: &quot;basic&quot; | &quot;border&quot;</code></pre>
                 </div>
                 <pre><code>import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';
 import { TokenDataTable } from '@chanzuckerberg/eds';
-import { getTokenListItems } from '../../TokenList/TokenList';</code></pre>
+import { getTokenListItems } from '../../../storyUtils/TokenList/TokenList';</code></pre>
               </div>
           
           
@@ -19670,7 +19558,7 @@ import { getTokenListItems } from '../../TokenList/TokenList';</code></pre>
         
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/DesignTokens/Tier2/SemanticTokens.stories.tsx">design-tokens-2-semantic · ./.storybook/components/DesignTokens/Tier2/SemanticTokens.stories.tsx</div>
+    <div class="meta" title="./src/documentation/DesignTokens/Tier2/SemanticTokens.stories.tsx">design-tokens-2-semantic · ./src/documentation/DesignTokens/Tier2/SemanticTokens.stories.tsx</div>
     
     
     
@@ -19701,7 +19589,7 @@ import { getTokenListItems } from '../../TokenList/TokenList';</code></pre>
               <span class="ex-name">Prop types <small>(react-docgen-typescript)</small></span>
               <span class="badge ok">14 prop types</span>
             </div>
-            <pre><code>Component: .storybook/components/TokenList/TokenList.tsx::TokenDataTable</code></pre>
+            <pre><code>Component: src/storyUtils/TokenList/TokenList.tsx::TokenDataTable</code></pre>
             <pre><code>Props:</code></pre>
             <pre><code>/**
  * Collection of buttons/menus to control the table contents
@@ -19796,7 +19684,7 @@ tableStyle?: &quot;basic&quot; | &quot;border&quot;</code></pre>
                 </div>
                 <pre><code>import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';
 import { TokenDataTable } from '@chanzuckerberg/eds';
-import { getTokenListItems, getSpecifier } from '../../TokenList/TokenList';</code></pre>
+import { getTokenListItems, getSpecifier } from '../../../storyUtils/TokenList/TokenList';</code></pre>
               </div>
           
           
@@ -19928,7 +19816,7 @@ Do **not** use any of the component radii in custom components.</div>
         
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/DesignTokens/Tier3/ComponentTokens.stories.tsx">design-tokens-3-component · ./.storybook/components/DesignTokens/Tier3/ComponentTokens.stories.tsx</div>
+    <div class="meta" title="./src/documentation/DesignTokens/Tier3/ComponentTokens.stories.tsx">design-tokens-3-component · ./src/documentation/DesignTokens/Tier3/ComponentTokens.stories.tsx</div>
     
     
     
@@ -19959,7 +19847,7 @@ Do **not** use any of the component radii in custom components.</div>
               <span class="ex-name">Prop types <small>(react-docgen-typescript)</small></span>
               <span class="badge ok">14 prop types</span>
             </div>
-            <pre><code>Component: .storybook/components/TokenList/TokenList.tsx::TokenDataTable</code></pre>
+            <pre><code>Component: src/storyUtils/TokenList/TokenList.tsx::TokenDataTable</code></pre>
             <pre><code>Props:</code></pre>
             <pre><code>/**
  * Collection of buttons/menus to control the table contents
@@ -20054,7 +19942,7 @@ tableStyle?: &quot;basic&quot; | &quot;border&quot;</code></pre>
                 </div>
                 <pre><code>import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';
 import { TokenDataTable } from '@chanzuckerberg/eds';
-import { getTokenListItems, getSpecifier } from '../../TokenList/TokenList';
+import { getTokenListItems, getSpecifier } from '../../../storyUtils/TokenList/TokenList';
 import camelCase from 'lodash/camelCase';</code></pre>
               </div>
           
@@ -20507,7 +20395,7 @@ Each story name denotes a value pased to `placement`.</div>
   id="components-unorderedlist"
   class="card 
   no-error
-  no-info
+  has-info
   no-story-error
   no-story-warning
   
@@ -20519,7 +20407,7 @@ Each story name denotes a value pased to `placement`.</div>
       <h2><span class="status-dot dot-ok"></span> UnorderedList</h2>
       <div class="badges">
         <label for="c-52-components-unorderedlist-props" class="badge ok as-toggle">2 prop types</label>
-        
+        <label for="c-52-components-unorderedlist-info" class="badge info as-toggle">1 info</label>
         <label for="c-52-components-unorderedlist-stories" class="badge ok as-toggle">7 stories</label>
         
         
@@ -20527,44 +20415,13 @@ Each story name denotes a value pased to `placement`.</div>
     </div>
     <div class="meta" title="./src/components/List/UnorderedList.stories.tsx">components-unorderedlist · ./src/components/List/UnorderedList.stories.tsx</div>
     
-    <div class="hint">## Usage
-
-* **Unordered**: Used for content where the order is not important.
-* **Ordered**: Used for content where the order is important.
-* EDS supports 1 level of nesting because our current products don&#39;t require deeper nesting.
-
-### Unordered Lists
-
-| Type/Use | Description | Example |
-|----------|-------------|---------|
-|Data presentation|Presents grouped or related information in an organized manner.|A list of user names with their status or profile images.|
-|Hierarchical Data|Displays nested items or subcategories.|A file tree or nested comments in a discussion thread.|
-
-### Ordered Lists
-
-| Type/Use | Description | Example |
-|----------|-------------|---------|
-|Steps / Instructions|Lists steps in a specific order.|A step-by-step guide for setting up an account.|
-|Nested steps|Breaks a long list of steps into groups of steps that accomplish a discrete action or piece of the overall task.|Long, complex procedures.|
-
-### Best Practices
-
-* Include headings for lists that use custom characters instead of standard bullets or numbering.
-* Don&#39;t rely on custom character bullets to convey meaning.
-* Don&#39;t use multiple custom characters for one list item.
-
-## Content &amp; Accessibility
-
-### Do&#39;s
-
-* Keep each list item short and to the point.
-* Use parallel structure in list items to aid understanding.</div>
+    
     
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  
+  <input id="c-52-components-unorderedlist-info" class="tg tg-info" type="checkbox" hidden />
   <input id="c-52-components-unorderedlist-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
@@ -20573,6 +20430,13 @@ Each story name denotes a value pased to `placement`.</div>
   <div class="panels">
     
     
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
     
         <div class="panel panel-props">
           <div class="note ok">
@@ -20583,6 +20447,8 @@ Each story name denotes a value pased to `placement`.</div>
             <pre><code>Component: src/components/List/List.tsx::UnorderedList</code></pre>
             <pre><code>Props:</code></pre>
             <pre><code>/**
+ * Marker to use with the given list type
+ * - for `OrderedList`, will use no marker or the `default` marker (e.g., &quot;1.&quot;)
  * Marker to use with the given list type
  * - for `UnorderedList`, will use no marker or the `default` marker (e.g., &quot;•&quot;)
  */
@@ -20876,7 +20742,7 @@ totalPageCount: number</code></pre>
           <label for="react-docgen-typescript-could-not-match-component-docs-toggle" class="group-header">
             <span class="caret">▸</span>
             <span class="group-title">react-docgen-typescript could not match component docs</span>
-            <span class="group-count">2</span>
+            <span class="group-count">3</span>
           </label>
           <div class="group-cards">
 <article
@@ -21180,14 +21046,178 @@ set and the provider leaves it alone.</div>
   
   no-doc-error"
   role="listitem"
+  aria-label="OrderedList">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> OrderedList</h2>
+      <div class="badges">
+        <label for="c-error-1-components-orderedlist-err" class="badge err as-toggle">API error</label>
+        <label for="c-error-1-components-orderedlist-info" class="badge info as-toggle">1 info</label>
+        <label for="c-error-1-components-orderedlist-stories" class="badge ok as-toggle">6 stories</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/components/List/OrderedList.stories.tsx">components-orderedlist · ./src/components/List/OrderedList.stories.tsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-error-1-components-orderedlist-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-1-components-orderedlist-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-1-components-orderedlist-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">API error</div>
+      <div class="note-body"><pre><code>File: /home/runner/work/edu-design-system/edu-design-system/src/components/List/List.tsx
+react-docgen-typescript returned component docs for this file, but none matched the story&#39;s component import.
+Looked for: componentName=OrderedList, localImportName=OrderedList, importName=OrderedList.</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { OrderedList } from '@chanzuckerberg/eds';
+import { OrderedList } from './List';</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Default</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Default = () =&gt; &lt;OrderedList markerType=&quot;default&quot;&gt;(&lt;&gt;
+      &lt;OrderedList.ListItem&gt;test 1&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 2&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 3&lt;/OrderedList.ListItem&gt;
+    &lt;/&gt;)&lt;/OrderedList&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">None</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const None = () =&gt; &lt;OrderedList markerType=&quot;none&quot;&gt;(&lt;&gt;
+      &lt;OrderedList.ListItem&gt;test 1&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 2&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 3&lt;/OrderedList.ListItem&gt;
+    &lt;/&gt;)&lt;/OrderedList&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">X Small</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const XSmall = () =&gt; &lt;OrderedList markerType=&quot;default&quot; size=&quot;xs&quot;&gt;(&lt;&gt;
+      &lt;OrderedList.ListItem&gt;test 1&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 2&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 3&lt;/OrderedList.ListItem&gt;
+    &lt;/&gt;)&lt;/OrderedList&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Small</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Small = () =&gt; &lt;OrderedList markerType=&quot;default&quot; size=&quot;sm&quot;&gt;(&lt;&gt;
+      &lt;OrderedList.ListItem&gt;test 1&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 2&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 3&lt;/OrderedList.ListItem&gt;
+    &lt;/&gt;)&lt;/OrderedList&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Medium</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Medium = () =&gt; &lt;OrderedList markerType=&quot;default&quot; size=&quot;md&quot;&gt;(&lt;&gt;
+      &lt;OrderedList.ListItem&gt;test 1&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 2&lt;/OrderedList.ListItem&gt;
+      &lt;OrderedList.ListItem&gt;test 3&lt;/OrderedList.ListItem&gt;
+    &lt;/&gt;)&lt;/OrderedList&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Nested</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">List can be nested to one depth</div>
+              <pre><code>const Nested = () =&gt; &lt;OrderedList markerType=&quot;default&quot;&gt;
+    &lt;OrderedList.ListItem&gt;test 1&lt;/OrderedList.ListItem&gt;
+    &lt;OrderedList.ListItem&gt;test 2&lt;/OrderedList.ListItem&gt;
+    &lt;OrderedList.ListItem&gt;test 3
+                &lt;OrderedList markerType=&quot;default&quot;&gt;
+            &lt;OrderedList.ListItem&gt;test 1&lt;/OrderedList.ListItem&gt;
+            &lt;OrderedList.ListItem&gt;test 2&lt;/OrderedList.ListItem&gt;
+        &lt;/OrderedList&gt;
+    &lt;/OrderedList.ListItem&gt;
+&lt;/OrderedList&gt;;</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article>
+<article
+  
+  class="card 
+  has-error
+  has-info
+  no-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
   aria-label="TabGroup">
   <div class="head">
     <div class="title">
       <h2><span class="status-dot dot-err"></span> TabGroup</h2>
       <div class="badges">
-        <label for="c-error-1-components-tabgroup-err" class="badge err as-toggle">API error</label>
-        <label for="c-error-1-components-tabgroup-info" class="badge info as-toggle">1 info</label>
-        <label for="c-error-1-components-tabgroup-stories" class="badge ok as-toggle">7 stories</label>
+        <label for="c-error-2-components-tabgroup-err" class="badge err as-toggle">API error</label>
+        <label for="c-error-2-components-tabgroup-info" class="badge info as-toggle">1 info</label>
+        <label for="c-error-2-components-tabgroup-stories" class="badge ok as-toggle">7 stories</label>
         
         
       </div>
@@ -21199,9 +21229,9 @@ set and the provider leaves it alone.</div>
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
-  <input id="c-error-1-components-tabgroup-err" class="tg tg-err" type="checkbox" hidden />
-  <input id="c-error-1-components-tabgroup-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-error-1-components-tabgroup-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-error-2-components-tabgroup-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-2-components-tabgroup-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-2-components-tabgroup-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
   
@@ -21733,7 +21763,7 @@ that happened to be picked.</div>
         <label for="doc-0-getting-started-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/GettingStarted.mdx">getting-started--summary-docs · ./.storybook/components/Docs/GettingStarted.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/GettingStarted.mdx">getting-started--summary-docs · ./src/documentation/Docs/GettingStarted.mdx</div>
     <div># Welcome to EDS EDS is a design system that provides foundations to create a consistent, ...</div>
   </div>
 
@@ -21833,7 +21863,7 @@ Remember: A story name might not reflect the property name correctly, so always 
         <label for="doc-1-documentation-contributor-guidelines-code-guidelines-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/Guidelines/CodeGuidelines.mdx">documentation-contributor-guidelines-code-guidelines--summary-docs · ./.storybook/components/Docs/Guidelines/CodeGuidelines.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/Guidelines/CodeGuidelines.mdx">documentation-contributor-guidelines-code-guidelines--summary-docs · ./src/documentation/Docs/Guidelines/CodeGuidelines.mdx</div>
     <div># Code Guidelines EDS component code follows these principles and conventions for HTML, CS...</div>
   </div>
 
@@ -22458,7 +22488,7 @@ const generatedId = useId();
         <label for="doc-2-documentation-contributor-guidelines-adding-components-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/Guidelines/Components.mdx">documentation-contributor-guidelines-adding-components--summary-docs · ./.storybook/components/Docs/Guidelines/Components.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/Guidelines/Components.mdx">documentation-contributor-guidelines-adding-components--summary-docs · ./src/documentation/Docs/Guidelines/Components.mdx</div>
     <div># Working with EDS Components This codebase contains all the tokens and components to succ...</div>
   </div>
 
@@ -22557,7 +22587,7 @@ Components
         <label for="doc-3-documentation-theming-using-eds-theming-with-storybook-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/Guidelines/EDSAndStorybook.mdx">documentation-theming-using-eds-theming-with-storybook--summary-docs · ./.storybook/components/Docs/Guidelines/EDSAndStorybook.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/Guidelines/EDSAndStorybook.mdx">documentation-theming-using-eds-theming-with-storybook--summary-docs · ./src/documentation/Docs/Guidelines/EDSAndStorybook.mdx</div>
     <div># Using EDS Theming with Storybook When using a custom EDS theme, your application will re...</div>
   </div>
 
@@ -22649,7 +22679,7 @@ Storybook supports [modes][storybook-modes]. Details on how to use this and EDS 
         <label for="doc-4-documentation-contributor-guidelines-adding-icons-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/Guidelines/Icons.mdx">documentation-contributor-guidelines-adding-icons--summary-docs · ./.storybook/components/Docs/Guidelines/Icons.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/Guidelines/Icons.mdx">documentation-contributor-guidelines-adding-icons--summary-docs · ./src/documentation/Docs/Guidelines/Icons.mdx</div>
     <div># Icons EDS provides utilitarian UI icons (e.g. magnifying glass, menu, triangles, carets,...</div>
   </div>
 
@@ -22733,7 +22763,7 @@ Modifying icons involves the same steps as adding an icon, only overriding an ex
         <label for="doc-5-documentation-defining-layout-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/Guidelines/Layout.mdx">documentation-defining-layout--summary-docs · ./.storybook/components/Docs/Guidelines/Layout.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/Guidelines/Layout.mdx">documentation-defining-layout--summary-docs · ./src/documentation/Docs/Guidelines/Layout.mdx</div>
     <div># Layout Layout for pages is a combination of spacing units between components, and respon...</div>
   </div>
 
@@ -22820,7 +22850,7 @@ be available across all the documented spacing utilities. For now, we provide th
         <label for="doc-6-documentation-theming-using-eds-theming-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/Guidelines/Theming.mdx">documentation-theming-using-eds-theming--summary-docs · ./.storybook/components/Docs/Guidelines/Theming.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/Guidelines/Theming.mdx">documentation-theming-using-eds-theming--summary-docs · ./src/documentation/Docs/Guidelines/Theming.mdx</div>
     <div># Using EDS Theming Below are instructions on how to use the tooling, configs, and tokens ...</div>
   </div>
 
@@ -23040,7 +23070,7 @@ If there are any future updates to the theme, edit the contents of `app-theme.js
         <label for="doc-7-documentation-contributor-guidelines-using-tokens-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/Guidelines/Tokens.mdx">documentation-contributor-guidelines-using-tokens--summary-docs · ./.storybook/components/Docs/Guidelines/Tokens.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/Guidelines/Tokens.mdx">documentation-contributor-guidelines-using-tokens--summary-docs · ./src/documentation/Docs/Guidelines/Tokens.mdx</div>
     <div># Design Tokens EDS is a [themeable design system](https://bradfrost.com/blog/post/creatin...</div>
   </div>
 
@@ -23187,7 +23217,7 @@ See the current set of tier 3 tokens [in storybook](/story/design-tokens-tier-3-
         <label for="doc-8-documentation-contributor-guidelines-using-typography-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/Guidelines/Typography.mdx">documentation-contributor-guidelines-using-typography--summary-docs · ./.storybook/components/Docs/Guidelines/Typography.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/Guidelines/Typography.mdx">documentation-contributor-guidelines-using-typography--summary-docs · ./src/documentation/Docs/Guidelines/Typography.mdx</div>
     <div># Typography EDS defines named compositions for the tier 2 and 3 typography &quot;tokens&quot;. Unli...</div>
   </div>
 
@@ -23321,7 +23351,7 @@ letter-spacing: var(--eds-typography-letter-spacing-normal);
         <label for="doc-9-release-changelog-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
-    <div class="meta" title="./.storybook/components/Docs/ReleaseChangelog.mdx">release-changelog--summary-docs · ./.storybook/components/Docs/ReleaseChangelog.mdx</div>
+    <div class="meta" title="./src/documentation/Docs/ReleaseChangelog.mdx">release-changelog--summary-docs · ./src/documentation/Docs/ReleaseChangelog.mdx</div>
     
   </div>
 

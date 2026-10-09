@@ -1,1 +1,0 @@
-import{n as e}from"./chunk-DnJy8xQt.js";var t,n,r,i,a,o,s=e((()=>{t=`Enter`,n=`Space`,r=`ArrowLeft`,i=`ArrowUp`,a=`ArrowRight`,o=`ArrowDown`}));export{n as a,a as i,t as n,i as o,r,s,o as t};

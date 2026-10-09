@@ -4,11 +4,11 @@
     "design-tokens-1-primitive": {
       "id": "design-tokens-1-primitive",
       "name": "TokenDataTable",
-      "path": "./.storybook/components/DesignTokens/Tier1/PrimitiveTokens.stories.tsx",
+      "path": "./src/documentation/DesignTokens/Tier1/PrimitiveTokens.stories.tsx",
       "jsDocTags": {},
       "reactDocgenTypescript": {
         "tags": {},
-        "filePath": "/home/runner/work/edu-design-system/edu-design-system/.storybook/components/TokenList/TokenList.tsx",
+        "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/storyUtils/TokenList/TokenList.tsx",
         "description": "",
         "displayName": "TokenDataTable",
         "methods": [],
@@ -241,7 +241,7 @@
             "name": "listItems",
             "declarations": [
               {
-                "fileName": "edu-design-system/.storybook/components/TokenList/TokenList.tsx",
+                "fileName": "edu-design-system/src/storyUtils/TokenList/TokenList.tsx",
                 "name": "TypeLiteral"
               }
             ],
@@ -340,16 +340,16 @@
           "snippet": "const FontFamilies = () => <TokenDataTable\n    caption=\"Font Families\"\n    subCaption=\"These values are used in higher semantic and component tokens and should not be used in custom components directly.\"\n    size=\"md\"\n    listItems={getTokenListItems(\n      'eds-typography-font-family',\n      'size',\n      (name, column) => {\n        // Hide the one-off offset value\n        if (!name.includes('offset')) {\n          if (column === 'figma') {\n            return (\n              'fontFamily/font-family-' + name.slice(name.lastIndexOf('-') + 1)\n            );\n          } else {\n            return 'font-' + name.slice(name.lastIndexOf('-') + 1);\n          }\n        }\n        return '';\n      },\n    )} />;"
         }
       ],
-      "import": "import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';\nimport { TokenDataTable } from '@chanzuckerberg/eds';\nimport { getTokenListItems } from '../../TokenList/TokenList';"
+      "import": "import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';\nimport { TokenDataTable } from '@chanzuckerberg/eds';\nimport { getTokenListItems } from '../../../storyUtils/TokenList/TokenList';"
     },
     "design-tokens-2-semantic": {
       "id": "design-tokens-2-semantic",
       "name": "TokenDataTable",
-      "path": "./.storybook/components/DesignTokens/Tier2/SemanticTokens.stories.tsx",
+      "path": "./src/documentation/DesignTokens/Tier2/SemanticTokens.stories.tsx",
       "jsDocTags": {},
       "reactDocgenTypescript": {
         "tags": {},
-        "filePath": "/home/runner/work/edu-design-system/edu-design-system/.storybook/components/TokenList/TokenList.tsx",
+        "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/storyUtils/TokenList/TokenList.tsx",
         "description": "",
         "displayName": "TokenDataTable",
         "methods": [],
@@ -582,7 +582,7 @@
             "name": "listItems",
             "declarations": [
               {
-                "fileName": "edu-design-system/.storybook/components/TokenList/TokenList.tsx",
+                "fileName": "edu-design-system/src/storyUtils/TokenList/TokenList.tsx",
                 "name": "TypeLiteral"
               }
             ],
@@ -620,16 +620,16 @@
           "description": "Border radii can be used internally in components, and with custom components.\n\nDo **not** use any of the component radii in custom components."
         }
       ],
-      "import": "import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';\nimport { TokenDataTable } from '@chanzuckerberg/eds';\nimport { getTokenListItems, getSpecifier } from '../../TokenList/TokenList';"
+      "import": "import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';\nimport { TokenDataTable } from '@chanzuckerberg/eds';\nimport { getTokenListItems, getSpecifier } from '../../../storyUtils/TokenList/TokenList';"
     },
     "design-tokens-3-component": {
       "id": "design-tokens-3-component",
       "name": "TokenDataTable",
-      "path": "./.storybook/components/DesignTokens/Tier3/ComponentTokens.stories.tsx",
+      "path": "./src/documentation/DesignTokens/Tier3/ComponentTokens.stories.tsx",
       "jsDocTags": {},
       "reactDocgenTypescript": {
         "tags": {},
-        "filePath": "/home/runner/work/edu-design-system/edu-design-system/.storybook/components/TokenList/TokenList.tsx",
+        "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/storyUtils/TokenList/TokenList.tsx",
         "description": "",
         "displayName": "TokenDataTable",
         "methods": [],
@@ -862,7 +862,7 @@
             "name": "listItems",
             "declarations": [
               {
-                "fileName": "edu-design-system/.storybook/components/TokenList/TokenList.tsx",
+                "fileName": "edu-design-system/src/storyUtils/TokenList/TokenList.tsx",
                 "name": "TypeLiteral"
               }
             ],
@@ -886,7 +886,7 @@
           "snippet": "const BackgroundDataTable = () => <TokenDataTable\n    caption=\"Background DataTable Tokens\"\n    listItems={getTokenListItems(\n      'eds-theme-color-background-datatable',\n      'color',\n      (name, column, filterTerm) => {\n        const varName = camelCase(getSpecifier(name, filterTerm));\n        if (column === 'figma') {\n          return '→ background/datatable-' + varName;\n        } else {\n          return 'bg-datatable-' + varName;\n        }\n      },\n    )} />;"
         }
       ],
-      "import": "import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';\nimport { TokenDataTable } from '@chanzuckerberg/eds';\nimport { getTokenListItems, getSpecifier } from '../../TokenList/TokenList';\nimport camelCase from 'lodash/camelCase';"
+      "import": "import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';\nimport { TokenDataTable } from '@chanzuckerberg/eds';\nimport { getTokenListItems, getSpecifier } from '../../../storyUtils/TokenList/TokenList';\nimport camelCase from 'lodash/camelCase';"
     },
     "components-accordion": {
       "id": "components-accordion",
@@ -1534,7 +1534,7 @@
           },
           "children": {
             "defaultValue": null,
-            "description": "Contents of the component below the title and sub-title (used mainly for `ButtonGroup` containing ranked `Buttons`)",
+            "description": "Contents of the component below the title and sub-title (used mainly for `ButtonGroup` containing ranked, `size=\"sm\"` `Buttons`)",
             "name": "children",
             "declarations": [
               {
@@ -1589,19 +1589,19 @@
         {
           "id": "components-appnotification--with-controls",
           "name": "With Controls",
-          "snippet": "const WithControls = args => <AppNotification\n    title=\"This is an AppNotification title\"\n    subTitle=\"Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.\">\n    <ButtonGroup buttonLayout=\"horizontal\" className=\"!flex-row\">\n        <Button\n            rank=\"secondary\"\n            variant={args.variant === 'inverse' ? undefined : 'inverse'}>Call To Action\n                    </Button>\n        <Button\n            rank=\"tertiary\"\n            variant={args.variant === 'inverse' ? undefined : 'inverse'}>Other action\n                    </Button>\n    </ButtonGroup>\n</AppNotification>;",
-          "description": "`AppNotification`s can contain children that represent actions related to the notification.\nThese should be composed in a `ButtonGroup` component, and put the primary `Button` / CTA on the left-hand side."
+          "snippet": "const WithControls = args => <AppNotification\n    title=\"This is an AppNotification title\"\n    subTitle=\"Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.\">\n    <ButtonGroup buttonLayout=\"horizontal\" className=\"!flex-row\">\n        <Button\n            rank=\"secondary\"\n            size=\"sm\"\n            variant={args.variant === 'inverse' ? undefined : 'inverse'}>Call To Action\n                    </Button>\n        <Button\n            rank=\"tertiary\"\n            size=\"sm\"\n            variant={args.variant === 'inverse' ? undefined : 'inverse'}>Other action\n                    </Button>\n    </ButtonGroup>\n</AppNotification>;",
+          "description": "`AppNotification`s can contain children that represent actions related to the notification.\nThese should be composed in a `ButtonGroup` component using `size=\"sm\"` `Button`s, and put the primary `Button` / CTA on the left-hand side."
         },
         {
           "id": "components-appnotification--with-link-in-subtitle",
           "name": "With Link In Subtitle",
-          "snippet": "const WithLinkInSubtitle = () => <AppNotification\n    title=\"This is an AppNotification title\"\n    subTitle={(<Text as=\"span\">Some text with a{' '}\n      <Link href=\"https://example.com/\" variant=\"inverse\">\n        link\n      </Link>{' '}in.\n            </Text>)} />;",
+          "snippet": "const WithLinkInSubtitle = () => <AppNotification\n    title=\"This is an AppNotification title\"\n    subTitle={(<>Some text with a{' '}\n      <Link href=\"https://example.com/\" variant=\"inverse\">\n        link\n      </Link>{' '}in.\n            </>)} />;",
           "description": "Subtitles in `AppNotification` can be formatted and also contain links. While light formatting is allowed, contents of subTitle should remain as prose."
         },
         {
           "id": "components-appnotification--inverse-variant",
           "name": "Inverse Variant",
-          "snippet": "const InverseVariant = args => <AppNotification\n    title=\"This is an AppNotification title\"\n    subTitle=\"Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.\"\n    variant=\"inverse\">\n    <ButtonGroup buttonLayout=\"horizontal\" className=\"!flex-row\">\n        <Button\n            rank=\"secondary\"\n            variant={args.variant === 'inverse' ? undefined : 'inverse'}>Call To Action\n                    </Button>\n        <Button\n            rank=\"tertiary\"\n            variant={args.variant === 'inverse' ? undefined : 'inverse'}>Other action\n                    </Button>\n    </ButtonGroup>\n</AppNotification>;",
+          "snippet": "const InverseVariant = args => <AppNotification\n    title=\"This is an AppNotification title\"\n    subTitle=\"Lorem ipsum dolor sit amet consectetur. At et vitae quis amet felis mollis in vitae. Eget in neque et molestie. Luctus sed id commodo volutpat. In a eu in id molestie consectetur pellentesque.\"\n    variant=\"inverse\">\n    <ButtonGroup buttonLayout=\"horizontal\" className=\"!flex-row\">\n        <Button\n            rank=\"secondary\"\n            size=\"sm\"\n            variant={args.variant === 'inverse' ? undefined : 'inverse'}>Call To Action\n                    </Button>\n        <Button\n            rank=\"tertiary\"\n            size=\"sm\"\n            variant={args.variant === 'inverse' ? undefined : 'inverse'}>Other action\n                    </Button>\n    </ButtonGroup>\n</AppNotification>;",
           "description": "`AppNotification` components can have an inverse variant"
         },
         {
@@ -1609,7 +1609,7 @@
           "name": "With Dismiss And Controls",
           "error": {
             "name": "SyntaxError",
-            "message": "Expected render to be an arrow function or function expression\n  125 |     },\n  126 |   },\n> 127 |   render: WithControls.render,\n      |           ^^^^^^^^^^^^^^^^^^^\n  128 | };\n  129 |\n  130 | export const InverseWithDismissAndControls: Story = {"
+            "message": "Expected render to be an arrow function or function expression\n  128 |     },\n  129 |   },\n> 130 |   render: WithControls.render,\n      |           ^^^^^^^^^^^^^^^^^^^\n  131 | };\n  132 |\n  133 | export const InverseWithDismissAndControls: Story = {"
           }
         },
         {
@@ -1617,7 +1617,7 @@
           "name": "Inverse With Dismiss And Controls",
           "error": {
             "name": "SyntaxError",
-            "message": "Expected render to be an arrow function or function expression\n  135 |     },\n  136 |   },\n> 137 |   render: InverseVariant.render,\n      |           ^^^^^^^^^^^^^^^^^^^^^\n  138 | };\n  139 |\n  140 | /**"
+            "message": "Expected render to be an arrow function or function expression\n  138 |     },\n  139 |   },\n> 140 |   render: InverseVariant.render,\n      |           ^^^^^^^^^^^^^^^^^^^^^\n  141 | };\n  142 |\n  143 | /**"
           }
         },
         {
@@ -1627,216 +1627,20 @@
           "description": "The dismiss button comes from `IconProvider`, so it carries the same mark as the close\nbutton on a `Modal`, an `InputChip`, or any other notification."
         }
       ],
-      "import": "import { AppNotification, Button, ButtonGroup, IconProvider, Link, Text } from '@chanzuckerberg/eds';\nimport Text from '../Text';\nimport Link from '../Link';"
+      "import": "import { AppNotification, Button, ButtonGroup, IconProvider, Link } from '@chanzuckerberg/eds';\nimport Link from '../Link';"
     },
     "components-avatar": {
       "id": "components-avatar",
       "name": "Avatar",
       "path": "./src/components/Avatar/Avatar.stories.tsx",
       "jsDocTags": {},
-      "description": "## Usage\n\nAvatars represent a single user in the system. The representation can be generated (using a color derived from the\nuser data), or include an image for each user. `Avatar` supports text, images, and multi-byte characters (e.g., emoji),\nand can reference flexible metadata for the associated user.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Text | Initials generated from `user.fullName`, or a `displayName` you supply directly. | Comment authors. Member lists. Emoji stand-ins. |\n| Image | A profile photo loaded from `src`, falling back to text when no source is set. | Account menus. Profile pages. |\n| Icon | A named EDS icon instead of user-specific content. | Unidentified users. \"Add a person\" affordances. |\n\n### Best Practices\n\n* Use avatars in places where we want to show a user as identified and logged in.\n* Avatars can be used in place of regular `Button`s for triggers in certain components (e.g., `Menu`, `Tooltip`).\n\n## Interaction\n\nAvatars support focus rings and can exist in the tab order when used as a trigger. Set `isInteractive` to get focus\nand hover states.\n\n`Avatar` instances in a collection can overlap by 50% for efficient use of space. A hover state on the container\nholding multiple instances can then remove the overlap and show every `Avatar` in full.\n\n## Content & Accessibility\n\n### Do's\n\n* Use `Avatar` to represent users in `AppHeader` when logged in.\n* Use the large size `Avatar` when the component is shown in the main page area. For menus and navigation, use a smaller `Avatar`.\n\n### Don'ts\n\n* Avoid relying on the icon or text as the only indication of which user is being represented. Use adjacent text, or `aria-*` tags for screen-reader support.\n* Avoid using very large image files for user profiles in `Avatar`. Save a specific, low-resolution file for user avatar images.\n\n## Resources\n\n* https://github.com/flmnt/graphemer",
       "reactDocgenTypescript": {
         "tags": {},
         "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/Avatar/Avatar.tsx",
-        "description": "## Usage\n\nAvatars represent a single user in the system. The representation can be generated (using a color derived from the\nuser data), or include an image for each user. `Avatar` supports text, images, and multi-byte characters (e.g., emoji),\nand can reference flexible metadata for the associated user.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Text | Initials generated from `user.fullName`, or a `displayName` you supply directly. | Comment authors. Member lists. Emoji stand-ins. |\n| Image | A profile photo loaded from `src`, falling back to text when no source is set. | Account menus. Profile pages. |\n| Icon | A named EDS icon instead of user-specific content. | Unidentified users. \"Add a person\" affordances. |\n\n### Best Practices\n\n* Use avatars in places where we want to show a user as identified and logged in.\n* Avatars can be used in place of regular `Button`s for triggers in certain components (e.g., `Menu`, `Tooltip`).\n\n## Interaction\n\nAvatars support focus rings and can exist in the tab order when used as a trigger. Set `isInteractive` to get focus\nand hover states.\n\n`Avatar` instances in a collection can overlap by 50% for efficient use of space. A hover state on the container\nholding multiple instances can then remove the overlap and show every `Avatar` in full.\n\n## Content & Accessibility\n\n### Do's\n\n* Use `Avatar` to represent users in `AppHeader` when logged in.\n* Use the large size `Avatar` when the component is shown in the main page area. For menus and navigation, use a smaller `Avatar`.\n\n### Don'ts\n\n* Avoid relying on the icon or text as the only indication of which user is being represented. Use adjacent text, or `aria-*` tags for screen-reader support.\n* Avoid using very large image files for user profiles in `Avatar`. Save a specific, low-resolution file for user avatar images.\n\n## Resources\n\n* https://github.com/flmnt/graphemer",
+        "description": "",
         "displayName": "Avatar",
         "methods": [],
-        "props": {
-          "ariaLabel": {
-            "defaultValue": null,
-            "description": "Label for the given avatar. Defaults to a string using user data.",
-            "name": "ariaLabel",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "string"
-            }
-          },
-          "className": {
-            "defaultValue": null,
-            "description": "CSS class names that can be appended to the component.",
-            "name": "className",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "string"
-            }
-          },
-          "src": {
-            "defaultValue": null,
-            "description": "The URL to an image resource (loaded lazily)",
-            "name": "src",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "string"
-            }
-          },
-          "style": {
-            "defaultValue": null,
-            "description": "CSS properties defined for the HTML element. Includes the component's CSS Custom Properties:\n\n- `--avatar__bg`\n- `--avatar__border`\n- `--avatar__fg`",
-            "name": "style",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "AvatarCSSProperties"
-            }
-          },
-          "user": {
-            "defaultValue": null,
-            "description": "The user associated with this avatar\n\n`UserData` takes the format (`[]` key-values are optional):\n\n```\n- fullName (string)\n- [id] (string | number)\n- [displayName] (string)\n- [key:string] (string | number | boolean)\n```",
-            "name": "user",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "UserData"
-            }
-          },
-          "color": {
-            "defaultValue": {
-              "value": "default"
-            },
-            "description": "Set the behavior of the avatar, based on the specified user data.\n\n- `default` selects a color from a set, using the user data as a \"key\"\n- `fixed` selects a static color that does not change based on the user data\n\n**Default is `\"default\"`**.",
-            "name": "color",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "enum",
-              "raw": "\"fixed\" | \"default\"",
-              "value": [
-                {
-                  "value": "\"fixed\""
-                },
-                {
-                  "value": "\"default\""
-                }
-              ]
-            }
-          },
-          "icon": {
-            "defaultValue": {
-              "value": "person"
-            },
-            "description": "Content for the `\"icon\"` variant of the avatar. Takes an EDS icon name, or any content\nto render in its place, sized to match `size`. Default is \"person\"",
-            "name": "icon",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "IconOrContent"
-            }
-          },
-          "isInteractive": {
-            "defaultValue": null,
-            "description": "Marking whether the Avatar is intended to be interactive (have focus/hover states)",
-            "name": "isInteractive",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "boolean"
-            }
-          },
-          "size": {
-            "defaultValue": {
-              "value": "md"
-            },
-            "description": "The size of the avatar",
-            "name": "size",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "enum",
-              "raw": "\"sm\" | \"md\" | \"lg\" | \"xl\"",
-              "value": [
-                {
-                  "value": "\"sm\""
-                },
-                {
-                  "value": "\"md\""
-                },
-                {
-                  "value": "\"lg\""
-                },
-                {
-                  "value": "\"xl\""
-                }
-              ]
-            }
-          },
-          "variant": {
-            "defaultValue": {
-              "value": "text"
-            },
-            "description": "Variants of how the avatar will be portrayed",
-            "name": "variant",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/Avatar/Avatar.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "enum",
-              "raw": "\"icon\" | \"text\" | \"image\"",
-              "value": [
-                {
-                  "value": "\"icon\""
-                },
-                {
-                  "value": "\"text\""
-                },
-                {
-                  "value": "\"image\""
-                }
-              ]
-            }
-          }
-        },
+        "props": {},
         "exportName": "Avatar"
       },
       "stories": [
@@ -2962,11 +2766,11 @@
       "name": "CodeBlock",
       "path": "./src/components/CodeBlock/CodeBlock.stories.tsx",
       "jsDocTags": {},
-      "description": "BETA: This component is still a work in progress and is subject to change.\n\n## Usage\n\nShow a block of formatted code, with syntax highlighting, in a block container.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Read-only | The snippet is displayed on its own, with no copy affordance. | Illustrating syntax inline with surrounding prose. |\n| Icon copy | `copyStyle=\"icon\"` adds an icon-only button that copies the snippet. | Dense layouts where a labeled button would crowd the block. |\n| Text copy | `copyStyle=\"text\"` adds a labeled button that copies the snippet. | Snippets the reader is expected to run, like install commands. |\n\n## Interaction\n\n`CodeBlock` allows for displaying syntax highlighting with a fixed theme. It also includes the\nability to show a copy button which, when clicked, will copy the code block to the user's\nclipboard.\n\n## Content & Accessibility\n\n### Do's\n\n* Use `CodeBlock` when you want to format and display any multi-line code to the user.\n* Use `CodeBlock` when a single-line code block applies to command line snippets, or other code which has complex, lengthy text.\n\n### Don'ts\n\n* Avoid using `CodeBlock` for single-word code snippets. Instead use the `Text` component with one of the `code-*` presets.\n\n## Resources\n\n* https://github.com/react-syntax-highlighter/react-syntax-highlighter",
+      "description": "## Usage\n\nShow a block of formatted code, with syntax highlighting, in a block container.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Read-only | The snippet is displayed on its own, with no copy affordance. | Illustrating syntax inline with surrounding prose. |\n| Icon copy | `copyStyle=\"icon\"` adds an icon-only button that copies the snippet. | Dense layouts where a labeled button would crowd the block. |\n| Text copy | `copyStyle=\"text\"` adds a labeled button that copies the snippet. | Snippets the reader is expected to run, like install commands. |\n\n## Interaction\n\n`CodeBlock` allows for displaying syntax highlighting with a fixed theme. It also includes the\nability to show a copy button which, when clicked, will copy the code block to the user's\nclipboard.\n\n## Content & Accessibility\n\n### Do's\n\n* Use `CodeBlock` when you want to format and display any multi-line code to the user.\n* Use `CodeBlock` when a single-line code block applies to command line snippets, or other code which has complex, lengthy text.\n\n### Don'ts\n\n* Avoid using `CodeBlock` for single-word code snippets. Instead use the `Text` component with one of the `code-*` presets.\n\n## Resources\n\n* https://github.com/react-syntax-highlighter/react-syntax-highlighter",
       "reactDocgenTypescript": {
         "tags": {},
         "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/CodeBlock/CodeBlock.tsx",
-        "description": "BETA: This component is still a work in progress and is subject to change.\n\n## Usage\n\nShow a block of formatted code, with syntax highlighting, in a block container.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Read-only | The snippet is displayed on its own, with no copy affordance. | Illustrating syntax inline with surrounding prose. |\n| Icon copy | `copyStyle=\"icon\"` adds an icon-only button that copies the snippet. | Dense layouts where a labeled button would crowd the block. |\n| Text copy | `copyStyle=\"text\"` adds a labeled button that copies the snippet. | Snippets the reader is expected to run, like install commands. |\n\n## Interaction\n\n`CodeBlock` allows for displaying syntax highlighting with a fixed theme. It also includes the\nability to show a copy button which, when clicked, will copy the code block to the user's\nclipboard.\n\n## Content & Accessibility\n\n### Do's\n\n* Use `CodeBlock` when you want to format and display any multi-line code to the user.\n* Use `CodeBlock` when a single-line code block applies to command line snippets, or other code which has complex, lengthy text.\n\n### Don'ts\n\n* Avoid using `CodeBlock` for single-word code snippets. Instead use the `Text` component with one of the `code-*` presets.\n\n## Resources\n\n* https://github.com/react-syntax-highlighter/react-syntax-highlighter",
+        "description": "## Usage\n\nShow a block of formatted code, with syntax highlighting, in a block container.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Read-only | The snippet is displayed on its own, with no copy affordance. | Illustrating syntax inline with surrounding prose. |\n| Icon copy | `copyStyle=\"icon\"` adds an icon-only button that copies the snippet. | Dense layouts where a labeled button would crowd the block. |\n| Text copy | `copyStyle=\"text\"` adds a labeled button that copies the snippet. | Snippets the reader is expected to run, like install commands. |\n\n## Interaction\n\n`CodeBlock` allows for displaying syntax highlighting with a fixed theme. It also includes the\nability to show a copy button which, when clicked, will copy the code block to the user's\nclipboard.\n\n## Content & Accessibility\n\n### Do's\n\n* Use `CodeBlock` when you want to format and display any multi-line code to the user.\n* Use `CodeBlock` when a single-line code block applies to command line snippets, or other code which has complex, lengthy text.\n\n### Don'ts\n\n* Avoid using `CodeBlock` for single-word code snippets. Instead use the `Text` component with one of the `code-*` presets.\n\n## Resources\n\n* https://github.com/react-syntax-highlighter/react-syntax-highlighter",
         "displayName": "CodeBlock",
         "methods": [],
         "props": {
@@ -2978,6 +2782,10 @@
               {
                 "fileName": "edu-design-system/src/components/CodeBlock/CodeBlock.tsx",
                 "name": "TypeLiteral"
+              },
+              {
+                "fileName": "edu-design-system/node_modules/@types/react/index.d.ts",
+                "name": "HTMLAttributes"
               }
             ],
             "required": false,
@@ -3056,6 +2864,12 @@
           "name": "Curl Example",
           "snippet": "const CurlExample = () => <CodeBlock language=\"bash\" className=\"w-[350px]\" copyStyle=\"icon\">{`$ curl -X GET 'http://api.example.org/v1/testapikey' -H 'apikey: my_key'`}</CodeBlock>;",
           "description": "When using smaller code examples, you may resize the horizontal space of the container."
+        },
+        {
+          "id": "components-codeblock--single-line-with-copy-icon",
+          "name": "Single Line With Copy Icon",
+          "snippet": "const SingleLineWithCopyIcon = () => <CodeBlock copyStyle=\"icon\">This is the code block without any syntax highlighting applied</CodeBlock>;",
+          "description": "The copy button fits within a single-line code block."
         },
         {
           "id": "components-codeblock--python",
@@ -4730,6 +4544,12 @@
           }
         },
         {
+          "id": "components-fieldset--fieldset-legend-disabled",
+          "name": "Fieldset Legend Disabled",
+          "snippet": "const FieldsetLegendDisabled = () => <Fieldset isDisabled>\n    <Fieldset.Legend title=\"Legend\" subTitle=\"With additional Subtitle\" showHint />\n</Fieldset>;",
+          "description": "The legend reads its disabled state from the surrounding `Fieldset`."
+        },
+        {
           "id": "components-fieldset--with-checkboxes",
           "name": "With Checkboxes",
           "snippet": "const WithCheckboxes = () => <Fieldset fieldNote=\"Attached field note to field set\">(<>\n      <Fieldset.Legend\n        subTitle=\"Some extra descriptive text\"\n        title=\"Critical Fieldset\"\n      />\n      <Fieldset.Items>\n        {({ isDisabled, status }) => {\n          return (\n            <>\n              <Checkbox\n                disabled={isDisabled}\n                isError={status === 'critical'}\n                label=\"Checkbox\"\n                name=\"test-checkbox\"\n                subLabel=\"Supplementary text\"\n              />\n              <Checkbox\n                disabled={isDisabled}\n                isError={status === 'critical'}\n                label=\"Checkbox\"\n                name=\"test-checkbox\"\n              />\n            </>\n          );\n        }}\n      </Fieldset.Items>\n    </>)</Fieldset>;",
@@ -5934,11 +5754,11 @@
       "name": "InputField",
       "path": "./src/components/InputField/InputField.stories.tsx",
       "jsDocTags": {},
-      "description": "## Usage\n\n**NOTE**: This component requires a `label` or `aria-label` prop.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Text | Standard single-line input for free-form text. | Name fields, search bars, tags. |\n| Search | Optimized for searching, often with a search icon or clear button. | Site/app search bars, filter queries. |\n| Date/Time | Opens a date/time picker depending on browser support. | Scheduling. |\n| Masked | Formats input while typing. | Passwords, phone numbers, credit card entries. |\n| Disabled/Read-Only | Prevents user interaction or editing. | Prefilled info, summary/review forms. |\n| Validation | Displays real-time validation (e.g., success, error states). | Required fields, format enforcement. |\n\n## Interaction\n\nWhen the text exceeds the available space, it scrolls to show the end of the string.\n\n## Content & Accessibility\n\n### Do's\n\n* Use short, precise labels in sentence case.\n* Use helper text only when necessary, preferring examples (e.g., yourname@emaildomain.com) over instructions.\n* For errors, provide instructions for fixing the issue and explain what is happening.\n* Use `fieldNote` for examples or instructions explaining what should be entered.\n\n### Don'ts\n\n* Don't use colons or periods at the end of labels, and don't omit labels.\n* Don't use placeholder text within the field; it can cause accessibility issues.\n* Don't stack field notes on top of error messages.",
+      "description": "## Usage\n\n**NOTE**: This component requires a `label` or `aria-label` prop.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Text | Standard single-line input for free-form text. | Name fields, search bars, tags. |\n| Search | Optimized for searching, often with a search icon or clear button. | Site/app search bars, filter queries. |\n| Date/Time | Opens a date/time picker depending on browser support. | Scheduling. |\n| Masked | Formats input while typing. | Passwords, phone numbers, credit card entries. |\n| Disabled/Read-Only | Prevents user interaction or editing. | Prefilled info, summary/review forms. |\n| Validation | Displays real-time validation (e.g., success, error states). | Required fields, format enforcement. |\n\n## Interaction\n\nWhen the text exceeds the available space, it scrolls to show the end of the string.\n\n## Content & Accessibility\n\n### Do's\n\n* Use short, precise labels in sentence case.\n* Use helper text only when necessary, preferring examples (e.g., yourname@emaildomain.com) over instructions.\n* For errors, provide instructions for fixing the issue and explain what is happening.\n* Use `fieldNote` for examples or instructions explaining what should be entered.\n* Set `maxLength` on every free-text field (`text`, `search`, `email`, `url`, `tel`, `password`) so there's a hard cap on what can be entered. Use `recommendedMaxLength` alongside it to show a lower, soft limit. Enforce the same limit on the server, since `maxLength` only constrains the browser.\n\n### Don'ts\n\n* Don't use colons or periods at the end of labels, and don't omit labels.\n* Don't use placeholder text within the field; it can cause accessibility issues.\n* Don't stack field notes on top of error messages.",
       "reactDocgenTypescript": {
         "tags": {},
         "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/InputField/InputField.tsx",
-        "description": "## Usage\n\n**NOTE**: This component requires a `label` or `aria-label` prop.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Text | Standard single-line input for free-form text. | Name fields, search bars, tags. |\n| Search | Optimized for searching, often with a search icon or clear button. | Site/app search bars, filter queries. |\n| Date/Time | Opens a date/time picker depending on browser support. | Scheduling. |\n| Masked | Formats input while typing. | Passwords, phone numbers, credit card entries. |\n| Disabled/Read-Only | Prevents user interaction or editing. | Prefilled info, summary/review forms. |\n| Validation | Displays real-time validation (e.g., success, error states). | Required fields, format enforcement. |\n\n## Interaction\n\nWhen the text exceeds the available space, it scrolls to show the end of the string.\n\n## Content & Accessibility\n\n### Do's\n\n* Use short, precise labels in sentence case.\n* Use helper text only when necessary, preferring examples (e.g., yourname@emaildomain.com) over instructions.\n* For errors, provide instructions for fixing the issue and explain what is happening.\n* Use `fieldNote` for examples or instructions explaining what should be entered.\n\n### Don'ts\n\n* Don't use colons or periods at the end of labels, and don't omit labels.\n* Don't use placeholder text within the field; it can cause accessibility issues.\n* Don't stack field notes on top of error messages.",
+        "description": "## Usage\n\n**NOTE**: This component requires a `label` or `aria-label` prop.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Text | Standard single-line input for free-form text. | Name fields, search bars, tags. |\n| Search | Optimized for searching, often with a search icon or clear button. | Site/app search bars, filter queries. |\n| Date/Time | Opens a date/time picker depending on browser support. | Scheduling. |\n| Masked | Formats input while typing. | Passwords, phone numbers, credit card entries. |\n| Disabled/Read-Only | Prevents user interaction or editing. | Prefilled info, summary/review forms. |\n| Validation | Displays real-time validation (e.g., success, error states). | Required fields, format enforcement. |\n\n## Interaction\n\nWhen the text exceeds the available space, it scrolls to show the end of the string.\n\n## Content & Accessibility\n\n### Do's\n\n* Use short, precise labels in sentence case.\n* Use helper text only when necessary, preferring examples (e.g., yourname@emaildomain.com) over instructions.\n* For errors, provide instructions for fixing the issue and explain what is happening.\n* Use `fieldNote` for examples or instructions explaining what should be entered.\n* Set `maxLength` on every free-text field (`text`, `search`, `email`, `url`, `tel`, `password`) so there's a hard cap on what can be entered. Use `recommendedMaxLength` alongside it to show a lower, soft limit. Enforce the same limit on the server, since `maxLength` only constrains the browser.\n\n### Don'ts\n\n* Don't use colons or periods at the end of labels, and don't omit labels.\n* Don't use placeholder text within the field; it can cause accessibility issues.\n* Don't stack field notes on top of error messages.",
         "displayName": "InputField",
         "methods": [],
         "props": {
@@ -6571,6 +6391,12 @@
           "description": "When using standalone context, you can specify a trailing icon for the link. When using the open icon, make sure that a new tab/window is opened."
         },
         {
+          "id": "components-link--icon-alignment-across-sizes",
+          "name": "Icon Alignment Across Sizes",
+          "snippet": "const IconAlignmentAcrossSizes = (args) => (\n  <div className=\"grid grid-cols-3 items-center gap-x-8 gap-y-4\">\n    {linkSizes.map((size) => (\n      <React.Fragment key={size}>\n        <Link {...args} icon=\"open-in-new\" size={size}>\n          Leaves the site {size}\n        </Link>\n        <Link {...args} emphasis=\"low\" icon=\"forward\" size={size}>\n          Onward {size}\n        </Link>\n        <IconProvider icons={{ forward: customForwardIcon }}>\n          <Link {...args} emphasis=\"low\" icon=\"forward\" size={size}>\n            Custom icon {size}\n          </Link>\n        </IconProvider>\n      </React.Fragment>\n    ))}\n  </div>\n);",
+          "description": "The trailing icon sits centered on the text's x-height at every size. The last column has\nan `IconProvider` drawing custom content instead of a named icon, which is sized from the\nlink's font rather than the icon size each named icon carries."
+        },
+        {
           "id": "components-link--link-with-formatted-children",
           "name": "Link With Formatted Children",
           "snippet": "const LinkWithFormattedChildren = () => <Link\n    size=\"lg\"\n    href=\"http://example.org/\"\n    onClick={(event: any) => event.preventDefault()}\n    context=\"standalone\"\n    icon=\"open-in-new\"><em>emphasized link</em></Link>;",
@@ -6618,77 +6444,16 @@
           "description": "`icon` names which role the link is filling rather than picking a glyph, and both roles\ncome from `IconProvider`. So a link marked as leaving the site matches the one `AppHeader`\nrenders for the same thing, and the two icons a standalone link can carry are set from one\nplace rather than per link.\n\nBelow, `open-in-new` becomes a chain and `forward` a full arrow."
         }
       ],
-      "import": "import { IconProvider, Link } from '@chanzuckerberg/eds';"
+      "import": "import { IconProvider, Link } from '@chanzuckerberg/eds';\nimport React from 'react';"
     },
     "components-orderedlist": {
       "id": "components-orderedlist",
       "name": "OrderedList",
       "path": "./src/components/List/OrderedList.stories.tsx",
       "jsDocTags": {},
-      "description": "Control a list of text items that are semantically ordered (ordinal sequence by number).",
-      "reactDocgenTypescript": {
-        "tags": {
-          "param": "props options for the list to control size and marker type",
-          "returns": "ReactNode"
-        },
-        "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/List/List.tsx",
-        "description": "Control a list of text items that are semantically ordered (ordinal sequence by number).",
-        "displayName": "OrderedList",
-        "methods": [],
-        "props": {
-          "size": {
-            "defaultValue": null,
-            "description": "Size of the list and its item (controls spacing but requires proper usage of `Text`/`Heading` when composing)",
-            "name": "size",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/List/List.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "enum",
-              "raw": "\"xs\" | \"sm\" | \"md\"",
-              "value": [
-                {
-                  "value": "\"xs\""
-                },
-                {
-                  "value": "\"sm\""
-                },
-                {
-                  "value": "\"md\""
-                }
-              ]
-            }
-          },
-          "markerType": {
-            "defaultValue": null,
-            "description": "Marker to use with the given list type\n- for `OrderedList`, will use no marker or the `default` marker (e.g., \"1.\")",
-            "name": "markerType",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/List/List.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "enum",
-              "raw": "\"default\" | \"none\"",
-              "value": [
-                {
-                  "value": "\"default\""
-                },
-                {
-                  "value": "\"none\""
-                }
-              ]
-            }
-          }
-        },
-        "exportName": "OrderedList"
+      "error": {
+        "name": "react-docgen-typescript could not match component docs",
+        "message": "File: /home/runner/work/edu-design-system/edu-design-system/src/components/List/List.tsx\nreact-docgen-typescript returned component docs for this file, but none matched the story's component import.\nLooked for: componentName=OrderedList, localImportName=OrderedList, importName=OrderedList."
       },
       "stories": [
         {
@@ -6730,14 +6495,10 @@
       "name": "UnorderedList",
       "path": "./src/components/List/UnorderedList.stories.tsx",
       "jsDocTags": {},
-      "description": "## Usage\n\n* **Unordered**: Used for content where the order is not important.\n* **Ordered**: Used for content where the order is important.\n* EDS supports 1 level of nesting because our current products don't require deeper nesting.\n\n### Unordered Lists\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n|Data presentation|Presents grouped or related information in an organized manner.|A list of user names with their status or profile images.|\n|Hierarchical Data|Displays nested items or subcategories.|A file tree or nested comments in a discussion thread.|\n\n### Ordered Lists\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n|Steps / Instructions|Lists steps in a specific order.|A step-by-step guide for setting up an account.|\n|Nested steps|Breaks a long list of steps into groups of steps that accomplish a discrete action or piece of the overall task.|Long, complex procedures.|\n\n### Best Practices\n\n* Include headings for lists that use custom characters instead of standard bullets or numbering.\n* Don't rely on custom character bullets to convey meaning.\n* Don't use multiple custom characters for one list item.\n\n## Content & Accessibility\n\n### Do's\n\n* Keep each list item short and to the point.\n* Use parallel structure in list items to aid understanding.",
       "reactDocgenTypescript": {
-        "tags": {
-          "param": "props options for the list to control size and marker type",
-          "returns": "ReactNode"
-        },
+        "tags": {},
         "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/List/List.tsx",
-        "description": "## Usage\n\n* **Unordered**: Used for content where the order is not important.\n* **Ordered**: Used for content where the order is important.\n* EDS supports 1 level of nesting because our current products don't require deeper nesting.\n\n### Unordered Lists\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n|Data presentation|Presents grouped or related information in an organized manner.|A list of user names with their status or profile images.|\n|Hierarchical Data|Displays nested items or subcategories.|A file tree or nested comments in a discussion thread.|\n\n### Ordered Lists\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n|Steps / Instructions|Lists steps in a specific order.|A step-by-step guide for setting up an account.|\n|Nested steps|Breaks a long list of steps into groups of steps that accomplish a discrete action or piece of the overall task.|Long, complex procedures.|\n\n### Best Practices\n\n* Include headings for lists that use custom characters instead of standard bullets or numbering.\n* Don't rely on custom character bullets to convey meaning.\n* Don't use multiple custom characters for one list item.\n\n## Content & Accessibility\n\n### Do's\n\n* Keep each list item short and to the point.\n* Use parallel structure in list items to aid understanding.",
+        "description": "",
         "displayName": "UnorderedList",
         "methods": [],
         "props": {
@@ -6746,6 +6507,10 @@
             "description": "Size of the list and its item (controls spacing but requires proper usage of `Text`/`Heading` when composing)",
             "name": "size",
             "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/List/List.tsx",
+                "name": "TypeLiteral"
+              },
               {
                 "fileName": "edu-design-system/src/components/List/List.tsx",
                 "name": "TypeLiteral"
@@ -6770,9 +6535,13 @@
           },
           "markerType": {
             "defaultValue": null,
-            "description": "Marker to use with the given list type\n- for `UnorderedList`, will use no marker or the `default` marker (e.g., \"•\")",
+            "description": "Marker to use with the given list type\n- for `OrderedList`, will use no marker or the `default` marker (e.g., \"1.\")\nMarker to use with the given list type\n- for `UnorderedList`, will use no marker or the `default` marker (e.g., \"•\")",
             "name": "markerType",
             "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/List/List.tsx",
+                "name": "TypeLiteral"
+              },
               {
                 "fileName": "edu-design-system/src/components/List/List.tsx",
                 "name": "TypeLiteral"
@@ -8843,67 +8612,13 @@
       "name": "ScrollWrapper",
       "path": "./src/components/ScrollWrapper/ScrollWrapper.stories.tsx",
       "jsDocTags": {},
-      "description": "## Usage\n\nWrap content that has a fixed height but is scrollable, so that users have an indication that\nmore content is available. Subtle shadows come in several variants.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Vertical | The default. Scrolls on the y axis and shades the top and bottom edges. | Long dialog bodies. Tall option lists. |\n| Horizontal | `orientation=\"horizontal\"` scrolls on the x axis and shades the start and end edges. | Wide tables. Toolbars that overflow. |\n\n`orientation` picks one axis at a time, so a single wrapper shades either the vertical or the\nhorizontal edges, not both.\n\n`shadowType` controls the treatment: `cover` (the default) spans the full width of the wrapper,\nwhile `contain` keeps the shadow's edges inside it.\n\nThe effect depends on the container being shorter than its content, so the element above the\nscroll wrapper must have a fixed height. Without that, nothing overflows and no shadow appears.\n\n## Interaction\n\nWhen vertical, scrolling will enable both shadows when there is more content above and below the\ncurrent position. When there is only content above the current position (scrolled to the end of\nthe container), only the top shadow is shown. When scrolled to the very top of the container,\nonly the bottom shadow is shown. The same logic applies to the horizontal scrolling scenario,\nagainst the start and end edges.\n\n`Modal` renders a `ScrollWrapper` around its body for you, so its content scrolls without any\nextra setup.\n\n## Content & Accessibility\n\n### Do's\n\n* Use `ScrollWrapper` in any overlay components that need to exceed the available screen real estate. This is not for ones that definitely will, but ones that have variable content which could grow to be either too tall or too wide.\n* Use `cover` for the shadow type to emphasize and make clear that more content is available.\n* Leave the scrollable region in the tab order. It carries `tabIndex={0}` so that people navigating by keyboard can scroll it.\n\n### Don'ts\n\n* Avoid wrapping entire pages with `ScrollWrapper`.\n* Never use multiple, adjacent `ScrollWrapper` instances.",
       "reactDocgenTypescript": {
         "tags": {},
         "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/ScrollWrapper/ScrollWrapper.tsx",
-        "description": "## Usage\n\nWrap content that has a fixed height but is scrollable, so that users have an indication that\nmore content is available. Subtle shadows come in several variants.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Vertical | The default. Scrolls on the y axis and shades the top and bottom edges. | Long dialog bodies. Tall option lists. |\n| Horizontal | `orientation=\"horizontal\"` scrolls on the x axis and shades the start and end edges. | Wide tables. Toolbars that overflow. |\n\n`orientation` picks one axis at a time, so a single wrapper shades either the vertical or the\nhorizontal edges, not both.\n\n`shadowType` controls the treatment: `cover` (the default) spans the full width of the wrapper,\nwhile `contain` keeps the shadow's edges inside it.\n\nThe effect depends on the container being shorter than its content, so the element above the\nscroll wrapper must have a fixed height. Without that, nothing overflows and no shadow appears.\n\n## Interaction\n\nWhen vertical, scrolling will enable both shadows when there is more content above and below the\ncurrent position. When there is only content above the current position (scrolled to the end of\nthe container), only the top shadow is shown. When scrolled to the very top of the container,\nonly the bottom shadow is shown. The same logic applies to the horizontal scrolling scenario,\nagainst the start and end edges.\n\n`Modal` renders a `ScrollWrapper` around its body for you, so its content scrolls without any\nextra setup.\n\n## Content & Accessibility\n\n### Do's\n\n* Use `ScrollWrapper` in any overlay components that need to exceed the available screen real estate. This is not for ones that definitely will, but ones that have variable content which could grow to be either too tall or too wide.\n* Use `cover` for the shadow type to emphasize and make clear that more content is available.\n* Leave the scrollable region in the tab order. It carries `tabIndex={0}` so that people navigating by keyboard can scroll it.\n\n### Don'ts\n\n* Avoid wrapping entire pages with `ScrollWrapper`.\n* Never use multiple, adjacent `ScrollWrapper` instances.",
+        "description": "",
         "displayName": "ScrollWrapper",
         "methods": [],
-        "props": {
-          "orientation": {
-            "defaultValue": {
-              "value": "vertical"
-            },
-            "description": "Determines the direction that the shadows apply",
-            "name": "orientation",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/ScrollWrapper/ScrollWrapper.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "enum",
-              "raw": "\"horizontal\" | \"vertical\"",
-              "value": [
-                {
-                  "value": "\"horizontal\""
-                },
-                {
-                  "value": "\"vertical\""
-                }
-              ]
-            }
-          },
-          "shadowType": {
-            "defaultValue": {
-              "value": "cover"
-            },
-            "description": "Type of shadow treatment for the wrapper:\n- **cover** - full-width shadow in the wrapper based on shadow context\n- **contain** - shadow whose edges fit within the width of the wrapper",
-            "name": "shadowType",
-            "declarations": [
-              {
-                "fileName": "edu-design-system/src/components/ScrollWrapper/ScrollWrapper.tsx",
-                "name": "TypeLiteral"
-              }
-            ],
-            "required": false,
-            "type": {
-              "name": "enum",
-              "raw": "\"contain\" | \"cover\"",
-              "value": [
-                {
-                  "value": "\"contain\""
-                },
-                {
-                  "value": "\"cover\""
-                }
-              ]
-            }
-          }
-        },
+        "props": {},
         "exportName": "ScrollWrapper"
       },
       "stories": [
@@ -9702,6 +9417,10 @@
               {
                 "fileName": "edu-design-system/src/components/Skeleton/Skeleton.tsx",
                 "name": "TypeLiteral"
+              },
+              {
+                "fileName": "edu-design-system/node_modules/@types/react/index.d.ts",
+                "name": "HTMLAttributes"
               }
             ],
             "required": false,
@@ -10239,11 +9958,11 @@
       "name": "TextareaField",
       "path": "./src/components/TextareaField/TextareaField.stories.tsx",
       "jsDocTags": {},
-      "description": "## Usage\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Standard | Multi-line input field for entering extended text. | Comments, descriptions, notes fields. |\n| Auto-resizing | Expands vertically as the user types. | Messaging apps, forms with flexible input length. |\n| Fixed-size | Has a set number of rows and does not resize. | Forms with a consistent layout, limited-screen environments. |\n| Read-only | Displays pre-filled content that cannot be edited. | Code blocks, audit logs, view-only mode. |\n| Disabled | Grayed out and non-editable; indicates inaccessibility. | Conditional logic states, feature restrictions. |\n| Monospaced | Uses a monospaced font, often for structured text or code. | Code snippets, JSON input, command editors. |\n\n**NOTE**: This component requires a `label` or `aria-label` prop to support accessibility.\n\n## Interaction\n\nWhen the amount of text exceeds the available space, the text scrolls to show the end of the string.\n\n## Content & Accessibility\n\n### Do's\n\n* Always have a visible label when adding a hint.\n* Use short, instructional labels when necessary and use sentence case.\n* Use `fieldNote` helper text when necessary, and use examples rather than instructions whenever possible (e.g., `yourname@emaildomain.com`).\n* For errors, provide instructions for fixing the issue and explain what is happening.\n\n### Don'ts\n\n* Don't use colons or periods at the end of labels, and don't omit labels.\n* Don't have a hint without a visible label.\n* Don't force the use of helper text—there is frequently no need for it.\n* Don't place placeholder text within the field, as it can cause accessibility issues.",
+      "description": "## Usage\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Standard | Multi-line input field for entering extended text. | Comments, descriptions, notes fields. |\n| Auto-resizing | Expands vertically as the user types. | Messaging apps, forms with flexible input length. |\n| Fixed-size | Has a set number of rows and does not resize. | Forms with a consistent layout, limited-screen environments. |\n| Read-only | Displays pre-filled content that cannot be edited. | Code blocks, audit logs, view-only mode. |\n| Disabled | Grayed out and non-editable; indicates inaccessibility. | Conditional logic states, feature restrictions. |\n| Monospaced | Uses a monospaced font, often for structured text or code. | Code snippets, JSON input, command editors. |\n\n**NOTE**: This component requires a `label` or `aria-label` prop to support accessibility.\n\n## Interaction\n\nWhen the amount of text exceeds the available space, the text scrolls to show the end of the string.\n\n## Content & Accessibility\n\n### Do's\n\n* Always have a visible label when adding a hint.\n* Use short, instructional labels when necessary and use sentence case.\n* Use `fieldNote` helper text when necessary, and use examples rather than instructions whenever possible (e.g., `yourname@emaildomain.com`).\n* For errors, provide instructions for fixing the issue and explain what is happening.\n* Set `maxLength` on every textarea so there's a hard cap on what can be entered. Use `recommendedMaxLength` alongside it to show a lower, soft limit. Enforce the same limit on the server, since `maxLength` only constrains the browser.\n\n### Don'ts\n\n* Don't use colons or periods at the end of labels, and don't omit labels.\n* Don't have a hint without a visible label.\n* Don't force the use of helper text—there is frequently no need for it.\n* Don't place placeholder text within the field, as it can cause accessibility issues.",
       "reactDocgenTypescript": {
         "tags": {},
         "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/TextareaField/TextareaField.tsx",
-        "description": "## Usage\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Standard | Multi-line input field for entering extended text. | Comments, descriptions, notes fields. |\n| Auto-resizing | Expands vertically as the user types. | Messaging apps, forms with flexible input length. |\n| Fixed-size | Has a set number of rows and does not resize. | Forms with a consistent layout, limited-screen environments. |\n| Read-only | Displays pre-filled content that cannot be edited. | Code blocks, audit logs, view-only mode. |\n| Disabled | Grayed out and non-editable; indicates inaccessibility. | Conditional logic states, feature restrictions. |\n| Monospaced | Uses a monospaced font, often for structured text or code. | Code snippets, JSON input, command editors. |\n\n**NOTE**: This component requires a `label` or `aria-label` prop to support accessibility.\n\n## Interaction\n\nWhen the amount of text exceeds the available space, the text scrolls to show the end of the string.\n\n## Content & Accessibility\n\n### Do's\n\n* Always have a visible label when adding a hint.\n* Use short, instructional labels when necessary and use sentence case.\n* Use `fieldNote` helper text when necessary, and use examples rather than instructions whenever possible (e.g., `yourname@emaildomain.com`).\n* For errors, provide instructions for fixing the issue and explain what is happening.\n\n### Don'ts\n\n* Don't use colons or periods at the end of labels, and don't omit labels.\n* Don't have a hint without a visible label.\n* Don't force the use of helper text—there is frequently no need for it.\n* Don't place placeholder text within the field, as it can cause accessibility issues.",
+        "description": "## Usage\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Standard | Multi-line input field for entering extended text. | Comments, descriptions, notes fields. |\n| Auto-resizing | Expands vertically as the user types. | Messaging apps, forms with flexible input length. |\n| Fixed-size | Has a set number of rows and does not resize. | Forms with a consistent layout, limited-screen environments. |\n| Read-only | Displays pre-filled content that cannot be edited. | Code blocks, audit logs, view-only mode. |\n| Disabled | Grayed out and non-editable; indicates inaccessibility. | Conditional logic states, feature restrictions. |\n| Monospaced | Uses a monospaced font, often for structured text or code. | Code snippets, JSON input, command editors. |\n\n**NOTE**: This component requires a `label` or `aria-label` prop to support accessibility.\n\n## Interaction\n\nWhen the amount of text exceeds the available space, the text scrolls to show the end of the string.\n\n## Content & Accessibility\n\n### Do's\n\n* Always have a visible label when adding a hint.\n* Use short, instructional labels when necessary and use sentence case.\n* Use `fieldNote` helper text when necessary, and use examples rather than instructions whenever possible (e.g., `yourname@emaildomain.com`).\n* For errors, provide instructions for fixing the issue and explain what is happening.\n* Set `maxLength` on every textarea so there's a hard cap on what can be entered. Use `recommendedMaxLength` alongside it to show a lower, soft limit. Enforce the same limit on the server, since `maxLength` only constrains the browser.\n\n### Don'ts\n\n* Don't use colons or periods at the end of labels, and don't omit labels.\n* Don't have a hint without a visible label.\n* Don't force the use of helper text—there is frequently no need for it.\n* Don't place placeholder text within the field, as it can cause accessibility issues.",
         "displayName": "TextareaField",
         "methods": [],
         "props": {
@@ -10383,7 +10102,7 @@
         {
           "id": "components-textareafield--when-disabled",
           "name": "When Disabled",
-          "snippet": "const WhenDisabled = () => <TextareaField\n    className=\"w-[384px]\"\n    placeholder=\"Enter long-form text here\"\n    defaultValue={`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo\ndicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo\npraesentium, commodi eligendi asperiores quis dolorum porro.`}\n    label=\"Textarea Field\"\n    subLabel=\"Additional descriptive text for the field.\"\n    rows={2}\n    fieldNote=\"Validation information or error details about the input.\"\n    spellCheck={false}\n    disabled />;"
+          "snippet": "const WhenDisabled = () => <TextareaField\n    className=\"w-[384px]\"\n    placeholder=\"Enter long-form text here\"\n    defaultValue={`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id neque nemo\ndicta rerum commodi et fugiat quo optio veniam! Ea odio corporis nemo\npraesentium, commodi eligendi asperiores quis dolorum porro.`}\n    label=\"Textarea Field\"\n    subLabel=\"Additional descriptive text for the field.\"\n    rows={2}\n    fieldNote=\"Validation information or error details about the input.\"\n    spellCheck={false}\n    disabled\n    showHint />;"
         },
         {
           "id": "components-textareafield--when-read-only",
@@ -11340,6 +11059,6 @@
   },
   "meta": {
     "docgen": "react-docgen-typescript",
-    "durationMs": 11945
+    "durationMs": 9013
   }
 }

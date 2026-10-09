@@ -1,0 +1,19 @@
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";import{t}from"./react-BZJXY1be.js";import{t as n}from"./jsx-runtime-DeHZSEgm.js";import{n as r,t as i}from"./clsx-CTwy9ux-.js";import{i as a,t as o}from"./logging-DIGRaM8w.js";import{n as s,r as c}from"./Text-DJbcQrwW.js";var l,u,d;function f(){return(f=e((()=>{l=`_counter_1ul14_11`,u=`_counter__count_1ul14_18`,d={counter:l,counter__count:u,"counter__count--invalid":`_counter__count--invalid_1ul14_25`}})))()}var p,m;function h(){return(h=e((()=>{r(),t(),a(),c(),f(),p=n(),m=({className:e,count:t,total:n,variant:r=`fraction`,...a})=>{let c=i(d.counter,e),l=t>n,u=i(d.counter__count,l&&d[`counter__count--invalid`]),f=n>0?Math.round(t/n*100):0;return o([t<0,n<0],`Counter values must not be negative (received ${t} / ${n})`),o([r===`percentage`&&n<=0],`Counter cannot report ${t} as a percentage of ${n}; the percentage variant requires a total greater than zero`,`error`),(0,p.jsxs)(s,{as:`div`,className:c,preset:`body-sm`,...a,children:[r===`fraction`&&(0,p.jsxs)(p.Fragment,{children:[(0,p.jsx)(`span`,{className:u,children:t}),` / `,n]}),r===`percentage`&&(0,p.jsxs)(`span`,{className:u,children:[f,`%`]})]})},m.displayName=`Counter`;try{m.displayName=`Counter`,m.__docgenInfo={description:`An internal count of a current value against its total, written either as a fraction
+(\`"3 / 10"\`) or as a percentage (\`"30%"\`).
+
+This is shared by the components that show a counting construction, so the construction and
+its error treatment stay consistent: the fields that limit text length (\`InputField\`,
+\`TextareaField\`) use the fraction variant, and \`ProgressBar\` uses the percentage variant. It
+is deliberately not exported from the package: it carries no semantics of its own and is only
+meaningful next to the control it counts.
+
+Example usage:
+
+\`\`\`
+<Counter
+  className={styles['input-field__character-counter']}
+  count={fieldLength}
+  total={maxLengthShown}
+/>
+\`\`\``,displayName:`Counter`,filePath:`/home/runner/work/edu-design-system/edu-design-system/src/components/Counter/Counter.tsx`,methods:[],props:{className:{defaultValue:null,declarations:[{fileName:`edu-design-system/src/components/Counter/Counter.tsx`,name:`TypeLiteral`},{fileName:`edu-design-system/node_modules/@types/react/index.d.ts`,name:`HTMLAttributes`}],description:`CSS class names that can be appended to the component. Use this to position the counter
+within its parent; the counter owns its own color treatment.`,name:`className`,required:!1,tags:{},type:{name:`string`}},count:{defaultValue:null,declarations:[{fileName:`edu-design-system/src/components/Counter/Counter.tsx`,name:`TypeLiteral`}],description:`The current count (the numerator), e.g., the characters entered so far or the progress made.`,name:`count`,required:!0,tags:{},type:{name:`number`}},total:{defaultValue:null,declarations:[{fileName:`edu-design-system/src/components/Counter/Counter.tsx`,name:`TypeLiteral`}],description:"What the count is measured against (the denominator), e.g., the characters allowed. When\n`count` exceeds this, the count takes on the critical treatment.",name:`total`,required:!0,tags:{},type:{name:`number`}},variant:{defaultValue:{value:`fraction`},declarations:[{fileName:`edu-design-system/src/components/Counter/Counter.tsx`,name:`TypeLiteral`}],description:'How the count is written out. `"fraction"` reads as `"3 / 10"`, for counts of discrete\nthings. `"percentage"` reads as `"30%"`, rounded to a whole number, for a share of a whole;\nit requires `total` to be greater than zero.\n\n**Default is `"fraction"`**.',name:`variant`,required:!1,tags:{},type:{name:`enum`,raw:`"fraction" | "percentage"`,value:[{value:`"fraction"`},{value:`"percentage"`}]}}},tags:{}}}catch{}})))()}export{h as n,m as t};

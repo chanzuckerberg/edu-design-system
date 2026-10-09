@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-DkW27tQK.js";function t(...e){let t=Math.min.apply(void 0,e.filter(e=>e!==void 0));return Math.abs(t)===1/0?void 0:t}function n(){return(n=e((()=>{})))()}export{n,t};

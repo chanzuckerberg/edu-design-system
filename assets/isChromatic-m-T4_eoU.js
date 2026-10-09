@@ -1,1 +1,0 @@
-import{n as e}from"./chunk-DnJy8xQt.js";function t(e){let t=e||globalThis.window!==void 0&&globalThis;return!!(t&&(/Chromatic/.test(t.navigator.userAgent)||/chromatic=true/.test(t.location.href)))}var n=e((()=>{}));export{t as n,n as t};
