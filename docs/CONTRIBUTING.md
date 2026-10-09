@@ -61,6 +61,7 @@ A few notes about breaking changes:
 - If you anticipate a breaking changes is inbound, let the team know as soon as possible. This is to give everyone a chance to double-check the sequence of commits or create a `release` branch if needed.
 - Not all breaking changes are equal! Changes removing deprecated components/APIs require careful communication. Changes affecting in-use components also require more scrutiny.
 - Consider writing a codemod (using [TS Morph](https://ts-morph.com/)) for systematic changes. See examples in src/bin/migrate.
+- When committing to `next`, any new breaking changes should be added into a new migration file. Example: if the latest release is v19.x and the commit is based on `next`, any migration should be added to 19-to-20.ts .
 - There may be a way to make the change in a backwards-compatible way. Consider this during implementation, providing some rationale in cases where it is not feasible/practical to do so.
 
 ## Making Edits to Tokens
