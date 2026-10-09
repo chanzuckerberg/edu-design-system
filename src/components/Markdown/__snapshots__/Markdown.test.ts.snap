@@ -212,7 +212,7 @@ This should apply across multiple lines.
   >
     To run a command try the following: 
     <code
-      class="_markdown__code_7f0a4d _text_b3eba3 _text--code-md_b3eba3"
+      class="_markdown__code_7f0a4d _text_b3eba3 _text--code-sm_b3eba3"
     >
       shell.py init
     </code>
@@ -224,7 +224,7 @@ This should apply across multiple lines.
     class="_markdown__pre_7f0a4d"
   >
     <code
-      class="_markdown__code_7f0a4d _text_b3eba3 _text--code-md_b3eba3"
+      class="_markdown__code_7f0a4d _text_b3eba3 _text--code-sm_b3eba3"
     >
       Some output from the above!
 When indented, it spans multiple lines.

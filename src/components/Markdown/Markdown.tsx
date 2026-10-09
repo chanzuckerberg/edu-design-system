@@ -162,7 +162,7 @@ export const Markdown = ({
                 className={clsx(
                   styles['markdown__code'],
                   typeStyles['text'],
-                  typeStyles['text--code-md'],
+                  typeStyles['text--code-sm'],
                 )}
               >
                 {children}
