@@ -229,6 +229,17 @@ Here's a link to [CommonMark][common-mark].
   },
 };
 
+/**
+ * Backticked snippets in prose render as inline code: a low-emphasis chip with mono type,
+ * per the `EDS-markdown-inlineCode` spec. This story contains only inline code, with no
+ * headings or code blocks, to show that treatment on its own.
+ */
+export const InlineCode: StoryObj<Args> = {
+  args: {
+    children: `Run \`yarn install\` once, then \`yarn start\` to launch Storybook on port \`6006\`.`,
+  },
+};
+
 export const GithubFlavoredMarkdown: StoryObj<Args> = {
   args: {
     children: `

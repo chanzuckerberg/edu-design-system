@@ -19,20 +19,29 @@
   border-left: 2px solid var(--eds-theme-color-border-utility-default-low-emphasis-active);
 }
 
+/**
+ * Inline code, per the `EDS-markdown-inlineCode` Figma spec: low-emphasis chip with
+ * primary text, `code-sm` type, and a small radius.
+ */
 .markdown__code {
-  border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);
-  padding: 0 calc(var(--eds-spacing-size-1) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+  padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
 
-  background-color: var(--eds-theme-color-background-utility-default-low-emphasis);
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-low-emphasis), var(--eds-dark-theme-color-background-utility-default-low-emphasis));
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 }
 
+/**
+ * Indented and language-less fenced blocks. Same treatment as inline code, drawn on the
+ * block instead of the snippet. Fenced blocks with a language render a `CodeBlock`
+ * inside, which paints its own surface, so the wrapper steps out of the way for those.
+ */
 .markdown__pre {
-  border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);
-  padding: 0 calc(var(--eds-spacing-size-1) * 1px);
+  border-radius: calc(var(--eds-theme-border-radius-objects-sm) * 1px);
+  padding: calc(var(--eds-spacing-size-half) * 1px) calc(var(--eds-spacing-size-1) * 1px);
 
-  background-color: var(--eds-theme-color-background-utility-default-low-emphasis);
-  color: var(--eds-theme-color-text-utility-default-secondary);
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-low-emphasis), var(--eds-dark-theme-color-background-utility-default-low-emphasis));
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
 
   .markdown__code {
     background-color: inherit;
@@ -43,6 +52,7 @@
 
   &:has(.markdown--multiline) {
     padding: 0;
+    background-color: transparent;
   }
 }
 
