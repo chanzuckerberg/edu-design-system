@@ -48,10 +48,6 @@
   }
 }
 
-.accordion-button--empty {
-  pointer-events: none;
-}
-
 /**
  * Open/closed indicator, a chevron by default.
  *
@@ -79,10 +75,6 @@
   @media screen and (prefers-reduced-motion) {
     transition: none;
   }
-}
-
-.accordion-panel--hidden {
-  padding: 0;
 }
 
 .accordion-button__heading {

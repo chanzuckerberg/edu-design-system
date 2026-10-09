@@ -123,31 +123,6 @@ describe('<Accordion />', () => {
     expect(screen.queryByText('Accordion Panel')).not.toBeInTheDocument();
   });
 
-  it('should not call onOpen callback when accordion opens on an empty row', async () => {
-    const user = userEvent.setup();
-    const onClose = vi.fn();
-    const onOpen = vi.fn();
-    render(
-      <Accordion headingAs="h2">
-        <Accordion.Row isExpandable={false}>
-          <Accordion.Button
-            data-testid="accordion-button"
-            onClose={onClose}
-            onOpen={onOpen}
-          >
-            Accordion Button
-          </Accordion.Button>
-          <Accordion.Panel>Accordion Panel</Accordion.Panel>
-        </Accordion.Row>
-      </Accordion>,
-    );
-    const accordionButton = screen.getByRole('button');
-
-    await user.click(accordionButton);
-    expect(onOpen).not.toHaveBeenCalled();
-    expect(onClose).not.toHaveBeenCalled();
-  });
-
   it('renders an icon name in the leading slot as an icon', () => {
     // The slot is a content slot, the same as the leading slots on `DataTable`,
     // `InputField`, and `SelectionChip`, and `eds-migrate 18-to-19` renames `leadingIcon`

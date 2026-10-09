@@ -107,10 +107,6 @@ type AccordionRowProps = {
    */
   defaultOpen?: boolean;
   /**
-   * Whether the row can show expandable content
-   */
-  isExpandable?: boolean;
-  /**
    * Whether the row has content on the row's trigger that leads in front of the title
    */
   hasLeadingContent?: boolean;
@@ -127,12 +123,8 @@ const AccordionContext = createContext<{
 });
 
 const AccordionRowContext = createContext<
-  Pick<
-    AccordionRowProps,
-    'isExpandable' | 'hasLeadingContent' | 'hasTrailingContent'
-  >
+  Pick<AccordionRowProps, 'hasLeadingContent' | 'hasTrailingContent'>
 >({
-  isExpandable: true,
   hasLeadingContent: false,
   hasTrailingContent: false,
 });
@@ -151,7 +143,6 @@ const AccordionRowContext = createContext<
  * |Single-Expand|Only one section can be open at a time (others collapse automatically).|Navigation menus. Step-by-step instructions. Content prioritization.|
  * |Nested|Accordion items contain sub-accordions inside.|Complex data views. Multi-level navigation or documentation.|
  * |Summary|Shows a brief summary even when collapsed.|Preview content like stats or status. Highlight key info without expanding.|
- * |Disabled|Cannot be expanded; often used to show unavailable or locked content.|Permissions-based content. Progress-dependent sections.|
  *
  * ### Best Practices
  *
@@ -234,19 +225,13 @@ const AccordionButton = (props: AccordionButtonProps) => {
 
   const { headingAs: contextHeadingAs } = useContext(AccordionContext);
 
-  const { isExpandable } = useContext(AccordionRowContext);
-
   // The indicator is semantic: it marks the row as the thing that expands, and reads as
   // that only if every expandable thing in the app carries the same mark. It comes from
   // `IconProvider` for that reason, and not from a prop on this row. The leading and
   // trailing slots above are the consumer's to fill, and are left alone.
   const expandIcon = useSemanticIcon('expand');
 
-  const componentClassName = clsx(
-    styles['accordion-button'],
-    !isExpandable && styles['accordion-button--empty'],
-    className,
-  );
+  const componentClassName = clsx(styles['accordion-button'], className);
 
   assertEdsUsage(
     [
@@ -262,19 +247,19 @@ const AccordionButton = (props: AccordionButtonProps) => {
         <button
           className={componentClassName}
           onClick={() => {
-            if (open && isExpandable && onClose) {
+            if (open && onClose) {
               onClose();
             }
-            if (!open && isExpandable && onOpen) {
+            if (!open && onOpen) {
               onOpen();
             }
           }}
           onKeyDown={(e) => {
             if (e.key === SPACEBAR_KEYCODE || e.key === ENTER_KEYCODE) {
-              if (open && isExpandable && onClose) {
+              if (open && onClose) {
                 onClose();
               }
-              if (!open && isExpandable && onOpen) {
+              if (!open && onOpen) {
                 onOpen();
               }
             }
@@ -312,7 +297,7 @@ const AccordionButton = (props: AccordionButtonProps) => {
             )}
           </Heading>
           {trailingContent}
-          {isExpandable && hasSlotContent(expandIcon) && (
+          {hasSlotContent(expandIcon) && (
             <IconSlot
               className={clsx(
                 styles['accordion-button__indicator'],
@@ -335,22 +320,19 @@ const AccordionPanel = ({
   children,
   ...other
 }: AccordionPanelProps) => {
-  const { isExpandable, hasLeadingContent } = useContext(AccordionRowContext);
+  const { hasLeadingContent } = useContext(AccordionRowContext);
 
   const componentClassName = clsx(
     styles['accordion-panel'],
-    !isExpandable && styles['accordion-panel--hidden'],
     hasLeadingContent && styles['accordion-panel--leading-content'],
     className,
   );
 
   return (
     <DisclosurePanel className={componentClassName} {...other}>
-      {isExpandable && (
-        <Text as="span" preset="body-md">
-          {children}
-        </Text>
-      )}
+      <Text as="span" preset="body-md">
+        {children}
+      </Text>
     </DisclosurePanel>
   );
 };
@@ -359,14 +341,13 @@ const AccordionRow = ({
   className,
   defaultOpen,
   children,
-  isExpandable = true,
   hasLeadingContent,
   hasTrailingContent,
   ...other
 }: AccordionRowProps) => {
   const componentClassName = clsx(styles['accordion-row'], className);
   return (
-    <AccordionRowContext.Provider value={{ isExpandable, hasLeadingContent }}>
+    <AccordionRowContext.Provider value={{ hasLeadingContent }}>
       <Disclosure defaultOpen={defaultOpen}>
         {({ open }) => (
           <div className={componentClassName} {...other}>
