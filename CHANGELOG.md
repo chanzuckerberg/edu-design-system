@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [19.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v19.0.0...v19.0.1) (2026-10-09)
+
+### Bug Fixes
+
+* **AppHeader:** resolve orientation before first paint ([#2673](https://github.com/chanzuckerberg/edu-design-system/issues/2673)) ([b9fcc33](https://github.com/chanzuckerberg/edu-design-system/commit/b9fcc3347e61a8a31f1b429e05a1794bcac01293))
+* **AppNotification:** tighten typography and spacing ([#2674](https://github.com/chanzuckerberg/edu-design-system/issues/2674)) ([f2cae1b](https://github.com/chanzuckerberg/edu-design-system/commit/f2cae1bfb1c45d26e5d3eb58281cbc80881c0a2d))
+* **CodeBlock:** fit copy button in single-line blocks ([#2656](https://github.com/chanzuckerberg/edu-design-system/issues/2656)) ([5cc8c50](https://github.com/chanzuckerberg/edu-design-system/commit/5cc8c50ca0519e8005711a693d6a750444dfb996))
+* **components:** set displayName on every component and sub-component ([#2669](https://github.com/chanzuckerberg/edu-design-system/issues/2669)) ([4199211](https://github.com/chanzuckerberg/edu-design-system/commit/41992110f32b7309a761c4a37a7aaed6fd663f79))
+* **components:** spread pass-through props in Fieldset, Skeleton, CodeBlock ([#2672](https://github.com/chanzuckerberg/edu-design-system/issues/2672)) ([f0a9d47](https://github.com/chanzuckerberg/edu-design-system/commit/f0a9d478da24905f389225692365c6ac9767274d))
+* **Link:** apply larger icon gap on lg and xl links ([#2663](https://github.com/chanzuckerberg/edu-design-system/issues/2663)) ([c60451f](https://github.com/chanzuckerberg/edu-design-system/commit/c60451fdaa3cd860b5c4929cd32944a9cbc230fa))
+* **Link:** center trailing icon on the text's x-height ([#2662](https://github.com/chanzuckerberg/edu-design-system/issues/2662)) ([30b1a87](https://github.com/chanzuckerberg/edu-design-system/commit/30b1a87bae92b5e3872b1b6ecd6501b025707991))
+* **logging:** prefix usage warnings with EDS-AUDIT ([#2670](https://github.com/chanzuckerberg/edu-design-system/issues/2670)) ([ff27d7e](https://github.com/chanzuckerberg/edu-design-system/commit/ff27d7e77c61eb7846adeb67639d9c68c99767ba))
+* resolve CSS module class lookups with no matching rule ([#2671](https://github.com/chanzuckerberg/edu-design-system/issues/2671)) ([8ed90d9](https://github.com/chanzuckerberg/edu-design-system/commit/8ed90d91b92a39741763630f9898b87c7b078e26))
+* **Select:** name the trigger with aria-label when there's no visible label ([#2665](https://github.com/chanzuckerberg/edu-design-system/issues/2665)) ([f6d8b53](https://github.com/chanzuckerberg/edu-design-system/commit/f6d8b53c6ae39fdbd2427b48080a86d887a6c745))
+* **Select:** preserve onChange with function children ([#2666](https://github.com/chanzuckerberg/edu-design-system/issues/2666)) ([30867f4](https://github.com/chanzuckerberg/edu-design-system/commit/30867f44dfebd5d867f46bb7a5afcb156df82164))
+
 ## [19.0.0](https://github.com/chanzuckerberg/edu-design-system/compare/v18.8.0...v19.0.0) (2026-09-28)
 
 ### ⚠ BREAKING CHANGES
