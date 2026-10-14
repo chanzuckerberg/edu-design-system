@@ -18,7 +18,7 @@ export default {
   parameters: {
     docs: {
       subtitle:
-        'Displays one or more headers stacked on top of one another that reveal or hide associated content.',
+        'Displays one or more headers stacked on top of one another that can reveal or hide associated content.',
     },
     layout: 'centered',
     controls: { sort: 'requiredFirst' },
