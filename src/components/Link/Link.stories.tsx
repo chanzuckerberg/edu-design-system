@@ -26,7 +26,7 @@ export default {
   decorators: [
     (Story) => <div className="text-utility-default-primary">{Story()}</div>,
   ],
-  tags: ['autodocs', 'version:3.0.1'],
+  tags: ['autodocs', 'version:3.1.0'],
 } as Meta<typeof Link>;
 
 type Story = StoryObj<typeof Link>;
@@ -143,6 +143,45 @@ export const Emphasis: Story = {
       </div>
     );
   },
+};
+
+/**
+ * `isBold` renders the link text at bold weight, without overriding the link's styles. It
+ * holds across every emphasis and state, and in both contexts.
+ */
+export const Bold: Story = {
+  args: {
+    isBold: true,
+    size: 'md',
+  },
+  render: (args) => (
+    <div className="flex flex-col gap-4">
+      <div>
+        <Link {...args} context="standalone" emphasis="default">
+          Default Emphasis
+        </Link>
+        <br />
+        <Link {...args} context="standalone" emphasis="high">
+          High Emphasis
+        </Link>
+        <br />
+        <Link {...args} context="standalone" emphasis="low" icon="forward">
+          Low Emphasis
+        </Link>
+        <br />
+        <Link {...args} context="standalone" icon="open-in-new">
+          Leaves the site
+        </Link>
+      </div>
+      <p className="w-[384px]">
+        Lorem ipsum dolor sit amet,{' '}
+        <Link {...args} context="inline" size={undefined}>
+          consectetur adipiscing elit
+        </Link>
+        . Morbi porta at ante quis molestie.
+      </p>
+    </div>
+  ),
 };
 
 /**

@@ -8,6 +8,7 @@ import { Link } from './Link';
 import * as stories from './Link.stories';
 
 import type { StoryFile } from '../../../.storybook/utility-types';
+import styles from './Link.module.css';
 
 describe('<Link />', () => {
   generateSnapshots(stories as StoryFile);
@@ -75,6 +76,25 @@ describe('<Link />', () => {
     const link = screen.getByRole('link');
     expect(link).toHaveFocus();
   });
+
+  it('is not bold by default', () => {
+    render(<Link href="/">Click</Link>);
+
+    expect(screen.getByRole('link')).not.toHaveClass(styles['link--isBold']);
+  });
+
+  it.each(['inline', 'standalone'] as const)(
+    'applies bold weight in %s context',
+    (context) => {
+      render(
+        <Link context={context} href="/" isBold>
+          Click
+        </Link>,
+      );
+
+      expect(screen.getByRole('link')).toHaveClass(styles['link--isBold']);
+    },
+  );
 
   describe('emits warnings when misused', () => {
     it('warns when inline links are using emphasis=low', () => {

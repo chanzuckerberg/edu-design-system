@@ -1,5 +1,86 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`<Link /> > Bold story renders snapshot 1`] = `
+<div
+  class="text-utility-default-primary"
+>
+  <div
+    class="flex flex-col gap-4"
+  >
+    <div>
+      <a
+        class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--isBold_d78ce8 _link--size-md_d78ce8"
+        href="http://example.org/"
+      >
+        Default Emphasis
+      </a>
+      <br />
+      <a
+        class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-high_d78ce8 _link--isBold_d78ce8 _link--size-md_d78ce8"
+        href="http://example.org/"
+      >
+        High Emphasis
+      </a>
+      <br />
+      <a
+        class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--isBold_d78ce8 _link--size-md_d78ce8"
+        href="http://example.org/"
+      >
+        Low Emphasis
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8 _link__icon_d78ce8"
+          fill="currentColor"
+          height="16px"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12.9462 12.0004L8.34619 7.40043L9.39994 6.34668L15.0537 12.0004L9.39994 17.6542L8.34619 16.6004L12.9462 12.0004Z"
+          />
+        </svg>
+      </a>
+      <br />
+      <a
+        class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--isBold_d78ce8 _link--size-md_d78ce8"
+        href="http://example.org/"
+      >
+        Leaves the site
+        <svg
+          aria-hidden="true"
+          class="_icon_779da8 _link__icon_d78ce8"
+          fill="currentColor"
+          height="16px"
+          style="--icon-size: 16px;"
+          viewBox="0 0 24 24"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.04425 18.3943L6 17.35L15.8405 7.5H7.89425V6H18.3943V16.5H16.8943V8.55375L7.04425 18.3943Z"
+          />
+        </svg>
+      </a>
+    </div>
+    <p
+      class="w-[384px]"
+    >
+      Lorem ipsum dolor sit amet,
+       
+      <a
+        class="_link_d78ce8 _link--context-inline_d78ce8 _link--emphasis-default_d78ce8 _link--isBold_d78ce8"
+        href="http://example.org/"
+      >
+        consectetur adipiscing elit
+      </a>
+      . Morbi porta at ante quis molestie.
+    </p>
+  </div>
+</div>
+`;
+
 exports[`<Link /> > Default story renders snapshot 1`] = `
 <div
   class="text-utility-default-primary"
