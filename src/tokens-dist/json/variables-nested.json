@@ -491,6 +491,61 @@
               "disabled": "rgba(250, 249, 248, 0.50)"
             }
           },
+          "visualization": {
+            "categorical": {
+              "1": {
+                "lowEmphasis": "#C2ECD9",
+                "highEmphasis": "#19955D"
+              },
+              "2": {
+                "lowEmphasis": "#D3EAFF",
+                "highEmphasis": "#4D63CB"
+              },
+              "3": {
+                "lowEmphasis": "#E6E2DE",
+                "highEmphasis": "#0E442B"
+              },
+              "4": {
+                "lowEmphasis": "#FFFC93",
+                "highEmphasis": "#CDB825"
+              },
+              "5": {
+                "lowEmphasis": "#F3E5FA",
+                "highEmphasis": "#6E3A88"
+              },
+              "6": {
+                "lowEmphasis": "#FFDCCA",
+                "highEmphasis": "#B8470F"
+              },
+              "7": {
+                "highEmphasis": "#98CDFF"
+              },
+              "8": {
+                "highEmphasis": "#FF9C99"
+              },
+              "other": "#BCB9B6"
+            },
+            "scalar": {
+              "1": "#A1E1C4",
+              "2": "#1DB470",
+              "3": "#177A4D",
+              "4": "#0E442B",
+              "basis": "#F4F1EF"
+            },
+            "divergent": {
+              "basis": "#F4F1EF",
+              "minus": {
+                "1": "#98CDFF",
+                "2": "#5C76F3",
+                "3": "#3C4D9D"
+              },
+              "plus": {
+                "1": "#FFB38D",
+                "2": "#D0622C",
+                "3": "#92380C"
+              }
+            }
+          },
           "progressBar": {
             "@": "#19955D",
             "content": "#19955D",
@@ -691,7 +746,11 @@
             "primary": "#3A3A37",
             "secondary": "#6B6A64"
           },
-          "headline": "#242423"
+          "headline": "#242423",
+          "visualization": {
+            "default": "#000000",
+            "inverse": "#FFFFFF"
+          }
         },
         "text-highlight": {
           "foreground": "#30302E"

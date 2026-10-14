@@ -1251,6 +1251,169 @@
                 }
               }
             },
+            "visualization": {
+              "categorical": {
+                "1": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.green.100}",
+                    "description": "Tint for a Tag that labels categorical slot 1. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.green.450}",
+                    "description": "First categorical series fill for unordered groups in charts. Take categorical slots in order, starting here. Also the called-out mark when one mark is highlighted against the rest.",
+                    "group": "color"
+                  }
+                },
+                "2": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.blue.100}",
+                    "description": "Tint for a Tag that labels categorical slot 2. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.blue.550}",
+                    "description": "Second categorical series fill. Use only when slot 1 is already in use.",
+                    "group": "color"
+                  }
+                },
+                "3": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.neutral.100}",
+                    "description": "Tint for a Tag that labels categorical slot 3. Neutral rather than green so it does not read as a twin of slot 1's tint. Use sparingly.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.green.750}",
+                    "description": "Third categorical series fill. Use only when slots 1 and 2 are already in use.",
+                    "group": "color"
+                  }
+                },
+                "4": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.yellow.050}",
+                    "description": "Tint for a Tag that labels categorical slot 4. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.yellow.250}",
+                    "description": "Fourth categorical series fill. Light; give thin lines and small points extra weight. Shares a primitive with the warning high-emphasis background, so keep warning Tags out of plot areas that use it.",
+                    "group": "color"
+                  }
+                },
+                "5": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.purple.100}",
+                    "description": "Tint for a Tag that labels categorical slot 5. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.purple.650}",
+                    "description": "Fifth categorical series fill. Use only when slots 1 through 4 are already in use.",
+                    "group": "color"
+                  }
+                },
+                "6": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.orange.100}",
+                    "description": "Tint for a Tag that labels categorical slot 6. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.orange.550}",
+                    "description": "Sixth categorical series fill. Use only when slots 1 through 5 are already in use.",
+                    "group": "color"
+                  }
+                },
+                "7": {
+                  "highEmphasis": {
+                    "value": "{eds.color.blue.200}",
+                    "description": "Seventh categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value.",
+                    "group": "color"
+                  }
+                },
+                "8": {
+                  "highEmphasis": {
+                    "value": "{eds.color.red.250}",
+                    "description": "Eighth and last categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value. Past eight series, use direct labels or pattern fills rather than more color.",
+                    "group": "color"
+                  }
+                },
+                "other": {
+                  "value": "{eds.color.neutral.250}",
+                  "description": "Overflow bucket for series beyond the eighth, and the context marks when one mark is called out. Never a ninth identity the reader is expected to remember.",
+                  "group": "color"
+                }
+              },
+              "scalar": {
+                "basis": {
+                  "value": "{eds.color.neutral.050}",
+                  "description": "A measured value of zero on a scalar (magnitude) scale. Not for missing data, which is shown as no fill plus a dash.",
+                  "group": "color"
+                },
+                "1": {
+                  "value": "{eds.color.green.150}",
+                  "description": "Lowest non-zero bin of a scalar scale. Bin data to four steps; do not interpolate.",
+                  "group": "color"
+                },
+                "2": {
+                  "value": "{eds.color.green.350}",
+                  "description": "Second of four scalar bins.",
+                  "group": "color"
+                },
+                "3": {
+                  "value": "{eds.color.green.550}",
+                  "description": "Third of four scalar bins.",
+                  "group": "color"
+                },
+                "4": {
+                  "value": "{eds.color.green.750}",
+                  "description": "Highest of four scalar bins.",
+                  "group": "color"
+                }
+              },
+              "divergent": {
+                "basis": {
+                  "value": "{eds.color.neutral.050}",
+                  "description": "The reference value of a divergent scale: the target, the plan, or no change. Anchor here, not at the median of the data.",
+                  "group": "color"
+                },
+                "minus": {
+                  "3": {
+                    "value": "{eds.color.blue.650}",
+                    "description": "Furthest below the reference value on a divergent scale.",
+                    "group": "color"
+                  },
+                  "2": {
+                    "value": "{eds.color.blue.450}",
+                    "description": "Second step below the reference value on a divergent scale.",
+                    "group": "color"
+                  },
+                  "1": {
+                    "value": "{eds.color.blue.200}",
+                    "description": "Just below the reference value on a divergent scale.",
+                    "group": "color"
+                  }
+                },
+                "plus": {
+                  "1": {
+                    "value": "{eds.color.orange.200}",
+                    "description": "Just above the reference value on a divergent scale.",
+                    "group": "color"
+                  },
+                  "2": {
+                    "value": "{eds.color.orange.450}",
+                    "description": "Second step above the reference value on a divergent scale.",
+                    "group": "color"
+                  },
+                  "3": {
+                    "value": "{eds.color.orange.650}",
+                    "description": "Furthest above the reference value on a divergent scale.",
+                    "group": "color"
+                  }
+                }
+              }
+            },
             "progressBar": {
               "@": {
                 "value": "{eds.color.green.450}",
@@ -1866,6 +2029,18 @@
             "headline": {
               "value": "{eds.color.neutral.850}",
               "group": "color"
+            },
+            "visualization": {
+              "default": {
+                "value": "{eds.color.black}",
+                "description": "Text sitting on a visualization fill whose primitive is at grade 450 or lighter: every low-emphasis categorical value, basis, scalar steps 1 and 2, divergent steps 1 and 2, and categorical slots 1, 4, 7, 8 and other. Labels beside a mark use text-utility-default-primary instead.",
+                "group": "color"
+              },
+              "inverse": {
+                "value": "{eds.color.white}",
+                "description": "Text sitting on a visualization fill whose primitive is at grade 550 or darker: categorical slots 2, 3, 5 and 6, scalar steps 3 and 4, and divergent steps 3.",
+                "group": "color"
+              }
             }
           },
           "text-highlight": {

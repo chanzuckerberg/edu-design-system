@@ -145,3 +145,27 @@ export const BorderRadii: Story = {
     ),
   },
 };
+
+/**
+ * Visualization Tokens are meant for graphical representation of data
+ *
+ * Do **not** use any of thees in custom components.
+ */
+export const Visualization: Story = {
+  args: {
+    caption: 'Visualization Tokens',
+    subCaption:
+      'Visualization tokens are used to represent graphical presentations of data (graphs, line charts, etc.)',
+    listItems: getTokenListItems(
+      'eds-theme-color-background-visualization',
+      'color',
+      (name, column, filterTerm) => {
+        if (column === 'figma') {
+          return '→ visualization/' + getSpecifier(name, filterTerm);
+        } else {
+          return '-';
+        }
+      },
+    ),
+  },
+};
