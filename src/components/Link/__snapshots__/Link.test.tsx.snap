@@ -65,7 +65,7 @@ exports[`<Link /> > Bold story renders snapshot 1`] = `
       </a>
     </div>
     <p
-      class="w-[384px]"
+      class="_text_b3eba3 _text--body-md-bold_b3eba3 w-[384px]"
     >
       Lorem ipsum dolor sit amet,
        

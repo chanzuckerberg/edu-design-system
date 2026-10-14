@@ -5,6 +5,7 @@ import React from 'react';
 import { Link, type LinkProps } from './Link';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
 import { IconProvider } from '../Icon';
+import Text from '../Text';
 
 export default {
   title: 'Components/Link',
@@ -173,13 +174,13 @@ export const Bold: Story = {
           Leaves the site
         </Link>
       </div>
-      <p className="w-[384px]">
+      <Text as="p" className="w-[384px]" preset="body-md-bold">
         Lorem ipsum dolor sit amet,{' '}
         <Link {...args} context="inline" size={undefined}>
           consectetur adipiscing elit
         </Link>
         . Morbi porta at ante quis molestie.
-      </p>
+      </Text>
     </div>
   ),
 };
