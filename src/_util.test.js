@@ -466,6 +466,18 @@ describe('utils', function () {
                 resolvedType: 'FLOAT',
                 valuesByMode: { [tier1Mode]: 8 },
               },
+              'VariableID:1:3': {
+                id: 'VariableID:1:3',
+                name: 'color/blue/500',
+                resolvedType: 'COLOR',
+                valuesByMode: { [tier1Mode]: { r: 0, g: 0.02, b: 1, a: 1 } },
+              },
+              'VariableID:1:4': {
+                id: 'VariableID:1:4',
+                name: 'color/red/500',
+                resolvedType: 'COLOR',
+                valuesByMode: { '3:0': { r: 1, g: 0, b: 0, a: 1 } },
+              },
             },
           },
         });
@@ -528,6 +540,39 @@ describe('utils', function () {
 
           // single-digit hex parts are zero-padded
           expect(variable.valueRef).toEqual('#0005FF');
+        });
+
+        it('applies opacity to a color that aliases another color variable', () => {
+          const variable = createVariable('-> background/overlay', 'COLOR', {
+            color: { type: 'VARIABLE_ALIAS', id: 'VariableID:1:3' },
+            opacity: 50,
+          });
+
+          expect(variable.value).toEqual('rgba(0, 5, 255, 0.50)');
+        });
+
+        it('throws when the aliased color has no value in the tier 1 mode', () => {
+          const variable = createVariable('-> background/overlay', 'COLOR', {
+            color: { type: 'VARIABLE_ALIAS', id: 'VariableID:1:4' },
+            opacity: 50,
+          });
+
+          expect(() => variable.value).toThrow(ReferenceError);
+          expect(() => variable.value).toThrow(
+            'unknown lookup value: cannot find VariableID:1:4 in mode 1:0',
+          );
+        });
+
+        it('throws when the aliased color variable does not exist', () => {
+          const variable = createVariable('-> background/overlay', 'COLOR', {
+            color: { type: 'VARIABLE_ALIAS', id: 'VariableID:1:999' },
+            opacity: 50,
+          });
+
+          expect(() => variable.value).toThrow(ReferenceError);
+          expect(() => variable.value).toThrow(
+            'unknown lookup value: cannot find VariableID:1:999 in mode 1:0',
+          );
         });
       });
 
