@@ -415,9 +415,9 @@ module.exports = {
             figmaResolvedValue.color?.type === 'VARIABLE_ALIAS' &&
             figmaResolvedValue.color.id
           ) {
-            // We handle Figma's abstraction for emitting an opacity separate from the color value
-            // TODO-AH: decide whether this needs to path thru an existing method,
-            // or is fine here (but does need a mode check based on lookup)
+            // Figma can emit a color as an alias to another variable plus a separate opacity (0-100).
+            // Resolve the aliased variable's tier 1 color and apply the opacity as the alpha channel.
+            // Throws a ReferenceError if the aliased variable is missing or has no tier 1 value.
             const t = this._lookupDelegate.retrieveVariable(
               figmaResolvedValue.color.id,
             )?.valuesByMode[this._tier1Mode];
