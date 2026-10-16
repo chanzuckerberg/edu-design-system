@@ -411,6 +411,26 @@ module.exports = {
           // if we have an alpha channel, use `rgba()`
           if (a > 0 && a < 1) {
             return `rgba(${r}, ${g}, ${b}, ${a.toFixed(2)})`;
+          } else if (
+            figmaResolvedValue.color?.type === 'VARIABLE_ALIAS' &&
+            figmaResolvedValue.color.id
+          ) {
+            // Figma can emit a color as an alias to another variable plus a separate opacity (0-100).
+            // Resolve the aliased variable's tier 1 color and apply the opacity as the alpha channel.
+            // Throws a ReferenceError if the aliased variable is missing or has no tier 1 value.
+            const t = this._lookupDelegate.retrieveVariable(
+              figmaResolvedValue.color.id,
+            )?.valuesByMode[this._tier1Mode];
+            if (t) {
+              const r = Math.floor(t.r * 255);
+              const g = Math.floor(t.g * 255);
+              const b = Math.floor(t.b * 255);
+              return `rgba(${r}, ${g}, ${b}, ${(figmaResolvedValue.opacity / 100).toFixed(2)})`;
+            } else {
+              throw new ReferenceError(
+                `unknown lookup value: cannot find ${figmaResolvedValue.color.id} in mode ${this._tier1Mode}`,
+              );
+            }
           } else {
             // print hex instead when the value has no alpha channel
             return (
