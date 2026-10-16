@@ -663,6 +663,25 @@ describe('<AppHeader />', () => {
       window.innerWidth = originalWidth;
     });
 
+    it('renders a vertical header as horizontal below eds-bp-md (EDS-1964)', () => {
+      window.innerWidth = 767;
+      render(
+        <AppHeader navGroups={navGroups} orientation="vertical" title="Test" />,
+      );
+      expect(
+        screen.getByRole('button', { name: 'Show Menu' }),
+      ).toBeInTheDocument();
+
+      act(() => {
+        window.innerWidth = 768;
+        window.dispatchEvent(new Event('resize'));
+      });
+
+      expect(
+        screen.queryByRole('button', { name: 'Show Menu' }),
+      ).not.toBeInTheDocument();
+    });
+
     it('switches a vertical header to horizontal when the screen narrows', () => {
       render(
         <AppHeader navGroups={navGroups} orientation="vertical" title="Test" />,
@@ -807,18 +826,45 @@ describe('<AppHeader />', () => {
     });
   });
 
-  it('renders an empty header until the orientation resolves (EDS-2125)', () => {
+  it('renders only the title until the orientation resolves (EDS-2125)', () => {
     const view = renderToString(
       <AppHeader
         navGroups={[
           { name: 'group-1', navItems: [{ name: 'Lakes', type: 'button' }] },
         ]}
         orientation="vertical"
+        subTitle="Sub"
         title="Test"
       />,
     );
 
-    expect(view).not.toMatch(/orientation-vertical|orientation-horizontal/);
+    expect(view).toContain('Test');
+    expect(view).toContain('Sub');
     expect(view).not.toContain('Lakes');
+  });
+
+  it('sizes a vertical placeholder responsively with CSS before resolving (EDS-1964)', () => {
+    const view = renderToString(
+      <AppHeader orientation="vertical" title="Test" />,
+    );
+
+    expect(view).toMatch(/orientation-responsive/);
+    expect(view).not.toMatch(/orientation-vertical|orientation-horizontal/);
+  });
+
+  it('renders a horizontal placeholder with its nav before resolving (EDS-1964)', () => {
+    const view = renderToString(
+      <AppHeader
+        navGroups={[
+          { name: 'group-1', navItems: [{ name: 'Lakes', type: 'button' }] },
+        ]}
+        title="Test"
+      />,
+    );
+
+    expect(view).toMatch(/orientation-horizontal/);
+    expect(view).not.toMatch(/orientation-vertical|orientation-responsive/);
+    expect(view).toContain('Lakes');
+    expect(view).toContain('Show Menu');
   });
 });
