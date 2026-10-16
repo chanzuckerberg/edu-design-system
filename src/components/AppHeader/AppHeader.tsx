@@ -225,14 +225,15 @@ const AppHeaderContext = createContext<
 
 /**
  * Decide which orientation the header should render in for the current window size.
- * Narrow screens always use `horizontal`, which collapses the nav into a drawer.
+ * Screens below `eds-bp-md` always use `horizontal`, which collapses the nav into a drawer.
+ * Keep in sync with `.app-header--orientation-responsive` in AppHeader.module.css.
  * @param orientation orientation requested by the consumer
  */
 function resolveOrientation(
   orientation: AppHeaderProps['orientation'],
 ): NonNullable<AppHeaderProps['orientation']> {
-  // compare the screen width to the smallest breakpoint. if it's wider...
-  if (window.innerWidth > parseInt(breakpoints['eds-bp-sm'], 10)) {
+  // match `@media (min-width: $eds-bp-md)`. if the screen is at least that wide...
+  if (window.innerWidth >= parseInt(breakpoints['eds-bp-md'], 10)) {
     // ...change to original user value (with default specified)
     return orientation || 'horizontal';
   }
@@ -319,9 +320,17 @@ export const AppHeader = ({
     AppHeaderProps['orientation'] | null
   >(null);
 
+  // Until the orientation resolves, size the placeholder with CSS alone: `horizontal` at
+  // every width, or `vertical` only at widths where it won't be swapped for `horizontal`
+  const orientationClassName = headerOrientation
+    ? styles[`app-header--orientation-${headerOrientation}`]
+    : orientation === 'vertical'
+      ? styles['app-header--orientation-responsive']
+      : styles['app-header--orientation-horizontal'];
+
   const componentClassName = clsx(
     styles['app-header'],
-    headerOrientation && styles[`app-header--orientation-${headerOrientation}`],
+    orientationClassName,
     style && styles[`app-header--style-${style}`],
     className,
   );
@@ -353,9 +362,78 @@ export const AppHeader = ({
     };
   }, [orientation]);
 
+  const headerTitle = (
+    <div className={styles['app-header-title']}>
+      {href ? (
+        <a
+          aria-label="homepage"
+          className={styles['app-header__home-link']}
+          href={href}
+          onClick={(ev) => {
+            onLinkClick &&
+              onLinkClick(ev, {
+                name: 'EDS-header-logo',
+                type: 'link',
+                href: href,
+              } as NavLink);
+          }}
+        >
+          <AppHeaderTitle subTitle={subTitle} title={title} />
+        </a>
+      ) : (
+        <AppHeaderTitle subTitle={subTitle} title={title} />
+      )}
+    </div>
+  );
+
+  const navGroupsList = (
+    <div className={styles['app-header__nav-groups']}>
+      {navGroups?.map((navGroup) => (
+        <AppHeaderNavGroup
+          key={`navGroup-${navGroup.name}`}
+          name={navGroup.name}
+          navItems={navGroup.navItems}
+          onButtonClick={onButtonClick}
+          onLinkClick={onLinkClick}
+        />
+      ))}
+    </div>
+  );
+
+  const menuButton = navGroups?.length ? (
+    <div className={styles['app-header__menu']}>
+      <AppHeaderButton
+        aria-label="Show Menu"
+        icon={menuIcon}
+        iconLayout="icon-only"
+        name="hamburger-menu"
+        onClick={() => {
+          document.getElementById('popover')?.showPopover();
+        }}
+        type="button"
+      />
+    </div>
+  ) : null;
+
   if (!headerOrientation) {
-    // Placeholder until the orientation resolves (e.g., during server rendering)
-    return <header className={componentClassName} {...other} />;
+    // Placeholder until the orientation resolves (e.g., during server rendering). It renders
+    // the horizontal content that will stay put, so the header has the same width and height
+    // as after it resolves (EDS-1964). Only the drawer portal waits, since it needs `document`.
+    // A `vertical` header keeps only the menu button, which shows below `eds-bp-md`; above
+    // that, its size is fixed and its nav waits for the orientation to resolve.
+    return (
+      <AppHeaderContext.Provider value={{ href, orientation: 'horizontal' }}>
+        <header className={componentClassName} {...other}>
+          <div>
+            <div className={styles['app-header__content']}>
+              {headerTitle}
+              {orientation !== 'vertical' && navGroupsList}
+              {menuButton}
+            </div>
+          </div>
+        </header>
+      </AppHeaderContext.Provider>
+    );
   }
 
   return (
@@ -363,54 +441,11 @@ export const AppHeader = ({
       <header className={componentClassName} {...other}>
         <div>
           <div className={styles['app-header__content']}>
-            <div className={styles['app-header-title']}>
-              {href ? (
-                <a
-                  aria-label="homepage"
-                  className={styles['app-header__home-link']}
-                  href={href}
-                  onClick={(ev) => {
-                    onLinkClick &&
-                      onLinkClick(ev, {
-                        name: 'EDS-header-logo',
-                        type: 'link',
-                        href: href,
-                      } as NavLink);
-                  }}
-                >
-                  <AppHeaderTitle subTitle={subTitle} title={title} />
-                </a>
-              ) : (
-                <AppHeaderTitle subTitle={subTitle} title={title} />
-              )}
-            </div>
+            {headerTitle}
             {headerOrientation === 'horizontal' && (
               <>
-                <div className={styles['app-header__nav-groups']}>
-                  {navGroups?.map((navGroup) => (
-                    <AppHeaderNavGroup
-                      key={`navGroup-${navGroup.name}`}
-                      name={navGroup.name}
-                      navItems={navGroup.navItems}
-                      onButtonClick={onButtonClick}
-                      onLinkClick={onLinkClick}
-                    />
-                  ))}
-                </div>
-                {navGroups?.length ? (
-                  <div className={styles['app-header__menu']}>
-                    <AppHeaderButton
-                      aria-label="Show Menu"
-                      icon={menuIcon}
-                      iconLayout="icon-only"
-                      name="hamburger-menu"
-                      onClick={() => {
-                        document.getElementById('popover')?.showPopover();
-                      }}
-                      type="button"
-                    />
-                  </div>
-                ) : null}
+                {navGroupsList}
+                {menuButton}
               </>
             )}
             {headerOrientation === 'vertical' && (
