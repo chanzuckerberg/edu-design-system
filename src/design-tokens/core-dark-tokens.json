@@ -892,7 +892,7 @@
                   "group": "color"
                 },
                 "selected": {
-                  "value": "{eds.color.white}",
+                  "value": "{eds.color.neutral.025}",
                   "group": "color"
                 }
               },
@@ -1696,34 +1696,34 @@
               },
               "critical": {
                 "@": {
-                  "value": "{eds.color.red.650}",
+                  "value": "{eds.color.red.550}",
                   "description": "Critical icon such as secondary or tertiary buttons to delete or cancel. Error icon for forms.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.red.750}",
+                  "value": "{eds.color.red.650}",
                   "description": "Hover state for critical icon such as secondary or tertiary buttons to delete or cancel. Error icon for forms.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.red.850}",
+                  "value": "{eds.color.red.750}",
                   "description": "Active state for critical icon such as secondary or tertiary buttons to delete or cancel. Error icon for forms.",
                   "group": "color"
                 }
               },
               "favorable": {
                 "@": {
-                  "value": "{eds.color.green.650}",
+                  "value": "{eds.color.green.550}",
                   "description": "Favorable icon such as success messages.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.green.750}",
+                  "value": "{eds.color.green.650}",
                   "description": "Hover state for favorable icon such as success messages.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.green.850}",
+                  "value": "{eds.color.green.750}",
                   "description": "Active state for favorable icon such as headlines for successful banner alerts.",
                   "group": "color"
                 }
@@ -1747,17 +1747,17 @@
               },
               "informational": {
                 "@": {
-                  "value": "{eds.color.green.550}",
+                  "value": "{eds.color.neutral.750}",
                   "description": "Informational icon such as headlines for info banner alerts.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.green.650}",
+                  "value": "{eds.color.neutral.850}",
                   "description": "Hover state for informational icon such as headlines for info banner alerts.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.green.750}",
+                  "value": "{eds.color.neutral.950}",
                   "description": "Active state for informational icon such as headlines for info banner alerts.",
                   "group": "color"
                 }
@@ -1909,34 +1909,34 @@
               },
               "critical": {
                 "@": {
-                  "value": "{eds.color.red.650}",
+                  "value": "{eds.color.red.550}",
                   "description": "Critical text such as secondary or tertiary buttons to delete or cancel. Error text for forms.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.red.750}",
+                  "value": "{eds.color.red.650}",
                   "description": "Hover state for critical text such as secondary or tertiary buttons to delete or cancel. Error text for forms.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.red.850}",
+                  "value": "{eds.color.red.750}",
                   "description": "Active state for critical text such as secondary or tertiary buttons to delete or cancel. Error text for forms.",
                   "group": "color"
                 }
               },
               "favorable": {
                 "@": {
-                  "value": "{eds.color.green.650}",
+                  "value": "{eds.color.green.550}",
                   "description": "Favorable text such as success messages.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.green.750}",
+                  "value": "{eds.color.green.650}",
                   "description": "Hover state for favorable text such as success messages.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.green.850}",
+                  "value": "{eds.color.green.750}",
                   "description": "Active state for favorable text such as headlines for successful banner alerts.",
                   "group": "color"
                 }
