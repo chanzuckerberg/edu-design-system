@@ -64,6 +64,9 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
           CI: true
 
+      - name: Check ESM build 📦
+        run: node scripts/check-esm-build.mjs
+
       # Rollup's TS plugin can include an implicit dependency on tslib that we don't want. It shouldn't be
       # included in builds if our tsconfig.json configures "target" properly, which this check ensures.
       - name: Check for "tslib" in build
