@@ -181,14 +181,15 @@ export function applyTailwindConfig(
 export default {
   /**
    * Match how EDS applies dark mode in CSS (see body.css): follow the system preference,
-   * unless overridden by `data-theme="light"` or `data-theme="dark"` on an ancestor.
+   * unless overridden by `data-theme="light"` or `data-theme="dark"` on the `html` element.
+   * Requires tailwind 3.4.1+ for the `variant` strategy.
    * Docs: https://v3.tailwindcss.com/docs/dark-mode
    */
   darkMode: [
     'variant',
     [
-      '@media (prefers-color-scheme: dark) { &:not([data-theme="light"], [data-theme="light"] *) }',
-      '&:is([data-theme="dark"], [data-theme="dark"] *)',
+      '@media (prefers-color-scheme: dark) { &:not(html[data-theme="light"], html[data-theme="light"] *) }',
+      '&:is(html[data-theme="dark"], html[data-theme="dark"] *)',
     ],
   ],
   /**

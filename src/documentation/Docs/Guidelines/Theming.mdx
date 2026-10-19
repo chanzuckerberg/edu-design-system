@@ -96,7 +96,9 @@ The EDS tailwind config includes the dark theme (tier 2) color tokens, under a `
 </div>
 ```
 
-To make the `dark:` variant match how EDS applies dark mode, use the `darkMode` value from the EDS config (as shown above). It follows the system color scheme preference, unless overridden by setting `data-theme="light"` or `data-theme="dark"` on an ancestor element (e.g., `<html data-theme="dark">`).
+To make the `dark:` variant match how EDS applies dark mode, use the `darkMode` value from the EDS config (as shown above). It follows the system color scheme preference, unless overridden by setting `data-theme="light"` or `data-theme="dark"` on the `html` element (e.g., `<html data-theme="dark">`).
+
+**NOTE**: this `darkMode` setting requires tailwind 3.4.1 or newer.
 
 [tailwind-dark-mode]: https://v3.tailwindcss.com/docs/dark-mode
 [tailwind-docs]: https://v3.tailwindcss.com/
