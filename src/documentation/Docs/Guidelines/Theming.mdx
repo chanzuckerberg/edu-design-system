@@ -17,6 +17,7 @@ import edsConfig from '@chanzuckerberg/eds/tailwind.config';
 module.exports = {
   content: ['./app/**/*.{ts,tsx,jsx,js}'],
   theme: edsConfig.theme,
+  darkMode: edsConfig.darkMode, // see "Tailwind dark mode" below
   // ... any other tailwind config
 };
 ```
@@ -85,9 +86,24 @@ Cons (same as above, plus):
 
 - fully detached from EDS, and harder to control or maintain.
 
+### Tailwind dark mode
+
+The EDS tailwind config includes the dark theme (tier 2) color tokens, under a `dark-` prefix. These map to the `--eds-dark-theme-*` CSS variables, so `--eds-dark-theme-color-background-utility-base-1` becomes `bg-dark-utility-base-1`. Pair each with its light counterpart, using the [`dark:` variant][tailwind-dark-mode]:
+
+```tsx
+<div className="bg-utility-base-1 text-utility-default-primary dark:bg-dark-utility-base-1 dark:text-dark-utility-default-primary">
+  Light and dark
+</div>
+```
+
+To make the `dark:` variant match how EDS applies dark mode, use the `darkMode` value from the EDS config (as shown above). It follows the system color scheme preference, unless overridden by setting `data-theme="light"` or `data-theme="dark"` on the `html` element (e.g., `<html data-theme="dark">`).
+
+**NOTE**: this `darkMode` setting requires tailwind 3.4.1 or newer.
+
+[tailwind-dark-mode]: https://v3.tailwindcss.com/docs/dark-mode
 [tailwind-docs]: https://v3.tailwindcss.com/
 [tailwind-theme]: https://v3.tailwindcss.com/docs/theme
-[eds-tailwind-config]: https://github.com/chanzuckerberg/edu-design-system/blob/main/tailwind.config.ts
+[eds-tailwind-config]: https://github.com/chanzuckerberg/edu-design-system/blob/main/tailwind.config.mts
 
 <hr />
 
