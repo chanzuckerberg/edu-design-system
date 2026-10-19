@@ -21,6 +21,8 @@ export default defineConfig({
         'src/**/*.stories.{ts,tsx}',
         // Storybook-only helpers, exercised through stories rather than tested directly
         'src/storyUtils/**',
+        // Assertions against the built output, run by CI after `yarn build` rather than tested directly
+        'scripts/check-esm-build.mjs',
       ],
     },
     projects: [
