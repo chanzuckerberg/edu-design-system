@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { eds as edsDarkTokens } from './lib/tokens/json/tailwind-dark-utility-config.json';
 import { eds as edsTokens } from './lib/tokens/json/tailwind-utility-config.json';
 
 //
@@ -25,10 +26,12 @@ function combineTokens(
  * Convert the token config values into a tailwind 3.x compatible format
  *
  * @param tokenConfig EDS-compatible JSON config, mapping the structure of the known tokens
+ * @param darkTokenConfig (optional) EDS-compatible JSON config for the dark theme tokens. When given, each theme (tier 2) color is also added under a `dark-` prefix (e.g., `dark:bg-dark-utility-base-1`)
  * @returns Tailwind-compatible mapping of the keys and values to the right part of the tailwind config structure
  */
 export function applyTailwindConfig(
   tokenConfig: typeof edsTokens,
+  darkTokenConfig?: typeof edsDarkTokens,
 ): Config['theme'] {
   // Select the theme (tier 2) color tokens and map them to be added to the tailwind config
   const {
@@ -37,6 +40,19 @@ export function applyTailwindConfig(
     text: textColorTokens,
     ...colorTokens
   } = tokenConfig.theme.color;
+
+  // Dark theme (tier 2) color tokens share the same structure, so nest them under `dark` to avoid
+  // overriding the light values. This mirrors the CSS variable names, e.g.:
+  // --eds-dark-theme-color-background-utility-base-1 => bg-dark-utility-base-1
+  const {
+    background: darkBackgroundColorTokens,
+    border: darkBorderColorTokens,
+    text: darkTextColorTokens,
+    ...darkColorTokens
+  } = darkTokenConfig?.dark.theme.color ?? {};
+  const withDarkPrefix = <T extends object>(
+    tokens: T | undefined,
+  ): Record<string, T> => (darkTokenConfig && tokens ? { dark: tokens } : {});
 
   const movements: { [x: string]: string } = tokenConfig.anim.move;
   const spacings: { [x: string]: string } = tokenConfig.spacing.size;
@@ -112,16 +128,20 @@ export function applyTailwindConfig(
     },
     colors: {
       ...colorTokens,
+      ...withDarkPrefix(darkColorTokens),
     },
     extend: {
       backgroundColor: {
         ...backgroundColorTokens, // Tier 2 background color tokens
+        ...withDarkPrefix(darkBackgroundColorTokens),
       },
       borderColor: {
         ...borderColorTokens, // Tier 2 border color tokens
+        ...withDarkPrefix(darkBorderColorTokens),
       },
       textColor: {
         ...textColorTokens, // Tier 2 text color tokens
+        ...withDarkPrefix(darkTextColorTokens),
       },
       borderRadius: {
         ...borderRadiusTokens, // Primitive border radius tokens
@@ -160,6 +180,18 @@ export function applyTailwindConfig(
 
 export default {
   /**
+   * Match how EDS applies dark mode in CSS (see body.css): follow the system preference,
+   * unless overridden by `data-theme="light"` or `data-theme="dark"` on an ancestor.
+   * Docs: https://v3.tailwindcss.com/docs/dark-mode
+   */
+  darkMode: [
+    'variant',
+    [
+      '@media (prefers-color-scheme: dark) { &:not([data-theme="light"], [data-theme="light"] *) }',
+      '&:is([data-theme="dark"], [data-theme="dark"] *)',
+    ],
+  ],
+  /**
    * The main value in TW utility classes is for Storybook stories, etc..
    * We avoid using them in component styles to reduce chance of conflict with other libraries.
    * Please configure downstream Tailwind config purge to include app files if necessary.
@@ -171,5 +203,5 @@ export default {
     './src/storyUtils/**/*.{ts,tsx}',
     './.storybook/**/*.{js,jsx,ts,tsx}',
   ],
-  theme: { ...applyTailwindConfig(edsTokens) },
+  theme: { ...applyTailwindConfig(edsTokens, edsDarkTokens) },
 } satisfies Config;
