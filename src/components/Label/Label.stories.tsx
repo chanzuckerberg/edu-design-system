@@ -22,12 +22,11 @@ export default {
 type Args = React.ComponentProps<typeof Label>;
 
 /**
- * Labels can denote some text to label the content, and whether that content is marked as required.
+ * Labels denote some text to label the content.
  */
 export const Default: StoryObj<Args> = {
   args: {
     text: 'Label',
-    required: true,
   },
 };
 

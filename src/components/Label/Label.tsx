@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import React from 'react';
 
+import { assertEdsUsage } from '../../util/logging';
 import Text from '../Text';
 import styles from './Label.module.css';
 
@@ -27,7 +28,10 @@ export type LabelProps = {
    */
   labelAfter?: ReactNode;
   /**
-   * Indicates that field is required for form to be successfully submitted.
+   * **Deprecated.** Has no effect: it renders no indicator and sets no attribute. Mark the
+   * associated input as required instead.
+   *
+   * @deprecated TODO(next-major): remove.
    */
   required?: boolean;
   /**
@@ -53,7 +57,7 @@ export const Label = ({
   htmlFor,
   id,
   labelAfter,
-  required = true,
+  required,
   text,
   ...other
 }: LabelProps) => {
@@ -61,6 +65,11 @@ export const Label = ({
     styles['label'],
     disabled && styles['label--disabled'],
     className,
+  );
+
+  assertEdsUsage(
+    [typeof required !== 'undefined'],
+    'the required prop has been deprecated, has no effect, and will be removed from the next major version of EDS',
   );
 
   return (
