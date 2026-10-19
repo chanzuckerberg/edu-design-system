@@ -145,3 +145,49 @@ export const BorderRadii: Story = {
     ),
   },
 };
+
+/**
+ * Background visualization tokens fill the marks in charts, graphs, heatmaps, and other custom data visualization components.
+ *
+ * - Use them only where a color stands for a value in the data. For interface roles (status, emphasis, interactivity), use the utility tokens instead
+ */
+export const BackgroundVisualization: Story = {
+  args: {
+    caption: 'Background Visualization Tokens',
+    subCaption:
+      'Background visualization tokens fill the marks in graphical presentations of data (bar charts, line charts, heatmaps, etc.)',
+    listItems: getTokenListItems(
+      'eds-theme-color-background-visualization',
+      'color',
+      (name, column, filterTerm) => {
+        if (column === 'figma') {
+          return '→ background/visualization/' + getSpecifier(name, filterTerm);
+        } else {
+          return 'bg-visualization-' + getSpecifier(name, filterTerm);
+        }
+      },
+    ),
+  },
+};
+
+/**
+ * Text visualization tokens color labels that sit on a background visualization fill.
+ *
+ * - Use `default` on fills aliased to a primitive at grade 450 or lighter, and `inverse` on grade 550 or darker
+ */
+export const TextVisualization: Story = {
+  args: {
+    caption: 'Text Visualization Tokens',
+    listItems: getTokenListItems(
+      'eds-theme-color-text-visualization',
+      'color',
+      (name, column, filterTerm) => {
+        if (column === 'figma') {
+          return '→ text/visualization/' + getSpecifier(name, filterTerm);
+        } else {
+          return 'text-visualization-' + getSpecifier(name, filterTerm);
+        }
+      },
+    ),
+  },
+};
