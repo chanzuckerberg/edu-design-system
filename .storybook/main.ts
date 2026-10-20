@@ -40,6 +40,27 @@ const config: StorybookConfig = {
     builder: '@storybook/builder-vite',
   },
 
+  /**
+   * CSS floor from `browserslist` in package.json. Below `light-dark()` support, Vite's Lightning
+   * CSS minifier rewrites every `light-dark()` into `--lightningcss-light` / `--lightningcss-dark`
+   * fallbacks. Firefox sits at 120 (CSS floor); the 125 in `browserslist` comes from `Intl.Segmenter`.
+   *
+   * Set here rather than in vite.config.ts: Storybook only carries `build.target` over from that file.
+   */
+  viteFinal: (config) => ({
+    ...config,
+    build: {
+      ...config.build,
+      cssTarget: [
+        'chrome123',
+        'edge123',
+        'firefox120',
+        'safari17.5',
+        'ios17.5',
+      ],
+    },
+  }),
+
   babel: () => {
     return {
       sourceType: 'unambiguous',
