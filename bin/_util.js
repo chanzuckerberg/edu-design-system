@@ -716,13 +716,10 @@ module.exports = {
           }
         } else {
           logger.text = chalk.bold(variable.name) + ': Skipped';
-
-          if (!writePath) {
-            logger.warn(
-              chalk.bold(variable.name) +
-                `: Skipped with warning (no write path "${writePath}")`,
-            );
-          }
+          logger.warn(
+            chalk.bold(variable.name) +
+              `: Skipped with warning (no write path "${writePath}")`,
+          );
           isVerbose && console.warn('Variable details:', variable);
           stats.skipped.push(variable);
         }

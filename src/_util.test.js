@@ -1420,6 +1420,119 @@ describe('utils', function () {
           '{eds.color.neutral.white}',
         );
       });
+
+      describe('edge cases', () => {
+        // a reader with the tier 1 variables, plus only the given tier 2 variables
+        const readerWith = (variables) => {
+          const { white, black } = darkModeData.meta.variables;
+          return new utils.FigmaAPIReader({
+            meta: {
+              ...darkModeData.meta,
+              variables: { white, black, ...variables },
+            },
+          });
+        };
+
+        const unknownType = {
+          id: 'unknown',
+          name: '-> text/utility/unknown',
+          variableCollectionId: 'tier2',
+          resolvedType: 'BOOLEAN',
+          valuesByMode: { dark: true },
+        };
+
+        beforeEach(() => {
+          vi.spyOn(console, 'warn').mockImplementation(() => {});
+          vi.spyOn(console, 'error').mockImplementation(() => {});
+        });
+
+        afterEach(() => {
+          vi.restoreAllMocks();
+        });
+
+        it('writes to root tokens that use an at-symbol', () => {
+          const theme = getAppDarkTheme();
+          theme.eds.dark.theme.color.text.utility.inverse = {
+            '@': { value: '#FFFFFF' },
+            hover: { value: '#EEEEEE' },
+          };
+          applyDark({ theme, logger: getLogger() });
+
+          expect(theme.eds.dark.theme.color.text.utility.inverse).toEqual({
+            '@': { value: '#000000' },
+            hover: { value: '#EEEEEE' },
+          });
+        });
+
+        it('skips variables without a token path', () => {
+          const logger = getLogger();
+          const stats = applyDark({
+            figmaApiReader: readerWith({ unknownType }),
+            theme: getAppDarkTheme(),
+            logger,
+          });
+
+          expect(stats.skipped.map((variable) => variable.name)).toEqual([
+            '-> text/utility/unknown',
+          ]);
+          expect(logger.warn).toHaveBeenCalledWith(
+            expect.stringContaining('no write path'),
+          );
+          expect(logger.fail).not.toHaveBeenCalled();
+          expect(console.warn).not.toHaveBeenCalled();
+        });
+
+        it('logs details for variables without a token path in verbose mode', () => {
+          const logger = getLogger();
+          applyDark({
+            figmaApiReader: readerWith({ unknownType }),
+            theme: getAppDarkTheme(),
+            isVerbose: true,
+            logger,
+          });
+
+          expect(logger.fail).toHaveBeenCalledWith(
+            expect.stringContaining('unknown resolved type'),
+          );
+          expect(console.error).toHaveBeenCalled();
+          expect(console.warn).toHaveBeenCalled();
+        });
+
+        it('logs details for orphaned variables in verbose mode', () => {
+          const { orphan } = darkModeData.meta.variables;
+          applyDark({
+            figmaApiReader: readerWith({ orphan }),
+            theme: getAppDarkTheme(),
+            isVerbose: true,
+            logger: getLogger(),
+          });
+
+          expect(console.warn).toHaveBeenCalledWith(
+            'Variable details:',
+            expect.objectContaining({ name: '-> text/utility/orphan' }),
+          );
+        });
+
+        it('logs each resolved value written in verbose mode', () => {
+          const logger = getLogger();
+          applyDark({ theme: getAppDarkTheme(), isVerbose: true, logger });
+
+          expect(logger.succeed).toHaveBeenCalledWith(
+            'Write: #000000 to eds.dark.theme.color.text.utility.inverse.value',
+          );
+        });
+
+        it('logs details for errored variables in verbose mode', () => {
+          const theme = getAppDarkTheme();
+          delete theme.eds.dark.theme.color.background;
+          applyDark({ theme, isVerbose: true, logger: getLogger() });
+
+          expect(console.error).toHaveBeenCalledWith(
+            'Variable details:',
+            expect.objectContaining({ name: '-> background/utility/base-1' }),
+          );
+        });
+      });
     });
   });
 });
