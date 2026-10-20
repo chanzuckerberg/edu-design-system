@@ -2,9 +2,10 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
 
+import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 import { useState } from 'react';
-import { userEvent } from 'storybook/test';
+import { userEvent, within } from 'storybook/test';
 
 import { Modal } from './Modal';
 import Heading from '../../components/Heading';
@@ -316,6 +317,34 @@ export const WarnOnClose: Story = {
       );
     }
     return <WarnOnCloseExample />;
+  },
+  /**
+   * Opens the modal, types a note, then tries to close it, for visual regression testing. Only
+   * runs in Chromatic. `window.confirm` is stubbed to decline, so the capture never blocks on a
+   * native prompt and the snapshot shows the modal kept open with its note.
+   */
+  play: async ({ canvasElement }) => {
+    if (isChromatic()) {
+      const canvas = within(canvasElement);
+      await userEvent.click(
+        await canvas.findByRole('button', { name: 'Open the modal' }),
+      );
+
+      // the modal renders in a portal, outside the story's canvas
+      const modal = within(document.body);
+      await userEvent.type(
+        await modal.findByLabelText('Note'),
+        'Follow up with the team',
+      );
+
+      const confirm = window.confirm;
+      window.confirm = () => false;
+      try {
+        await userEvent.click(modal.getByRole('button', { name: 'close' }));
+      } finally {
+        window.confirm = confirm;
+      }
+    }
   },
 };
 
