@@ -677,7 +677,7 @@ __metadata:
     lilconfig: "npm:^3.1.3"
     lint-staged: "npm:^17.6.0"
     lodash: "npm:^4.18.1"
-    ora: "npm:9.4.1"
+    ora: "npm:^9.4.1"
     plop: "npm:^4.0.5"
     postcss: "npm:^8.5.30"
     postcss-import: "npm:^16.2.0"
@@ -11120,22 +11120,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ora@npm:9.4.1":
-  version: 9.4.1
-  resolution: "ora@npm:9.4.1"
-  dependencies:
-    chalk: "npm:^5.6.2"
-    cli-cursor: "npm:^5.0.0"
-    cli-spinners: "npm:^3.2.0"
-    is-interactive: "npm:^2.0.0"
-    is-unicode-supported: "npm:^2.1.0"
-    log-symbols: "npm:^7.0.1"
-    stdin-discarder: "npm:^0.3.2"
-    string-width: "npm:^8.1.0"
-  checksum: 10/58b0b6c6ee20b30806e2e0bbf84f81b7517e21c9b721d0b7f186e12b9ef2e0be190174bf53085123efae6c8d120dcd9788708602e78e91188b9e12ff71abc275
-  languageName: node
-  linkType: hard
-
 "ora@npm:^5.4.1":
   version: 5.4.1
   resolution: "ora@npm:5.4.1"
@@ -11150,6 +11134,22 @@ __metadata:
     strip-ansi: "npm:^6.0.0"
     wcwidth: "npm:^1.0.1"
   checksum: 10/8d071828f40090a8e1c6e8f350c6eb065808e9ab2b3e57fa37e0d5ae78cb46dac00117c8f12c3c8b8da2923454afbd8265e08c10b69881170c5b269f451e7fef
+  languageName: node
+  linkType: hard
+
+"ora@npm:^9.4.1":
+  version: 9.4.1
+  resolution: "ora@npm:9.4.1"
+  dependencies:
+    chalk: "npm:^5.6.2"
+    cli-cursor: "npm:^5.0.0"
+    cli-spinners: "npm:^3.2.0"
+    is-interactive: "npm:^2.0.0"
+    is-unicode-supported: "npm:^2.1.0"
+    log-symbols: "npm:^7.0.1"
+    stdin-discarder: "npm:^0.3.2"
+    string-width: "npm:^8.1.0"
+  checksum: 10/58b0b6c6ee20b30806e2e0bbf84f81b7517e21c9b721d0b7f186e12b9ef2e0be190174bf53085123efae6c8d120dcd9788708602e78e91188b9e12ff71abc275
   languageName: node
   linkType: hard
 
