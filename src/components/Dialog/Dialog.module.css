@@ -42,8 +42,8 @@
  * The dialog surface, which holds the title, body, and buttons.
  *
  * Mobile-first: fills the viewport, with the buttons held at the bottom. Above the smallest
- * breakpoint it becomes a floating surface a quarter of the viewport wide, with a floor so the
- * title and buttons still fit on narrower tablets.
+ * breakpoint it becomes a floating surface, half the viewport wide at tablet widths and a quarter
+ * at desktop widths, with a floor so the title and buttons always fit.
  */
 .dialog__content {
   position: relative;
@@ -61,7 +61,7 @@
   background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
 
   @media all and (min-width: $eds-bp-sm) {
-    width: max(25vw, 360px);
+    width: max(50vw, 360px);
     max-width: calc(100vw - (var(--eds-spacing-size-6) * 1px));
     height: auto;
     max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
@@ -69,6 +69,10 @@
     border: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
     border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
     box-shadow: var(--eds-box-shadow-lg);
+  }
+
+  @media all and (min-width: $eds-bp-lg) {
+    width: max(25vw, 360px);
   }
 }
 

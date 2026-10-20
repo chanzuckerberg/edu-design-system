@@ -120,8 +120,8 @@ export const CustomCancelLabel: Story = {
 
 /**
  * The dialog shown open, for visual regression testing. It fills the viewport at the smallest
- * breakpoint and floats at a quarter of the viewport width above it, so this snapshots at
- * every available viewport.
+ * breakpoint, floats at half the viewport width at tablet widths, and a quarter at desktop
+ * widths, so this snapshots at every available viewport.
  */
 export const Open: Story = {
   args: {
