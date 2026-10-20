@@ -108,7 +108,7 @@
     "@chanzuckerberg/eslint-plugin-stories": "^3.2.14",
     "@chanzuckerberg/story-utils": "^4.0.8",
     "@chromatic-com/storybook": "^5.5.1",
-    "@codecov/rollup-plugin": "^1.9.1",
+    "@codecov/rollup-plugin": "^2.0.1",
     "@commitlint/cli": "^21.2.3",
     "@commitlint/config-conventional": "^21.2.3",
     "@github-ui/storybook-addon-performance-panel": "^1.3.0",
