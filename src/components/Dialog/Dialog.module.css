@@ -35,7 +35,7 @@
  * The inverted background of the dialog to provide contrast with the dialog itself.
  */
 .dialog__overlay {
-  background-color: rgb(from light-dark(var(--eds-theme-color-background-utility-overlay-low-emphasis), var(--eds-dark-theme-color-background-utility-overlay-low-emphasis)) r g b / 0.5);
+  background-color: light-dark(var(--eds-theme-color-background-utility-overlay-high-emphasis), var(--eds-dark-theme-color-background-utility-overlay-high-emphasis));
 }
 
 /**
