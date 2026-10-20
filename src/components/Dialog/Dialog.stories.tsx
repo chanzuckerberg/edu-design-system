@@ -2,9 +2,10 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
 
+import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 import { useState } from 'react';
-import { userEvent } from 'storybook/test';
+import { userEvent, within } from 'storybook/test';
 
 import { Dialog } from './Dialog';
 import { chromaticViewports } from '../../util/viewports';
@@ -60,42 +61,68 @@ function InteractiveExample(args: InteractiveArgs) {
 }
 
 /**
+ * Opens the dialog from its trigger, for visual regression testing. Only runs in Chromatic, so
+ * the Storybook UI never opens a dialog on its own.
+ */
+const openInChromatic: Story['play'] = async ({ canvasElement }) => {
+  if (isChromatic()) {
+    const canvas = within(canvasElement);
+    await userEvent.click(await canvas.findByRole('button'));
+  }
+};
+
+const sharedParameters: Story['parameters'] = {
+  layout: 'centered',
+  snapshot: {
+    skip: true,
+  },
+};
+
+/**
  * Clicking on a trigger item (in this case `Button`) opens the dialog. Focus starts on the
  * primary button, so Enter takes the default action. The secondary button, ESC, and a click on
  * the overlay all cancel.
+ *
+ * In Chromatic this snapshots at every available viewport: the dialog fills the viewport at the
+ * smallest breakpoint, floats at half the viewport width at tablet widths, and a quarter at
+ * desktop widths.
  */
 export const Default: Story = {
   parameters: {
-    layout: 'centered',
-    snapshot: {
-      skip: true,
+    ...sharedParameters,
+    chromatic: {
+      viewports: [
+        chromaticViewports.googlePixel2,
+        chromaticViewports.ipadMini,
+        chromaticViewports.ipadPro,
+        chromaticViewports.chromebook,
+        chromaticViewports.macbookPro,
+      ],
     },
   },
   render: (args) => <InteractiveExample {...args} />,
-  play: async () => {
-    await userEvent.tab();
-    await userEvent.keyboard(' ', { delay: 150 });
-  },
+  play: openInChromatic,
 };
 
 /**
  * Use `confirmVariant="critical"` when the default action destroys something or can't be undone.
  */
 export const Critical: Story = {
-  ...Default,
   args: {
     children: 'This removes the file for everyone in your class.',
     confirmLabel: 'Delete file',
     confirmVariant: 'critical',
     title: 'Delete “Unit 3 notes”?',
   },
+  parameters: sharedParameters,
+  render: Default.render,
+  play: openInChromatic,
 };
 
 /**
  * The body takes any React node, so it can carry formatted text.
  */
 export const FormattedBody: Story = {
-  ...Default,
   args: {
     children: (
       <>
@@ -106,44 +133,21 @@ export const FormattedBody: Story = {
     confirmLabel: 'Close assignment',
     title: 'Close this assignment?',
   },
+  parameters: sharedParameters,
+  render: Default.render,
+  play: openInChromatic,
 };
 
 /**
  * `cancelLabel` relabels the secondary button, for example to translate it.
  */
 export const CustomCancelLabel: Story = {
-  ...Default,
   args: {
     cancelLabel: 'Keep editing',
   },
-};
-
-/**
- * The dialog shown open, for visual regression testing. It fills the viewport at the smallest
- * breakpoint, floats at half the viewport width at tablet widths, and a quarter at desktop
- * widths, so this snapshots at every available viewport.
- */
-export const Open: Story = {
-  args: {
-    onCancel: () => {},
-    onConfirm: () => {},
-    open: true,
-  },
-  parameters: {
-    chromatic: {
-      disableSnapshot: false,
-      viewports: [
-        chromaticViewports.googlePixel2,
-        chromaticViewports.ipadMini,
-        chromaticViewports.ipadPro,
-        chromaticViewports.chromebook,
-        chromaticViewports.macbookPro,
-      ],
-    },
-    snapshot: {
-      skip: true,
-    },
-  },
+  parameters: sharedParameters,
+  render: Default.render,
+  play: openInChromatic,
 };
 
 /**
@@ -156,7 +160,7 @@ export const Open: Story = {
  * above the modal.
  */
 export const ConfirmingModalClose: Story = {
-  parameters: Default.parameters,
+  parameters: sharedParameters,
   render: () => {
     function ConfirmingModalCloseExample() {
       const [modalOpen, setModalOpen] = useState(false);
