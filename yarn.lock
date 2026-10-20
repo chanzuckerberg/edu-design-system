@@ -694,7 +694,7 @@ __metadata:
     remark-gfm: "npm:^4.0.1"
     rollup: "npm:^4.64.7"
     rollup-plugin-postcss: "npm:^4.0.2"
-    rollup-plugin-webpack-stats: "npm:^3.1.3"
+    rollup-plugin-webpack-stats: "npm:^4.0.1"
     storybook: "npm:^10.6.2"
     storybook-addon-tag-badges: "npm:^3.1.0"
     storybook-addon-test-codegen: "npm:^3.0.4"
@@ -12980,9 +12980,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-stats@npm:2.1.3":
-  version: 2.1.3
-  resolution: "rollup-plugin-stats@npm:2.1.3"
+"rollup-plugin-stats@npm:3.0.1":
+  version: 3.0.1
+  resolution: "rollup-plugin-stats@npm:3.0.1"
   peerDependencies:
     rolldown: ^1.0.0-beta.0
     rollup: ^3.0.0 || ^4.0.0
@@ -12994,15 +12994,15 @@ __metadata:
       optional: true
     vite:
       optional: true
-  checksum: 10/38b0b8715ecd6ed46aa2b18095edc7c6742f53cdebc45ca319b727b2c70180a3f9a9dd8f2d1dbd8f5b7ce38b8e7e4e2e950576a2da0495f043811cde8848cfdd
+  checksum: 10/7df909955798d5260ce8a2855b252455cf13671dfdc6ee2af205e2948e4fe7920e3b632ee0f5f138915c2c3f18643e43a890e491e758d8331485fc1e64160928
   languageName: node
   linkType: hard
 
-"rollup-plugin-webpack-stats@npm:^3.1.3":
-  version: 3.1.3
-  resolution: "rollup-plugin-webpack-stats@npm:3.1.3"
+"rollup-plugin-webpack-stats@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "rollup-plugin-webpack-stats@npm:4.0.1"
   dependencies:
-    rollup-plugin-stats: "npm:2.1.3"
+    rollup-plugin-stats: "npm:3.0.1"
   peerDependencies:
     rolldown: ^1.0.0-beta.0
     rollup: ^3.0.0 || ^4.0.0
@@ -13014,7 +13014,7 @@ __metadata:
       optional: true
     vite:
       optional: true
-  checksum: 10/9a1edd770ddb7ae51a2e3a100dab76fd290cbac9d4ad51d6c0ceae65836b4a79a96fac1691c55ce729db828c356b670a962760651a478766e0dda5441379584d
+  checksum: 10/aaa5520cd747442ebac22f8b77850c42ac92adccfda172fc44e224d0e532992bdeee504e205bffa6defd24fcf3778cfcb89542a13429ff248e8a6f3a1155c9e5
   languageName: node
   linkType: hard
 
