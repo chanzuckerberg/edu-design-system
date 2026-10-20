@@ -588,7 +588,8 @@ module.exports = {
     isVerbose = false,
     logger,
   }) {
-    const chalk = require('chalk');
+    // chalk v5+ is ESM-only; require() returns the module namespace
+    const chalk = require('chalk').default;
     const at = require('lodash/at');
     const identity = require('lodash/identity');
     const set = require('lodash/set');
