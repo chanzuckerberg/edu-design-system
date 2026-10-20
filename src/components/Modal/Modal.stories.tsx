@@ -14,6 +14,7 @@ import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import { IconProvider } from '../Icon';
+import InputField from '../InputField';
 
 export default {
   title: 'Components/Modal',
@@ -27,7 +28,7 @@ export default {
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:4.0.1'],
+  tags: ['autodocs', 'version:4.1.0'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -248,6 +249,54 @@ export const Small: Story = {
   parameters: Default.parameters,
   render: Default.render,
   play: Default.play,
+};
+
+/**
+ * Type in the field, then try to close the modal with the close button, ESC, or a click on the
+ * overlay. Closing clears the note, so the modal warns while there's one to lose.
+ * `warnOnClose` takes a function here, so an empty modal closes without asking.
+ *
+ * If the note survived closing and reopening instead, closing would lose nothing and the
+ * warning wouldn't be needed.
+ */
+export const WarnOnClose: Story = {
+  parameters: Default.parameters,
+  render: (args) => {
+    function WarnOnCloseExample() {
+      const [open, setOpen] = useState(false);
+      const [draft, setDraft] = useState('');
+      const handleClose = () => {
+        setOpen(false);
+        // closing discards the draft, which is what makes the warning worth showing
+        setDraft('');
+      };
+      return (
+        <div className="flex justify-center">
+          <Button onClick={() => setOpen(true)} rank="primary">
+            Open the modal
+          </Button>
+          <Modal
+            {...args}
+            onClose={handleClose}
+            open={open}
+            warnOnClose={() => draft !== ''}
+          >
+            <Modal.Header>
+              <Modal.Title>Add a note</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <InputField
+                label="Note"
+                onChange={(event) => setDraft(event.target.value)}
+                value={draft}
+              />
+            </Modal.Body>
+          </Modal>
+        </div>
+      );
+    }
+    return <WarnOnCloseExample />;
+  },
 };
 
 /**
