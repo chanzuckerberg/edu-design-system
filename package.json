@@ -158,7 +158,7 @@
     "postcss": "^8.5.30",
     "postcss-import": "^17.0.1",
     "postcss-mixins": "^12.1.2",
-    "postcss-nested": "^7.0.2",
+    "postcss-nested": "^8.0.1",
     "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.9.10",
     "prettier-plugin-tailwindcss": "^0.8.1",
