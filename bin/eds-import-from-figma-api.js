@@ -8,7 +8,8 @@
   const chalk = require('chalk').default;
   const { prompt } = require('enquirer');
   const uniq = require('lodash/uniq');
-  const ora = require('ora');
+  // ora v6+ is ESM-only; require() returns the module namespace
+  const ora = require('ora').default;
 
   const { hideBin } = require('yargs/helpers');
   const yargs = require('yargs/yargs');
