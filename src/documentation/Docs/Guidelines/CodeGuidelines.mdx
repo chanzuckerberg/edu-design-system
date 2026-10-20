@@ -32,7 +32,7 @@ EDS supports these browsers, on desktop and mobile. `browserslist` in `package.j
 | ------------ | --------------- |
 | Chrome       | 123             |
 | Edge         | 123             |
-| Firefox      | 125             |
+| Firefox      | 128             |
 | Safari       | 17.5            |
 | Safari (iOS) | 17.5            |
 
@@ -42,6 +42,7 @@ The floor comes from the features components use:
 | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------- | ------- | ------ |
 | CSS [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark)                          | Theming (`body.css`, component styles) | 123           | 120     | 17.5   |
 | [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) | `Avatar`                               | 87            | 125     | 14.1   |
+| CSS [relative colors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (`rgb(from …)`)    | `Avatar`, `Modal`, `ScrollWrapper`     | 119           | 128     | 16.4   |
 
 When a change relies on a feature newer than this floor:
 

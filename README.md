@@ -25,7 +25,7 @@ EDS supports the following browsers, on desktop and mobile. The same list is dec
 | ---------------- | --------------- |
 | Chrome           | 123             |
 | Edge             | 123             |
-| Firefox          | 125             |
+| Firefox          | 128             |
 | Safari           | 17.5            |
 | Safari (iOS)     | 17.5            |
 
@@ -35,6 +35,7 @@ These features set the floor:
 | ------- | ------- | ------------- | ------- | ------ |
 | CSS [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark) | Theming (`body.css`, component styles) | 123 | 120 | 17.5 |
 | [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) | `Avatar` | 87 | 125 | 14.1 |
+| CSS [relative colors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (`rgb(from …)`) | `Avatar`, `Modal`, `ScrollWrapper` | 119 | 128 | 16.4 |
 
 #### Vite 8 and Lightning CSS
 
@@ -44,12 +45,12 @@ Vite 8 minifies CSS with Lightning CSS, which lowers syntax to `build.cssTarget`
 // vite.config.ts
 export default defineConfig({
   build: {
-    cssTarget: ['chrome123', 'edge123', 'firefox120', 'safari17.5', 'ios17.5'],
+    cssTarget: ['chrome123', 'edge123', 'firefox128', 'safari17.5', 'ios17.5'],
   },
 });
 ```
 
-Firefox 125 is a JavaScript floor (`Intl.Segmenter`), so the CSS target can stay at 120. `css.lightningcss.targets` doesn't help here: Vite's minifier overrides it with `build.cssTarget`.
+`css.lightningcss.targets` doesn't help here: Vite's minifier overrides it with `build.cssTarget`.
 
 ## Installation
 
