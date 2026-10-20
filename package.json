@@ -150,7 +150,7 @@
     "eslint-plugin-storybook": "^10.6.2",
     "eslint-plugin-testing-library": "^7.16.2",
     "globals": "^17.13.0",
-    "happy-dom": "^20.14.6",
+    "happy-dom": "^21.0.1",
     "husky": "^9.1.7",
     "jsdom-testing-mocks": "^1.16.0",
     "lint-staged": "^17.6.0",
