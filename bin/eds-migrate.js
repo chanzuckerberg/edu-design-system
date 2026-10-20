@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line import/extensions
+// eslint-disable-next-line import-x/extensions
 require('../lib/bin/eds-migrate.js')
   .run()
   .then(() => {

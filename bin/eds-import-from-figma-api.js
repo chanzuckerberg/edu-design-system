@@ -9,7 +9,6 @@
   const uniq = require('lodash/uniq');
   const ora = require('ora');
 
-  // eslint-disable-next-line import/extensions
   const { hideBin } = require('yargs/helpers');
   const yargs = require('yargs/yargs');
 
