@@ -139,7 +139,7 @@
     "chromatic": "^18.12.2",
     "commit-and-tag-version": "^13.3.0",
     "eslint": "^8.57.1",
-    "eslint-config-prettier": "^9.1.2",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
     "eslint-plugin-storybook": "^10.6.2",
     "eslint-plugin-testing-library": "^7.16.2",
