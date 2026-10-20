@@ -156,7 +156,7 @@
     "lint-staged": "^17.6.0",
     "plop": "^4.0.5",
     "postcss": "^8.5.30",
-    "postcss-import": "^16.2.0",
+    "postcss-import": "^17.0.1",
     "postcss-mixins": "^12.1.2",
     "postcss-nested": "^7.0.2",
     "postcss-simple-vars": "^7.0.1",
