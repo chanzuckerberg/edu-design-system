@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { hideBin } from 'yargs/helpers'; // eslint-disable-line import/extensions
+import { hideBin } from 'yargs/helpers';
 import yargs from 'yargs/yargs';
 import runMigration, { listMigrations } from './migrate';
 
