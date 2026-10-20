@@ -151,6 +151,29 @@ export const CustomCancelLabel: Story = {
 };
 
 /**
+ * Opens the modal, types a note, then tries to close it with the close button, so the snapshot
+ * shows the confirming `Dialog` stacked above the modal. Only runs in Chromatic, so the
+ * Storybook UI never opens either on its own.
+ */
+const openNoteAndClose: Story['play'] = async ({ canvasElement }) => {
+  if (isChromatic()) {
+    const canvas = within(canvasElement);
+    await userEvent.click(
+      await canvas.findByRole('button', { name: 'Open the modal' }),
+    );
+
+    // the modal and dialog render in portals, outside the story's canvas
+    const page = within(document.body);
+    await userEvent.type(
+      await page.findByLabelText('Note'),
+      'Follow up with the team',
+    );
+    await userEvent.click(page.getByRole('button', { name: 'close' }));
+    await page.findByRole('alertdialog');
+  }
+};
+
+/**
  * A `Dialog` in place of `Modal`'s `warnOnClose`. Type in the field, then try to close the modal
  * with the close button, ESC, or a click on the overlay. Closing clears the note, so the modal
  * asks first while there's one to lose; an empty modal closes straight away.
@@ -219,4 +242,5 @@ export const ConfirmingModalClose: Story = {
     }
     return <ConfirmingModalCloseExample />;
   },
+  play: openNoteAndClose,
 };
