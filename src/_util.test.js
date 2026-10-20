@@ -1041,4 +1041,385 @@ describe('utils', function () {
       });
     });
   });
+
+  describe('dark mode import', () => {
+    // A tier 1 collection with one mode, and a tier 2 collection with light and dark theme modes
+    const darkModeData = {
+      meta: {
+        variableCollections: {
+          tier1: {
+            id: 'tier1',
+            name: 'Tier 1',
+            hiddenFromPublishing: false,
+            modes: [{ modeId: 't1', name: 'Value' }],
+          },
+          tier2: {
+            id: 'tier2',
+            name: 'Tier 2',
+            hiddenFromPublishing: false,
+            modes: [
+              { modeId: 'light', name: 'EDS' },
+              { modeId: 'brand', name: 'Brand' },
+              { modeId: 'brandDark', name: 'Brand Dark' },
+              { modeId: 'dark', name: 'EDS Dark' },
+            ],
+          },
+        },
+        variables: {
+          white: {
+            id: 'white',
+            name: 'Render/neutral/white',
+            variableCollectionId: 'tier1',
+            resolvedType: 'COLOR',
+            valuesByMode: { t1: { r: 1, g: 1, b: 1, a: 1 } },
+          },
+          black: {
+            id: 'black',
+            name: 'Render/neutral/black',
+            variableCollectionId: 'tier1',
+            resolvedType: 'COLOR',
+            valuesByMode: { t1: { r: 0, g: 0, b: 0, a: 1 } },
+          },
+          inverse: {
+            id: 'inverse',
+            name: '-> text/utility/inverse',
+            variableCollectionId: 'tier2',
+            resolvedType: 'COLOR',
+            valuesByMode: {
+              light: { type: 'VARIABLE_ALIAS', id: 'white' },
+              dark: { type: 'VARIABLE_ALIAS', id: 'black' },
+            },
+          },
+          base: {
+            id: 'base',
+            name: '-> background/utility/base-1',
+            variableCollectionId: 'tier2',
+            resolvedType: 'COLOR',
+            valuesByMode: {
+              light: { r: 1, g: 1, b: 1, a: 1 },
+              dark: { r: 0, g: 0, b: 0, a: 1 },
+            },
+          },
+          typography: {
+            id: 'typography',
+            name: 'typography/font-family/body',
+            variableCollectionId: 'tier2',
+            resolvedType: 'STRING',
+            valuesByMode: { light: 'Inter', dark: 'Inter' },
+          },
+          orphan: {
+            id: 'orphan',
+            name: '-> text/utility/orphan',
+            variableCollectionId: 'tier2',
+            resolvedType: 'COLOR',
+            deletedButReferenced: true,
+            valuesByMode: {
+              light: { type: 'VARIABLE_ALIAS', id: 'white' },
+              dark: { type: 'VARIABLE_ALIAS', id: 'black' },
+            },
+          },
+        },
+      },
+    };
+
+    // mirrors core-dark-tokens.json, where tier 2 tokens live under eds.dark.theme
+    const getLocalDarkTheme = () => ({
+      eds: {
+        color: {
+          neutral: {
+            white: { value: '#FFFFFF' },
+            black: { value: '#000000' },
+          },
+        },
+        dark: {
+          theme: {
+            color: {
+              text: {
+                utility: { inverse: { value: '{eds.color.neutral.white}' } },
+              },
+              background: {
+                utility: { base: { 1: { value: '#FFFFFF' } } },
+              },
+            },
+          },
+        },
+      },
+    });
+
+    // mirrors app-theme-dark.json (from theme-base-dark.json), which only has the dark theme tokens
+    const getAppDarkTheme = () => ({
+      eds: {
+        dark: {
+          theme: {
+            color: {
+              text: { utility: { inverse: { value: '#FFFFFF' } } },
+              background: {
+                utility: { base: { 1: { value: '#FFFFFF' } } },
+              },
+            },
+          },
+        },
+      },
+    });
+
+    const getLogger = () => ({
+      warn: vi.fn(),
+      fail: vi.fn(),
+      succeed: vi.fn(),
+      text: '',
+    });
+
+    const applyDark = (options) =>
+      utils.applyFigmaVariablesToTheme({
+        figmaApiReader: new utils.FigmaAPIReader(darkModeData),
+        collectionId: 'tier2',
+        tier1ModeId: 't1',
+        tier2ModeId: 'dark',
+        tier1CollectionName: 'Render',
+        themePath: utils.FigmaVariable.DARK_THEME_PATH,
+        ...options,
+      });
+
+    describe('FigmaVariable', () => {
+      it('defaults the token path to the theme', () => {
+        const variable = new utils.FigmaVariable(
+          darkModeData.meta.variables.inverse,
+          't1',
+          'light',
+          'Render',
+          new utils.FigmaAPIReader(darkModeData),
+        );
+
+        expect(variable.getTokenPath()).toEqual(
+          'eds.theme.color.text.utility.inverse',
+        );
+      });
+
+      it('uses the dark theme path for token paths', () => {
+        const reader = new utils.FigmaAPIReader(darkModeData);
+        const color = new utils.FigmaVariable(
+          darkModeData.meta.variables.base,
+          't1',
+          'dark',
+          'Render',
+          reader,
+          utils.FigmaVariable.DARK_THEME_PATH,
+        );
+        const string = new utils.FigmaVariable(
+          darkModeData.meta.variables.typography,
+          't1',
+          'dark',
+          'Render',
+          reader,
+          utils.FigmaVariable.DARK_THEME_PATH,
+        );
+
+        expect(color.getTokenPath()).toEqual(
+          'eds.dark.theme.color.background.utility.base.1',
+        );
+        expect(string.getTokenPath()).toEqual(
+          'eds.dark.theme.typography.font.family.body',
+        );
+      });
+
+      it('resolves values and refs using the dark mode', () => {
+        const variable = new utils.FigmaVariable(
+          darkModeData.meta.variables.inverse,
+          't1',
+          'dark',
+          'Render',
+          new utils.FigmaAPIReader(darkModeData),
+          utils.FigmaVariable.DARK_THEME_PATH,
+        );
+
+        expect(variable.value).toEqual('#000000');
+        expect(variable.valueRef).toEqual('eds.color.neutral.black');
+      });
+
+      it('uses the dark theme path for refs to tier 2 tokens', () => {
+        const reader = new utils.FigmaAPIReader(darkModeData);
+        // alias a tier 2 token that holds a literal value
+        const variable = new utils.FigmaVariable(
+          {
+            ...darkModeData.meta.variables.inverse,
+            valuesByMode: { dark: { type: 'VARIABLE_ALIAS', id: 'base' } },
+          },
+          't1',
+          'dark',
+          'Render',
+          reader,
+          utils.FigmaVariable.DARK_THEME_PATH,
+        );
+
+        expect(variable.valueRef).toEqual(
+          'eds.dark.theme.color.background.utility.base.1',
+        );
+      });
+    });
+
+    describe('findDarkMode', () => {
+      const modes = darkModeData.meta.variableCollections.tier2.modes;
+
+      it('prefers the dark mode matching the theme name', () => {
+        expect(utils.findDarkMode(modes, 'brand')).toEqual({
+          modeId: 'brandDark',
+          name: 'Brand Dark',
+        });
+        expect(utils.findDarkMode(modes, 'light')).toEqual({
+          modeId: 'dark',
+          name: 'EDS Dark',
+        });
+      });
+
+      it('falls back to any mode with dark in the name', () => {
+        expect(
+          utils.findDarkMode(
+            [
+              { modeId: 'a', name: 'Theme A' },
+              { modeId: 'b', name: 'dark' },
+            ],
+            'a',
+          ),
+        ).toEqual({ modeId: 'b', name: 'dark' });
+      });
+
+      it('ignores "light" when matching theme names', () => {
+        expect(
+          utils.findDarkMode(
+            [
+              { modeId: 'x', name: 'Other Dark' },
+              { modeId: 'a', name: 'Brand Light' },
+              { modeId: 'b', name: 'Brand Dark' },
+            ],
+            'a',
+          ),
+        ).toEqual({ modeId: 'b', name: 'Brand Dark' });
+      });
+
+      it('does not suggest the selected theme mode', () => {
+        expect(
+          utils.findDarkMode([{ modeId: 'a', name: 'Dark' }], 'a'),
+        ).toBeUndefined();
+      });
+
+      it('returns undefined when there is no dark mode', () => {
+        expect(
+          utils.findDarkMode(
+            [
+              { modeId: 'a', name: 'Theme A' },
+              { modeId: 'b', name: 'Theme B' },
+            ],
+            'a',
+          ),
+        ).toBeUndefined();
+      });
+    });
+
+    describe('applyFigmaVariablesToTheme', () => {
+      it('writes token references to core-dark-tokens.json in local mode', () => {
+        const theme = getLocalDarkTheme();
+        const stats = applyDark({ theme, isLocal: true, logger: getLogger() });
+
+        expect(theme.eds.dark.theme.color.text.utility.inverse.value).toEqual(
+          '{eds.color.neutral.black}',
+        );
+        expect(
+          theme.eds.dark.theme.color.background.utility.base[1].value,
+        ).toEqual('#000000');
+        expect(stats.updated).toHaveLength(2);
+      });
+
+      it('writes resolved values to app-theme-dark.json in non-local mode', () => {
+        const theme = getAppDarkTheme();
+        const stats = applyDark({ theme, logger: getLogger() });
+
+        expect(theme.eds.dark.theme.color.text.utility.inverse.value).toEqual(
+          '#000000',
+        );
+        expect(
+          theme.eds.dark.theme.color.background.utility.base[1].value,
+        ).toEqual('#000000');
+        expect(stats.updated).toHaveLength(2);
+      });
+
+      it('leaves light theme tokens alone when writing dark values', () => {
+        const theme = {
+          eds: {
+            ...getAppDarkTheme().eds,
+            theme: {
+              color: {
+                text: { utility: { inverse: { value: '#FFFFFF' } } },
+              },
+            },
+          },
+        };
+        applyDark({ theme, logger: getLogger() });
+
+        expect(theme.eds.theme.color.text.utility.inverse.value).toEqual(
+          '#FFFFFF',
+        );
+        expect(theme.eds.dark.theme.color.text.utility.inverse.value).toEqual(
+          '#000000',
+        );
+      });
+
+      it('does not write in dry-run mode', () => {
+        const theme = getLocalDarkTheme();
+        const logger = getLogger();
+        const stats = applyDark({
+          theme,
+          isLocal: true,
+          canWrite: false,
+          logger,
+        });
+
+        expect(theme).toEqual(getLocalDarkTheme());
+        expect(stats.updated).toHaveLength(2);
+        expect(logger.succeed).toHaveBeenCalledWith(
+          'Write: eds.color.neutral.black to eds.dark.theme.color.text.utility.inverse.value',
+        );
+      });
+
+      it('skips typography and orphaned variables', () => {
+        const logger = getLogger();
+        const stats = applyDark({ theme: getAppDarkTheme(), logger });
+
+        expect(stats.total).toHaveLength(4);
+        expect(stats.skipped.map((variable) => variable.name)).toEqual([
+          '-> text/utility/orphan',
+        ]);
+        expect(logger.warn).toHaveBeenCalledWith(
+          expect.stringContaining('orphaned'),
+        );
+      });
+
+      it('errors when the token is missing from the dark theme file', () => {
+        const theme = getAppDarkTheme();
+        delete theme.eds.dark.theme.color.background;
+        const logger = getLogger();
+        const stats = applyDark({ theme, logger });
+
+        expect(stats.errored.map((variable) => variable.name)).toEqual([
+          '-> background/utility/base-1',
+        ]);
+        expect(logger.fail).toHaveBeenCalledWith(
+          expect.stringContaining('Name format violation'),
+        );
+      });
+
+      it('errors when a local reference is missing from the dark theme file', () => {
+        const theme = getLocalDarkTheme();
+        delete theme.eds.color.neutral.black;
+        const logger = getLogger();
+        const stats = applyDark({ theme, isLocal: true, logger });
+
+        expect(stats.errored.map((variable) => variable.name)).toEqual([
+          '-> text/utility/inverse',
+        ]);
+        expect(theme.eds.dark.theme.color.text.utility.inverse.value).toEqual(
+          '{eds.color.neutral.white}',
+        );
+      });
+    });
+  });
 });
