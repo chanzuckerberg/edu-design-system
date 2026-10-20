@@ -468,7 +468,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:^6.1.2"
     "@vitest/coverage-v8": "npm:^4.1.12"
     "@vitest/ui": "npm:4.1.12"
-    chalk: "npm:^4.1.2"
+    chalk: "npm:^6.0.1"
     chromatic: "npm:^18.12.2"
     clsx: "npm:^2.1.1"
     commit-and-tag-version: "npm:^13.3.0"
@@ -4727,7 +4727,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:4.1.2, chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
+"chalk@npm:4.1.2, chalk@npm:^4.0.0, chalk@npm:^4.1.0":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
