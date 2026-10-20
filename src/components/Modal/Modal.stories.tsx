@@ -14,6 +14,7 @@ import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import { IconProvider } from '../Icon';
+import InputField from '../InputField';
 
 export default {
   title: 'Components/Modal',
@@ -27,7 +28,7 @@ export default {
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:4.0.1'],
+  tags: ['autodocs', 'version:4.1.0'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -248,6 +249,35 @@ export const Small: Story = {
   parameters: Default.parameters,
   render: Default.render,
   play: Default.play,
+};
+
+/**
+ * Type in the field, then try to close the modal with the close button, ESC, or a click on the
+ * overlay. `warnOnClose` takes a function here, so the browser asks to confirm only while the
+ * field holds a draft.
+ */
+export const WarnOnClose: Story = {
+  parameters: Default.parameters,
+  render: (args) => {
+    function WarnOnCloseExample() {
+      const [draft, setDraft] = useState('');
+      return (
+        <InteractiveExample {...args} warnOnClose={() => draft !== ''}>
+          <Modal.Header>
+            <Modal.Title>Add a note</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <InputField
+              label="Note"
+              onChange={(event) => setDraft(event.target.value)}
+              value={draft}
+            />
+          </Modal.Body>
+        </InteractiveExample>
+      );
+    }
+    return <WarnOnCloseExample />;
+  },
 };
 
 /**

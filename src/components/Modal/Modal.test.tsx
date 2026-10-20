@@ -62,6 +62,92 @@ describe('Modal', () => {
     });
   });
 
+  describe('warnOnClose', () => {
+    const openModal = (
+      props: Partial<React.ComponentProps<typeof Modal>> = {},
+    ) => {
+      const onClose = vi.fn();
+      render(
+        <Modal onClose={onClose} open {...props}>
+          <Modal.Header>
+            <Modal.Title>Modal Title</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Modal body content.</Modal.Body>
+        </Modal>,
+      );
+      return onClose;
+    };
+
+    // jsdom doesn't implement `window.confirm`, so stub it per test.
+    const mockConfirm = (answer = false) => {
+      const confirmMock = vi.fn(() => answer);
+      vi.stubGlobal('confirm', confirmMock);
+      return confirmMock;
+    };
+
+    afterEach(() => {
+      vi.unstubAllGlobals();
+    });
+
+    it('closes without asking by default', async () => {
+      const user = userEvent.setup();
+      const confirmMock = mockConfirm();
+      const onClose = openModal();
+      await user.click(await screen.findByRole('button', { name: 'close' }));
+      expect(confirmMock).not.toHaveBeenCalled();
+      expect(onClose).toHaveBeenCalledTimes(1);
+    });
+
+    it('keeps the modal open when the user cancels', async () => {
+      const user = userEvent.setup();
+      const confirmMock = mockConfirm(false);
+      const onClose = openModal({ warnOnClose: true });
+      await user.click(await screen.findByRole('button', { name: 'close' }));
+      expect(confirmMock).toHaveBeenCalledWith(
+        'You have unsaved changes. Close anyway?',
+      );
+      expect(onClose).not.toHaveBeenCalled();
+    });
+
+    it('closes when the user confirms', async () => {
+      const user = userEvent.setup();
+      mockConfirm(true);
+      const onClose = openModal({ warnOnClose: true });
+      await user.click(await screen.findByRole('button', { name: 'close' }));
+      expect(onClose).toHaveBeenCalledTimes(1);
+    });
+
+    it('asks on ESC key press, with a custom message', async () => {
+      const user = userEvent.setup();
+      const confirmMock = mockConfirm(false);
+      const onClose = openModal({
+        warnOnClose: true,
+        warnOnCloseMessage: 'Discard your note?',
+      });
+      await screen.findByRole('dialog');
+      await user.keyboard('{Escape}');
+      expect(confirmMock).toHaveBeenCalledWith('Discard your note?');
+      expect(onClose).not.toHaveBeenCalled();
+    });
+
+    it('asks only when the function returns true', async () => {
+      const user = userEvent.setup();
+      const confirmMock = mockConfirm(false);
+      let isDirty = false;
+      const onClose = openModal({ warnOnClose: () => isDirty });
+      const closeButton = await screen.findByRole('button', { name: 'close' });
+
+      await user.click(closeButton);
+      expect(confirmMock).not.toHaveBeenCalled();
+      expect(onClose).toHaveBeenCalledTimes(1);
+
+      isDirty = true;
+      await user.click(closeButton);
+      expect(confirmMock).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledTimes(1);
+    });
+  });
+
   it('does not print an error if modal uses <Modal.Title>', () => {
     const consoleErrorMock = vi.spyOn(console, 'error');
     consoleErrorMock.mockImplementation(() => {});

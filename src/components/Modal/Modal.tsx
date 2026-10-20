@@ -134,6 +134,35 @@ type ModalProps = ModalContentProps & {
    * Additional classnames passed in for the modal container.
    */
   modalContainerClassName?: string;
+  /**
+   * Asks the user to confirm before the modal closes, so unsaved work in it isn't lost to a
+   * stray ESC key, overlay click, or close button click. Uses the browser's `window.confirm`.
+   *
+   * - `true` always asks
+   * - a function is called at close time, and asks only when it returns `true`. Use it to check
+   *   whether the modal's state is dirty
+   *
+   * This covers only the closes the modal triggers itself. A button you put in `Modal.Footer`
+   * calls your own handler, so check there too if it discards work.
+   *
+   * ```
+   * const [draft, setDraft] = useState('');
+   * // ....
+   *
+   * <Modal warnOnClose={() => draft !== ''} onClose={() => setIsOpen(false)} open={isOpen}>
+   *  ...
+   * </Modal>
+   * ```
+   *
+   * **Default is `false`**.
+   */
+  warnOnClose?: boolean | (() => boolean);
+  /**
+   * The question `window.confirm` asks when `warnOnClose` applies.
+   *
+   * **Default is `"You have unsaved changes. Close anyway?"`**.
+   */
+  warnOnCloseMessage?: string;
 };
 
 type ModalTitleProps = ExtractProps<typeof Heading> & {
@@ -493,6 +522,7 @@ const ModalContent = (props: ModalContentProps) => {
  * * Show one modal at a time. Don't place a modal on top of another modal. This can create usability issues.
  * * For important error notifications, use Inline Notification or Banner.
  * * For short messaging confirming successful interactions, such as "Email sent", use Inline Notification or Toast.
+ * * When a modal holds work a user could lose, like a partly filled form, set `warnOnClose` so closing it asks first.
  *
  * ## Content & Accessibility
  *
@@ -524,8 +554,21 @@ export const Modal = (props: ModalProps) => {
     modalContainerClassName,
     onClose,
     open,
+    warnOnClose = false,
+    warnOnCloseMessage = 'You have unsaved changes. Close anyway?',
     ...rest
   } = props;
+
+  const handleClose = () => {
+    const shouldWarn =
+      typeof warnOnClose === 'function' ? warnOnClose() : warnOnClose;
+    // the browser's own prompt, which blocks until the user answers
+    // eslint-disable-next-line no-alert
+    if (shouldWarn && !window.confirm(warnOnCloseMessage)) {
+      return;
+    }
+    onClose();
+  };
 
   assertEdsUsage(
     [!childrenHaveModalTitle(rest.children) && !ariaLabel],
@@ -551,11 +594,11 @@ export const Modal = (props: ModalProps) => {
         className={componentClassName}
         initialFocus={initialFocus}
         // Passing onClose to the Dialog allows it to close the modal when the ESC key is triggered.
-        onClose={onClose}
+        onClose={handleClose}
       >
         <div className={styles['modal__overlay']} />
         <DialogPanel className={styles['modal__panel']}>
-          <ModalContent onClose={onClose} open={open} {...rest} />
+          <ModalContent onClose={handleClose} open={open} {...rest} />
         </DialogPanel>
       </Dialog>
     </Transition>
