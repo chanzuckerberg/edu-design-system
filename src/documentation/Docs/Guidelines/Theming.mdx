@@ -134,22 +134,31 @@ First, create a configuration file to determine the source and destination direc
 
 Command to run: `npx eds-init-theme`
 
-This will create a new JSON file `app-theme.json` that defines ALL the available tokens for EDS that you can edit. It will copy the template file to configured `src` path in your project.
+This will create two new JSON files in the configured `src` path in your project, which define ALL the available tokens for EDS that you can edit:
 
-This file is a baseline config to be used later in the process.
+- `app-theme.json` (the theme tokens, plus the tier 1 tokens they use)
+- `app-theme-dark.json` (the dark theme (tier 2) tokens, under `eds.dark.theme`)
+
+These files are a baseline config to be used later in the process.
+
+If a theme file already exists, it is left alone. For projects themed before EDS supported dark mode, run `npx eds-init-theme` again to add `app-theme-dark.json`.
 
 ### eds-apply-theme
 
 Command to run: `npx eds-apply-theme`
 
-Using `eds-apply-theme` will read in the newly-created `app-theme.json` file, and create the tokens to use in your project.
+Using `eds-apply-theme` will read in the newly-created `app-theme.json` and `app-theme-dark.json` files, and create the tokens to use in your project.
 
 Once run, you will have a set of theme files written to the configured `dest` path:
 
 - `app-theme.css` (CSS file containing custom CSS variables with the theme values for the application)
 - `app-tailwind-theme.config.json` (Configuration file for configuring tailwind in the application)
+- `app-theme-dark.css` (CSS file containing the `--eds-dark-theme-*` CSS variables with the dark theme values)
+- `app-tailwind-dark-theme.config.json` (Configuration file for the dark theme tailwind colors)
 
-To use, add this file to your core app root file **after** where the imported EDS's `@chanzuckerberg/eds/index.css` file is inserted.
+The dark theme files are only generated when `app-theme-dark.json` exists.
+
+To use, add the CSS files to your core app root file **after** where the imported EDS's `@chanzuckerberg/eds/index.css` file is inserted.
 
 For setting up Storybook, refer to [storybook documentation](?path=/docs/documentation-theming-using-eds-theming-with-storybook--docs).
 
@@ -171,6 +180,14 @@ npx eds-import-from-figma-api file <file_id> --token <personal_access_token>
 
 **NOTE**: the tooling currently does not pull in any typography tokens from figma. Work with your design partner(s) to add the appropriate values from figma into code.
 
+#### Importing dark mode values
+
+After selecting the theme, the command asks for the mode containing that theme's dark values. It suggests a mode with "dark" in its name (e.g., "Brand Dark" for the "Brand" theme). Select **Skip** if the theme has no dark mode.
+
+Theme values are written to `app-theme.json`, and dark values to `app-theme-dark.json`. If `app-theme-dark.json` does not exist, the dark values are skipped with a warning; run `npx eds-init-theme` to create it. Then, run `npx eds-apply-theme` to regenerate the theme files.
+
+When working in EDS itself (using `--local`), the values are written to `src/design-tokens/core-tokens.json` and `src/design-tokens/core-dark-tokens.json`.
+
 [figma-enterprise]: https://www.figma.com/enterprise/
 [figma-api-docs]: https://www.figma.com/developers/api
 [figma-access-token-docs]: https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens
@@ -186,21 +203,82 @@ EDS provides a utility method to pull in the theme config and generate the prope
 ```ts
 // in your tailwind.config.ts file
 import type { Config } from 'tailwindcss';
-import {applyTailwindConfig} from '@chanzuckerberg/eds/tailwind.config';
+import edsConfig, {applyTailwindConfig} from '@chanzuckerberg/eds/tailwind.config';
 import {eds as customTokens} from "./<edsrc.json:dest>/app-tailwind-theme.config.json"; // where <edsrc.json:dest> is the path configured in .edsrc.json
+import {eds as customDarkTokens} from "./<edsrc.json:dest>/app-tailwind-dark-theme.config.json"; // optional, adds the dark- colors (see "Tailwind dark mode")
 
 // export the following
 export default {
   // your project's `content` array
   content: ['./app/**/*.{ts,tsx,jsx,js}'],
+  darkMode: edsConfig.darkMode,
   theme: {
-    ...applyTailwindConfig(customTokens)
+    ...applyTailwindConfig(customTokens, customDarkTokens)
     // ...any local theme overrides and additions...
   },
 } satisfies Config
 
 ```
 
+## Manually setting up a theme
+
+Without access to the Figma API, you can edit the theme files by hand. Each token is a JSON object with a `value`, and its path matches the CSS variable name. For example, this sets `--eds-theme-color-background-utility-base-1`:
+
+```json
+// in app-theme.json
+{
+  "eds": {
+    "theme": {
+      "color": {
+        "background": {
+          "utility": {
+            "base": {
+              "1": {
+                "value": "#FFFFFF"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The dark theme uses the same structure, under `eds.dark.theme`, and sets the matching `--eds-dark-theme-*` CSS variable:
+
+```json
+// in app-theme-dark.json
+{
+  "eds": {
+    "dark": {
+      "theme": {
+        "color": {
+          "background": {
+            "utility": {
+              "base": {
+                "1": {
+                  "value": "#1A1A1A"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+A few rules apply:
+
+- Only edit tokens that already exist in the files from `eds-init-theme`. Tokens EDS doesn't define have no effect on components.
+- Use theme (tier 2) tokens for color changes. Tier 1 tokens (e.g., `eds.color.*`) are shared across all themes.
+- Keep light and dark values in sync: EDS components use the theme value in light mode, and the dark theme value in dark mode, so a token changed in one file usually needs a matching change in the other.
+- Values can be literals (e.g., `"#FFFFFF"`), or references to other tokens in the same file (e.g., `"{eds.color.white}"` in `app-theme.json`).
+
+Once done, run `npx eds-apply-theme` to regenerate the CSS and tailwind files.
+
 <hr />
 
-If there are any future updates to the theme, edit the contents of `app-theme.json`, then re-run `npx eds-apply-theme`. Then commit the changes, and that's it!
+If there are any future updates to the theme, edit the contents of `app-theme.json` and `app-theme-dark.json`, then re-run `npx eds-apply-theme`. Then commit the changes, and that's it!

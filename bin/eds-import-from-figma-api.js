@@ -1,14 +1,11 @@
 #!/usr/bin/env node
 
-const { identity } = require('lodash');
-
 // Script shell
 (async function () {
+  const fs = require('fs');
   const jsonfile = require('jsonfile');
   const chalk = require('chalk');
   const { prompt } = require('enquirer');
-  const set = require('lodash/set');
-  const at = require('lodash/at');
   const uniq = require('lodash/uniq');
   const ora = require('ora');
 
@@ -16,7 +13,13 @@ const { identity } = require('lodash');
   const { hideBin } = require('yargs/helpers');
   const yargs = require('yargs/yargs');
 
-  const { getConfig, FigmaAPIReader, FigmaVariable } = require('./_util');
+  const {
+    applyFigmaVariablesToTheme,
+    findDarkMode,
+    getConfig,
+    FigmaAPIReader,
+    FigmaVariable,
+  } = require('./_util');
 
   // Set up the command structure to output help if the file to load is not specified
   const args = yargs(hideBin(process.argv))
@@ -194,163 +197,108 @@ const { identity } = require('lodash');
     process.exit(-1);
   }
 
-  // TODO: refactor the below to be a callable function, so that it is easier to test in isolation
-  // It should:
-  // - take in all the relevant setup parameters
-  // - return the writable content, or throw
-  // - consider factoring to handle integration with ora
+  // Determine which mode holds the dark values for the selected theme, if any. Suggest a mode with
+  // "dark" in the name, and allow skipping when the theme has no dark mode
+  const SKIP_DARK_MODE = 'skip';
+  const tier2Modes = figmaApiReader.getModes(tier2Collection.id);
+  const darkModeChoices = tier2Modes
+    .filter((mode) => mode.modeId !== modeResponses.tier2ModeId)
+    .map((mode) => {
+      return {
+        name: mode.modeId,
+        message: `Use the ${mode.name} theme`,
+        value: mode.name,
+      };
+    })
+    .concat({
+      name: SKIP_DARK_MODE,
+      message: 'Skip (do not import dark mode values)',
+      value: SKIP_DARK_MODE,
+    });
+  const suggestedDarkMode = findDarkMode(tier2Modes, modeResponses.tier2ModeId);
 
-  // Setup: initialize counter, resources, and display
-  const stats = {
-    skipped: [],
-    updated: [],
-    errored: [],
-    total: [],
-  };
+  let darkModeResponse;
+  try {
+    darkModeResponse = await prompt({
+      name: 'tier2DarkModeId',
+      message: 'Please select the dark mode for this theme:',
+      type: 'select',
+      choices: darkModeChoices,
+      initial: suggestedDarkMode
+        ? darkModeChoices.findIndex(
+            (choice) => choice.name === suggestedDarkMode.modeId,
+          )
+        : darkModeChoices.length - 1,
+    });
+  } catch (e) {
+    // e.g., someone hits ESC
+    console.error(chalk.red('Aborted.'), e);
+    process.exit(-1);
+  }
 
   const spinner = ora('Parsing tokens...').start();
 
-  const filePath = args.local
-    ? 'src/design-tokens/core-tokens.json'
-    : `${config.src}app-theme.json`;
+  // Each theme mode to import, and the file to write its values to
+  const imports = [
+    {
+      label: 'Theme',
+      tier2ModeId: modeResponses.tier2ModeId,
+      themePath: FigmaVariable.THEME_PATH,
+      filePath: args.local
+        ? 'src/design-tokens/core-tokens.json'
+        : `${config.src}app-theme.json`,
+    },
+  ];
 
-  // now, load in the local theme file. We want to look up keys in there
-  const localTheme = jsonfile.readFileSync(filePath);
+  if (darkModeResponse.tier2DarkModeId !== SKIP_DARK_MODE) {
+    const darkFilePath = args.local
+      ? 'src/design-tokens/core-dark-tokens.json'
+      : `${config.src}app-theme-dark.json`;
 
-  // Main loop: work thru each detected variable, and convert
-  figmaApiReader
-    .getVariablesByCollectionId(tier2Collection.id)
-    .forEach((figmaVariable) => {
-      stats.total.push(figmaVariable.id);
-      const variable = new FigmaVariable(
-        figmaVariable,
-        modeResponses.tier1ModeId,
-        modeResponses.tier2ModeId,
-        modeResponses.tier1CollectionName,
-        figmaApiReader,
+    if (fs.existsSync(darkFilePath)) {
+      imports.push({
+        label: 'Dark theme',
+        tier2ModeId: darkModeResponse.tier2DarkModeId,
+        themePath: FigmaVariable.DARK_THEME_PATH,
+        filePath: darkFilePath,
+      });
+    } else {
+      spinner.warn(
+        `Skipping dark mode: ${darkFilePath} does not exist. Run \`npx eds-init-theme\` to create it`,
       );
-
-      // bypass all typography tokens, as those should be handled manually at this time
-      if (variable.name.includes('typography')) {
-        return;
-      }
-
-      // If we have a zombie entry in the variable list, skip it (flag for design)
-      if (variable.isOrphaned()) {
-        stats.skipped.push(variable);
-
-        spinner.warn(
-          chalk.bold(variable.name) +
-            ': Skipped with warning (orphaned): please remove usage in figma',
-        );
-
-        if (isVerbose) {
-          console.warn('Variable details:', variable);
-        }
-
-        return;
-      }
-
-      // mesh the token path to a matching path in the local theme file
-      let writePath;
-      try {
-        writePath = variable.getTokenPath();
-        const locationInLocal = at(localTheme, writePath).filter(
-          (entries) => typeof entries !== 'undefined',
-        );
-
-        // Update the write path to conform to the format used in style-dictionary
-        if (locationInLocal.length) {
-          // handle case where we should look for @ in the file, then pluck the value object properly
-          if (locationInLocal[0]['@']?.value) {
-            // update the write path to mark the @ and value
-            writePath = writePath + '.@.value';
-          }
-
-          // handle case where it's just value
-          if (locationInLocal[0]?.value) {
-            // update the write path to mark the value
-            writePath = writePath + '.value';
-          }
-        }
-      } catch (e) {
-        // We couldn't parse the write path
-        isVerbose && spinner.fail(chalk.bold(variable.name) + ': ' + e);
-        isVerbose && console.error('Variable details:', variable);
-      }
-
-      if (writePath) {
-        try {
-          // error when path suffix is invalid (all should end with .value)
-          if (!writePath.endsWith('value')) {
-            throw new Error(
-              `Name format violation. JSON path missing in local theme: ${writePath} (${figmaVariable.resolvedType})`,
-            );
-          }
-
-          if (
-            FigmaVariable.isAliased(figmaVariable, modeResponses.tier2ModeId) &&
-            args.local &&
-            !at(localTheme, variable.valueRef).some(identity)
-          ) {
-            throw new Error(
-              `Value violation. Trying to write a local reference value path not in local theme: ${writePath} => {${variable.valueRef}}`,
-            );
-          }
-
-          // Write the defined value to the specified location by json path
-          canWrite &&
-            args.local &&
-            set(
-              localTheme,
-              writePath,
-              variable.isAliased()
-                ? `{${variable.valueRef}}`
-                : variable.valueRef,
-            );
-          canWrite && !args.local && set(localTheme, writePath, variable.value);
-
-          // log if in a loggable mode (verbose / dry-run)
-          if (isVerbose || !canWrite) {
-            spinner.succeed(
-              `Write: ${
-                args.local ? variable.valueRef : variable.value
-              } to ${writePath}`,
-            );
-          }
-
-          spinner.text = chalk.bold(variable.name) + ': Done!';
-          stats.updated.push(variable);
-        } catch (e) {
-          // We couldn't parse the resolved value, so skip and add to errors
-          spinner.fail(chalk.bold(variable.name) + ': ' + e);
-          isVerbose && console.error('Variable details:', variable);
-          stats.errored.push(variable);
-        }
-      } else {
-        spinner.text = chalk.bold(variable.name) + ': Skipped';
-
-        if (!writePath) {
-          spinner.warn(
-            chalk.bold(variable.name) +
-              `: Skipped with warning (no write path "${writePath}")`,
-          );
-        }
-        isVerbose && console.warn('Variable details:', variable);
-        stats.skipped.push(variable);
-      }
-    });
-
-  if (canWrite) {
-    jsonfile.writeFileSync(filePath, localTheme, {
-      spaces: 2,
-      finalEOL: false,
-    });
+    }
   }
 
-  spinner.succeed(
-    `Done! updated: ${stats.updated.length}, skipped: ${stats.skipped.length}, errored: ${stats.errored.length}, total: ${stats.total.length}`,
-  );
+  imports.forEach(({ label, tier2ModeId, themePath, filePath }) => {
+    // now, load in the local theme file. We want to look up keys in there
+    const localTheme = jsonfile.readFileSync(filePath);
+
+    const stats = applyFigmaVariablesToTheme({
+      figmaApiReader,
+      collectionId: tier2Collection.id,
+      tier1ModeId: modeResponses.tier1ModeId,
+      tier2ModeId,
+      tier1CollectionName: modeResponses.tier1CollectionName,
+      theme: localTheme,
+      themePath,
+      isLocal: args.local,
+      canWrite,
+      isVerbose,
+      logger: spinner,
+    });
+
+    if (canWrite) {
+      jsonfile.writeFileSync(filePath, localTheme, {
+        spaces: 2,
+        finalEOL: false,
+      });
+    }
+
+    spinner.succeed(
+      `${label} (${filePath}) done! updated: ${stats.updated.length}, skipped: ${stats.skipped.length}, errored: ${stats.errored.length}, total: ${stats.total.length}`,
+    );
+  });
+
   spinner.info('Any typography tokens must be imported manually from Figma');
   !isVerbose && spinner.info(`Use --verbose for more information`);
 })();

@@ -20,6 +20,17 @@ const EDSStyleDictionary = StyleDictionary.extend({
         },
       ],
     },
+    json: {
+      transformGroup: 'js',
+      files: [
+        {
+          format: 'json/value',
+          // sets up the dark theme (tier 2) base for use in overrides
+          destination: 'lib/tokens/json/theme-base-dark.json',
+          filter: (token) => token.path[1] === 'dark',
+        },
+      ],
+    },
     tailwind: {
       transforms: [...StyleDictionary.transformGroup.css, 'name/cti/kebab'],
       files: [
@@ -43,6 +54,23 @@ EDSStyleDictionary.registerFormat({
     );
     formatEdsTokens(minifiedCssDictionary);
     return JSON.stringify(minifiedCssDictionary, null, 2);
+  },
+});
+
+/**
+ * Replace the leaf objects in the parsed style with a value object
+ * mimicking the input file structure (see style-dictionary.config.js)
+ */
+EDSStyleDictionary.registerFormat({
+  name: 'json/value',
+  formatter: function (dictionary) {
+    return JSON.stringify(
+      minifyDictionaryUsingFormat(dictionary.properties, (obj) => ({
+        value: obj.value,
+      })),
+      null,
+      2,
+    );
   },
 });
 

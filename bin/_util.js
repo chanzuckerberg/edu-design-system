@@ -215,13 +215,24 @@ module.exports = {
   FigmaVariable: class {
     static TIER_2_PREFIX = '-> ';
     static VARIABLE_ALIAS = 'VARIABLE_ALIAS';
+    static THEME_PATH = 'eds.theme';
+    static DARK_THEME_PATH = 'eds.dark.theme';
 
+    /**
+     * @param {Variable} json API JSON data representing a figma variable instance
+     * @param {string} tier1Mode the mode to read tier 1 values from
+     * @param {string} tier2Mode the mode to read tier 2 (theme) values from
+     * @param {string} tier1CollectionName the prefix of the tier 1 variable names
+     * @param {FigmaAPIReader} lookupDelegate used to resolve aliased variables
+     * @param {string} themePath where tier 2 tokens live in the theme file (e.g., `eds.dark.theme` for dark mode)
+     */
     constructor(
       json,
       tier1Mode,
       tier2Mode,
       tier1CollectionName,
       lookupDelegate,
+      themePath = module.exports.FigmaVariable.THEME_PATH,
     ) {
       // TODO: throw if any private members are invalid
       this._figmaVariableData = json;
@@ -229,6 +240,7 @@ module.exports = {
       this._tier2Mode = tier2Mode;
       this._tier1CollectionName = tier1CollectionName;
       this._lookupDelegate = lookupDelegate;
+      this._themePath = themePath;
     }
 
     /**
@@ -242,7 +254,8 @@ module.exports = {
            * - when an tier 2 prefix is seen, pay attention to the type of the token being read, and prefix appropriately (color, etc. => eds.theme.color, etc.)
            */
           return this._tokenNameToPath(
-            'eds.theme.color.' +
+            this._themePath +
+              '.color.' +
               this._figmaVariableData.name.replace(
                 module.exports.FigmaVariable.TIER_2_PREFIX,
                 '',
@@ -253,7 +266,8 @@ module.exports = {
            * - When a prefix is seen, remove it entirely for numeric values
            */
           return this._tokenNameToPath(
-            'eds.theme.' +
+            this._themePath +
+              '.' +
               this._figmaVariableData.name.replace(
                 module.exports.FigmaVariable.TIER_2_PREFIX,
                 '',
@@ -264,7 +278,8 @@ module.exports = {
            * - When the type is STRING, we don't use a specific prefix
            */
           return this._tokenNameToPath(
-            'eds.theme.' +
+            this._themePath +
+              '.' +
               this._figmaVariableData.name.replace(
                 module.exports.FigmaVariable.TIER_2_PREFIX,
                 '',
@@ -487,7 +502,7 @@ module.exports = {
                   .replace(this._tier1CollectionName + '/', 'eds.color.')
                   .replace(
                     module.exports.FigmaVariable.TIER_2_PREFIX,
-                    'eds.theme.color.',
+                    this._themePath + '.color.',
                   ),
               )}`
             : this.value;
@@ -514,5 +529,202 @@ module.exports = {
           );
       }
     }
+  },
+  /**
+   * Guess which mode in a collection holds the dark values for a given theme mode, using the mode names.
+   * Prefers a dark mode that shares the theme mode's name (e.g., "Brand" => "Brand Dark"), then any mode
+   * with "dark" in its name.
+   *
+   * @param {Mode[]} modes the modes of the tier 2 collection
+   * @param {string} themeModeId the mode ID of the selected (light) theme
+   * @returns {Mode|undefined} the likely dark mode, or undefined if none is found
+   */
+  findDarkMode: function (modes, themeModeId) {
+    const themeMode = modes.find((mode) => mode.modeId === themeModeId);
+    const darkModes = modes.filter(
+      (mode) => mode.modeId !== themeModeId && /dark/i.test(mode.name),
+    );
+    const themeName = themeMode?.name
+      .replace(/light/i, '')
+      .trim()
+      .toLowerCase();
+
+    return (
+      (themeName &&
+        darkModes.find((mode) =>
+          mode.name.toLowerCase().includes(themeName),
+        )) ||
+      darkModes[0]
+    );
+  },
+  /**
+   * Apply the values of each tier 2 figma variable in a collection to a theme file object, for one mode.
+   * Edits the theme in place.
+   *
+   * @param {object} options
+   * @param {FigmaAPIReader} options.figmaApiReader reader for the figma variable data
+   * @param {string} options.collectionId the tier 2 collection to read variables from
+   * @param {string} options.tier1ModeId the mode to read tier 1 values from
+   * @param {string} options.tier2ModeId the mode to read tier 2 values from (e.g., the light or dark theme)
+   * @param {string} options.tier1CollectionName the prefix of the tier 1 variable names
+   * @param {object} options.theme the parsed theme file to write to (e.g., core-tokens.json or app-theme.json)
+   * @param {string} options.themePath where tier 2 tokens live in the theme file (e.g., `eds.dark.theme`)
+   * @param {boolean} options.isLocal write token references (for EDS itself) instead of literal values
+   * @param {boolean} options.canWrite when false, only report what would be written
+   * @param {boolean} options.isVerbose print additional details
+   * @param {object} options.logger ora-compatible spinner, used to report progress
+   * @returns {{skipped: Array, updated: Array, errored: Array, total: Array}} stats on the processed variables
+   */
+  applyFigmaVariablesToTheme: function ({
+    figmaApiReader,
+    collectionId,
+    tier1ModeId,
+    tier2ModeId,
+    tier1CollectionName,
+    theme,
+    themePath = module.exports.FigmaVariable.THEME_PATH,
+    isLocal = false,
+    canWrite = true,
+    isVerbose = false,
+    logger,
+  }) {
+    const chalk = require('chalk');
+    const at = require('lodash/at');
+    const identity = require('lodash/identity');
+    const set = require('lodash/set');
+
+    const stats = {
+      skipped: [],
+      updated: [],
+      errored: [],
+      total: [],
+    };
+
+    // Main loop: work thru each detected variable, and convert
+    figmaApiReader
+      .getVariablesByCollectionId(collectionId)
+      .forEach((figmaVariable) => {
+        stats.total.push(figmaVariable.id);
+        const variable = new module.exports.FigmaVariable(
+          figmaVariable,
+          tier1ModeId,
+          tier2ModeId,
+          tier1CollectionName,
+          figmaApiReader,
+          themePath,
+        );
+
+        // bypass all typography tokens, as those should be handled manually at this time
+        if (variable.name.includes('typography')) {
+          return;
+        }
+
+        // If we have a zombie entry in the variable list, skip it (flag for design)
+        if (variable.isOrphaned()) {
+          stats.skipped.push(variable);
+
+          logger.warn(
+            chalk.bold(variable.name) +
+              ': Skipped with warning (orphaned): please remove usage in figma',
+          );
+
+          if (isVerbose) {
+            console.warn('Variable details:', variable);
+          }
+
+          return;
+        }
+
+        // mesh the token path to a matching path in the local theme file
+        let writePath;
+        try {
+          writePath = variable.getTokenPath();
+          const locationInLocal = at(theme, writePath).filter(
+            (entries) => typeof entries !== 'undefined',
+          );
+
+          // Update the write path to conform to the format used in style-dictionary
+          if (locationInLocal.length) {
+            // handle case where we should look for @ in the file, then pluck the value object properly
+            if (locationInLocal[0]['@']?.value) {
+              // update the write path to mark the @ and value
+              writePath = writePath + '.@.value';
+            }
+
+            // handle case where it's just value
+            if (locationInLocal[0]?.value) {
+              // update the write path to mark the value
+              writePath = writePath + '.value';
+            }
+          }
+        } catch (e) {
+          // We couldn't parse the write path
+          isVerbose && logger.fail(chalk.bold(variable.name) + ': ' + e);
+          isVerbose && console.error('Variable details:', variable);
+        }
+
+        if (writePath) {
+          try {
+            // error when path suffix is invalid (all should end with .value)
+            if (!writePath.endsWith('value')) {
+              throw new Error(
+                `Name format violation. JSON path missing in local theme: ${writePath} (${figmaVariable.resolvedType})`,
+              );
+            }
+
+            if (
+              module.exports.FigmaVariable.isAliased(
+                figmaVariable,
+                tier2ModeId,
+              ) &&
+              isLocal &&
+              !at(theme, variable.valueRef).some(identity)
+            ) {
+              throw new Error(
+                `Value violation. Trying to write a local reference value path not in local theme: ${writePath} => {${variable.valueRef}}`,
+              );
+            }
+
+            // Write the defined value to the specified location by json path
+            canWrite &&
+              isLocal &&
+              set(
+                theme,
+                writePath,
+                variable.isAliased()
+                  ? `{${variable.valueRef}}`
+                  : variable.valueRef,
+              );
+            canWrite && !isLocal && set(theme, writePath, variable.value);
+
+            // log if in a loggable mode (verbose / dry-run)
+            if (isVerbose || !canWrite) {
+              logger.succeed(
+                `Write: ${
+                  isLocal ? variable.valueRef : variable.value
+                } to ${writePath}`,
+              );
+            }
+
+            logger.text = chalk.bold(variable.name) + ': Done!';
+            stats.updated.push(variable);
+          } catch (e) {
+            // We couldn't parse the resolved value, so skip and add to errors
+            logger.fail(chalk.bold(variable.name) + ': ' + e);
+            isVerbose && console.error('Variable details:', variable);
+            stats.errored.push(variable);
+          }
+        } else {
+          logger.text = chalk.bold(variable.name) + ': Skipped';
+          logger.warn(
+            chalk.bold(variable.name) +
+              `: Skipped with warning (no write path "${writePath}")`,
+          );
+          isVerbose && console.warn('Variable details:', variable);
+          stats.skipped.push(variable);
+        }
+      });
+
+    return stats;
   },
 };
