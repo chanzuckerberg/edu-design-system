@@ -256,6 +256,9 @@ export const Small: Story = {
  * overlay. Closing clears the note, so the modal warns while there's one to lose.
  * `warnOnClose` takes a function here, so an empty modal closes without asking.
  *
+ * The footer's Cancel button calls its own handler, which `warnOnClose` doesn't cover, so it
+ * asks the same question itself. Save keeps the note, so it closes without asking.
+ *
  * If the note survived closing and reopening instead, closing would lose nothing and the
  * warning wouldn't be needed.
  */
@@ -270,6 +273,12 @@ export const WarnOnClose: Story = {
         // closing discards the draft, which is what makes the warning worth showing
         setDraft('');
       };
+      const handleCancel = () => {
+        // eslint-disable-next-line no-alert
+        if (draft === '' || window.confirm('Discard this note?')) {
+          handleClose();
+        }
+      };
       return (
         <div className="flex justify-center">
           <Button onClick={() => setOpen(true)} rank="primary">
@@ -280,6 +289,7 @@ export const WarnOnClose: Story = {
             onClose={handleClose}
             open={open}
             warnOnClose={() => draft !== ''}
+            warnOnCloseMessage="Discard this note?"
           >
             <Modal.Header>
               <Modal.Title>Add a note</Modal.Title>
@@ -291,6 +301,16 @@ export const WarnOnClose: Story = {
                 value={draft}
               />
             </Modal.Body>
+            <Modal.Footer>
+              <ButtonGroup>
+                <Button onClick={handleClose} rank="primary">
+                  Save note
+                </Button>
+                <Button onClick={handleCancel} rank="secondary">
+                  Cancel
+                </Button>
+              </ButtonGroup>
+            </Modal.Footer>
           </Modal>
         </div>
       );

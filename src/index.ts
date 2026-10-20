@@ -19,6 +19,7 @@ export { default as CodeBlock } from './components/CodeBlock';
 export { default as Combobox } from './components/Combobox';
 export { default as DataTable } from './components/DataTable';
 export { utils as DataTableUtils } from './components/DataTable';
+export { default as Dialog } from './components/Dialog';
 export { default as FieldLabel } from './components/FieldLabel';
 export { default as FieldNote } from './components/FieldNote';
 export { default as Fieldset } from './components/Fieldset';

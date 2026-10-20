@@ -1,0 +1,125 @@
+@import '../../design-tokens/mixins.css';
+
+/*------------------------------------*\
+    # DIALOG
+\*------------------------------------*/
+
+/**
+ * The dialog wrapper and overlay, which take up the entire screen.
+ */
+.dialog,
+.dialog__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+/**
+ * Centers the dialog in the viewport.
+ */
+.dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /**
+   * Matches `Modal`, so a dialog opened from a modal stacks above it by DOM order. This is not a
+   * design token for now since we need to align on z-indices across the system.
+   */
+  z-index: 1050;
+}
+
+/**
+ * The inverted background of the dialog to provide contrast with the dialog itself.
+ */
+.dialog__overlay {
+  background-color: rgb(from light-dark(var(--eds-theme-color-background-utility-overlay-low-emphasis), var(--eds-dark-theme-color-background-utility-overlay-low-emphasis)) r g b / 0.5);
+}
+
+/**
+ * The dialog surface, which holds the title, body, and buttons.
+ *
+ * Mobile-first: fills the viewport, with the buttons held at the bottom. Above the smallest
+ * breakpoint it becomes a floating surface a quarter of the viewport wide, with a floor so the
+ * title and buttons still fit on narrower tablets.
+ */
+.dialog__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--eds-spacing-size-2) * 1px);
+
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  padding: calc(var(--eds-spacing-size-3) * 1px) calc(var(--eds-spacing-size-4) * 1px);
+
+  background-color: light-dark(var(--eds-theme-color-background-utility-container), var(--eds-dark-theme-color-background-utility-container));
+
+  @media all and (min-width: $eds-bp-sm) {
+    width: max(25vw, 360px);
+    max-width: calc(100vw - (var(--eds-spacing-size-6) * 1px));
+    height: auto;
+    max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+
+    border: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
+    border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
+    box-shadow: var(--eds-box-shadow-lg);
+  }
+}
+
+.dialog__title {
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+}
+
+/**
+ * The body grows to push the buttons to the bottom when the dialog fills the viewport.
+ */
+.dialog__body {
+  flex: 1;
+
+  color: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
+}
+
+.dialog__footer {
+  padding-top: calc(var(--eds-spacing-size-1) * 1px);
+}
+
+/**
+ * Dialog transition animations.
+ */
+.dialog__transition--enter {
+  transition: opacity calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.dialog__transition--enterFrom {
+  opacity: 0;
+}
+
+.dialog__transition--enterTo {
+  opacity: 1;
+}
+
+.dialog__transition--leave {
+  transition: opacity calc(var(--eds-anim-fade-quick) * 1s) ease-in-out;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.dialog__transition--leaveFrom {
+  opacity: 1;
+}
+
+.dialog__transition--leaveTo {
+  opacity: 0;
+}
