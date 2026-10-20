@@ -253,27 +253,46 @@ export const Small: Story = {
 
 /**
  * Type in the field, then try to close the modal with the close button, ESC, or a click on the
- * overlay. `warnOnClose` takes a function here, so the browser asks to confirm only while the
- * field holds a draft.
+ * overlay. Closing clears the note, so the modal warns while there's one to lose.
+ * `warnOnClose` takes a function here, so an empty modal closes without asking.
+ *
+ * If the note survived closing and reopening instead, closing would lose nothing and the
+ * warning wouldn't be needed.
  */
 export const WarnOnClose: Story = {
   parameters: Default.parameters,
   render: (args) => {
     function WarnOnCloseExample() {
+      const [open, setOpen] = useState(false);
       const [draft, setDraft] = useState('');
+      const handleClose = () => {
+        setOpen(false);
+        // closing discards the draft, which is what makes the warning worth showing
+        setDraft('');
+      };
       return (
-        <InteractiveExample {...args} warnOnClose={() => draft !== ''}>
-          <Modal.Header>
-            <Modal.Title>Add a note</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <InputField
-              label="Note"
-              onChange={(event) => setDraft(event.target.value)}
-              value={draft}
-            />
-          </Modal.Body>
-        </InteractiveExample>
+        <div className="flex justify-center">
+          <Button onClick={() => setOpen(true)} rank="primary">
+            Open the modal
+          </Button>
+          <Modal
+            {...args}
+            onClose={handleClose}
+            open={open}
+            warnOnClose={() => draft !== ''}
+          >
+            <Modal.Header>
+              <Modal.Title>Add a note</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <InputField
+                label="Note"
+                onChange={(event) => setDraft(event.target.value)}
+                value={draft}
+              />
+            </Modal.Body>
+          </Modal>
+        </div>
       );
     }
     return <WarnOnCloseExample />;

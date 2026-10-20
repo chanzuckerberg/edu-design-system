@@ -142,14 +142,31 @@ type ModalProps = ModalContentProps & {
    * - a function is called at close time, and asks only when it returns `true`. Use it to check
    *   whether the modal's state is dirty
    *
-   * This covers only the closes the modal triggers itself. A button you put in `Modal.Footer`
-   * calls your own handler, so check there too if it discards work.
+   * Only warn when closing actually loses something. Check how the modal's state is held:
+   *
+   * - **State resets on close** (it lives inside the modal's children, which unmount, or
+   *   `onClose` clears it): closing is destructive, so warn
+   * - **State survives close** (it is held above the modal and not cleared): reopening brings
+   *   the fields back, so closing loses nothing. Don't warn; the prompt only adds friction
+   *
+   * To warn, the state has to be readable where `Modal` renders. Lift it out of the modal's
+   * children, clear it in `onClose`, and pass a function that compares it against its starting
+   * values. A function keeps an untouched modal closing without a prompt; `true` asks every
+   * time, and fits only when any open modal holds work worth keeping.
+   *
+   * This covers only the closes the modal triggers itself: ESC, an overlay click, and the close
+   * button. A button you put in `Modal.Footer` calls your own handler, so check there too if it
+   * discards work.
    *
    * ```
    * const [draft, setDraft] = useState('');
+   * const handleClose = () => {
+   *   setIsOpen(false);
+   *   setDraft(''); // closing discards the draft, so warn while there is one
+   * };
    * // ....
    *
-   * <Modal warnOnClose={() => draft !== ''} onClose={() => setIsOpen(false)} open={isOpen}>
+   * <Modal warnOnClose={() => draft !== ''} onClose={handleClose} open={isOpen}>
    *  ...
    * </Modal>
    * ```
@@ -158,7 +175,8 @@ type ModalProps = ModalContentProps & {
    */
   warnOnClose?: boolean | (() => boolean);
   /**
-   * The question `window.confirm` asks when `warnOnClose` applies.
+   * The question `window.confirm` asks when `warnOnClose` applies. Name what will be lost, for
+   * example `"Discard this note?"`, so the user can answer without guessing.
    *
    * **Default is `"You have unsaved changes. Close anyway?"`**.
    */
@@ -522,7 +540,15 @@ const ModalContent = (props: ModalContentProps) => {
  * * Show one modal at a time. Don't place a modal on top of another modal. This can create usability issues.
  * * For important error notifications, use Inline Notification or Banner.
  * * For short messaging confirming successful interactions, such as "Email sent", use Inline Notification or Toast.
- * * When a modal holds work a user could lose, like a partly filled form, set `warnOnClose` so closing it asks first.
+ *
+ * ### Warning on close
+ *
+ * `warnOnClose` asks the user to confirm before the modal closes. Use it only when closing throws work away.
+ *
+ * * Warn when the modal's state resets on close, like a partly filled form that comes back empty on reopening.
+ * * Don't warn when the state survives closing and reopening. Nothing is lost, so the prompt is only friction.
+ * * Pass a function that checks for changes, so a modal the user hasn't touched closes without asking.
+ * * Footer buttons that discard work, like Cancel, call your own handler. Check there too.
  *
  * ## Content & Accessibility
  *
