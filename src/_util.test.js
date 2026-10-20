@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import identity from 'lodash/identity';
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import { describe, expect, it, beforeEach, afterEach, vi } from 'vitest';
 import utils from '../bin/_util';
 

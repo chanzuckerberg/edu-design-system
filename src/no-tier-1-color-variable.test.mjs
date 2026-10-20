@@ -1,8 +1,8 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import stylelint from 'stylelint';
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import { describe, expect, it } from 'vitest';
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import-x/no-extraneous-dependencies
 import { getTestRule } from 'vitest-stylelint-utils';
 import plugins from '../scripts/stylelint/index.mjs';
 import {

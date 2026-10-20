@@ -4,12 +4,12 @@
 (async function () {
   const fs = require('fs');
   const jsonfile = require('jsonfile');
-  const chalk = require('chalk');
+  // chalk v5+ is ESM-only; require() returns the module namespace
+  const chalk = require('chalk').default;
   const { prompt } = require('enquirer');
   const uniq = require('lodash/uniq');
   const ora = require('ora');
 
-  // eslint-disable-next-line import/extensions
   const { hideBin } = require('yargs/helpers');
   const yargs = require('yargs/yargs');
 
