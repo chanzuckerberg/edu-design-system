@@ -26,6 +26,13 @@
   "sideEffects": [
     "lib/index.css"
   ],
+  "browserslist": [
+    "chrome >= 123",
+    "edge >= 123",
+    "firefox >= 128",
+    "safari >= 17.5",
+    "ios_saf >= 17.5"
+  ],
   "publishConfig": {
     "access": "public"
   },
