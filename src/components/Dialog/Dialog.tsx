@@ -72,8 +72,18 @@ type DialogProps = {
 /**
  * Elements that already respond to Enter themselves, so the dialog leaves Enter to them.
  */
-const OWNS_ENTER_KEY =
-  'button, a[href], textarea, select, summary, [contenteditable]:not([contenteditable="false"])';
+const OWNS_ENTER_KEY = [
+  'button',
+  'input[type="button"]',
+  'input[type="image"]',
+  'input[type="reset"]',
+  'input[type="submit"]',
+  'a[href]',
+  'textarea',
+  'select',
+  'summary',
+  '[contenteditable]:not([contenteditable="false"])',
+].join(', ');
 
 /**
  * BETA: This component is still a work in progress and is subject to change.
@@ -120,6 +130,9 @@ export const Dialog = ({
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (
       event.key !== 'Enter' ||
+      // an element in the body already handled Enter itself. Headless UI skips handlers on
+      // prevented events too, but this doesn't rely on that
+      event.defaultPrevented ||
       event.nativeEvent.isComposing ||
       (event.target as HTMLElement).closest(OWNS_ENTER_KEY)
     ) {

@@ -131,6 +131,58 @@ describe('<Dialog />', () => {
       expect(onConfirm).toHaveBeenCalledTimes(1);
     });
 
+    it.each(['button', 'submit', 'reset', 'image'])(
+      'leaves Enter to an input of type %s in the body',
+      async (type) => {
+        const user = userEvent.setup();
+        const onConfirm = vi.fn();
+        render(
+          <Dialog
+            confirmLabel="Discard changes"
+            onCancel={() => {}}
+            onConfirm={onConfirm}
+            open
+            title="Discard your changes?"
+          >
+            <input aria-label="Preview" type={type} />
+          </Dialog>,
+        );
+        await screen.findByRole('alertdialog');
+        screen.getByLabelText('Preview').focus();
+        await user.keyboard('{Enter}');
+        expect(onConfirm).not.toHaveBeenCalled();
+      },
+    );
+
+    it('leaves Enter to an input that handles it itself', async () => {
+      const user = userEvent.setup();
+      const onConfirm = vi.fn();
+      const onInputEnter = vi.fn();
+      render(
+        <Dialog
+          confirmLabel="Add tag"
+          onCancel={() => {}}
+          onConfirm={onConfirm}
+          open
+          title="Add a tag?"
+        >
+          <input
+            aria-label="Tag"
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                event.preventDefault();
+                onInputEnter();
+              }
+            }}
+          />
+        </Dialog>,
+      );
+      await user.click(await screen.findByRole('textbox'));
+      await user.keyboard('{Enter}');
+      expect(onInputEnter).toHaveBeenCalledTimes(1);
+      expect(onConfirm).not.toHaveBeenCalled();
+    });
+
     it('leaves Enter to the secondary button when it has focus', async () => {
       const user = userEvent.setup();
       const { onCancel, onConfirm } = renderDialog();

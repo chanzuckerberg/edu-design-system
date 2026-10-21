@@ -13,6 +13,8 @@
   top: 0;
   left: 0;
   height: 100vh;
+  /* the visible viewport, so mobile browser controls don't cover the buttons */
+  height: 100dvh;
   width: 100%;
 }
 
