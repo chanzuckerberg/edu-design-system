@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 import { Text } from './Text';
 
+import { themeModes } from '../../util/modes';
 import { presets } from '../../util/variant-types';
 
 export default {
@@ -30,6 +31,9 @@ export default {
 type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: 'Default <Text /> rendering',
   },

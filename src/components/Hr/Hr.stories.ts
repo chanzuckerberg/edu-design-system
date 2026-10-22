@@ -3,6 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 };
 
 import { Hr } from './Hr';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/Hr',
@@ -34,4 +35,8 @@ export default {
 
 type Story = StoryObj<typeof Hr>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};

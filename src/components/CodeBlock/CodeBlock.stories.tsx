@@ -6,6 +6,7 @@ import { userEvent } from 'storybook/test';
 
 import { CodeBlock } from './CodeBlock';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import { IconProvider } from '../Icon';
 
 export default {
@@ -33,6 +34,9 @@ export default {
 type Args = React.ComponentProps<typeof CodeBlock>;
 
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: 'This is the code block without any syntax highlighting applied',
   },

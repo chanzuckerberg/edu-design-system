@@ -15,6 +15,7 @@ import { utils as DataTableUtils } from '../../components/DataTable';
 
 import FpoBlock from '../../storyUtils/FpoBlock';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 import Button from '../Button';
 import Checkbox from '../Checkbox';
@@ -30,11 +31,11 @@ export default {
         'Tables display and organize data in a structured format. They include customizations for size, style, interactivity, and data presentation.',
     },
     chromatic: {
-      viewports: [
+      modes: viewportModes(
         chromaticViewports.ipadMini,
         chromaticViewports.chromebook,
         chromaticViewports.googlePixel2,
-      ],
+      ),
     },
   },
   argTypes: {
@@ -215,6 +216,9 @@ const columns = [
  * When specifying the cells, you can use `className` to control content controls like truncation or other customizations.
  */
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: { dark: themeModes.dark } },
+  },
   args: {
     caption: 'Test table',
     subCaption: 'Additional Subcaption',
