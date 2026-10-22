@@ -662,7 +662,7 @@ const ModalBody = (props: ModalBodyProps) => {
 
   return (
     <div className={clsx(styles['modal-body'], className)} {...other}>
-      <ScrollWrapper shadowType="contain">{children}</ScrollWrapper>
+      <ScrollWrapper shadowType="cover">{children}</ScrollWrapper>
     </div>
   );
 };

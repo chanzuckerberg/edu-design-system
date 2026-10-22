@@ -102,6 +102,9 @@ export const setShadowStates = (targetData: HTMLDivElement): ShadowStates => {
  *
  * ## Interaction
  *
+ * Shadows are set for the starting position as soon as the wrapper mounts, so content that
+ * overflows shows its bottom (or end) shadow before any scrolling.
+ *
  * When vertical, scrolling will enable both shadows when there is more content above and below the
  * current position. When there is only content above the current position (scrolled to the end of
  * the container), only the top shadow is shown. When scrolled to the very top of the container,
@@ -161,6 +164,13 @@ export const ScrollWrapper = ({
   const debouncedHandler = debounce(() => {
     setShadowState({ top: false, bottom: false, start: false, end: false });
   }, 250);
+
+  // Show the shadows for the starting position, so overflowing content is signposted before the first scroll
+  useEffect(() => {
+    if (scrollRef.current) {
+      setShadowState(setShadowStates(scrollRef.current));
+    }
+  }, []);
 
   // Hook up the event handlers, monitoring resizes (reset the shadows) and scroll (add based on position)
   useEffect(() => {
