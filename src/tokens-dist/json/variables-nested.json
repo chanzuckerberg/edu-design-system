@@ -404,7 +404,7 @@
             },
             "interactive": {
               "noEmphasis": {
-                "@": "rgba(250, 249, 248, 0.00)",
+                "@": "rgba(255, 255, 255, 0.00)",
                 "hover": "#F4F1EF",
                 "active": "#E6E2DE"
               },
@@ -479,7 +479,7 @@
             },
             "inverse": {
               "noEmphasis": {
-                "@": "rgba(250, 249, 248, 0.00)",
+                "@": "rgba(255, 255, 255, 0.00)",
                 "hover": "rgba(250, 249, 248, 0.10)",
                 "active": "rgba(250, 249, 248, 0.20)"
               },
@@ -507,7 +507,7 @@
               },
               "4": {
                 "lowEmphasis": "#FFFC93",
-                "highEmphasis": "#CDB825"
+                "highEmphasis": "#DFCC32"
               },
               "5": {
                 "lowEmphasis": "#F3E5FA",
@@ -535,12 +535,12 @@
             "divergent": {
               "basis": "#F4F1EF",
               "minus": {
-                "1": "#98CDFF",
+                "1": "#88BBFA",
                 "2": "#5C76F3",
                 "3": "#3C4D9D"
               },
               "plus": {
-                "1": "#FFB38D",
+                "1": "#FFA070",
                 "2": "#D0622C",
                 "3": "#92380C"
               }
