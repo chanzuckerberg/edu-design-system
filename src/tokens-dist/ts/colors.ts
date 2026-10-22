@@ -168,7 +168,7 @@ export const EdsThemeColorBackgroundUtilityDefaultHighEmphasisHover = '#30302E';
 export const EdsThemeColorBackgroundUtilityDefaultHighEmphasisActive =
   '#3A3A37';
 export const EdsThemeColorBackgroundUtilityInteractiveNoEmphasis =
-  'rgba(250, 249, 248, 0.00)';
+  'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityInteractiveNoEmphasisHover =
   '#F4F1EF';
 export const EdsThemeColorBackgroundUtilityInteractiveNoEmphasisActive =
@@ -229,7 +229,7 @@ export const EdsThemeColorBackgroundUtilityDisabledNoEmphasis =
 export const EdsThemeColorBackgroundUtilityDisabledLowEmphasis = '#F4F1EF';
 export const EdsThemeColorBackgroundUtilityDisabledMediumEmphasis = '#CCC9C6';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasis =
-  'rgba(250, 249, 248, 0.00)';
+  'rgba(255, 255, 255, 0.00)';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasisHover =
   'rgba(250, 249, 248, 0.10)';
 export const EdsThemeColorBackgroundUtilityInverseNoEmphasisActive =
@@ -255,7 +255,7 @@ export const EdsThemeColorBackgroundVisualizationCategorical3HighEmphasis =
 export const EdsThemeColorBackgroundVisualizationCategorical4LowEmphasis =
   '#FFFC93';
 export const EdsThemeColorBackgroundVisualizationCategorical4HighEmphasis =
-  '#CDB825';
+  '#DFCC32';
 export const EdsThemeColorBackgroundVisualizationCategorical5LowEmphasis =
   '#F3E5FA';
 export const EdsThemeColorBackgroundVisualizationCategorical5HighEmphasis =
@@ -275,10 +275,10 @@ export const EdsThemeColorBackgroundVisualizationScalar3 = '#177A4D';
 export const EdsThemeColorBackgroundVisualizationScalar4 = '#0E442B';
 export const EdsThemeColorBackgroundVisualizationScalarBasis = '#F4F1EF';
 export const EdsThemeColorBackgroundVisualizationDivergentBasis = '#F4F1EF';
-export const EdsThemeColorBackgroundVisualizationDivergentMinus1 = '#98CDFF';
+export const EdsThemeColorBackgroundVisualizationDivergentMinus1 = '#88BBFA';
 export const EdsThemeColorBackgroundVisualizationDivergentMinus2 = '#5C76F3';
 export const EdsThemeColorBackgroundVisualizationDivergentMinus3 = '#3C4D9D';
-export const EdsThemeColorBackgroundVisualizationDivergentPlus1 = '#FFB38D';
+export const EdsThemeColorBackgroundVisualizationDivergentPlus1 = '#FFA070';
 export const EdsThemeColorBackgroundVisualizationDivergentPlus2 = '#D0622C';
 export const EdsThemeColorBackgroundVisualizationDivergentPlus3 = '#92380C';
 export const EdsThemeColorBackgroundProgressBar = '#19955D';
