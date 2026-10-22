@@ -986,7 +986,7 @@
             "interactive": {
               "noEmphasis": {
                 "@": {
-                  "value": "rgba(250, 249, 248, 0.00)",
+                  "value": "rgba(255, 255, 255, 0.00)",
                   "description": "Interactive objects with a transparent background, like interactive secondary and tertiary buttons.",
                   "group": "color"
                 },
@@ -1211,7 +1211,7 @@
             "inverse": {
               "noEmphasis": {
                 "@": {
-                  "value": "rgba(250, 249, 248, 0.00)",
+                  "value": "rgba(255, 255, 255, 0.00)",
                   "description": "Objects with a transparent background on an inverted layout, like inverse secondary and tertiary buttons.",
                   "group": "color"
                 },
@@ -1295,7 +1295,7 @@
                   "group": "color"
                 },
                 "highEmphasis": {
-                  "value": "{eds.color.yellow.250}",
+                  "value": "{eds.color.yellow.200}",
                   "description": "Fourth categorical series fill. Light; give thin lines and small points extra weight. Shares a primitive with the warning high-emphasis background, so keep warning Tags out of plot areas that use it.",
                   "group": "color"
                 }
@@ -1345,11 +1345,6 @@
               }
             },
             "scalar": {
-              "basis": {
-                "value": "{eds.color.neutral.050}",
-                "description": "A measured value of zero on a scalar (magnitude) scale. Not for missing data, which is shown as no fill plus a dash.",
-                "group": "color"
-              },
               "1": {
                 "value": "{eds.color.green.150}",
                 "description": "Lowest non-zero bin of a scalar scale. Bin data to four steps; do not interpolate.",
@@ -1369,6 +1364,11 @@
                 "value": "{eds.color.green.750}",
                 "description": "Highest of four scalar bins.",
                 "group": "color"
+              },
+              "basis": {
+                "value": "{eds.color.neutral.050}",
+                "description": "A measured value of zero on a scalar (magnitude) scale. Not for missing data, which is shown as no fill plus a dash.",
+                "group": "color"
               }
             },
             "divergent": {
@@ -1378,9 +1378,9 @@
                 "group": "color"
               },
               "minus": {
-                "3": {
-                  "value": "{eds.color.blue.650}",
-                  "description": "Furthest below the reference value on a divergent scale.",
+                "1": {
+                  "value": "{eds.color.blue.250}",
+                  "description": "Just below the reference value on a divergent scale.",
                   "group": "color"
                 },
                 "2": {
@@ -1388,15 +1388,15 @@
                   "description": "Second step below the reference value on a divergent scale.",
                   "group": "color"
                 },
-                "1": {
-                  "value": "{eds.color.blue.200}",
-                  "description": "Just below the reference value on a divergent scale.",
+                "3": {
+                  "value": "{eds.color.blue.650}",
+                  "description": "Furthest below the reference value on a divergent scale.",
                   "group": "color"
                 }
               },
               "plus": {
                 "1": {
-                  "value": "{eds.color.orange.200}",
+                  "value": "{eds.color.orange.250}",
                   "description": "Just above the reference value on a divergent scale.",
                   "group": "color"
                 },

@@ -4,10 +4,10 @@
   --eds-theme-color-background-utility-inverse-disabled: rgba(250, 249, 248, 0.50);
   --eds-theme-color-background-utility-inverse-no-emphasis-active: rgba(250, 249, 248, 0.20);
   --eds-theme-color-background-utility-inverse-no-emphasis-hover: rgba(250, 249, 248, 0.10);
-  --eds-theme-color-background-utility-inverse-no-emphasis: rgba(250, 249, 248, 0.00);
+  --eds-theme-color-background-utility-inverse-no-emphasis: rgba(255, 255, 255, 0.00);
   --eds-theme-color-background-utility-disabled-no-emphasis: rgba(250, 249, 248, 0.00);
   --eds-theme-color-background-utility-critical-no-emphasis: rgba(255, 255, 255, 0.00);
-  --eds-theme-color-background-utility-interactive-no-emphasis: rgba(250, 249, 248, 0.00);
+  --eds-theme-color-background-utility-interactive-no-emphasis: rgba(255, 255, 255, 0.00);
   --eds-theme-color-background-utility-default-no-emphasis: rgba(255, 255, 255, 0.00);
   --eds-theme-color-background-utility-overlay-high-emphasis: rgba(36, 36, 35, 0.80);
   --eds-theme-color-background-utility-overlay-low-emphasis: rgba(250, 249, 248, 0.60);
@@ -348,10 +348,10 @@
   --eds-theme-color-background-progress-bar: var(--eds-color-green-450);
   --eds-theme-color-background-visualization-divergent-plus-3: var(--eds-color-orange-650);
   --eds-theme-color-background-visualization-divergent-plus-2: var(--eds-color-orange-450);
-  --eds-theme-color-background-visualization-divergent-plus-1: var(--eds-color-orange-200);
+  --eds-theme-color-background-visualization-divergent-plus-1: var(--eds-color-orange-250);
   --eds-theme-color-background-visualization-divergent-minus-3: var(--eds-color-blue-650);
   --eds-theme-color-background-visualization-divergent-minus-2: var(--eds-color-blue-450);
-  --eds-theme-color-background-visualization-divergent-minus-1: var(--eds-color-blue-200);
+  --eds-theme-color-background-visualization-divergent-minus-1: var(--eds-color-blue-250);
   --eds-theme-color-background-visualization-divergent-basis: var(--eds-color-neutral-050);
   --eds-theme-color-background-visualization-scalar-basis: var(--eds-color-neutral-050);
   --eds-theme-color-background-visualization-scalar-4: var(--eds-color-green-750);
@@ -365,7 +365,7 @@
   --eds-theme-color-background-visualization-categorical-6-low-emphasis: var(--eds-color-orange-100);
   --eds-theme-color-background-visualization-categorical-5-high-emphasis: var(--eds-color-purple-650);
   --eds-theme-color-background-visualization-categorical-5-low-emphasis: var(--eds-color-purple-100);
-  --eds-theme-color-background-visualization-categorical-4-high-emphasis: var(--eds-color-yellow-250);
+  --eds-theme-color-background-visualization-categorical-4-high-emphasis: var(--eds-color-yellow-200);
   --eds-theme-color-background-visualization-categorical-4-low-emphasis: var(--eds-color-yellow-050);
   --eds-theme-color-background-visualization-categorical-3-high-emphasis: var(--eds-color-green-750);
   --eds-theme-color-background-visualization-categorical-3-low-emphasis: var(--eds-color-neutral-100);
