@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { ButtonGroup } from './ButtonGroup';
+import { themeModes } from '../../util/modes';
 import Button from '../Button';
 
 export default {
@@ -31,7 +32,11 @@ export default {
 
 type Story = StoryObj<typeof ButtonGroup>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 /**
  * Buttons can have a vertical layout.

@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import type React from 'react';
 
 import { LoadingIndicator } from './LoadingIndicator';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/LoadingIndicator',
@@ -20,7 +21,11 @@ export default {
 
 type Args = React.ComponentProps<typeof LoadingIndicator>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 export const ExtraSmall: StoryObj<Args> = {
   args: {

@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 import { Link, type LinkProps } from './Link';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import { IconProvider } from '../Icon';
 import Text from '../Text';
 
@@ -32,7 +33,11 @@ export default {
 
 type Story = StoryObj<typeof Link>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 /**
  * When using standalone context, you can specify which role the trailing icon fills.

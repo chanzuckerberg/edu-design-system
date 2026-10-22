@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { NumberIcon } from './NumberIcon';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/NumberIcon',
@@ -26,7 +27,11 @@ export default {
 type Args = React.ComponentProps<typeof NumberIcon>;
 type Story = StoryObj<Args>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 export const Sizes: Story = {
   args: {

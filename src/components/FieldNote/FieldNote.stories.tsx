@@ -5,6 +5,7 @@ import React from 'react';
 
 import { FieldNote } from './FieldNote';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import { IconProvider } from '../Icon';
 import Link from '../Link';
 import Text from '../Text';
@@ -24,6 +25,9 @@ export default {
 type Story = StoryObj<typeof FieldNote>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: 'This is a fieldnote.',
     id: 'field-1',
