@@ -7,6 +7,7 @@ import React from 'react';
 import { AppNotification } from './AppNotification';
 
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import { IconProvider } from '../Icon';
@@ -40,6 +41,9 @@ export default {
 type Story = StoryObj<typeof AppNotification>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {},
 };
 

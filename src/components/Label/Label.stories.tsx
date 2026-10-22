@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Label } from './Label';
+import { themeModes } from '../../util/modes';
 import Tooltip from '../Tooltip';
 
 export default {
@@ -25,6 +26,9 @@ type Args = React.ComponentProps<typeof Label>;
  * Labels denote some text to label the content.
  */
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     text: 'Label',
   },

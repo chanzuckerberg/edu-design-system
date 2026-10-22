@@ -6,6 +6,7 @@ import { within } from 'storybook/test';
 
 import { TabGroup } from './TabGroup';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 import Heading from '../Heading';
 import Text from '../Text';
@@ -94,10 +95,13 @@ type Args = React.ComponentProps<typeof TabGroup>;
 export const Default: StoryObj<Args> = {
   parameters: {
     chromatic: {
-      viewports: [
-        chromaticViewports.googlePixel2,
-        chromaticViewports.chromebook,
-      ],
+      modes: {
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.chromebook,
+        ),
+        dark: themeModes.dark,
+      },
     },
   },
 };
@@ -189,10 +193,10 @@ export const Centered: StoryObj<Args> = {
   },
   parameters: {
     chromatic: {
-      viewports: [
+      modes: viewportModes(
         chromaticViewports.googlePixel2,
         chromaticViewports.chromebook,
-      ],
+      ),
     },
   },
 };
@@ -403,7 +407,7 @@ export const ScrollMiddle: StoryObj<Args> = {
     // Skip these b/c test environment cannot execute "scroll" on the parent div
     snapshot: { skip: true },
 
-    chromatic: { viewports: [chromaticViewports.googlePixel2] },
+    chromatic: { modes: viewportModes(chromaticViewports.googlePixel2) },
     layout: 'padded',
   },
 

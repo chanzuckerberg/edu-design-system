@@ -2,6 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite';
 import React, { useState } from 'react';
 
 import { Counter } from './Counter';
+import { themeModes } from '../../util/modes';
 import Input from '../Input';
 
 /**
@@ -46,7 +47,11 @@ export default meta;
 type Args = React.ComponentProps<typeof Counter>;
 type Story = StoryObj<typeof Counter>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 /**
  * A count of zero is still shown, so the total is visible before the user types anything.

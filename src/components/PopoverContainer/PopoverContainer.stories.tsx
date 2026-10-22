@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { PopoverContainer } from './PopoverContainer';
+import { themeModes } from '../../util/modes';
 import PopoverListItem from '../PopoverListItem';
 
 export default {
@@ -29,6 +30,9 @@ export default {
  * You can group list items with this generic container. See `PopoverListItem` for more information.
  */
 export const Default: StoryObj<typeof PopoverContainer> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: (
       <>

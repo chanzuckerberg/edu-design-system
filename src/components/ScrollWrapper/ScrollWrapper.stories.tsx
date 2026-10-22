@@ -5,6 +5,7 @@ import React from 'react';
 import { userEvent, within } from 'storybook/test';
 
 import { ScrollWrapper } from './ScrollWrapper';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/ScrollWrapper',
@@ -27,6 +28,9 @@ type Args = React.ComponentProps<typeof ScrollWrapper>;
  * taller, the scroll wrapper can be inserted in between, and allow for the content to be revealed as needed.
  */
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {},
   render: (args) => (
     <div className="bg-utility-default-noEmphasis-hover h-[200px] w-[200px]">

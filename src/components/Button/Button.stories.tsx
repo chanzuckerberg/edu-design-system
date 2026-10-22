@@ -6,6 +6,7 @@ import { userEvent } from 'storybook/test';
 
 import { Button, type ButtonProps } from './Button';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/Button',
@@ -38,6 +39,9 @@ export default {
 type Story = StoryObj<ButtonProps>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: 'Button',
   },

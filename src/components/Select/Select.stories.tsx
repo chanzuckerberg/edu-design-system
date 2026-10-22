@@ -5,6 +5,7 @@ import React from 'react';
 import { expect, userEvent, within } from 'storybook/test';
 import { Select } from './Select';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import { IconProvider } from '../Icon';
 
 const meta: Meta<typeof Select> = {
@@ -132,6 +133,9 @@ const selectCat: StoryObj['play'] = async (playOptions) => {
  * For detailed code examples, refer to the [stories code in GitHub](https://github.com/chanzuckerberg/edu-design-system/blob/main/src/components/Select/Select.stories.tsx).
  */
 export const Default: StoryObj = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     label: 'Favorite Animal',
     'data-testid': 'dropdown',

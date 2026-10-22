@@ -8,6 +8,7 @@ import { userEvent, within } from 'storybook/test';
 
 import { Breadcrumbs } from './Breadcrumbs';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 import { IconProvider } from '../Icon';
 
@@ -41,7 +42,11 @@ export default {
 
 type Story = StoryObj<typeof Breadcrumbs>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 export const OneCrumb: Story = {
   args: {
@@ -99,11 +104,11 @@ export const LongText: Story = {
   },
   parameters: {
     chromatic: {
-      viewports: [
+      modes: viewportModes(
         chromaticViewports.googlePixel2,
         chromaticViewports.ipadMini,
         chromaticViewports.chromebook,
-      ],
+      ),
     },
     layout: 'padded',
   },
@@ -132,7 +137,7 @@ export const LongTextMenu: Story = {
 
   parameters: {
     chromatic: {
-      viewports: [chromaticViewports.ipadMini],
+      modes: viewportModes(chromaticViewports.ipadMini),
       diffThreshold: 0.75,
       delay: 100,
     },

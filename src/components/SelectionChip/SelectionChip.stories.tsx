@@ -5,6 +5,7 @@ import React from 'react';
 
 import { SelectionChip } from './SelectionChip';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/SelectionChip',
@@ -22,6 +23,9 @@ type Args = React.ComponentProps<typeof SelectionChip>;
 type Story = StoryObj<Args>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     label: 'Label',
   },
