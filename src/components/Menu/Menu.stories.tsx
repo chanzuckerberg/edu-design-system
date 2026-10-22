@@ -10,6 +10,7 @@ import icons from '../../icons/spritemap';
 
 import type { IconName } from '../../icons/spritemap';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import { Avatar } from '../Avatar/Avatar';
 import Button from '../Button';
 import { IconProvider } from '../Icon';
@@ -114,6 +115,9 @@ const menuItems = (
  * `expand` semantic icon, and a configurable text label.
  */
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: (
       <>

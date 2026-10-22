@@ -6,6 +6,7 @@ import React from 'react';
 import { Accordion } from './Accordion';
 import FpoBlock from '../../storyUtils/FpoBlock';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 import Icon, { IconProvider } from '../Icon';
 import NumberIcon from '../NumberIcon';
@@ -93,7 +94,11 @@ export default {
 
 type Story = StoryObj<typeof Accordion>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 /**
  * You can add in `NumberIcon` or any other icon in the button for the accordion row.
@@ -263,7 +268,7 @@ export const UsingRenderProp: Story = {
 export const WithLargeHeader: Story = {
   parameters: {
     chromatic: {
-      viewports: [chromaticViewports.ipadMini],
+      modes: viewportModes(chromaticViewports.ipadMini),
     },
   },
   args: {

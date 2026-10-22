@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { TextareaField } from './TextareaField';
+import { themeModes } from '../../util/modes';
 
 const meta: Meta<typeof TextareaField> = {
   title: 'Components/TextareaField',
@@ -35,6 +36,9 @@ export default meta;
 type Story = StoryObj<typeof TextareaField>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     subLabel: '',
     fieldNote: '',

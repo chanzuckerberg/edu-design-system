@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React, { useState } from 'react';
 
 import { Toggle } from './Toggle';
+import { themeModes } from '../../util/modes';
 
 const InteractiveToggle = ({ checked = false, onChange, ...other }: Args) => {
   const [selected, setSelected] = useState(checked);
@@ -41,7 +42,11 @@ export default meta;
 type Args = React.ComponentProps<typeof Toggle>;
 type Story = StoryObj<typeof Toggle>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 /**
  * When checked, the slider and selected color adjust to show the selected state
