@@ -74,6 +74,7 @@
   "eds-theme-color-background-visualization-categorical-7-high-emphasis": "Seventh categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value.",
   "eds-theme-color-background-visualization-categorical-8-high-emphasis": "Eighth and last categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value. Past eight series, use direct labels or pattern fills rather than more color.",
   "eds-theme-color-background-visualization-categorical-other": "Overflow bucket for series beyond the eighth, and the context marks when one mark is called out. Never a ninth identity the reader is expected to remember.",
+  "eds-theme-color-background-visualization-scalar-0": "The zeroth scalar value",
   "eds-theme-color-background-visualization-scalar-1": "Lowest non-zero bin of a scalar scale. Bin data to four steps; do not interpolate.",
   "eds-theme-color-background-visualization-scalar-2": "Second of four scalar bins.",
   "eds-theme-color-background-visualization-scalar-3": "Third of four scalar bins.",

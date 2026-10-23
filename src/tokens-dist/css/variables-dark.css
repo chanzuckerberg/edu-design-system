@@ -358,6 +358,7 @@
   --eds-dark-theme-color-background-visualization-scalar-3: var(--eds-color-green-200);
   --eds-dark-theme-color-background-visualization-scalar-2: var(--eds-color-green-350);
   --eds-dark-theme-color-background-visualization-scalar-1: var(--eds-color-green-650);
+  --eds-dark-theme-color-background-visualization-scalar-0: var(--eds-color-neutral-800);
   --eds-dark-theme-color-background-visualization-categorical-other: var(--eds-color-neutral-450);
   --eds-dark-theme-color-background-visualization-categorical-8-high-emphasis: var(--eds-color-red-450);
   --eds-dark-theme-color-background-visualization-categorical-7-high-emphasis: var(--eds-color-blue-550);

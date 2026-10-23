@@ -9,9 +9,6 @@
 .app-header {
   --app-header__shadow: none;
 
-  /* This component is hard-coded to use the light color scheme in all cases */
-  color-scheme: light;
-
   & > div {
     box-shadow: var(--app-header__shadow);
     height: 100%;
