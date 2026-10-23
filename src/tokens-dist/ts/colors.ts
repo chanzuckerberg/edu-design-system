@@ -269,6 +269,7 @@ export const EdsThemeColorBackgroundVisualizationCategorical7HighEmphasis =
 export const EdsThemeColorBackgroundVisualizationCategorical8HighEmphasis =
   '#FF9C99';
 export const EdsThemeColorBackgroundVisualizationCategoricalOther = '#BCB9B6';
+export const EdsThemeColorBackgroundVisualizationScalar0 = '#F4F1EF';
 export const EdsThemeColorBackgroundVisualizationScalar1 = '#A1E1C4';
 export const EdsThemeColorBackgroundVisualizationScalar2 = '#1DB470';
 export const EdsThemeColorBackgroundVisualizationScalar3 = '#177A4D';

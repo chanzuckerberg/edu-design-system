@@ -24,17 +24,17 @@
     transition: none;
   }
   
-  color: var(--eds-theme-color-text-utility-default-primary);
-  border-color: var(--eds-theme-color-border-utility-default-low-emphasis);
-  background-color: var(--eds-theme-color-background-input);
+  color: light-dark(var(--eds-theme-color-text-utility-default-primary), var(--eds-dark-theme-color-text-utility-default-primary));
+  border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-input), var(--eds-dark-theme-color-background-input));
   
   &:hover {
-    border-color: var(--eds-theme-color-border-utility-default-low-emphasis-hover);
+    border-color: light-dark(var(--eds-theme-color-border-utility-default-low-emphasis-hover), var(--eds-dark-theme-color-border-utility-default-low-emphasis-hover));
   }
 
   &:focus {
-    border-color: var(--eds-theme-color-border-utility-focus);
-    outline: 1px solid var(--eds-theme-color-border-utility-focus);
+    border-color: light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
+    outline: 1px solid light-dark(var(--eds-theme-color-border-utility-focus), var(--eds-dark-theme-color-border-utility-focus));
   }
 
   &:read-only:not(:disabled) {
@@ -47,28 +47,28 @@
    * Input error state
    */
   &.error {
-    border-color: var(--eds-theme-color-border-utility-critical);
+    border-color: light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
 
     &:hover {
-      border-color: var(--eds-theme-color-border-utility-critical-hover);
+      border-color: light-dark(var(--eds-theme-color-border-utility-critical-hover), var(--eds-dark-theme-color-border-utility-critical-hover));
     }
 
     &:focus {
-      border-color: var(--eds-theme-color-border-utility-critical);
-      outline: 1px solid var(--eds-theme-color-border-utility-critical);
+      border-color: light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
+      outline: 1px solid light-dark(var(--eds-theme-color-border-utility-critical), var(--eds-dark-theme-color-border-utility-critical));
     }
   }
 
   &.warning {
-    border-color: var(--eds-theme-color-border-utility-warning);
+    border-color: light-dark(var(--eds-theme-color-border-utility-warning), var(--eds-dark-theme-color-border-utility-warning));
 
     &:hover {
-      border-color: var(--eds-theme-color-border-utility-warning-hover);
+      border-color: light-dark(var(--eds-theme-color-border-utility-warning-hover), var(--eds-dark-theme-color-border-utility-warning-hover));
     }
 
     &:focus {
-      border-color: var(--eds-theme-color-border-utility-warning);
-      outline: 1px solid var(--eds-theme-color-border-utility-warning);
+      border-color: light-dark(var(--eds-theme-color-border-utility-warning), var(--eds-dark-theme-color-border-utility-warning));
+      outline: 1px solid light-dark(var(--eds-theme-color-border-utility-warning), var(--eds-dark-theme-color-border-utility-warning));
     }
   }
 
@@ -79,9 +79,9 @@
   &:disabled::placeholder {
     cursor: not-allowed;
 
-    color: var(--eds-theme-color-text-utility-disabled-primary);
-    border-color: var(--eds-theme-color-border-utility-disabled);
-    background-color: var(--eds-theme-color-background-utility-disabled-low-emphasis);
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+    border-color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
+    background-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
   }
 
   &::placeholder {

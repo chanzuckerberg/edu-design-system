@@ -1346,6 +1346,11 @@
                 }
               },
               "scalar": {
+                "0": {
+                  "value": "{eds.color.neutral.800}",
+                  "description": "The zeroth scalar value",
+                  "group": "color"
+                },
                 "1": {
                   "value": "{eds.color.green.650}",
                   "description": "Lowest non-zero bin of a scalar scale. Bin data to four steps; do not interpolate.",
