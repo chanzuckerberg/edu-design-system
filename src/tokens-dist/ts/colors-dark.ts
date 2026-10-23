@@ -166,6 +166,7 @@ export const EdsDarkThemeColorBackgroundVisualizationCategorical8HighEmphasis =
   '#EA4941';
 export const EdsDarkThemeColorBackgroundVisualizationCategoricalOther =
   '#83827E';
+export const EdsDarkThemeColorBackgroundVisualizationScalar0 = '#30302E';
 export const EdsDarkThemeColorBackgroundVisualizationScalar1 = '#125B3A';
 export const EdsDarkThemeColorBackgroundVisualizationScalar2 = '#1DB470';
 export const EdsDarkThemeColorBackgroundVisualizationScalar3 = '#7ED6AD';
