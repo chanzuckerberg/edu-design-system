@@ -17,13 +17,13 @@
   justify-content: center;
   align-items: center;
 
-  background: #e8f4f8;
-  border: 2px dashed #69b3e7;
+  background: light-dark(#e8f4f8, #16303d);
+  border: 2px dashed light-dark(#69b3e7, #4a90c2);
   border-radius: 5px;
   padding: 16px;
   font-weight: bold;
   text-align: center;
-  color: #435fab;
+  color: light-dark(#435fab, #a9c7f5);
 
   font-size: 16px;
   line-height: 24px;
