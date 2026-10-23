@@ -290,7 +290,7 @@ export default defineConfig(
                 "Include the file extension (e.g. import debounce from 'lodash/debounce.js'). lodash has no exports map, so Node cannot resolve an extensionless deep import in the ESM build.",
             },
             {
-              group: ['**/tokens-dist/ts/colors'],
+              group: ['**/tokens-dist/ts/colors*'],
               message:
                 'Do not import JavaScript color variables into component files. Use CSS variables in styles instead.',
             },

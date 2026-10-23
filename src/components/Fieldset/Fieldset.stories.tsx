@@ -3,6 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 };
 import React from 'react';
 import { Fieldset } from './Fieldset';
+import { themeModes } from '../../util/modes';
 import Checkbox from '../Checkbox';
 import Radio from '../Radio';
 
@@ -28,6 +29,9 @@ type Args = React.ComponentProps<typeof Fieldset>;
 type LegendArgs = React.ComponentProps<typeof Fieldset.Legend>;
 
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: (
       <>

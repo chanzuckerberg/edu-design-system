@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import type React from 'react';
 
 import { VisualPageIndicator } from './VisualPageIndicator';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/VisualPageIndicator',
@@ -20,6 +21,9 @@ export default {
 type Args = React.ComponentProps<typeof VisualPageIndicator>;
 
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     activePage: 0,
     totalPageCount: 6,

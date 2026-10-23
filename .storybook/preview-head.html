@@ -6,3 +6,73 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+<!--
+  Dark mode for Storybook's loading states (spinner and docs skeleton).
+
+  These paint before the JS bundle loads EDS CSS, so neither `data-theme` nor the tokens exist yet.
+  The script sets `data-theme` from the `theme` global in the iframe URL (the manager passes it as
+  `globals=theme:dark`), and the styles use literal token values. Keep them in sync with
+  src/tokens-dist/ts/colors(-dark).ts; light values are Storybook's defaults.
+-->
+<script>
+  (function () {
+    var globals = new URLSearchParams(window.location.search).get('globals') || '';
+    var match = globals.match(/(?:^|;)theme:(light|dark)(?:;|$)/);
+    if (match) {
+      document.documentElement.dataset.theme = match[1];
+    }
+  })();
+</script>
+<style>
+  /* Same rules as src/design-tokens/css/base/body.css */
+  :root {
+    color-scheme: light dark;
+  }
+  html[data-theme='light'] {
+    color-scheme: light;
+  }
+  html[data-theme='dark'] {
+    color-scheme: dark;
+  }
+
+  /* Dark: background-utility-base-1 */
+  .sb-preparing-story,
+  .sb-preparing-docs,
+  .sb-argstableBlock-body td {
+    background: light-dark(#fff, #181818);
+  }
+
+  /* Dark: text-utility-default-secondary */
+  .sb-loader {
+    border-color: light-dark(rgba(97, 97, 97, 0.29), rgba(204, 201, 198, 0.29));
+    border-top-color: light-dark(#646464, #ccc9c6);
+  }
+
+  /* Dark: background-utility-base-1, border-utility-default-low-emphasis */
+  .sb-previewBlock {
+    background: light-dark(#fff, #181818);
+    border-color: light-dark(rgba(0, 0, 0, 0.1), #6b6a64);
+  }
+  .sb-previewBlock_header {
+    box-shadow: light-dark(rgba(0, 0, 0, 0.1), #6b6a64) 0 -1px 0 0 inset;
+  }
+  .sb-argstableBlock-body {
+    box-shadow:
+      rgba(0, 0, 0, 0.1) 0 1px 3px 1px,
+      light-dark(rgba(0, 0, 0, 0.065), #6b6a64) 0 0 0 1px;
+  }
+  .sb-argstableBlock-body tr:not(:first-child) {
+    border-top-color: light-dark(#e6e6e6, #6b6a64);
+  }
+
+  /* Skeleton placeholders. Dark: background-utility-default-low-emphasis */
+  .sb-argstableBlock th span,
+  .sb-argstableBlock td span,
+  .sb-argstableBlock-body button {
+    background: light-dark(rgba(0, 0, 0, 0.1), #30302e);
+  }
+  .sb-previewBlock_icon {
+    background: light-dark(#e6e6e6, #30302e);
+  }
+</style>

@@ -4,6 +4,7 @@ import { expect, userEvent, within } from 'storybook/test';
 import { Combobox } from './Combobox';
 import FpoBlock from '../../storyUtils/FpoBlock';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import { IconProvider } from '../Icon';
 
 const meta: Meta<typeof Combobox> = {
@@ -209,6 +210,9 @@ const selectCat: StoryObj['play'] = async (playOptions) => {
  * For detailed code examples, refer to the [stories code in GitHub](https://github.com/chanzuckerberg/edu-design-system/blob/main/src/components/Combobox/Combobox.stories.tsx).
  */
 export const Default: StoryObj<DemoProps> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   render: (args) => <ComboboxDemo {...args} />,
   args: {
     label: 'Favorite Animal',
