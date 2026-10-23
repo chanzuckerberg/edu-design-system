@@ -34,6 +34,23 @@
 }
 
 /**
+ * Docs canvas toolbar buttons (reload, zoom, etc.). Storybook colors these with
+ * `textMutedColor`, which is also used for docs text, so they're overridden here instead of in
+ * the theme. Backgrounds match `barBg` in Theme.ts.
+ */
+.sbdocs-preview [role="toolbar"] :is(button, a) {
+  color: light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-default-primary));
+}
+
+.sbdocs-preview [role="toolbar"] :is(button, a):hover {
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-hover), var(--eds-dark-theme-color-background-utility-default-low-emphasis-hover));
+}
+
+.sbdocs-preview [role="toolbar"] :is(button, a):active {
+  background-color: light-dark(var(--eds-theme-color-background-utility-default-medium-emphasis-active), var(--eds-dark-theme-color-background-utility-default-low-emphasis-active));
+}
+
+/**
  * Override default padding for  
  */
 .sb-show-main.sb-main-padded {
