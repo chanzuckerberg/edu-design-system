@@ -25,12 +25,12 @@ export const EdsDarkThemeColorBackgroundUtilityContainerHover = '#242423';
 export const EdsDarkThemeColorBackgroundUtilityContainerActive = '#30302E';
 export const EdsDarkThemeColorBackgroundUtilityContainerSelected = '#242423';
 export const EdsDarkThemeColorBackgroundUtilityOverlayLowEmphasis =
-  'rgba(250, 249, 248, 0.60)';
+  'rgba(107, 106, 100, 0.60)';
 export const EdsDarkThemeColorBackgroundUtilityOverlayHighEmphasis =
   'rgba(36, 36, 35, 0.80)';
 export const EdsDarkThemeColorBackgroundUtilityObjectSelected = '#1DB470';
 export const EdsDarkThemeColorBackgroundUtilityDefaultNoEmphasis =
-  'rgba(255, 255, 255, 0.00)';
+  'rgba(0, 0, 0, 0.00)';
 export const EdsDarkThemeColorBackgroundUtilityDefaultNoEmphasisHover =
   '#30302E';
 export const EdsDarkThemeColorBackgroundUtilityDefaultNoEmphasisActive =
@@ -41,18 +41,18 @@ export const EdsDarkThemeColorBackgroundUtilityDefaultLowEmphasisHover =
 export const EdsDarkThemeColorBackgroundUtilityDefaultLowEmphasisActive =
   '#55554E';
 export const EdsDarkThemeColorBackgroundUtilityDefaultMediumEmphasis =
-  '#CCC9C6';
+  '#9B9997';
 export const EdsDarkThemeColorBackgroundUtilityDefaultMediumEmphasisHover =
-  '#D8D4D1';
+  '#BCB9B6';
 export const EdsDarkThemeColorBackgroundUtilityDefaultMediumEmphasisActive =
-  '#E6E2DE';
+  '#CCC9C6';
 export const EdsDarkThemeColorBackgroundUtilityDefaultHighEmphasis = '#FAF9F8';
 export const EdsDarkThemeColorBackgroundUtilityDefaultHighEmphasisHover =
   '#F4F1EF';
 export const EdsDarkThemeColorBackgroundUtilityDefaultHighEmphasisActive =
   '#E6E2DE';
 export const EdsDarkThemeColorBackgroundUtilityInteractiveNoEmphasis =
-  'rgba(255, 255, 255, 0.00)';
+  'rgba(0, 0, 0, 0.00)';
 export const EdsDarkThemeColorBackgroundUtilityInteractiveNoEmphasisHover =
   '#30302E';
 export const EdsDarkThemeColorBackgroundUtilityInteractiveNoEmphasisActive =
@@ -80,32 +80,32 @@ export const EdsDarkThemeColorBackgroundUtilityCriticalLowEmphasisHover =
   '#9D1F18';
 export const EdsDarkThemeColorBackgroundUtilityCriticalLowEmphasisActive =
   '#C4352D';
-export const EdsDarkThemeColorBackgroundUtilityCriticalHighEmphasis = '#FCBDBD';
+export const EdsDarkThemeColorBackgroundUtilityCriticalHighEmphasis = '#FF6962';
 export const EdsDarkThemeColorBackgroundUtilityCriticalHighEmphasisHover =
-  '#F6CBCB';
+  '#FF9C99';
 export const EdsDarkThemeColorBackgroundUtilityCriticalHighEmphasisActive =
-  '#F9DFDF';
+  '#FCBDBD';
 export const EdsDarkThemeColorBackgroundUtilityFavorableLowEmphasis = '#0E442B';
 export const EdsDarkThemeColorBackgroundUtilityFavorableLowEmphasisHover =
   '#125B3A';
 export const EdsDarkThemeColorBackgroundUtilityFavorableLowEmphasisActive =
   '#177A4D';
 export const EdsDarkThemeColorBackgroundUtilityFavorableHighEmphasis =
-  '#7ED6AD';
+  '#1DB470';
 export const EdsDarkThemeColorBackgroundUtilityFavorableHighEmphasisHover =
-  '#A1E1C4';
+  '#5CCB98';
 export const EdsDarkThemeColorBackgroundUtilityFavorableHighEmphasisActive =
-  '#C2ECD9';
-export const EdsDarkThemeColorBackgroundUtilityWarningLowEmphasis = '#392F01';
+  '#7ED6AD';
+export const EdsDarkThemeColorBackgroundUtilityWarningLowEmphasis = '#625101';
 export const EdsDarkThemeColorBackgroundUtilityWarningLowEmphasisHover =
-  '#463901';
-export const EdsDarkThemeColorBackgroundUtilityWarningLowEmphasisActive =
   '#625101';
-export const EdsDarkThemeColorBackgroundUtilityWarningHighEmphasis = '#DFCC32';
+export const EdsDarkThemeColorBackgroundUtilityWarningLowEmphasisActive =
+  '#463901';
+export const EdsDarkThemeColorBackgroundUtilityWarningHighEmphasis = '#B79F15';
 export const EdsDarkThemeColorBackgroundUtilityWarningHighEmphasisHover =
-  '#EDDE45';
+  '#CDB825';
 export const EdsDarkThemeColorBackgroundUtilityWarningHighEmphasisActive =
-  '#F6EE65';
+  '#DFCC32';
 export const EdsDarkThemeColorBackgroundUtilityInformationalLowEmphasis =
   '#30302E';
 export const EdsDarkThemeColorBackgroundUtilityInformationalLowEmphasisHover =
@@ -113,29 +113,29 @@ export const EdsDarkThemeColorBackgroundUtilityInformationalLowEmphasisHover =
 export const EdsDarkThemeColorBackgroundUtilityInformationalLowEmphasisActive =
   '#55554E';
 export const EdsDarkThemeColorBackgroundUtilityInformationalHighEmphasis =
-  '#7ED6AD';
+  '#1DB470';
 export const EdsDarkThemeColorBackgroundUtilityInformationalHighEmphasisHover =
-  '#A1E1C4';
+  '#5CCB98';
 export const EdsDarkThemeColorBackgroundUtilityInformationalHighEmphasisActive =
-  '#C2ECD9';
+  '#A1E1C4';
 export const EdsDarkThemeColorBackgroundUtilityDisabledNoEmphasis =
-  'rgba(250, 249, 248, 0.00)';
+  'rgba(0, 0, 0, 0.00)';
 export const EdsDarkThemeColorBackgroundUtilityDisabledLowEmphasis = '#30302E';
 export const EdsDarkThemeColorBackgroundUtilityDisabledMediumEmphasis =
   '#6B6A64';
 export const EdsDarkThemeColorBackgroundUtilityInverseNoEmphasis =
-  'rgba(255, 255, 255, 0.00)';
+  'rgba(0, 0, 0, 0.00)';
 export const EdsDarkThemeColorBackgroundUtilityInverseNoEmphasisHover =
-  'rgba(250, 249, 248, 0.10)';
+  'rgba(36, 36, 35, 0.10)';
 export const EdsDarkThemeColorBackgroundUtilityInverseNoEmphasisActive =
-  'rgba(250, 249, 248, 0.20)';
+  'rgba(36, 36, 35, 0.20)';
 export const EdsDarkThemeColorBackgroundUtilityInverseHighEmphasis = '#181818';
 export const EdsDarkThemeColorBackgroundUtilityInverseHighEmphasisHover =
   '#242423';
 export const EdsDarkThemeColorBackgroundUtilityInverseHighEmphasisActive =
   '#30302E';
 export const EdsDarkThemeColorBackgroundUtilityInverseDisabled =
-  'rgba(250, 249, 248, 0.50)';
+  'rgba(0, 0, 0, 0.50)';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical1LowEmphasis =
   '#0E442B';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical1HighEmphasis =
@@ -163,13 +163,13 @@ export const EdsDarkThemeColorBackgroundVisualizationCategorical6HighEmphasis =
 export const EdsDarkThemeColorBackgroundVisualizationCategorical7HighEmphasis =
   '#4D63CB';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical8HighEmphasis =
-  '#FF9C99';
+  '#EA4941';
 export const EdsDarkThemeColorBackgroundVisualizationCategoricalOther =
   '#83827E';
-export const EdsDarkThemeColorBackgroundVisualizationScalar1 = '#A1E1C4';
+export const EdsDarkThemeColorBackgroundVisualizationScalar1 = '#125B3A';
 export const EdsDarkThemeColorBackgroundVisualizationScalar2 = '#1DB470';
-export const EdsDarkThemeColorBackgroundVisualizationScalar3 = '#177A4D';
-export const EdsDarkThemeColorBackgroundVisualizationScalar4 = '#0E442B';
+export const EdsDarkThemeColorBackgroundVisualizationScalar3 = '#7ED6AD';
+export const EdsDarkThemeColorBackgroundVisualizationScalar4 = '#C2ECD9';
 export const EdsDarkThemeColorBackgroundVisualizationScalarBasis = '#F4F1EF';
 export const EdsDarkThemeColorBackgroundVisualizationDivergentBasis = '#30302E';
 export const EdsDarkThemeColorBackgroundVisualizationDivergentMinus1 =
@@ -185,14 +185,14 @@ export const EdsDarkThemeColorBackgroundProgressBar = '#19955D';
 export const EdsDarkThemeColorBackgroundProgressBarContent = '#19955D';
 export const EdsDarkThemeColorBackgroundProgressBarTrack = '#3A3A37';
 export const EdsDarkThemeColorBorderAppHeaderSeparator = '#6B6A64';
-export const EdsDarkThemeColorBorderUtilityDefaultLowEmphasis = '#6B6A64';
-export const EdsDarkThemeColorBorderUtilityDefaultLowEmphasisHover = '#83827E';
-export const EdsDarkThemeColorBorderUtilityDefaultLowEmphasisActive = '#9B9997';
-export const EdsDarkThemeColorBorderUtilityDefaultMediumEmphasis = '#BCB9B6';
+export const EdsDarkThemeColorBorderUtilityDefaultLowEmphasis = '#3A3A37';
+export const EdsDarkThemeColorBorderUtilityDefaultLowEmphasisHover = '#55554E';
+export const EdsDarkThemeColorBorderUtilityDefaultLowEmphasisActive = '#6B6A64';
+export const EdsDarkThemeColorBorderUtilityDefaultMediumEmphasis = '#9B9997';
 export const EdsDarkThemeColorBorderUtilityDefaultMediumEmphasisHover =
-  '#CCC9C6';
+  '#BCB9B6';
 export const EdsDarkThemeColorBorderUtilityDefaultMediumEmphasisActive =
-  '#D8D4D1';
+  '#CCC9C6';
 export const EdsDarkThemeColorBorderUtilityDefaultHighEmphasis = '#FAF9F8';
 export const EdsDarkThemeColorBorderUtilityDefaultHighEmphasisHover = '#E6E2DE';
 export const EdsDarkThemeColorBorderUtilityDefaultHighEmphasisActive =
@@ -200,20 +200,20 @@ export const EdsDarkThemeColorBorderUtilityDefaultHighEmphasisActive =
 export const EdsDarkThemeColorBorderUtilityInteractive = '#6B6A64';
 export const EdsDarkThemeColorBorderUtilityInteractiveHover = '#83827E';
 export const EdsDarkThemeColorBorderUtilityInteractiveActive = '#9B9997';
-export const EdsDarkThemeColorBorderUtilityInteractiveSecondary = '#7ED6AD';
+export const EdsDarkThemeColorBorderUtilityInteractiveSecondary = '#1DB470';
 export const EdsDarkThemeColorBorderUtilityInteractiveSecondaryHover =
-  '#A1E1C4';
+  '#5CCB98';
 export const EdsDarkThemeColorBorderUtilityInteractiveSecondaryActive =
-  '#C2ECD9';
-export const EdsDarkThemeColorBorderUtilityCritical = '#FCBDBD';
-export const EdsDarkThemeColorBorderUtilityCriticalHover = '#F6CBCB';
-export const EdsDarkThemeColorBorderUtilityCriticalActive = '#F9DFDF';
-export const EdsDarkThemeColorBorderUtilityFavorable = '#7ED6AD';
-export const EdsDarkThemeColorBorderUtilityFavorableHover = '#A1E1C4';
-export const EdsDarkThemeColorBorderUtilityFavorableActive = '#C2ECD9';
-export const EdsDarkThemeColorBorderUtilityWarning = '#DFCC32';
-export const EdsDarkThemeColorBorderUtilityWarningHover = '#EDDE45';
-export const EdsDarkThemeColorBorderUtilityWarningActive = '#F6EE65';
+  '#7ED6AD';
+export const EdsDarkThemeColorBorderUtilityCritical = '#FF6962';
+export const EdsDarkThemeColorBorderUtilityCriticalHover = '#FF9C99';
+export const EdsDarkThemeColorBorderUtilityCriticalActive = '#FCBDBD';
+export const EdsDarkThemeColorBorderUtilityFavorable = '#1DB470';
+export const EdsDarkThemeColorBorderUtilityFavorableHover = '#5CCB98';
+export const EdsDarkThemeColorBorderUtilityFavorableActive = '#7ED6AD';
+export const EdsDarkThemeColorBorderUtilityWarning = '#B79F15';
+export const EdsDarkThemeColorBorderUtilityWarningHover = '#CDB825';
+export const EdsDarkThemeColorBorderUtilityWarningActive = '#DFCC32';
 export const EdsDarkThemeColorBorderUtilityInformational = '#E6E2DE';
 export const EdsDarkThemeColorBorderUtilityInformationalHover = '#FAF9F8';
 export const EdsDarkThemeColorBorderUtilityInformationalActive = '#FFFFFF';
@@ -221,31 +221,31 @@ export const EdsDarkThemeColorBorderUtilityDisabled = '#6B6A64';
 export const EdsDarkThemeColorBorderUtilityFocus = '#1DB470';
 export const EdsDarkThemeColorBorderUtilityInverse = '#181818';
 export const EdsDarkThemeColorBorderUtilityInverseDisabled =
-  'rgba(250, 249, 248, 0.50)';
+  'rgba(244, 241, 239, 0.50)';
 export const EdsDarkThemeColorIconUtilityDefaultPrimary = '#E6E2DE';
 export const EdsDarkThemeColorIconUtilityDefaultPrimaryHover = '#FAF9F8';
 export const EdsDarkThemeColorIconUtilityDefaultPrimaryActive = '#FFFFFF';
-export const EdsDarkThemeColorIconUtilityDefaultSecondary = '#CCC9C6';
-export const EdsDarkThemeColorIconUtilityDefaultSecondaryHover = '#D8D4D1';
-export const EdsDarkThemeColorIconUtilityDefaultSecondaryActive = '#E6E2DE';
+export const EdsDarkThemeColorIconUtilityDefaultSecondary = '#9B9997';
+export const EdsDarkThemeColorIconUtilityDefaultSecondaryHover = '#BCB9B6';
+export const EdsDarkThemeColorIconUtilityDefaultSecondaryActive = '#CCC9C6';
 export const EdsDarkThemeColorIconUtilityInteractivePrimary = '#FAF9F8';
 export const EdsDarkThemeColorIconUtilityInteractivePrimaryHover = '#E6E2DE';
 export const EdsDarkThemeColorIconUtilityInteractivePrimaryActive = '#D8D4D1';
 export const EdsDarkThemeColorIconUtilityInteractivePrimaryVisited = '#FAF9F8';
-export const EdsDarkThemeColorIconUtilityInteractiveSecondary = '#7ED6AD';
-export const EdsDarkThemeColorIconUtilityInteractiveSecondaryHover = '#A1E1C4';
-export const EdsDarkThemeColorIconUtilityInteractiveSecondaryActive = '#C2ECD9';
+export const EdsDarkThemeColorIconUtilityInteractiveSecondary = '#1DB470';
+export const EdsDarkThemeColorIconUtilityInteractiveSecondaryHover = '#5CCB98';
+export const EdsDarkThemeColorIconUtilityInteractiveSecondaryActive = '#7ED6AD';
 export const EdsDarkThemeColorIconUtilityInteractiveSecondaryVisited =
-  '#7ED6AD';
-export const EdsDarkThemeColorIconUtilityCritical = '#FCBDBD';
-export const EdsDarkThemeColorIconUtilityCriticalHover = '#F6CBCB';
-export const EdsDarkThemeColorIconUtilityCriticalActive = '#F9DFDF';
-export const EdsDarkThemeColorIconUtilityFavorable = '#7ED6AD';
-export const EdsDarkThemeColorIconUtilityFavorableHover = '#A1E1C4';
-export const EdsDarkThemeColorIconUtilityFavorableActive = '#C2ECD9';
-export const EdsDarkThemeColorIconUtilityWarning = '#DFCC32';
-export const EdsDarkThemeColorIconUtilityWarningHover = '#EDDE45';
-export const EdsDarkThemeColorIconUtilityWarningActive = '#F6EE65';
+  '#1DB470';
+export const EdsDarkThemeColorIconUtilityCritical = '#FF6962';
+export const EdsDarkThemeColorIconUtilityCriticalHover = '#FF9C99';
+export const EdsDarkThemeColorIconUtilityCriticalActive = '#FCBDBD';
+export const EdsDarkThemeColorIconUtilityFavorable = '#1DB470';
+export const EdsDarkThemeColorIconUtilityFavorableHover = '#5CCB98';
+export const EdsDarkThemeColorIconUtilityFavorableActive = '#7ED6AD';
+export const EdsDarkThemeColorIconUtilityWarning = '#B79F15';
+export const EdsDarkThemeColorIconUtilityWarningHover = '#CDB825';
+export const EdsDarkThemeColorIconUtilityWarningActive = '#DFCC32';
 export const EdsDarkThemeColorIconUtilityInformational = '#E6E2DE';
 export const EdsDarkThemeColorIconUtilityInformationalHover = '#FAF9F8';
 export const EdsDarkThemeColorIconUtilityInformationalActive = '#FFFFFF';
@@ -265,27 +265,27 @@ export const EdsDarkThemeColorIconAppHeaderSecondary = '#CCC9C6';
 export const EdsDarkThemeColorTextUtilityDefaultPrimary = '#E6E2DE';
 export const EdsDarkThemeColorTextUtilityDefaultPrimaryHover = '#FAF9F8';
 export const EdsDarkThemeColorTextUtilityDefaultPrimaryActive = '#FFFFFF';
-export const EdsDarkThemeColorTextUtilityDefaultSecondary = '#CCC9C6';
-export const EdsDarkThemeColorTextUtilityDefaultSecondaryHover = '#D8D4D1';
-export const EdsDarkThemeColorTextUtilityDefaultSecondaryActive = '#E6E2DE';
+export const EdsDarkThemeColorTextUtilityDefaultSecondary = '#9B9997';
+export const EdsDarkThemeColorTextUtilityDefaultSecondaryHover = '#BCB9B6';
+export const EdsDarkThemeColorTextUtilityDefaultSecondaryActive = '#CCC9C6';
 export const EdsDarkThemeColorTextUtilityInteractivePrimary = '#FAF9F8';
 export const EdsDarkThemeColorTextUtilityInteractivePrimaryHover = '#E6E2DE';
 export const EdsDarkThemeColorTextUtilityInteractivePrimaryActive = '#D8D4D1';
 export const EdsDarkThemeColorTextUtilityInteractivePrimaryVisited = '#FAF9F8';
-export const EdsDarkThemeColorTextUtilityInteractiveSecondary = '#7ED6AD';
-export const EdsDarkThemeColorTextUtilityInteractiveSecondaryHover = '#A1E1C4';
-export const EdsDarkThemeColorTextUtilityInteractiveSecondaryActive = '#C2ECD9';
+export const EdsDarkThemeColorTextUtilityInteractiveSecondary = '#1DB470';
+export const EdsDarkThemeColorTextUtilityInteractiveSecondaryHover = '#5CCB98';
+export const EdsDarkThemeColorTextUtilityInteractiveSecondaryActive = '#7ED6AD';
 export const EdsDarkThemeColorTextUtilityInteractiveSecondaryVisited =
-  '#7ED6AD';
-export const EdsDarkThemeColorTextUtilityCritical = '#FCBDBD';
-export const EdsDarkThemeColorTextUtilityCriticalHover = '#F6CBCB';
-export const EdsDarkThemeColorTextUtilityCriticalActive = '#F9DFDF';
-export const EdsDarkThemeColorTextUtilityFavorable = '#7ED6AD';
-export const EdsDarkThemeColorTextUtilityFavorableHover = '#A1E1C4';
-export const EdsDarkThemeColorTextUtilityFavorableActive = '#C2ECD9';
-export const EdsDarkThemeColorTextUtilityWarning = '#DFCC32';
-export const EdsDarkThemeColorTextUtilityWarningHover = '#EDDE45';
-export const EdsDarkThemeColorTextUtilityWarningActive = '#F6EE65';
+  '#1DB470';
+export const EdsDarkThemeColorTextUtilityCritical = '#FF6962';
+export const EdsDarkThemeColorTextUtilityCriticalHover = '#FF9C99';
+export const EdsDarkThemeColorTextUtilityCriticalActive = '#FCBDBD';
+export const EdsDarkThemeColorTextUtilityFavorable = '#1DB470';
+export const EdsDarkThemeColorTextUtilityFavorableHover = '#5CCB98';
+export const EdsDarkThemeColorTextUtilityFavorableActive = '#7ED6AD';
+export const EdsDarkThemeColorTextUtilityWarning = '#B79F15';
+export const EdsDarkThemeColorTextUtilityWarningHover = '#CDB825';
+export const EdsDarkThemeColorTextUtilityWarningActive = '#DFCC32';
 export const EdsDarkThemeColorTextUtilityInformational = '#E6E2DE';
 export const EdsDarkThemeColorTextUtilityInformationalHover = '#FAF9F8';
 export const EdsDarkThemeColorTextUtilityInformationalActive = '#FFFFFF';
