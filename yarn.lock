@@ -2704,20 +2704,20 @@ __metadata:
   linkType: hard
 
 "@storybook/addon-mcp@npm:^10.6.1":
-  version: 10.6.1
-  resolution: "@storybook/addon-mcp@npm:10.6.1"
+  version: 10.6.3
+  resolution: "@storybook/addon-mcp@npm:10.6.3"
   dependencies:
     "@tmcp/adapter-valibot": "npm:^0.1.5"
     "@tmcp/transport-http": "npm:^0.8.5"
     tmcp: "npm:^1.19.4"
     valibot: "npm:^1.4.0"
   peerDependencies:
-    "@storybook/addon-vitest": ^10.6.1
-    storybook: ^10.6.1
+    "@storybook/addon-vitest": ^10.6.3
+    storybook: ^10.6.3
   peerDependenciesMeta:
     "@storybook/addon-vitest":
       optional: true
-  checksum: 10/b33bda8010b9c0bcd5393f0ab71393ed4725b928476454d776db9249b2cbc936ef65e8967d5d0c5cfd2b230939ef9c137673e42761a6476b72736d5149db14d5
+  checksum: 10/3dae76fc84c5a33438ab70d3d1c72079dacfc8eb1647142b8fea868277c5a299a96313d941a2b8fcac0634de60478197dd98a36beaae1020ca1956fba39320b2
   languageName: node
   linkType: hard
 
