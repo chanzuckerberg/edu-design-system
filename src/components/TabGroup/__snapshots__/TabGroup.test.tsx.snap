@@ -110,7 +110,6 @@ exports[`<TabGroup /> > Centered story renders snapshot 1`] = `
           class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-           
         </p>
       </div>
     </div>
@@ -228,7 +227,6 @@ exports[`<TabGroup /> > Default story renders snapshot 1`] = `
           class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-           
         </p>
       </div>
     </div>
@@ -240,7 +238,9 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
 <div
   class="p-spacing-size-half"
 >
-  <div>
+  <div
+    class="bg-utility-default-highEmphasis dark:bg-dark-utility-default-highEmphasis"
+  >
     <div
       class="_tabs__header_5bfe90 _tabs--has-divider_5bfe90 _tabs__header--variant-inverse_5bfe90"
     >
@@ -338,7 +338,7 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
         role="tabpanel"
       >
         <div
-          class="text-utility-inverse max-w-[576px]"
+          class="text-utility-inverse dark:text-dark-utility-inverse max-w-[576px]"
         >
           <h3
             class="_text_b3eba3 _text--headline-sm_b3eba3 mb-spacing-size-3"
@@ -349,7 +349,6 @@ exports[`<TabGroup /> > InverseVariant story renders snapshot 1`] = `
             class="_text_b3eba3 _text--body-md_b3eba3"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-             
           </p>
         </div>
       </div>
@@ -468,7 +467,6 @@ exports[`<TabGroup /> > TabWidthFull story renders snapshot 1`] = `
           class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-           
         </p>
       </div>
     </div>
@@ -703,7 +701,6 @@ exports[`<TabGroup /> > WithTabIcons story renders snapshot 1`] = `
           class="_text_b3eba3 _text--body-md_b3eba3"
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-           
         </p>
       </div>
     </div>
