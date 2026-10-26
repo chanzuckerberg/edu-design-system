@@ -2,7 +2,7 @@
 
 exports[`<Link /> > Bold story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <div
     class="flex flex-col gap-4"
@@ -83,7 +83,7 @@ exports[`<Link /> > Bold story renders snapshot 1`] = `
 
 exports[`<Link /> > Default story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <a
     class="_link_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
@@ -96,7 +96,7 @@ exports[`<Link /> > Default story renders snapshot 1`] = `
 
 exports[`<Link /> > Emphasis story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <div>
     <a
@@ -125,7 +125,7 @@ exports[`<Link /> > Emphasis story renders snapshot 1`] = `
 
 exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <div
     class="grid grid-cols-3 items-center gap-x-8 gap-y-4"
@@ -456,7 +456,7 @@ exports[`<Link /> > IconAlignmentAcrossSizes story renders snapshot 1`] = `
 
 exports[`<Link /> > InheritColor story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <div
     class="text-utility-critical"
@@ -496,7 +496,7 @@ exports[`<Link /> > InheritColor story renders snapshot 1`] = `
 
 exports[`<Link /> > InverseVariant story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <div
     class="p-spacing-size-half text-utility-inverse w-[384px] text-center"
@@ -513,7 +513,7 @@ exports[`<Link /> > InverseVariant story renders snapshot 1`] = `
 
 exports[`<Link /> > LinkInParagraphContext story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <div>
     Lorem ipsum dolor sit amet,
@@ -549,7 +549,7 @@ exports[`<Link /> > LinkInParagraphContext story renders snapshot 1`] = `
 
 exports[`<Link /> > LinkWithFormattedChildren story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <a
     class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
@@ -578,7 +578,7 @@ exports[`<Link /> > LinkWithFormattedChildren story renders snapshot 1`] = `
 
 exports[`<Link /> > LinkWithForwardIcon story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <a
     class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-low_d78ce8 _link--size-lg_d78ce8"
@@ -605,7 +605,7 @@ exports[`<Link /> > LinkWithForwardIcon story renders snapshot 1`] = `
 
 exports[`<Link /> > LinkWithOpenIcon story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <a
     class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8"
@@ -632,7 +632,7 @@ exports[`<Link /> > LinkWithOpenIcon story renders snapshot 1`] = `
 
 exports[`<Link /> > StandaloneInverseVariant story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <a
     class="_link_d78ce8 _link--context-standalone_d78ce8 _link--emphasis-default_d78ce8 _link--size-lg_d78ce8 _link--variant-inverse_d78ce8"
@@ -645,7 +645,7 @@ exports[`<Link /> > StandaloneInverseVariant story renders snapshot 1`] = `
 
 exports[`<Link /> > UsingExtendedLink story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <div>
     Lorem ipsum dolor sit amet,
@@ -665,7 +665,7 @@ exports[`<Link /> > UsingExtendedLink story renders snapshot 1`] = `
 
 exports[`<Link /> > WithProvidedIcons story renders snapshot 1`] = `
 <div
-  class="text-utility-default-primary"
+  class="text-utility-default-primary dark:text-dark-utility-default-primary"
 >
   <div>
     <a

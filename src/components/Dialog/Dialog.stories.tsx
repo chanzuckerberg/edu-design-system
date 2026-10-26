@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { userEvent, within } from 'storybook/test';
 
 import { Dialog } from './Dialog';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
@@ -91,13 +92,16 @@ export const Default: Story = {
   parameters: {
     ...sharedParameters,
     chromatic: {
-      viewports: [
-        chromaticViewports.googlePixel2,
-        chromaticViewports.ipadMini,
-        chromaticViewports.ipadPro,
-        chromaticViewports.chromebook,
-        chromaticViewports.macbookPro,
-      ],
+      modes: {
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.ipadMini,
+          chromaticViewports.ipadPro,
+          chromaticViewports.chromebook,
+          chromaticViewports.macbookPro,
+        ),
+        dark: themeModes.dark,
+      },
     },
   },
   render: (args) => <InteractiveExample {...args} />,

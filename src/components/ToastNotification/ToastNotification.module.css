@@ -12,7 +12,7 @@
   padding: calc(var(--eds-spacing-size-2) * 1px);
   align-items: start;
   border-radius: calc(var(--eds-theme-border-radius-notification) * 1px);
-  box-shadow: var(--eds-box-shadow-lg);
+  box-shadow: 0px 4px 12px light-dark(color-mix(in srgb, var(--eds-theme-color-background-utility-default-high-emphasis) 16%, transparent), color-mix(in srgb, var(--eds-dark-theme-color-background-utility-default-high-emphasis) 16%, transparent));
 
   background-color: var(--toast__bg, light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-border-utility-default-high-emphasis)));
   color: var(--toast__fg, light-dark(var(--eds-theme-color-text-utility-inverse), var(--eds-dark-theme-color-text-utility-inverse)));

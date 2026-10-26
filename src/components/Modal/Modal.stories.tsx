@@ -11,6 +11,7 @@ import { Modal } from './Modal';
 import Heading from '../../components/Heading';
 import Text from '../../components/Text';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
@@ -73,6 +74,7 @@ function InteractiveExample(args: InteractiveArgs) {
  */
 export const Default: Story = {
   parameters: {
+    chromatic: { modes: themeModes },
     layout: 'centered',
     snapshot: {
       skip: true,
@@ -363,7 +365,7 @@ export const WarnOnClose: Story = {
 export const ContentDefault: Story = {
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis dark:bg-dark-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -377,7 +379,7 @@ export const ContentDefault: Story = {
         <Modal.Header>
           <Heading
             as="h2"
-            className="text-utility-default-primary"
+            className="text-utility-default-primary dark:text-dark-utility-default-primary"
             preset="title-lg"
           >
             Modal Title
@@ -440,13 +442,13 @@ export const ContentSmall: Story = {
     ...ContentDefault.parameters,
     chromatic: {
       disableSnapshot: false,
-      viewports: [
+      modes: viewportModes(
         chromaticViewports.googlePixel2,
         chromaticViewports.ipadMini,
         chromaticViewports.ipadPro,
         chromaticViewports.chromebook,
         chromaticViewports.macbookPro,
-      ],
+      ),
     },
   },
 };
@@ -539,7 +541,7 @@ export const LayoutVerticalWithTertiary: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis dark:bg-dark-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -584,7 +586,7 @@ export const WithCriticalButton: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis dark:bg-dark-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -606,7 +608,7 @@ export const Mobile: Story = {
     },
     chromatic: {
       disableSnapshot: false,
-      viewports: [chromaticViewports.googlePixel2],
+      modes: viewportModes(chromaticViewports.googlePixel2),
     },
   },
 };
@@ -652,7 +654,7 @@ export const Tablet: Story = {
     },
     chromatic: {
       disableSnapshot: false,
-      viewports: [chromaticViewports.ipadMini],
+      modes: viewportModes(chromaticViewports.ipadMini),
     },
   },
 };
