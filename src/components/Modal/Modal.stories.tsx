@@ -365,7 +365,7 @@ export const WarnOnClose: Story = {
 export const ContentDefault: Story = {
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="bg-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis dark:bg-dark-utility-overlay-lowEmphasis absolute h-[100vh] w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -379,7 +379,7 @@ export const ContentDefault: Story = {
         <Modal.Header>
           <Heading
             as="h2"
-            className="text-utility-default-primary"
+            className="text-utility-default-primary dark:text-dark-utility-default-primary"
             preset="title-lg"
           >
             Modal Title
@@ -541,7 +541,7 @@ export const LayoutVerticalWithTertiary: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis dark:bg-dark-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"
@@ -586,7 +586,7 @@ export const WithCriticalButton: Story = {
   },
   render: (args) => (
     <div className="fixed left-0 top-0 flex h-[100vh] w-full items-center justify-center">
-      <div className="bg-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
+      <div className="bg-utility-overlay-lowEmphasis dark:bg-dark-utility-overlay-lowEmphasis absolute h-full w-full opacity-50" />
       <Modal.Content
         {...args}
         data-testid="non-interactive"

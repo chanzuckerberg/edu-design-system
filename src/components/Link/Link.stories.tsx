@@ -26,7 +26,11 @@ export default {
     onClick: (event: any) => event.preventDefault(),
   },
   decorators: [
-    (Story) => <div className="text-utility-default-primary">{Story()}</div>,
+    (Story) => (
+      <div className="text-utility-default-primary dark:text-dark-utility-default-primary">
+        {Story()}
+      </div>
+    ),
   ],
   tags: ['autodocs', 'version:3.1.0'],
 } as Meta<typeof Link>;
