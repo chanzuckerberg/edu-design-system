@@ -8,6 +8,7 @@
  * Avatar
  */
 .avatar {
+  color-scheme: light;
   --avatar-border-radius: calc(var(--eds-border-radius-100) * 1px);
   --avatar__fg: light-dark(var(--eds-theme-color-text-utility-default-secondary), var(--eds-dark-theme-color-text-utility-default-secondary));
   --avatar__bg: light-dark(var(--eds-theme-color-background-utility-default-low-emphasis), var(--eds-dark-theme-color-background-utility-default-low-emphasis));
