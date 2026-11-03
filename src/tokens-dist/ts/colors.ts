@@ -55,20 +55,20 @@ export const EdsColorOrange850 = '#401805';
 export const EdsColorOrange900 = '#2B1003';
 export const EdsColorOrange950 = '#1B0A02';
 export const EdsColorOrange050 = '#FFEEE5';
-export const EdsColorYellow100 = '#F6EE65';
-export const EdsColorYellow150 = '#EDDE45';
-export const EdsColorYellow200 = '#DFCC32';
-export const EdsColorYellow250 = '#CDB825';
-export const EdsColorYellow350 = '#B79F15';
-export const EdsColorYellow450 = '#9B7F01';
-export const EdsColorYellow550 = '#7E6701';
-export const EdsColorYellow650 = '#625101';
-export const EdsColorYellow750 = '#463901';
-export const EdsColorYellow800 = '#392F01';
-export const EdsColorYellow850 = '#2C2400';
-export const EdsColorYellow900 = '#1D1800';
-export const EdsColorYellow950 = '#100D01';
-export const EdsColorYellow050 = '#FFFC93';
+export const EdsColorYellow100 = '#FFE29B';
+export const EdsColorYellow150 = '#FFCE56';
+export const EdsColorYellow200 = '#FAC33D';
+export const EdsColorYellow250 = '#EBB22D';
+export const EdsColorYellow350 = '#D0920F';
+export const EdsColorYellow450 = '#B07503';
+export const EdsColorYellow550 = '#915E09';
+export const EdsColorYellow650 = '#6F470F';
+export const EdsColorYellow750 = '#533315';
+export const EdsColorYellow800 = '#412711';
+export const EdsColorYellow850 = '#331F0D';
+export const EdsColorYellow900 = '#231509';
+export const EdsColorYellow950 = '#130E01';
+export const EdsColorYellow050 = '#FFF2D2';
 export const EdsColorGreen100 = '#C2ECD9';
 export const EdsColorGreen150 = '#A1E1C4';
 export const EdsColorGreen200 = '#7ED6AD';
@@ -206,13 +206,13 @@ export const EdsThemeColorBackgroundUtilityFavorableHighEmphasisHover =
   '#125B3A';
 export const EdsThemeColorBackgroundUtilityFavorableHighEmphasisActive =
   '#0E442B';
-export const EdsThemeColorBackgroundUtilityWarningLowEmphasis = '#FFFC93';
-export const EdsThemeColorBackgroundUtilityWarningLowEmphasisHover = '#F6EE65';
-export const EdsThemeColorBackgroundUtilityWarningLowEmphasisActive = '#EDDE45';
-export const EdsThemeColorBackgroundUtilityWarningHighEmphasis = '#CDB825';
-export const EdsThemeColorBackgroundUtilityWarningHighEmphasisHover = '#B79F15';
+export const EdsThemeColorBackgroundUtilityWarningLowEmphasis = '#FFF2D2';
+export const EdsThemeColorBackgroundUtilityWarningLowEmphasisHover = '#FFE29B';
+export const EdsThemeColorBackgroundUtilityWarningLowEmphasisActive = '#FFCE56';
+export const EdsThemeColorBackgroundUtilityWarningHighEmphasis = '#EBB22D';
+export const EdsThemeColorBackgroundUtilityWarningHighEmphasisHover = '#D0920F';
 export const EdsThemeColorBackgroundUtilityWarningHighEmphasisActive =
-  '#9B7F01';
+  '#B07503';
 export const EdsThemeColorBackgroundUtilityInformationalLowEmphasis = '#F4F1EF';
 export const EdsThemeColorBackgroundUtilityInformationalLowEmphasisHover =
   '#E6E2DE';
@@ -253,9 +253,9 @@ export const EdsThemeColorBackgroundVisualizationCategorical3LowEmphasis =
 export const EdsThemeColorBackgroundVisualizationCategorical3HighEmphasis =
   '#0E442B';
 export const EdsThemeColorBackgroundVisualizationCategorical4LowEmphasis =
-  '#FFFC93';
+  '#FFF2D2';
 export const EdsThemeColorBackgroundVisualizationCategorical4HighEmphasis =
-  '#CDB825';
+  '#EBB22D';
 export const EdsThemeColorBackgroundVisualizationCategorical5LowEmphasis =
   '#F3E5FA';
 export const EdsThemeColorBackgroundVisualizationCategorical5HighEmphasis =
@@ -306,9 +306,9 @@ export const EdsThemeColorBorderUtilityCriticalActive = '#760903';
 export const EdsThemeColorBorderUtilityFavorable = '#177A4D';
 export const EdsThemeColorBorderUtilityFavorableHover = '#125B3A';
 export const EdsThemeColorBorderUtilityFavorableActive = '#0E442B';
-export const EdsThemeColorBorderUtilityWarning = '#7E6701';
-export const EdsThemeColorBorderUtilityWarningHover = '#625101';
-export const EdsThemeColorBorderUtilityWarningActive = '#463901';
+export const EdsThemeColorBorderUtilityWarning = '#915E09';
+export const EdsThemeColorBorderUtilityWarningHover = '#6F470F';
+export const EdsThemeColorBorderUtilityWarningActive = '#533315';
 export const EdsThemeColorBorderUtilityInformational = '#3A3A37';
 export const EdsThemeColorBorderUtilityInformationalHover = '#242423';
 export const EdsThemeColorBorderUtilityInformationalActive = '#0E0E0E';
@@ -337,9 +337,9 @@ export const EdsThemeColorIconUtilityCriticalActive = '#760903';
 export const EdsThemeColorIconUtilityFavorable = '#177A4D';
 export const EdsThemeColorIconUtilityFavorableHover = '#125B3A';
 export const EdsThemeColorIconUtilityFavorableActive = '#0E442B';
-export const EdsThemeColorIconUtilityWarning = '#7E6701';
-export const EdsThemeColorIconUtilityWarningHover = '#625101';
-export const EdsThemeColorIconUtilityWarningActive = '#463901';
+export const EdsThemeColorIconUtilityWarning = '#915E09';
+export const EdsThemeColorIconUtilityWarningHover = '#6F470F';
+export const EdsThemeColorIconUtilityWarningActive = '#533315';
 export const EdsThemeColorIconUtilityInformational = '#3A3A37';
 export const EdsThemeColorIconUtilityInformationalHover = '#242423';
 export const EdsThemeColorIconUtilityInformationalActive = '#0E0E0E';
@@ -351,7 +351,7 @@ export const EdsThemeColorIconUtilityInverseDisabled =
 export const EdsThemeColorIconUtilityInverseInteractiveVisited = '#FFFFFF';
 export const EdsThemeColorIconUtilityInverseCritical = '#FF6962';
 export const EdsThemeColorIconUtilityInverseFavorable = '#1DB470';
-export const EdsThemeColorIconUtilityInverseWarning = '#F6EE65';
+export const EdsThemeColorIconUtilityInverseWarning = '#FFE29B';
 export const EdsThemeColorIconUtilityInverseInformational = '#FFFFFF';
 export const EdsThemeColorIconUtilityPlaceholder = '#6B6A64';
 export const EdsThemeColorIconAppHeaderPrimary = '#3A3A37';
@@ -376,9 +376,9 @@ export const EdsThemeColorTextUtilityCriticalActive = '#760903';
 export const EdsThemeColorTextUtilityFavorable = '#177A4D';
 export const EdsThemeColorTextUtilityFavorableHover = '#125B3A';
 export const EdsThemeColorTextUtilityFavorableActive = '#0E442B';
-export const EdsThemeColorTextUtilityWarning = '#7E6701';
-export const EdsThemeColorTextUtilityWarningHover = '#625101';
-export const EdsThemeColorTextUtilityWarningActive = '#463901';
+export const EdsThemeColorTextUtilityWarning = '#915E09';
+export const EdsThemeColorTextUtilityWarningHover = '#6F470F';
+export const EdsThemeColorTextUtilityWarningActive = '#533315';
 export const EdsThemeColorTextUtilityInformational = '#3A3A37';
 export const EdsThemeColorTextUtilityInformationalHover = '#242423';
 export const EdsThemeColorTextUtilityInformationalActive = '#0E0E0E';
