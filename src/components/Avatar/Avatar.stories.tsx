@@ -6,6 +6,7 @@ import React from 'react';
 
 import { Avatar } from './Avatar';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { themeModes } from '../../util/modes';
 import Tooltip from '../Tooltip';
 
 export default {
@@ -19,7 +20,11 @@ export default {
 
 type Story = StoryObj<typeof Avatar>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 export const Small: Story = {
   args: {

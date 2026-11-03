@@ -7,6 +7,7 @@ import React from 'react';
 import { Icon, type IconProps } from './Icon';
 import icons, { type IconName, type IconBody } from '../../icons/spritemap';
 import * as ColorTokens from '../../tokens-dist/ts/colors';
+import { themeModes } from '../../util/modes';
 import Text from '../Text';
 
 import styles from './Icon.stories.module.css';
@@ -48,6 +49,9 @@ export default meta;
 type Story = StoryObj<typeof Icon>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   render: ({ name, color, ...rest }) => {
     return <Icon {...rest} color={color} name={name} />;
   },

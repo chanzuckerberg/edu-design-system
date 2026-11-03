@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Checkbox } from './Checkbox';
+import { themeModes } from '../../util/modes';
 
 const meta: Meta<typeof Checkbox> = {
   title: 'Components/Checkbox',
@@ -31,7 +32,11 @@ export default meta;
 
 type Story = StoryObj<typeof Checkbox>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 export const WithSublabel: Story = {
   args: { subLabel: 'Additional descriptive text' },

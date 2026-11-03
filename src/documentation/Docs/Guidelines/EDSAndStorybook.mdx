@@ -57,7 +57,148 @@ import '~/components/app-theme.css';
 
 ## Using Storybook Modes
 
-Storybook supports [modes][storybook-modes]. Details on how to use this and EDS in your storybook documentation to come soon.
+[Chromatic modes][storybook-modes] snapshot one story under several sets of [globals][storybook-globals] (theme, viewport, locale, and so on). EDS uses them to cover dark mode and responsive layouts in visual regression tests.
+
+### How EDS switches between light and dark
+
+`@chanzuckerberg/eds/index.css` ships both token sets: `--eds-theme-*` (light) and `--eds-dark-theme-*` (dark). Components choose between them with [`light-dark()`][mdn-light-dark], which resolves against the [`color-scheme`][mdn-color-scheme] of the page:
+
+```css
+:root {
+  color-scheme: light dark; /* follows the OS setting */
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+}
+```
+
+So setting `data-theme` on `<html>` is all a theme switch needs. Leaving it unset follows the OS, which is light in Chromatic.
+
+### Adding a theme toggle to Storybook
+
+Use [`@storybook/addon-themes`][storybook-addon-themes] to set `data-theme` from the toolbar. The decorator registers a `theme` global, which is the key a mode sets.
+
+```tsx
+// .storybook/preview.tsx
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
+import type { Preview, ReactRenderer } from '@storybook/react-vite';
+
+const preview: Preview = {
+  decorators: [
+    withThemeByDataAttribute<ReactRenderer>({
+      themes: { light: 'light', dark: 'dark' },
+      defaultTheme: '', // no attribute, so the OS setting applies
+      attributeName: 'data-theme', // set on <html> by default
+    }),
+  ],
+};
+
+export default preview;
+```
+
+### Defining modes
+
+A mode is a named set of globals. Keep them in one module and import them into stories:
+
+```ts
+export const themeModes = {
+  light: { theme: 'light' },
+  dark: { theme: 'dark' },
+} as const;
+```
+
+Then list the modes a story should snapshot:
+
+```ts
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
+```
+
+Things to know before adding modes:
+
+- **Each mode is its own snapshot**, with its own baseline and approval.
+- **Modes replace the default snapshot.** A story that lists only `dark` stops taking its light snapshot, so list both.
+- **Modes merge from meta (and project) to story.** Story-level modes are added to inherited ones, they don't replace them. To turn an inherited mode off, set `{ disable: true }` on its key ([stacking modes][chromatic-modes-stacking]).
+- **Modes and legacy `viewports` can't be combined.** Chromatic errors if one story has both, including when `viewports` comes from the meta ([migration guide][chromatic-modes-viewports]).
+- **Without a viewport, Chromatic snapshots at 1200 × 900.**
+
+### Helpers used in EDS
+
+The EDS stories use the helpers in `src/util/modes.ts`. They aren't exported from the package. Copy them if they fit your setup.
+
+- **`themeModes`**: `{ light, dark }`, each setting the `theme` global. Use it for light and dark snapshots of a story.
+- **`viewportModes(...widths)`**: one `{ viewport: width }` mode per width, named `<width>px`. Use it in place of a legacy `viewports: [...]` array.
+- **`disabledViewportModes(...widths)`**: one `{ disable: true }` mode per width, named `<width>px`. Use it to turn off viewport modes a story inherits from its meta.
+
+Technical notes:
+
+- **Widths come from `chromaticViewports`** in `src/util/viewports.ts`, so modes and the Storybook viewport toolbar use the same device list.
+- **`viewportModes` sets width only.** A number given as `viewport` is a width, and Chromatic keeps its default height of 900px. That matches how legacy `viewports` behaved. For a specific height, pass `{ width, height }` instead ([viewport modes][chromatic-modes-viewports]).
+- **Modes are named `<width>px`** because Chromatic gives converted legacy `viewports` entries the same names. That keeps mode names stable when you migrate a story from `viewports`.
+- **`disabledViewportModes` exists because merging changed.** A story-level `viewports` array used to replace the meta's array. `modes` objects merge instead, so a story that needs only some of the meta's widths has to turn the others off:
+
+```ts
+export default {
+  parameters: {
+    chromatic: {
+      modes: viewportModes(
+        chromaticViewports.googlePixel2,
+        chromaticViewports.ipadMini,
+        chromaticViewports.chromebook,
+      ),
+    },
+  },
+} as Meta<typeof AppHeader>;
+
+// Snapshots at the Chromebook width only
+export const CanExpandFullSizeMenu: Story = {
+  parameters: {
+    chromatic: {
+      modes: disabledViewportModes(
+        chromaticViewports.googlePixel2,
+        chromaticViewports.ipadMini,
+      ),
+    },
+  },
+};
+```
+
+### How EDS applies them
+
+- **Every component's `Default` story uses `themeModes`.** That gives a light and a dark snapshot at 1200 × 900.
+- **When `Default` already has viewport modes**, from its meta or its own parameters, it adds only `dark: themeModes.dark`. The viewport snapshots already render in light, so a separate `light` mode would be a duplicate:
+
+```ts
+export const Default: Story = {
+  parameters: {
+    chromatic: {
+      modes: {
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.chromebook,
+        ),
+        dark: themeModes.dark,
+      },
+    },
+  },
+};
+```
+
+- **Other stories stay in light only.** Add `themeModes` to a story when its dark rendering differs in a way that `Default` doesn't cover.
 
 [storybook-docs]: https://storybook.js.org/docs
+[storybook-globals]: https://storybook.js.org/docs/essentials/toolbars-and-globals
+[storybook-addon-themes]: https://storybook.js.org/addons/@storybook/addon-themes
 [storybook-modes]: https://www.chromatic.com/docs/modes/
+[chromatic-modes-stacking]: https://www.chromatic.com/docs/modes/#stacking-modes
+[chromatic-modes-viewports]: https://www.chromatic.com/docs/modes/viewports/
+[mdn-light-dark]: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+[mdn-color-scheme]: https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme

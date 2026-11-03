@@ -7,6 +7,7 @@ import React from 'react';
 import { PopoverListItem } from './PopoverListItem';
 
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { themeModes } from '../../util/modes';
 import Avatar from '../Avatar';
 import Icon from '../Icon';
 
@@ -39,6 +40,9 @@ export default {
 type Story = StoryObj<React.ComponentProps<typeof PopoverListItem>>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: 'Favorite',
     leadingContent: (
