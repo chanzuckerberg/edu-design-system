@@ -43,7 +43,7 @@ Use this table to decide which set of tokens to reach for:
 
 | Palette | Token prefix | Shape | For |
 | --- | --- | --- | --- |
-| Categorical | `eds-theme-color-background-visualization-categorical-` | 8 ordered slots plus an overflow slot, each with a high-emphasis value; the first 6 also have a low-emphasis value | Unordered groups: products, regions, cohorts, subject areas |
+| Categorical | `eds-theme-color-background-visualization-categorical-` | 8 ordered slots plus an overflow slot, each with a high-emphasis and a low-emphasis value | Unordered groups: products, regions, cohorts, subject areas |
 | Scalar | `eds-theme-color-background-visualization-scalar-` | A neutral basis plus 4 green steps, light to dark | Ordered magnitude: counts, coverage, density, bands |
 | Divergent | `eds-theme-color-background-visualization-divergent-` | 3 blue steps, a neutral basis, 3 orange steps | Distance from a reference: deltas, variance against plan, above or below target |
 
@@ -124,7 +124,7 @@ High-emphasis values are the series fills. Use them for bars, areas, lines, poin
 | `eds-theme-color-background-visualization-categorical-8-high-emphasis` | `red-250` | `#FF9C99` |
 | `eds-theme-color-background-visualization-categorical-other` | `neutral-250` | `#BCB9B6` |
 
-Low-emphasis values exist for slots 1 through 6 only.
+Every slot, including `other`, has a low-emphasis value.
 
 | Token | Primitive | Hex |
 | --- | --- | --- |
@@ -134,12 +134,15 @@ Low-emphasis values exist for slots 1 through 6 only.
 | `eds-theme-color-background-visualization-categorical-4-low-emphasis` | `yellow-050` | `#FFFC93` |
 | `eds-theme-color-background-visualization-categorical-5-low-emphasis` | `purple-100` | `#F3E5FA` |
 | `eds-theme-color-background-visualization-categorical-6-low-emphasis` | `orange-100` | `#FFDCCA` |
+| `eds-theme-color-background-visualization-categorical-7-low-emphasis` | `blue-100` | `#D3EAFF` |
+| `eds-theme-color-background-visualization-categorical-8-low-emphasis` | `red-100` | `#F9DFDF` |
+| `eds-theme-color-background-visualization-categorical-other-low-emphasis` | `neutral-100` | `#E6E2DE` |
 
 ### Low-emphasis categorical colors
 
 Use the low-emphasis values sparingly. The only approved use today is the background of a Tag that labels a category, so that a Tag reading "Region 2" can share a slot with the series it describes. The Tag's text carries the meaning; the tint only reinforces the link to the chart.
 
-❌ Do not use low-emphasis values as series fills, area bands, table row tints or hover states. They are not distinct enough from each other to tell groups apart on their own, and slots 7, 8 and `other` have no low-emphasis value at all, so a chart that relied on them would break at the seventh series.
+❌ Do not use low-emphasis values as series fills, area bands, table row tints or hover states. They are not distinct enough from each other to tell groups apart on their own. Slots 2 and 7 share `blue-100`, and slot 3 and `other` share `neutral-100`, so a chart that relied on them would show twins by the seventh series.
 
 **NOTE**: Slot 3's low-emphasis value is a neutral rather than a light green, so that it is not a second light green beside slot 1's tint. Under red-green color blindness the two tints are still nearly identical, which is one more reason the Tag label, not the tint, carries the meaning.
 

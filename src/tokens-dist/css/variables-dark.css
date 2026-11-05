@@ -358,11 +358,14 @@
   --eds-dark-theme-color-background-visualization-scalar-3: var(--eds-color-green-550);
   --eds-dark-theme-color-background-visualization-scalar-2: var(--eds-color-green-350);
   --eds-dark-theme-color-background-visualization-scalar-1: var(--eds-color-green-150);
+  --eds-dark-theme-color-background-visualization-categorical-other-low-emphasis: var(--eds-color-neutral-750);
   --eds-dark-theme-color-background-visualization-categorical-other: var(--eds-color-neutral-250);
   --eds-dark-theme-color-background-visualization-categorical-8-high-emphasis: var(--eds-color-red-250);
+  --eds-dark-theme-color-background-visualization-categorical-8-low-emphasis: var(--eds-color-red-750);
   --eds-dark-theme-color-background-visualization-categorical-7-high-emphasis: var(--eds-color-blue-200);
+  --eds-dark-theme-color-background-visualization-categorical-7-low-emphasis: var(--eds-color-blue-650);
   --eds-dark-theme-color-background-visualization-categorical-6-high-emphasis: var(--eds-color-orange-550);
-  --eds-dark-theme-color-background-visualization-categorical-6-low-emphasis: var(--eds-color-orange-100);
+  --eds-dark-theme-color-background-visualization-categorical-6-low-emphasis: var(--eds-color-orange-750);
   --eds-dark-theme-color-background-visualization-categorical-5-high-emphasis: var(--eds-color-purple-650);
   --eds-dark-theme-color-background-visualization-categorical-5-low-emphasis: var(--eds-color-purple-100);
   --eds-dark-theme-color-background-visualization-categorical-4-high-emphasis: var(--eds-color-yellow-250);
