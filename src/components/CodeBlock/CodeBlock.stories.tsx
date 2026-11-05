@@ -186,3 +186,21 @@ export const WithProvidedIcons: StoryObj<Args> = {
     ),
   ],
 };
+
+/**
+ * The block follows the page color scheme. With `<html data-theme="dark">`, or an operating
+ * system dark preference when no `data-theme` is set, it switches to the dark Prism theme,
+ * which mirrors each light color across the tier-1 scale.
+ */
+export const DarkColorScheme: StoryObj<Args> = {
+  args: {
+    ...TypeScript.args,
+    copyStyle: 'icon',
+  },
+  globals: {
+    theme: 'dark',
+    backgrounds: {
+      value: 'background-utility-inverse-high-emphasis',
+    },
+  },
+};

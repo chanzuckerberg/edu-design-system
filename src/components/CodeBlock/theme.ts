@@ -4,7 +4,7 @@
  * Drop-in replacement for the `solarizedDarkAtom` import in CodeBlock.tsx.
  * Every color is an EDS tier-1 primitive; the token name is noted per value.
  */
-const base = {
+export const base = {
   color: '#3A3A37', // eds-color-neutral-750
   background: '#FFFFFF', // eds-color-white
   fontFamily: 'var(--eds-typography-font-family-3)',

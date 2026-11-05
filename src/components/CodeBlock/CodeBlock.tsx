@@ -5,7 +5,9 @@ import React from 'react';
 import Markdown from 'react-markdown';
 import { Prism, type SyntaxHighlighterProps } from 'react-syntax-highlighter';
 
-import theme from './theme';
+import lightTheme from './theme';
+import darkTheme from './theme-dark';
+import { useColorScheme } from './useColorScheme';
 
 import Button from '../Button';
 import { useSemanticIcon } from '../Icon';
@@ -47,9 +49,10 @@ export type CodeBlockProps = {
  *
  * ## Interaction
  *
- * `CodeBlock` allows for displaying syntax highlighting with a fixed theme. It also includes the
- * ability to show a copy button which, when clicked, will copy the code block to the user's
- * clipboard.
+ * `CodeBlock` displays syntax highlighting with a light or a dark theme, chosen from the page
+ * color scheme: `<html data-theme="light|dark">` when set, otherwise the operating system
+ * preference. It also includes the ability to show a copy button which, when clicked, will copy
+ * the code block to the user's clipboard.
  *
  * ## Content & Accessibility
  *
@@ -78,6 +81,11 @@ export const CodeBlock = ({
   // confirmation that follows a copy is a transient state, not a role, so it stays a
   // checkmark.
   const copyIcon = useSemanticIcon('copy');
+
+  // Prism takes its theme as inline styles, so dark mode is a second style object rather
+  // than CSS. The hook tracks the same signal the EDS stylesheet resolves `color-scheme` from.
+  const colorScheme = useColorScheme();
+  const theme = colorScheme === 'dark' ? darkTheme : lightTheme;
 
   const [hasCopied, setHasCopied] = React.useState<boolean>(false);
   const [copyButtonText, setCopyButtonText] = React.useState<string>('Copy');
