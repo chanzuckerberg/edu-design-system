@@ -56,7 +56,7 @@
  * Checked state of the toggle button.
  */
 .toggle__button--checked {
-  background-color: light-dark(var(--eds-theme-color-background-utility-default-high-emphasis), var(--eds-dark-theme-color-background-utility-default-high-emphasis));
+  background-color: light-dark(var(--eds-theme-color-background-utility-object-selected), var(--eds-dark-theme-color-background-utility-object-selected));
 }
 
 /**
