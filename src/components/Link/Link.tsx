@@ -52,6 +52,13 @@ export type LinkProps<ExtendedElement = unknown> =
      */
     emphasis?: Emphasis | 'default';
     /**
+     * Whether to render the link text at bold weight. Applies in both contexts, and holds
+     * across every emphasis, variant, and state.
+     *
+     * **Default is `false`**.
+     */
+    isBold?: boolean;
+    /**
      * The size of the link (when its context is `"standalone"`).
      *
      * ----
@@ -116,6 +123,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       context,
       emphasis = 'default',
       icon,
+      isBold = false,
       size,
       variant = 'default',
       ...other
@@ -155,6 +163,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       styles['link'],
       context && styles[`link--context-${context}`],
       emphasis && styles[`link--emphasis-${emphasis}`],
+      isBold && styles['link--isBold'],
       size && styles[`link--size-${size}`],
       variant === 'inverse' && styles[`link--variant-${variant}`],
     );

@@ -2,9 +2,10 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
   'resolution-mode': 'import',
 };
 
+import isChromatic from 'chromatic/isChromatic';
 import React from 'react';
 import { useState } from 'react';
-import { userEvent } from 'storybook/test';
+import { userEvent, within } from 'storybook/test';
 
 import { Modal } from './Modal';
 import Heading from '../../components/Heading';
@@ -13,7 +14,9 @@ import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides
 import { chromaticViewports, storybookViewports } from '../../util/viewports';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
+import Dialog from '../Dialog';
 import { IconProvider } from '../Icon';
+import InputField from '../InputField';
 
 export default {
   title: 'Components/Modal',
@@ -27,7 +30,7 @@ export default {
     chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
     layout: 'fullscreen',
   },
-  tags: ['autodocs', 'version:4.0.1'],
+  tags: ['autodocs', 'version:4.1.0'],
 } as Meta<typeof Modal>;
 
 type Args = React.ComponentProps<typeof Modal>;
@@ -248,6 +251,103 @@ export const Small: Story = {
   parameters: Default.parameters,
   render: Default.render,
   play: Default.play,
+};
+
+/**
+ * Opens the modal, types a note, then tries to close it with the close button, so the snapshot
+ * shows the confirming `Dialog` stacked above the modal. Only runs in Chromatic, so the
+ * Storybook UI never opens either on its own.
+ */
+const openNoteAndClose: Story['play'] = async ({ canvasElement }) => {
+  if (isChromatic()) {
+    const canvas = within(canvasElement);
+    await userEvent.click(
+      await canvas.findByRole('button', { name: 'Open the modal' }),
+    );
+
+    // the modal and dialog render in portals, outside the story's canvas
+    const page = within(document.body);
+    await userEvent.type(
+      await page.findByLabelText('Note'),
+      'Follow up with the team',
+    );
+    await userEvent.click(page.getByRole('button', { name: 'close' }));
+    await page.findByRole('alertdialog');
+  }
+};
+
+/**
+ * Type in the field, then try to close the modal with the close button, ESC, or a click on the
+ * overlay. Closing clears the note, so the modal asks first, in a `Dialog`, while there's one to
+ * lose; an empty modal closes straight away.
+ *
+ * `warnOnClose` uses the browser's `window.confirm`, so this story leaves it off and asks with a
+ * `Dialog` instead. The modal's `onClose` decides whether to ask, and the footer's Cancel button
+ * goes through the same check. Save keeps the note, so it closes without asking. The `Dialog`
+ * renders inside `Modal.Body` so it stacks above the modal.
+ *
+ * If the note survived closing and reopening instead, closing would lose nothing and the
+ * warning wouldn't be needed.
+ */
+export const WarnOnClose: Story = {
+  parameters: Default.parameters,
+  render: (args) => {
+    function WarnOnCloseExample() {
+      const [open, setOpen] = useState(false);
+      const [dialogOpen, setDialogOpen] = useState(false);
+      const [draft, setDraft] = useState('');
+      const handleClose = () => {
+        setDialogOpen(false);
+        setOpen(false);
+        // closing discards the draft, which is what makes the warning worth showing
+        setDraft('');
+      };
+      // the close button, ESC, overlay clicks, and the footer's Cancel all ask first
+      const requestClose = () =>
+        draft === '' ? handleClose() : setDialogOpen(true);
+      return (
+        <div className="flex justify-center">
+          <Button onClick={() => setOpen(true)} rank="primary">
+            Open the modal
+          </Button>
+          <Modal {...args} onClose={requestClose} open={open}>
+            <Modal.Header>
+              <Modal.Title>Add a note</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <InputField
+                label="Note"
+                onChange={(event) => setDraft(event.target.value)}
+                value={draft}
+              />
+              <Dialog
+                confirmLabel="Discard note"
+                confirmVariant="critical"
+                onCancel={() => setDialogOpen(false)}
+                onConfirm={handleClose}
+                open={dialogOpen}
+                title="Discard your note?"
+              >
+                Closing clears the note you started.
+              </Dialog>
+            </Modal.Body>
+            <Modal.Footer>
+              <ButtonGroup>
+                <Button onClick={handleClose} rank="primary">
+                  Save note
+                </Button>
+                <Button onClick={requestClose} rank="secondary">
+                  Cancel
+                </Button>
+              </ButtonGroup>
+            </Modal.Footer>
+          </Modal>
+        </div>
+      );
+    }
+    return <WarnOnCloseExample />;
+  },
+  play: openNoteAndClose,
 };
 
 /**

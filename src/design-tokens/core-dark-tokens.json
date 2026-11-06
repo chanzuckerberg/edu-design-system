@@ -317,59 +317,59 @@
       },
       "yellow": {
         "100": {
-          "value": "#F6EE65",
+          "value": "#FFE29B",
           "group": "color"
         },
         "150": {
-          "value": "#EDDE45",
+          "value": "#FFCE56",
           "group": "color"
         },
         "200": {
-          "value": "#DFCC32",
+          "value": "#FAC33D",
           "group": "color"
         },
         "250": {
-          "value": "#CDB825",
+          "value": "#EBB22D",
           "group": "color"
         },
         "350": {
-          "value": "#B79F15",
+          "value": "#D0920F",
           "group": "color"
         },
         "450": {
-          "value": "#9B7F01",
+          "value": "#B07503",
           "group": "color"
         },
         "550": {
-          "value": "#7E6701",
+          "value": "#915E09",
           "group": "color"
         },
         "650": {
-          "value": "#625101",
+          "value": "#6F470F",
           "group": "color"
         },
         "750": {
-          "value": "#463901",
+          "value": "#533315",
           "group": "color"
         },
         "800": {
-          "value": "#392F01",
+          "value": "#412711",
           "group": "color"
         },
         "850": {
-          "value": "#2C2400",
+          "value": "#331F0D",
           "group": "color"
         },
         "900": {
-          "value": "#1D1800",
+          "value": "#231509",
           "group": "color"
         },
         "950": {
-          "value": "#100D01",
+          "value": "#130E01",
           "group": "color"
         },
         "050": {
-          "value": "#FFFC93",
+          "value": "#FFF2D2",
           "group": "color"
         }
       },
@@ -892,7 +892,7 @@
                   "group": "color"
                 },
                 "selected": {
-                  "value": "{eds.color.white}",
+                  "value": "{eds.color.neutral.025}",
                   "group": "color"
                 }
               },
@@ -1251,6 +1251,169 @@
                 }
               }
             },
+            "visualization": {
+              "categorical": {
+                "1": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.green.100}",
+                    "description": "Tint for a Tag that labels categorical slot 1. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.green.450}",
+                    "description": "First categorical series fill for unordered groups in charts. Take categorical slots in order, starting here. Also the called-out mark when one mark is highlighted against the rest.",
+                    "group": "color"
+                  }
+                },
+                "2": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.blue.100}",
+                    "description": "Tint for a Tag that labels categorical slot 2. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.blue.550}",
+                    "description": "Second categorical series fill. Use only when slot 1 is already in use.",
+                    "group": "color"
+                  }
+                },
+                "3": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.neutral.100}",
+                    "description": "Tint for a Tag that labels categorical slot 3. Neutral rather than green so it does not read as a twin of slot 1's tint. Use sparingly.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.green.750}",
+                    "description": "Third categorical series fill. Use only when slots 1 and 2 are already in use.",
+                    "group": "color"
+                  }
+                },
+                "4": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.yellow.050}",
+                    "description": "Tint for a Tag that labels categorical slot 4. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.yellow.250}",
+                    "description": "Fourth categorical series fill. Light; give thin lines and small points extra weight. Shares a primitive with the warning high-emphasis background, so keep warning Tags out of plot areas that use it.",
+                    "group": "color"
+                  }
+                },
+                "5": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.purple.100}",
+                    "description": "Tint for a Tag that labels categorical slot 5. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.purple.650}",
+                    "description": "Fifth categorical series fill. Use only when slots 1 through 4 are already in use.",
+                    "group": "color"
+                  }
+                },
+                "6": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.orange.100}",
+                    "description": "Tint for a Tag that labels categorical slot 6. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
+                  "highEmphasis": {
+                    "value": "{eds.color.orange.550}",
+                    "description": "Sixth categorical series fill. Use only when slots 1 through 5 are already in use.",
+                    "group": "color"
+                  }
+                },
+                "7": {
+                  "highEmphasis": {
+                    "value": "{eds.color.blue.200}",
+                    "description": "Seventh categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value.",
+                    "group": "color"
+                  }
+                },
+                "8": {
+                  "highEmphasis": {
+                    "value": "{eds.color.red.250}",
+                    "description": "Eighth and last categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value. Past eight series, use direct labels or pattern fills rather than more color.",
+                    "group": "color"
+                  }
+                },
+                "other": {
+                  "value": "{eds.color.neutral.250}",
+                  "description": "Overflow bucket for series beyond the eighth, and the context marks when one mark is called out. Never a ninth identity the reader is expected to remember.",
+                  "group": "color"
+                }
+              },
+              "scalar": {
+                "basis": {
+                  "value": "{eds.color.neutral.050}",
+                  "description": "A measured value of zero on a scalar (magnitude) scale. Not for missing data, which is shown as no fill plus a dash.",
+                  "group": "color"
+                },
+                "1": {
+                  "value": "{eds.color.green.150}",
+                  "description": "Lowest non-zero bin of a scalar scale. Bin data to four steps; do not interpolate.",
+                  "group": "color"
+                },
+                "2": {
+                  "value": "{eds.color.green.350}",
+                  "description": "Second of four scalar bins.",
+                  "group": "color"
+                },
+                "3": {
+                  "value": "{eds.color.green.550}",
+                  "description": "Third of four scalar bins.",
+                  "group": "color"
+                },
+                "4": {
+                  "value": "{eds.color.green.750}",
+                  "description": "Highest of four scalar bins.",
+                  "group": "color"
+                }
+              },
+              "divergent": {
+                "basis": {
+                  "value": "{eds.color.neutral.050}",
+                  "description": "The reference value of a divergent scale: the target, the plan, or no change. Anchor here, not at the median of the data.",
+                  "group": "color"
+                },
+                "minus": {
+                  "3": {
+                    "value": "{eds.color.blue.650}",
+                    "description": "Furthest below the reference value on a divergent scale.",
+                    "group": "color"
+                  },
+                  "2": {
+                    "value": "{eds.color.blue.450}",
+                    "description": "Second step below the reference value on a divergent scale.",
+                    "group": "color"
+                  },
+                  "1": {
+                    "value": "{eds.color.blue.200}",
+                    "description": "Just below the reference value on a divergent scale.",
+                    "group": "color"
+                  }
+                },
+                "plus": {
+                  "1": {
+                    "value": "{eds.color.orange.200}",
+                    "description": "Just above the reference value on a divergent scale.",
+                    "group": "color"
+                  },
+                  "2": {
+                    "value": "{eds.color.orange.450}",
+                    "description": "Second step above the reference value on a divergent scale.",
+                    "group": "color"
+                  },
+                  "3": {
+                    "value": "{eds.color.orange.650}",
+                    "description": "Furthest above the reference value on a divergent scale.",
+                    "group": "color"
+                  }
+                }
+              }
+            },
             "progressBar": {
               "@": {
                 "value": "{eds.color.green.450}",
@@ -1533,34 +1696,34 @@
               },
               "critical": {
                 "@": {
-                  "value": "{eds.color.red.650}",
+                  "value": "{eds.color.red.550}",
                   "description": "Critical icon such as secondary or tertiary buttons to delete or cancel. Error icon for forms.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.red.750}",
+                  "value": "{eds.color.red.650}",
                   "description": "Hover state for critical icon such as secondary or tertiary buttons to delete or cancel. Error icon for forms.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.red.850}",
+                  "value": "{eds.color.red.750}",
                   "description": "Active state for critical icon such as secondary or tertiary buttons to delete or cancel. Error icon for forms.",
                   "group": "color"
                 }
               },
               "favorable": {
                 "@": {
-                  "value": "{eds.color.green.650}",
+                  "value": "{eds.color.green.550}",
                   "description": "Favorable icon such as success messages.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.green.750}",
+                  "value": "{eds.color.green.650}",
                   "description": "Hover state for favorable icon such as success messages.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.green.850}",
+                  "value": "{eds.color.green.750}",
                   "description": "Active state for favorable icon such as headlines for successful banner alerts.",
                   "group": "color"
                 }
@@ -1584,17 +1747,17 @@
               },
               "informational": {
                 "@": {
-                  "value": "{eds.color.green.550}",
+                  "value": "{eds.color.neutral.750}",
                   "description": "Informational icon such as headlines for info banner alerts.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.green.650}",
+                  "value": "{eds.color.neutral.850}",
                   "description": "Hover state for informational icon such as headlines for info banner alerts.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.green.750}",
+                  "value": "{eds.color.neutral.950}",
                   "description": "Active state for informational icon such as headlines for info banner alerts.",
                   "group": "color"
                 }
@@ -1746,34 +1909,34 @@
               },
               "critical": {
                 "@": {
-                  "value": "{eds.color.red.650}",
+                  "value": "{eds.color.red.550}",
                   "description": "Critical text such as secondary or tertiary buttons to delete or cancel. Error text for forms.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.red.750}",
+                  "value": "{eds.color.red.650}",
                   "description": "Hover state for critical text such as secondary or tertiary buttons to delete or cancel. Error text for forms.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.red.850}",
+                  "value": "{eds.color.red.750}",
                   "description": "Active state for critical text such as secondary or tertiary buttons to delete or cancel. Error text for forms.",
                   "group": "color"
                 }
               },
               "favorable": {
                 "@": {
-                  "value": "{eds.color.green.650}",
+                  "value": "{eds.color.green.550}",
                   "description": "Favorable text such as success messages.",
                   "group": "color"
                 },
                 "hover": {
-                  "value": "{eds.color.green.750}",
+                  "value": "{eds.color.green.650}",
                   "description": "Hover state for favorable text such as success messages.",
                   "group": "color"
                 },
                 "active": {
-                  "value": "{eds.color.green.850}",
+                  "value": "{eds.color.green.750}",
                   "description": "Active state for favorable text such as headlines for successful banner alerts.",
                   "group": "color"
                 }
@@ -1866,6 +2029,18 @@
             "headline": {
               "value": "{eds.color.neutral.850}",
               "group": "color"
+            },
+            "visualization": {
+              "default": {
+                "value": "{eds.color.black}",
+                "description": "Text sitting on a visualization fill whose primitive is at grade 450 or lighter: every low-emphasis categorical value, basis, scalar steps 1 and 2, divergent steps 1 and 2, and categorical slots 1, 4, 7, 8 and other. Labels beside a mark use text-utility-default-primary instead.",
+                "group": "color"
+              },
+              "inverse": {
+                "value": "{eds.color.white}",
+                "description": "Text sitting on a visualization fill whose primitive is at grade 550 or darker: categorical slots 2, 3, 5 and 6, scalar steps 3 and 4, and divergent steps 3.",
+                "group": "color"
+              }
             }
           },
           "text-highlight": {

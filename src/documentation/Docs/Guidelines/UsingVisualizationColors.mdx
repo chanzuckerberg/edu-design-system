@@ -1,0 +1,286 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Documentation/Guidelines/Using Visualization Colors" />
+
+# Visualization Colors
+
+EDS provides tier 2 color tokens for data visualization: charts, graphs, heatmaps, and any view where a color stands for a value in the data rather than a role in the interface. Fills live under `eds-theme-color-background-visualization-` and label colors under `eds-theme-color-text-visualization-`. Every one of them is an alias to an existing tier 1 primitive, so they follow the theme like any other tier 2 token.
+
+- [Overview](#overview)
+  - [Visualization colors versus utility colors](#visualization-colors-versus-utility-colors)
+  - [The three palettes](#the-three-palettes)
+  - [Rules that apply to every palette](#rules-that-apply-to-every-palette)
+  - [Token naming](#token-naming)
+- [Categorical palette](#categorical-palette)
+- [Scalar palette](#scalar-palette)
+- [Divergent palette](#divergent-palette)
+- [Text on visualization colors](#text-on-visualization-colors)
+- [Overlaps with utility colors](#overlaps-with-utility-colors)
+
+## Overview
+
+### Visualization colors versus utility colors
+
+A utility color answers "what role does this element play in the interface": a favorable Tag, a critical Button, a disabled control. A visualization color answers "what does this color tell the reader about the data": which group a bar belongs to, how large a value is, or how far it sits from a target.
+
+Utility colors are tuned for a label sitting on a background, not for telling adjacent fills apart. The favorable and critical low-emphasis backgrounds are nearly the same color, which is fine behind a labeled Tag and unreadable as two segments of a stacked bar. Utility colors also carry a verdict. Coloring a series with the favorable green says that series is good, and the first time someone charts something that is neither good nor bad, the chart lies.
+
+Use this table to decide which set of tokens to reach for:
+
+| What the color needs to say | Use |
+| --- | --- |
+| A judgement about health or progress: on track, at risk, complete, error | Utility status tokens (`favorable`, `warning`, `critical`, `informational`) on Tags, badges, legend chips and borders. Never as series fills. |
+| Which group a mark belongs to, where the groups have no natural order | [Categorical palette](#categorical-palette) |
+| How much, where more should look like more | [Scalar palette](#scalar-palette) |
+| How far above or below a reference value, or how much something changed | [Divergent palette](#divergent-palette) |
+| Edges in a graph, gridlines, axes | `eds-theme-color-border-utility-default-low-emphasis`, `-medium-emphasis` and `-high-emphasis` |
+| That there is no value to show | No fill, plus a dash or hatch. See [Absence of data](#absence-of-data). |
+| A label sitting on any of the fills above | `eds-theme-color-text-visualization-default` or `-inverse`. See [Text on visualization colors](#text-on-visualization-colors). |
+
+**NOTE**: Status is the most common reason to use utility colors inside a chart. Status in a chart means the same thing as status in a Tag, so it uses the same tokens. If you need color-coded marks that are not tied to a status, that is the categorical palette.
+
+### The three palettes
+
+| Palette | Token prefix | Shape | For |
+| --- | --- | --- | --- |
+| Categorical | `eds-theme-color-background-visualization-categorical-` | 8 ordered slots plus an overflow slot, each with a high-emphasis value; the first 6 also have a low-emphasis value | Unordered groups: products, regions, cohorts, subject areas |
+| Scalar | `eds-theme-color-background-visualization-scalar-` | A neutral basis plus 4 green steps, light to dark | Ordered magnitude: counts, coverage, density, bands |
+| Divergent | `eds-theme-color-background-visualization-divergent-` | 3 blue steps, a neutral basis, 3 orange steps | Distance from a reference: deltas, variance against plan, above or below target |
+
+Two text tokens, `eds-theme-color-text-visualization-default` and `eds-theme-color-text-visualization-inverse`, cover labels that sit on any fill from any palette. See [Text on visualization colors](#text-on-visualization-colors).
+
+### Rules that apply to every palette
+
+- **Color is never the only channel.** Every chart needs a legend, direct labels, or both. The palettes are checked for color-blind readers, but that is not a substitute for a label.
+- **One palette per encoding channel.** Series fills in a plot area come from one palette. A chart can use categorical fills for its series and utility status tokens for Tags in its legend, but it should not use two palettes as fills inside the same plot area. Green appears in more than one palette because it is the brand color, and this rule is what keeps that from being ambiguous.
+- **Use the steps as given.** Each palette has a fixed number of steps, and those numbers are ceilings. Do not add a ninth categorical color, interpolate between scalar steps, or reach past the tokens to a tier 1 primitive. Past the ceiling, the fix is a different chart (direct labels, small multiples, pattern fills), not a different color.
+- **Put labels outside the mark where you can.** When text must sit on a fill, follow [Text on visualization colors](#text-on-visualization-colors).
+
+### Token naming
+
+The same token has three spellings depending on where you use it. The visualization tokens follow the same pattern as every other tier 2 color token.
+
+| Where | Spelling | Example |
+| --- | --- | --- |
+| Figma variable and token source | camelCase segments | `eds-theme-color-background-visualization-categorical-1-highEmphasis` |
+| CSS custom property | kebab-case, with a `--` prefix | `--eds-theme-color-background-visualization-categorical-1-high-emphasis` |
+| Tailwind utility class | The CSS property is folded into the class prefix (`bg-`, `text-`, `border-`) and `eds-theme-color-` is dropped. Segments keep their camelCase. | `bg-visualization-categorical-1-highEmphasis` |
+
+The tables on this page use the CSS custom property spelling, without the leading `--`, which matches the Design Tokens pages in this Storybook. In application code, prefer the Tailwind class and fall back to the CSS custom property when no class exists, as described in [Using EDS Theming](?path=/docs/documentation-theming-using-eds-theming--docs).
+
+```tsx
+// HTML elements such as a legend swatch: Tailwind utility class
+<span className="bg-visualization-categorical-1-highEmphasis" />
+
+// SVG marks, where Tailwind background classes do not apply: CSS custom property
+<rect fill="var(--eds-theme-color-background-visualization-categorical-1-high-emphasis)" />
+```
+
+**NOTE**: Charting libraries often take a color string rather than a class name. In that case read the CSS custom property at runtime with `getComputedStyle` rather than copying the hex value, so the chart follows the theme.
+
+## Categorical palette
+
+Use the categorical palette when the reader needs to tell one group from another and the groups have no natural order. Eight ordered slots are provided, plus an overflow slot named `other`. Slots carry no meaning on their own: slot 1 can be a region in one chart and a subject area in the next.
+
+### When to use it
+
+✅ Series in a line, bar, or area chart where each series is a different group
+
+✅ Segments of a stacked bar or a donut
+
+✅ Node fills in a graph where nodes are grouped
+
+✅ Calling out one mark against the rest: use slot 1 for the called-out mark and `other` for everything else
+
+❌ Categories that have an order. Bands, tiers, grades and score ranges are magnitude, and the [scalar palette](#scalar-palette) will read correctly where eight unrelated hues will not.
+
+❌ Status. A "complete" or "at risk" category is a judgement, and it belongs on the utility status tokens.
+
+❌ Two or more called-out marks against a context. That is an ordinary categorical chart with two slots, not a call-out.
+
+### How to use it
+
+**Take the slots in order.** Three series means slots 1, 2 and 3. The order is optimized so that the first few slots are the most distinct from each other, and skipping around undoes that. Never cherry-pick a slot because its hue suits the subject.
+
+**Do not assign a fixed meaning to a slot.** If an application needs "Math is always slot 2," that mapping belongs in the application, not in the design system.
+
+**Past eight, stop adding color.** Group the tail into `other`, or switch to direct labels or pattern fills. The `other` slot is an overflow bucket, not a ninth color: it should never carry an identity the reader is expected to remember.
+
+**Green holds two slots, 1 and 3,** so that most charts read as EDS. They are the closest pair in the set, which is why they sit two slots apart rather than next to each other.
+
+### Tokens
+
+High-emphasis values are the series fills. Use them for bars, areas, lines, points, donut segments and node fills.
+
+| Token | Primitive | Hex |
+| --- | --- | --- |
+| `eds-theme-color-background-visualization-categorical-1-high-emphasis` | `green-450` | `#19955D` |
+| `eds-theme-color-background-visualization-categorical-2-high-emphasis` | `blue-550` | `#4D63CB` |
+| `eds-theme-color-background-visualization-categorical-3-high-emphasis` | `green-750` | `#0E442B` |
+| `eds-theme-color-background-visualization-categorical-4-high-emphasis` | `yellow-250` | `#CDB825` |
+| `eds-theme-color-background-visualization-categorical-5-high-emphasis` | `purple-650` | `#6E3A88` |
+| `eds-theme-color-background-visualization-categorical-6-high-emphasis` | `orange-550` | `#B8470F` |
+| `eds-theme-color-background-visualization-categorical-7-high-emphasis` | `blue-200` | `#98CDFF` |
+| `eds-theme-color-background-visualization-categorical-8-high-emphasis` | `red-250` | `#FF9C99` |
+| `eds-theme-color-background-visualization-categorical-other` | `neutral-250` | `#BCB9B6` |
+
+Low-emphasis values exist for slots 1 through 6 only.
+
+| Token | Primitive | Hex |
+| --- | --- | --- |
+| `eds-theme-color-background-visualization-categorical-1-low-emphasis` | `green-100` | `#C2ECD9` |
+| `eds-theme-color-background-visualization-categorical-2-low-emphasis` | `blue-100` | `#D3EAFF` |
+| `eds-theme-color-background-visualization-categorical-3-low-emphasis` | `neutral-100` | `#E6E2DE` |
+| `eds-theme-color-background-visualization-categorical-4-low-emphasis` | `yellow-050` | `#FFFC93` |
+| `eds-theme-color-background-visualization-categorical-5-low-emphasis` | `purple-100` | `#F3E5FA` |
+| `eds-theme-color-background-visualization-categorical-6-low-emphasis` | `orange-100` | `#FFDCCA` |
+
+### Low-emphasis categorical colors
+
+Use the low-emphasis values sparingly. The only approved use today is the background of a Tag that labels a category, so that a Tag reading "Region 2" can share a slot with the series it describes. The Tag's text carries the meaning; the tint only reinforces the link to the chart.
+
+❌ Do not use low-emphasis values as series fills, area bands, table row tints or hover states. They are not distinct enough from each other to tell groups apart on their own, and slots 7, 8 and `other` have no low-emphasis value at all, so a chart that relied on them would break at the seventh series.
+
+**NOTE**: Slot 3's low-emphasis value is a neutral rather than a light green, so that it is not a second light green beside slot 1's tint. Under red-green color blindness the two tints are still nearly identical, which is one more reason the Tag label, not the tint, carries the meaning.
+
+### Accessibility
+
+- **Separation is checked for color-blind readers.** Every pair of high-emphasis slots was tested in normal vision, deuteranopia and protanopia, and the slot order was chosen on the worst case of the three. Two series are very far apart; three and four series stay clearly separated; the gap narrows from five series on and is at its tightest at eight. That is why eight is the ceiling and why order matters.
+- **The palette is not grayscale-safe.** Slots 2 and 6 have the same lightness, as do slots 4, 8 and `other`. In black and white print or for readers with no color perception, a legend or direct labels are what distinguish them. Slots 1 and 2, the two most-used, were deliberately pulled apart in lightness so that the common two-series chart does survive grayscale.
+- **Slot 8 and `other` are close under red-green color blindness.** When a chart runs to eight series plus an overflow bucket, label the overflow bucket directly rather than relying on the legend.
+- **Four slots are light.** Slots 4, 7, 8 and `other` sit below 3:1 against a white surface. They are fine as bar and area fills next to a legend. As a 1px line or a small scatter point they are weak, so give those marks extra stroke weight or a larger point size.
+- **Text on a categorical fill** follows the rule in [Text on visualization colors](#text-on-visualization-colors). Every low-emphasis value takes `text-visualization-default`, which also works for a Tag label.
+
+## Scalar palette
+
+Use the scalar palette when the data is an ordered magnitude and more of something should look like more of something. It is a single green ramp of four steps over a neutral basis. Lightness runs in one direction, so the order survives grayscale printing and a poor projector.
+
+### When to use it
+
+✅ Heatmaps and calendar grids of counts, volume, coverage or density
+
+✅ Choropleth-style fills where a region's shade is its value
+
+✅ Ordered bands, tiers or score ranges
+
+❌ Data with a meaningful middle. If the interesting fact is distance above or below a reference, use the [divergent palette](#divergent-palette).
+
+❌ Unordered groups. Five tiers of green mean "more and less," never "this one and that one."
+
+❌ A second scalar ramp in the same view. EDS provides one ramp on purpose: every hue family is equally even, so a second hue would be chosen by what is left over rather than by what it means. If a single view genuinely needs two ramps side by side, raise it with the EDS team rather than reaching for primitives.
+
+### How to use it
+
+**Bin the data to the step count.** The ramp is discrete. Divide the range into four bins and assign one step per bin. Interpolating between steps to make a continuous scale loses the guarantee that adjacent bands are distinguishable, and shows the reader precision that is not in the data.
+
+**A measured zero is `basis`.** The neutral basis marks the floor of the scale. A grid that is mostly zeroes should read as mostly empty, not as a wall of light green, and spending step 1 on zero would make "none" and "a little" the same color.
+
+**Do not reuse green as a categorical fill in the same view.** A green ramp beside a green categorical series reads as though the ramp is about that series.
+
+### Tokens
+
+| Token | Primitive | Hex | Meaning |
+| --- | --- | --- | --- |
+| `eds-theme-color-background-visualization-scalar-basis` | `neutral-050` | `#F4F1EF` | A measured value of zero |
+| `eds-theme-color-background-visualization-scalar-1` | `green-150` | `#A1E1C4` | Lowest non-zero bin |
+| `eds-theme-color-background-visualization-scalar-2` | `green-350` | `#1DB470` | |
+| `eds-theme-color-background-visualization-scalar-3` | `green-550` | `#177A4D` | |
+| `eds-theme-color-background-visualization-scalar-4` | `green-750` | `#0E442B` | Highest bin |
+
+### Absence of data
+
+A zero you measured and a value you never had are different facts, and only the first one is data. There is no visualization token for missing data, because absence is shown by the lack of a fill plus a second, non-color channel:
+
+- **No data:** leave the mark unfilled and print a dash. Never render it as `basis`, as step 1, or as a 0.
+- **Restricted:** when a value exists but the reader lacks access, leave the mark unfilled, draw a 45° hatch using `eds-theme-color-border-utility-default-low-emphasis`, and add a lock icon.
+
+**NOTE**: The dash is not optional. An unfilled cell is only a few steps from `basis` on color alone, so without the dash a reader cannot tell "nothing here" from "very little here." Getting this wrong is what makes a view look broken when it is only incomplete.
+
+### Accessibility
+
+- **Order survives grayscale.** Lightness drops by a similar amount at each step, so the ramp stays ordered for readers with no color perception and in black and white print.
+- **Adjacent steps are distinguishable because the ramp is discrete.** Every neighboring pair is well separated. That guarantee only holds if you bin the data rather than interpolate.
+- **Basis against step 1 is the weakest link in grayscale.** A neutral and a light green differ mostly by hue. Order still holds, but if a mostly-zero view must survive print, give zero cells a dash as well, the same treatment as no data.
+- **Text on a scalar fill** follows the rule in [Text on visualization colors](#text-on-visualization-colors). Only heatmap cells usually need it; label bars outside the mark.
+
+## Divergent palette
+
+Use the divergent palette when the reader's question is "how far from the reference" or "what changed." It runs from blue through a neutral basis to orange, three steps on each side. The basis is the reference value, not the middle of your data.
+
+### When to use it
+
+✅ Change since a previous period, positive and negative
+
+✅ Variance against a plan, budget or target
+
+✅ Any measure with a true reference point where both directions matter
+
+❌ Data with no true reference point. A score with no defined threshold is magnitude, and the [scalar palette](#scalar-palette) is the honest encoding. Forcing a divergent scale onto it invents a midpoint and tells the reader something you do not know.
+
+❌ Good versus bad. The two arms are positions on a scale, not verdicts. If the chart is meant to say "this is a problem," that is a utility status token on a Tag or a border.
+
+### How to use it
+
+**Anchor the basis at the reference, not at the median.** If the target is 7 days and the data runs from 3 to 30, `basis` goes at 7. Centering on the median produces a chart that looks balanced and says nothing.
+
+**Bin each arm to three steps.** As with the scalar palette, the ramp is discrete.
+
+**Blue is below the reference and orange is above it, by default.** Keep that direction consistent within a product. If the domain reads the other way, say which direction is which in the legend.
+
+### Tokens
+
+| Token | Primitive | Hex | Meaning |
+| --- | --- | --- | --- |
+| `eds-theme-color-background-visualization-divergent-minus-3` | `blue-650` | `#3C4D9D` | Furthest below the reference |
+| `eds-theme-color-background-visualization-divergent-minus-2` | `blue-450` | `#5C76F3` | |
+| `eds-theme-color-background-visualization-divergent-minus-1` | `blue-200` | `#98CDFF` | Just below the reference |
+| `eds-theme-color-background-visualization-divergent-basis` | `neutral-050` | `#F4F1EF` | The reference value |
+| `eds-theme-color-background-visualization-divergent-plus-1` | `orange-200` | `#FFB38D` | Just above the reference |
+| `eds-theme-color-background-visualization-divergent-plus-2` | `orange-450` | `#D0622C` | |
+| `eds-theme-color-background-visualization-divergent-plus-3` | `orange-650` | `#92380C` | Furthest above the reference |
+
+### Accessibility
+
+- **Blue and orange, not red and green.** Red and green is the least readable divergent pair for color-blind readers, and it delivers a verdict: a reader who sees red concludes they failed rather than reading a position on a scale. Blue and orange stay far apart under deuteranopia and protanopia at every step.
+- **The arms are symmetric in lightness.** Step 1 on each side is equally light, step 3 equally dark, so neither direction looks more important than the other, in color or in grayscale.
+- **Mirror steps are not distinguishable in grayscale.** Minus 2 and plus 2 have the same lightness by design. In black and white print, the legend and direct labels carry the direction.
+- **Text on a divergent fill** follows the rule in [Text on visualization colors](#text-on-visualization-colors).
+
+## Text on visualization colors
+
+Put labels outside the mark whenever the chart allows it. Bars, lines and points take their label beside the mark, in `eds-theme-color-text-utility-default-primary`. Only heatmap cells, donut segments and graph node labels genuinely need text sitting on a visualization color.
+
+When text must sit on a fill, EDS provides two text tokens. Which one to use depends on the grade of the primitive behind the fill, and the rule is the same across all three palettes:
+
+| Fill | Text token |
+| --- | --- |
+| Primitive at grade 450 or lighter: every low-emphasis categorical value, `basis`, scalar steps 1 and 2, divergent steps minus 1, minus 2, plus 1 and plus 2, and categorical slots 1, 4, 7, 8 and `other` | `eds-theme-color-text-visualization-default` |
+| Primitive at grade 550 or darker: categorical slots 2, 3, 5 and 6, scalar steps 3 and 4, and divergent steps minus 3 and plus 3 | `eds-theme-color-text-visualization-inverse` |
+
+| Token | Primitive | Hex |
+| --- | --- | --- |
+| `eds-theme-color-text-visualization-default` | `black` | `#000000` |
+| `eds-theme-color-text-visualization-inverse` | `white` | `#FFFFFF` |
+
+Every pairing in the table meets 4.5:1. The tightest is the default text on divergent step minus 2.
+
+**NOTE**: `text-visualization-default` is black rather than the default primary text color, because the primary text color does not reach 4.5:1 on the mid-tone fills: categorical slot 1, scalar step 2, and divergent steps minus 2 and plus 2. Use the primary text color for labels beside a mark and the visualization text tokens for labels on a fill.
+
+Three constraints apply to any text on a fill:
+
+- **No opacity.** The contrast margin on the mid-tone fills is thin, and text at 80% opacity drops below 4.5:1.
+- **Data labels are normal text.** An 11px number needs 4.5:1 and cannot borrow the 3:1 allowance for large text.
+- **Do not straddle two steps** with one label.
+
+## Overlaps with utility colors
+
+Some visualization tokens resolve to the same primitive as a utility token. This is expected, because both layers alias the same small set of primitives, and the one-palette-per-channel rule is what keeps them from being confused.
+
+| Visualization token | Shares a primitive with | Why it is acceptable |
+| --- | --- | --- |
+| `categorical-4-high-emphasis` (`yellow-250`) | `eds-theme-color-background-utility-warning-high-emphasis` | A slot 4 Tag or fill only ever appears beside slots 1 through 3, because slots are taken in order, so the context makes it a category rather than a warning. Do not place warning Tags inside a plot area that uses slot 4. |
+| `categorical-1-high-emphasis` (`green-450`) | `eds-theme-color-border-utility-focus` | A focused slot 1 mark gets a ring the color of its own fill. Charts should draw a two-tone focus ring, an inner white stroke inside the focus color. |
+| `scalar-3` (`green-550`) | `eds-theme-color-background-utility-favorable-high-emphasis` | A scalar ramp is never used in the same plot area as status fills. |
+| `categorical-3-high-emphasis` and `scalar-4` (`green-750`) | Each other | Categorical and scalar fills never share a plot area. |
+| `scalar-basis` and `divergent-basis` (`neutral-050`) | Each other | Deliberate. One value means "the reference point" in both palettes. |
+| `categorical-other` (`neutral-250`) | Close to `eds-theme-color-background-utility-disabled-medium-emphasis` | Gray means "present, not the subject" in a chart. Axis labels and values resolve the question before color has to. |

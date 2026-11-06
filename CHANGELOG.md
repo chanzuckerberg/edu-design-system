@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [19.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v19.0.1...v19.1.0) (2026-11-04)
+
+### Features
+
+* **Dialog:** introduce beta component for confirm prompts ([#2720](https://github.com/chanzuckerberg/edu-design-system/issues/2720)) ([97ecc9a](https://github.com/chanzuckerberg/edu-design-system/commit/97ecc9a299e57c737ac4a1ac62d9b1150cc3e3d9))
+* **Label:** deprecate the unused required prop ([#2694](https://github.com/chanzuckerberg/edu-design-system/issues/2694)) ([d025934](https://github.com/chanzuckerberg/edu-design-system/commit/d025934b0edb3c252b7f434045134862beb6eac2))
+* **Link:** add isBold prop ([#2687](https://github.com/chanzuckerberg/edu-design-system/issues/2687)) ([3fb8e63](https://github.com/chanzuckerberg/edu-design-system/commit/3fb8e633abef2652014d21df172c2c53ac2a3fd1))
+* **Markdown:** style inline and indented code per Figma spec ([#2681](https://github.com/chanzuckerberg/edu-design-system/issues/2681)) ([f4fc0a5](https://github.com/chanzuckerberg/edu-design-system/commit/f4fc0a50e73f4872e15b3acb23d851efe9e69e70))
+* **Modal:** add warnOnClose to confirm before closing ([#2719](https://github.com/chanzuckerberg/edu-design-system/issues/2719)) ([3fe33a5](https://github.com/chanzuckerberg/edu-design-system/commit/3fe33a5b3770de4d848eb55289bf87a2c09e5f08))
+* **tailwind:** add dark mode support for tailwind 3.x ([#2695](https://github.com/chanzuckerberg/edu-design-system/issues/2695)) ([1f0e445](https://github.com/chanzuckerberg/edu-design-system/commit/1f0e445388fc1e2cc84b2bd8355c99233e64cedc))
+* **theming:** import dark mode values from figma ([#2697](https://github.com/chanzuckerberg/edu-design-system/issues/2697)) ([6e00811](https://github.com/chanzuckerberg/edu-design-system/commit/6e0081189922d4b36cc3bf68aef876eb877b4754))
+* **tokens:** add visualization tokens ([#2688](https://github.com/chanzuckerberg/edu-design-system/issues/2688)) ([7b78179](https://github.com/chanzuckerberg/edu-design-system/commit/7b781798a3fa141fde2f616c657ef74ddfbe08af))
+* **tokens:** update yellow primitives ([#2736](https://github.com/chanzuckerberg/edu-design-system/issues/2736)) ([53b6766](https://github.com/chanzuckerberg/edu-design-system/commit/53b6766850284c640df4c598513d084a20d8f19c))
+
+### Bug Fixes
+
+* **AppHeader:** match placeholder size to the resolved header ([#2691](https://github.com/chanzuckerberg/edu-design-system/issues/2691)) ([43b076f](https://github.com/chanzuckerberg/edu-design-system/commit/43b076faf5b00db19e51ff915e0b4409dedd28c2))
+* **Avatar:** replace graphemer with Intl.Segmenter ([#2693](https://github.com/chanzuckerberg/edu-design-system/issues/2693)) ([4b9e662](https://github.com/chanzuckerberg/edu-design-system/commit/4b9e662e75873f013c601e30f4ac20abb9074151))
+* **deps:** update all non-major dependencies ([#2699](https://github.com/chanzuckerberg/edu-design-system/issues/2699)) ([f9340a2](https://github.com/chanzuckerberg/edu-design-system/commit/f9340a2d4369a0d4d5e37eb2b5e824697fc0f222))
+* **deps:** update all non-major dependencies ([#2725](https://github.com/chanzuckerberg/edu-design-system/issues/2725)) ([27404b4](https://github.com/chanzuckerberg/edu-design-system/commit/27404b46b152024aaca0f916ca8e1df29c60d85c))
+* **deps:** update dependency chalk to v6 ([#2709](https://github.com/chanzuckerberg/edu-design-system/issues/2709)) ([0876f2a](https://github.com/chanzuckerberg/edu-design-system/commit/0876f2affd616cfaeb3e64caba6676358801e081))
+* **deps:** update dependency ora to v9 ([#2710](https://github.com/chanzuckerberg/edu-design-system/issues/2710)) ([200834e](https://github.com/chanzuckerberg/edu-design-system/commit/200834ea5187d376a39d25bb42fff2a600891d68)), references [#2132](https://github.com/chanzuckerberg/edu-design-system/issues/2132)
+* **deps:** update dependency ts-morph to v28 ([#2711](https://github.com/chanzuckerberg/edu-design-system/issues/2711)) ([601ae58](https://github.com/chanzuckerberg/edu-design-system/commit/601ae5867ca4969cbd2acb7c10b3e343722339bd))
+* **Modal:** use cover shadows, shown from first render ([#2723](https://github.com/chanzuckerberg/edu-design-system/issues/2723)) ([585622e](https://github.com/chanzuckerberg/edu-design-system/commit/585622e8f8192d6afc10a07cfa8a8c63c8a825ae))
+* **tokens:** match dark theme token values to light ([#2696](https://github.com/chanzuckerberg/edu-design-system/issues/2696)) ([6518f5e](https://github.com/chanzuckerberg/edu-design-system/commit/6518f5e9b41ec9056781d4d85be6d3406170349a))
+* **tokens:** resolve aliased colors with separate opacity ([#2689](https://github.com/chanzuckerberg/edu-design-system/issues/2689)) ([90b0bf5](https://github.com/chanzuckerberg/edu-design-system/commit/90b0bf51c210e720c067195e31a291747f3df5b8))
+
 ## [19.0.1](https://github.com/chanzuckerberg/edu-design-system/compare/v19.0.0...v19.0.1) (2026-10-09)
 
 ### Bug Fixes

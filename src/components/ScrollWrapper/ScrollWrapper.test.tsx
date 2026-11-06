@@ -94,6 +94,7 @@ describe('<ScrollWrapper />', () => {
   describe('shadows', () => {
     afterEach(() => {
       vi.useRealTimers();
+      vi.restoreAllMocks();
     });
 
     const shadowClasses = [
@@ -112,6 +113,26 @@ describe('<ScrollWrapper />', () => {
       });
       fireEvent.scroll(element);
     };
+
+    it('shows the shadows for the starting position on mount', () => {
+      // content taller than the wrapper, which starts scrolled to the top
+      vi.spyOn(HTMLElement.prototype, 'scrollHeight', 'get').mockReturnValue(
+        300,
+      );
+      vi.spyOn(HTMLElement.prototype, 'clientHeight', 'get').mockReturnValue(
+        200,
+      );
+
+      const { container } = render(
+        <ScrollWrapper>
+          <p>Scrollable content</p>
+        </ScrollWrapper>,
+      );
+      const outer = container.firstChild as HTMLElement;
+
+      expect(outer.className).toContain('scroll-wrapper--has-bottom-shadow');
+      expect(outer.className).not.toContain('scroll-wrapper--has-top-shadow');
+    });
 
     it('adds shadows on scroll and clears them on resize', () => {
       vi.useFakeTimers();

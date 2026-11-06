@@ -38,6 +38,26 @@ export type MarkdownProps = Options & {
  *
  * Included plugins:
  * - https://github.com/remarkjs/remark-gfm
+ *
+ * ## Usage
+ *
+ * Render markdown-authored content with EDS components and styling.
+ *
+ * | Type/Use | Description | Example |
+ * |----------|-------------|---------|
+ * | Document | Headings, lists, links, tables, quotes, and images from a markdown source. | Help articles. Release notes. Content from a CMS. |
+ * | Inline code | A backticked snippet in prose renders as a low-emphasis `<code>` chip. | A command or file name mentioned mid-sentence. |
+ * | Code block | A fenced block with a language renders a `CodeBlock`. Indented blocks get the inline code treatment on the whole block. | Multi-line examples. Command output. |
+ *
+ * ### Do's
+ *
+ * * Use `Markdown` when the content is already authored as markdown.
+ * * Use inline code for short tokens readers may need to type or recognize, like `yarn start`.
+ *
+ * ### Don'ts
+ *
+ * * Don't reach for `Markdown` just to render one inline snippet. It works, but do that sparingly.
+ * * Don't use inline code for multi-line or runnable code. Use `CodeBlock` instead.
  */
 export const Markdown = ({
   children,
@@ -162,7 +182,7 @@ export const Markdown = ({
                 className={clsx(
                   styles['markdown__code'],
                   typeStyles['text'],
-                  typeStyles['text--code-md'],
+                  typeStyles['text--code-sm'],
                 )}
               >
                 {children}

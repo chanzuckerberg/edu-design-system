@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import Graphemer from 'graphemer';
 
 import React from 'react';
 import { type IconOrContent, type UserData } from '../../util/utility-types';
@@ -91,12 +90,17 @@ export interface AvatarCSSProperties extends React.CSSProperties {
 
 const NUM_COLORS = 6; // this count should match the zero-indexed color schemes in the CSS Module
 
+let graphemeSegmenter: Intl.Segmenter | undefined;
+
 /**
- * Use graphemer to take a name part, and select the first grapheme (emoji, surrogate pair, ASCII character)
+ * Use Intl.Segmenter to take a name part, and select the first grapheme (emoji, surrogate pair, ASCII character)
  */
 function produceAbbreviation(fromName: string): string {
-  const splitter = new Graphemer();
-  return fromName ? splitter.splitGraphemes(fromName)[0] : '?';
+  graphemeSegmenter ??= new Intl.Segmenter(undefined, {
+    granularity: 'grapheme',
+  });
+  const [first] = graphemeSegmenter.segment(fromName);
+  return first?.segment ?? '?';
 }
 
 /**

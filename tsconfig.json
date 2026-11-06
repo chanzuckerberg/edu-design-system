@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "lib": ["es5", "es6", "dom"],
+    "lib": ["es5", "es6", "es2022.intl", "dom"],
     "module": "ESNext",
     "moduleResolution": "bundler",
     "noUnusedLocals": true,

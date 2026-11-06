@@ -16,18 +16,17 @@ export default {
     },
     layout: 'centered',
   },
-  tags: ['autodocs', 'version:2.0'],
+  tags: ['autodocs', 'version:2.0.1'],
 } as Meta<Args>;
 
 type Args = React.ComponentProps<typeof Label>;
 
 /**
- * Labels can denote some text to label the content, and whether that content is marked as required.
+ * Labels denote some text to label the content.
  */
 export const Default: StoryObj<Args> = {
   args: {
     text: 'Label',
-    required: true,
   },
 };
 

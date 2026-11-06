@@ -31,7 +31,10 @@
   }
 }
 
-.app-header--orientation-horizontal {
+/* These mixins define macro content inserted into the orientation classes below */
+/* stylelint-disable nesting-selector-no-missing-scoping-root */
+/* stylelint-disable no-invalid-position-declaration */
+@define-mixin app-header-horizontal {
   min-height: calc(var(--eds-spacing-size-12) * 1px);
   width: 100%;
 
@@ -69,7 +72,7 @@
   }
 }
 
-.app-header--orientation-vertical {
+@define-mixin app-header-vertical {
   width: 240px;
   height: 100vh;
 
@@ -98,6 +101,38 @@
 
   .app-header__nav-group ul {
     gap: 0;
+  }
+}
+
+@define-mixin app-header-title-vertical {
+  flex-grow: 0;
+  padding: 0 calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-1) * 1px);
+  width: 100%;
+}
+
+/* stylelint-enable nesting-selector-no-missing-scoping-root */
+/* stylelint-enable no-invalid-position-declaration */
+
+.app-header--orientation-horizontal {
+  @mixin app-header-horizontal;
+}
+
+.app-header--orientation-vertical {
+  @mixin app-header-vertical;
+}
+
+/**
+ * Used before the orientation resolves (e.g., during server rendering) when the consumer
+ * requested `vertical`, so the placeholder takes the same space as the resolved header.
+ * Keep the breakpoint in sync with `resolveOrientation` in AppHeader.tsx.
+ */
+.app-header--orientation-responsive {
+  @media not all and (min-width: $eds-bp-md) {
+    @mixin app-header-horizontal;
+  }
+
+  @media (min-width: $eds-bp-md) {
+    @mixin app-header-vertical;
   }
 }
 
@@ -257,9 +292,13 @@
   background-color: light-dark(var(--eds-theme-color-background-app-header), var(--eds-dark-theme-color-background-app-header));
 
   .app-header--orientation-vertical & {
-    flex-grow: 0;
-    padding: 0 calc(var(--eds-spacing-size-1) * 1px) calc(var(--eds-spacing-size-1) * 1px);
-    width: 100%;
+    @mixin app-header-title-vertical;
+  }
+
+  .app-header--orientation-responsive & {
+    @media (min-width: $eds-bp-md) {
+      @mixin app-header-title-vertical;
+    }
   }
 
   .app-header-title--has-logo {

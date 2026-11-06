@@ -32,7 +32,7 @@ export default {
     },
   },
 
-  tags: ['autodocs', 'version:1.7.2'],
+  tags: ['autodocs', 'version:1.7.3'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;

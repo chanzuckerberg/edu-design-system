@@ -1,11 +1,14 @@
+// postcss-nested is ESM-only, so require() returns its module namespace.
+const postcssNested = require('postcss-nested').default;
+
 module.exports = {
-  plugins: {
-    'postcss-import': {
+  plugins: [
+    require('postcss-import')({
       addModulesDirectories: ['node_modules'],
-    },
-    'tailwindcss/nesting': {},
-    'postcss-mixins': {},
-    'postcss-simple-vars': {
+    }),
+    require('tailwindcss/nesting'),
+    require('postcss-mixins'),
+    require('postcss-simple-vars')({
       variables: {
         // TODO-AH: Sync all the breakpoints across files
         'eds-bp-xs': '0px',
@@ -15,8 +18,8 @@ module.exports = {
         'eds-bp-xl': '1440px',
         'eds-bp-xxl': '1920px',
       },
-    },
-    'postcss-nested': {},
-    tailwindcss: {},
-  },
+    }),
+    postcssNested(),
+    require('tailwindcss'),
+  ],
 };
