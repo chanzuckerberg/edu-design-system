@@ -364,7 +364,7 @@ const ModalContent = (props: ModalContentProps) => {
   const closeIcon = useSemanticIcon('close');
 
   // Shrinks an lg modal to its content when that content is shorter than the lg max height
-  // (`100vh - spacing-size-12`). Taller content keeps the CSS max height and the body scrolls.
+  // (`100dvh - spacing-size-12`). Taller content keeps the CSS max height and the body scrolls.
   // Below `$eds-bp-sm` the lg modal is full-bleed, so it keeps the full screen there.
   const contentRef = React.useRef<HTMLDivElement>(null);
   const consumerMaxHeight = other.style?.maxHeight;

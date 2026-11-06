@@ -32,7 +32,7 @@ export default {
     confirmLabel: 'Discard changes',
     title: 'Discard your changes?',
   },
-  tags: ['autodocs', 'beta', 'version:1.0.0'],
+  tags: ['autodocs', 'beta', 'version:1.0.1'],
 } as Meta<typeof Dialog>;
 
 type Args = React.ComponentProps<typeof Dialog>;

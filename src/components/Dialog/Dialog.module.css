@@ -67,6 +67,7 @@
     max-width: calc(100vw - (var(--eds-spacing-size-6) * 1px));
     height: auto;
     max-height: calc(100vh - (var(--eds-spacing-size-12) * 1px));
+    max-height: calc(100dvh - (var(--eds-spacing-size-12) * 1px));
 
     border: 1px solid light-dark(var(--eds-theme-color-border-utility-default-low-emphasis), var(--eds-dark-theme-color-border-utility-default-low-emphasis));
     border-radius: calc(var(--eds-theme-border-radius-surfaces-lg) * 1px);
