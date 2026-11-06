@@ -44,7 +44,9 @@ type Story = StoryObj<typeof Toggle>;
 export const Default: Story = {};
 
 /**
- * When checked, the slider and selected color adjust to show the selected state
+ * When checked, the thumb moves to the right and the track uses the
+ * `object-selected` background color, so the checked state differs from the
+ * unchecked state by hue as well as by thumb position.
  */
 export const WhenChecked: Story = {
   args: {
