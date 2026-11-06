@@ -620,13 +620,13 @@
 <header>
   <div class="wrap">
     <h1>Manifest Debugger</h1>
-    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill err" data-k="errors" href="#filter-errors">3/54 API errors</a><a class="filter-pill info" data-k="infos" href="#filter-infos">10/54 infos</a><a class="filter-pill" data-k="no-api" href="#filter-no-api">4/54 without API description</a><a class="filter-pill err" data-k="story-errors" href="#filter-story-errors">28/509 story errors</a><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">84/509 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">10 docs ok</a></div>
+    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill err" data-k="errors" href="#filter-errors">3/55 API errors</a><a class="filter-pill info" data-k="infos" href="#filter-infos">10/55 infos</a><a class="filter-pill" data-k="no-api" href="#filter-no-api">4/55 without API description</a><a class="filter-pill err" data-k="story-errors" href="#filter-story-errors">31/519 story errors</a><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">84/519 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">11 docs ok</a></div>
   </div>
 </header>
 <main>
   <div class="wrap">
     <div class="note err" style="margin-bottom: 16px;">
-              <strong>Performance warning:</strong> <code>react-docgen-typescript</code> took <strong>9.0s</strong> to generate the manifest. This delay applies every time the manifest is used by an agent. Consider switching to the faster <code>react-docgen</code> in your <code>main.ts</code>:
+              <strong>Performance warning:</strong> <code>react-docgen-typescript</code> took <strong>12.1s</strong> to generate the manifest. This delay applies every time the manifest is used by an agent. Consider switching to the faster <code>react-docgen</code> in your <code>main.ts</code>:
               <pre><code>typescript: {
   reactDocgen: 'react-docgen',
 }</code></pre>
@@ -6855,7 +6855,7 @@ subLabel?: ReactNode
  */
 value?: ComboboxSelection
 
-virtual?: { options: NoInfer&lt;ComboboxValue&gt;[] | { toString: (() =&gt; string) | (() =&gt; string); charAt: unknown; charCodeAt: unknown; concat: unknown; indexOf: unknown; lastIndexOf: unknown; localeCompare: unknown; match: unknown; replace: unknown; search: unknown; slice: unknown; split: unknown; substring: unknown; toLowerCase: unknown; toLocaleLowerCase: unknown; toUpperCase: unknown; toLocaleUpperCase: unknown; trim: unknown; readonly length: unknown; substr: unknown; valueOf: (() =&gt; string) | (() =&gt; Object); codePointAt: unknown; includes: unknown; endsWith: unknown; normalize: unknown; repeat: unknown; startsWith: unknown; anchor: unknown; big: unknown; blink: unknown; bold: unknown; fixed: unknown; fontcolor: unknown; fontsize: unknown; italics: unknown; link: unknown; small: unknown; strike: unknown; sub: unknown; sup: unknown; padStart: unknown; padEnd: unknown; trimEnd: unknown; trimStart: unknown; trimLeft: unknown; trimRight: unknown; matchAll: unknown; replaceAll: unknown; at: unknown; isWellFormed: unknown; toWellFormed: unknown; }[]; disabled?: ((value: NoInfer&lt;ComboboxValue&gt; | { toString: (() =&gt; string) | (() =&gt; string); charAt: unknown; charCodeAt: unknown; concat: unknown; indexOf: unknown; lastIndexOf: unknown; localeCompare: unknown; match: unknown; replace: unknown; search: unknown; slice: unknown; split: unknown; substring: unknown; toLowerCase: unknown; toLocaleLowerCase: unknown; toUpperCase: unknown; toLocaleUpperCase: unknown; trim: unknown; readonly length: unknown; substr: unknown; valueOf: (() =&gt; string) | (() =&gt; Object); codePointAt: unknown; includes: unknown; endsWith: unknown; normalize: unknown; repeat: unknown; startsWith: unknown; anchor: unknown; big: unknown; blink: unknown; bold: unknown; fixed: unknown; fontcolor: unknown; fontsize: unknown; italics: unknown; link: unknown; small: unknown; strike: unknown; sub: unknown; sup: unknown; padStart: unknown; padEnd: unknown; trimEnd: unknown; trimStart: unknown; trimLeft: unknown; trimRight: unknown; matchAll: unknown; replaceAll: unknown; at: unknown; isWellFormed: unknown; toWellFormed: unknown; }) =&gt; boolean); } | null</code></pre>
+virtual?: { options: NoInfer&lt;ComboboxValue&gt;[] | { toString: (() =&gt; string) | (() =&gt; string); charAt: unknown; charCodeAt: unknown; concat: unknown; indexOf: unknown; lastIndexOf: unknown; localeCompare: unknown; match: unknown; replace: unknown; search: unknown; slice: unknown; split: unknown; substring: unknown; toLowerCase: unknown; toLocaleLowerCase: unknown; toUpperCase: unknown; toLocaleUpperCase: unknown; trim: unknown; readonly length: unknown; substr: unknown; valueOf: (() =&gt; string) | (() =&gt; Object); codePointAt: unknown; includes: unknown; endsWith: unknown; normalize: unknown; repeat: unknown; startsWith: unknown; anchor: unknown; big: unknown; blink: unknown; bold: unknown; fixed: unknown; fontcolor: unknown; fontsize: unknown; italics: unknown; link: unknown; small: unknown; strike: unknown; sub: unknown; sup: unknown; padStart: unknown; padEnd: unknown; trimEnd: unknown; trimStart: unknown; trimLeft: unknown; trimRight: unknown; matchAll: unknown; }[]; disabled?: ((value: NoInfer&lt;ComboboxValue&gt; | { toString: (() =&gt; string) | (() =&gt; string); charAt: unknown; charCodeAt: unknown; concat: unknown; indexOf: unknown; lastIndexOf: unknown; localeCompare: unknown; match: unknown; replace: unknown; search: unknown; slice: unknown; split: unknown; substring: unknown; toLowerCase: unknown; toLocaleLowerCase: unknown; toUpperCase: unknown; toLocaleUpperCase: unknown; trim: unknown; readonly length: unknown; substr: unknown; valueOf: (() =&gt; string) | (() =&gt; Object); codePointAt: unknown; includes: unknown; endsWith: unknown; normalize: unknown; repeat: unknown; startsWith: unknown; anchor: unknown; big: unknown; blink: unknown; bold: unknown; fixed: unknown; fontcolor: unknown; fontsize: unknown; italics: unknown; link: unknown; small: unknown; strike: unknown; sub: unknown; sup: unknown; padStart: unknown; padEnd: unknown; trimEnd: unknown; trimStart: unknown; trimLeft: unknown; trimRight: unknown; matchAll: unknown; }) =&gt; boolean); } | null</code></pre>
           </div>
         </div>
     
@@ -8991,6 +8991,302 @@ cell slots are the consumer&#39;s to fill, and the provider says nothing about t
   </div>
 </article>
 <article
+  id="components-dialog"
+  class="card 
+  no-error
+  no-info
+  has-story-error
+  no-story-warning
+  
+  no-doc-error"
+  role="listitem"
+  aria-label="Dialog">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> Dialog</h2>
+      <div class="badges">
+        <label for="c-14-components-dialog-props" class="badge ok as-toggle">9 prop types</label>
+        
+        <label for="c-14-components-dialog-stories" class="badge err as-toggle">3/5 story errors</label>
+        
+        
+      </div>
+    </div>
+    <div class="meta" title="./src/components/Dialog/Dialog.stories.tsx">components-dialog · ./src/components/Dialog/Dialog.stories.tsx</div>
+    
+    <div class="hint">BETA: This component is still a work in progress and is subject to change.
+
+`import {Dialog} from &quot;@chanzuckerberg/eds&quot;;`
+
+A small, focused prompt that asks the user to confirm or cancel an action. Use it in place of
+the browser&#39;s `window.confirm()`, which can&#39;t be styled or given formatted content.
+
+## Usage
+
+* Ask one question with one default action. For anything with more content or more choices,
+  use `Modal`.
+* The primary button runs the default action and receives focus when the dialog opens, so
+  Enter confirms. The secondary button cancels, as do ESC and a click on the overlay.
+* Set `confirmVariant=&quot;critical&quot;` when the action is destructive.
+
+### Confirming before a `Modal` closes
+
+`Modal`&#39;s `warnOnClose` uses `window.confirm()`. To ask with a `Dialog` instead, leave
+`warnOnClose` off and decide in the modal&#39;s `onClose`: close straight away when nothing would
+be lost, otherwise open the `Dialog`. Render the `Dialog` inside `Modal.Body` so it stacks
+above the modal.
+
+## Content &amp; Accessibility
+
+* Use a verb-noun question for the title, and a primary label that names the action.
+* Keep the body to a sentence or two that says what happens next.
+* The dialog is announced as an `alertdialog`, named by its title and described by its body.</div>
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  
+  
+  <input id="c-14-components-dialog-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+  <input id="c-14-components-dialog-props" class="tg tg-props" type="checkbox" hidden />
+
+  <div class="panels">
+    
+    
+    
+        <div class="panel panel-props">
+          <div class="note ok">
+            <div class="row">
+              <span class="ex-name">Prop types <small>(react-docgen-typescript)</small></span>
+              <span class="badge ok">9 prop types</span>
+            </div>
+            <pre><code>Component: src/components/Dialog/Dialog.tsx::Dialog</code></pre>
+            <pre><code>Props:</code></pre>
+            <pre><code>/**
+ * Label for the secondary button, which cancels.
+ * 
+ * **Default is `&quot;Cancel&quot;`**.
+ */
+cancelLabel?: string = Cancel
+
+/**
+ * The question or message the dialog asks the user to respond to. Accepts formatted content,
+ * such as text with emphasis or a short list.
+ */
+children: ReactNode
+
+/**
+ * Additional classnames passed in for styling.
+ * 
+ * This is applied to the dialog&#39;s surface, not the overlay behind it.
+ */
+className?: string
+
+/**
+ * Label for the primary button, which runs the default action. Name the action, for example
+ * `&quot;Discard changes&quot;` or `&quot;Delete file&quot;`, rather than `&quot;OK&quot;` or `&quot;Yes&quot;`.
+ */
+confirmLabel: string
+
+/**
+ * Status (color) of the primary button. Use `&quot;critical&quot;` when the default action destroys
+ * something or can&#39;t be undone.
+ * 
+ * **Default is `&quot;default&quot;`**.
+ */
+confirmVariant?: &quot;critical&quot; | &quot;default&quot; = default
+
+/**
+ * Called when the user cancels: the secondary button, the ESC key, or a click on the overlay.
+ * Use this to hide the dialog.
+ */
+onCancel: () =&gt; void
+
+/**
+ * Called when the user takes the default action: the primary button, or the Enter key while
+ * focus isn&#39;t on another button or a link. Use this to act and hide the dialog.
+ */
+onConfirm: () =&gt; void
+
+/**
+ * Whether the dialog is visible.
+ */
+open: boolean
+
+/**
+ * Short title for the dialog, which also names it for screen readers. Use a verb-noun question
+ * or statement, for example `&quot;Discard your changes?&quot;`.
+ */
+title: string</code></pre>
+          </div>
+        </div>
+    
+        <div class="panel panel-stories">
+          
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Critical</span>
+                <span class="badge err">story error</span>
+                
+              </div>
+              
+              
+              
+              
+              <pre><code>Expected render to be an arrow function or function expression
+  116 |   },
+  117 |   parameters: sharedParameters,
+&gt; 118 |   render: Default.render,
+      |           ^^^^^^^^^^^^^^
+  119 |   play: openInChromatic,
+  120 | };
+  121 |</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Formatted Body</span>
+                <span class="badge err">story error</span>
+                
+              </div>
+              
+              
+              
+              
+              <pre><code>Expected render to be an arrow function or function expression
+  135 |   },
+  136 |   parameters: sharedParameters,
+&gt; 137 |   render: Default.render,
+      |           ^^^^^^^^^^^^^^
+  138 |   play: openInChromatic,
+  139 | };
+  140 |</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Custom Cancel Label</span>
+                <span class="badge err">story error</span>
+                
+              </div>
+              
+              
+              
+              
+              <pre><code>Expected render to be an arrow function or function expression
+  147 |   },
+  148 |   parameters: sharedParameters,
+&gt; 149 |   render: Default.render,
+      |           ^^^^^^^^^^^^^^
+  150 |   play: openInChromatic,
+  151 | };
+  152 |</code></pre>
+            </div>
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { Button, ButtonGroup, Dialog, InputField, Modal } from '@chanzuckerberg/eds';</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Default</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">Clicking on a trigger item (in this case `Button`) opens the dialog. Focus starts on the
+primary button, so Enter takes the default action. The secondary button, ESC, and a click on
+the overlay all cancel.
+
+In Chromatic this snapshots at every available viewport: the dialog fills the viewport at the
+smallest breakpoint, floats at half the viewport width at tablet widths, and a quarter at
+desktop widths.</div>
+              <pre><code>const Default = () =&gt; &lt;InteractiveExample confirmLabel=&quot;Discard changes&quot; title=&quot;Discard your changes?&quot;&gt;Your edits to this lesson plan haven’t been saved. If you leave now, they’ll be lost.&lt;/InteractiveExample&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Confirming Modal Close</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">A `Dialog` in place of `Modal`&#39;s `warnOnClose`. Type in the field, then try to close the modal
+with the close button, ESC, or a click on the overlay. Closing clears the note, so the modal
+asks first while there&#39;s one to lose; an empty modal closes straight away.
+
+`warnOnClose` stays off. The modal&#39;s `onClose` decides instead, and the footer&#39;s Cancel
+button goes through the same check. The `Dialog` renders inside `Modal.Body` so it stacks
+above the modal.</div>
+              <pre><code>const ConfirmingModalClose = () =&gt; {
+  function ConfirmingModalCloseExample() {
+    const [modalOpen, setModalOpen] = useState(false);
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const [draft, setDraft] = useState(&#39;&#39;);
+
+    const closeModal = () =&gt; {
+      setDialogOpen(false);
+      setModalOpen(false);
+      // closing discards the draft, which is what makes the dialog worth showing
+      setDraft(&#39;&#39;);
+    };
+    // the close button, ESC, overlay clicks, and the footer&#39;s Cancel all ask first
+    const requestClose = () =&gt;
+      draft === &#39;&#39; ? closeModal() : setDialogOpen(true);
+
+    return (
+      &lt;div className=&quot;p-spacing-size-3 flex justify-center&quot;&gt;
+        &lt;Button onClick={() =&gt; setModalOpen(true)} rank=&quot;primary&quot;&gt;
+          Open the modal
+        &lt;/Button&gt;
+        &lt;Modal onClose={requestClose} open={modalOpen} size=&quot;sm&quot;&gt;
+          &lt;Modal.Header&gt;
+            &lt;Modal.Title&gt;Add a note&lt;/Modal.Title&gt;
+          &lt;/Modal.Header&gt;
+          &lt;Modal.Body&gt;
+            &lt;InputField
+              label=&quot;Note&quot;
+              onChange={(event) =&gt; setDraft(event.target.value)}
+              value={draft}
+            /&gt;
+            &lt;Dialog
+              confirmLabel=&quot;Discard note&quot;
+              confirmVariant=&quot;critical&quot;
+              onCancel={() =&gt; setDialogOpen(false)}
+              onConfirm={closeModal}
+              open={dialogOpen}
+              title=&quot;Discard your note?&quot;
+            &gt;
+              Closing clears the note you started.
+            &lt;/Dialog&gt;
+          &lt;/Modal.Body&gt;
+          &lt;Modal.Footer&gt;
+            &lt;ButtonGroup&gt;
+              &lt;Button onClick={closeModal} rank=&quot;primary&quot;&gt;
+                Save note
+              &lt;/Button&gt;
+              &lt;Button onClick={requestClose} rank=&quot;secondary&quot;&gt;
+                Cancel
+              &lt;/Button&gt;
+            &lt;/ButtonGroup&gt;
+          &lt;/Modal.Footer&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+  return &lt;ConfirmingModalCloseExample /&gt;;
+};</code></pre>
+              
+            </div>
+        </div>
+    
+    
+  </div>
+</article>
+<article
   id="components-fieldlabel"
   class="card 
   no-error
@@ -9005,9 +9301,9 @@ cell slots are the consumer&#39;s to fill, and the provider says nothing about t
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> FieldLabel</h2>
       <div class="badges">
-        <label for="c-14-components-fieldlabel-props" class="badge ok as-toggle">6 prop types</label>
+        <label for="c-15-components-fieldlabel-props" class="badge ok as-toggle">6 prop types</label>
         
-        <label for="c-14-components-fieldlabel-stories" class="badge ok as-toggle">5 stories</label>
+        <label for="c-15-components-fieldlabel-stories" class="badge ok as-toggle">5 stories</label>
         
         
       </div>
@@ -9032,10 +9328,10 @@ For guidance on how to word a label, see the do&#39;s and don&#39;ts on the cont
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-14-components-fieldlabel-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-15-components-fieldlabel-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-14-components-fieldlabel-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-15-components-fieldlabel-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -9165,9 +9461,9 @@ size?: &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot; = lg</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> FieldNote</h2>
       <div class="badges">
-        <label for="c-15-components-fieldnote-props" class="badge ok as-toggle">6 prop types</label>
+        <label for="c-16-components-fieldnote-props" class="badge ok as-toggle">6 prop types</label>
         
-        <label for="c-15-components-fieldnote-stories" class="badge ok as-toggle">6 stories</label>
+        <label for="c-16-components-fieldnote-stories" class="badge ok as-toggle">6 stories</label>
         
         
       </div>
@@ -9198,10 +9494,10 @@ example, `InputField`).</div>
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-15-components-fieldnote-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-16-components-fieldnote-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-15-components-fieldnote-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-16-components-fieldnote-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -9367,9 +9663,9 @@ Here `critical` becomes the outline version of the icon.</div>
     <div class="title">
       <h2><span class="status-dot dot-err"></span> Fieldset</h2>
       <div class="badges">
-        <label for="c-16-components-fieldset-props" class="badge ok as-toggle">5 prop types</label>
+        <label for="c-17-components-fieldset-props" class="badge ok as-toggle">5 prop types</label>
         
-        <label for="c-16-components-fieldset-stories" class="badge err as-toggle">3/13 story errors · 4 incomplete</label>
+        <label for="c-17-components-fieldset-stories" class="badge err as-toggle">3/13 story errors · 4 incomplete</label>
         
         
       </div>
@@ -9411,10 +9707,10 @@ Compose it as a `Fieldset.Legend` to label the group, followed by the controls w
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-16-components-fieldset-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-17-components-fieldset-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-16-components-fieldset-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-17-components-fieldset-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -9746,9 +10042,9 @@ This allows for controlling the state of the contents at the top level `Fieldset
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Heading</h2>
       <div class="badges">
-        <label for="c-17-components-heading-props" class="badge ok as-toggle">2 prop types</label>
+        <label for="c-18-components-heading-props" class="badge ok as-toggle">2 prop types</label>
         
-        <label for="c-17-components-heading-stories" class="badge ok as-toggle">9 stories</label>
+        <label for="c-18-components-heading-stories" class="badge ok as-toggle">9 stories</label>
         
         
       </div>
@@ -9810,10 +10106,10 @@ that component&#39;s own treatment and can change with it.
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-17-components-heading-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-18-components-heading-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-17-components-heading-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-18-components-heading-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -9997,9 +10293,9 @@ the outline calls for.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Hr</h2>
       <div class="badges">
-        <label for="c-18-components-hr-props" class="badge ok as-toggle">3 prop types</label>
+        <label for="c-19-components-hr-props" class="badge ok as-toggle">3 prop types</label>
         
-        <label for="c-18-components-hr-stories" class="badge ok as-toggle">1 story</label>
+        <label for="c-19-components-hr-stories" class="badge ok as-toggle">1 story</label>
         
         
       </div>
@@ -10028,10 +10324,10 @@ different weight or color, reach for spacing or a border on the surrounding bloc
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-18-components-hr-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-19-components-hr-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-18-components-hr-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-19-components-hr-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -10110,9 +10406,9 @@ variant?: &quot;brand&quot;</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Icon</h2>
       <div class="badges">
-        <label for="c-19-components-icon-props" class="badge ok as-toggle">9 prop types</label>
+        <label for="c-20-components-icon-props" class="badge ok as-toggle">9 prop types</label>
         
-        <label for="c-19-components-icon-stories" class="badge ok as-toggle">7 stories</label>
+        <label for="c-20-components-icon-stories" class="badge ok as-toggle">7 stories</label>
         
         
       </div>
@@ -10156,10 +10452,10 @@ for `size` so the icon scales with the text it sits beside.
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-19-components-icon-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-20-components-icon-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-19-components-icon-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-20-components-icon-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -10370,7 +10666,7 @@ a grid of icons within the system.
       <div class="badges">
         <span class="badge">no API description</span>
         
-        <label for="c-20-components-iconprovider-stories" class="badge ok as-toggle">3 stories</label>
+        <label for="c-21-components-iconprovider-stories" class="badge ok as-toggle">3 stories</label>
         
         
       </div>
@@ -10397,7 +10693,7 @@ which is reported here as a usage error.</div>
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-20-components-iconprovider-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-21-components-iconprovider-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
   
@@ -10555,9 +10851,9 @@ informative icon would have them announce twice.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> InlineNotification</h2>
       <div class="badges">
-        <label for="c-21-components-inlinenotification-props" class="badge ok as-toggle">5 prop types</label>
+        <label for="c-22-components-inlinenotification-props" class="badge ok as-toggle">5 prop types</label>
         
-        <label for="c-21-components-inlinenotification-stories" class="badge ok as-toggle">8 stories</label>
+        <label for="c-22-components-inlinenotification-stories" class="badge ok as-toggle">8 stories</label>
         
         
       </div>
@@ -10602,10 +10898,10 @@ state that caused the alert has been resolved.
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-21-components-inlinenotification-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-22-components-inlinenotification-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-21-components-inlinenotification-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-22-components-inlinenotification-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -10792,9 +11088,9 @@ Here `critical` becomes the outline version of the icon.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> InputChip</h2>
       <div class="badges">
-        <label for="c-22-components-inputchip-props" class="badge ok as-toggle">6 prop types</label>
+        <label for="c-23-components-inputchip-props" class="badge ok as-toggle">6 prop types</label>
         
-        <label for="c-22-components-inputchip-stories" class="badge ok as-toggle">5 stories</label>
+        <label for="c-23-components-inputchip-stories" class="badge ok as-toggle">5 stories</label>
         
         
       </div>
@@ -10829,10 +11125,10 @@ Unless used as a toggle, chips should always be presented as a group. Depending 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-22-components-inputchip-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-23-components-inputchip-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-22-components-inputchip-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-23-components-inputchip-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -10974,9 +11270,9 @@ provider says nothing about it.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> InputField</h2>
       <div class="badges">
-        <label for="c-23-components-inputfield-props" class="badge ok as-toggle">8 prop types</label>
+        <label for="c-24-components-inputfield-props" class="badge ok as-toggle">8 prop types</label>
         
-        <label for="c-23-components-inputfield-stories" class="badge ok as-toggle">26 stories</label>
+        <label for="c-24-components-inputfield-stories" class="badge ok as-toggle">26 stories</label>
         
         
       </div>
@@ -11021,10 +11317,10 @@ When the text exceeds the available space, it scrolls to show the end of the str
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-23-components-inputfield-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-24-components-inputfield-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-23-components-inputfield-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-24-components-inputfield-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -11552,9 +11848,9 @@ rather than the component that happened to be picked.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Label</h2>
       <div class="badges">
-        <label for="c-24-components-label-props" class="badge ok as-toggle">7 prop types</label>
+        <label for="c-25-components-label-props" class="badge ok as-toggle">7 prop types</label>
         
-        <label for="c-24-components-label-stories" class="badge ok as-toggle">2 stories</label>
+        <label for="c-25-components-label-stories" class="badge ok as-toggle">2 stories</label>
         
         
       </div>
@@ -11576,10 +11872,10 @@ is this component, and `Checkbox` and `Toggle` render it for you.
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-24-components-label-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-25-components-label-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-24-components-label-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-25-components-label-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -11619,9 +11915,11 @@ id?: string
 labelAfter?: ReactNode
 
 /**
- * Indicates that field is required for form to be successfully submitted.
+ * **Deprecated.** Has no effect: it renders no indicator and sets no attribute. Mark the
+ * associated input as required instead.
+ * @deprecated TODO(next-major): remove.
  */
-required?: boolean = true
+required?: boolean
 
 /**
  * The label text string
@@ -11649,8 +11947,8 @@ import Tooltip from '../Tooltip';</code></pre>
                 <span class="badge ok">story ok</span>
               </div>
               
-              <div class="hint">Labels can denote some text to label the content, and whether that content is marked as required.</div>
-              <pre><code>const Default = () =&gt; &lt;Label text=&quot;Label&quot; required /&gt;;</code></pre>
+              <div class="hint">Labels denote some text to label the content.</div>
+              <pre><code>const Default = () =&gt; &lt;Label text=&quot;Label&quot; /&gt;;</code></pre>
               
             </div>
             <div class="note ok">
@@ -11687,9 +11985,9 @@ import Tooltip from '../Tooltip';</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Link</h2>
       <div class="badges">
-        <label for="c-25-components-link-props" class="badge ok as-toggle">6 prop types</label>
+        <label for="c-26-components-link-props" class="badge ok as-toggle">7 prop types</label>
         
-        <label for="c-25-components-link-stories" class="badge ok as-toggle">12 stories</label>
+        <label for="c-26-components-link-stories" class="badge ok as-toggle">13 stories</label>
         
         
       </div>
@@ -11736,10 +12034,10 @@ import Tooltip from '../Tooltip';</code></pre>
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-25-components-link-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-26-components-link-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-25-components-link-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-26-components-link-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -11749,7 +12047,7 @@ import Tooltip from '../Tooltip';</code></pre>
           <div class="note ok">
             <div class="row">
               <span class="ex-name">Prop types <small>(react-docgen-typescript)</small></span>
-              <span class="badge ok">6 prop types</span>
+              <span class="badge ok">7 prop types</span>
             </div>
             <pre><code>Component: src/components/Link/Link.tsx::Link</code></pre>
             <pre><code>Props:</code></pre>
@@ -11790,6 +12088,14 @@ emphasis?: &quot;default&quot; | Emphasis = default
 icon?: &quot;open-in-new&quot; | &quot;forward&quot;
 
 /**
+ * Whether to render the link text at bold weight. Applies in both contexts, and holds
+ * across every emphasis, variant, and state.
+ * 
+ * **Default is `false`**.
+ */
+isBold?: boolean = false
+
+/**
  * The size of the link (when its context is `&quot;standalone&quot;`).
  * 
  * ----
@@ -11819,7 +12125,7 @@ variant?: &quot;default&quot; | &quot;inverse&quot; = default</code></pre>
                 <div class="row">
                   <span class="ex-name">Imports</span>
                 </div>
-                <pre><code>import { IconProvider, Link } from '@chanzuckerberg/eds';
+                <pre><code>import { IconProvider, Link, Text } from '@chanzuckerberg/eds';
 import React from 'react';</code></pre>
               </div>
           
@@ -11954,6 +12260,65 @@ link&#39;s font rather than the icon size each named icon carries.</div>
         &lt;/div&gt;
     );
 };</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Bold</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">`isBold` renders the link text at bold weight, without overriding the link&#39;s styles. It
+holds across every emphasis and state, and in both contexts.</div>
+              <pre><code>const Bold = () =&gt; &lt;div className=&quot;flex flex-col gap-4&quot;&gt;
+    &lt;div&gt;
+        &lt;Link
+            size=&quot;md&quot;
+            href=&quot;http://example.org/&quot;
+            onClick={(event: any) =&gt; event.preventDefault()}
+            isBold
+            context=&quot;standalone&quot;
+            emphasis=&quot;default&quot;&gt;Default Emphasis
+                    &lt;/Link&gt;
+        &lt;br /&gt;
+        &lt;Link
+            size=&quot;md&quot;
+            href=&quot;http://example.org/&quot;
+            onClick={(event: any) =&gt; event.preventDefault()}
+            isBold
+            context=&quot;standalone&quot;
+            emphasis=&quot;high&quot;&gt;High Emphasis
+                    &lt;/Link&gt;
+        &lt;br /&gt;
+        &lt;Link
+            size=&quot;md&quot;
+            href=&quot;http://example.org/&quot;
+            onClick={(event: any) =&gt; event.preventDefault()}
+            isBold
+            context=&quot;standalone&quot;
+            emphasis=&quot;low&quot;
+            icon=&quot;forward&quot;&gt;Low Emphasis
+                    &lt;/Link&gt;
+        &lt;br /&gt;
+        &lt;Link
+            size=&quot;md&quot;
+            href=&quot;http://example.org/&quot;
+            onClick={(event: any) =&gt; event.preventDefault()}
+            isBold
+            context=&quot;standalone&quot;
+            icon=&quot;open-in-new&quot;&gt;Leaves the site
+                    &lt;/Link&gt;
+    &lt;/div&gt;
+    &lt;Text as=&quot;p&quot; className=&quot;w-[384px]&quot; preset=&quot;body-md-bold&quot;&gt;Lorem ipsum dolor sit amet,{&#39; &#39;}
+        &lt;Link
+            href=&quot;http://example.org/&quot;
+            onClick={(event: any) =&gt; event.preventDefault()}
+            isBold
+            context=&quot;inline&quot;
+            size={undefined}&gt;consectetur adipiscing elit
+                    &lt;/Link&gt;. Morbi porta at ante quis molestie.
+              &lt;/Text&gt;
+&lt;/div&gt;;</code></pre>
               
             </div>
             <div class="note ok">
@@ -12140,9 +12505,9 @@ Below, `open-in-new` becomes a chain and `forward` a full arrow.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> LoadingIndicator</h2>
       <div class="badges">
-        <label for="c-26-components-loadingindicator-props" class="badge ok as-toggle">4 prop types</label>
+        <label for="c-27-components-loadingindicator-props" class="badge ok as-toggle">4 prop types</label>
         
-        <label for="c-26-components-loadingindicator-stories" class="badge ok as-toggle">7 stories</label>
+        <label for="c-27-components-loadingindicator-stories" class="badge ok as-toggle">7 stories</label>
         
         
       </div>
@@ -12177,10 +12542,10 @@ Below, `open-in-new` becomes a chain and `forward` a full arrow.</div>
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-26-components-loadingindicator-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-27-components-loadingindicator-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-26-components-loadingindicator-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-27-components-loadingindicator-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -12319,9 +12684,9 @@ size?: &quot;xs&quot; | &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot; = md</c
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Markdown</h2>
       <div class="badges">
-        <label for="c-27-components-markdown-props" class="badge ok as-toggle">12 prop types</label>
+        <label for="c-28-components-markdown-props" class="badge ok as-toggle">12 prop types</label>
         
-        <label for="c-27-components-markdown-stories" class="badge ok as-toggle">2 stories</label>
+        <label for="c-28-components-markdown-stories" class="badge ok as-toggle">3 stories</label>
         
         
       </div>
@@ -12337,17 +12702,37 @@ Library documentation:
 - https://github.com/remarkjs/react-markdown
 
 Included plugins:
-- https://github.com/remarkjs/remark-gfm</div>
+- https://github.com/remarkjs/remark-gfm
+
+## Usage
+
+Render markdown-authored content with EDS components and styling.
+
+| Type/Use | Description | Example |
+|----------|-------------|---------|
+| Document | Headings, lists, links, tables, quotes, and images from a markdown source. | Help articles. Release notes. Content from a CMS. |
+| Inline code | A backticked snippet in prose renders as a low-emphasis `&lt;code&gt;` chip. | A command or file name mentioned mid-sentence. |
+| Code block | A fenced block with a language renders a `CodeBlock`. Indented blocks get the inline code treatment on the whole block. | Multi-line examples. Command output. |
+
+### Do&#39;s
+
+* Use `Markdown` when the content is already authored as markdown.
+* Use inline code for short tokens readers may need to type or recognize, like `yarn start`.
+
+### Don&#39;ts
+
+* Don&#39;t reach for `Markdown` just to render one inline snippet. It works, but do that sparingly.
+* Don&#39;t use inline code for multi-line or runnable code. Use `CodeBlock` instead.</div>
     
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-27-components-markdown-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-28-components-markdown-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-27-components-markdown-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-28-components-markdown-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -12653,6 +13038,18 @@ Here&#39;s a link to [CommonMark][common-mark].
             </div>
             <div class="note ok">
               <div class="row">
+                <span class="ex-name">Inline Code</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">Backticked snippets in prose render as inline code: a low-emphasis chip with mono type,
+per the `EDS-markdown-inlineCode` spec. This story contains only inline code, with no
+headings or code blocks, to show that treatment on its own.</div>
+              <pre><code>const InlineCode = () =&gt; &lt;Markdown&gt;{`Run \`yarn install\` once, then \`yarn start\` to launch Storybook on port \`6006\`.`}&lt;/Markdown&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
                 <span class="ex-name">Github Flavored Markdown</span>
                 <span class="badge ok">story ok</span>
               </div>
@@ -12693,9 +13090,9 @@ GitHub-flavored markdown supports basic tables. Alignment can be controlled for 
     <div class="title">
       <h2><span class="status-dot dot-err"></span> Menu</h2>
       <div class="badges">
-        <label for="c-28-components-menu-err" class="badge err as-toggle">API error</label>
-        <label for="c-28-components-menu-info" class="badge info as-toggle">1 info</label>
-        <label for="c-28-components-menu-stories" class="badge ok as-toggle">10 stories · 6 incomplete</label>
+        <label for="c-29-components-menu-err" class="badge err as-toggle">API error</label>
+        <label for="c-29-components-menu-info" class="badge info as-toggle">1 info</label>
+        <label for="c-29-components-menu-stories" class="badge ok as-toggle">10 stories · 6 incomplete</label>
         
         
       </div>
@@ -12707,9 +13104,9 @@ GitHub-flavored markdown supports basic tables. Alignment can be controlled for 
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
-  <input id="c-28-components-menu-err" class="tg tg-err" type="checkbox" hidden />
-  <input id="c-28-components-menu-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-28-components-menu-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-29-components-menu-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-29-components-menu-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-29-components-menu-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
   
@@ -12984,9 +13381,9 @@ set and the provider leaves it alone.</div>
     <div class="title">
       <h2><span class="status-dot dot-err"></span> Modal</h2>
       <div class="badges">
-        <label for="c-29-components-modal-props" class="badge ok as-toggle">10 prop types</label>
+        <label for="c-30-components-modal-props" class="badge ok as-toggle">12 prop types</label>
         
-        <label for="c-29-components-modal-stories" class="badge err as-toggle">1/14 story errors</label>
+        <label for="c-30-components-modal-stories" class="badge err as-toggle">1/15 story errors</label>
         
         
       </div>
@@ -13011,6 +13408,15 @@ set and the provider leaves it alone.</div>
 * Show one modal at a time. Don&#39;t place a modal on top of another modal. This can create usability issues.
 * For important error notifications, use Inline Notification or Banner.
 * For short messaging confirming successful interactions, such as &quot;Email sent&quot;, use Inline Notification or Toast.
+
+### Warning on close
+
+`warnOnClose` asks the user to confirm before the modal closes. Use it only when closing throws work away.
+
+* Warn when the modal&#39;s state resets on close, like a partly filled form that comes back empty on reopening.
+* Don&#39;t warn when the state survives closing and reopening. Nothing is lost, so the prompt is only friction.
+* Pass a function that checks for changes, so a modal the user hasn&#39;t touched closes without asking.
+* Footer buttons that discard work, like Cancel, call your own handler. Check there too.
 
 ## Content &amp; Accessibility
 
@@ -13040,10 +13446,10 @@ set and the provider leaves it alone.</div>
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-29-components-modal-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-30-components-modal-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-29-components-modal-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-30-components-modal-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -13053,7 +13459,7 @@ set and the provider leaves it alone.</div>
           <div class="note ok">
             <div class="row">
               <span class="ex-name">Prop types <small>(react-docgen-typescript)</small></span>
-              <span class="badge ok">10 prop types</span>
+              <span class="badge ok">12 prop types</span>
             </div>
             <pre><code>Component: src/components/Modal/Modal.tsx::Modal</code></pre>
             <pre><code>Props:</code></pre>
@@ -13161,7 +13567,56 @@ size?: &quot;sm&quot; | &quot;lg&quot; | &quot;full&quot;
  * 
  * - `--modal-content__border`
  */
-style?: ModalContentCSSProperties</code></pre>
+style?: ModalContentCSSProperties
+
+/**
+ * Asks the user to confirm before the modal closes, so unsaved work in it isn&#39;t lost to a
+ * stray ESC key, overlay click, or close button click. Uses the browser&#39;s `window.confirm`.
+ * 
+ * - `true` always asks
+ * - a function is called at close time, and asks only when it returns `true`. Use it to check
+ *   whether the modal&#39;s state is dirty
+ * 
+ * Only warn when closing actually loses something. Check how the modal&#39;s state is held:
+ * 
+ * - **State resets on close** (it lives inside the modal&#39;s children, which unmount, or
+ *   `onClose` clears it): closing is destructive, so warn
+ * - **State survives close** (it is held above the modal and not cleared): reopening brings
+ *   the fields back, so closing loses nothing. Don&#39;t warn; the prompt only adds friction
+ * 
+ * To warn, the state has to be readable where `Modal` renders. Lift it out of the modal&#39;s
+ * children, clear it in `onClose`, and pass a function that compares it against its starting
+ * values. A function keeps an untouched modal closing without a prompt; `true` asks every
+ * time, and fits only when any open modal holds work worth keeping.
+ * 
+ * This covers only the closes the modal triggers itself: ESC, an overlay click, and the close
+ * button. A button you put in `Modal.Footer` calls your own handler, so check there too if it
+ * discards work.
+ * 
+ * ```
+ * const [draft, setDraft] = useState(&#39;&#39;);
+ * const handleClose = () =&gt; {
+ *   setIsOpen(false);
+ *   setDraft(&#39;&#39;); // closing discards the draft, so warn while there is one
+ * };
+ * // ....
+ * 
+ * &lt;Modal warnOnClose={() =&gt; draft !== &#39;&#39;} onClose={handleClose} open={isOpen}&gt;
+ *  ...
+ * &lt;/Modal&gt;
+ * ```
+ * 
+ * **Default is `false`**.
+ */
+warnOnClose?: boolean | (() =&gt; boolean)
+
+/**
+ * The question `window.confirm` asks when `warnOnClose` applies. Name what will be lost, for
+ * example `&quot;Discard this note?&quot;`, so the user can answer without guessing.
+ * 
+ * **Default is `&quot;You have unsaved changes. Close anyway?&quot;`**.
+ */
+warnOnCloseMessage?: string</code></pre>
           </div>
         </div>
     
@@ -13178,13 +13633,13 @@ style?: ModalContentCSSProperties</code></pre>
               
               
               <pre><code>Expected render to be an arrow function or function expression
-  247 |   },
-  248 |   parameters: Default.parameters,
-&gt; 249 |   render: Default.render,
+  250 |   },
+  251 |   parameters: Default.parameters,
+&gt; 252 |   render: Default.render,
       |           ^^^^^^^^^^^^^^
-  250 |   play: Default.play,
-  251 | };
-  252 |</code></pre>
+  253 |   play: Default.play,
+  254 | };
+  255 |</code></pre>
             </div>
           
           
@@ -13192,7 +13647,7 @@ style?: ModalContentCSSProperties</code></pre>
                 <div class="row">
                   <span class="ex-name">Imports</span>
                 </div>
-                <pre><code>import { Button, ButtonGroup, Heading, IconProvider, Modal, Text } from '@chanzuckerberg/eds';
+                <pre><code>import { Button, ButtonGroup, Dialog, Heading, IconProvider, InputField, Modal, Text } from '@chanzuckerberg/eds';
 import { Modal } from './Modal';
 import Heading from '../../components/Heading';
 import ButtonGroup from '../ButtonGroup';
@@ -13347,6 +13802,81 @@ scrolls as a whole instead, which is the one case where the footer goes off scre
         &lt;/ButtonGroup&gt;
     &lt;/Modal.Footer&gt;
 &lt;/InteractiveExample&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Warn On Close</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">Type in the field, then try to close the modal with the close button, ESC, or a click on the
+overlay. Closing clears the note, so the modal asks first, in a `Dialog`, while there&#39;s one to
+lose; an empty modal closes straight away.
+
+`warnOnClose` uses the browser&#39;s `window.confirm`, so this story leaves it off and asks with a
+`Dialog` instead. The modal&#39;s `onClose` decides whether to ask, and the footer&#39;s Cancel button
+goes through the same check. Save keeps the note, so it closes without asking. The `Dialog`
+renders inside `Modal.Body` so it stacks above the modal.
+
+If the note survived closing and reopening instead, closing would lose nothing and the
+warning wouldn&#39;t be needed.</div>
+              <pre><code>const WarnOnClose = (args) =&gt; {
+  function WarnOnCloseExample() {
+    const [open, setOpen] = useState(false);
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const [draft, setDraft] = useState(&#39;&#39;);
+    const handleClose = () =&gt; {
+      setDialogOpen(false);
+      setOpen(false);
+      // closing discards the draft, which is what makes the warning worth showing
+      setDraft(&#39;&#39;);
+    };
+    // the close button, ESC, overlay clicks, and the footer&#39;s Cancel all ask first
+    const requestClose = () =&gt;
+      draft === &#39;&#39; ? handleClose() : setDialogOpen(true);
+    return (
+      &lt;div className=&quot;flex justify-center&quot;&gt;
+        &lt;Button onClick={() =&gt; setOpen(true)} rank=&quot;primary&quot;&gt;
+          Open the modal
+        &lt;/Button&gt;
+        &lt;Modal {...args} onClose={requestClose} open={open}&gt;
+          &lt;Modal.Header&gt;
+            &lt;Modal.Title&gt;Add a note&lt;/Modal.Title&gt;
+          &lt;/Modal.Header&gt;
+          &lt;Modal.Body&gt;
+            &lt;InputField
+              label=&quot;Note&quot;
+              onChange={(event) =&gt; setDraft(event.target.value)}
+              value={draft}
+            /&gt;
+            &lt;Dialog
+              confirmLabel=&quot;Discard note&quot;
+              confirmVariant=&quot;critical&quot;
+              onCancel={() =&gt; setDialogOpen(false)}
+              onConfirm={handleClose}
+              open={dialogOpen}
+              title=&quot;Discard your note?&quot;
+            &gt;
+              Closing clears the note you started.
+            &lt;/Dialog&gt;
+          &lt;/Modal.Body&gt;
+          &lt;Modal.Footer&gt;
+            &lt;ButtonGroup&gt;
+              &lt;Button onClick={handleClose} rank=&quot;primary&quot;&gt;
+                Save note
+              &lt;/Button&gt;
+              &lt;Button onClick={requestClose} rank=&quot;secondary&quot;&gt;
+                Cancel
+              &lt;/Button&gt;
+            &lt;/ButtonGroup&gt;
+          &lt;/Modal.Footer&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+  return &lt;WarnOnCloseExample /&gt;;
+};</code></pre>
               
             </div>
             <div class="note ok">
@@ -13749,9 +14279,9 @@ Shown non-interactive, like the other `Modal.Content` stories.</div>
     <div class="title">
       <h2><span class="status-dot dot-err"></span> NumberIcon</h2>
       <div class="badges">
-        <label for="c-30-components-numbericon-props" class="badge ok as-toggle">7 prop types</label>
+        <label for="c-31-components-numbericon-props" class="badge ok as-toggle">7 prop types</label>
         
-        <label for="c-30-components-numbericon-stories" class="badge err as-toggle">3/7 story errors</label>
+        <label for="c-31-components-numbericon-stories" class="badge err as-toggle">3/7 story errors</label>
         
         
       </div>
@@ -13776,10 +14306,10 @@ Shown non-interactive, like the other `Modal.Content` stories.</div>
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-30-components-numbericon-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-31-components-numbericon-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-30-components-numbericon-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-31-components-numbericon-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -13995,9 +14525,9 @@ they are positioned as block-level elements. use `flex` or `display` to update p
     <div class="title">
       <h2><span class="status-dot dot-err"></span> OrderedList</h2>
       <div class="badges">
-        <label for="c-31-components-orderedlist-err" class="badge err as-toggle">API error</label>
-        <label for="c-31-components-orderedlist-info" class="badge info as-toggle">1 info</label>
-        <label for="c-31-components-orderedlist-stories" class="badge ok as-toggle">6 stories</label>
+        <label for="c-32-components-orderedlist-err" class="badge err as-toggle">API error</label>
+        <label for="c-32-components-orderedlist-info" class="badge info as-toggle">1 info</label>
+        <label for="c-32-components-orderedlist-stories" class="badge ok as-toggle">6 stories</label>
         
         
       </div>
@@ -14009,9 +14539,9 @@ they are positioned as block-level elements. use `flex` or `display` to update p
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
-  <input id="c-31-components-orderedlist-err" class="tg tg-err" type="checkbox" hidden />
-  <input id="c-31-components-orderedlist-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-31-components-orderedlist-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-32-components-orderedlist-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-32-components-orderedlist-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-32-components-orderedlist-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
   
@@ -14159,9 +14689,9 @@ import { OrderedList } from './List';</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> PageNotification</h2>
       <div class="badges">
-        <label for="c-32-components-pagenotification-props" class="badge ok as-toggle">6 prop types</label>
+        <label for="c-33-components-pagenotification-props" class="badge ok as-toggle">6 prop types</label>
         
-        <label for="c-32-components-pagenotification-stories" class="badge ok as-toggle">10 stories</label>
+        <label for="c-33-components-pagenotification-stories" class="badge ok as-toggle">10 stories</label>
         
         
       </div>
@@ -14198,10 +14728,10 @@ Designers can specify whether the notification is dismissible or not. A dismissi
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-32-components-pagenotification-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-33-components-pagenotification-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-32-components-pagenotification-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-33-components-pagenotification-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -14470,9 +15000,9 @@ Here `critical` becomes the outline version of the icon, and the close button a 
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Popover</h2>
       <div class="badges">
-        <label for="c-33-components-popover-props" class="badge ok as-toggle">5 prop types</label>
+        <label for="c-34-components-popover-props" class="badge ok as-toggle">5 prop types</label>
         
-        <label for="c-33-components-popover-stories" class="badge ok as-toggle">3 stories</label>
+        <label for="c-34-components-popover-stories" class="badge ok as-toggle">3 stories</label>
         
         
       </div>
@@ -14507,10 +15037,10 @@ Popovers open in response to user interaction—click, tap, or hover. They close
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-33-components-popover-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-34-components-popover-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-33-components-popover-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-34-components-popover-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -14635,9 +15165,9 @@ More information about the options are available here: https://headlessui.com/re
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> PopoverContainer</h2>
       <div class="badges">
-        <label for="c-34-components-popovercontainer-props" class="badge ok as-toggle">3 prop types</label>
+        <label for="c-35-components-popovercontainer-props" class="badge ok as-toggle">3 prop types</label>
         
-        <label for="c-34-components-popovercontainer-stories" class="badge ok as-toggle">1 story</label>
+        <label for="c-35-components-popovercontainer-stories" class="badge ok as-toggle">1 story</label>
         
         
       </div>
@@ -14685,10 +15215,10 @@ such as `PopoverListItem`.
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-34-components-popovercontainer-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-35-components-popovercontainer-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-34-components-popovercontainer-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-35-components-popovercontainer-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -14775,9 +15305,9 @@ import PopoverListItem from '../PopoverListItem';</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> PopoverListItem</h2>
       <div class="badges">
-        <label for="c-35-components-popoverlistitem-props" class="badge ok as-toggle">9 prop types</label>
+        <label for="c-36-components-popoverlistitem-props" class="badge ok as-toggle">9 prop types</label>
         
-        <label for="c-35-components-popoverlistitem-stories" class="badge ok as-toggle">14 stories</label>
+        <label for="c-36-components-popoverlistitem-stories" class="badge ok as-toggle">14 stories</label>
         
         
       </div>
@@ -14802,10 +15332,10 @@ for those components rather than this one.</div>
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-35-components-popoverlistitem-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-36-components-popoverlistitem-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-35-components-popoverlistitem-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-36-components-popoverlistitem-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -15076,9 +15606,9 @@ happened to be picked.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> ProgressBar</h2>
       <div class="badges">
-        <label for="c-36-components-progressbar-props" class="badge ok as-toggle">9 prop types</label>
+        <label for="c-37-components-progressbar-props" class="badge ok as-toggle">9 prop types</label>
         
-        <label for="c-36-components-progressbar-stories" class="badge ok as-toggle">11 stories</label>
+        <label for="c-37-components-progressbar-stories" class="badge ok as-toggle">11 stories</label>
         
         
       </div>
@@ -15124,10 +15654,10 @@ text, or pass an empty string to suppress it.
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-36-components-progressbar-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-37-components-progressbar-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-36-components-progressbar-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-37-components-progressbar-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -15398,9 +15928,9 @@ back to its own radius.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Radio</h2>
       <div class="badges">
-        <label for="c-37-components-radio-props" class="badge ok as-toggle">6 prop types</label>
+        <label for="c-38-components-radio-props" class="badge ok as-toggle">6 prop types</label>
         
-        <label for="c-37-components-radio-stories" class="badge ok as-toggle">9 stories</label>
+        <label for="c-38-components-radio-stories" class="badge ok as-toggle">9 stories</label>
         
         
       </div>
@@ -15449,10 +15979,10 @@ NOTE: This component requires a `label` or `aria-label` prop.
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-37-components-radio-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-38-components-radio-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-37-components-radio-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-38-components-radio-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -15648,8 +16178,8 @@ subLabel?: ReactNode</code></pre>
       <h2><span class="status-dot dot-err"></span> ScrollWrapper</h2>
       <div class="badges">
         <span class="badge">no API description</span>
-        <label for="c-38-components-scrollwrapper-info" class="badge info as-toggle">1 info</label>
-        <label for="c-38-components-scrollwrapper-stories" class="badge err as-toggle">4/6 story errors</label>
+        <label for="c-39-components-scrollwrapper-info" class="badge info as-toggle">1 info</label>
+        <label for="c-39-components-scrollwrapper-stories" class="badge err as-toggle">4/6 story errors</label>
         
         
       </div>
@@ -15662,8 +16192,8 @@ subLabel?: ReactNode</code></pre>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="c-38-components-scrollwrapper-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-38-components-scrollwrapper-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-39-components-scrollwrapper-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-39-components-scrollwrapper-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
   
@@ -15820,9 +16350,9 @@ taller, the scroll wrapper can be inserted in between, and allow for the content
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Select</h2>
       <div class="badges">
-        <label for="c-39-components-select-props" class="badge ok as-toggle">22 prop types</label>
+        <label for="c-40-components-select-props" class="badge ok as-toggle">22 prop types</label>
         
-        <label for="c-39-components-select-stories" class="badge ok as-toggle">28 stories · 27 incomplete</label>
+        <label for="c-40-components-select-stories" class="badge ok as-toggle">28 stories · 27 incomplete</label>
         
         
       </div>
@@ -15878,10 +16408,10 @@ In single-select mode, only one selection can be made. In multi-select mode, one
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-39-components-select-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-40-components-select-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-39-components-select-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-40-components-select-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -16951,9 +17481,9 @@ More information: https://headlessui.com/react/popover</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> SelectionChip</h2>
       <div class="badges">
-        <label for="c-40-components-selectionchip-props" class="badge ok as-toggle">5 prop types</label>
+        <label for="c-41-components-selectionchip-props" class="badge ok as-toggle">5 prop types</label>
         
-        <label for="c-40-components-selectionchip-stories" class="badge ok as-toggle">8 stories</label>
+        <label for="c-41-components-selectionchip-stories" class="badge ok as-toggle">8 stories</label>
         
         
       </div>
@@ -16990,10 +17520,10 @@ Selection chips don&#39;t have built-in error handling. To show that something w
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-40-components-selectionchip-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-41-components-selectionchip-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-40-components-selectionchip-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-41-components-selectionchip-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -17154,9 +17684,9 @@ rather than the component that happened to be picked.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Skeleton</h2>
       <div class="badges">
-        <label for="c-41-components-skeleton-props" class="badge ok as-toggle">4 prop types</label>
+        <label for="c-42-components-skeleton-props" class="badge ok as-toggle">4 prop types</label>
         
-        <label for="c-41-components-skeleton-stories" class="badge ok as-toggle">3 stories</label>
+        <label for="c-42-components-skeleton-stories" class="badge ok as-toggle">3 stories</label>
         
         
       </div>
@@ -17204,10 +17734,10 @@ on its way.
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-41-components-skeleton-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-42-components-skeleton-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-41-components-skeleton-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-42-components-skeleton-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -17305,9 +17835,9 @@ representing the length in a way that mimics expected/maximum character length.<
     <div class="title">
       <h2><span class="status-dot dot-err"></span> TabGroup</h2>
       <div class="badges">
-        <label for="c-42-components-tabgroup-err" class="badge err as-toggle">API error</label>
-        <label for="c-42-components-tabgroup-info" class="badge info as-toggle">1 info</label>
-        <label for="c-42-components-tabgroup-stories" class="badge ok as-toggle">7 stories</label>
+        <label for="c-43-components-tabgroup-err" class="badge err as-toggle">API error</label>
+        <label for="c-43-components-tabgroup-info" class="badge info as-toggle">1 info</label>
+        <label for="c-43-components-tabgroup-stories" class="badge ok as-toggle">7 stories</label>
         
         
       </div>
@@ -17319,9 +17849,9 @@ representing the length in a way that mimics expected/maximum character length.<
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
-  <input id="c-42-components-tabgroup-err" class="tg tg-err" type="checkbox" hidden />
-  <input id="c-42-components-tabgroup-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-42-components-tabgroup-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-43-components-tabgroup-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-43-components-tabgroup-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-43-components-tabgroup-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
   
@@ -17851,9 +18381,9 @@ that happened to be picked.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Tag</h2>
       <div class="badges">
-        <label for="c-43-components-tag-props" class="badge ok as-toggle">6 prop types</label>
+        <label for="c-44-components-tag-props" class="badge ok as-toggle">6 prop types</label>
         
-        <label for="c-43-components-tag-stories" class="badge ok as-toggle">4 stories</label>
+        <label for="c-44-components-tag-stories" class="badge ok as-toggle">4 stories</label>
         
         
       </div>
@@ -17895,10 +18425,10 @@ that happened to be picked.</div>
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-43-components-tag-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-44-components-tag-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-43-components-tag-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-44-components-tag-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -18041,9 +18571,9 @@ that happened to be picked.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Text</h2>
       <div class="badges">
-        <label for="c-44-components-text-props" class="badge ok as-toggle">4 prop types</label>
+        <label for="c-45-components-text-props" class="badge ok as-toggle">4 prop types</label>
         
-        <label for="c-44-components-text-stories" class="badge ok as-toggle">6 stories</label>
+        <label for="c-45-components-text-stories" class="badge ok as-toggle">6 stories</label>
         
         
       </div>
@@ -18087,10 +18617,10 @@ that component&#39;s own treatment and can change with it.</div>
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-44-components-text-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-45-components-text-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-44-components-text-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-45-components-text-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -18244,9 +18774,9 @@ Note that when present, `preset` will override the deprecated props.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> TextareaField</h2>
       <div class="badges">
-        <label for="c-45-components-textareafield-props" class="badge ok as-toggle">6 prop types</label>
+        <label for="c-46-components-textareafield-props" class="badge ok as-toggle">6 prop types</label>
         
-        <label for="c-45-components-textareafield-stories" class="badge ok as-toggle">14 stories</label>
+        <label for="c-46-components-textareafield-stories" class="badge ok as-toggle">14 stories</label>
         
         
       </div>
@@ -18292,10 +18822,10 @@ When the amount of text exceeds the available space, the text scrolls to show th
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-45-components-textareafield-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-46-components-textareafield-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-45-components-textareafield-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-46-components-textareafield-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -18683,9 +19213,9 @@ praesentium, commodi eligendi asperiores quis dolorum porro.`}
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> ToastNotification</h2>
       <div class="badges">
-        <label for="c-46-components-toastnotification-props" class="badge ok as-toggle">7 prop types</label>
+        <label for="c-47-components-toastnotification-props" class="badge ok as-toggle">7 prop types</label>
         
-        <label for="c-46-components-toastnotification-stories" class="badge ok as-toggle">9 stories</label>
+        <label for="c-47-components-toastnotification-stories" class="badge ok as-toggle">9 stories</label>
         
         
       </div>
@@ -18724,10 +19254,10 @@ Toast notifications can be manually dismissed or auto-dismissed using the `dismi
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-46-components-toastnotification-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-47-components-toastnotification-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-46-components-toastnotification-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-47-components-toastnotification-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -18925,9 +19455,9 @@ Here `critical` becomes the outline version of the icon, and the close button a 
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Toggle</h2>
       <div class="badges">
-        <label for="c-47-components-toggle-props" class="badge ok as-toggle">7 prop types</label>
+        <label for="c-48-components-toggle-props" class="badge ok as-toggle">7 prop types</label>
         
-        <label for="c-47-components-toggle-stories" class="badge ok as-toggle">5 stories</label>
+        <label for="c-48-components-toggle-stories" class="badge ok as-toggle">5 stories</label>
         
         
       </div>
@@ -18977,10 +19507,10 @@ Here `critical` becomes the outline version of the icon, and the close button a 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-47-components-toggle-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-48-components-toggle-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-47-components-toggle-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-48-components-toggle-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -19113,9 +19643,9 @@ subLabel?: ReactNode</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> TokenDataTable</h2>
       <div class="badges">
-        <label for="c-48-design-tokens-1-primitive-props" class="badge ok as-toggle">14 prop types</label>
-        <label for="c-48-design-tokens-1-primitive-info" class="badge info as-toggle">1 info</label>
-        <label for="c-48-design-tokens-1-primitive-stories" class="badge ok as-toggle">14 stories · 7 incomplete</label>
+        <label for="c-49-design-tokens-1-primitive-props" class="badge ok as-toggle">14 prop types</label>
+        <label for="c-49-design-tokens-1-primitive-info" class="badge info as-toggle">1 info</label>
+        <label for="c-49-design-tokens-1-primitive-stories" class="badge ok as-toggle">14 stories · 7 incomplete</label>
         
         
       </div>
@@ -19128,11 +19658,11 @@ subLabel?: ReactNode</code></pre>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="c-48-design-tokens-1-primitive-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-48-design-tokens-1-primitive-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-49-design-tokens-1-primitive-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-49-design-tokens-1-primitive-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-48-design-tokens-1-primitive-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-49-design-tokens-1-primitive-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -19551,9 +20081,9 @@ import { getTokenListItems } from '../../../storyUtils/TokenList/TokenList';</co
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> TokenDataTable</h2>
       <div class="badges">
-        <label for="c-49-design-tokens-2-semantic-props" class="badge ok as-toggle">14 prop types</label>
-        <label for="c-49-design-tokens-2-semantic-info" class="badge info as-toggle">1 info</label>
-        <label for="c-49-design-tokens-2-semantic-stories" class="badge ok as-toggle">4 stories</label>
+        <label for="c-50-design-tokens-2-semantic-props" class="badge ok as-toggle">14 prop types</label>
+        <label for="c-50-design-tokens-2-semantic-info" class="badge info as-toggle">1 info</label>
+        <label for="c-50-design-tokens-2-semantic-stories" class="badge ok as-toggle">6 stories</label>
         
         
       </div>
@@ -19566,11 +20096,11 @@ import { getTokenListItems } from '../../../storyUtils/TokenList/TokenList';</co
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="c-49-design-tokens-2-semantic-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-49-design-tokens-2-semantic-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-50-design-tokens-2-semantic-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-50-design-tokens-2-semantic-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-49-design-tokens-2-semantic-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-50-design-tokens-2-semantic-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -19789,6 +20319,57 @@ Do **not** use any of the component radii in custom components.</div>
     )} /&gt;;</code></pre>
               
             </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Background Visualization</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">Background visualization tokens fill the marks in charts, graphs, heatmaps, and other custom data visualization components.
+
+- Use them only where a color stands for a value in the data. For interface roles (status, emphasis, interactivity), use the utility tokens instead</div>
+              <pre><code>const BackgroundVisualization = () =&gt; &lt;TokenDataTable
+    caption=&quot;Background Visualization Tokens&quot;
+    size=&quot;md&quot;
+    subCaption=&quot;Background visualization tokens fill the marks in graphical presentations of data (bar charts, line charts, heatmaps, etc.)&quot;
+    listItems={getTokenListItems(
+      &#39;eds-theme-color-background-visualization&#39;,
+      &#39;color&#39;,
+      (name, column, filterTerm) =&gt; {
+        if (column === &#39;figma&#39;) {
+          return &#39;→ background/visualization/&#39; + getSpecifier(name, filterTerm);
+        } else {
+          return &#39;bg-visualization-&#39; + getSpecifier(name, filterTerm);
+        }
+      },
+    )} /&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Text Visualization</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              <div class="hint">Text visualization tokens color labels that sit on a background visualization fill.
+
+- Use `default` on fills aliased to a primitive at grade 450 or lighter, and `inverse` on grade 550 or darker</div>
+              <pre><code>const TextVisualization = () =&gt; &lt;TokenDataTable
+    caption=&quot;Text Visualization Tokens&quot;
+    size=&quot;md&quot;
+    listItems={getTokenListItems(
+      &#39;eds-theme-color-text-visualization&#39;,
+      &#39;color&#39;,
+      (name, column, filterTerm) =&gt; {
+        if (column === &#39;figma&#39;) {
+          return &#39;→ text/visualization/&#39; + getSpecifier(name, filterTerm);
+        } else {
+          return &#39;text-visualization-&#39; + getSpecifier(name, filterTerm);
+        }
+      },
+    )} /&gt;;</code></pre>
+              
+            </div>
         </div>
     
     
@@ -19809,9 +20390,9 @@ Do **not** use any of the component radii in custom components.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> TokenDataTable</h2>
       <div class="badges">
-        <label for="c-50-design-tokens-3-component-props" class="badge ok as-toggle">14 prop types</label>
-        <label for="c-50-design-tokens-3-component-info" class="badge info as-toggle">1 info</label>
-        <label for="c-50-design-tokens-3-component-stories" class="badge ok as-toggle">2 stories</label>
+        <label for="c-51-design-tokens-3-component-props" class="badge ok as-toggle">14 prop types</label>
+        <label for="c-51-design-tokens-3-component-info" class="badge info as-toggle">1 info</label>
+        <label for="c-51-design-tokens-3-component-stories" class="badge ok as-toggle">2 stories</label>
         
         
       </div>
@@ -19824,11 +20405,11 @@ Do **not** use any of the component radii in custom components.</div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="c-50-design-tokens-3-component-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-50-design-tokens-3-component-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-51-design-tokens-3-component-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-51-design-tokens-3-component-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-50-design-tokens-3-component-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-51-design-tokens-3-component-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -20012,9 +20593,9 @@ import camelCase from 'lodash/camelCase';</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> Tooltip</h2>
       <div class="badges">
-        <label for="c-51-components-tooltip-props" class="badge ok as-toggle">21 prop types</label>
+        <label for="c-52-components-tooltip-props" class="badge ok as-toggle">21 prop types</label>
         
-        <label for="c-51-components-tooltip-stories" class="badge ok as-toggle">9 stories</label>
+        <label for="c-52-components-tooltip-stories" class="badge ok as-toggle">9 stories</label>
         
         
       </div>
@@ -20069,10 +20650,10 @@ A tooltip is triggered by hovering over or focusing an element. The most common 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-51-components-tooltip-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-52-components-tooltip-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-51-components-tooltip-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-52-components-tooltip-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -20406,9 +20987,9 @@ Each story name denotes a value pased to `placement`.</div>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> UnorderedList</h2>
       <div class="badges">
-        <label for="c-52-components-unorderedlist-props" class="badge ok as-toggle">2 prop types</label>
-        <label for="c-52-components-unorderedlist-info" class="badge info as-toggle">1 info</label>
-        <label for="c-52-components-unorderedlist-stories" class="badge ok as-toggle">7 stories</label>
+        <label for="c-53-components-unorderedlist-props" class="badge ok as-toggle">2 prop types</label>
+        <label for="c-53-components-unorderedlist-info" class="badge info as-toggle">1 info</label>
+        <label for="c-53-components-unorderedlist-stories" class="badge ok as-toggle">7 stories</label>
         
         
       </div>
@@ -20421,11 +21002,11 @@ Each story name denotes a value pased to `placement`.</div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="c-52-components-unorderedlist-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-52-components-unorderedlist-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-53-components-unorderedlist-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-53-components-unorderedlist-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-52-components-unorderedlist-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-53-components-unorderedlist-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -20605,9 +21186,9 @@ This example uses TailwindCSS to specify a utility class with custom characters<
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> VisualPageIndicator</h2>
       <div class="badges">
-        <label for="c-53-components-visualpageindicator-props" class="badge ok as-toggle">3 prop types</label>
+        <label for="c-54-components-visualpageindicator-props" class="badge ok as-toggle">3 prop types</label>
         
-        <label for="c-53-components-visualpageindicator-stories" class="badge ok as-toggle">3 stories</label>
+        <label for="c-54-components-visualpageindicator-stories" class="badge ok as-toggle">3 stories</label>
         
         
       </div>
@@ -20654,10 +21235,10 @@ gets no sense of which step is current. Always state the position in text nearby
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
   
-  <input id="c-53-components-visualpageindicator-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-54-components-visualpageindicator-stories" class="tg tg-stories" type="checkbox" hidden />
   
   
-  <input id="c-53-components-visualpageindicator-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-54-components-visualpageindicator-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -21884,6 +22465,7 @@ Remember: A story name might not reflect the property name correctly, so always 
 
 EDS component code follows these principles and conventions for HTML, CSS, and JavaScript/TypeScript/React:
 
+- [Browser support](#browser-support)
 - [Reading Figma APIs](#figma)
 - [HTML](#html)
 - [CSS](#css)
@@ -21900,6 +22482,34 @@ EDS component code follows these principles and conventions for HTML, CSS, and J
   - [Component API naming conventions](#api-naming)
 - [Accessibility](#accessibility)
   - [Tools](#accessibility-tools)
+
+# Browser support &lt;a name=&quot;browser-support&quot;&gt;&lt;/a&gt;
+
+EDS supports these browsers, on desktop and mobile. `browserslist` in `package.json` is the source of truth.
+
+| Browser      | Minimum version |
+| ------------ | --------------- |
+| Chrome       | 123             |
+| Edge         | 123             |
+| Firefox      | 128             |
+| Safari       | 17.5            |
+| Safari (iOS) | 17.5            |
+
+The floor comes from the features components use:
+
+| Feature                                                                                                                | Used by                                | Chrome / Edge | Firefox | Safari |
+| ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------- | ------- | ------ |
+| CSS [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark)                          | Theming (`body.css`, component styles) | 123           | 120     | 17.5   |
+| [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) | `Avatar`                               | 87            | 125     | 14.1   |
+| CSS [relative colors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors/Relative_colors) (`rgb(from …)`)    | `Avatar`, `Modal`, `ScrollWrapper`     | 119           | 128     | 16.4   |
+
+When a change relies on a feature newer than this floor:
+
+- Raise `browserslist` in `package.json`
+- Update both tables here and in the README
+- Update `build.cssTarget` in `.storybook/main.ts` (`viteFinal`) if the feature is CSS. Vite 8 minifies Storybook&#39;s CSS with Lightning CSS, which polyfills anything below `build.cssTarget`. Storybook ignores `build.cssTarget` in `vite.config.ts`
+
+Consumer apps on Vite 8 need the same `build.cssTarget`, or Lightning CSS rewrites EDS&#39;s `light-dark()` into variable fallbacks. The README&#39;s [Browser support](https://github.com/chanzuckerberg/edu-design-system#browser-support) section has the snippet.
 
 # Reading Figma APIs &lt;a name=&quot;figma&quot;&gt;&lt;/a&gt;
 
@@ -22882,6 +23492,7 @@ import edsConfig from &#39;@chanzuckerberg/eds/tailwind.config&#39;;
 module.exports = {
   content: [&#39;./app/**/*.{ts,tsx,jsx,js}&#39;],
   theme: edsConfig.theme,
+  darkMode: edsConfig.darkMode, // see &quot;Tailwind dark mode&quot; below
   // ... any other tailwind config
 };
 ```
@@ -22950,9 +23561,24 @@ Cons (same as above, plus):
 
 - fully detached from EDS, and harder to control or maintain.
 
+### Tailwind dark mode
+
+The EDS tailwind config includes the dark theme (tier 2) color tokens, under a `dark-` prefix. These map to the `--eds-dark-theme-*` CSS variables, so `--eds-dark-theme-color-background-utility-base-1` becomes `bg-dark-utility-base-1`. Pair each with its light counterpart, using the [`dark:` variant][tailwind-dark-mode]:
+
+```tsx
+&lt;div className=&quot;bg-utility-base-1 text-utility-default-primary dark:bg-dark-utility-base-1 dark:text-dark-utility-default-primary&quot;&gt;
+  Light and dark
+&lt;/div&gt;
+```
+
+To make the `dark:` variant match how EDS applies dark mode, use the `darkMode` value from the EDS config (as shown above). It follows the system color scheme preference, unless overridden by setting `data-theme=&quot;light&quot;` or `data-theme=&quot;dark&quot;` on the `html` element (e.g., `&lt;html data-theme=&quot;dark&quot;&gt;`).
+
+**NOTE**: this `darkMode` setting requires tailwind 3.4.1 or newer.
+
+[tailwind-dark-mode]: https://v3.tailwindcss.com/docs/dark-mode
 [tailwind-docs]: https://v3.tailwindcss.com/
 [tailwind-theme]: https://v3.tailwindcss.com/docs/theme
-[eds-tailwind-config]: https://github.com/chanzuckerberg/edu-design-system/blob/main/tailwind.config.ts
+[eds-tailwind-config]: https://github.com/chanzuckerberg/edu-design-system/blob/main/tailwind.config.mts
 
 &lt;hr /&gt;
 
@@ -22983,22 +23609,31 @@ First, create a configuration file to determine the source and destination direc
 
 Command to run: `npx eds-init-theme`
 
-This will create a new JSON file `app-theme.json` that defines ALL the available tokens for EDS that you can edit. It will copy the template file to configured `src` path in your project.
+This will create two new JSON files in the configured `src` path in your project, which define ALL the available tokens for EDS that you can edit:
 
-This file is a baseline config to be used later in the process.
+- `app-theme.json` (the theme tokens, plus the tier 1 tokens they use)
+- `app-theme-dark.json` (the dark theme (tier 2) tokens, under `eds.dark.theme`)
+
+These files are a baseline config to be used later in the process.
+
+If a theme file already exists, it is left alone. For projects themed before EDS supported dark mode, run `npx eds-init-theme` again to add `app-theme-dark.json`.
 
 ### eds-apply-theme
 
 Command to run: `npx eds-apply-theme`
 
-Using `eds-apply-theme` will read in the newly-created `app-theme.json` file, and create the tokens to use in your project.
+Using `eds-apply-theme` will read in the newly-created `app-theme.json` and `app-theme-dark.json` files, and create the tokens to use in your project.
 
 Once run, you will have a set of theme files written to the configured `dest` path:
 
 - `app-theme.css` (CSS file containing custom CSS variables with the theme values for the application)
 - `app-tailwind-theme.config.json` (Configuration file for configuring tailwind in the application)
+- `app-theme-dark.css` (CSS file containing the `--eds-dark-theme-*` CSS variables with the dark theme values)
+- `app-tailwind-dark-theme.config.json` (Configuration file for the dark theme tailwind colors)
 
-To use, add this file to your core app root file **after** where the imported EDS&#39;s `@chanzuckerberg/eds/index.css` file is inserted.
+The dark theme files are only generated when `app-theme-dark.json` exists.
+
+To use, add the CSS files to your core app root file **after** where the imported EDS&#39;s `@chanzuckerberg/eds/index.css` file is inserted.
 
 For setting up Storybook, refer to [storybook documentation](?path=/docs/documentation-theming-using-eds-theming-with-storybook--docs).
 
@@ -23020,6 +23655,14 @@ npx eds-import-from-figma-api file &lt;file_id&gt; --token &lt;personal_access_t
 
 **NOTE**: the tooling currently does not pull in any typography tokens from figma. Work with your design partner(s) to add the appropriate values from figma into code.
 
+#### Importing dark mode values
+
+After selecting the theme, the command asks for the mode containing that theme&#39;s dark values. It suggests a mode with &quot;dark&quot; in its name (e.g., &quot;Brand Dark&quot; for the &quot;Brand&quot; theme). Select **Skip** if the theme has no dark mode.
+
+Theme values are written to `app-theme.json`, and dark values to `app-theme-dark.json`. If `app-theme-dark.json` does not exist, the dark values are skipped with a warning; run `npx eds-init-theme` to create it. Then, run `npx eds-apply-theme` to regenerate the theme files.
+
+When working in EDS itself (using `--local`), the values are written to `src/design-tokens/core-tokens.json` and `src/design-tokens/core-dark-tokens.json`.
+
 [figma-enterprise]: https://www.figma.com/enterprise/
 [figma-api-docs]: https://www.figma.com/developers/api
 [figma-access-token-docs]: https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens
@@ -23035,24 +23678,85 @@ EDS provides a utility method to pull in the theme config and generate the prope
 ```ts
 // in your tailwind.config.ts file
 import type { Config } from &#39;tailwindcss&#39;;
-import {applyTailwindConfig} from &#39;@chanzuckerberg/eds/tailwind.config&#39;;
+import edsConfig, {applyTailwindConfig} from &#39;@chanzuckerberg/eds/tailwind.config&#39;;
 import {eds as customTokens} from &quot;./&lt;edsrc.json:dest&gt;/app-tailwind-theme.config.json&quot;; // where &lt;edsrc.json:dest&gt; is the path configured in .edsrc.json
+import {eds as customDarkTokens} from &quot;./&lt;edsrc.json:dest&gt;/app-tailwind-dark-theme.config.json&quot;; // optional, adds the dark- colors (see &quot;Tailwind dark mode&quot;)
 
 // export the following
 export default {
   // your project&#39;s `content` array
   content: [&#39;./app/**/*.{ts,tsx,jsx,js}&#39;],
+  darkMode: edsConfig.darkMode,
   theme: {
-    ...applyTailwindConfig(customTokens)
+    ...applyTailwindConfig(customTokens, customDarkTokens)
     // ...any local theme overrides and additions...
   },
 } satisfies Config
 
 ```
 
+## Manually setting up a theme
+
+Without access to the Figma API, you can edit the theme files by hand. Each token is a JSON object with a `value`, and its path matches the CSS variable name. For example, this sets `--eds-theme-color-background-utility-base-1`:
+
+```json
+// in app-theme.json
+{
+  &quot;eds&quot;: {
+    &quot;theme&quot;: {
+      &quot;color&quot;: {
+        &quot;background&quot;: {
+          &quot;utility&quot;: {
+            &quot;base&quot;: {
+              &quot;1&quot;: {
+                &quot;value&quot;: &quot;#FFFFFF&quot;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+The dark theme uses the same structure, under `eds.dark.theme`, and sets the matching `--eds-dark-theme-*` CSS variable:
+
+```json
+// in app-theme-dark.json
+{
+  &quot;eds&quot;: {
+    &quot;dark&quot;: {
+      &quot;theme&quot;: {
+        &quot;color&quot;: {
+          &quot;background&quot;: {
+            &quot;utility&quot;: {
+              &quot;base&quot;: {
+                &quot;1&quot;: {
+                  &quot;value&quot;: &quot;#1A1A1A&quot;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+A few rules apply:
+
+- Only edit tokens that already exist in the files from `eds-init-theme`. Tokens EDS doesn&#39;t define have no effect on components.
+- Use theme (tier 2) tokens for color changes. Tier 1 tokens (e.g., `eds.color.*`) are shared across all themes.
+- Keep light and dark values in sync: EDS components use the theme value in light mode, and the dark theme value in dark mode, so a token changed in one file usually needs a matching change in the other.
+- Values can be literals (e.g., `&quot;#FFFFFF&quot;`), or references to other tokens in the same file (e.g., `&quot;{eds.color.white}&quot;` in `app-theme.json`).
+
+Once done, run `npx eds-apply-theme` to regenerate the CSS and tailwind files.
+
 &lt;hr /&gt;
 
-If there are any future updates to the theme, edit the contents of `app-theme.json`, then re-run `npx eds-apply-theme`. Then commit the changes, and that&#39;s it!
+If there are any future updates to the theme, edit the contents of `app-theme.json` and `app-theme-dark.json`, then re-run `npx eds-apply-theme`. Then commit the changes, and that&#39;s it!
 </code></pre>
           </div>
         </div>
@@ -23345,10 +24049,326 @@ letter-spacing: var(--eds-typography-letter-spacing-normal);
   aria-label="Summary Docs">
   <div class="head">
     <div class="title">
+      <h2><span class="status-dot dot-ok"></span> Documentation/Guidelines/Using Visualization Colors</h2>
+      <div class="badges">
+        
+        <label for="doc-9-documentation-guidelines-using-visualization-colors-summary-docs-content" class="badge ok as-toggle">view content</label>
+      </div>
+    </div>
+    <div class="meta" title="./src/documentation/Docs/Guidelines/UsingVisualizationColors.mdx">documentation-guidelines-using-visualization-colors--summary-docs · ./src/documentation/Docs/Guidelines/UsingVisualizationColors.mdx</div>
+    <div># Visualization Colors EDS provides tier 2 color tokens for data visualization: charts, gr...</div>
+  </div>
+
+  <!-- Hidden toggles must be siblings BEFORE .panels -->
+  
+  <input id="doc-9-documentation-guidelines-using-visualization-colors-summary-docs-content" class="tg tg-content" type="checkbox" hidden />
+
+  <div class="panels">
+    
+    
+        <div class="panel panel-content">
+          <div class="mdx-content">
+            <pre><code>import { Meta } from &#39;@storybook/addon-docs/blocks&#39;;
+
+&lt;Meta title=&quot;Documentation/Guidelines/Using Visualization Colors&quot; /&gt;
+
+# Visualization Colors
+
+EDS provides tier 2 color tokens for data visualization: charts, graphs, heatmaps, and any view where a color stands for a value in the data rather than a role in the interface. Fills live under `eds-theme-color-background-visualization-` and label colors under `eds-theme-color-text-visualization-`. Every one of them is an alias to an existing tier 1 primitive, so they follow the theme like any other tier 2 token.
+
+- [Overview](#overview)
+  - [Visualization colors versus utility colors](#visualization-colors-versus-utility-colors)
+  - [The three palettes](#the-three-palettes)
+  - [Rules that apply to every palette](#rules-that-apply-to-every-palette)
+  - [Token naming](#token-naming)
+- [Categorical palette](#categorical-palette)
+- [Scalar palette](#scalar-palette)
+- [Divergent palette](#divergent-palette)
+- [Text on visualization colors](#text-on-visualization-colors)
+- [Overlaps with utility colors](#overlaps-with-utility-colors)
+
+## Overview
+
+### Visualization colors versus utility colors
+
+A utility color answers &quot;what role does this element play in the interface&quot;: a favorable Tag, a critical Button, a disabled control. A visualization color answers &quot;what does this color tell the reader about the data&quot;: which group a bar belongs to, how large a value is, or how far it sits from a target.
+
+Utility colors are tuned for a label sitting on a background, not for telling adjacent fills apart. The favorable and critical low-emphasis backgrounds are nearly the same color, which is fine behind a labeled Tag and unreadable as two segments of a stacked bar. Utility colors also carry a verdict. Coloring a series with the favorable green says that series is good, and the first time someone charts something that is neither good nor bad, the chart lies.
+
+Use this table to decide which set of tokens to reach for:
+
+| What the color needs to say | Use |
+| --- | --- |
+| A judgement about health or progress: on track, at risk, complete, error | Utility status tokens (`favorable`, `warning`, `critical`, `informational`) on Tags, badges, legend chips and borders. Never as series fills. |
+| Which group a mark belongs to, where the groups have no natural order | [Categorical palette](#categorical-palette) |
+| How much, where more should look like more | [Scalar palette](#scalar-palette) |
+| How far above or below a reference value, or how much something changed | [Divergent palette](#divergent-palette) |
+| Edges in a graph, gridlines, axes | `eds-theme-color-border-utility-default-low-emphasis`, `-medium-emphasis` and `-high-emphasis` |
+| That there is no value to show | No fill, plus a dash or hatch. See [Absence of data](#absence-of-data). |
+| A label sitting on any of the fills above | `eds-theme-color-text-visualization-default` or `-inverse`. See [Text on visualization colors](#text-on-visualization-colors). |
+
+**NOTE**: Status is the most common reason to use utility colors inside a chart. Status in a chart means the same thing as status in a Tag, so it uses the same tokens. If you need color-coded marks that are not tied to a status, that is the categorical palette.
+
+### The three palettes
+
+| Palette | Token prefix | Shape | For |
+| --- | --- | --- | --- |
+| Categorical | `eds-theme-color-background-visualization-categorical-` | 8 ordered slots plus an overflow slot, each with a high-emphasis value; the first 6 also have a low-emphasis value | Unordered groups: products, regions, cohorts, subject areas |
+| Scalar | `eds-theme-color-background-visualization-scalar-` | A neutral basis plus 4 green steps, light to dark | Ordered magnitude: counts, coverage, density, bands |
+| Divergent | `eds-theme-color-background-visualization-divergent-` | 3 blue steps, a neutral basis, 3 orange steps | Distance from a reference: deltas, variance against plan, above or below target |
+
+Two text tokens, `eds-theme-color-text-visualization-default` and `eds-theme-color-text-visualization-inverse`, cover labels that sit on any fill from any palette. See [Text on visualization colors](#text-on-visualization-colors).
+
+### Rules that apply to every palette
+
+- **Color is never the only channel.** Every chart needs a legend, direct labels, or both. The palettes are checked for color-blind readers, but that is not a substitute for a label.
+- **One palette per encoding channel.** Series fills in a plot area come from one palette. A chart can use categorical fills for its series and utility status tokens for Tags in its legend, but it should not use two palettes as fills inside the same plot area. Green appears in more than one palette because it is the brand color, and this rule is what keeps that from being ambiguous.
+- **Use the steps as given.** Each palette has a fixed number of steps, and those numbers are ceilings. Do not add a ninth categorical color, interpolate between scalar steps, or reach past the tokens to a tier 1 primitive. Past the ceiling, the fix is a different chart (direct labels, small multiples, pattern fills), not a different color.
+- **Put labels outside the mark where you can.** When text must sit on a fill, follow [Text on visualization colors](#text-on-visualization-colors).
+
+### Token naming
+
+The same token has three spellings depending on where you use it. The visualization tokens follow the same pattern as every other tier 2 color token.
+
+| Where | Spelling | Example |
+| --- | --- | --- |
+| Figma variable and token source | camelCase segments | `eds-theme-color-background-visualization-categorical-1-highEmphasis` |
+| CSS custom property | kebab-case, with a `--` prefix | `--eds-theme-color-background-visualization-categorical-1-high-emphasis` |
+| Tailwind utility class | The CSS property is folded into the class prefix (`bg-`, `text-`, `border-`) and `eds-theme-color-` is dropped. Segments keep their camelCase. | `bg-visualization-categorical-1-highEmphasis` |
+
+The tables on this page use the CSS custom property spelling, without the leading `--`, which matches the Design Tokens pages in this Storybook. In application code, prefer the Tailwind class and fall back to the CSS custom property when no class exists, as described in [Using EDS Theming](?path=/docs/documentation-theming-using-eds-theming--docs).
+
+```tsx
+// HTML elements such as a legend swatch: Tailwind utility class
+&lt;span className=&quot;bg-visualization-categorical-1-highEmphasis&quot; /&gt;
+
+// SVG marks, where Tailwind background classes do not apply: CSS custom property
+&lt;rect fill=&quot;var(--eds-theme-color-background-visualization-categorical-1-high-emphasis)&quot; /&gt;
+```
+
+**NOTE**: Charting libraries often take a color string rather than a class name. In that case read the CSS custom property at runtime with `getComputedStyle` rather than copying the hex value, so the chart follows the theme.
+
+## Categorical palette
+
+Use the categorical palette when the reader needs to tell one group from another and the groups have no natural order. Eight ordered slots are provided, plus an overflow slot named `other`. Slots carry no meaning on their own: slot 1 can be a region in one chart and a subject area in the next.
+
+### When to use it
+
+✅ Series in a line, bar, or area chart where each series is a different group
+
+✅ Segments of a stacked bar or a donut
+
+✅ Node fills in a graph where nodes are grouped
+
+✅ Calling out one mark against the rest: use slot 1 for the called-out mark and `other` for everything else
+
+❌ Categories that have an order. Bands, tiers, grades and score ranges are magnitude, and the [scalar palette](#scalar-palette) will read correctly where eight unrelated hues will not.
+
+❌ Status. A &quot;complete&quot; or &quot;at risk&quot; category is a judgement, and it belongs on the utility status tokens.
+
+❌ Two or more called-out marks against a context. That is an ordinary categorical chart with two slots, not a call-out.
+
+### How to use it
+
+**Take the slots in order.** Three series means slots 1, 2 and 3. The order is optimized so that the first few slots are the most distinct from each other, and skipping around undoes that. Never cherry-pick a slot because its hue suits the subject.
+
+**Do not assign a fixed meaning to a slot.** If an application needs &quot;Math is always slot 2,&quot; that mapping belongs in the application, not in the design system.
+
+**Past eight, stop adding color.** Group the tail into `other`, or switch to direct labels or pattern fills. The `other` slot is an overflow bucket, not a ninth color: it should never carry an identity the reader is expected to remember.
+
+**Green holds two slots, 1 and 3,** so that most charts read as EDS. They are the closest pair in the set, which is why they sit two slots apart rather than next to each other.
+
+### Tokens
+
+High-emphasis values are the series fills. Use them for bars, areas, lines, points, donut segments and node fills.
+
+| Token | Primitive | Hex |
+| --- | --- | --- |
+| `eds-theme-color-background-visualization-categorical-1-high-emphasis` | `green-450` | `#19955D` |
+| `eds-theme-color-background-visualization-categorical-2-high-emphasis` | `blue-550` | `#4D63CB` |
+| `eds-theme-color-background-visualization-categorical-3-high-emphasis` | `green-750` | `#0E442B` |
+| `eds-theme-color-background-visualization-categorical-4-high-emphasis` | `yellow-250` | `#CDB825` |
+| `eds-theme-color-background-visualization-categorical-5-high-emphasis` | `purple-650` | `#6E3A88` |
+| `eds-theme-color-background-visualization-categorical-6-high-emphasis` | `orange-550` | `#B8470F` |
+| `eds-theme-color-background-visualization-categorical-7-high-emphasis` | `blue-200` | `#98CDFF` |
+| `eds-theme-color-background-visualization-categorical-8-high-emphasis` | `red-250` | `#FF9C99` |
+| `eds-theme-color-background-visualization-categorical-other` | `neutral-250` | `#BCB9B6` |
+
+Low-emphasis values exist for slots 1 through 6 only.
+
+| Token | Primitive | Hex |
+| --- | --- | --- |
+| `eds-theme-color-background-visualization-categorical-1-low-emphasis` | `green-100` | `#C2ECD9` |
+| `eds-theme-color-background-visualization-categorical-2-low-emphasis` | `blue-100` | `#D3EAFF` |
+| `eds-theme-color-background-visualization-categorical-3-low-emphasis` | `neutral-100` | `#E6E2DE` |
+| `eds-theme-color-background-visualization-categorical-4-low-emphasis` | `yellow-050` | `#FFFC93` |
+| `eds-theme-color-background-visualization-categorical-5-low-emphasis` | `purple-100` | `#F3E5FA` |
+| `eds-theme-color-background-visualization-categorical-6-low-emphasis` | `orange-100` | `#FFDCCA` |
+
+### Low-emphasis categorical colors
+
+Use the low-emphasis values sparingly. The only approved use today is the background of a Tag that labels a category, so that a Tag reading &quot;Region 2&quot; can share a slot with the series it describes. The Tag&#39;s text carries the meaning; the tint only reinforces the link to the chart.
+
+❌ Do not use low-emphasis values as series fills, area bands, table row tints or hover states. They are not distinct enough from each other to tell groups apart on their own, and slots 7, 8 and `other` have no low-emphasis value at all, so a chart that relied on them would break at the seventh series.
+
+**NOTE**: Slot 3&#39;s low-emphasis value is a neutral rather than a light green, so that it is not a second light green beside slot 1&#39;s tint. Under red-green color blindness the two tints are still nearly identical, which is one more reason the Tag label, not the tint, carries the meaning.
+
+### Accessibility
+
+- **Separation is checked for color-blind readers.** Every pair of high-emphasis slots was tested in normal vision, deuteranopia and protanopia, and the slot order was chosen on the worst case of the three. Two series are very far apart; three and four series stay clearly separated; the gap narrows from five series on and is at its tightest at eight. That is why eight is the ceiling and why order matters.
+- **The palette is not grayscale-safe.** Slots 2 and 6 have the same lightness, as do slots 4, 8 and `other`. In black and white print or for readers with no color perception, a legend or direct labels are what distinguish them. Slots 1 and 2, the two most-used, were deliberately pulled apart in lightness so that the common two-series chart does survive grayscale.
+- **Slot 8 and `other` are close under red-green color blindness.** When a chart runs to eight series plus an overflow bucket, label the overflow bucket directly rather than relying on the legend.
+- **Four slots are light.** Slots 4, 7, 8 and `other` sit below 3:1 against a white surface. They are fine as bar and area fills next to a legend. As a 1px line or a small scatter point they are weak, so give those marks extra stroke weight or a larger point size.
+- **Text on a categorical fill** follows the rule in [Text on visualization colors](#text-on-visualization-colors). Every low-emphasis value takes `text-visualization-default`, which also works for a Tag label.
+
+## Scalar palette
+
+Use the scalar palette when the data is an ordered magnitude and more of something should look like more of something. It is a single green ramp of four steps over a neutral basis. Lightness runs in one direction, so the order survives grayscale printing and a poor projector.
+
+### When to use it
+
+✅ Heatmaps and calendar grids of counts, volume, coverage or density
+
+✅ Choropleth-style fills where a region&#39;s shade is its value
+
+✅ Ordered bands, tiers or score ranges
+
+❌ Data with a meaningful middle. If the interesting fact is distance above or below a reference, use the [divergent palette](#divergent-palette).
+
+❌ Unordered groups. Five tiers of green mean &quot;more and less,&quot; never &quot;this one and that one.&quot;
+
+❌ A second scalar ramp in the same view. EDS provides one ramp on purpose: every hue family is equally even, so a second hue would be chosen by what is left over rather than by what it means. If a single view genuinely needs two ramps side by side, raise it with the EDS team rather than reaching for primitives.
+
+### How to use it
+
+**Bin the data to the step count.** The ramp is discrete. Divide the range into four bins and assign one step per bin. Interpolating between steps to make a continuous scale loses the guarantee that adjacent bands are distinguishable, and shows the reader precision that is not in the data.
+
+**A measured zero is `basis`.** The neutral basis marks the floor of the scale. A grid that is mostly zeroes should read as mostly empty, not as a wall of light green, and spending step 1 on zero would make &quot;none&quot; and &quot;a little&quot; the same color.
+
+**Do not reuse green as a categorical fill in the same view.** A green ramp beside a green categorical series reads as though the ramp is about that series.
+
+### Tokens
+
+| Token | Primitive | Hex | Meaning |
+| --- | --- | --- | --- |
+| `eds-theme-color-background-visualization-scalar-basis` | `neutral-050` | `#F4F1EF` | A measured value of zero |
+| `eds-theme-color-background-visualization-scalar-1` | `green-150` | `#A1E1C4` | Lowest non-zero bin |
+| `eds-theme-color-background-visualization-scalar-2` | `green-350` | `#1DB470` | |
+| `eds-theme-color-background-visualization-scalar-3` | `green-550` | `#177A4D` | |
+| `eds-theme-color-background-visualization-scalar-4` | `green-750` | `#0E442B` | Highest bin |
+
+### Absence of data
+
+A zero you measured and a value you never had are different facts, and only the first one is data. There is no visualization token for missing data, because absence is shown by the lack of a fill plus a second, non-color channel:
+
+- **No data:** leave the mark unfilled and print a dash. Never render it as `basis`, as step 1, or as a 0.
+- **Restricted:** when a value exists but the reader lacks access, leave the mark unfilled, draw a 45° hatch using `eds-theme-color-border-utility-default-low-emphasis`, and add a lock icon.
+
+**NOTE**: The dash is not optional. An unfilled cell is only a few steps from `basis` on color alone, so without the dash a reader cannot tell &quot;nothing here&quot; from &quot;very little here.&quot; Getting this wrong is what makes a view look broken when it is only incomplete.
+
+### Accessibility
+
+- **Order survives grayscale.** Lightness drops by a similar amount at each step, so the ramp stays ordered for readers with no color perception and in black and white print.
+- **Adjacent steps are distinguishable because the ramp is discrete.** Every neighboring pair is well separated. That guarantee only holds if you bin the data rather than interpolate.
+- **Basis against step 1 is the weakest link in grayscale.** A neutral and a light green differ mostly by hue. Order still holds, but if a mostly-zero view must survive print, give zero cells a dash as well, the same treatment as no data.
+- **Text on a scalar fill** follows the rule in [Text on visualization colors](#text-on-visualization-colors). Only heatmap cells usually need it; label bars outside the mark.
+
+## Divergent palette
+
+Use the divergent palette when the reader&#39;s question is &quot;how far from the reference&quot; or &quot;what changed.&quot; It runs from blue through a neutral basis to orange, three steps on each side. The basis is the reference value, not the middle of your data.
+
+### When to use it
+
+✅ Change since a previous period, positive and negative
+
+✅ Variance against a plan, budget or target
+
+✅ Any measure with a true reference point where both directions matter
+
+❌ Data with no true reference point. A score with no defined threshold is magnitude, and the [scalar palette](#scalar-palette) is the honest encoding. Forcing a divergent scale onto it invents a midpoint and tells the reader something you do not know.
+
+❌ Good versus bad. The two arms are positions on a scale, not verdicts. If the chart is meant to say &quot;this is a problem,&quot; that is a utility status token on a Tag or a border.
+
+### How to use it
+
+**Anchor the basis at the reference, not at the median.** If the target is 7 days and the data runs from 3 to 30, `basis` goes at 7. Centering on the median produces a chart that looks balanced and says nothing.
+
+**Bin each arm to three steps.** As with the scalar palette, the ramp is discrete.
+
+**Blue is below the reference and orange is above it, by default.** Keep that direction consistent within a product. If the domain reads the other way, say which direction is which in the legend.
+
+### Tokens
+
+| Token | Primitive | Hex | Meaning |
+| --- | --- | --- | --- |
+| `eds-theme-color-background-visualization-divergent-minus-3` | `blue-650` | `#3C4D9D` | Furthest below the reference |
+| `eds-theme-color-background-visualization-divergent-minus-2` | `blue-450` | `#5C76F3` | |
+| `eds-theme-color-background-visualization-divergent-minus-1` | `blue-200` | `#98CDFF` | Just below the reference |
+| `eds-theme-color-background-visualization-divergent-basis` | `neutral-050` | `#F4F1EF` | The reference value |
+| `eds-theme-color-background-visualization-divergent-plus-1` | `orange-200` | `#FFB38D` | Just above the reference |
+| `eds-theme-color-background-visualization-divergent-plus-2` | `orange-450` | `#D0622C` | |
+| `eds-theme-color-background-visualization-divergent-plus-3` | `orange-650` | `#92380C` | Furthest above the reference |
+
+### Accessibility
+
+- **Blue and orange, not red and green.** Red and green is the least readable divergent pair for color-blind readers, and it delivers a verdict: a reader who sees red concludes they failed rather than reading a position on a scale. Blue and orange stay far apart under deuteranopia and protanopia at every step.
+- **The arms are symmetric in lightness.** Step 1 on each side is equally light, step 3 equally dark, so neither direction looks more important than the other, in color or in grayscale.
+- **Mirror steps are not distinguishable in grayscale.** Minus 2 and plus 2 have the same lightness by design. In black and white print, the legend and direct labels carry the direction.
+- **Text on a divergent fill** follows the rule in [Text on visualization colors](#text-on-visualization-colors).
+
+## Text on visualization colors
+
+Put labels outside the mark whenever the chart allows it. Bars, lines and points take their label beside the mark, in `eds-theme-color-text-utility-default-primary`. Only heatmap cells, donut segments and graph node labels genuinely need text sitting on a visualization color.
+
+When text must sit on a fill, EDS provides two text tokens. Which one to use depends on the grade of the primitive behind the fill, and the rule is the same across all three palettes:
+
+| Fill | Text token |
+| --- | --- |
+| Primitive at grade 450 or lighter: every low-emphasis categorical value, `basis`, scalar steps 1 and 2, divergent steps minus 1, minus 2, plus 1 and plus 2, and categorical slots 1, 4, 7, 8 and `other` | `eds-theme-color-text-visualization-default` |
+| Primitive at grade 550 or darker: categorical slots 2, 3, 5 and 6, scalar steps 3 and 4, and divergent steps minus 3 and plus 3 | `eds-theme-color-text-visualization-inverse` |
+
+| Token | Primitive | Hex |
+| --- | --- | --- |
+| `eds-theme-color-text-visualization-default` | `black` | `#000000` |
+| `eds-theme-color-text-visualization-inverse` | `white` | `#FFFFFF` |
+
+Every pairing in the table meets 4.5:1. The tightest is the default text on divergent step minus 2.
+
+**NOTE**: `text-visualization-default` is black rather than the default primary text color, because the primary text color does not reach 4.5:1 on the mid-tone fills: categorical slot 1, scalar step 2, and divergent steps minus 2 and plus 2. Use the primary text color for labels beside a mark and the visualization text tokens for labels on a fill.
+
+Three constraints apply to any text on a fill:
+
+- **No opacity.** The contrast margin on the mid-tone fills is thin, and text at 80% opacity drops below 4.5:1.
+- **Data labels are normal text.** An 11px number needs 4.5:1 and cannot borrow the 3:1 allowance for large text.
+- **Do not straddle two steps** with one label.
+
+## Overlaps with utility colors
+
+Some visualization tokens resolve to the same primitive as a utility token. This is expected, because both layers alias the same small set of primitives, and the one-palette-per-channel rule is what keeps them from being confused.
+
+| Visualization token | Shares a primitive with | Why it is acceptable |
+| --- | --- | --- |
+| `categorical-4-high-emphasis` (`yellow-250`) | `eds-theme-color-background-utility-warning-high-emphasis` | A slot 4 Tag or fill only ever appears beside slots 1 through 3, because slots are taken in order, so the context makes it a category rather than a warning. Do not place warning Tags inside a plot area that uses slot 4. |
+| `categorical-1-high-emphasis` (`green-450`) | `eds-theme-color-border-utility-focus` | A focused slot 1 mark gets a ring the color of its own fill. Charts should draw a two-tone focus ring, an inner white stroke inside the focus color. |
+| `scalar-3` (`green-550`) | `eds-theme-color-background-utility-favorable-high-emphasis` | A scalar ramp is never used in the same plot area as status fills. |
+| `categorical-3-high-emphasis` and `scalar-4` (`green-750`) | Each other | Categorical and scalar fills never share a plot area. |
+| `scalar-basis` and `divergent-basis` (`neutral-050`) | Each other | Deliberate. One value means &quot;the reference point&quot; in both palettes. |
+| `categorical-other` (`neutral-250`) | Close to `eds-theme-color-background-utility-disabled-medium-emphasis` | Gray means &quot;present, not the subject&quot; in a chart. Axis labels and values resolve the question before color has to. |
+</code></pre>
+          </div>
+        </div>
+  </div>
+</article>
+<article
+  class="card is-doc no-doc-error"
+  role="listitem"
+  aria-label="Summary Docs">
+  <div class="head">
+    <div class="title">
       <h2><span class="status-dot dot-ok"></span> Release Changelog</h2>
       <div class="badges">
         
-        <label for="doc-9-release-changelog-summary-docs-content" class="badge ok as-toggle">view content</label>
+        <label for="doc-10-release-changelog-summary-docs-content" class="badge ok as-toggle">view content</label>
       </div>
     </div>
     <div class="meta" title="./src/documentation/Docs/ReleaseChangelog.mdx">release-changelog--summary-docs · ./src/documentation/Docs/ReleaseChangelog.mdx</div>
@@ -23357,7 +24377,7 @@ letter-spacing: var(--eds-typography-letter-spacing-normal);
 
   <!-- Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="doc-9-release-changelog-summary-docs-content" class="tg tg-content" type="checkbox" hidden />
+  <input id="doc-10-release-changelog-summary-docs-content" class="tg tg-content" type="checkbox" hidden />
 
   <div class="panels">
     

@@ -618,6 +618,18 @@
           "name": "Border Radii",
           "snippet": "const BorderRadii = () => <TokenDataTable\n    caption=\"Border Radius Tokens\"\n    size=\"md\"\n    subCaption=\"Border radii can be used internally in components, and with custom components, except for -tab- and -notification- tokens.\"\n    listItems={getTokenListItems(\n      'eds-theme-border-radius',\n      'size',\n      (name, column, filterTerm) => {\n        if (column === 'figma') {\n          return '→ border-radius/' + getSpecifier(name, filterTerm);\n        } else {\n          return 'rounded-' + getSpecifier(name, filterTerm);\n        }\n      },\n    )} />;",
           "description": "Border radii can be used internally in components, and with custom components.\n\nDo **not** use any of the component radii in custom components."
+        },
+        {
+          "id": "design-tokens-2-semantic--background-visualization",
+          "name": "Background Visualization",
+          "snippet": "const BackgroundVisualization = () => <TokenDataTable\n    caption=\"Background Visualization Tokens\"\n    size=\"md\"\n    subCaption=\"Background visualization tokens fill the marks in graphical presentations of data (bar charts, line charts, heatmaps, etc.)\"\n    listItems={getTokenListItems(\n      'eds-theme-color-background-visualization',\n      'color',\n      (name, column, filterTerm) => {\n        if (column === 'figma') {\n          return '→ background/visualization/' + getSpecifier(name, filterTerm);\n        } else {\n          return 'bg-visualization-' + getSpecifier(name, filterTerm);\n        }\n      },\n    )} />;",
+          "description": "Background visualization tokens fill the marks in charts, graphs, heatmaps, and other custom data visualization components.\n\n- Use them only where a color stands for a value in the data. For interface roles (status, emphasis, interactivity), use the utility tokens instead"
+        },
+        {
+          "id": "design-tokens-2-semantic--text-visualization",
+          "name": "Text Visualization",
+          "snippet": "const TextVisualization = () => <TokenDataTable\n    caption=\"Text Visualization Tokens\"\n    size=\"md\"\n    listItems={getTokenListItems(\n      'eds-theme-color-text-visualization',\n      'color',\n      (name, column, filterTerm) => {\n        if (column === 'figma') {\n          return '→ text/visualization/' + getSpecifier(name, filterTerm);\n        } else {\n          return 'text-visualization-' + getSpecifier(name, filterTerm);\n        }\n      },\n    )} />;",
+          "description": "Text visualization tokens color labels that sit on a background visualization fill.\n\n- Use `default` on fills aliased to a primitive at grade 450 or lighter, and `inverse` on grade 550 or darker"
         }
       ],
       "import": "import { Description, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';\nimport { TokenDataTable } from '@chanzuckerberg/eds';\nimport { getTokenListItems, getSpecifier } from '../../../storyUtils/TokenList/TokenList';"
@@ -3099,7 +3111,7 @@
             ],
             "required": false,
             "type": {
-              "name": "{ options: NoInfer<ComboboxValue>[] | { toString: (() => string) | (() => string); charAt: unknown; charCodeAt: unknown; concat: unknown; indexOf: unknown; lastIndexOf: unknown; localeCompare: unknown; match: unknown; replace: unknown; search: unknown; slice: unknown; split: unknown; substring: unknown; toLowerCase: unknown; toLocaleLowerCase: unknown; toUpperCase: unknown; toLocaleUpperCase: unknown; trim: unknown; readonly length: unknown; substr: unknown; valueOf: (() => string) | (() => Object); codePointAt: unknown; includes: unknown; endsWith: unknown; normalize: unknown; repeat: unknown; startsWith: unknown; anchor: unknown; big: unknown; blink: unknown; bold: unknown; fixed: unknown; fontcolor: unknown; fontsize: unknown; italics: unknown; link: unknown; small: unknown; strike: unknown; sub: unknown; sup: unknown; padStart: unknown; padEnd: unknown; trimEnd: unknown; trimStart: unknown; trimLeft: unknown; trimRight: unknown; matchAll: unknown; replaceAll: unknown; at: unknown; isWellFormed: unknown; toWellFormed: unknown; }[]; disabled?: ((value: NoInfer<ComboboxValue> | { toString: (() => string) | (() => string); charAt: unknown; charCodeAt: unknown; concat: unknown; indexOf: unknown; lastIndexOf: unknown; localeCompare: unknown; match: unknown; replace: unknown; search: unknown; slice: unknown; split: unknown; substring: unknown; toLowerCase: unknown; toLocaleLowerCase: unknown; toUpperCase: unknown; toLocaleUpperCase: unknown; trim: unknown; readonly length: unknown; substr: unknown; valueOf: (() => string) | (() => Object); codePointAt: unknown; includes: unknown; endsWith: unknown; normalize: unknown; repeat: unknown; startsWith: unknown; anchor: unknown; big: unknown; blink: unknown; bold: unknown; fixed: unknown; fontcolor: unknown; fontsize: unknown; italics: unknown; link: unknown; small: unknown; strike: unknown; sub: unknown; sup: unknown; padStart: unknown; padEnd: unknown; trimEnd: unknown; trimStart: unknown; trimLeft: unknown; trimRight: unknown; matchAll: unknown; replaceAll: unknown; at: unknown; isWellFormed: unknown; toWellFormed: unknown; }) => boolean); } | null"
+              "name": "{ options: NoInfer<ComboboxValue>[] | { toString: (() => string) | (() => string); charAt: unknown; charCodeAt: unknown; concat: unknown; indexOf: unknown; lastIndexOf: unknown; localeCompare: unknown; match: unknown; replace: unknown; search: unknown; slice: unknown; split: unknown; substring: unknown; toLowerCase: unknown; toLocaleLowerCase: unknown; toUpperCase: unknown; toLocaleUpperCase: unknown; trim: unknown; readonly length: unknown; substr: unknown; valueOf: (() => string) | (() => Object); codePointAt: unknown; includes: unknown; endsWith: unknown; normalize: unknown; repeat: unknown; startsWith: unknown; anchor: unknown; big: unknown; blink: unknown; bold: unknown; fixed: unknown; fontcolor: unknown; fontsize: unknown; italics: unknown; link: unknown; small: unknown; strike: unknown; sub: unknown; sup: unknown; padStart: unknown; padEnd: unknown; trimEnd: unknown; trimStart: unknown; trimLeft: unknown; trimRight: unknown; matchAll: unknown; }[]; disabled?: ((value: NoInfer<ComboboxValue> | { toString: (() => string) | (() => string); charAt: unknown; charCodeAt: unknown; concat: unknown; indexOf: unknown; lastIndexOf: unknown; localeCompare: unknown; match: unknown; replace: unknown; search: unknown; slice: unknown; split: unknown; substring: unknown; toLowerCase: unknown; toLocaleLowerCase: unknown; toUpperCase: unknown; toLocaleUpperCase: unknown; trim: unknown; readonly length: unknown; substr: unknown; valueOf: (() => string) | (() => Object); codePointAt: unknown; includes: unknown; endsWith: unknown; normalize: unknown; repeat: unknown; startsWith: unknown; anchor: unknown; big: unknown; blink: unknown; bold: unknown; fixed: unknown; fontcolor: unknown; fontsize: unknown; italics: unknown; link: unknown; small: unknown; strike: unknown; sub: unknown; sup: unknown; padStart: unknown; padEnd: unknown; trimEnd: unknown; trimStart: unknown; trimLeft: unknown; trimRight: unknown; matchAll: unknown; }) => boolean); } | null"
             }
           },
           "by": {
@@ -4089,6 +4101,210 @@
         }
       ],
       "import": "import { Button, Checkbox, DataTable, FpoBlock, IconProvider, Menu } from '@chanzuckerberg/eds';\nimport Button from '../Button';\nimport Menu from '../Menu';\nimport React from 'react';"
+    },
+    "components-dialog": {
+      "id": "components-dialog",
+      "name": "Dialog",
+      "path": "./src/components/Dialog/Dialog.stories.tsx",
+      "jsDocTags": {},
+      "description": "BETA: This component is still a work in progress and is subject to change.\n\n`import {Dialog} from \"@chanzuckerberg/eds\";`\n\nA small, focused prompt that asks the user to confirm or cancel an action. Use it in place of\nthe browser's `window.confirm()`, which can't be styled or given formatted content.\n\n## Usage\n\n* Ask one question with one default action. For anything with more content or more choices,\n  use `Modal`.\n* The primary button runs the default action and receives focus when the dialog opens, so\n  Enter confirms. The secondary button cancels, as do ESC and a click on the overlay.\n* Set `confirmVariant=\"critical\"` when the action is destructive.\n\n### Confirming before a `Modal` closes\n\n`Modal`'s `warnOnClose` uses `window.confirm()`. To ask with a `Dialog` instead, leave\n`warnOnClose` off and decide in the modal's `onClose`: close straight away when nothing would\nbe lost, otherwise open the `Dialog`. Render the `Dialog` inside `Modal.Body` so it stacks\nabove the modal.\n\n## Content & Accessibility\n\n* Use a verb-noun question for the title, and a primary label that names the action.\n* Keep the body to a sentence or two that says what happens next.\n* The dialog is announced as an `alertdialog`, named by its title and described by its body.",
+      "reactDocgenTypescript": {
+        "tags": {},
+        "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/Dialog/Dialog.tsx",
+        "description": "BETA: This component is still a work in progress and is subject to change.\n\n`import {Dialog} from \"@chanzuckerberg/eds\";`\n\nA small, focused prompt that asks the user to confirm or cancel an action. Use it in place of\nthe browser's `window.confirm()`, which can't be styled or given formatted content.\n\n## Usage\n\n* Ask one question with one default action. For anything with more content or more choices,\n  use `Modal`.\n* The primary button runs the default action and receives focus when the dialog opens, so\n  Enter confirms. The secondary button cancels, as do ESC and a click on the overlay.\n* Set `confirmVariant=\"critical\"` when the action is destructive.\n\n### Confirming before a `Modal` closes\n\n`Modal`'s `warnOnClose` uses `window.confirm()`. To ask with a `Dialog` instead, leave\n`warnOnClose` off and decide in the modal's `onClose`: close straight away when nothing would\nbe lost, otherwise open the `Dialog`. Render the `Dialog` inside `Modal.Body` so it stacks\nabove the modal.\n\n## Content & Accessibility\n\n* Use a verb-noun question for the title, and a primary label that names the action.\n* Keep the body to a sentence or two that says what happens next.\n* The dialog is announced as an `alertdialog`, named by its title and described by its body.",
+        "displayName": "Dialog",
+        "methods": [],
+        "props": {
+          "children": {
+            "defaultValue": null,
+            "description": "The question or message the dialog asks the user to respond to. Accepts formatted content,\nsuch as text with emphasis or a short list.",
+            "name": "children",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Dialog/Dialog.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": true,
+            "type": {
+              "name": "ReactNode"
+            }
+          },
+          "className": {
+            "defaultValue": null,
+            "description": "Additional classnames passed in for styling.\n\nThis is applied to the dialog's surface, not the overlay behind it.",
+            "name": "className",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Dialog/Dialog.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": false,
+            "type": {
+              "name": "string"
+            }
+          },
+          "cancelLabel": {
+            "defaultValue": {
+              "value": "Cancel"
+            },
+            "description": "Label for the secondary button, which cancels.\n\n**Default is `\"Cancel\"`**.",
+            "name": "cancelLabel",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Dialog/Dialog.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": false,
+            "type": {
+              "name": "string"
+            }
+          },
+          "confirmLabel": {
+            "defaultValue": null,
+            "description": "Label for the primary button, which runs the default action. Name the action, for example\n`\"Discard changes\"` or `\"Delete file\"`, rather than `\"OK\"` or `\"Yes\"`.",
+            "name": "confirmLabel",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Dialog/Dialog.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": true,
+            "type": {
+              "name": "string"
+            }
+          },
+          "onCancel": {
+            "defaultValue": null,
+            "description": "Called when the user cancels: the secondary button, the ESC key, or a click on the overlay.\nUse this to hide the dialog.",
+            "name": "onCancel",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Dialog/Dialog.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": true,
+            "type": {
+              "name": "() => void"
+            }
+          },
+          "onConfirm": {
+            "defaultValue": null,
+            "description": "Called when the user takes the default action: the primary button, or the Enter key while\nfocus isn't on another button or a link. Use this to act and hide the dialog.",
+            "name": "onConfirm",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Dialog/Dialog.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": true,
+            "type": {
+              "name": "() => void"
+            }
+          },
+          "open": {
+            "defaultValue": null,
+            "description": "Whether the dialog is visible.",
+            "name": "open",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Dialog/Dialog.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": true,
+            "type": {
+              "name": "boolean"
+            }
+          },
+          "title": {
+            "defaultValue": null,
+            "description": "Short title for the dialog, which also names it for screen readers. Use a verb-noun question\nor statement, for example `\"Discard your changes?\"`.",
+            "name": "title",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Dialog/Dialog.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": true,
+            "type": {
+              "name": "string"
+            }
+          },
+          "confirmVariant": {
+            "defaultValue": {
+              "value": "default"
+            },
+            "description": "Status (color) of the primary button. Use `\"critical\"` when the default action destroys\nsomething or can't be undone.\n\n**Default is `\"default\"`**.",
+            "name": "confirmVariant",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Dialog/Dialog.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": false,
+            "type": {
+              "name": "enum",
+              "raw": "\"critical\" | \"default\"",
+              "value": [
+                {
+                  "value": "\"critical\""
+                },
+                {
+                  "value": "\"default\""
+                }
+              ]
+            }
+          }
+        },
+        "exportName": "Dialog"
+      },
+      "stories": [
+        {
+          "id": "components-dialog--default",
+          "name": "Default",
+          "snippet": "const Default = () => <InteractiveExample confirmLabel=\"Discard changes\" title=\"Discard your changes?\">Your edits to this lesson plan haven’t been saved. If you leave now, they’ll be lost.</InteractiveExample>;",
+          "description": "Clicking on a trigger item (in this case `Button`) opens the dialog. Focus starts on the\nprimary button, so Enter takes the default action. The secondary button, ESC, and a click on\nthe overlay all cancel.\n\nIn Chromatic this snapshots at every available viewport: the dialog fills the viewport at the\nsmallest breakpoint, floats at half the viewport width at tablet widths, and a quarter at\ndesktop widths."
+        },
+        {
+          "id": "components-dialog--critical",
+          "name": "Critical",
+          "error": {
+            "name": "SyntaxError",
+            "message": "Expected render to be an arrow function or function expression\n  116 |   },\n  117 |   parameters: sharedParameters,\n> 118 |   render: Default.render,\n      |           ^^^^^^^^^^^^^^\n  119 |   play: openInChromatic,\n  120 | };\n  121 |"
+          }
+        },
+        {
+          "id": "components-dialog--formatted-body",
+          "name": "Formatted Body",
+          "error": {
+            "name": "SyntaxError",
+            "message": "Expected render to be an arrow function or function expression\n  135 |   },\n  136 |   parameters: sharedParameters,\n> 137 |   render: Default.render,\n      |           ^^^^^^^^^^^^^^\n  138 |   play: openInChromatic,\n  139 | };\n  140 |"
+          }
+        },
+        {
+          "id": "components-dialog--custom-cancel-label",
+          "name": "Custom Cancel Label",
+          "error": {
+            "name": "SyntaxError",
+            "message": "Expected render to be an arrow function or function expression\n  147 |   },\n  148 |   parameters: sharedParameters,\n> 149 |   render: Default.render,\n      |           ^^^^^^^^^^^^^^\n  150 |   play: openInChromatic,\n  151 | };\n  152 |"
+          }
+        },
+        {
+          "id": "components-dialog--confirming-modal-close",
+          "name": "Confirming Modal Close",
+          "snippet": "const ConfirmingModalClose = () => {\n  function ConfirmingModalCloseExample() {\n    const [modalOpen, setModalOpen] = useState(false);\n    const [dialogOpen, setDialogOpen] = useState(false);\n    const [draft, setDraft] = useState('');\n\n    const closeModal = () => {\n      setDialogOpen(false);\n      setModalOpen(false);\n      // closing discards the draft, which is what makes the dialog worth showing\n      setDraft('');\n    };\n    // the close button, ESC, overlay clicks, and the footer's Cancel all ask first\n    const requestClose = () =>\n      draft === '' ? closeModal() : setDialogOpen(true);\n\n    return (\n      <div className=\"p-spacing-size-3 flex justify-center\">\n        <Button onClick={() => setModalOpen(true)} rank=\"primary\">\n          Open the modal\n        </Button>\n        <Modal onClose={requestClose} open={modalOpen} size=\"sm\">\n          <Modal.Header>\n            <Modal.Title>Add a note</Modal.Title>\n          </Modal.Header>\n          <Modal.Body>\n            <InputField\n              label=\"Note\"\n              onChange={(event) => setDraft(event.target.value)}\n              value={draft}\n            />\n            <Dialog\n              confirmLabel=\"Discard note\"\n              confirmVariant=\"critical\"\n              onCancel={() => setDialogOpen(false)}\n              onConfirm={closeModal}\n              open={dialogOpen}\n              title=\"Discard your note?\"\n            >\n              Closing clears the note you started.\n            </Dialog>\n          </Modal.Body>\n          <Modal.Footer>\n            <ButtonGroup>\n              <Button onClick={closeModal} rank=\"primary\">\n                Save note\n              </Button>\n              <Button onClick={requestClose} rank=\"secondary\">\n                Cancel\n              </Button>\n            </ButtonGroup>\n          </Modal.Footer>\n        </Modal>\n      </div>\n    );\n  }\n  return <ConfirmingModalCloseExample />;\n};",
+          "description": "A `Dialog` in place of `Modal`'s `warnOnClose`. Type in the field, then try to close the modal\nwith the close button, ESC, or a click on the overlay. Closing clears the note, so the modal\nasks first while there's one to lose; an empty modal closes straight away.\n\n`warnOnClose` stays off. The modal's `onClose` decides instead, and the footer's Cancel\nbutton goes through the same check. The `Dialog` renders inside `Modal.Body` so it stacks\nabove the modal."
+        }
+      ],
+      "import": "import { Button, ButtonGroup, Dialog, InputField, Modal } from '@chanzuckerberg/eds';"
     },
     "components-fieldlabel": {
       "id": "components-fieldlabel",
@@ -6155,10 +6371,8 @@
             }
           },
           "required": {
-            "defaultValue": {
-              "value": "true"
-            },
-            "description": "Indicates that field is required for form to be successfully submitted.",
+            "defaultValue": null,
+            "description": "**Deprecated.** Has no effect: it renders no indicator and sets no attribute. Mark the\nassociated input as required instead.\n@deprecated TODO(next-major): remove.",
             "name": "required",
             "declarations": [
               {
@@ -6193,8 +6407,8 @@
         {
           "id": "components-label--default",
           "name": "Default",
-          "snippet": "const Default = () => <Label text=\"Label\" required />;",
-          "description": "Labels can denote some text to label the content, and whether that content is marked as required."
+          "snippet": "const Default = () => <Label text=\"Label\" />;",
+          "description": "Labels denote some text to label the content."
         },
         {
           "id": "components-label--label-after",
@@ -6310,6 +6524,23 @@
               ]
             }
           },
+          "isBold": {
+            "defaultValue": {
+              "value": "false"
+            },
+            "description": "Whether to render the link text at bold weight. Applies in both contexts, and holds\nacross every emphasis, variant, and state.\n\n**Default is `false`**.",
+            "name": "isBold",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Link/Link.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": false,
+            "type": {
+              "name": "boolean"
+            }
+          },
           "size": {
             "defaultValue": null,
             "description": "The size of the link (when its context is `\"standalone\"`).\n\n----\n\n**Note**: This will only apply when `\"standalone\"` is used",
@@ -6409,6 +6640,12 @@
           "description": "Standalone links can have additional emphasis or minimized emphasis applied."
         },
         {
+          "id": "components-link--bold",
+          "name": "Bold",
+          "snippet": "const Bold = () => <div className=\"flex flex-col gap-4\">\n    <div>\n        <Link\n            size=\"md\"\n            href=\"http://example.org/\"\n            onClick={(event: any) => event.preventDefault()}\n            isBold\n            context=\"standalone\"\n            emphasis=\"default\">Default Emphasis\n                    </Link>\n        <br />\n        <Link\n            size=\"md\"\n            href=\"http://example.org/\"\n            onClick={(event: any) => event.preventDefault()}\n            isBold\n            context=\"standalone\"\n            emphasis=\"high\">High Emphasis\n                    </Link>\n        <br />\n        <Link\n            size=\"md\"\n            href=\"http://example.org/\"\n            onClick={(event: any) => event.preventDefault()}\n            isBold\n            context=\"standalone\"\n            emphasis=\"low\"\n            icon=\"forward\">Low Emphasis\n                    </Link>\n        <br />\n        <Link\n            size=\"md\"\n            href=\"http://example.org/\"\n            onClick={(event: any) => event.preventDefault()}\n            isBold\n            context=\"standalone\"\n            icon=\"open-in-new\">Leaves the site\n                    </Link>\n    </div>\n    <Text as=\"p\" className=\"w-[384px]\" preset=\"body-md-bold\">Lorem ipsum dolor sit amet,{' '}\n        <Link\n            href=\"http://example.org/\"\n            onClick={(event: any) => event.preventDefault()}\n            isBold\n            context=\"inline\"\n            size={undefined}>consectetur adipiscing elit\n                    </Link>. Morbi porta at ante quis molestie.\n              </Text>\n</div>;",
+          "description": "`isBold` renders the link text at bold weight, without overriding the link's styles. It\nholds across every emphasis and state, and in both contexts."
+        },
+        {
           "id": "components-link--standalone-inverse-variant",
           "name": "Standalone Inverse Variant",
           "snippet": "const StandaloneInverseVariant = () => <Link\n    size=\"lg\"\n    href=\"http://example.org/\"\n    onClick={(event: any) => event.preventDefault()}\n    context=\"standalone\"\n    variant=\"inverse\">Link</Link>;",
@@ -6444,7 +6681,7 @@
           "description": "`icon` names which role the link is filling rather than picking a glyph, and both roles\ncome from `IconProvider`. So a link marked as leaving the site matches the one `AppHeader`\nrenders for the same thing, and the two icons a standalone link can carry are set from one\nplace rather than per link.\n\nBelow, `open-in-new` becomes a chain and `forward` a full arrow."
         }
       ],
-      "import": "import { IconProvider, Link } from '@chanzuckerberg/eds';\nimport React from 'react';"
+      "import": "import { IconProvider, Link, Text } from '@chanzuckerberg/eds';\nimport React from 'react';"
     },
     "components-orderedlist": {
       "id": "components-orderedlist",
@@ -6744,11 +6981,11 @@
       "name": "Markdown",
       "path": "./src/components/Markdown/Markdown.stories.ts",
       "jsDocTags": {},
-      "description": "BETA: This component is still a work in progress and is subject to change.\n\nGeneric Markdown component to wrap convert convent into EDS-compliant represenations. Includes all the base\ncomponents, plus tables from GitHub-Flavored Markdown. Other features available by using Remark Plugins.\n\nLibrary documentation:\n- https://github.com/remarkjs/react-markdown\n\nIncluded plugins:\n- https://github.com/remarkjs/remark-gfm",
+      "description": "BETA: This component is still a work in progress and is subject to change.\n\nGeneric Markdown component to wrap convert convent into EDS-compliant represenations. Includes all the base\ncomponents, plus tables from GitHub-Flavored Markdown. Other features available by using Remark Plugins.\n\nLibrary documentation:\n- https://github.com/remarkjs/react-markdown\n\nIncluded plugins:\n- https://github.com/remarkjs/remark-gfm\n\n## Usage\n\nRender markdown-authored content with EDS components and styling.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Document | Headings, lists, links, tables, quotes, and images from a markdown source. | Help articles. Release notes. Content from a CMS. |\n| Inline code | A backticked snippet in prose renders as a low-emphasis `<code>` chip. | A command or file name mentioned mid-sentence. |\n| Code block | A fenced block with a language renders a `CodeBlock`. Indented blocks get the inline code treatment on the whole block. | Multi-line examples. Command output. |\n\n### Do's\n\n* Use `Markdown` when the content is already authored as markdown.\n* Use inline code for short tokens readers may need to type or recognize, like `yarn start`.\n\n### Don'ts\n\n* Don't reach for `Markdown` just to render one inline snippet. It works, but do that sparingly.\n* Don't use inline code for multi-line or runnable code. Use `CodeBlock` instead.",
       "reactDocgenTypescript": {
         "tags": {},
         "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/Markdown/Markdown.tsx",
-        "description": "BETA: This component is still a work in progress and is subject to change.\n\nGeneric Markdown component to wrap convert convent into EDS-compliant represenations. Includes all the base\ncomponents, plus tables from GitHub-Flavored Markdown. Other features available by using Remark Plugins.\n\nLibrary documentation:\n- https://github.com/remarkjs/react-markdown\n\nIncluded plugins:\n- https://github.com/remarkjs/remark-gfm",
+        "description": "BETA: This component is still a work in progress and is subject to change.\n\nGeneric Markdown component to wrap convert convent into EDS-compliant represenations. Includes all the base\ncomponents, plus tables from GitHub-Flavored Markdown. Other features available by using Remark Plugins.\n\nLibrary documentation:\n- https://github.com/remarkjs/react-markdown\n\nIncluded plugins:\n- https://github.com/remarkjs/remark-gfm\n\n## Usage\n\nRender markdown-authored content with EDS components and styling.\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Document | Headings, lists, links, tables, quotes, and images from a markdown source. | Help articles. Release notes. Content from a CMS. |\n| Inline code | A backticked snippet in prose renders as a low-emphasis `<code>` chip. | A command or file name mentioned mid-sentence. |\n| Code block | A fenced block with a language renders a `CodeBlock`. Indented blocks get the inline code treatment on the whole block. | Multi-line examples. Command output. |\n\n### Do's\n\n* Use `Markdown` when the content is already authored as markdown.\n* Use inline code for short tokens readers may need to type or recognize, like `yarn start`.\n\n### Don'ts\n\n* Don't reach for `Markdown` just to render one inline snippet. It works, but do that sparingly.\n* Don't use inline code for multi-line or runnable code. Use `CodeBlock` instead.",
         "displayName": "Markdown",
         "methods": [],
         "props": {
@@ -6946,6 +7183,12 @@
           "snippet": "const Default = () => <Markdown>{`# Introduction\n\nSource for Testing Images: <https://picsum.photos/200/300>\n\nThis is an introductory block of text, with no additional formatting. **Strength** can be added, as well as *emphasis*.\n\n## Details\n\n### Lists\n\n#### Unordered\n\nHere are a list of items:\n\n- Item One\n- Item Two\n- Item Three\n\n----\n\n* Item A\n* Item B\n* Item C\n\n#### Ordered\n\n1. First Item\n2. Second Item\n3. Third Item\n\n### Block Quotes\n\n> Including a block quote to demonstrate appearance.\n> This should apply across multiple lines.\n\n### Code\n\n#### Inline & Pre-formatted\n\nTo run a command try the following: \\`shell.py init\\` which prints:\n\n    Some output from the above!\n    When indented, it spans multiple lines.\n\n#### MultiLine\n\n~~~cpp\n#include <iostream.h> \n#include <iomanip.h> \n#include <fstream.h>\t// To send the data to a text file \n#include <conio.h>\t\t// For the getch() function \n#include <stdlib.h>\n\n// This program calculates the cost of a gas fillup when the miles\n// travelled, the miles per gallon, and the price of a gallon of gas\n// is inputed. It also keeps track of the total transactions and sums\n// the total of all gas sales. This information is sent to a text file\n// on the desktop named dailyrpt.txt.\n\nint main() \n{ \n  // Defining output function \n  ofstream trans_cash; \n\n  int mpg, // Variables being initialized... \n    miles, \n    trans = 0,\n    month,\n    day,\n    year;\n \n  \n  char slash;\t// character in the dates\n\n  double price_gal,\n    gallons,\n    avg_gallons,\n    avg_cost,\n    avg_price_gal,\n    total_gallons = 0,\n    total_price_gal = 0,\n    cost, \n    total_cost = 0.0; // ...Variables initialized \n\n\n  // Open the output file for the total price and transaction output \n  trans_cash.open(\"C:\\\\windows\\\\desktop\\\\dailyrpt.txt\"); \n\n  // Setting precision and value output style \n  cout << setprecision(2) << setiosflags(ios::fixed | ios::showpoint); \n\n  // Greeting and input... \n\n  cout << \"\\\\nWelcome to the Gas Register Cashier\"; \n  cout << \"\\\\n-----------------------------------\" << \"\\\\n\"; \n\n  cout << \"\\\\nTo begin, enter the date (i.e. 01/01/2001)\" << endl;\n  cin >> month >> slash >> day >> slash >> year;\t\t//Input the date\n\n  cout << \"\\\\nPlease input requested values. If you want to quit, simply type -1 in\" << \"\\\\n 'Miles Travelled' Data to exit.\"; \n  cout << \"\\\\n\" << \"\\\\n\"; \n\n  cout << \"Miles Travelled: \";\t// Input miles\n  cin >> miles; \n\n\n  // Loop begin: Calculator \n\n  while (miles >= 0) \n  { \n\n    cout << \"Miles per Gallon for Your Car: \"; \n    cin >> mpg; \n\n    cout << \"Price Per Gallon You're Paying: \"; \n    cin >> price_gal; \n\n    ++trans; // Adds one to the counter, keeping control of transactions \n\n    gallons = double(miles) / double(mpg); // Calculations... \n    cost = gallons * price_gal; \n\n    total_cost += cost;\t\t\t\t\t\t// Averaging calculations\n    total_gallons += gallons;\n    total_price_gal += price_gal;\n\n    // ...end \n\n    // Displaying data entry information \n\n    trans_cash << setiosflags(ios::fixed | ios::showpoint) << setprecision(2);\n    trans_cash << \"\\\\nMiles per Gallon:\" << setw(9) << mpg; \n    trans_cash << \"\\\\nMiles Travelled:\" << setw(10) << miles << endl << endl; \n\n    trans_cash << \"Number of Gallons: \" << setw(7) << gallons; \n    trans_cash << setprecision(3); // Setting Precision for gas price \n    trans_cash << \"\\\\nPrice per Gallon: \" << setw(8) << price_gal << endl; \n\n    trans_cash << setprecision(2); // Re-setting precision for final total \n    trans_cash << \"\\\\n--------------------------\"; \n    trans_cash << \"\\\\nCost of Fillup: \" << setw(10) << cost << setw(15) << \"Transaction: \" << trans; \n    trans_cash << \"\\\\n--------------------------\" << endl << endl;\n\n\n    system(\"cls\");\t\t// clears the screen\n\n    cout << endl << \"\\\\nRe-enter values. Again, type -1 in 'Miles Travelled' to exit.\" << endl; \n    cout << \"Miles Travelled: \"; \n    cin >> miles; \n\n  } \n\n  // Final Calculations\n  avg_cost = total_cost / double(trans);\n  avg_gallons = total_gallons / double(trans);\n  avg_price_gal = total_price_gal / double(trans);\n\n  // Final output \n  trans_cash << setprecision(2) << setiosflags(ios::fixed) << setiosflags(ios::showpoint);\n  trans_cash << \"\\\\nDaily Report for \" << month << slash << day << slash << year;\n  trans_cash << endl; \n  trans_cash << \"================================\" << endl; \n  trans_cash << \"Number of Sales: \" << setw(15) << trans << endl; \n  trans_cash << \"Total Gallons Sold: \" << setw(12) << total_gallons << endl;\n  \n  trans_cash << endl;\n\n  trans_cash << setprecision(3);\n  trans_cash << \"Average price per Gallon: \" << setw(6) << avg_price_gal << endl;\n  trans_cash << setprecision(2);\n\n  trans_cash << \"Total Sales: \" << setw(19) << total_cost << endl; \n\n  trans_cash << endl;\n\n  trans_cash << \"Average Gallons: \" << setw(15) << avg_gallons << endl;\n  trans_cash << \"Average Sale: \" << setw(18) << avg_cost << endl;\n  trans_cash << \"--------------------------------\";\n  \n  \n  // Name Entry\n  trans_cash << \"\\\\nPrepared by:\" << setw(20) << \"Andrew Holloway\";\n  // Output file located at C:\\\\windows\\\\desktop\\\\dailyrpt.txt\n\n  // Closing the generated file \n  trans_cash.close(); \n\n  getch();\t// Hit a key function\n\n  return 0; \n}\n~~~\n\n##### Miscellaneous\n\n###### Links\n\nHere's a link to [CommonMark][common-mark].\n\n[common-mark]: https://commonmark.org/\n`}</Markdown>;"
         },
         {
+          "id": "components-markdown--inline-code",
+          "name": "Inline Code",
+          "snippet": "const InlineCode = () => <Markdown>{`Run \\`yarn install\\` once, then \\`yarn start\\` to launch Storybook on port \\`6006\\`.`}</Markdown>;",
+          "description": "Backticked snippets in prose render as inline code: a low-emphasis chip with mono type,\nper the `EDS-markdown-inlineCode` spec. This story contains only inline code, with no\nheadings or code blocks, to show that treatment on its own."
+        },
+        {
           "id": "components-markdown--github-flavored-markdown",
           "name": "Github Flavored Markdown",
           "snippet": "const GithubFlavoredMarkdown = () => <Markdown>{`\n# GitHub-Flavored Markdown\n\n## Tables\n\nGitHub-flavored markdown supports basic tables. Alignment can be controlled for each column. [See doc.s][gfm-docs].\n\n| a | b  |  c |  d  |\n| - | :- | -: | :-: |\n| 1 | 2  | 3  | 4   |\n\n[gfm-docs]: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables\n`}</Markdown>;"
@@ -7037,11 +7280,11 @@
       "name": "Modal",
       "path": "./src/components/Modal/Modal.stories.tsx",
       "jsDocTags": {},
-      "description": "## Usage\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Standard | Central overlay with focus trap, used for focused tasks or messages. | Form entry; settings dialogs; confirmations. |\n| Confirmation | Asks the user to confirm or cancel a critical action. | Deletion prompts; submitting irreversible actions. |\n| Alert | Displays an important message, usually with a single dismiss button. | Error notifications; access denied messages. |\n| Full-screen | Takes up the entire viewport for complex or immersive tasks. | Onboarding; mobile workflows; media viewers. |\n| Success/Feedback | Provides positive feedback after a completed action. | Success confirmation; \"Thanks for submitting\" messages. |\n\n### Best Practices\n\n* Modals are disruptive and should be used sparingly.\n* Use a modal to request minimal amounts of information from a user. Don't request large forms of information inside a modal.\n* Don't use a modal when a separate, designated URL is desired.\n* Show one modal at a time. Don't place a modal on top of another modal. This can create usability issues.\n* For important error notifications, use Inline Notification or Banner.\n* For short messaging confirming successful interactions, such as \"Email sent\", use Inline Notification or Toast.\n\n## Content & Accessibility\n\n### Do's\n\n* Use a primary title, body text, and a primary CTA. All other modal content is optional.\n* Use a verb-noun question or statement for the primary title.\n* Ensure people can scan the heading and CTAs and know what to do even if they skip the body text.\n* Keep primary titles and subtitles to a max of 2 lines each.\n* Use either a short phrase or a full sentence for subtitles.\n* Keep section titles to less than 1 line; preferably a short phrase.\n* Break up information with section titles for scanability.\n* Try to avoid scrolling text within a modal.\n\n### Don'ts\n\n* Include long headings or body text. The more words, the less likely people are to read any of it.\n* Include long passages of informative text in a modal. Use a short summary and then link to a help article, FAQ etc.\n* Avoid applying inline stylistic modifications to the Modal.Title sub-component. Use the defaults or preset props where present.\n\n## Resources\n\n* https://headlessui.dev/react/dialog",
+      "description": "## Usage\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Standard | Central overlay with focus trap, used for focused tasks or messages. | Form entry; settings dialogs; confirmations. |\n| Confirmation | Asks the user to confirm or cancel a critical action. | Deletion prompts; submitting irreversible actions. |\n| Alert | Displays an important message, usually with a single dismiss button. | Error notifications; access denied messages. |\n| Full-screen | Takes up the entire viewport for complex or immersive tasks. | Onboarding; mobile workflows; media viewers. |\n| Success/Feedback | Provides positive feedback after a completed action. | Success confirmation; \"Thanks for submitting\" messages. |\n\n### Best Practices\n\n* Modals are disruptive and should be used sparingly.\n* Use a modal to request minimal amounts of information from a user. Don't request large forms of information inside a modal.\n* Don't use a modal when a separate, designated URL is desired.\n* Show one modal at a time. Don't place a modal on top of another modal. This can create usability issues.\n* For important error notifications, use Inline Notification or Banner.\n* For short messaging confirming successful interactions, such as \"Email sent\", use Inline Notification or Toast.\n\n### Warning on close\n\n`warnOnClose` asks the user to confirm before the modal closes. Use it only when closing throws work away.\n\n* Warn when the modal's state resets on close, like a partly filled form that comes back empty on reopening.\n* Don't warn when the state survives closing and reopening. Nothing is lost, so the prompt is only friction.\n* Pass a function that checks for changes, so a modal the user hasn't touched closes without asking.\n* Footer buttons that discard work, like Cancel, call your own handler. Check there too.\n\n## Content & Accessibility\n\n### Do's\n\n* Use a primary title, body text, and a primary CTA. All other modal content is optional.\n* Use a verb-noun question or statement for the primary title.\n* Ensure people can scan the heading and CTAs and know what to do even if they skip the body text.\n* Keep primary titles and subtitles to a max of 2 lines each.\n* Use either a short phrase or a full sentence for subtitles.\n* Keep section titles to less than 1 line; preferably a short phrase.\n* Break up information with section titles for scanability.\n* Try to avoid scrolling text within a modal.\n\n### Don'ts\n\n* Include long headings or body text. The more words, the less likely people are to read any of it.\n* Include long passages of informative text in a modal. Use a short summary and then link to a help article, FAQ etc.\n* Avoid applying inline stylistic modifications to the Modal.Title sub-component. Use the defaults or preset props where present.\n\n## Resources\n\n* https://headlessui.dev/react/dialog",
       "reactDocgenTypescript": {
         "tags": {},
         "filePath": "/home/runner/work/edu-design-system/edu-design-system/src/components/Modal/Modal.tsx",
-        "description": "## Usage\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Standard | Central overlay with focus trap, used for focused tasks or messages. | Form entry; settings dialogs; confirmations. |\n| Confirmation | Asks the user to confirm or cancel a critical action. | Deletion prompts; submitting irreversible actions. |\n| Alert | Displays an important message, usually with a single dismiss button. | Error notifications; access denied messages. |\n| Full-screen | Takes up the entire viewport for complex or immersive tasks. | Onboarding; mobile workflows; media viewers. |\n| Success/Feedback | Provides positive feedback after a completed action. | Success confirmation; \"Thanks for submitting\" messages. |\n\n### Best Practices\n\n* Modals are disruptive and should be used sparingly.\n* Use a modal to request minimal amounts of information from a user. Don't request large forms of information inside a modal.\n* Don't use a modal when a separate, designated URL is desired.\n* Show one modal at a time. Don't place a modal on top of another modal. This can create usability issues.\n* For important error notifications, use Inline Notification or Banner.\n* For short messaging confirming successful interactions, such as \"Email sent\", use Inline Notification or Toast.\n\n## Content & Accessibility\n\n### Do's\n\n* Use a primary title, body text, and a primary CTA. All other modal content is optional.\n* Use a verb-noun question or statement for the primary title.\n* Ensure people can scan the heading and CTAs and know what to do even if they skip the body text.\n* Keep primary titles and subtitles to a max of 2 lines each.\n* Use either a short phrase or a full sentence for subtitles.\n* Keep section titles to less than 1 line; preferably a short phrase.\n* Break up information with section titles for scanability.\n* Try to avoid scrolling text within a modal.\n\n### Don'ts\n\n* Include long headings or body text. The more words, the less likely people are to read any of it.\n* Include long passages of informative text in a modal. Use a short summary and then link to a help article, FAQ etc.\n* Avoid applying inline stylistic modifications to the Modal.Title sub-component. Use the defaults or preset props where present.\n\n## Resources\n\n* https://headlessui.dev/react/dialog",
+        "description": "## Usage\n\n| Type/Use | Description | Example |\n|----------|-------------|---------|\n| Standard | Central overlay with focus trap, used for focused tasks or messages. | Form entry; settings dialogs; confirmations. |\n| Confirmation | Asks the user to confirm or cancel a critical action. | Deletion prompts; submitting irreversible actions. |\n| Alert | Displays an important message, usually with a single dismiss button. | Error notifications; access denied messages. |\n| Full-screen | Takes up the entire viewport for complex or immersive tasks. | Onboarding; mobile workflows; media viewers. |\n| Success/Feedback | Provides positive feedback after a completed action. | Success confirmation; \"Thanks for submitting\" messages. |\n\n### Best Practices\n\n* Modals are disruptive and should be used sparingly.\n* Use a modal to request minimal amounts of information from a user. Don't request large forms of information inside a modal.\n* Don't use a modal when a separate, designated URL is desired.\n* Show one modal at a time. Don't place a modal on top of another modal. This can create usability issues.\n* For important error notifications, use Inline Notification or Banner.\n* For short messaging confirming successful interactions, such as \"Email sent\", use Inline Notification or Toast.\n\n### Warning on close\n\n`warnOnClose` asks the user to confirm before the modal closes. Use it only when closing throws work away.\n\n* Warn when the modal's state resets on close, like a partly filled form that comes back empty on reopening.\n* Don't warn when the state survives closing and reopening. Nothing is lost, so the prompt is only friction.\n* Pass a function that checks for changes, so a modal the user hasn't touched closes without asking.\n* Footer buttons that discard work, like Cancel, call your own handler. Check there too.\n\n## Content & Accessibility\n\n### Do's\n\n* Use a primary title, body text, and a primary CTA. All other modal content is optional.\n* Use a verb-noun question or statement for the primary title.\n* Ensure people can scan the heading and CTAs and know what to do even if they skip the body text.\n* Keep primary titles and subtitles to a max of 2 lines each.\n* Use either a short phrase or a full sentence for subtitles.\n* Keep section titles to less than 1 line; preferably a short phrase.\n* Break up information with section titles for scanability.\n* Try to avoid scrolling text within a modal.\n\n### Don'ts\n\n* Include long headings or body text. The more words, the less likely people are to read any of it.\n* Include long passages of informative text in a modal. Use a short summary and then link to a help article, FAQ etc.\n* Avoid applying inline stylistic modifications to the Modal.Title sub-component. Use the defaults or preset props where present.\n\n## Resources\n\n* https://headlessui.dev/react/dialog",
         "displayName": "Modal",
         "methods": [],
         "props": {
@@ -7210,6 +7453,36 @@
             "type": {
               "name": "string"
             }
+          },
+          "warnOnClose": {
+            "defaultValue": null,
+            "description": "Asks the user to confirm before the modal closes, so unsaved work in it isn't lost to a\nstray ESC key, overlay click, or close button click. Uses the browser's `window.confirm`.\n\n- `true` always asks\n- a function is called at close time, and asks only when it returns `true`. Use it to check\n  whether the modal's state is dirty\n\nOnly warn when closing actually loses something. Check how the modal's state is held:\n\n- **State resets on close** (it lives inside the modal's children, which unmount, or\n  `onClose` clears it): closing is destructive, so warn\n- **State survives close** (it is held above the modal and not cleared): reopening brings\n  the fields back, so closing loses nothing. Don't warn; the prompt only adds friction\n\nTo warn, the state has to be readable where `Modal` renders. Lift it out of the modal's\nchildren, clear it in `onClose`, and pass a function that compares it against its starting\nvalues. A function keeps an untouched modal closing without a prompt; `true` asks every\ntime, and fits only when any open modal holds work worth keeping.\n\nThis covers only the closes the modal triggers itself: ESC, an overlay click, and the close\nbutton. A button you put in `Modal.Footer` calls your own handler, so check there too if it\ndiscards work.\n\n```\nconst [draft, setDraft] = useState('');\nconst handleClose = () => {\n  setIsOpen(false);\n  setDraft(''); // closing discards the draft, so warn while there is one\n};\n// ....\n\n<Modal warnOnClose={() => draft !== ''} onClose={handleClose} open={isOpen}>\n ...\n</Modal>\n```\n\n**Default is `false`**.",
+            "name": "warnOnClose",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Modal/Modal.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": false,
+            "type": {
+              "name": "boolean | (() => boolean)"
+            }
+          },
+          "warnOnCloseMessage": {
+            "defaultValue": null,
+            "description": "The question `window.confirm` asks when `warnOnClose` applies. Name what will be lost, for\nexample `\"Discard this note?\"`, so the user can answer without guessing.\n\n**Default is `\"You have unsaved changes. Close anyway?\"`**.",
+            "name": "warnOnCloseMessage",
+            "declarations": [
+              {
+                "fileName": "edu-design-system/src/components/Modal/Modal.tsx",
+                "name": "TypeLiteral"
+              }
+            ],
+            "required": false,
+            "type": {
+              "name": "string"
+            }
           }
         },
         "exportName": "Modal"
@@ -7238,8 +7511,14 @@
           "name": "Small",
           "error": {
             "name": "SyntaxError",
-            "message": "Expected render to be an arrow function or function expression\n  247 |   },\n  248 |   parameters: Default.parameters,\n> 249 |   render: Default.render,\n      |           ^^^^^^^^^^^^^^\n  250 |   play: Default.play,\n  251 | };\n  252 |"
+            "message": "Expected render to be an arrow function or function expression\n  250 |   },\n  251 |   parameters: Default.parameters,\n> 252 |   render: Default.render,\n      |           ^^^^^^^^^^^^^^\n  253 |   play: Default.play,\n  254 | };\n  255 |"
           }
+        },
+        {
+          "id": "components-modal--warn-on-close",
+          "name": "Warn On Close",
+          "snippet": "const WarnOnClose = (args) => {\n  function WarnOnCloseExample() {\n    const [open, setOpen] = useState(false);\n    const [dialogOpen, setDialogOpen] = useState(false);\n    const [draft, setDraft] = useState('');\n    const handleClose = () => {\n      setDialogOpen(false);\n      setOpen(false);\n      // closing discards the draft, which is what makes the warning worth showing\n      setDraft('');\n    };\n    // the close button, ESC, overlay clicks, and the footer's Cancel all ask first\n    const requestClose = () =>\n      draft === '' ? handleClose() : setDialogOpen(true);\n    return (\n      <div className=\"flex justify-center\">\n        <Button onClick={() => setOpen(true)} rank=\"primary\">\n          Open the modal\n        </Button>\n        <Modal {...args} onClose={requestClose} open={open}>\n          <Modal.Header>\n            <Modal.Title>Add a note</Modal.Title>\n          </Modal.Header>\n          <Modal.Body>\n            <InputField\n              label=\"Note\"\n              onChange={(event) => setDraft(event.target.value)}\n              value={draft}\n            />\n            <Dialog\n              confirmLabel=\"Discard note\"\n              confirmVariant=\"critical\"\n              onCancel={() => setDialogOpen(false)}\n              onConfirm={handleClose}\n              open={dialogOpen}\n              title=\"Discard your note?\"\n            >\n              Closing clears the note you started.\n            </Dialog>\n          </Modal.Body>\n          <Modal.Footer>\n            <ButtonGroup>\n              <Button onClick={handleClose} rank=\"primary\">\n                Save note\n              </Button>\n              <Button onClick={requestClose} rank=\"secondary\">\n                Cancel\n              </Button>\n            </ButtonGroup>\n          </Modal.Footer>\n        </Modal>\n      </div>\n    );\n  }\n  return <WarnOnCloseExample />;\n};",
+          "description": "Type in the field, then try to close the modal with the close button, ESC, or a click on the\noverlay. Closing clears the note, so the modal asks first, in a `Dialog`, while there's one to\nlose; an empty modal closes straight away.\n\n`warnOnClose` uses the browser's `window.confirm`, so this story leaves it off and asks with a\n`Dialog` instead. The modal's `onClose` decides whether to ask, and the footer's Cancel button\ngoes through the same check. Save keeps the note, so it closes without asking. The `Dialog`\nrenders inside `Modal.Body` so it stacks above the modal.\n\nIf the note survived closing and reopening instead, closing would lose nothing and the\nwarning wouldn't be needed."
         },
         {
           "id": "components-modal--content-default",
@@ -7302,7 +7581,7 @@
           "description": "The close button comes from `IconProvider`, so it is the same affordance as every other\nclose in the app rather than something set per modal.\n\nShown non-interactive, like the other `Modal.Content` stories."
         }
       ],
-      "import": "import { Button, ButtonGroup, Heading, IconProvider, Modal, Text } from '@chanzuckerberg/eds';\nimport { Modal } from './Modal';\nimport Heading from '../../components/Heading';\nimport ButtonGroup from '../ButtonGroup';\nimport Button from '../Button';"
+      "import": "import { Button, ButtonGroup, Dialog, Heading, IconProvider, InputField, Modal, Text } from '@chanzuckerberg/eds';\nimport { Modal } from './Modal';\nimport Heading from '../../components/Heading';\nimport ButtonGroup from '../ButtonGroup';\nimport Button from '../Button';"
     },
     "components-numbericon": {
       "id": "components-numbericon",
@@ -11059,6 +11338,6 @@
   },
   "meta": {
     "docgen": "react-docgen-typescript",
-    "durationMs": 9013
+    "durationMs": 12131
   }
 }
