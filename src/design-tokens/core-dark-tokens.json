@@ -1255,7 +1255,7 @@
               "categorical": {
                 "1": {
                   "lowEmphasis": {
-                    "value": "{eds.color.green.100}",
+                    "value": "{eds.color.green.750}",
                     "description": "Tint for a Tag that labels categorical slot 1. Use sparingly; not for series fills, bands or row tints.",
                     "group": "color"
                   },
@@ -1267,31 +1267,31 @@
                 },
                 "2": {
                   "lowEmphasis": {
-                    "value": "{eds.color.blue.100}",
+                    "value": "{eds.color.blue.750}",
                     "description": "Tint for a Tag that labels categorical slot 2. Use sparingly; not for series fills, bands or row tints.",
                     "group": "color"
                   },
                   "highEmphasis": {
-                    "value": "{eds.color.blue.550}",
+                    "value": "{eds.color.blue.200}",
                     "description": "Second categorical series fill. Use only when slot 1 is already in use.",
                     "group": "color"
                   }
                 },
                 "3": {
                   "lowEmphasis": {
-                    "value": "{eds.color.neutral.100}",
+                    "value": "{eds.color.neutral.750}",
                     "description": "Tint for a Tag that labels categorical slot 3. Neutral rather than green so it does not read as a twin of slot 1's tint. Use sparingly.",
                     "group": "color"
                   },
                   "highEmphasis": {
-                    "value": "{eds.color.green.750}",
+                    "value": "{eds.color.green.100}",
                     "description": "Third categorical series fill. Use only when slots 1 and 2 are already in use.",
                     "group": "color"
                   }
                 },
                 "4": {
                   "lowEmphasis": {
-                    "value": "{eds.color.yellow.050}",
+                    "value": "{eds.color.yellow.650}",
                     "description": "Tint for a Tag that labels categorical slot 4. Use sparingly; not for series fills, bands or row tints.",
                     "group": "color"
                   },
@@ -1303,19 +1303,19 @@
                 },
                 "5": {
                   "lowEmphasis": {
-                    "value": "{eds.color.purple.100}",
+                    "value": "{eds.color.purple.750}",
                     "description": "Tint for a Tag that labels categorical slot 5. Use sparingly; not for series fills, bands or row tints.",
                     "group": "color"
                   },
                   "highEmphasis": {
-                    "value": "{eds.color.purple.650}",
+                    "value": "{eds.color.purple.550}",
                     "description": "Fifth categorical series fill. Use only when slots 1 through 4 are already in use.",
                     "group": "color"
                   }
                 },
                 "6": {
                   "lowEmphasis": {
-                    "value": "{eds.color.orange.100}",
+                    "value": "{eds.color.orange.750}",
                     "description": "Tint for a Tag that labels categorical slot 6. Use sparingly; not for series fills, bands or row tints.",
                     "group": "color"
                   },
@@ -1326,22 +1326,37 @@
                   }
                 },
                 "7": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.blue.650}",
+                    "description": "Tint for a Tag that labels categorical slot 7. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
                   "highEmphasis": {
-                    "value": "{eds.color.blue.200}",
-                    "description": "Seventh categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value.",
+                    "value": "{eds.color.blue.350}",
+                    "description": "Seventh categorical series fill. Light; give thin lines and small points extra weight.",
                     "group": "color"
                   }
                 },
                 "8": {
+                  "lowEmphasis": {
+                    "value": "{eds.color.red.750}",
+                    "description": "Tint for a Tag that labels categorical slot 8. Use sparingly; not for series fills, bands or row tints.",
+                    "group": "color"
+                  },
                   "highEmphasis": {
                     "value": "{eds.color.red.250}",
-                    "description": "Eighth and last categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value. Past eight series, use direct labels or pattern fills rather than more color.",
+                    "description": "Eighth and last categorical series fill. Light; give thin lines and small points extra weight. Past eight series, use direct labels or pattern fills rather than more color.",
                     "group": "color"
                   }
                 },
                 "other": {
-                  "value": "{eds.color.neutral.250}",
+                  "value": "{eds.color.neutral.650}",
                   "description": "Overflow bucket for series beyond the eighth, and the context marks when one mark is called out. Never a ninth identity the reader is expected to remember.",
+                  "group": "color"
+                },
+                "other-lowEmphasis": {
+                  "value": "{eds.color.neutral.750}",
+                  "description": "Tint for a Tag that labels the overflow bucket. Use sparingly; not for series fills, bands or row tints.",
                   "group": "color"
                 }
               },

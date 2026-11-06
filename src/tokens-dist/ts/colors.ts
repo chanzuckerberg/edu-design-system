@@ -264,11 +264,17 @@ export const EdsThemeColorBackgroundVisualizationCategorical6LowEmphasis =
   '#FFDCCA';
 export const EdsThemeColorBackgroundVisualizationCategorical6HighEmphasis =
   '#B8470F';
+export const EdsThemeColorBackgroundVisualizationCategorical7LowEmphasis =
+  '#D3EAFF';
 export const EdsThemeColorBackgroundVisualizationCategorical7HighEmphasis =
   '#98CDFF';
+export const EdsThemeColorBackgroundVisualizationCategorical8LowEmphasis =
+  '#F9DFDF';
 export const EdsThemeColorBackgroundVisualizationCategorical8HighEmphasis =
   '#FF9C99';
 export const EdsThemeColorBackgroundVisualizationCategoricalOther = '#BCB9B6';
+export const EdsThemeColorBackgroundVisualizationCategoricalOtherLowEmphasis =
+  '#E6E2DE';
 export const EdsThemeColorBackgroundVisualizationScalar1 = '#A1E1C4';
 export const EdsThemeColorBackgroundVisualizationScalar2 = '#1DB470';
 export const EdsThemeColorBackgroundVisualizationScalar3 = '#177A4D';
