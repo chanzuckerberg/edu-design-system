@@ -89,8 +89,9 @@ const preview: Preview = {
       themes: {
         light: 'light',
         dark: 'dark',
+        system: '',
       },
-      defaultTheme: '',
+      defaultTheme: 'system',
       attributeName: 'data-theme',
     }),
   ],

@@ -197,10 +197,5 @@ export const DarkColorScheme: StoryObj<Args> = {
     ...TypeScript.args,
     copyStyle: 'icon',
   },
-  globals: {
-    theme: 'dark',
-    backgrounds: {
-      value: 'background-utility-inverse-high-emphasis',
-    },
-  },
+  decorators: [(Story) => <div style={{ colorScheme: 'dark' }}>{Story()}</div>],
 };
