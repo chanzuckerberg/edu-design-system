@@ -1,12 +1,16 @@
 /**
- * LC Codeblock Light — theme for react-syntax-highlighter (Prism).
+ * LC Codeblock — theme for react-syntax-highlighter (Prism).
  *
  * Drop-in replacement for the `solarizedDarkAtom` import in CodeBlock.tsx.
- * Every color is an EDS tier-1 primitive; the token name is noted per value.
+ * Every color is a `light-dark()` pair of EDS tier-1 primitives; the dark value mirrors the
+ * light one across the scale (for example neutral-750 -> neutral-100). The token names are
+ * noted per value. Prism applies the theme as inline styles, and `light-dark()` resolves
+ * against the page `color-scheme`, which `design-tokens/css/base/body.css` sets from
+ * `<html data-theme>` or the operating system preference, like the component stylesheets.
  */
 export const base = {
-  color: '#3A3A37', // eds-color-neutral-750
-  background: '#FFFFFF', // eds-color-white
+  color: 'light-dark(#3A3A37, #E6E2DE)', // eds-color-neutral-750 / neutral-100
+  backgroundColor: 'light-dark(#FFFFFF, #242423)', // eds-color-white / neutral-850
   fontFamily: 'var(--eds-typography-font-family-3)',
   fontSize: '0.875rem',
   lineHeight: '1.6',
@@ -30,44 +34,44 @@ export default {
   },
 
   /* Recessive layer — greyscale only */
-  comment: { color: '#6B6A64', fontStyle: 'italic' }, // eds-color-neutral-550
-  prolog: { color: '#6B6A64', fontStyle: 'italic' },
-  doctype: { color: '#6B6A64', fontStyle: 'italic' },
-  cdata: { color: '#6B6A64', fontStyle: 'italic' },
+  comment: { color: 'light-dark(#6B6A64, #9B9997)', fontStyle: 'italic' }, // eds-color-neutral-550 / neutral-350
+  prolog: { color: 'light-dark(#6B6A64, #9B9997)', fontStyle: 'italic' },
+  doctype: { color: 'light-dark(#6B6A64, #9B9997)', fontStyle: 'italic' },
+  cdata: { color: 'light-dark(#6B6A64, #9B9997)', fontStyle: 'italic' },
 
-  punctuation: { color: '#55554E' }, // eds-color-neutral-650
-  operator: { color: '#55554E' },
-  entity: { color: '#55554E' },
-  'attr-name': { color: '#55554E' },
-  property: { color: '#55554E' },
+  punctuation: { color: 'light-dark(#55554E, #BCB9B6)' }, // eds-color-neutral-650 / neutral-250
+  operator: { color: 'light-dark(#55554E, #BCB9B6)' },
+  entity: { color: 'light-dark(#55554E, #BCB9B6)' },
+  'attr-name': { color: 'light-dark(#55554E, #BCB9B6)' },
+  property: { color: 'light-dark(#55554E, #BCB9B6)' },
 
-  /* Default-weight layer — inherits neutral-750 */
-  function: { color: '#3A3A37' }, // eds-color-neutral-750
-  'class-name': { color: '#3A3A37' },
-  variable: { color: '#3A3A37' },
-  builtin: { color: '#3A3A37' },
-  symbol: { color: '#3A3A37' },
+  /* Default-weight layer — inherits the base text color */
+  function: { color: 'light-dark(#3A3A37, #E6E2DE)' }, // eds-color-neutral-750 / neutral-100
+  'class-name': { color: 'light-dark(#3A3A37, #E6E2DE)' },
+  variable: { color: 'light-dark(#3A3A37, #E6E2DE)' },
+  builtin: { color: 'light-dark(#3A3A37, #E6E2DE)' },
+  symbol: { color: 'light-dark(#3A3A37, #E6E2DE)' },
 
-  /* Accent layer — green leads; all at the 650 step */
-  string: { color: '#125B3A' }, // eds-color-green-650 (== brand-LC-darkGreen)
-  char: { color: '#125B3A' },
-  'attr-value': { color: '#125B3A' },
-  regex: { color: '#125B3A' },
-  url: { color: '#125B3A' },
+  /* Accent layer — green leads; 650 step in light, 250 step in dark */
+  string: { color: 'light-dark(#125B3A, #5CCB98)' }, // eds-color-green-650 (== brand-LC-darkGreen) / green-250
+  char: { color: 'light-dark(#125B3A, #5CCB98)' },
+  'attr-value': { color: 'light-dark(#125B3A, #5CCB98)' },
+  regex: { color: 'light-dark(#125B3A, #5CCB98)' },
+  url: { color: 'light-dark(#125B3A, #5CCB98)' },
 
-  number: { color: '#6E3A88' }, // eds-color-purple-650
-  boolean: { color: '#6E3A88' },
-  constant: { color: '#6E3A88' },
+  number: { color: 'light-dark(#6E3A88, #D5A2EE)' }, // eds-color-purple-650 / purple-250
+  boolean: { color: 'light-dark(#6E3A88, #D5A2EE)' },
+  constant: { color: 'light-dark(#6E3A88, #D5A2EE)' },
 
-  keyword: { color: '#4D63CB' }, // eds-color-blue-550
-  atrule: { color: '#4D63CB' },
-  selector: { color: '#4D63CB' },
-  tag: { color: '#4D63CB' },
-  rule: { color: '#4D63CB' },
+  keyword: { color: 'light-dark(#4D63CB, #88BBFA)' }, // eds-color-blue-550 / blue-250
+  atrule: { color: 'light-dark(#4D63CB, #88BBFA)' },
+  selector: { color: 'light-dark(#4D63CB, #88BBFA)' },
+  tag: { color: 'light-dark(#4D63CB, #88BBFA)' },
+  rule: { color: 'light-dark(#4D63CB, #88BBFA)' },
 
-  deleted: { color: '#9D1F18' }, // eds-color-red-650
-  important: { color: '#9D1F18', fontWeight: 'bold' },
-  inserted: { color: '#0E442B' }, // eds-color-green-750
+  deleted: { color: 'light-dark(#9D1F18, #FF9C99)' }, // eds-color-red-650 / red-250
+  important: { color: 'light-dark(#9D1F18, #FF9C99)', fontWeight: 'bold' },
+  inserted: { color: 'light-dark(#0E442B, #A1E1C4)' }, // eds-color-green-750 / green-150
 
   bold: { fontWeight: 'bold' },
   italic: { fontStyle: 'italic' },
