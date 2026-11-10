@@ -139,7 +139,7 @@ export const EdsDarkThemeColorBackgroundUtilityInverseDisabled =
 export const EdsDarkThemeColorBackgroundVisualizationCategorical1LowEmphasis =
   '#0E442B';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical1HighEmphasis =
-  '#5CCB98';
+  '#19955D';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical2LowEmphasis =
   '#2B3770';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical2HighEmphasis =
@@ -149,23 +149,31 @@ export const EdsDarkThemeColorBackgroundVisualizationCategorical3LowEmphasis =
 export const EdsDarkThemeColorBackgroundVisualizationCategorical3HighEmphasis =
   '#C2ECD9';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical4LowEmphasis =
-  '#392F01';
+  '#625101';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical4HighEmphasis =
-  '#DFCC32';
+  '#CDB825';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical5LowEmphasis =
   '#562D69';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical5HighEmphasis =
-  '#EAD1F6';
+  '#8A50A7';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical6LowEmphasis =
   '#672808';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical6HighEmphasis =
-  '#FFB38D';
+  '#B8470F';
+export const EdsDarkThemeColorBackgroundVisualizationCategorical7LowEmphasis =
+  '#3C4D9D';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical7HighEmphasis =
-  '#4D63CB';
+  '#7398FD';
+export const EdsDarkThemeColorBackgroundVisualizationCategorical8LowEmphasis =
+  '#760903';
 export const EdsDarkThemeColorBackgroundVisualizationCategorical8HighEmphasis =
-  '#EA4941';
+  '#FF9C99';
 export const EdsDarkThemeColorBackgroundVisualizationCategoricalOther =
-  '#83827E';
+  '#55554E'; // TODO(next-major): remove in the next major version of EDS
+export const EdsDarkThemeColorBackgroundVisualizationCategoricalOtherLowEmphasis =
+  '#3A3A37';
+export const EdsDarkThemeColorBackgroundVisualizationCategoricalOtherHighEmphasis =
+  '#BCB9B6';
 export const EdsDarkThemeColorBackgroundVisualizationScalar0 = '#30302E';
 export const EdsDarkThemeColorBackgroundVisualizationScalar1 = '#125B3A';
 export const EdsDarkThemeColorBackgroundVisualizationScalar2 = '#1DB470';
