@@ -518,12 +518,15 @@
                 "highEmphasis": "#B8470F"
               },
               "7": {
+                "lowEmphasis": "#D3EAFF",
                 "highEmphasis": "#98CDFF"
               },
               "8": {
+                "lowEmphasis": "#F9DFDF",
                 "highEmphasis": "#FF9C99"
               },
-              "other": "#BCB9B6"
+              "other": "#BCB9B6",
+              "other-lowEmphasis": "#E6E2DE"
             },
             "scalar": {
               "1": "#A1E1C4",
