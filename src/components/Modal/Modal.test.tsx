@@ -382,7 +382,7 @@ describe('Modal', () => {
 
   /**
    * An lg modal shrinks to its content when that content is shorter than the lg max height
-   * (`100vh - spacing-size-12`). The test DOM has no layout, so these tests stand in for it:
+   * (`100dvh - spacing-size-12`). The test DOM has no layout, so these tests stand in for it:
    * the modal is 300px with a 100px scroll area (200px of header, footer, and border), the
    * window is 900px, and spacing-size-12 is 48px, which puts the lg max height at 852px.
    */

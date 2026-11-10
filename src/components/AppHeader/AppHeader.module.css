@@ -74,12 +74,12 @@
 
 @define-mixin app-header-vertical {
   width: 240px;
-  height: 100vh;
+  height: 100dvh;
 
   
   &.app-header--style-floating {
     /* remove the outer margins from the height when floating */
-    height: calc(100vh - (calc(var(--eds-spacing-size-6) * 1px)));
+    height: calc(100dvh - (calc(var(--eds-spacing-size-6) * 1px)));
   }
   
   & > div {
