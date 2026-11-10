@@ -47,9 +47,10 @@ export type CodeBlockProps = {
  *
  * ## Interaction
  *
- * `CodeBlock` allows for displaying syntax highlighting with a fixed theme. It also includes the
- * ability to show a copy button which, when clicked, will copy the code block to the user's
- * clipboard.
+ * `CodeBlock` displays syntax highlighting with a theme that follows the page color scheme:
+ * `<html data-theme="light|dark">` when set, otherwise the operating system preference. It also
+ * includes the ability to show a copy button which, when clicked, will copy the code block to
+ * the user's clipboard.
  *
  * ## Content & Accessibility
  *
