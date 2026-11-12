@@ -255,7 +255,7 @@ export const EdsThemeColorBackgroundVisualizationCategorical3HighEmphasis =
 export const EdsThemeColorBackgroundVisualizationCategorical4LowEmphasis =
   '#FFF2D2';
 export const EdsThemeColorBackgroundVisualizationCategorical4HighEmphasis =
-  '#DFCC32';
+  '#FAC33D';
 export const EdsThemeColorBackgroundVisualizationCategorical5LowEmphasis =
   '#F3E5FA';
 export const EdsThemeColorBackgroundVisualizationCategorical5HighEmphasis =
@@ -329,7 +329,7 @@ export const EdsThemeColorBorderUtilityInverseDisabled =
 export const EdsThemeColorBorderVisualizationCategorical1 = '#0E442B';
 export const EdsThemeColorBorderVisualizationCategorical2 = '#4D63CB';
 export const EdsThemeColorBorderVisualizationCategorical3 = '#177A4D';
-export const EdsThemeColorBorderVisualizationCategorical4 = '#7E6701';
+export const EdsThemeColorBorderVisualizationCategorical4 = '#915E09';
 export const EdsThemeColorBorderVisualizationCategorical5 = '#562D69';
 export const EdsThemeColorBorderVisualizationCategorical6 = '#B8470F';
 export const EdsThemeColorBorderVisualizationCategorical7 = '#4D63CB';
