@@ -1639,6 +1639,46 @@
                 "group": "color"
               }
             }
+          },
+          "visualization": {
+            "categorical": {
+              "1": {
+                "value": "{eds.color.green.750}",
+                "group": "color"
+              },
+              "2": {
+                "value": "{eds.color.blue.550}",
+                "group": "color"
+              },
+              "3": {
+                "value": "{eds.color.green.550}",
+                "group": "color"
+              },
+              "4": {
+                "value": "{eds.color.yellow.550}",
+                "group": "color"
+              },
+              "5": {
+                "value": "{eds.color.purple.750}",
+                "group": "color"
+              },
+              "6": {
+                "value": "{eds.color.orange.550}",
+                "group": "color"
+              },
+              "7": {
+                "value": "{eds.color.blue.550}",
+                "group": "color"
+              },
+              "8": {
+                "value": "{eds.color.red.550}",
+                "group": "color"
+              },
+              "other": {
+                "value": "{eds.color.neutral.550}",
+                "group": "color"
+              }
+            }
           }
         },
         "icon": {

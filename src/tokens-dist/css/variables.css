@@ -312,6 +312,15 @@
   --eds-theme-color-icon-utility-default-primary-active: var(--eds-color-neutral-950);
   --eds-theme-color-icon-utility-default-primary-hover: var(--eds-color-neutral-850);
   --eds-theme-color-icon-utility-default-primary: var(--eds-color-neutral-750);
+  --eds-theme-color-border-visualization-categorical-other: var(--eds-color-neutral-550);
+  --eds-theme-color-border-visualization-categorical-8: var(--eds-color-red-550);
+  --eds-theme-color-border-visualization-categorical-7: var(--eds-color-blue-550);
+  --eds-theme-color-border-visualization-categorical-6: var(--eds-color-orange-550);
+  --eds-theme-color-border-visualization-categorical-5: var(--eds-color-purple-750);
+  --eds-theme-color-border-visualization-categorical-4: var(--eds-color-yellow-550);
+  --eds-theme-color-border-visualization-categorical-3: var(--eds-color-green-550);
+  --eds-theme-color-border-visualization-categorical-2: var(--eds-color-blue-550);
+  --eds-theme-color-border-visualization-categorical-1: var(--eds-color-green-750);
   --eds-theme-color-border-utility-inverse: var(--eds-color-white);
   --eds-theme-color-border-utility-focus: var(--eds-color-green-450);
   --eds-theme-color-border-utility-disabled: var(--eds-color-neutral-200);
