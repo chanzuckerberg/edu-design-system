@@ -5,6 +5,7 @@ import React from 'react';
 
 import { PageNotification } from './PageNotification';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import Button from '../Button';
 import { IconProvider } from '../Icon';
 
@@ -44,6 +45,9 @@ export default {
 type Args = React.ComponentProps<typeof PageNotification>;
 
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     subTitle: 'Body text which provides additional detail',
     'aria-label': 'Default alert title',

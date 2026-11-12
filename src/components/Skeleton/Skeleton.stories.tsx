@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Skeleton } from './Skeleton';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/Skeleton',
@@ -32,6 +33,9 @@ type Story = StoryObj<typeof Skeleton>;
  * The default shape for a skeleton is a Rounded rectangle with an optional animation.
  */
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     width: 100,
     height: 100,

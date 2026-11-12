@@ -986,7 +986,7 @@
             "interactive": {
               "noEmphasis": {
                 "@": {
-                  "value": "rgba(250, 249, 248, 0.00)",
+                  "value": "rgba(255, 255, 255, 0.00)",
                   "description": "Interactive objects with a transparent background, like interactive secondary and tertiary buttons.",
                   "group": "color"
                 },
@@ -1211,7 +1211,7 @@
             "inverse": {
               "noEmphasis": {
                 "@": {
-                  "value": "rgba(250, 249, 248, 0.00)",
+                  "value": "rgba(255, 255, 255, 0.00)",
                   "description": "Objects with a transparent background on an inverted layout, like inverse secondary and tertiary buttons.",
                   "group": "color"
                 },
@@ -1259,7 +1259,7 @@
                   "group": "color"
                 },
                 "highEmphasis": {
-                  "value": "{eds.color.green.450}",
+                  "value": "{eds.color.green.750}",
                   "description": "First categorical series fill for unordered groups in charts. Take categorical slots in order, starting here. Also the called-out mark when one mark is highlighted against the rest.",
                   "group": "color"
                 }
@@ -1278,12 +1278,12 @@
               },
               "3": {
                 "lowEmphasis": {
-                  "value": "{eds.color.neutral.100}",
+                  "value": "{eds.color.green.100}",
                   "description": "Tint for a Tag that labels categorical slot 3. Neutral rather than green so it does not read as a twin of slot 1's tint. Use sparingly.",
                   "group": "color"
                 },
                 "highEmphasis": {
-                  "value": "{eds.color.green.750}",
+                  "value": "{eds.color.green.450}",
                   "description": "Third categorical series fill. Use only when slots 1 and 2 are already in use.",
                   "group": "color"
                 }
@@ -1295,7 +1295,7 @@
                   "group": "color"
                 },
                 "highEmphasis": {
-                  "value": "{eds.color.yellow.250}",
+                  "value": "{eds.color.yellow.200}",
                   "description": "Fourth categorical series fill. Light; give thin lines and small points extra weight. Shares a primitive with the warning high-emphasis background, so keep warning Tags out of plot areas that use it.",
                   "group": "color"
                 }
@@ -1307,7 +1307,7 @@
                   "group": "color"
                 },
                 "highEmphasis": {
-                  "value": "{eds.color.purple.650}",
+                  "value": "{eds.color.purple.750}",
                   "description": "Fifth categorical series fill. Use only when slots 1 through 4 are already in use.",
                   "group": "color"
                 }
@@ -1325,6 +1325,11 @@
                 }
               },
               "7": {
+                "lowEmphasis": {
+                  "value": "{eds.color.blue.100}",
+                  "description": "Seventh categorical series fill. Use only when slots 1 through 6 are already in use.",
+                  "group": "color"
+                },
                 "highEmphasis": {
                   "value": "{eds.color.blue.200}",
                   "description": "Seventh categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value.",
@@ -1332,6 +1337,11 @@
                 }
               },
               "8": {
+                "lowEmphasis": {
+                  "value": "{eds.color.red.100}",
+                  "description": "Eighth categorical series fill. Use only when slots 1 through 7 are already in use.",
+                  "group": "color"
+                },
                 "highEmphasis": {
                   "value": "{eds.color.red.250}",
                   "description": "Eighth and last categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value. Past eight series, use direct labels or pattern fills rather than more color.",
@@ -1339,15 +1349,28 @@
                 }
               },
               "other": {
-                "value": "{eds.color.neutral.250}",
-                "description": "Overflow bucket for series beyond the eighth, and the context marks when one mark is called out. Never a ninth identity the reader is expected to remember.",
-                "group": "color"
+                "@": {
+                  "value": "{eds.color.neutral.250}",
+                  "description": "Overflow bucket for series beyond the eighth, and the context marks when one mark is called out. Never a ninth identity the reader is expected to remember.",
+                  "group": "color",
+                  "comment": "TODO(next-major): remove in the next major version of EDS"
+                },
+                "lowEmphasis": {
+                  "value": "{eds.color.neutral.100}",
+                  "description": "Overflow bucket for series beyond the eighth, and the context marks when one mark is called out. Never a ninth identity the reader is expected to remember.",
+                  "group": "color"
+                },
+                "highEmphasis": {
+                  "value": "{eds.color.neutral.250}",
+                  "description": "Overflow bucket for series beyond the eighth, and the context marks when one mark is called out. Never a ninth identity the reader is expected to remember.",
+                  "group": "color"
+                }
               }
             },
             "scalar": {
-              "basis": {
+              "0": {
                 "value": "{eds.color.neutral.050}",
-                "description": "A measured value of zero on a scalar (magnitude) scale. Not for missing data, which is shown as no fill plus a dash.",
+                "description": "The zeroth scalar value",
                 "group": "color"
               },
               "1": {
@@ -1369,6 +1392,11 @@
                 "value": "{eds.color.green.750}",
                 "description": "Highest of four scalar bins.",
                 "group": "color"
+              },
+              "basis": {
+                "value": "{eds.color.neutral.050}",
+                "description": "A measured value of zero on a scalar (magnitude) scale. Not for missing data, which is shown as no fill plus a dash.",
+                "group": "color"
               }
             },
             "divergent": {
@@ -1378,9 +1406,9 @@
                 "group": "color"
               },
               "minus": {
-                "3": {
-                  "value": "{eds.color.blue.650}",
-                  "description": "Furthest below the reference value on a divergent scale.",
+                "1": {
+                  "value": "{eds.color.blue.250}",
+                  "description": "Just below the reference value on a divergent scale.",
                   "group": "color"
                 },
                 "2": {
@@ -1388,15 +1416,15 @@
                   "description": "Second step below the reference value on a divergent scale.",
                   "group": "color"
                 },
-                "1": {
-                  "value": "{eds.color.blue.200}",
-                  "description": "Just below the reference value on a divergent scale.",
+                "3": {
+                  "value": "{eds.color.blue.650}",
+                  "description": "Furthest below the reference value on a divergent scale.",
                   "group": "color"
                 }
               },
               "plus": {
                 "1": {
-                  "value": "{eds.color.orange.200}",
+                  "value": "{eds.color.orange.250}",
                   "description": "Just above the reference value on a divergent scale.",
                   "group": "color"
                 },
@@ -1608,6 +1636,46 @@
               "disabled": {
                 "value": "rgba(250, 249, 248, 0.50)",
                 "description": "Disabled border for inverse objects like inverse secondary buttons.",
+                "group": "color"
+              }
+            }
+          },
+          "visualization": {
+            "categorical": {
+              "1": {
+                "value": "{eds.color.green.750}",
+                "group": "color"
+              },
+              "2": {
+                "value": "{eds.color.blue.550}",
+                "group": "color"
+              },
+              "3": {
+                "value": "{eds.color.green.550}",
+                "group": "color"
+              },
+              "4": {
+                "value": "{eds.color.yellow.550}",
+                "group": "color"
+              },
+              "5": {
+                "value": "{eds.color.purple.750}",
+                "group": "color"
+              },
+              "6": {
+                "value": "{eds.color.orange.550}",
+                "group": "color"
+              },
+              "7": {
+                "value": "{eds.color.blue.550}",
+                "group": "color"
+              },
+              "8": {
+                "value": "{eds.color.red.550}",
+                "group": "color"
+              },
+              "other": {
+                "value": "{eds.color.neutral.550}",
                 "group": "color"
               }
             }

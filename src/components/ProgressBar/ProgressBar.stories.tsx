@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { ProgressBar } from './ProgressBar';
+import { themeModes } from '../../util/modes';
 import Card from '../Card';
 import Text from '../Text';
 
@@ -26,6 +27,9 @@ type Args = React.ComponentProps<typeof ProgressBar>;
  * By default, `ProgressBar` uses vertical label layout, standalone context.
  */
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     'aria-label': '33 percent',
     value: 0.33,

@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 import { Link, type LinkProps } from './Link';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import { IconProvider } from '../Icon';
 import Text from '../Text';
 
@@ -25,14 +26,22 @@ export default {
     onClick: (event: any) => event.preventDefault(),
   },
   decorators: [
-    (Story) => <div className="text-utility-default-primary">{Story()}</div>,
+    (Story) => (
+      <div className="text-utility-default-primary dark:text-dark-utility-default-primary">
+        {Story()}
+      </div>
+    ),
   ],
   tags: ['autodocs', 'version:3.1.0'],
 } as Meta<typeof Link>;
 
 type Story = StoryObj<typeof Link>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 /**
  * When using standalone context, you can specify which role the trailing icon fills.

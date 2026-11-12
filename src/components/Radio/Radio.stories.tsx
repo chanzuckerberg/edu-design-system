@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Radio } from './Radio';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/Radio',
@@ -23,6 +24,9 @@ type Args = React.ComponentProps<typeof Radio>;
 type Story = StoryObj<Args>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     name: 'option-1',
     label: 'Option 1',
