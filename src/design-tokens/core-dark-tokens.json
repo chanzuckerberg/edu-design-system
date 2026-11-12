@@ -1362,7 +1362,7 @@
                     "group": "color"
                   },
                   "highEmphasis": {
-                    "value": "{eds.color.neutral.250}",
+                    "value": "{eds.color.neutral.650}",
                     "description": "Overflow bucket for series beyond the eighth, and the context marks when one mark is called out. Never a ninth identity the reader is expected to remember.",
                     "group": "color"
                   }
@@ -1637,6 +1637,46 @@
                 "disabled": {
                   "value": "rgba(244, 241, 239, 0.50)",
                   "description": "Disabled border for inverse objects like inverse secondary buttons.",
+                  "group": "color"
+                }
+              }
+            },
+            "visualization": {
+              "categorical": {
+                "1": {
+                  "value": "{eds.color.green.350}",
+                  "group": "color"
+                },
+                "2": {
+                  "value": "{eds.color.blue.200}",
+                  "group": "color"
+                },
+                "3": {
+                  "value": "{eds.color.green.100}",
+                  "group": "color"
+                },
+                "4": {
+                  "value": "{eds.color.yellow.250}",
+                  "group": "color"
+                },
+                "5": {
+                  "value": "{eds.color.purple.350}",
+                  "group": "color"
+                },
+                "6": {
+                  "value": "{eds.color.orange.350}",
+                  "group": "color"
+                },
+                "7": {
+                  "value": "{eds.color.blue.350}",
+                  "group": "color"
+                },
+                "8": {
+                  "value": "{eds.color.red.250}",
+                  "group": "color"
+                },
+                "other": {
+                  "value": "{eds.color.neutral.350}",
                   "group": "color"
                 }
               }

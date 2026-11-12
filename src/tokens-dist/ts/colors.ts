@@ -326,6 +326,15 @@ export const EdsThemeColorBorderUtilityFocus = '#19955D';
 export const EdsThemeColorBorderUtilityInverse = '#FFFFFF';
 export const EdsThemeColorBorderUtilityInverseDisabled =
   'rgba(250, 249, 248, 0.50)';
+export const EdsThemeColorBorderVisualizationCategorical1 = '#0E442B';
+export const EdsThemeColorBorderVisualizationCategorical2 = '#4D63CB';
+export const EdsThemeColorBorderVisualizationCategorical3 = '#177A4D';
+export const EdsThemeColorBorderVisualizationCategorical4 = '#7E6701';
+export const EdsThemeColorBorderVisualizationCategorical5 = '#562D69';
+export const EdsThemeColorBorderVisualizationCategorical6 = '#B8470F';
+export const EdsThemeColorBorderVisualizationCategorical7 = '#4D63CB';
+export const EdsThemeColorBorderVisualizationCategorical8 = '#C4352D';
+export const EdsThemeColorBorderVisualizationCategoricalOther = '#6B6A64';
 export const EdsThemeColorIconUtilityDefaultPrimary = '#3A3A37';
 export const EdsThemeColorIconUtilityDefaultPrimaryHover = '#242423';
 export const EdsThemeColorIconUtilityDefaultPrimaryActive = '#0E0E0E';
