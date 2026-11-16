@@ -18,11 +18,14 @@ export default {
         'The persistent navigation element that appears at the bottom of a page, which provides sitemap links, space for a logo, and quick access to key actions and information. It anchors the user experience by ensuring consistent access to core functionality across all pages, which largely point to other company-wide resources. It also serves as the <footer> for accessibility landmarks.',
     },
     chromatic: {
-      modes: viewportModes(
-        chromaticViewports.googlePixel2,
-        chromaticViewports.ipadMini,
-        chromaticViewports.chromebook,
-      ),
+      modes: {
+        ...themeModes,
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+        ),
+      },
     },
   },
 
@@ -58,9 +61,6 @@ export default {
 type Story = StoryObj<typeof AppFooter>;
 
 export const Default: Story = {
-  parameters: {
-    chromatic: { modes: { dark: themeModes.dark } },
-  },
   args: {},
 };
 

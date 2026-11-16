@@ -29,11 +29,14 @@ export default {
       // Using this motion preference for components where they trigger animations on mount
       prefersReducedMotion: 'reduce',
       delay: 500,
-      modes: viewportModes(
-        chromaticViewports.googlePixel2,
-        chromaticViewports.ipadMini,
-        chromaticViewports.chromebook,
-      ),
+      modes: {
+        ...themeModes,
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+        ),
+      },
     },
   },
 
@@ -48,9 +51,6 @@ type Story = StoryObj<typeof AppHeader>;
  * Use the `meta:` object in the nav item object to pass in additional information.
  */
 export const Default: Story = {
-  parameters: {
-    chromatic: { modes: { dark: themeModes.dark } },
-  },
   args: {
     title: 'Bodies of water',
     subTitle: "They're cool!",

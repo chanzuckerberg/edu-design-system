@@ -96,11 +96,11 @@ export const Default: StoryObj<Args> = {
   parameters: {
     chromatic: {
       modes: {
+        ...themeModes,
         ...viewportModes(
           chromaticViewports.googlePixel2,
           chromaticViewports.chromebook,
         ),
-        ...themeModes,
       },
     },
   },

@@ -93,6 +93,7 @@ export const Default: Story = {
     ...sharedParameters,
     chromatic: {
       modes: {
+        ...themeModes,
         ...viewportModes(
           chromaticViewports.googlePixel2,
           chromaticViewports.ipadMini,
@@ -100,7 +101,6 @@ export const Default: Story = {
           chromaticViewports.chromebook,
           chromaticViewports.macbookPro,
         ),
-        dark: themeModes.dark,
       },
     },
   },

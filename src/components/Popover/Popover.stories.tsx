@@ -18,13 +18,6 @@ export default {
         'A small, lightweight overlay or floating container that appears over other content to provide additional information, options, or actions without navigating away from the current screen.',
     },
     layout: 'centered',
-    chromatic: {
-      // These stories are very flaky, though we're not sure why.
-      // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
-      disableSnapshot: true,
-    },
-    // Using this motion preference for components where they trigger animations on mount
-    // chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
   },
   args: {
     children: (

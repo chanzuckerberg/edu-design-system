@@ -31,12 +31,14 @@ export default {
         'Tables display and organize data in a structured format. They include customizations for size, style, interactivity, and data presentation.',
     },
     chromatic: {
-      modes: viewportModes(
-        chromaticViewports.ipadMini,
-        chromaticViewports.chromebook,
-        chromaticViewports.googlePixel2,
-      ),
-      ...themeModes,
+      modes: {
+        ...themeModes,
+        ...viewportModes(
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+          chromaticViewports.googlePixel2,
+        ),
+      },
     },
   },
   argTypes: {
