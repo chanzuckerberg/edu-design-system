@@ -1395,7 +1395,7 @@
                   "group": "color"
                 },
                 "basis": {
-                  "value": "{eds.color.neutral.050}",
+                  "value": "{eds.color.neutral.800}",
                   "description": "A measured value of zero on a scalar (magnitude) scale. Not for missing data, which is shown as no fill plus a dash.",
                   "group": "color"
                 }
@@ -1891,6 +1891,68 @@
                 "value": "{eds.color.neutral.200}",
                 "group": "color"
               }
+            },
+            "visualization": {
+              "categorical": {
+                "1": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "2": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "3": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "4": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "5": {
+                  "highEmphasis": {
+                    "value": "{eds.color.white}",
+                    "group": "color"
+                  }
+                },
+                "6": {
+                  "highEmphasis": {
+                    "value": "{eds.color.white}",
+                    "group": "color"
+                  }
+                },
+                "7": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "8": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "other": {
+                  "highEmphasis": {
+                    "value": "{eds.color.white}",
+                    "group": "color"
+                  }
+                },
+                "lowEmphasis": {
+                  "value": "{eds.color.white}",
+                  "group": "color"
+                }
+              }
             }
           },
           "text": {
@@ -2108,6 +2170,66 @@
                 "value": "{eds.color.neutral.900}",
                 "description": "Text sitting on a visualization fill whose primitive is at grade 550 or darker: categorical slots 2, 3, 5 and 6, scalar steps 3 and 4, and divergent steps 3.",
                 "group": "color"
+              },
+              "categorical": {
+                "1": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "2": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "3": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "4": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "5": {
+                  "highEmphasis": {
+                    "value": "{eds.color.white}",
+                    "group": "color"
+                  }
+                },
+                "6": {
+                  "highEmphasis": {
+                    "value": "{eds.color.white}",
+                    "group": "color"
+                  }
+                },
+                "7": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "8": {
+                  "highEmphasis": {
+                    "value": "{eds.color.black}",
+                    "group": "color"
+                  }
+                },
+                "other": {
+                  "highEmphasis": {
+                    "value": "{eds.color.white}",
+                    "group": "color"
+                  }
+                },
+                "lowEmphasis": {
+                  "value": "{eds.color.white}",
+                  "group": "color"
+                }
               }
             }
           },

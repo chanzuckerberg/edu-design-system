@@ -695,6 +695,38 @@
             },
             "placeholder": "#6B6A64"
           },
+          "visualization": {
+            "categorical": {
+              "1": {
+                "highEmphasis": "#FFFFFF"
+              },
+              "2": {
+                "highEmphasis": "#FFFFFF"
+              },
+              "3": {
+                "highEmphasis": "#000000"
+              },
+              "4": {
+                "highEmphasis": "#000000"
+              },
+              "5": {
+                "highEmphasis": "#FFFFFF"
+              },
+              "6": {
+                "highEmphasis": "#FFFFFF"
+              },
+              "7": {
+                "highEmphasis": "#000000"
+              },
+              "8": {
+                "highEmphasis": "#000000"
+              },
+              "other": {
+                "highEmphasis": "#000000"
+              },
+              "lowEmphasis": "#000000"
+            }
+          },
           "appHeader": {
             "primary": "#3A3A37",
             "secondary": "#6B6A64"
@@ -769,7 +801,37 @@
           "headline": "#242423",
           "visualization": {
             "default": "#000000",
-            "inverse": "#FFFFFF"
+            "inverse": "#FFFFFF",
+            "categorical": {
+              "1": {
+                "highEmphasis": "#FFFFFF"
+              },
+              "2": {
+                "highEmphasis": "#FFFFFF"
+              },
+              "3": {
+                "highEmphasis": "#000000"
+              },
+              "4": {
+                "highEmphasis": "#000000"
+              },
+              "5": {
+                "highEmphasis": "#FFFFFF"
+              },
+              "6": {
+                "highEmphasis": "#FFFFFF"
+              },
+              "7": {
+                "highEmphasis": "#000000"
+              },
+              "8": {
+                "highEmphasis": "#000000"
+              },
+              "other": {
+                "highEmphasis": "#000000"
+              },
+              "lowEmphasis": "#000000"
+            }
           }
         },
         "text-highlight": {
