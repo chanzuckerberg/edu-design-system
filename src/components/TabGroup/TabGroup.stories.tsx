@@ -100,7 +100,7 @@ export const Default: StoryObj<Args> = {
           chromaticViewports.googlePixel2,
           chromaticViewports.chromebook,
         ),
-        dark: themeModes.dark,
+        ...themeModes,
       },
     },
   },
@@ -187,14 +187,7 @@ export const Centered: StoryObj<Args> = {
   args: {
     align: 'center',
   },
-  parameters: {
-    chromatic: {
-      modes: viewportModes(
-        chromaticViewports.googlePixel2,
-        chromaticViewports.chromebook,
-      ),
-    },
-  },
+  parameters: Default.parameters,
 };
 
 /**
@@ -207,12 +200,14 @@ export const TabWidthFull: StoryObj<Args> = {
     ...Centered.args,
     tabWidth: 'full',
   },
+  parameters: Default.parameters,
 };
 
 /**
  * Individual tabs can have an EDS icon attached to them
  */
 export const WithTabIcons: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     ...Centered.args,
     children: (
@@ -400,6 +395,7 @@ export const ScrollMiddle: StoryObj<Args> = {
   },
 
   parameters: {
+    ...Default.parameters,
     // Skip these b/c test environment cannot execute "scroll" on the parent div
     snapshot: { skip: true },
 
@@ -428,6 +424,8 @@ export const ScrollMiddle: StoryObj<Args> = {
  * that happened to be picked.
  */
 export const WithFpoTabContent: StoryObj<Args> = {
+  parameters: Default.parameters,
+
   args: {
     ...Centered.args,
     children: (

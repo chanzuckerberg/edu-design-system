@@ -6,6 +6,7 @@ import React from 'react';
 import { userEvent, within } from 'storybook/test';
 import { Popover } from './Popover';
 import type { PopoverProps } from './Popover';
+import { themeModes } from '../../util/modes';
 import Button from '../Button';
 
 export default {
@@ -81,6 +82,7 @@ type Story = StoryObj<PopoverProps>;
 
 export const Default: Story = {
   parameters: {
+    chromatic: { modes: themeModes },
     docs: {
       source: {
         code: `
@@ -115,6 +117,7 @@ export const Default: Story = {
  */
 export const Top: Story = {
   parameters: {
+    chromatic: { modes: themeModes },
     docs: {
       source: {
         code: `
@@ -161,6 +164,9 @@ export const Top: Story = {
  * The trigger for `Popover` can receive focus, by convention.
  */
 export const FocusClickableElement: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   play: async ({ canvasElement }) => {
     // We want to test visual regression for the Popover.Content as well as the button,
     // but don't want the drawer open initally outside Chromatic.

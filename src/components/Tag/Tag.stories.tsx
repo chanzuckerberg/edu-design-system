@@ -67,6 +67,7 @@ export const WithIcon: Story = {
 };
 
 export const LowEmphasisInformational: Story = {
+  parameters: Default.parameters,
   args: {
     icon: 'document',
     label: 'API Docs',
