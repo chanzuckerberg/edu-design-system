@@ -310,6 +310,7 @@ export const ImageLogoFocus: Story = {
   },
   play: async () => {
     await userEvent.tab();
+    await userEvent.tab();
   },
 };
 
@@ -326,6 +327,7 @@ export const VerticalImageLogoFocus: Story = {
     },
   },
   play: async () => {
+    await userEvent.tab();
     await userEvent.tab();
   },
 };
