@@ -79,12 +79,12 @@
   &:disabled::placeholder {
     cursor: not-allowed;
 
-    color: light-dark(var(--eds-theme-color-text-utility-disabled-primary), var(--eds-dark-theme-color-text-utility-disabled-primary));
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-secondary), var(--eds-dark-theme-color-text-utility-disabled-secondary));
     border-color: light-dark(var(--eds-theme-color-border-utility-disabled), var(--eds-dark-theme-color-border-utility-disabled));
     background-color: light-dark(var(--eds-theme-color-background-utility-disabled-low-emphasis), var(--eds-dark-theme-color-background-utility-disabled-low-emphasis));
   }
 
   &::placeholder {
-    color: var(--eds-theme-color-text-utility-default-secondary);
+    color: light-dark(var(--eds-theme-color-text-utility-disabled-secondary), var(--eds-dark-theme-color-text-utility-disabled-secondary))
   }
 }

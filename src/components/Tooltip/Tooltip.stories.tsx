@@ -56,6 +56,7 @@ export default {
       delay: 750,
       diffThreshold,
       diffIncludeAntiAliasing: false,
+      chromatic: { modes: themeModes },
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
@@ -73,9 +74,6 @@ export const Default: Story = {
   args: {
     children: <div className="fpo p-1">Target Component</div>,
   },
-  parameters: {
-    chromatic: { modes: themeModes },
-  },
 };
 
 /**
@@ -87,13 +85,9 @@ export const LeftPlacement: Story = {
     placement: 'left',
     children: <div className="fpo p-1">Target Component</div>,
   },
-  parameters: {
-    ...Default.parameters,
-  },
 };
 
 export const TopPlacement: Story = {
-  parameters: LeftPlacement.parameters,
   args: {
     placement: 'top',
     children: <div className="fpo p-1">Target Component</div>,
@@ -101,7 +95,6 @@ export const TopPlacement: Story = {
 };
 
 export const BottomPlacement: Story = {
-  parameters: LeftPlacement.parameters,
   args: {
     placement: 'bottom',
     children: <div className="fpo p-1">Target Component</div>,
@@ -109,7 +102,6 @@ export const BottomPlacement: Story = {
 };
 
 export const LongText: Story = {
-  parameters: LeftPlacement.parameters,
   args: {
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a erat eu augue consequat eleifend non vel sem. Praesent efficitur mauris ac leo semper accumsan. Donec posuere semper fermentum. Vivamus venenatis laoreet venenatis. Sed consectetur, dolor sed tristique vehicula, sapien nulla convallis odio, et tempus urna mi eu leo. Phasellus a venenatis sapien. Cras massa lectus, sollicitudin id nulla id, laoreet facilisis est.',
@@ -121,14 +113,12 @@ export const LongTriggerText: Story = {
     children: <div className="fpo p-1">Longer text to test placement</div>,
   },
   parameters: {
-    ...LeftPlacement.parameters,
     // Sets the delay (in milliseconds) for a specific story.
     chromatic: { delay: 300 },
   },
 };
 
 export const InverseVariant: Story = {
-  parameters: LeftPlacement.parameters,
   args: {
     ...LeftPlacement.args,
     variant: 'inverse',
@@ -144,7 +134,6 @@ export const InverseVariant: Story = {
  * Hover over the button to make the tooltip appear.
  */
 export const Interactive: Story = {
-  parameters: LeftPlacement.parameters,
   args: {
     // reset prop values defined in defaultArgs
     duration: undefined,
@@ -157,7 +146,6 @@ export const Interactive: Story = {
  * Hover over the button to make the tooltip appear.
  */
 export const InteractiveDisabled: Story = {
-  parameters: LeftPlacement.parameters,
   args: {
     duration: undefined,
   },
@@ -177,7 +165,6 @@ export const InteractiveDisabled: Story = {
  * Tooltips can have formmatted content within the popover. Usage of standard HTML tags or EDS components allowed.
  */
 export const FormattedContent: Story = {
-  parameters: LeftPlacement.parameters,
   args: {
     content: (
       <>

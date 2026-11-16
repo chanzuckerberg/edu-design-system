@@ -51,8 +51,8 @@ export function DocsContainer({
 }: PropsWithChildren<DocsContainerProps>) {
   const themeGlobal = getThemeGlobal(context);
   const prefersDarkScheme = usePrefersDarkScheme();
-  const isDark = themeGlobal ? themeGlobal === 'dark' : prefersDarkScheme;
-
+  const isDark =
+    themeGlobal === 'dark' || (themeGlobal !== 'light' && prefersDarkScheme);
   // MDX-only pages render no stories, so the addon-themes decorator never sets `data-theme`.
   useEffect(() => {
     const root = document.documentElement;
