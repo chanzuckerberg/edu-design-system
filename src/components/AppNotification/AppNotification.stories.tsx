@@ -20,6 +20,7 @@ export default {
     docs: {
       subtitle: 'A global alert that persists across pages.',
     },
+    chromatic: { modes: themeModes },
     layout: 'centered',
   },
   args: {
@@ -41,9 +42,6 @@ export default {
 type Story = StoryObj<typeof AppNotification>;
 
 export const Default: Story = {
-  parameters: {
-    chromatic: { modes: themeModes },
-  },
   args: {},
 };
 
