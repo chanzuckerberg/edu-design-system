@@ -94,6 +94,12 @@ const openInChromatic: Story['play'] = async ({ canvasElement }) => {
  * desktop widths.
  */
 export const Default: Story = {
+  render: (args) => <InteractiveExample {...args} />,
+  play: openInChromatic,
+};
+
+export const Responsive: Story = {
+  ...Default,
   parameters: {
     chromatic: {
       modes: {
@@ -107,8 +113,6 @@ export const Default: Story = {
       },
     },
   },
-  render: (args) => <InteractiveExample {...args} />,
-  play: openInChromatic,
 };
 
 /**

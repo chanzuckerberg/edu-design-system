@@ -31,11 +31,6 @@ export default {
       delay: 500,
       modes: {
         ...themeModes,
-        ...viewportModes(
-          chromaticViewports.googlePixel2,
-          chromaticViewports.ipadMini,
-          chromaticViewports.chromebook,
-        ),
       },
     },
   },
@@ -216,6 +211,21 @@ export const Default: Story = {
     viewport: {
       value: '',
       isRotated: false,
+    },
+  },
+};
+
+export const Responsive: Story = {
+  ...Default,
+  parameters: {
+    chromatic: {
+      modes: {
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+        ),
+      },
     },
   },
 };

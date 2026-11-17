@@ -48,7 +48,7 @@ exports[`<AppHeader /> > CanHandleFallbackNavMenus story renders snapshot 1`] = 
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_5s_"
+                  id="headlessui-menu-button-_r_7i_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -439,7 +439,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_2g_"
+                  id="headlessui-menu-button-_r_46_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -477,7 +477,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_2m_"
+                  id="headlessui-menu-button-_r_4c_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -515,7 +515,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_2s_"
+                  id="headlessui-menu-button-_r_4i_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -594,7 +594,7 @@ exports[`<AppHeader /> > DefaultWithImageLogo story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_32_"
+                  id="headlessui-menu-button-_r_4o_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
@@ -1018,7 +1018,7 @@ exports[`<AppHeader /> > FloatingVerticalOrientation story renders snapshot 1`] 
                   aria-haspopup="menu"
                   class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_5a_"
+                  id="headlessui-menu-button-_r_70_"
                 >
                   <svg
                     aria-hidden="true"
@@ -1108,9 +1108,9 @@ exports[`<AppHeader /> > MobileFloatingVerticalEmpty story renders snapshot 1`] 
 </header>
 `;
 
-exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
+exports[`<AppHeader /> > Responsive story renders snapshot 1`] = `
 <header
-  class="_app-header_7b1fec _app-header--orientation-horizontal_7b1fec _app-header--style-floating_7b1fec"
+  class="_app-header_7b1fec _app-header--orientation-horizontal_7b1fec _app-header--style-docked_7b1fec"
 >
   <div>
     <div
@@ -1156,7 +1156,7 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_46_"
+                  id="headlessui-menu-button-_r_2g_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -1194,7 +1194,7 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_4c_"
+                  id="headlessui-menu-button-_r_2m_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -1232,7 +1232,7 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_4i_"
+                  id="headlessui-menu-button-_r_2s_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -1311,7 +1311,289 @@ exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_4o_"
+                  id="headlessui-menu-button-_r_32_"
+                >
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Profile
+                      <div
+                        class="_text_b3eba3 _text--appHeader-subLabel_b3eba3"
+                      >
+                        sublabel
+                      </div>
+                    </span>
+                    <div
+                      aria-label="Avatar for user Lorem Ipsum"
+                      class="_avatar_814665 _avatar--sm_814665 _avatar--text_814665 _avatar--color-scheme-1_814665"
+                      role="img"
+                    >
+                      <span
+                        class="_text_b3eba3 _text--label-sm_b3eba3"
+                      >
+                        L
+                      </span>
+                    </div>
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="_icon_779da8"
+                    fill="currentColor"
+                    height="24px"
+                    style="--icon-size: 24px;"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="_app-header__menu_7b1fec"
+      >
+        <button
+          aria-label="Show Menu"
+          class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+        >
+          <span
+            class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-icon-only_7b1fec"
+          >
+            <svg
+              aria-hidden="true"
+              class="_icon_779da8"
+              fill="currentColor"
+              height="24px"
+              style="--icon-size: 24px;"
+              viewBox="0 0 24 24"
+              width="24px"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.5 17.6342V16.1345H20.5V17.6342H3.5ZM3.5 12.7497V11.2497H20.5V12.7497H3.5ZM3.5 7.86498V6.36523H20.5V7.86498H3.5Z"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`<AppHeader /> > StyleFloating story renders snapshot 1`] = `
+<header
+  class="_app-header_7b1fec _app-header--orientation-horizontal_7b1fec _app-header--style-floating_7b1fec"
+>
+  <div>
+    <div
+      class="_app-header__content_7b1fec"
+    >
+      <div
+        class="_app-header-title_7b1fec"
+      >
+        <div
+          class="_app-header-title__title_7b1fec"
+        >
+          <span
+            class="_text_b3eba3 _text--headline-sm_b3eba3"
+          >
+            Bodies of water
+          </span>
+        </div>
+        <div
+          class="_app-header-title__sub-title_7b1fec"
+        >
+          <span
+            class="_text_b3eba3 _text--body-md_b3eba3"
+          >
+            They're cool!
+          </span>
+        </div>
+      </div>
+      <div
+        class="_app-header__nav-groups_7b1fec"
+      >
+        <nav
+          aria-label="lakes"
+          class="_app-header__nav-group_7b1fec"
+        >
+          <ul>
+            <li>
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_5s_"
+                >
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Lakes
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="_icon_779da8"
+                      fill="currentColor"
+                      height="24px"
+                      style="--icon-size: 24px;"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_62_"
+                >
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Oceans
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="_icon_779da8"
+                      fill="currentColor"
+                      height="24px"
+                      style="--icon-size: 24px;"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </li>
+            <li>
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_68_"
+                >
+                  <span
+                    class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
+                  >
+                    <span
+                      class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                    >
+                      Rivers
+                    </span>
+                    <svg
+                      aria-hidden="true"
+                      class="_icon_779da8"
+                      fill="currentColor"
+                      height="24px"
+                      style="--icon-size: 24px;"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.9999 15.0542L6.34619 9.40043L7.39994 8.34668L11.9999 12.9467L16.5999 8.34668L17.6537 9.40043L11.9999 15.0542Z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          aria-label="group-2"
+          class="_app-header__nav-group_7b1fec"
+        >
+          <ul>
+            <li>
+              <a
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                href="https://example.org"
+                target="_blank"
+              >
+                <span
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
+                >
+                  <span
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                  >
+                    Documentation
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="_app-header__nav-item_7b1fec _app-header__nav-item--link_7b1fec"
+                href="https://example.org"
+                target="_blank"
+              >
+                <span
+                  class="_app-header__nav-item--icon-layout-none_7b1fec"
+                >
+                  <span
+                    class="_text_b3eba3 _text--appHeader-label_b3eba3"
+                  >
+                    GitHub
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <div
+                class="_menu_33ee5b"
+                data-headlessui-state=""
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="menu"
+                  class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
+                  data-headlessui-state=""
+                  id="headlessui-menu-button-_r_6e_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
@@ -1733,7 +2015,7 @@ exports[`<AppHeader /> > VerticalDefaultWithImageLogo story renders snapshot 1`]
                   aria-haspopup="menu"
                   class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_5g_"
+                  id="headlessui-menu-button-_r_76_"
                 >
                   <svg
                     aria-hidden="true"
@@ -2130,7 +2412,7 @@ exports[`<AppHeader /> > VerticalOrientation story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_54_"
+                  id="headlessui-menu-button-_r_6q_"
                 >
                   <svg
                     aria-hidden="true"
@@ -2230,7 +2512,7 @@ exports[`<AppHeader /> > WithProvidedIcons story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_70_"
+                  id="headlessui-menu-button-_r_8m_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -2268,7 +2550,7 @@ exports[`<AppHeader /> > WithProvidedIcons story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_76_"
+                  id="headlessui-menu-button-_r_8s_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -2306,7 +2588,7 @@ exports[`<AppHeader /> > WithProvidedIcons story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_7c_"
+                  id="headlessui-menu-button-_r_92_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-none_7b1fec"
@@ -2385,7 +2667,7 @@ exports[`<AppHeader /> > WithProvidedIcons story renders snapshot 1`] = `
                   aria-haspopup="menu"
                   class="_app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_7i_"
+                  id="headlessui-menu-button-_r_98_"
                 >
                   <span
                     class="_app-header__nav-item--button_7b1fec _app-header__nav-item--icon-layout-left_7b1fec"
@@ -2809,7 +3091,7 @@ exports[`<AppHeader /> > WithProvidedIconsVertical story renders snapshot 1`] = 
                   aria-haspopup="menu"
                   class="_app-header__menu-trigger_7b1fec _app-header__nav-item_7b1fec _app-header__nav-item--button_7b1fec"
                   data-headlessui-state=""
-                  id="headlessui-menu-button-_r_7u_"
+                  id="headlessui-menu-button-_r_9k_"
                 >
                   <svg
                     aria-hidden="true"

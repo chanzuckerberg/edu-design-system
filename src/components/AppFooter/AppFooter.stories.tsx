@@ -20,11 +20,6 @@ export default {
     chromatic: {
       modes: {
         ...themeModes,
-        ...viewportModes(
-          chromaticViewports.googlePixel2,
-          chromaticViewports.ipadMini,
-          chromaticViewports.chromebook,
-        ),
       },
     },
   },
@@ -62,6 +57,20 @@ type Story = StoryObj<typeof AppFooter>;
 
 export const Default: Story = {
   args: {},
+};
+
+export const Responsive: Story = {
+  parameters: {
+    chromatic: {
+      modes: {
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+        ),
+      },
+    },
+  },
 };
 
 export const WithTextLogo: Story = {

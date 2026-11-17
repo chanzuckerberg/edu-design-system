@@ -21,6 +21,14 @@ export default {
 
   tags: ['autodocs', 'version:1.5'],
 
+  decorators: [
+    (Story) => (
+      <div className="bg-utility-default-lowEmphasis dark:bg-dark-utility-default-lowEmphasis h-[200px] w-[200px]">
+        {Story()}
+      </div>
+    ),
+  ],
+
   globals: {
     backgrounds: {
       value: 'background-utility-inverse-high-emphasis',

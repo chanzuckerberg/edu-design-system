@@ -97,7 +97,10 @@ export default {
 
 type Args = React.ComponentProps<typeof TabGroup>;
 
-export const Default: StoryObj<Args> = {
+export const Default: StoryObj<Args> = {};
+
+export const Responsive: StoryObj<Args> = {
+  ...Default,
   parameters: {
     chromatic: {
       modes: {

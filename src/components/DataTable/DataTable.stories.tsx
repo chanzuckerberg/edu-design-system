@@ -214,17 +214,6 @@ const columns = [
  * When specifying the cells, you can use `className` to control content controls like truncation or other customizations.
  */
 export const Default: StoryObj<Args> = {
-  parameters: {
-    chromatic: {
-      modes: {
-        ...viewportModes(
-          chromaticViewports.ipadMini,
-          chromaticViewports.chromebook,
-          chromaticViewports.googlePixel2,
-        ),
-      },
-    },
-  },
   args: {
     caption: 'Test table',
     subCaption: 'Additional Subcaption',
@@ -238,6 +227,21 @@ export const Default: StoryObj<Args> = {
     });
 
     return <DataTable {...args} table={table} />;
+  },
+};
+
+export const Responsive: StoryObj<Args> = {
+  ...Default,
+  parameters: {
+    chromatic: {
+      modes: {
+        ...viewportModes(
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+          chromaticViewports.googlePixel2,
+        ),
+      },
+    },
   },
 };
 

@@ -2,22 +2,26 @@
 
 exports[`<ScrollWrapper /> > ContainVertical story renders snapshot 1`] = `
 <div
-  class="p-spacing-size-4"
+  class="bg-utility-default-lowEmphasis dark:bg-dark-utility-default-lowEmphasis h-[200px] w-[200px]"
 >
   <div
-    class="bg-utility-default-lowEmphasis dark:bg-dark-utility-default-lowEmphasis h-[200px] w-[200px]"
+    class="p-spacing-size-4"
   >
     <div
-      class="_scroll-wrapper_583563 _scroll-wrapper--orientation-vertical_583563 _scroll-wrapper--shadow-type-contain_583563"
+      class="bg-utility-default-lowEmphasis dark:bg-dark-utility-default-lowEmphasis h-[200px] w-[200px]"
     >
       <div
-        class="_scroll-wrapper__inner_583563"
-        tabindex="0"
+        class="_scroll-wrapper_583563 _scroll-wrapper--orientation-vertical_583563 _scroll-wrapper--shadow-type-contain_583563"
       >
         <div
-          class="h-[300px] w-[300px]"
-          data-testid="scrollContent"
-        />
+          class="_scroll-wrapper__inner_583563"
+          tabindex="0"
+        >
+          <div
+            class="h-[300px] w-[300px]"
+            data-testid="scrollContent"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -26,10 +30,10 @@ exports[`<ScrollWrapper /> > ContainVertical story renders snapshot 1`] = `
 
 exports[`<ScrollWrapper /> > Default story renders snapshot 1`] = `
 <div
-  class="p-spacing-size-4"
+  class="bg-utility-default-lowEmphasis dark:bg-dark-utility-default-lowEmphasis h-[200px] w-[200px]"
 >
   <div
-    class="bg-utility-default-lowEmphasis dark:bg-dark-utility-default-lowEmphasis h-[200px] w-[200px]"
+    class="p-spacing-size-4"
   >
     <div
       class="_scroll-wrapper_583563 _scroll-wrapper--orientation-vertical_583563 _scroll-wrapper--shadow-type-cover_583563"

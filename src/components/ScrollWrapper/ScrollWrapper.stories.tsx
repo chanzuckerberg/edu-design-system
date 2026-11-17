@@ -16,7 +16,14 @@ export default {
         'A wrapper that shows and hides shadows along the edges of scrollable content.',
     },
   },
-  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
+  decorators: [
+    (Story) => <div className="p-spacing-size-4">{Story()}</div>,
+    (Story) => (
+      <div className="bg-utility-default-lowEmphasis dark:bg-dark-utility-default-lowEmphasis h-[200px] w-[200px]">
+        {Story()}
+      </div>
+    ),
+  ],
   tags: ['version:1.1'],
 } as Meta<Args>;
 
@@ -33,14 +40,12 @@ export const Default: StoryObj<Args> = {
   },
   args: {},
   render: (args) => (
-    <div className="bg-utility-default-lowEmphasis dark:bg-dark-utility-default-lowEmphasis h-[200px] w-[200px]">
-      <ScrollWrapper {...args}>
-        <div
-          className="p-spacing-size-3 h-[300px] w-[300px]"
-          data-testid="scrollContent"
-        ></div>
-      </ScrollWrapper>
-    </div>
+    <ScrollWrapper {...args}>
+      <div
+        className="p-spacing-size-3 h-[300px] w-[300px]"
+        data-testid="scrollContent"
+      ></div>
+    </ScrollWrapper>
   ),
 };
 
