@@ -33,11 +33,6 @@ export default {
     chromatic: {
       modes: {
         ...themeModes,
-        ...viewportModes(
-          chromaticViewports.ipadMini,
-          chromaticViewports.chromebook,
-          chromaticViewports.googlePixel2,
-        ),
       },
     },
   },
@@ -220,7 +215,15 @@ const columns = [
  */
 export const Default: StoryObj<Args> = {
   parameters: {
-    chromatic: { modes: themeModes },
+    chromatic: {
+      modes: {
+        ...viewportModes(
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+          chromaticViewports.googlePixel2,
+        ),
+      },
+    },
   },
   args: {
     caption: 'Test table',

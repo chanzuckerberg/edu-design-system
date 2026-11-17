@@ -15,16 +15,28 @@ import ButtonGroup from '../ButtonGroup';
 import InputField from '../InputField';
 import Modal from '../Modal';
 
+const sharedParameters: Story['parameters'] = {
+  layout: 'centered',
+  snapshot: {
+    skip: true,
+  },
+};
+
 export default {
   title: 'Components/Dialog',
   component: Dialog,
   parameters: {
+    ...sharedParameters,
     docs: {
       subtitle:
         'Dialogs ask the user to confirm or cancel a single action. They replace the browser’s built-in confirm prompt.',
     },
     // Using this motion preference for components where they trigger animations on mount
-    chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
+    chromatic: {
+      delay: 500,
+      prefersReducedMotion: 'reduce',
+      modes: themeModes,
+    },
     layout: 'fullscreen',
   },
   args: {
@@ -72,13 +84,6 @@ const openInChromatic: Story['play'] = async ({ canvasElement }) => {
   }
 };
 
-const sharedParameters: Story['parameters'] = {
-  layout: 'centered',
-  snapshot: {
-    skip: true,
-  },
-};
-
 /**
  * Clicking on a trigger item (in this case `Button`) opens the dialog. Focus starts on the
  * primary button, so Enter takes the default action. The secondary button, ESC, and a click on
@@ -90,10 +95,8 @@ const sharedParameters: Story['parameters'] = {
  */
 export const Default: Story = {
   parameters: {
-    ...sharedParameters,
     chromatic: {
       modes: {
-        ...themeModes,
         ...viewportModes(
           chromaticViewports.googlePixel2,
           chromaticViewports.ipadMini,
@@ -118,7 +121,6 @@ export const Critical: Story = {
     confirmVariant: 'critical',
     title: 'Delete “Unit 3 notes”?',
   },
-  parameters: sharedParameters,
   render: Default.render,
   play: openInChromatic,
 };
@@ -137,7 +139,6 @@ export const FormattedBody: Story = {
     confirmLabel: 'Close assignment',
     title: 'Close this assignment?',
   },
-  parameters: sharedParameters,
   render: Default.render,
   play: openInChromatic,
 };
@@ -149,7 +150,6 @@ export const CustomCancelLabel: Story = {
   args: {
     cancelLabel: 'Keep editing',
   },
-  parameters: sharedParameters,
   render: Default.render,
   play: openInChromatic,
 };

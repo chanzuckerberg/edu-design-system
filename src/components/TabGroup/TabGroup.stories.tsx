@@ -20,6 +20,11 @@ export default {
         'Tab groups provide navigation between subsections of a page. The content within a Tab group should be related.',
     },
     layout: 'centered',
+    chromatic: {
+      modes: {
+        ...themeModes,
+      },
+    },
   },
   args: {
     children: (
@@ -96,7 +101,6 @@ export const Default: StoryObj<Args> = {
   parameters: {
     chromatic: {
       modes: {
-        ...themeModes,
         ...viewportModes(
           chromaticViewports.googlePixel2,
           chromaticViewports.chromebook,
@@ -177,17 +181,12 @@ export const InverseVariant: StoryObj<Args> = {
   },
 
   decorators: [(Story) => <div className="p-spacing-size-half">{Story()}</div>],
-
-  parameters: {
-    ...Default.parameters,
-  },
 };
 
 export const Centered: StoryObj<Args> = {
   args: {
     align: 'center',
   },
-  parameters: Default.parameters,
 };
 
 /**
@@ -200,14 +199,12 @@ export const TabWidthFull: StoryObj<Args> = {
     ...Centered.args,
     tabWidth: 'full',
   },
-  parameters: Default.parameters,
 };
 
 /**
  * Individual tabs can have an EDS icon attached to them
  */
 export const WithTabIcons: StoryObj<Args> = {
-  parameters: Default.parameters,
   args: {
     ...Centered.args,
     children: (
@@ -395,7 +392,6 @@ export const ScrollMiddle: StoryObj<Args> = {
   },
 
   parameters: {
-    ...Default.parameters,
     // Skip these b/c test environment cannot execute "scroll" on the parent div
     snapshot: { skip: true },
 
@@ -424,8 +420,6 @@ export const ScrollMiddle: StoryObj<Args> = {
  * that happened to be picked.
  */
 export const WithFpoTabContent: StoryObj<Args> = {
-  parameters: Default.parameters,
-
   args: {
     ...Centered.args,
     children: (

@@ -16,6 +16,7 @@ export default {
         'Skeleton states inform users about the wait time, reason, and status of ongoing processes, showing the expected layout.',
     },
     layout: 'centered',
+    chromatic: { modes: themeModes },
   },
 
   tags: ['autodocs', 'version:1.5'],
@@ -33,9 +34,6 @@ type Story = StoryObj<typeof Skeleton>;
  * The default shape for a skeleton is a Rounded rectangle with an optional animation.
  */
 export const Default: Story = {
-  parameters: {
-    chromatic: { modes: themeModes },
-  },
   args: {
     width: 100,
     height: 100,

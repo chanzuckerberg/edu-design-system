@@ -56,7 +56,7 @@ export default {
       delay: 750,
       diffThreshold,
       diffIncludeAntiAliasing: false,
-      chromatic: { modes: themeModes },
+      modes: themeModes,
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
