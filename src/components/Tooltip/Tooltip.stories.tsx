@@ -122,7 +122,15 @@ export const InverseVariant: Story = {
   args: {
     ...LeftPlacement.args,
     variant: 'inverse',
+    placement: 'bottom',
   },
+  decorators: [
+    (Story) => (
+      <div className="p-spacing-size-4 bg-utility-default-highEmphasis dark:bg-dark-utility-default-highEmphasis h-[240px] w-[480px]">
+        {Story()}
+      </div>
+    ),
+  ],
 };
 
 /**

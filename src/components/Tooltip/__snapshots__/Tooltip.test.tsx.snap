@@ -73,10 +73,14 @@ exports[`<Tooltip /> > InverseVariant story renders snapshot 1`] = `
   class="p-spacing-size-4"
 >
   <div
-    aria-describedby="_r_i_"
-    class="fpo p-1"
+    class="p-spacing-size-4 bg-utility-default-highEmphasis dark:bg-dark-utility-default-highEmphasis h-[240px] w-[480px]"
   >
-    Target Component
+    <div
+      aria-describedby="_r_i_"
+      class="fpo p-1"
+    >
+      Target Component
+    </div>
   </div>
 </div>
 `;
