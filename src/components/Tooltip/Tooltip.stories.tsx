@@ -123,11 +123,6 @@ export const InverseVariant: Story = {
     ...LeftPlacement.args,
     variant: 'inverse',
   },
-  globals: {
-    backgrounds: {
-      value: 'background-utility-default-high-emphasis',
-    },
-  },
 };
 
 /**
