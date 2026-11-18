@@ -1279,7 +1279,7 @@
               "3": {
                 "lowEmphasis": {
                   "value": "{eds.color.green.100}",
-                  "description": "Tint for a Tag that labels categorical slot 3. Neutral rather than green so it does not read as a twin of slot 1's tint. Use sparingly.",
+                  "description": "Tint for a Tag that labels categorical slot 3. Same value as slot 1's tint, so the Tag label carries the meaning. Use sparingly; not for series fills, bands or row tints.",
                   "group": "color"
                 },
                 "highEmphasis": {
@@ -1296,7 +1296,7 @@
                 },
                 "highEmphasis": {
                   "value": "{eds.color.yellow.200}",
-                  "description": "Fourth categorical series fill. Light; give thin lines and small points extra weight. Shares a primitive with the warning high-emphasis background, so keep warning Tags out of plot areas that use it.",
+                  "description": "Fourth categorical series fill. Light; give thin lines and small points extra weight.",
                   "group": "color"
                 }
               },
@@ -1327,24 +1327,24 @@
               "7": {
                 "lowEmphasis": {
                   "value": "{eds.color.blue.100}",
-                  "description": "Seventh categorical series fill. Use only when slots 1 through 6 are already in use.",
+                  "description": "Tint for a Tag that labels categorical slot 7. Use sparingly; not for series fills, bands or row tints.",
                   "group": "color"
                 },
                 "highEmphasis": {
                   "value": "{eds.color.blue.200}",
-                  "description": "Seventh categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value.",
+                  "description": "Seventh categorical series fill. Use only when slots 1 through 6 are already in use. Light; give thin lines and small points extra weight.",
                   "group": "color"
                 }
               },
               "8": {
                 "lowEmphasis": {
                   "value": "{eds.color.red.100}",
-                  "description": "Eighth categorical series fill. Use only when slots 1 through 7 are already in use.",
+                  "description": "Tint for a Tag that labels categorical slot 8. Use sparingly; not for series fills, bands or row tints.",
                   "group": "color"
                 },
                 "highEmphasis": {
                   "value": "{eds.color.red.250}",
-                  "description": "Eighth and last categorical series fill. Light; give thin lines and small points extra weight. No low-emphasis value. Past eight series, use direct labels or pattern fills rather than more color.",
+                  "description": "Eighth and last categorical series fill. Light; give thin lines and small points extra weight. Past eight series, use direct labels or pattern fills rather than more color.",
                   "group": "color"
                 }
               },
@@ -2162,12 +2162,12 @@
           "visualization": {
             "default": {
               "value": "{eds.color.black}",
-              "description": "Text sitting on a visualization fill whose primitive is at grade 450 or lighter: every low-emphasis categorical value, basis, scalar steps 1 and 2, divergent steps 1 and 2, and categorical slots 1, 4, 7, 8 and other. Labels beside a mark use text-utility-default-primary instead.",
+              "description": "Text sitting on a scalar or divergent fill whose primitive is at grade 450 or lighter: basis, scalar steps 1 and 2, and divergent steps 1 and 2. On a categorical fill, use that slot's text-visualization-categorical token instead. Labels beside a mark use text-utility-default-primary.",
               "group": "color"
             },
             "inverse": {
               "value": "{eds.color.white}",
-              "description": "Text sitting on a visualization fill whose primitive is at grade 550 or darker: categorical slots 2, 3, 5 and 6, scalar steps 3 and 4, and divergent steps 3.",
+              "description": "Text sitting on a scalar or divergent fill whose primitive is at grade 550 or darker: scalar steps 3 and 4, and divergent steps 3. On a categorical fill, use that slot's text-visualization-categorical token instead.",
               "group": "color"
             },
             "categorical": {
