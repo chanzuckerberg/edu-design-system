@@ -119,3 +119,24 @@ export const HighEmphasis: Story = {
     emphasis: 'high',
   },
 };
+
+/**
+ * Each emphasis sets its own colors, and `--app-footer__bg` / `--app-footer__fg` override those
+ * for either one. Pass them through the `style` prop.
+ *
+ * Wrap each value in `light-dark()` so the override follows the color mode, the same way the
+ * emphasis defaults do. Here the two colors swap places in dark mode.
+ *
+ * Reach for a theme token in real usage. The literal colors here are only to make the point
+ * unmistakable: neither emphasis uses them, so the footer below is colored by the override
+ * rather than by its emphasis.
+ */
+export const CustomColors: Story = {
+  args: {
+    ...WithCopyright.args,
+    style: {
+      '--app-footer__bg': 'light-dark(rebeccapurple, papayawhip)',
+      '--app-footer__fg': 'light-dark(papayawhip, rebeccapurple)',
+    },
+  },
+};
