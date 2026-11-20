@@ -6,6 +6,7 @@ import { userEvent, within } from 'storybook/test';
 
 import { InputField } from './InputField';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { themeModes } from '../../util/modes';
 import Button from '../Button';
 
 const meta: Meta<typeof InputField> = {
@@ -52,6 +53,9 @@ export default meta;
 type Story = StoryObj<typeof InputField>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     label: 'Default input field',
     subLabel: '',

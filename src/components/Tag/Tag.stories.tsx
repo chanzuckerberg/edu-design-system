@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 import { Tag } from './Tag';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/Tag',
@@ -42,6 +43,9 @@ type Args = React.ComponentProps<typeof Tag>;
 type Story = StoryObj<Args>;
 
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   render: (args) => (
     <div className="gap-spacing-size-2 flex">
       <Tag {...args} status="informational" />
@@ -63,6 +67,7 @@ export const WithIcon: Story = {
 };
 
 export const LowEmphasisInformational: Story = {
+  parameters: Default.parameters,
   args: {
     icon: 'document',
     label: 'API Docs',

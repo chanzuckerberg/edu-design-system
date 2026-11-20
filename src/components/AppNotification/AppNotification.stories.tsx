@@ -7,6 +7,7 @@ import React from 'react';
 import { AppNotification } from './AppNotification';
 
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import { IconProvider } from '../Icon';
@@ -19,6 +20,7 @@ export default {
     docs: {
       subtitle: 'A global alert that persists across pages.',
     },
+    chromatic: { modes: themeModes },
     layout: 'centered',
   },
   args: {

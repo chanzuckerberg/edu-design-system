@@ -15,6 +15,7 @@ import { utils as DataTableUtils } from '../../components/DataTable';
 
 import FpoBlock from '../../storyUtils/FpoBlock';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 import Button from '../Button';
 import Checkbox from '../Checkbox';
@@ -30,11 +31,9 @@ export default {
         'Tables display and organize data in a structured format. They include customizations for size, style, interactivity, and data presentation.',
     },
     chromatic: {
-      viewports: [
-        chromaticViewports.ipadMini,
-        chromaticViewports.chromebook,
-        chromaticViewports.googlePixel2,
-      ],
+      modes: {
+        ...themeModes,
+      },
     },
   },
   argTypes: {
@@ -231,10 +230,26 @@ export const Default: StoryObj<Args> = {
   },
 };
 
+export const Responsive: StoryObj<Args> = {
+  ...Default,
+  parameters: {
+    chromatic: {
+      modes: {
+        ...viewportModes(
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+          chromaticViewports.googlePixel2,
+        ),
+      },
+    },
+  },
+};
+
 /**
  * `DataTable` can also have a different border style between cells.
  */
 export const TableStyleBorder: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     tableStyle: 'border',
   },
@@ -259,6 +274,7 @@ export const TableStyleBorder: StoryObj<Args> = {
  * Instead of using padding in the ancestor, use margins or a spacer element like an `<hr />` or `<div>`.
  */
 export const DataTableInFullContentBox: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     ...Default.args,
   },
@@ -286,6 +302,7 @@ export const DataTableInFullContentBox: StoryObj<Args> = {
  * **Note**: using `subLabel`s when `size` = `'sm'` is not allowed.
  */
 export const TableSizeSm: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     tableStyle: 'border',
     size: 'sm',
@@ -303,6 +320,7 @@ export const TableSizeSm: StoryObj<Args> = {
 };
 
 export const RowStyleLined: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     tableStyle: 'border',
     rowStyle: 'lined',
@@ -325,6 +343,7 @@ export const RowStyleLined: StoryObj<Args> = {
  * For more information: https://tanstack.com/table/latest/docs/framework/react/examples/row-selection
  */
 export const Selectable: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     caption: 'Test table',
     subCaption: 'Additional Subcaption',
@@ -476,6 +495,7 @@ export const VerticalDivider: StoryObj<Args> = {
     isInteractive: true,
   },
   parameters: {
+    ...Default.parameters,
     chromatic: {
       diffThreshold: 0.75,
     },
@@ -629,6 +649,7 @@ export const VerticalDivider: StoryObj<Args> = {
  * - https://tanstack.com/table/latest/docs/api/core/row#getleafrows
  */
 export const Grouping: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     caption: 'Types of Wine',
     tableStyle: 'border',
@@ -745,6 +766,7 @@ export const Grouping: StoryObj<Args> = {
  * will add add a `status` item, to be used with a column with header name `DataTable.__StatusColumnId__`.
  */
 export const StatusRows: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     caption: 'Test table',
     subCaption: 'Additional Subcaption',
@@ -834,6 +856,7 @@ export const StatusRows: StoryObj<Args> = {
  * See: https://tanstack.com/table/latest/docs/guide/column-pinning
  */
 export const HorizontalScrolling: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     tableStyle: 'border',
     size: 'sm',
@@ -870,6 +893,7 @@ export const DefaultWithCustomTable: StoryObj<Args> = {
 };
 
 export const WithBasicCaption: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     ...DefaultWithCustomTable.args,
     caption: 'Fruits of the world',
@@ -886,6 +910,7 @@ export const WithFullCaption: StoryObj<Args> = {
 };
 
 export const WithSearch: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     ...DefaultWithCustomTable.args,
     caption: 'Fruits of the world',
@@ -895,6 +920,7 @@ export const WithSearch: StoryObj<Args> = {
 };
 
 export const WithOnlyActions: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     ...DefaultWithCustomTable.args,
     actions: (
@@ -910,6 +936,7 @@ export const WithOnlyActions: StoryObj<Args> = {
 };
 
 export const WithSearchAndActions: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     ...DefaultWithCustomTable.args,
     caption: 'Fruits of the world',
@@ -928,6 +955,7 @@ export const WithSearchAndActions: StoryObj<Args> = {
 };
 
 export const WithSearchAndCustomActions: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     ...DefaultWithCustomTable.args,
     caption: 'Fruits of the world',
@@ -963,6 +991,7 @@ export const WithSearchAndCustomActions: StoryObj<Args> = {
 };
 
 export const WithLongCaption: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     ...DefaultWithCustomTable.args,
     caption:
@@ -1024,6 +1053,7 @@ const fpoColumns = [
  * the slot itself is the subject rather than the icon that happened to be picked.
  */
 export const WithFpoLeadingContent: StoryObj<Args> = {
+  parameters: Default.parameters,
   args: {
     caption: 'Leading content slot',
     subCaption: 'Header cell and data cell both take arbitrary content',

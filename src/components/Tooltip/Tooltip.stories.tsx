@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Tooltip } from './Tooltip';
+import { themeModes } from '../../util/modes';
 import Hr from '../Hr';
 import Text from '../Text';
 
@@ -55,6 +56,7 @@ export default {
       delay: 750,
       diffThreshold,
       diffIncludeAntiAliasing: false,
+      modes: themeModes,
     },
   },
   decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
@@ -64,17 +66,20 @@ export default {
 type Args = React.ComponentProps<typeof Tooltip>;
 type Story = StoryObj<Args>;
 
+export const Default: Story = {
+  args: {
+    children: <div className="fpo p-1">Target Component</div>,
+  },
+};
+
 /**
  * The following stories demonstrate how `Tooltip` can be made to appear on different sides of the trigger.
- * Each story name denotes a value pased to `placement`.
+ * Each story name denotes a value passed to `placement`.
  */
 export const LeftPlacement: Story = {
   args: {
     placement: 'left',
     children: <div className="fpo p-1">Target Component</div>,
-  },
-  parameters: {
-    chromatic: { disableSnapshot: true },
   },
 };
 
@@ -113,12 +118,15 @@ export const InverseVariant: Story = {
   args: {
     ...LeftPlacement.args,
     variant: 'inverse',
+    placement: 'bottom',
   },
-  globals: {
-    backgrounds: {
-      value: 'background-utility-default-high-emphasis',
-    },
-  },
+  decorators: [
+    (Story) => (
+      <div className="p-spacing-size-4 bg-utility-default-highEmphasis dark:bg-dark-utility-default-highEmphasis h-[240px] w-[480px]">
+        {Story()}
+      </div>
+    ),
+  ],
 };
 
 /**

@@ -6,6 +6,7 @@ import React from 'react';
 import { Icon } from './Icon';
 import { IconProvider } from './IconProvider';
 import type { SemanticIconMap } from './IconProvider';
+import { themeModes } from '../../util/modes';
 import Accordion from '../Accordion';
 import InlineNotification from '../InlineNotification';
 import InputChip from '../InputChip';
@@ -59,6 +60,9 @@ const sampleTree = (
  * is happy with those does not need this component at all.
  */
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: sampleTree,
   },

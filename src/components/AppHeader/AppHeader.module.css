@@ -9,9 +9,6 @@
 .app-header {
   --app-header__shadow: none;
 
-  /* This component is hard-coded to use the light color scheme in all cases */
-  color-scheme: light;
-
   & > div {
     box-shadow: var(--app-header__shadow);
     height: 100%;
@@ -52,7 +49,7 @@
   .app-header__nav-groups {
     display: none;
 
-    @media (min-width: $eds-bp-md) {
+    @media (min-width: $eds-bp-lg) {
       display: flex;
       overflow: hidden;
       overflow-x: auto;
@@ -127,11 +124,11 @@
  * Keep the breakpoint in sync with `resolveOrientation` in AppHeader.tsx.
  */
 .app-header--orientation-responsive {
-  @media not all and (min-width: $eds-bp-md) {
+  @media not all and (min-width: $eds-bp-lg) {
     @mixin app-header-horizontal;
   }
 
-  @media (min-width: $eds-bp-md) {
+  @media (min-width: $eds-bp-lg) {
     @mixin app-header-vertical;
   }
 }
@@ -162,7 +159,7 @@
   display: inline-block;
 
   /* Mobile-first: hide this at bigger viewports */
-  @media (min-width: $eds-bp-md) {
+  @media (min-width: $eds-bp-lg) {
     display: none;
   }
 }
@@ -190,7 +187,7 @@
     padding-left: calc(var(--eds-spacing-size-3) * 1px);
     width: 100%;
 
-    @media (min-width: $eds-bp-md) {
+    @media (min-width: $eds-bp-lg) {
       width: 460px;
     }
   }
@@ -296,7 +293,7 @@
   }
 
   .app-header--orientation-responsive & {
-    @media (min-width: $eds-bp-md) {
+    @media (min-width: $eds-bp-lg) {
       @mixin app-header-title-vertical;
     }
   }

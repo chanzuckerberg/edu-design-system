@@ -6,6 +6,7 @@ import { userEvent } from 'storybook/test';
 
 import { Card } from './Card';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { themeModes } from '../../util/modes';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import Icon from '../Icon';
@@ -73,7 +74,11 @@ type Story = StoryObj<typeof Card>;
  * Cards come with structural containers for semantic grouping. It is recommended to use `spacing-size-2` between the header and body of `Card`, and `spacing-size-5` between
  * the body and footer of `Card`.
  */
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 /**
  * Cards can be made interactive by using `isInteractive`. With this, it will require being linked to `Link` or some control that performs an action or is being dragged.

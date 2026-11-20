@@ -23,7 +23,8 @@ import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import type { Decorator, Preview, ReactRenderer } from '@storybook/react-vite';
 import React from 'react';
 
-import Theme from './Theme';
+import { DocsContainer } from './DocsContainer';
+import { lightTheme } from './Theme';
 import * as tokens from '../src/tokens-dist/ts/colors';
 import { storybookViewports } from '../src/util/viewports';
 
@@ -45,7 +46,8 @@ export const parameters: Preview['parameters'] = {
     options: storybookViewports,
   },
   docs: {
-    theme: Theme,
+    theme: lightTheme,
+    container: DocsContainer,
     toc: true,
     // https://storybook.js.org/docs/writing-docs/autodocs#write-a-custom-template
     page: () => (

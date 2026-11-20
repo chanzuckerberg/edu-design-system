@@ -5,6 +5,7 @@ import React from 'react';
 import { userEvent, within } from 'storybook/test';
 
 import { ScrollWrapper } from './ScrollWrapper';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/ScrollWrapper',
@@ -15,7 +16,15 @@ export default {
         'A wrapper that shows and hides shadows along the edges of scrollable content.',
     },
   },
-  decorators: [(Story) => <div className="p-spacing-size-4">{Story()}</div>],
+  decorators: [
+    (Story) => (
+      <div className="p-spacing-size-4">
+        <div className="bg-utility-default-lowEmphasis dark:bg-dark-utility-default-lowEmphasis h-[200px] w-[200px]">
+          {Story()}
+        </div>
+      </div>
+    ),
+  ],
   tags: ['version:1.1'],
 } as Meta<Args>;
 
@@ -27,16 +36,17 @@ type Args = React.ComponentProps<typeof ScrollWrapper>;
  * taller, the scroll wrapper can be inserted in between, and allow for the content to be revealed as needed.
  */
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {},
   render: (args) => (
-    <div className="bg-utility-default-noEmphasis-hover h-[200px] w-[200px]">
-      <ScrollWrapper {...args}>
-        <div
-          className="p-spacing-size-3 h-[300px] w-[300px]"
-          data-testid="scrollContent"
-        ></div>
-      </ScrollWrapper>
-    </div>
+    <ScrollWrapper {...args}>
+      <div
+        className="p-spacing-size-3 h-[300px] w-[300px]"
+        data-testid="scrollContent"
+      ></div>
+    </ScrollWrapper>
   ),
 };
 
@@ -91,11 +101,9 @@ export const ContainVertical: StoryObj<Args> = {
     shadowType: 'contain',
   },
   render: (args) => (
-    <div className="bg-utility-default-noEmphasis-hover h-[200px] w-[200px]">
-      <ScrollWrapper {...args}>
-        <div className="h-[300px] w-[300px]" data-testid="scrollContent"></div>
-      </ScrollWrapper>
-    </div>
+    <ScrollWrapper {...args}>
+      <div className="h-[300px] w-[300px]" data-testid="scrollContent"></div>
+    </ScrollWrapper>
   ),
 };
 

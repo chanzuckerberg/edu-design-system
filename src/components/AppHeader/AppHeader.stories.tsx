@@ -8,6 +8,11 @@ import { expect, userEvent, within } from 'storybook/test';
 
 import { AppHeader } from './AppHeader';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import {
+  disabledViewportModes,
+  themeModes,
+  viewportModes,
+} from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 import { IconProvider } from '../Icon';
 
@@ -24,15 +29,13 @@ export default {
       // Using this motion preference for components where they trigger animations on mount
       prefersReducedMotion: 'reduce',
       delay: 500,
-      viewports: [
-        chromaticViewports.googlePixel2,
-        chromaticViewports.ipadMini,
-        chromaticViewports.chromebook,
-      ],
+      modes: {
+        ...themeModes,
+      },
     },
   },
 
-  tags: ['autodocs', 'version:1.7.4'],
+  tags: ['autodocs', 'version:1.7.5'],
 } as Meta<typeof AppHeader>;
 
 type Story = StoryObj<typeof AppHeader>;
@@ -212,6 +215,21 @@ export const Default: Story = {
   },
 };
 
+export const Responsive: Story = {
+  ...Default,
+  parameters: {
+    chromatic: {
+      modes: {
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+        ),
+      },
+    },
+  },
+};
+
 /**
  * Logos can also be an image (using either `<img>` or `<svg>` for format). When using logo, the maximum height
  * allowed is fixed, and the logo takes up the total possible vertical height.
@@ -302,6 +320,7 @@ export const ImageLogoFocus: Story = {
   },
   play: async () => {
     await userEvent.tab();
+    await userEvent.tab();
   },
 };
 
@@ -319,6 +338,7 @@ export const VerticalImageLogoFocus: Story = {
   },
   play: async () => {
     await userEvent.tab();
+    await userEvent.tab();
   },
 };
 
@@ -334,7 +354,13 @@ export const CanExpandFullSizeMenu: Story = {
 
   parameters: {
     // Sets the delay (in milliseconds) for a specific story.
-    chromatic: { delay: 300, viewports: [chromaticViewports.chromebook] },
+    chromatic: {
+      delay: 300,
+      modes: disabledViewportModes(
+        chromaticViewports.googlePixel2,
+        chromaticViewports.ipadMini,
+      ),
+    },
 
     snapshot: {
       skip: true,
@@ -372,7 +398,13 @@ export const CanExpandHamburgerMenu: Story = {
 
   parameters: {
     // Sets the delay (in milliseconds) for a specific story.
-    chromatic: { delay: 500, viewports: [chromaticViewports.googlePixel2] },
+    chromatic: {
+      delay: 500,
+      modes: disabledViewportModes(
+        chromaticViewports.ipadMini,
+        chromaticViewports.chromebook,
+      ),
+    },
 
     snapshot: {
       skip: true,
@@ -409,7 +441,12 @@ export const CanFocusMenuItem: Story = {
 
   parameters: {
     // The hamburger only renders at the smallest breakpoint
-    chromatic: { viewports: [chromaticViewports.googlePixel2] },
+    chromatic: {
+      modes: disabledViewportModes(
+        chromaticViewports.ipadMini,
+        chromaticViewports.chromebook,
+      ),
+    },
 
     snapshot: {
       skip: true,

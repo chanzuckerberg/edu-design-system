@@ -491,6 +491,8 @@ describe('<AppHeader />', () => {
     ];
 
     it('handles clicks on nested tree items (vertical)', async () => {
+      window.innerWidth = 1041;
+
       const user = userEvent.setup();
       const onButtonClickMock = vi.fn();
       const onLinkClickMock = vi.fn();
@@ -663,8 +665,8 @@ describe('<AppHeader />', () => {
       window.innerWidth = originalWidth;
     });
 
-    it('renders a vertical header as horizontal below eds-bp-md (EDS-1964)', () => {
-      window.innerWidth = 767;
+    it('renders a vertical header as horizontal below eds-bp-lg (EDS-1964)', () => {
+      window.innerWidth = 1039;
       render(
         <AppHeader navGroups={navGroups} orientation="vertical" title="Test" />,
       );
@@ -673,7 +675,7 @@ describe('<AppHeader />', () => {
       ).toBeInTheDocument();
 
       act(() => {
-        window.innerWidth = 768;
+        window.innerWidth = 1040;
         window.dispatchEvent(new Event('resize'));
       });
 
@@ -683,6 +685,7 @@ describe('<AppHeader />', () => {
     });
 
     it('switches a vertical header to horizontal when the screen narrows', () => {
+      window.innerWidth = 1041;
       render(
         <AppHeader navGroups={navGroups} orientation="vertical" title="Test" />,
       );

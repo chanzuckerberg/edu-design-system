@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { UnorderedList } from './List';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/UnorderedList',
@@ -36,7 +37,11 @@ export default {
 
 type Story = StoryObj<typeof UnorderedList>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 export const None: Story = {
   args: {

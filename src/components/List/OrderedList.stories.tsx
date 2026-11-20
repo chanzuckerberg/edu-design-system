@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { OrderedList } from './List';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/OrderedList',
@@ -36,7 +37,11 @@ export default {
 
 type Story = StoryObj<typeof OrderedList>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 export const None: Story = {
   args: {
