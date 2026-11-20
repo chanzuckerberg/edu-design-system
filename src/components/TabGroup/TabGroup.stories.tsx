@@ -6,6 +6,7 @@ import { within } from 'storybook/test';
 
 import { TabGroup } from './TabGroup';
 import FpoBlock from '../../storyUtils/FpoBlock';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 import Heading from '../Heading';
 import Text from '../Text';
@@ -19,6 +20,11 @@ export default {
         'Tab groups provide navigation between subsections of a page. The content within a Tab group should be related.',
     },
     layout: 'centered',
+    chromatic: {
+      modes: {
+        ...themeModes,
+      },
+    },
   },
   args: {
     children: (
@@ -32,7 +38,7 @@ export default {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -46,7 +52,7 @@ export default {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -60,7 +66,7 @@ export default {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -74,7 +80,7 @@ export default {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -91,13 +97,18 @@ export default {
 
 type Args = React.ComponentProps<typeof TabGroup>;
 
-export const Default: StoryObj<Args> = {
+export const Default: StoryObj<Args> = {};
+
+export const Responsive: StoryObj<Args> = {
+  ...Default,
   parameters: {
     chromatic: {
-      viewports: [
-        chromaticViewports.googlePixel2,
-        chromaticViewports.chromebook,
-      ],
+      modes: {
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.chromebook,
+        ),
+      },
     },
   },
 };
@@ -109,10 +120,12 @@ export const Default: StoryObj<Args> = {
 export const InverseVariant: StoryObj<Args> = {
   args: {
     variant: 'inverse',
+    className:
+      'bg-utility-default-highEmphasis dark:bg-dark-utility-default-highEmphasis',
     children: (
       <>
         <TabGroup.Tab title="Tab Title 1">
-          <div className="text-utility-inverse max-w-[576px]">
+          <div className="text-utility-inverse dark:text-dark-utility-inverse max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 1
             </Heading>
@@ -120,13 +133,13 @@ export const InverseVariant: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
 
         <TabGroup.Tab title="Tab Title 2">
-          <div className="text-utility-inverse max-w-[576px]">
+          <div className="text-utility-inverse dark:text-dark-utility-inverse max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 2
             </Heading>
@@ -134,13 +147,13 @@ export const InverseVariant: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
 
         <TabGroup.Tab title="Tab Title 3">
-          <div className="text-utility-inverse max-w-[576px]">
+          <div className="text-utility-inverse dark:text-dark-utility-inverse max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 3
             </Heading>
@@ -148,13 +161,13 @@ export const InverseVariant: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
 
         <TabGroup.Tab title="Tab Title 4">
-          <div className="text-utility-inverse max-w-[576px]">
+          <div className="text-utility-inverse dark:text-dark-utility-inverse max-w-[576px]">
             <Heading as="h3" className="mb-spacing-size-3">
               Tab 4
             </Heading>
@@ -162,7 +175,7 @@ export const InverseVariant: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -171,29 +184,11 @@ export const InverseVariant: StoryObj<Args> = {
   },
 
   decorators: [(Story) => <div className="p-spacing-size-half">{Story()}</div>],
-
-  parameters: {
-    ...Default.parameters,
-  },
-
-  globals: {
-    backgrounds: {
-      value: 'background-utility-default-high-emphasis',
-    },
-  },
 };
 
 export const Centered: StoryObj<Args> = {
   args: {
     align: 'center',
-  },
-  parameters: {
-    chromatic: {
-      viewports: [
-        chromaticViewports.googlePixel2,
-        chromaticViewports.chromebook,
-      ],
-    },
   },
 };
 
@@ -226,7 +221,7 @@ export const WithTabIcons: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -240,7 +235,7 @@ export const WithTabIcons: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -254,7 +249,7 @@ export const WithTabIcons: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -279,7 +274,7 @@ export const ScrollMiddle: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -293,7 +288,7 @@ export const ScrollMiddle: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -307,7 +302,7 @@ export const ScrollMiddle: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -321,7 +316,7 @@ export const ScrollMiddle: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -335,7 +330,7 @@ export const ScrollMiddle: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -349,7 +344,7 @@ export const ScrollMiddle: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -363,7 +358,7 @@ export const ScrollMiddle: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -377,7 +372,7 @@ export const ScrollMiddle: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -391,7 +386,7 @@ export const ScrollMiddle: StoryObj<Args> = {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex{' '}
+              nisi ut aliquip ex
             </Text>
           </div>
         </TabGroup.Tab>
@@ -403,7 +398,7 @@ export const ScrollMiddle: StoryObj<Args> = {
     // Skip these b/c test environment cannot execute "scroll" on the parent div
     snapshot: { skip: true },
 
-    chromatic: { viewports: [chromaticViewports.googlePixel2] },
+    chromatic: { modes: viewportModes(chromaticViewports.googlePixel2) },
     layout: 'padded',
   },
 

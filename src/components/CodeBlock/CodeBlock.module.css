@@ -8,7 +8,11 @@
   margin: 0;
   padding: 0;
 
-  border: 1px solid var(--eds-theme-color-border-utility-default-low-emphasis);
+  border: 1px solid
+    light-dark(
+      var(--eds-theme-color-border-utility-default-low-emphasis),
+      var(--eds-dark-theme-color-border-utility-default-low-emphasis)
+    );
   border-radius: calc(var(--eds-theme-border-radius-objects-md) * 1px);
 
   position: relative;

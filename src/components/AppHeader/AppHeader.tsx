@@ -233,7 +233,7 @@ function resolveOrientation(
   orientation: AppHeaderProps['orientation'],
 ): NonNullable<AppHeaderProps['orientation']> {
   // match `@media (min-width: $eds-bp-md)`. if the screen is at least that wide...
-  if (window.innerWidth >= parseInt(breakpoints['eds-bp-md'], 10)) {
+  if (window.innerWidth >= parseInt(breakpoints['eds-bp-lg'], 10)) {
     // ...change to original user value (with default specified)
     return orientation || 'horizontal';
   }

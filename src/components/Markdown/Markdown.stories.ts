@@ -2,6 +2,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite';
 import type React from 'react';
 
 import { Markdown } from './Markdown';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/Markdown',
@@ -24,6 +25,9 @@ export default {
 type Args = React.ComponentProps<typeof Markdown>;
 
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: `# Introduction
 

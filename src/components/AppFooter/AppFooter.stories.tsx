@@ -5,6 +5,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { AppFooter } from './AppFooter';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 
 export default {
@@ -17,11 +18,9 @@ export default {
         'The persistent navigation element that appears at the bottom of a page, which provides sitemap links, space for a logo, and quick access to key actions and information. It anchors the user experience by ensuring consistent access to core functionality across all pages, which largely point to other company-wide resources. It also serves as the <footer> for accessibility landmarks.',
     },
     chromatic: {
-      viewports: [
-        chromaticViewports.googlePixel2,
-        chromaticViewports.ipadMini,
-        chromaticViewports.chromebook,
-      ],
+      modes: {
+        ...themeModes,
+      },
     },
   },
 
@@ -58,6 +57,20 @@ type Story = StoryObj<typeof AppFooter>;
 
 export const Default: Story = {
   args: {},
+};
+
+export const Responsive: Story = {
+  parameters: {
+    chromatic: {
+      modes: {
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.ipadMini,
+          chromaticViewports.chromebook,
+        ),
+      },
+    },
+  },
 };
 
 export const WithTextLogo: Story = {
@@ -111,6 +124,9 @@ export const HighEmphasis: Story = {
  * Each emphasis sets its own colors, and `--app-footer__bg` / `--app-footer__fg` override those
  * for either one. Pass them through the `style` prop.
  *
+ * Wrap each value in `light-dark()` so the override follows the color mode, the same way the
+ * emphasis defaults do. Here the two colors swap places in dark mode.
+ *
  * Reach for a theme token in real usage. The literal colors here are only to make the point
  * unmistakable: neither emphasis uses them, so the footer below is colored by the override
  * rather than by its emphasis.
@@ -119,8 +135,8 @@ export const CustomColors: Story = {
   args: {
     ...WithCopyright.args,
     style: {
-      '--app-footer__bg': 'rebeccapurple',
-      '--app-footer__fg': 'papayawhip',
+      '--app-footer__bg': 'light-dark(rebeccapurple, papayawhip)',
+      '--app-footer__fg': 'light-dark(papayawhip, rebeccapurple)',
     },
   },
 };

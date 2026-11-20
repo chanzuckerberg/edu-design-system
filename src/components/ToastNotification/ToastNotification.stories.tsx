@@ -9,6 +9,7 @@ import type { ComponentProps } from 'react';
 import { ToastNotification } from './ToastNotification';
 
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import Button from '../Button';
 import { IconProvider } from '../Icon';
 
@@ -35,7 +36,11 @@ export default {
 type Args = ComponentProps<typeof ToastNotification>;
 type Story = StoryObj<Args>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 /**
  * Informational toasts indicate additional information for the user, and may be related to generic notifications or reminders.

@@ -5,6 +5,7 @@ import React from 'react';
 
 import { InlineNotification } from './InlineNotification';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import { IconProvider } from '../Icon';
 
 export default {
@@ -26,7 +27,11 @@ export default {
 
 type Args = React.ComponentProps<typeof InlineNotification>;
 
-export const Default: StoryObj<Args> = {};
+export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 export const WithSubTitle: StoryObj<Args> = {
   args: {

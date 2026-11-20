@@ -6,6 +6,7 @@ import React from 'react';
 import { userEvent, within } from 'storybook/test';
 import { Popover } from './Popover';
 import type { PopoverProps } from './Popover';
+import { themeModes } from '../../util/modes';
 import Button from '../Button';
 
 export default {
@@ -17,13 +18,6 @@ export default {
         'A small, lightweight overlay or floating container that appears over other content to provide additional information, options, or actions without navigating away from the current screen.',
     },
     layout: 'centered',
-    chromatic: {
-      // These stories are very flaky, though we're not sure why.
-      // We tried delaying the snapshot just in case there's a timing issue at play here, which was not successful.
-      disableSnapshot: true,
-    },
-    // Using this motion preference for components where they trigger animations on mount
-    // chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
   },
   args: {
     children: (
@@ -81,6 +75,7 @@ type Story = StoryObj<PopoverProps>;
 
 export const Default: Story = {
   parameters: {
+    chromatic: { modes: themeModes },
     docs: {
       source: {
         code: `
@@ -115,6 +110,7 @@ export const Default: Story = {
  */
 export const Top: Story = {
   parameters: {
+    chromatic: { modes: themeModes },
     docs: {
       source: {
         code: `
@@ -161,6 +157,9 @@ export const Top: Story = {
  * The trigger for `Popover` can receive focus, by convention.
  */
 export const FocusClickableElement: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   play: async ({ canvasElement }) => {
     // We want to test visual regression for the Popover.Content as well as the button,
     // but don't want the drawer open initally outside Chromatic.

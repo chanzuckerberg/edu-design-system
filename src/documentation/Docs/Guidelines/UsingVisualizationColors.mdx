@@ -35,7 +35,7 @@ Use this table to decide which set of tokens to reach for:
 | How far above or below a reference value, or how much something changed | [Divergent palette](#divergent-palette) |
 | Edges in a graph, gridlines, axes | `eds-theme-color-border-utility-default-low-emphasis`, `-medium-emphasis` and `-high-emphasis` |
 | That there is no value to show | No fill, plus a dash or hatch. See [Absence of data](#absence-of-data). |
-| A label sitting on any of the fills above | `eds-theme-color-text-visualization-default` or `-inverse`. See [Text on visualization colors](#text-on-visualization-colors). |
+| A label sitting on any of the fills above | On a categorical fill, the matching `eds-theme-color-text-visualization-categorical-` token. On a scalar or divergent fill, `eds-theme-color-text-visualization-default` or `-inverse`. See [Text on visualization colors](#text-on-visualization-colors). |
 
 **NOTE**: Status is the most common reason to use utility colors inside a chart. Status in a chart means the same thing as status in a Tag, so it uses the same tokens. If you need color-coded marks that are not tied to a status, that is the categorical palette.
 
@@ -43,11 +43,11 @@ Use this table to decide which set of tokens to reach for:
 
 | Palette | Token prefix | Shape | For |
 | --- | --- | --- | --- |
-| Categorical | `eds-theme-color-background-visualization-categorical-` | 8 ordered slots plus an overflow slot, each with a high-emphasis value; the first 6 also have a low-emphasis value | Unordered groups: products, regions, cohorts, subject areas |
+| Categorical | `eds-theme-color-background-visualization-categorical-` | 8 ordered slots plus an overflow slot, each with a high-emphasis and a low-emphasis value | Unordered groups: products, regions, cohorts, subject areas |
 | Scalar | `eds-theme-color-background-visualization-scalar-` | A neutral basis plus 4 green steps, light to dark | Ordered magnitude: counts, coverage, density, bands |
 | Divergent | `eds-theme-color-background-visualization-divergent-` | 3 blue steps, a neutral basis, 3 orange steps | Distance from a reference: deltas, variance against plan, above or below target |
 
-Two text tokens, `eds-theme-color-text-visualization-default` and `eds-theme-color-text-visualization-inverse`, cover labels that sit on any fill from any palette. See [Text on visualization colors](#text-on-visualization-colors).
+Each categorical slot has its own text token for labels on its fill. Two shared text tokens, `eds-theme-color-text-visualization-default` and `eds-theme-color-text-visualization-inverse`, cover labels on scalar and divergent fills. See [Text on visualization colors](#text-on-visualization-colors).
 
 ### Rules that apply to every palette
 
@@ -114,34 +114,37 @@ High-emphasis values are the series fills. Use them for bars, areas, lines, poin
 
 | Token | Primitive | Hex |
 | --- | --- | --- |
-| `eds-theme-color-background-visualization-categorical-1-high-emphasis` | `green-450` | `#19955D` |
+| `eds-theme-color-background-visualization-categorical-1-high-emphasis` | `green-750` | `#0E442B` |
 | `eds-theme-color-background-visualization-categorical-2-high-emphasis` | `blue-550` | `#4D63CB` |
-| `eds-theme-color-background-visualization-categorical-3-high-emphasis` | `green-750` | `#0E442B` |
-| `eds-theme-color-background-visualization-categorical-4-high-emphasis` | `yellow-250` | `#CDB825` |
-| `eds-theme-color-background-visualization-categorical-5-high-emphasis` | `purple-650` | `#6E3A88` |
+| `eds-theme-color-background-visualization-categorical-3-high-emphasis` | `green-450` | `#19955D` |
+| `eds-theme-color-background-visualization-categorical-4-high-emphasis` | `yellow-200` | `#FAC33D` |
+| `eds-theme-color-background-visualization-categorical-5-high-emphasis` | `purple-750` | `#562D69` |
 | `eds-theme-color-background-visualization-categorical-6-high-emphasis` | `orange-550` | `#B8470F` |
 | `eds-theme-color-background-visualization-categorical-7-high-emphasis` | `blue-200` | `#98CDFF` |
 | `eds-theme-color-background-visualization-categorical-8-high-emphasis` | `red-250` | `#FF9C99` |
-| `eds-theme-color-background-visualization-categorical-other` | `neutral-250` | `#BCB9B6` |
+| `eds-theme-color-background-visualization-categorical-other-high-emphasis` | `neutral-250` | `#BCB9B6` |
 
-Low-emphasis values exist for slots 1 through 6 only.
+**NOTE**: `eds-theme-color-background-visualization-categorical-other` is deprecated and will be removed in the next major version. Use `categorical-other-high-emphasis`, which has the same value.
 
 | Token | Primitive | Hex |
 | --- | --- | --- |
 | `eds-theme-color-background-visualization-categorical-1-low-emphasis` | `green-100` | `#C2ECD9` |
 | `eds-theme-color-background-visualization-categorical-2-low-emphasis` | `blue-100` | `#D3EAFF` |
-| `eds-theme-color-background-visualization-categorical-3-low-emphasis` | `neutral-100` | `#E6E2DE` |
-| `eds-theme-color-background-visualization-categorical-4-low-emphasis` | `yellow-050` | `#FFFC93` |
+| `eds-theme-color-background-visualization-categorical-3-low-emphasis` | `green-100` | `#C2ECD9` |
+| `eds-theme-color-background-visualization-categorical-4-low-emphasis` | `yellow-050` | `#FFF2D2` |
 | `eds-theme-color-background-visualization-categorical-5-low-emphasis` | `purple-100` | `#F3E5FA` |
 | `eds-theme-color-background-visualization-categorical-6-low-emphasis` | `orange-100` | `#FFDCCA` |
+| `eds-theme-color-background-visualization-categorical-7-low-emphasis` | `blue-100` | `#D3EAFF` |
+| `eds-theme-color-background-visualization-categorical-8-low-emphasis` | `red-100` | `#F9DFDF` |
+| `eds-theme-color-background-visualization-categorical-other-low-emphasis` | `neutral-100` | `#E6E2DE` |
 
 ### Low-emphasis categorical colors
 
 Use the low-emphasis values sparingly. The only approved use today is the background of a Tag that labels a category, so that a Tag reading "Region 2" can share a slot with the series it describes. The Tag's text carries the meaning; the tint only reinforces the link to the chart.
 
-❌ Do not use low-emphasis values as series fills, area bands, table row tints or hover states. They are not distinct enough from each other to tell groups apart on their own, and slots 7, 8 and `other` have no low-emphasis value at all, so a chart that relied on them would break at the seventh series.
+❌ Do not use low-emphasis values as series fills, area bands, table row tints or hover states. They are not distinct enough from each other to tell groups apart on their own, and some slots share a tint outright.
 
-**NOTE**: Slot 3's low-emphasis value is a neutral rather than a light green, so that it is not a second light green beside slot 1's tint. Under red-green color blindness the two tints are still nearly identical, which is one more reason the Tag label, not the tint, carries the meaning.
+**NOTE**: Slots 1 and 3 share the same low-emphasis tint (`green-100`), as do slots 2 and 7 (`blue-100`). Two Tags with the same tint are told apart only by their label, which is one more reason the Tag label, not the tint, carries the meaning.
 
 ### Accessibility
 
@@ -149,7 +152,7 @@ Use the low-emphasis values sparingly. The only approved use today is the backgr
 - **The palette is not grayscale-safe.** Slots 2 and 6 have the same lightness, as do slots 4, 8 and `other`. In black and white print or for readers with no color perception, a legend or direct labels are what distinguish them. Slots 1 and 2, the two most-used, were deliberately pulled apart in lightness so that the common two-series chart does survive grayscale.
 - **Slot 8 and `other` are close under red-green color blindness.** When a chart runs to eight series plus an overflow bucket, label the overflow bucket directly rather than relying on the legend.
 - **Four slots are light.** Slots 4, 7, 8 and `other` sit below 3:1 against a white surface. They are fine as bar and area fills next to a legend. As a 1px line or a small scatter point they are weak, so give those marks extra stroke weight or a larger point size.
-- **Text on a categorical fill** follows the rule in [Text on visualization colors](#text-on-visualization-colors). Every low-emphasis value takes `text-visualization-default`, which also works for a Tag label.
+- **Text on a categorical fill** uses that slot's own text token. See [Text on visualization colors](#text-on-visualization-colors). Every low-emphasis value takes `text-visualization-categorical-low-emphasis`, which also works for a Tag label.
 
 ## Scalar palette
 
@@ -233,9 +236,9 @@ Use the divergent palette when the reader's question is "how far from the refere
 | --- | --- | --- | --- |
 | `eds-theme-color-background-visualization-divergent-minus-3` | `blue-650` | `#3C4D9D` | Furthest below the reference |
 | `eds-theme-color-background-visualization-divergent-minus-2` | `blue-450` | `#5C76F3` | |
-| `eds-theme-color-background-visualization-divergent-minus-1` | `blue-200` | `#98CDFF` | Just below the reference |
+| `eds-theme-color-background-visualization-divergent-minus-1` | `blue-250` | `#88BBFA` | Just below the reference |
 | `eds-theme-color-background-visualization-divergent-basis` | `neutral-050` | `#F4F1EF` | The reference value |
-| `eds-theme-color-background-visualization-divergent-plus-1` | `orange-200` | `#FFB38D` | Just above the reference |
+| `eds-theme-color-background-visualization-divergent-plus-1` | `orange-250` | `#FFA070` | Just above the reference |
 | `eds-theme-color-background-visualization-divergent-plus-2` | `orange-450` | `#D0622C` | |
 | `eds-theme-color-background-visualization-divergent-plus-3` | `orange-650` | `#92380C` | Furthest above the reference |
 
@@ -250,21 +253,42 @@ Use the divergent palette when the reader's question is "how far from the refere
 
 Put labels outside the mark whenever the chart allows it. Bars, lines and points take their label beside the mark, in `eds-theme-color-text-utility-default-primary`. Only heatmap cells, donut segments and graph node labels genuinely need text sitting on a visualization color.
 
-When text must sit on a fill, EDS provides two text tokens. Which one to use depends on the grade of the primitive behind the fill, and the rule is the same across all three palettes:
+When text must sit on a fill, which token to use depends on the palette.
+
+### On a categorical fill
+
+Each categorical slot has its own text token. Pair a fill with the text token of the same slot and emphasis, and do not work out black or white yourself: the per-slot token is what stays correct if a slot's fill changes.
+
+| Fill | Text token | Resolves to | Contrast |
+| --- | --- | --- | --- |
+| `categorical-1-high-emphasis` | `eds-theme-color-text-visualization-categorical-1-high-emphasis` | `white` | 11.17:1 |
+| `categorical-2-high-emphasis` | `eds-theme-color-text-visualization-categorical-2-high-emphasis` | `white` | 5.30:1 |
+| `categorical-3-high-emphasis` | `eds-theme-color-text-visualization-categorical-3-high-emphasis` | `black` | 5.50:1 |
+| `categorical-4-high-emphasis` | `eds-theme-color-text-visualization-categorical-4-high-emphasis` | `black` | 12.94:1 |
+| `categorical-5-high-emphasis` | `eds-theme-color-text-visualization-categorical-5-high-emphasis` | `white` | 10.63:1 |
+| `categorical-6-high-emphasis` | `eds-theme-color-text-visualization-categorical-6-high-emphasis` | `white` | 5.32:1 |
+| `categorical-7-high-emphasis` | `eds-theme-color-text-visualization-categorical-7-high-emphasis` | `black` | 12.51:1 |
+| `categorical-8-high-emphasis` | `eds-theme-color-text-visualization-categorical-8-high-emphasis` | `black` | 10.47:1 |
+| `categorical-other-high-emphasis` | `eds-theme-color-text-visualization-categorical-other-high-emphasis` | `black` | 10.75:1 |
+| Any `categorical-*-low-emphasis` | `eds-theme-color-text-visualization-categorical-low-emphasis` | `black` | 16.29:1 or higher |
+
+Matching icon tokens follow the same naming under `eds-theme-color-icon-visualization-categorical-`.
+
+### On a scalar or divergent fill
 
 | Fill | Text token |
 | --- | --- |
-| Primitive at grade 450 or lighter: every low-emphasis categorical value, `basis`, scalar steps 1 and 2, divergent steps minus 1, minus 2, plus 1 and plus 2, and categorical slots 1, 4, 7, 8 and `other` | `eds-theme-color-text-visualization-default` |
-| Primitive at grade 550 or darker: categorical slots 2, 3, 5 and 6, scalar steps 3 and 4, and divergent steps minus 3 and plus 3 | `eds-theme-color-text-visualization-inverse` |
+| Primitive at grade 450 or lighter: `basis`, scalar steps 1 and 2, and divergent steps minus 1, minus 2, plus 1 and plus 2 | `eds-theme-color-text-visualization-default` |
+| Primitive at grade 550 or darker: scalar steps 3 and 4, and divergent steps minus 3 and plus 3 | `eds-theme-color-text-visualization-inverse` |
 
 | Token | Primitive | Hex |
 | --- | --- | --- |
 | `eds-theme-color-text-visualization-default` | `black` | `#000000` |
 | `eds-theme-color-text-visualization-inverse` | `white` | `#FFFFFF` |
 
-Every pairing in the table meets 4.5:1. The tightest is the default text on divergent step minus 2.
+Every pairing on this page meets 4.5:1. The tightest are white on categorical slot 2 (5.30:1) and black on divergent step minus 2 (5.34:1).
 
-**NOTE**: `text-visualization-default` is black rather than the default primary text color, because the primary text color does not reach 4.5:1 on the mid-tone fills: categorical slot 1, scalar step 2, and divergent steps minus 2 and plus 2. Use the primary text color for labels beside a mark and the visualization text tokens for labels on a fill.
+**NOTE**: The visualization text tokens are black rather than the default primary text color, because the primary text color does not reach 4.5:1 on the mid-tone fills: categorical slot 3, scalar step 2, and divergent steps minus 2 and plus 2. Use the primary text color for labels beside a mark and the visualization text tokens for labels on a fill.
 
 Three constraints apply to any text on a fill:
 
@@ -278,9 +302,8 @@ Some visualization tokens resolve to the same primitive as a utility token. This
 
 | Visualization token | Shares a primitive with | Why it is acceptable |
 | --- | --- | --- |
-| `categorical-4-high-emphasis` (`yellow-250`) | `eds-theme-color-background-utility-warning-high-emphasis` | A slot 4 Tag or fill only ever appears beside slots 1 through 3, because slots are taken in order, so the context makes it a category rather than a warning. Do not place warning Tags inside a plot area that uses slot 4. |
-| `categorical-1-high-emphasis` (`green-450`) | `eds-theme-color-border-utility-focus` | A focused slot 1 mark gets a ring the color of its own fill. Charts should draw a two-tone focus ring, an inner white stroke inside the focus color. |
+| `categorical-3-high-emphasis` (`green-450`) | `eds-theme-color-border-utility-focus` | A focused slot 3 mark gets a ring the color of its own fill. Charts should draw a two-tone focus ring, an inner white stroke inside the focus color. |
 | `scalar-3` (`green-550`) | `eds-theme-color-background-utility-favorable-high-emphasis` | A scalar ramp is never used in the same plot area as status fills. |
-| `categorical-3-high-emphasis` and `scalar-4` (`green-750`) | Each other | Categorical and scalar fills never share a plot area. |
+| `categorical-1-high-emphasis` and `scalar-4` (`green-750`) | Each other | Categorical and scalar fills never share a plot area. |
 | `scalar-basis` and `divergent-basis` (`neutral-050`) | Each other | Deliberate. One value means "the reference point" in both palettes. |
-| `categorical-other` (`neutral-250`) | Close to `eds-theme-color-background-utility-disabled-medium-emphasis` | Gray means "present, not the subject" in a chart. Axis labels and values resolve the question before color has to. |
+| `categorical-other-high-emphasis` (`neutral-250`) | Close to `eds-theme-color-background-utility-disabled-medium-emphasis` | Gray means "present, not the subject" in a chart. Axis labels and values resolve the question before color has to. |

@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Heading } from './Heading';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/Heading',
@@ -28,6 +29,9 @@ type Story = StoryObj<Args>;
  * than that level's default.
  */
 export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     children: 'Default Heading',
   },

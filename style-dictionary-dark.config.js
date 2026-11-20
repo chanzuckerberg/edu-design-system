@@ -20,6 +20,22 @@ const EDSStyleDictionary = StyleDictionary.extend({
         },
       ],
     },
+    js: {
+      transformGroup: 'js',
+      buildPath: 'src/tokens-dist/',
+      files: [
+        {
+          format: 'javascript/es6',
+          // dark theme (tier 2) colors, e.g. for the Storybook docs dark theme
+          destination: 'ts/colors-dark.ts',
+          options: {
+            showFileHeader: false,
+          },
+          filter: (token) =>
+            token.path[1] === 'dark' && token.path.includes('color'),
+        },
+      ],
+    },
     json: {
       transformGroup: 'js',
       files: [

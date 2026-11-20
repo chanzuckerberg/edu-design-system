@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [19.2.0](https://github.com/chanzuckerberg/edu-design-system/compare/v19.1.0...v19.2.0) (2026-11-20)
+
+### Features
+
+* **CodeBlock:** add a dark Prism theme selected by page color scheme ([#2739](https://github.com/chanzuckerberg/edu-design-system/issues/2739)) ([749ec08](https://github.com/chanzuckerberg/edu-design-system/commit/749ec083b1ded70254023330acbdee5811c3fe9e))
+* import dark mode tokens and snapshot default stories in dark ([#2724](https://github.com/chanzuckerberg/edu-design-system/issues/2724)) ([1af357e](https://github.com/chanzuckerberg/edu-design-system/commit/1af357ee033ca8b0f9d1d6f8b47e4c074f34d1d8))
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#2746](https://github.com/chanzuckerberg/edu-design-system/issues/2746)) ([eabd794](https://github.com/chanzuckerberg/edu-design-system/commit/eabd7942b0c20ac7aae3acc33c6acf4786e064a5))
+* **Toggle:** use object-selected for the checked track ([#2738](https://github.com/chanzuckerberg/edu-design-system/issues/2738)) ([6e53e36](https://github.com/chanzuckerberg/edu-design-system/commit/6e53e3670f2be2ef81e3221b6626794ce60f0e33))
+* use dynamic viewport units for full-height surfaces ([#2743](https://github.com/chanzuckerberg/edu-design-system/issues/2743)) ([4568561](https://github.com/chanzuckerberg/edu-design-system/commit/4568561b5149782bab7907c239940473135c65c5))
+
 ## [19.1.0](https://github.com/chanzuckerberg/edu-design-system/compare/v19.0.1...v19.1.0) (2026-11-04)
 
 ### Features

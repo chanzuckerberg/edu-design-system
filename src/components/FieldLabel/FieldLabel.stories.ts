@@ -3,6 +3,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 };
 
 import { FieldLabel } from './FieldLabel';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/FieldLabel',
@@ -21,7 +22,11 @@ export default {
 
 type Story = StoryObj<typeof FieldLabel>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
+};
 
 export const Medium: Story = {
   args: {

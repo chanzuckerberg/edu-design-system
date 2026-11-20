@@ -6,6 +6,7 @@ import React from 'react';
 import { InputChip } from './InputChip';
 import FpoBlock from '../../storyUtils/FpoBlock';
 import { alternativeSemanticIcons } from '../../storyUtils/semanticIconOverrides';
+import { themeModes } from '../../util/modes';
 import { IconProvider } from '../Icon';
 
 export default {
@@ -31,6 +32,9 @@ export default {
 type Args = React.ComponentProps<typeof InputChip>;
 
 export const Default: StoryObj<Args> = {
+  parameters: {
+    chromatic: { modes: themeModes },
+  },
   args: {
     label: 'Chip Label',
     onClick: () => {},

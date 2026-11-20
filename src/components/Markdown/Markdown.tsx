@@ -12,8 +12,8 @@ import Link from '../Link';
 import { OrderedList, UnorderedList } from '../List';
 import Text from '../Text';
 
-import styles from './Markdown.module.css';
 import { default as typeStyles } from '../Text/Text.module.css';
+import styles from './Markdown.module.css';
 
 export type MarkdownProps = Options & {
   // Component API

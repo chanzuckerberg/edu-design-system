@@ -4,6 +4,7 @@ import type { StoryObj, Meta } from '@storybook/react-vite' with {
 import React from 'react';
 
 import { Skeleton } from './Skeleton';
+import { themeModes } from '../../util/modes';
 
 export default {
   title: 'Components/Skeleton',
@@ -15,6 +16,7 @@ export default {
         'Skeleton states inform users about the wait time, reason, and status of ongoing processes, showing the expected layout.',
     },
     layout: 'centered',
+    chromatic: { modes: themeModes },
   },
 
   tags: ['autodocs', 'version:1.5'],

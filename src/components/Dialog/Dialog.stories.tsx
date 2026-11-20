@@ -8,22 +8,35 @@ import { useState } from 'react';
 import { userEvent, within } from 'storybook/test';
 
 import { Dialog } from './Dialog';
+import { themeModes, viewportModes } from '../../util/modes';
 import { chromaticViewports } from '../../util/viewports';
 import Button from '../Button';
 import ButtonGroup from '../ButtonGroup';
 import InputField from '../InputField';
 import Modal from '../Modal';
 
+const sharedParameters: Story['parameters'] = {
+  layout: 'centered',
+  snapshot: {
+    skip: true,
+  },
+};
+
 export default {
   title: 'Components/Dialog',
   component: Dialog,
   parameters: {
+    ...sharedParameters,
     docs: {
       subtitle:
         'Dialogs ask the user to confirm or cancel a single action. They replace the browser’s built-in confirm prompt.',
     },
     // Using this motion preference for components where they trigger animations on mount
-    chromatic: { delay: 500, prefersReducedMotion: 'reduce' },
+    chromatic: {
+      delay: 500,
+      prefersReducedMotion: 'reduce',
+      modes: themeModes,
+    },
     layout: 'fullscreen',
   },
   args: {
@@ -32,7 +45,7 @@ export default {
     confirmLabel: 'Discard changes',
     title: 'Discard your changes?',
   },
-  tags: ['autodocs', 'beta', 'version:1.0.0'],
+  tags: ['autodocs', 'beta', 'version:1.0.1'],
 } as Meta<typeof Dialog>;
 
 type Args = React.ComponentProps<typeof Dialog>;
@@ -71,13 +84,6 @@ const openInChromatic: Story['play'] = async ({ canvasElement }) => {
   }
 };
 
-const sharedParameters: Story['parameters'] = {
-  layout: 'centered',
-  snapshot: {
-    skip: true,
-  },
-};
-
 /**
  * Clicking on a trigger item (in this case `Button`) opens the dialog. Focus starts on the
  * primary button, so Enter takes the default action. The secondary button, ESC, and a click on
@@ -88,20 +94,25 @@ const sharedParameters: Story['parameters'] = {
  * desktop widths.
  */
 export const Default: Story = {
-  parameters: {
-    ...sharedParameters,
-    chromatic: {
-      viewports: [
-        chromaticViewports.googlePixel2,
-        chromaticViewports.ipadMini,
-        chromaticViewports.ipadPro,
-        chromaticViewports.chromebook,
-        chromaticViewports.macbookPro,
-      ],
-    },
-  },
   render: (args) => <InteractiveExample {...args} />,
   play: openInChromatic,
+};
+
+export const Responsive: Story = {
+  ...Default,
+  parameters: {
+    chromatic: {
+      modes: {
+        ...viewportModes(
+          chromaticViewports.googlePixel2,
+          chromaticViewports.ipadMini,
+          chromaticViewports.ipadPro,
+          chromaticViewports.chromebook,
+          chromaticViewports.macbookPro,
+        ),
+      },
+    },
+  },
 };
 
 /**
@@ -114,7 +125,6 @@ export const Critical: Story = {
     confirmVariant: 'critical',
     title: 'Delete “Unit 3 notes”?',
   },
-  parameters: sharedParameters,
   render: Default.render,
   play: openInChromatic,
 };
@@ -133,7 +143,6 @@ export const FormattedBody: Story = {
     confirmLabel: 'Close assignment',
     title: 'Close this assignment?',
   },
-  parameters: sharedParameters,
   render: Default.render,
   play: openInChromatic,
 };
@@ -145,7 +154,6 @@ export const CustomCancelLabel: Story = {
   args: {
     cancelLabel: 'Keep editing',
   },
-  parameters: sharedParameters,
   render: Default.render,
   play: openInChromatic,
 };
