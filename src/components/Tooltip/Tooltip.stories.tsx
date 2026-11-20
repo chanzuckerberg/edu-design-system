@@ -66,10 +66,6 @@ export default {
 type Args = React.ComponentProps<typeof Tooltip>;
 type Story = StoryObj<Args>;
 
-/**
- * The following stories demonstrate how `Tooltip` can be made to appear on different sides of the trigger.
- * Each story name denotes a value pased to `placement`.
- */
 export const Default: Story = {
   args: {
     children: <div className="fpo p-1">Target Component</div>,
@@ -78,7 +74,7 @@ export const Default: Story = {
 
 /**
  * The following stories demonstrate how `Tooltip` can be made to appear on different sides of the trigger.
- * Each story name denotes a value pased to `placement`.
+ * Each story name denotes a value passed to `placement`.
  */
 export const LeftPlacement: Story = {
   args: {
