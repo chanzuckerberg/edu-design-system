@@ -178,7 +178,5 @@
   "eds-theme-color-text-utility-inverse": "Inverse text on inverted backgrounds such as labels on primary buttons.",
   "eds-theme-color-text-utility-inverse-disabled": "Disabled inverse text on inverted backgrounds such as labels on primary buttons.",
   "eds-theme-color-text-utility-inverse-interactive-visited": "Links which have been visited by the user on inverted backgrounds.",
-  "eds-theme-color-text-utility-placeholder": "Placeholder text such as “Search for…” instructions in a search bar.",
-  "eds-theme-color-text-visualization-default": "Text sitting on a scalar or divergent fill whose primitive is at grade 450 or lighter: basis, scalar steps 1 and 2, and divergent steps 1 and 2. On a categorical fill, use that slot's text-visualization-categorical token instead. Labels beside a mark use text-utility-default-primary.",
-  "eds-theme-color-text-visualization-inverse": "Text sitting on a scalar or divergent fill whose primitive is at grade 550 or darker: scalar steps 3 and 4, and divergent steps 3. On a categorical fill, use that slot's text-visualization-categorical token instead."
+  "eds-theme-color-text-utility-placeholder": "Placeholder text such as “Search for…” instructions in a search bar."
 }

@@ -4,7 +4,7 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 # Visualization Colors
 
-EDS provides tier 2 color tokens for data visualization: charts, graphs, heatmaps, and any view where a color stands for a value in the data rather than a role in the interface. Fills live under `eds-theme-color-background-visualization-` and label colors under `eds-theme-color-text-visualization-`. Every one of them is an alias to an existing tier 1 primitive, so they follow the theme like any other tier 2 token.
+EDS provides tier 2 color tokens for data visualization: charts, graphs, heatmaps, and any view where a color stands for a value in the data rather than a role in the interface. Fills live under `eds-theme-color-background-visualization-`, label colors under `eds-theme-color-text-visualization-`, and icon colors under `eds-theme-color-icon-visualization-`. Every one of them is an alias to an existing tier 1 primitive, so they follow the theme like any other tier 2 token.
 
 - [Overview](#overview)
   - [Visualization colors versus utility colors](#visualization-colors-versus-utility-colors)
@@ -35,7 +35,7 @@ Use this table to decide which set of tokens to reach for:
 | How far above or below a reference value, or how much something changed | [Divergent palette](#divergent-palette) |
 | Edges in a graph, gridlines, axes | `eds-theme-color-border-utility-default-low-emphasis`, `-medium-emphasis` and `-high-emphasis` |
 | That there is no value to show | No fill, plus a dash or hatch. See [Absence of data](#absence-of-data). |
-| A label sitting on any of the fills above | On a categorical fill, the matching `eds-theme-color-text-visualization-categorical-` token. On a scalar or divergent fill, `eds-theme-color-text-visualization-default` or `-inverse`. See [Text on visualization colors](#text-on-visualization-colors). |
+| A label sitting on any of the fills above | The `eds-theme-color-text-visualization-` token with the same palette and step as the fill: `-categorical-1-high-emphasis`, `-scalar-2`, `-divergent-minus-1`. See [Text on visualization colors](#text-on-visualization-colors). |
 
 **NOTE**: Status is the most common reason to use utility colors inside a chart. Status in a chart means the same thing as status in a Tag, so it uses the same tokens. If you need color-coded marks that are not tied to a status, that is the categorical palette.
 
@@ -47,7 +47,7 @@ Use this table to decide which set of tokens to reach for:
 | Scalar | `eds-theme-color-background-visualization-scalar-` | A neutral basis plus 4 green steps, light to dark | Ordered magnitude: counts, coverage, density, bands |
 | Divergent | `eds-theme-color-background-visualization-divergent-` | 3 blue steps, a neutral basis, 3 orange steps | Distance from a reference: deltas, variance against plan, above or below target |
 
-Each categorical slot has its own text token for labels on its fill. Two shared text tokens, `eds-theme-color-text-visualization-default` and `eds-theme-color-text-visualization-inverse`, cover labels on scalar and divergent fills. See [Text on visualization colors](#text-on-visualization-colors).
+Every fill has a text token of the same name for labels on it, and an icon token that resolves to the same color. See [Text on visualization colors](#text-on-visualization-colors).
 
 ### Rules that apply to every palette
 
@@ -257,7 +257,7 @@ When text must sit on a fill, which token to use depends on the palette.
 
 ### On a categorical fill
 
-Each categorical slot has its own text token. Pair a fill with the text token of the same slot and emphasis, and do not work out black or white yourself: the per-slot token is what stays correct if a slot's fill changes.
+Each categorical slot has its own text token. Pair a fill with the text token of the same slot and emphasis, and do not work out black or white yourself: the per-slot token is what stays correct if a slot's fill changes, and several slots flip between black and white in dark mode.
 
 | Fill | Text token | Resolves to | Contrast |
 | --- | --- | --- | --- |
@@ -272,23 +272,36 @@ Each categorical slot has its own text token. Pair a fill with the text token of
 | `categorical-other-high-emphasis` | `eds-theme-color-text-visualization-categorical-other-high-emphasis` | `black` | 10.75:1 |
 | Any `categorical-*-low-emphasis` | `eds-theme-color-text-visualization-categorical-low-emphasis` | `black` | 16.29:1 or higher |
 
+The contrast column is for light mode. In dark mode every slot still meets 4.5:1; the tightest is white on slot 6 at 5.32:1.
+
 Matching icon tokens follow the same naming under `eds-theme-color-icon-visualization-categorical-`.
 
 ### On a scalar or divergent fill
 
-| Fill | Text token |
-| --- | --- |
-| Primitive at grade 450 or lighter: `basis`, scalar steps 1 and 2, and divergent steps minus 1, minus 2, plus 1 and plus 2 | `eds-theme-color-text-visualization-default` |
-| Primitive at grade 550 or darker: scalar steps 3 and 4, and divergent steps minus 3 and plus 3 | `eds-theme-color-text-visualization-inverse` |
+Each scalar and divergent step has its own text token, named after the fill. The light and dark ramps run in opposite directions (dark step 4 is the lightest fill), so the same step can need black in one mode and white in the other. The per-step token carries that switch; never pick black or white by step yourself.
 
-| Token | Primitive | Hex |
-| --- | --- | --- |
-| `eds-theme-color-text-visualization-default` | `black` | `#000000` |
-| `eds-theme-color-text-visualization-inverse` | `white` | `#FFFFFF` |
+| Fill | Text token | Light | Dark |
+| --- | --- | --- | --- |
+| `scalar-basis` | `eds-theme-color-text-visualization-scalar-basis` | `black` 18.68:1 | `white` 13.22:1 |
+| `scalar-1` | `eds-theme-color-text-visualization-scalar-1` | `black` 14.08:1 | `white` 8.13:1 |
+| `scalar-2` | `eds-theme-color-text-visualization-scalar-2` | `black` 7.81:1 | `black` 7.81:1 |
+| `scalar-3` | `eds-theme-color-text-visualization-scalar-3` | `white` 5.35:1 | `black` 12.11:1 |
+| `scalar-4` | `eds-theme-color-text-visualization-scalar-4` | `white` 11.17:1 | `black` 16.29:1 |
+| `divergent-basis` | `eds-theme-color-text-visualization-divergent-basis` | `black` 18.68:1 | `white` 13.22:1 |
+| `divergent-minus-1` | `eds-theme-color-text-visualization-divergent-minus-1` | `black` 10.54:1 | `black` 5.34:1 |
+| `divergent-minus-2` | `eds-theme-color-text-visualization-divergent-minus-2` | `black` 5.34:1 | `black` 10.54:1 |
+| `divergent-minus-3` | `eds-theme-color-text-visualization-divergent-minus-3` | `white` 7.66:1 | `black` 14.82:1 |
+| `divergent-plus-1` | `eds-theme-color-text-visualization-divergent-plus-1` | `black` 10.51:1 | `black` 5.47:1 |
+| `divergent-plus-2` | `eds-theme-color-text-visualization-divergent-plus-2` | `black` 5.47:1 | `black` 10.51:1 |
+| `divergent-plus-3` | `eds-theme-color-text-visualization-divergent-plus-3` | `white` 7.52:1 | `black` 14.01:1 |
 
-Every pairing on this page meets 4.5:1. The tightest are white on categorical slot 2 (5.30:1) and black on divergent step minus 2 (5.34:1).
+Matching icon tokens follow the same naming under `eds-theme-color-icon-visualization-scalar-` and `eds-theme-color-icon-visualization-divergent-`, and resolve to the same color as the text token.
 
-**NOTE**: The visualization text tokens are black rather than the default primary text color, because the primary text color does not reach 4.5:1 on the mid-tone fills: categorical slot 3, scalar step 2, and divergent steps minus 2 and plus 2. Use the primary text color for labels beside a mark and the visualization text tokens for labels on a fill.
+`eds-theme-color-text-visualization-default` and `eds-theme-color-text-visualization-inverse` are deprecated. They chose black or white by step, which cannot hold 4.5:1 in both modes. They keep their values until the next major release; move any use of them to the per-step token above.
+
+Every pairing on this page meets 4.5:1 in both light and dark. The tightest in light are white on categorical slot 2 (5.30:1) and black on divergent step minus 2 (5.34:1). The tightest in dark are white on categorical slot 6 (5.32:1) and black on divergent step minus 1 (5.34:1).
+
+**NOTE**: The visualization text tokens resolve to pure black or white rather than the default primary text color, because the primary text color does not reach 4.5:1 on the mid-tone fills: categorical slot 3, scalar step 2, and divergent steps minus 2 and plus 2. Use the primary text color for labels beside a mark and the visualization text tokens for labels on a fill.
 
 Three constraints apply to any text on a fill:
 

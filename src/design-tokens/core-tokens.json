@@ -1877,7 +1877,7 @@
             },
             "placeholder": {
               "value": "{eds.color.neutral.550}",
-              "description": "Placeholder icon such as “Search for…” instructions in a search bar.",
+              "description": "Placeholder icon such as \u201cSearch for\u2026\u201d instructions in a search bar.",
               "group": "color"
             }
           },
@@ -1940,6 +1940,62 @@
               "lowEmphasis": {
                 "value": "{eds.color.black}",
                 "group": "color"
+              }
+            },
+            "scalar": {
+              "1": {
+                "value": "{eds.theme.color.text.visualization.scalar.1}",
+                "group": "color"
+              },
+              "2": {
+                "value": "{eds.theme.color.text.visualization.scalar.2}",
+                "group": "color"
+              },
+              "3": {
+                "value": "{eds.theme.color.text.visualization.scalar.3}",
+                "group": "color"
+              },
+              "4": {
+                "value": "{eds.theme.color.text.visualization.scalar.4}",
+                "group": "color"
+              },
+              "basis": {
+                "value": "{eds.theme.color.text.visualization.scalar.basis}",
+                "group": "color"
+              }
+            },
+            "divergent": {
+              "basis": {
+                "value": "{eds.theme.color.text.visualization.divergent.basis}",
+                "group": "color"
+              },
+              "minus": {
+                "1": {
+                  "value": "{eds.theme.color.text.visualization.divergent.minus.1}",
+                  "group": "color"
+                },
+                "2": {
+                  "value": "{eds.theme.color.text.visualization.divergent.minus.2}",
+                  "group": "color"
+                },
+                "3": {
+                  "value": "{eds.theme.color.text.visualization.divergent.minus.3}",
+                  "group": "color"
+                }
+              },
+              "plus": {
+                "1": {
+                  "value": "{eds.theme.color.text.visualization.divergent.plus.1}",
+                  "group": "color"
+                },
+                "2": {
+                  "value": "{eds.theme.color.text.visualization.divergent.plus.2}",
+                  "group": "color"
+                },
+                "3": {
+                  "value": "{eds.theme.color.text.visualization.divergent.plus.3}",
+                  "group": "color"
+                }
               }
             }
           },
@@ -2141,7 +2197,7 @@
             },
             "placeholder": {
               "value": "{eds.color.neutral.550}",
-              "description": "Placeholder text such as “Search for…” instructions in a search bar.",
+              "description": "Placeholder text such as \u201cSearch for\u2026\u201d instructions in a search bar.",
               "group": "color"
             }
           },
@@ -2162,13 +2218,13 @@
           "visualization": {
             "default": {
               "value": "{eds.color.black}",
-              "description": "Text sitting on a scalar or divergent fill whose primitive is at grade 450 or lighter: basis, scalar steps 1 and 2, and divergent steps 1 and 2. On a categorical fill, use that slot's text-visualization-categorical token instead. Labels beside a mark use text-utility-default-primary.",
-              "group": "color"
+              "group": "color",
+              "comment": "TODO(next-major): remove in the next major version of EDS. Use the per-step text-visualization-scalar-* and text-visualization-divergent-* tokens instead."
             },
             "inverse": {
               "value": "{eds.color.white}",
-              "description": "Text sitting on a scalar or divergent fill whose primitive is at grade 550 or darker: scalar steps 3 and 4, and divergent steps 3. On a categorical fill, use that slot's text-visualization-categorical token instead.",
-              "group": "color"
+              "group": "color",
+              "comment": "TODO(next-major): remove in the next major version of EDS. Use the per-step text-visualization-scalar-* and text-visualization-divergent-* tokens instead."
             },
             "categorical": {
               "1": {
@@ -2228,6 +2284,62 @@
               "lowEmphasis": {
                 "value": "{eds.color.black}",
                 "group": "color"
+              }
+            },
+            "scalar": {
+              "1": {
+                "value": "{eds.color.black}",
+                "group": "color"
+              },
+              "2": {
+                "value": "{eds.color.black}",
+                "group": "color"
+              },
+              "3": {
+                "value": "{eds.color.white}",
+                "group": "color"
+              },
+              "4": {
+                "value": "{eds.color.white}",
+                "group": "color"
+              },
+              "basis": {
+                "value": "{eds.color.black}",
+                "group": "color"
+              }
+            },
+            "divergent": {
+              "basis": {
+                "value": "{eds.color.black}",
+                "group": "color"
+              },
+              "minus": {
+                "1": {
+                  "value": "{eds.color.black}",
+                  "group": "color"
+                },
+                "2": {
+                  "value": "{eds.color.black}",
+                  "group": "color"
+                },
+                "3": {
+                  "value": "{eds.color.white}",
+                  "group": "color"
+                }
+              },
+              "plus": {
+                "1": {
+                  "value": "{eds.color.black}",
+                  "group": "color"
+                },
+                "2": {
+                  "value": "{eds.color.black}",
+                  "group": "color"
+                },
+                "3": {
+                  "value": "{eds.color.white}",
+                  "group": "color"
+                }
               }
             }
           }

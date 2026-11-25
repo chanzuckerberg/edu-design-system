@@ -237,6 +237,18 @@
   --eds-typography-font-family-1: 'parabolica-text', Inter, Arial, sans-serif;
   --eds-dark-theme-typography-font-family-tab: var(--eds-typography-font-family-3);
   --eds-dark-theme-color-text-highlight-foreground: var(--eds-color-neutral-800);
+  --eds-dark-theme-color-text-visualization-divergent-plus-3: var(--eds-color-black);
+  --eds-dark-theme-color-text-visualization-divergent-plus-2: var(--eds-color-black);
+  --eds-dark-theme-color-text-visualization-divergent-plus-1: var(--eds-color-black);
+  --eds-dark-theme-color-text-visualization-divergent-minus-3: var(--eds-color-black);
+  --eds-dark-theme-color-text-visualization-divergent-minus-2: var(--eds-color-black);
+  --eds-dark-theme-color-text-visualization-divergent-minus-1: var(--eds-color-black);
+  --eds-dark-theme-color-text-visualization-divergent-basis: var(--eds-color-white);
+  --eds-dark-theme-color-text-visualization-scalar-basis: var(--eds-color-white);
+  --eds-dark-theme-color-text-visualization-scalar-4: var(--eds-color-black);
+  --eds-dark-theme-color-text-visualization-scalar-3: var(--eds-color-black);
+  --eds-dark-theme-color-text-visualization-scalar-2: var(--eds-color-black);
+  --eds-dark-theme-color-text-visualization-scalar-1: var(--eds-color-white);
   --eds-dark-theme-color-text-visualization-categorical-low-emphasis: var(--eds-color-white);
   --eds-dark-theme-color-text-visualization-categorical-other-high-emphasis: var(--eds-color-white);
   --eds-dark-theme-color-text-visualization-categorical-8-high-emphasis: var(--eds-color-black);
@@ -247,8 +259,8 @@
   --eds-dark-theme-color-text-visualization-categorical-3-high-emphasis: var(--eds-color-black);
   --eds-dark-theme-color-text-visualization-categorical-2-high-emphasis: var(--eds-color-black);
   --eds-dark-theme-color-text-visualization-categorical-1-high-emphasis: var(--eds-color-black);
-  --eds-dark-theme-color-text-visualization-inverse: var(--eds-color-neutral-900);
-  --eds-dark-theme-color-text-visualization-default: var(--eds-color-white);
+  --eds-dark-theme-color-text-visualization-inverse: var(--eds-color-neutral-900); /* TODO(next-major): remove in the next major version of EDS. Use the per-step text-visualization-scalar-* and text-visualization-divergent-* tokens instead. */
+  --eds-dark-theme-color-text-visualization-default: var(--eds-color-white); /* TODO(next-major): remove in the next major version of EDS. Use the per-step text-visualization-scalar-* and text-visualization-divergent-* tokens instead. */
   --eds-dark-theme-color-text-headline: var(--eds-color-neutral-850);
   --eds-dark-theme-color-text-app-header-secondary: var(--eds-color-neutral-200);
   --eds-dark-theme-color-text-app-header-primary: var(--eds-color-neutral-100);
@@ -493,4 +505,16 @@
   --eds-dark-theme-border-radius-surfaces-md: var(--eds-border-radius-100);
   --eds-dark-theme-border-radius-surfaces-lg: var(--eds-border-radius-100);
   --eds-dark-theme-border-radius-actions: var(--eds-border-radius-100);
+  --eds-dark-theme-color-icon-visualization-divergent-plus-3: var(--eds-dark-theme-color-text-visualization-divergent-plus-3);
+  --eds-dark-theme-color-icon-visualization-divergent-plus-2: var(--eds-dark-theme-color-text-visualization-divergent-plus-2);
+  --eds-dark-theme-color-icon-visualization-divergent-plus-1: var(--eds-dark-theme-color-text-visualization-divergent-plus-1);
+  --eds-dark-theme-color-icon-visualization-divergent-minus-3: var(--eds-dark-theme-color-text-visualization-divergent-minus-3);
+  --eds-dark-theme-color-icon-visualization-divergent-minus-2: var(--eds-dark-theme-color-text-visualization-divergent-minus-2);
+  --eds-dark-theme-color-icon-visualization-divergent-minus-1: var(--eds-dark-theme-color-text-visualization-divergent-minus-1);
+  --eds-dark-theme-color-icon-visualization-divergent-basis: var(--eds-dark-theme-color-text-visualization-divergent-basis);
+  --eds-dark-theme-color-icon-visualization-scalar-basis: var(--eds-dark-theme-color-text-visualization-scalar-basis);
+  --eds-dark-theme-color-icon-visualization-scalar-4: var(--eds-dark-theme-color-text-visualization-scalar-4);
+  --eds-dark-theme-color-icon-visualization-scalar-3: var(--eds-dark-theme-color-text-visualization-scalar-3);
+  --eds-dark-theme-color-icon-visualization-scalar-2: var(--eds-dark-theme-color-text-visualization-scalar-2);
+  --eds-dark-theme-color-icon-visualization-scalar-1: var(--eds-dark-theme-color-text-visualization-scalar-1);
 }
