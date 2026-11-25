@@ -173,7 +173,8 @@ export const BackgroundVisualization: Story = {
 /**
  * Text visualization tokens color labels that sit on a background visualization fill.
  *
- * - Use `default` on fills aliased to a primitive at grade 450 or lighter, and `inverse` on grade 550 or darker
+ * - Pair a fill with the text token of the same palette and step (`categorical-1-highEmphasis`, `scalar-2`, `divergent-minus-1`). Each one meets 4.5:1 on its fill in both light and dark
+ * - `default` and `inverse` are deprecated and will be removed in the next major version. Use the per-step token instead
  */
 export const TextVisualization: Story = {
   args: {
@@ -186,6 +187,28 @@ export const TextVisualization: Story = {
           return '→ text/visualization/' + getSpecifier(name, filterTerm);
         } else {
           return 'text-visualization-' + getSpecifier(name, filterTerm);
+        }
+      },
+    ),
+  },
+};
+
+/**
+ * Icon visualization tokens color icons that sit on a background visualization fill.
+ *
+ * - Each one resolves to the same color as the text visualization token of the same palette and step
+ */
+export const IconVisualization: Story = {
+  args: {
+    caption: 'Icon Visualization Tokens',
+    listItems: getTokenListItems(
+      'eds-theme-color-icon-visualization',
+      'color',
+      (name, column, filterTerm) => {
+        if (column === 'figma') {
+          return '→ icon/visualization/' + getSpecifier(name, filterTerm);
+        } else {
+          return 'icon-visualization-' + getSpecifier(name, filterTerm);
         }
       },
     ),
