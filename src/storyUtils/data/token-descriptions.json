@@ -191,8 +191,6 @@
   "eds-theme-color-text-utility-inverse-disabled": "Disabled inverse text on inverted backgrounds such as labels on primary buttons.",
   "eds-theme-color-text-utility-inverse-interactive-visited": "Links which have been visited by the user on inverted backgrounds.",
   "eds-theme-color-text-utility-placeholder": "Placeholder text such as “Search for…” instructions in a search bar.",
-  "eds-theme-color-text-visualization-default": "Deprecated. Was the shared label color for scalar and divergent fills; it cannot hold 4.5:1 in both modes because the dark ramps run in reverse. Use the per-step eds-theme-color-text-visualization-scalar-* and -divergent-* tokens. On a categorical fill, use that slot's text-visualization-categorical token.",
-  "eds-theme-color-text-visualization-inverse": "Deprecated. Was the shared inverse label color for the darkest scalar and divergent fills. Use the per-step eds-theme-color-text-visualization-scalar-* and -divergent-* tokens. On a categorical fill, use that slot's text-visualization-categorical token.",
   "eds-theme-color-text-visualization-scalar-1": "Label sitting on scalar step 1. Meets 4.5:1 in both modes (14.08:1 light, 8.13:1 dark). Labels beside a mark use text-utility-default-primary instead.",
   "eds-theme-color-text-visualization-scalar-2": "Label sitting on scalar step 2. Meets 4.5:1 in both modes (7.81:1 light, 7.81:1 dark). Labels beside a mark use text-utility-default-primary instead.",
   "eds-theme-color-text-visualization-scalar-3": "Label sitting on scalar step 3. Meets 4.5:1 in both modes (5.35:1 light, 12.11:1 dark). Labels beside a mark use text-utility-default-primary instead.",

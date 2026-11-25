@@ -1877,7 +1877,7 @@
             },
             "placeholder": {
               "value": "{eds.color.neutral.550}",
-              "description": "Placeholder icon such as “Search for…” instructions in a search bar.",
+              "description": "Placeholder icon such as \u201cSearch for\u2026\u201d instructions in a search bar.",
               "group": "color"
             }
           },
@@ -2209,7 +2209,7 @@
             },
             "placeholder": {
               "value": "{eds.color.neutral.550}",
-              "description": "Placeholder text such as “Search for…” instructions in a search bar.",
+              "description": "Placeholder text such as \u201cSearch for\u2026\u201d instructions in a search bar.",
               "group": "color"
             }
           },
@@ -2230,13 +2230,11 @@
           "visualization": {
             "default": {
               "value": "{eds.color.black}",
-              "description": "Deprecated. Was the shared label color for scalar and divergent fills; it cannot hold 4.5:1 in both modes because the dark ramps run in reverse. Use the per-step eds-theme-color-text-visualization-scalar-* and -divergent-* tokens. On a categorical fill, use that slot's text-visualization-categorical token.",
               "group": "color",
               "comment": "TODO(next-major): remove in the next major version of EDS. Use the per-step text-visualization-scalar-* and text-visualization-divergent-* tokens instead."
             },
             "inverse": {
               "value": "{eds.color.white}",
-              "description": "Deprecated. Was the shared inverse label color for the darkest scalar and divergent fills. Use the per-step eds-theme-color-text-visualization-scalar-* and -divergent-* tokens. On a categorical fill, use that slot's text-visualization-categorical token.",
               "group": "color",
               "comment": "TODO(next-major): remove in the next major version of EDS. Use the per-step text-visualization-scalar-* and text-visualization-divergent-* tokens instead."
             },
