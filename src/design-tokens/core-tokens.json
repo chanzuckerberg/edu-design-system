@@ -1945,67 +1945,55 @@
             "scalar": {
               "1": {
                 "value": "{eds.theme.color.text.visualization.scalar.1}",
-                "description": "Icon sitting on scalar step 1. Same value as the matching text token.",
                 "group": "color"
               },
               "2": {
                 "value": "{eds.theme.color.text.visualization.scalar.2}",
-                "description": "Icon sitting on scalar step 2. Same value as the matching text token.",
                 "group": "color"
               },
               "3": {
                 "value": "{eds.theme.color.text.visualization.scalar.3}",
-                "description": "Icon sitting on scalar step 3. Same value as the matching text token.",
                 "group": "color"
               },
               "4": {
                 "value": "{eds.theme.color.text.visualization.scalar.4}",
-                "description": "Icon sitting on scalar step 4. Same value as the matching text token.",
                 "group": "color"
               },
               "basis": {
                 "value": "{eds.theme.color.text.visualization.scalar.basis}",
-                "description": "Icon sitting on the scalar basis fill. Same value as the matching text token.",
                 "group": "color"
               }
             },
             "divergent": {
               "basis": {
                 "value": "{eds.theme.color.text.visualization.divergent.basis}",
-                "description": "Icon sitting on the divergent basis fill. Same value as the matching text token.",
                 "group": "color"
               },
               "minus": {
                 "1": {
                   "value": "{eds.theme.color.text.visualization.divergent.minus.1}",
-                  "description": "Icon sitting on divergent step minus 1. Same value as the matching text token.",
                   "group": "color"
                 },
                 "2": {
                   "value": "{eds.theme.color.text.visualization.divergent.minus.2}",
-                  "description": "Icon sitting on divergent step minus 2. Same value as the matching text token.",
                   "group": "color"
                 },
                 "3": {
                   "value": "{eds.theme.color.text.visualization.divergent.minus.3}",
-                  "description": "Icon sitting on divergent step minus 3. Same value as the matching text token.",
                   "group": "color"
                 }
               },
               "plus": {
                 "1": {
                   "value": "{eds.theme.color.text.visualization.divergent.plus.1}",
-                  "description": "Icon sitting on divergent step plus 1. Same value as the matching text token.",
                   "group": "color"
                 },
                 "2": {
                   "value": "{eds.theme.color.text.visualization.divergent.plus.2}",
-                  "description": "Icon sitting on divergent step plus 2. Same value as the matching text token.",
                   "group": "color"
                 },
                 "3": {
                   "value": "{eds.theme.color.text.visualization.divergent.plus.3}",
-                  "description": "Icon sitting on divergent step plus 3. Same value as the matching text token.",
                   "group": "color"
                 }
               }
@@ -2301,67 +2289,55 @@
             "scalar": {
               "1": {
                 "value": "{eds.color.black}",
-                "description": "Label sitting on scalar step 1. Meets 4.5:1 in both modes (14.08:1 light, 8.13:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                 "group": "color"
               },
               "2": {
                 "value": "{eds.color.black}",
-                "description": "Label sitting on scalar step 2. Meets 4.5:1 in both modes (7.81:1 light, 7.81:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                 "group": "color"
               },
               "3": {
                 "value": "{eds.color.white}",
-                "description": "Label sitting on scalar step 3. Meets 4.5:1 in both modes (5.35:1 light, 12.11:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                 "group": "color"
               },
               "4": {
                 "value": "{eds.color.white}",
-                "description": "Label sitting on scalar step 4. Meets 4.5:1 in both modes (11.17:1 light, 16.29:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                 "group": "color"
               },
               "basis": {
                 "value": "{eds.color.black}",
-                "description": "Label sitting on the scalar basis fill. Meets 4.5:1 in both modes (18.68:1 light, 13.22:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                 "group": "color"
               }
             },
             "divergent": {
               "basis": {
                 "value": "{eds.color.black}",
-                "description": "Label sitting on the divergent basis fill. Meets 4.5:1 in both modes (18.68:1 light, 13.22:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                 "group": "color"
               },
               "minus": {
                 "1": {
                   "value": "{eds.color.black}",
-                  "description": "Label sitting on divergent step minus 1. Meets 4.5:1 in both modes (10.54:1 light, 5.34:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                   "group": "color"
                 },
                 "2": {
                   "value": "{eds.color.black}",
-                  "description": "Label sitting on divergent step minus 2. Meets 4.5:1 in both modes (5.34:1 light, 10.54:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                   "group": "color"
                 },
                 "3": {
                   "value": "{eds.color.white}",
-                  "description": "Label sitting on divergent step minus 3. Meets 4.5:1 in both modes (7.66:1 light, 14.82:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                   "group": "color"
                 }
               },
               "plus": {
                 "1": {
                   "value": "{eds.color.black}",
-                  "description": "Label sitting on divergent step plus 1. Meets 4.5:1 in both modes (10.51:1 light, 5.47:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                   "group": "color"
                 },
                 "2": {
                   "value": "{eds.color.black}",
-                  "description": "Label sitting on divergent step plus 2. Meets 4.5:1 in both modes (5.47:1 light, 10.51:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                   "group": "color"
                 },
                 "3": {
                   "value": "{eds.color.white}",
-                  "description": "Label sitting on divergent step plus 3. Meets 4.5:1 in both modes (7.52:1 light, 14.01:1 dark). Labels beside a mark use text-utility-default-primary instead.",
                   "group": "color"
                 }
               }
