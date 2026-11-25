@@ -300,6 +300,18 @@ export const EdsDarkThemeColorIconVisualizationCategoricalOtherHighEmphasis =
   '#FFFFFF';
 export const EdsDarkThemeColorIconVisualizationCategoricalLowEmphasis =
   '#FFFFFF';
+export const EdsDarkThemeColorIconVisualizationScalar1 = '#FFFFFF';
+export const EdsDarkThemeColorIconVisualizationScalar2 = '#000000';
+export const EdsDarkThemeColorIconVisualizationScalar3 = '#000000';
+export const EdsDarkThemeColorIconVisualizationScalar4 = '#000000';
+export const EdsDarkThemeColorIconVisualizationScalarBasis = '#FFFFFF';
+export const EdsDarkThemeColorIconVisualizationDivergentBasis = '#FFFFFF';
+export const EdsDarkThemeColorIconVisualizationDivergentMinus1 = '#000000';
+export const EdsDarkThemeColorIconVisualizationDivergentMinus2 = '#000000';
+export const EdsDarkThemeColorIconVisualizationDivergentMinus3 = '#000000';
+export const EdsDarkThemeColorIconVisualizationDivergentPlus1 = '#000000';
+export const EdsDarkThemeColorIconVisualizationDivergentPlus2 = '#000000';
+export const EdsDarkThemeColorIconVisualizationDivergentPlus3 = '#000000';
 export const EdsDarkThemeColorTextUtilityDefaultPrimary = '#E6E2DE';
 export const EdsDarkThemeColorTextUtilityDefaultPrimaryHover = '#FAF9F8';
 export const EdsDarkThemeColorTextUtilityDefaultPrimaryActive = '#FFFFFF';
@@ -338,8 +350,8 @@ export const EdsDarkThemeColorTextUtilityPlaceholder = '#CCC9C6';
 export const EdsDarkThemeColorTextAppHeaderPrimary = '#E6E2DE';
 export const EdsDarkThemeColorTextAppHeaderSecondary = '#CCC9C6';
 export const EdsDarkThemeColorTextHeadline = '#242423';
-export const EdsDarkThemeColorTextVisualizationDefault = '#FFFFFF';
-export const EdsDarkThemeColorTextVisualizationInverse = '#181818';
+export const EdsDarkThemeColorTextVisualizationDefault = '#FFFFFF'; // TODO(next-major): remove in the next major version of EDS. Use the per-step text-visualization-scalar-* and text-visualization-divergent-* tokens instead.
+export const EdsDarkThemeColorTextVisualizationInverse = '#181818'; // TODO(next-major): remove in the next major version of EDS. Use the per-step text-visualization-scalar-* and text-visualization-divergent-* tokens instead.
 export const EdsDarkThemeColorTextVisualizationCategorical1HighEmphasis =
   '#000000';
 export const EdsDarkThemeColorTextVisualizationCategorical2HighEmphasis =
@@ -360,4 +372,16 @@ export const EdsDarkThemeColorTextVisualizationCategoricalOtherHighEmphasis =
   '#FFFFFF';
 export const EdsDarkThemeColorTextVisualizationCategoricalLowEmphasis =
   '#FFFFFF';
+export const EdsDarkThemeColorTextVisualizationScalar1 = '#FFFFFF';
+export const EdsDarkThemeColorTextVisualizationScalar2 = '#000000';
+export const EdsDarkThemeColorTextVisualizationScalar3 = '#000000';
+export const EdsDarkThemeColorTextVisualizationScalar4 = '#000000';
+export const EdsDarkThemeColorTextVisualizationScalarBasis = '#FFFFFF';
+export const EdsDarkThemeColorTextVisualizationDivergentBasis = '#FFFFFF';
+export const EdsDarkThemeColorTextVisualizationDivergentMinus1 = '#000000';
+export const EdsDarkThemeColorTextVisualizationDivergentMinus2 = '#000000';
+export const EdsDarkThemeColorTextVisualizationDivergentMinus3 = '#000000';
+export const EdsDarkThemeColorTextVisualizationDivergentPlus1 = '#000000';
+export const EdsDarkThemeColorTextVisualizationDivergentPlus2 = '#000000';
+export const EdsDarkThemeColorTextVisualizationDivergentPlus3 = '#000000';
 export const EdsDarkThemeColorTextHighlightForeground = '#30302E';
